@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container-fluid" style="padding-top: 50px">
+    <div class="row">
+       <div class="col-sm-1">&nbsp;</div>
+       <div class="col-xs-12 col-sm-8" style="padding: 0px">
+           <img src="{{ url_for('static', filename='images/computer.jpg') }}"
+                style="padding: 0; width: 100%" 
+                class="img-responsive center-block"
+                alt="{{ ('People naming colours') }}">
+        </div>
+    </div>
+    {% include('navbar.html') %}
+    <div class="row">
+        <div class="col-sm-1">&nbsp;</div>
+        <div class="col-xs-12 col-sm-8">
+            <h1>{{ _('Terms and conditions') }}</h1>
+            <h2>{{ _('Confidentiality') }}</h2>
+            <p>
+                {{ _('Your participation in this study will remain confidential. Data '
+                     'is stored on a secure Unix server along with your IP addresses. '
+                     'The experimental data collected in this study will be used to '
+                     'develop an Online Colour Naming Model and may be shared with '
+                     'other researchers if requested. ALL personal data will be '
+                     'removed, so that NO data can be traced back to the observer. ') }}
+            </p>
+
+            <h2>{{ _('Participation and withdrawal') }}</h2>
+            <p>
+                {{ _('The participation in this study is only for over 16 years old '
+                     'and voluntary. Please note that you may withdraw at any time '
+                     'without any penalty.') }}
+            </p>
+
+            <h2>{{ _('Contact') }}</h2>
+            <p>
+                {{ _('If you have questions on this research, please contact the '
+                     'researcher Dimitris Mylonas, or you may also contact the '
+                     'supervisor of the project Professor Lindsay MacDonald.') }}
+            </p>
+
+            <h2>{{ _('Agreement') }}</h2>
+            <p>
+                {{ _('By clicking Start you confirm that you have understood the '
+                     'provided information and agree to take part in this study.') }}
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
