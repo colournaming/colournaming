@@ -1,0 +1,15 @@
+version: '2'
+services:
+    web:
+        build: .
+        ports:
+        - "5000:5000"
+        volumes:
+        - .:/app
+        environment:
+        - COLOURNAMING_CFG=/app/docker.cfg
+        command: run -h 0.0.0.0 -p 5000 --debugger
+    postgres:
+        image: "postgres"
+        environment:
+        - POSTGRES_PASSWORD=testpass
