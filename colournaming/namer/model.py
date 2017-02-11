@@ -1,4 +1,3 @@
-from flask import current_app
 from colournaming.database import db
 
 
