@@ -1,6 +1,6 @@
 """Views for the namer."""
 
-from flask import Blueprint, jsonify
+from flask import Blueprint, jsonify, abort
 from sqlalchemy.orm.exc import NoResultFound
 from .model import ColourCentroid, Language
 
