@@ -8,6 +8,7 @@ services:
         - .:/app
         environment:
         - COLOURNAMING_CFG=/app/docker.cfg
+        - FLASK_DEBUG=1
         command: run -h 0.0.0.0 -p 5000 --debugger
     postgres:
         image: "postgres"
