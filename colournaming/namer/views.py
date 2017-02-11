@@ -14,6 +14,7 @@ def languages():
     language_list = [{'name': l.name, 'code': l.code} for l in languages]
     return jsonify(language_list)
 
+
 @bp.route('/colours/<lang_code>')
 def colours(lang_code):
     try:
