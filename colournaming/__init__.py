@@ -1,8 +1,7 @@
 import click
 from flask import Flask, render_template, request, current_app
-from flask_babelex import Babel
+from flask_babel import Babel
 from .database import db
-from config import LANGUAGES
 from colournaming.namer.controller import read_centroids_from_file, instantiate_namers
 
 
@@ -22,7 +21,7 @@ def create_app():
 def set_locale_selector(babel):
     @babel.localeselector
     def get_locale():
-        set_lang = current_app.config.get('SET_LANGUAGE', None)
+        set_lang = current_app.config.get('SET_LANGUAGES', None)
         available_langs = current_app.config.get('LANGUAGES', ['en'])
         print(set_lang, available_langs)
         if set_lang is not None:
