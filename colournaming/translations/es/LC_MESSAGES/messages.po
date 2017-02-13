@@ -1,0 +1,149 @@
+# Spanish translations for colornaming.net
+# Copyright (C) 2017 colornaming.net
+# This file is distributed under the same license as the colornaming.net
+# project.
+# Jon Stutters <jstutters@jeremah.co.uk>, 2017.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version:  0.0.1\n"
+"Report-Msgid-Bugs-To: jstutters@jeremah.co.uk\n"
+"POT-Creation-Date: 2017-02-13 20:48+0000\n"
+"PO-Revision-Date: 2017-02-13 20:52+0000\n"
+"Last-Translator: Jon Stutters <jstutters@jeremah.co.uk>\n"
+"Language: es\n"
+"Language-Team: es <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: colournaming/templates/index.html:10
+#: colournaming/templates/index_translate.html:10
+msgid "What color is it?"
+msgstr ""
+
+#: colournaming/templates/index.html:17
+#: colournaming/templates/index_translate.html:17
+msgid "Welcome"
+msgstr "Bienvenida"
+
+#: colournaming/templates/index.html:19
+#: colournaming/templates/index_translate.html:19
+msgid ""
+"This is a multi-lingual colour naming experiment. It is part of research "
+"on colour naming and colour categorisation within different cultures, and"
+" aims to improve the inter-cultural colour dialogue. By taking part you "
+"are helping us to develop an online colour naming model which will be "
+"based on the colour language provided from your responses."
+msgstr ""
+"Éste es un experimento multilingüe de nombrar colores. Forma parte de los proyectos de investigación "
+"sobre nombrar y categorizar colores en las diferentes culturas, y"
+" su objetivo es mejorar el diálogo intercultural sobre el color. Su participación nos "
+"ayudará a desarrollar un modelo online de nombrar colores que estará "
+"basado en el \"lenguaje natural\" a partir de sus respuestas."
+
+#: colournaming/templates/index.html:28
+#: colournaming/templates/index_translate.html:28
+msgid ""
+"As part of this simple experiment you will be asked to name a series of "
+"colour samples. It should not take longer than 10 minutes, but if you "
+"would like to quit youare free to withdraw at any time."
+msgstr ""
+"Para participar en este experimento se le va a pedir que ponga nombre a una serie "
+"de muestras de colores. No le llevará más de 10 minutos, pero si desea "
+"abandonar puede hacerlo libremente en cualquier momento."
+
+#: colournaming/templates/index.html:34
+#: colournaming/templates/index_translate.html:34
+msgid "By clicking the Start button you agree to take part in this study."
+msgstr ""
+"Para poder realizar el experimento se necesita tener habilitados el último "
+"Flash player y el Java Script. Si está de acuerdo en participar, por favor "
+"haga clic sobre Empezar."
+
+#: colournaming/templates/navbar.html:5
+msgid "Toggle navigation"
+msgstr ""
+
+#: colournaming/templates/navbar.html:14 colournaming/templates/research.html:8
+msgid "Research"
+msgstr ""
+
+#: colournaming/templates/navbar.html:15
+msgid "Colour Namer"
+msgstr "Experimento de Nombrar Colores Un Modelo Online de Nombrar Colores"
+
+#: colournaming/templates/navbar.html:16
+msgid "Terms and Conditions"
+msgstr "Términos y condiciones"
+
+#: colournaming/templates/research.html:10
+msgid ""
+"This research aims to develop an online colour naming model to facilitate"
+" colour communication within and between cultures."
+msgstr ""
+
+#: colournaming/templates/terms_and_conditions.html:17
+msgid "Terms and conditions"
+msgstr "Términos y condiciones"
+
+#: colournaming/templates/terms_and_conditions.html:18
+msgid "Confidentiality"
+msgstr "Confidencialidad"
+
+#: colournaming/templates/terms_and_conditions.html:20
+msgid ""
+"Your participation in this study will remain confidential. Data is stored"
+" on a secure Unix server along with your IP addresses. The experimental "
+"data collected in this study will be used to develop an Online Colour "
+"Naming Model and may be shared with other researchers if requested. ALL "
+"personal data will be removed, so that NO data can be traced back to the "
+"observer. "
+msgstr ""
+"Su participación en este estudio será confidencial. Los datos obtenidos"
+" serán almacenados en un servidor Unix seguro junto con su dirección IP.Los resultados "
+"obtenidos a partir de sus respuestas serán utilizados para desarrollar una aplicación "
+"online multicultural para nombrar colores. La información experimental recogida podrá "
+"ser compartida con otros investigadores si es requerido PERO toda la información personal "
+"será eliminada de modo que NO se podrá acceder a los datos personales."
+
+#: colournaming/templates/terms_and_conditions.html:28
+msgid "Participation and withdrawal"
+msgstr "Participación y abandono"
+
+#: colournaming/templates/terms_and_conditions.html:30
+msgid ""
+"The participation in this study is only for over 16 years old and "
+"voluntary. Please note that you may withdraw at any time without any "
+"penalty."
+msgstr ""
+"Su participación en este estudio es voluntaria, sólo para mayores "
+"de 16 años y puede abandonar libremente en cualquier momento si así lo desea."
+
+#: colournaming/templates/terms_and_conditions.html:35
+msgid "Contact"
+msgstr "Contacto"
+
+#: colournaming/templates/terms_and_conditions.html:37
+msgid ""
+"If you have questions on this research, please contact the researcher "
+"Dimitris Mylonas, or you may also contact the supervisor of the project "
+"Professor Lindsay MacDonald."
+msgstr ""
+"Si desea preguntar algo acerca de esta investigación no dude en contactar "
+"al investigador Dimitri Mylona o al supervisor del proyecto, el "
+"Profesor Lindsay MacDonald. "
+
+#: colournaming/templates/terms_and_conditions.html:42
+msgid "Agreement"
+msgstr "Acuerdo"
+
+#: colournaming/templates/terms_and_conditions.html:44
+msgid ""
+"By clicking Start you confirm that you have understood the provided "
+"information and agree to take part in this study."
+msgstr ""
+"Clicando sobre Empezar confirma que ha leído y comprendido esta "
+"información y que acepta formar parte del estudio."
