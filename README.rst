@@ -27,7 +27,7 @@ The database can be reinitialized by running::
 
 Additional dataset can be added by running e.g.::
 
-    docker-compose run --rm web import_centroids Francais fr /path/to/dataset_fr.csv
+    docker-compose run --rm web import_centroids /path/to/dataset_fr.csv Francais fr
 
 To stop the test instance run::
 
