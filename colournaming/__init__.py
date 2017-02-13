@@ -1,9 +1,9 @@
 import click
-from flask import Flask, render_template, request
-from flask_babel import Babel
+from flask import Flask, render_template, request, current_app
+from flask_babelex import Babel
 from .database import db
 from config import LANGUAGES
-from colournaming.namer.controller import read_centroids_from_file
+from colournaming.namer.controller import read_centroids_from_file, instantiate_namers
 
 
 def create_app():
@@ -22,7 +22,13 @@ def create_app():
 def set_locale_selector(babel):
     @babel.localeselector
     def get_locale():
-        return request.accept_languages.best_match(LANGUAGES.keys())
+        set_lang = current_app.config.get('SET_LANGUAGE', None)
+        available_langs = current_app.config.get('LANGUAGES', ['en'])
+        print(set_lang, available_langs)
+        if set_lang is not None:
+            return set_lang
+        else:
+            return request.accept_languages.best_match(available_langs)
 
 
 def set_error_handlers(app):
@@ -69,3 +75,7 @@ def setup_logging(app):
         handler = RotatingFileHandler('colournaming.log', maxBytes=10000, backupCount=1)
         handler.setLevel(logging.INFO)
         app.logger.addHandler(handler)
+
+
+def make_colour_namers(app):
+    app.namers = instantiate_namers()
