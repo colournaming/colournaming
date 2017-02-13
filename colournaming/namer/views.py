@@ -1,6 +1,6 @@
 """Views for the namer."""
 
-from flask import Blueprint, jsonify
+from flask import Blueprint, jsonify, abort
 from sqlalchemy.orm.exc import NoResultFound
 from .model import ColourCentroid, Language
 
@@ -13,6 +13,7 @@ def languages():
     languages = Language.query.all()
     language_list = [{'name': l.name, 'code': l.code} for l in languages]
     return jsonify(language_list)
+
 
 @bp.route('/colours/<lang_code>')
 def colours(lang_code):
