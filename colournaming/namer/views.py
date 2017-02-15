@@ -1,6 +1,6 @@
 """Views for the namer."""
 
-from flask import Blueprint, jsonify, abort, request, current_app
+from flask import Blueprint, jsonify, abort, request, current_app, render_template
 from sqlalchemy.orm.exc import NoResultFound
 from .model import Language
 from . import controller
@@ -38,3 +38,9 @@ def name_colour(lang_code):
     except KeyError:
         abort(404)
     return jsonify(namer.colour_name([r, g, b]))
+
+
+@bp.route('/interface')
+def interface():
+    """Show the colour namer interface."""
+    return render_template('namer.html')
