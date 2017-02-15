@@ -15,6 +15,7 @@ def create_app():
     setup_logging(app)
     setup_cli(app)
     register_blueprints(app)
+    make_colour_namers(app)
     return app
 
 
@@ -77,4 +78,5 @@ def setup_logging(app):
 
 
 def make_colour_namers(app):
-    app.namers = instantiate_namers()
+    with app.app_context():
+        app.namers = instantiate_namers()

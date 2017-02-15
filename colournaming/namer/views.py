@@ -16,15 +16,17 @@ def languages():
 
 @bp.route('/lang/<lang_code>/colours')
 def colours(lang_code):
+    """List colours known for a language."""
     try:
-        Language.query.filter(Language.code == lang_code).one()
+        lang = Language.query.filter(Language.code == lang_code).one()
     except NoResultFound:
         abort(404)
-    return jsonify(controller.colour_list(lang_code))
+    return jsonify(controller.colour_list(lang))
 
 
 @bp.route('/lang/<lang_code>/name')
 def name_colour(lang_code):
+    """Get nearest colour names for an RGB combination."""
     try:
         r = int(request.args['r'])
         g = int(request.args['g'])

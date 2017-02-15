@@ -9,12 +9,13 @@ from .model import ColourCentroid, Language
 
 
 class ColourNamer():
-    def __init__(self, lang):
-        self.data = self.load_data(lang)
+    def __init__(self, language_code):
+        self.data = self.load_data(language_code)
 
     @staticmethod
-    def load_data(lang):
-        centroids = ColourCentroid.query.filter(ColourCentroid.language_code == lang).all()
+    def load_data(language_code):
+        lang = Language.query.filter(Language.code == language_code).one()
+        centroids = ColourCentroid.query.filter(ColourCentroid.language == lang).all()
         data = []
         for c in centroids:
             mu = np.array([c.m_L, c.m_a, c.m_b])
@@ -23,7 +24,7 @@ class ColourNamer():
                               [c.sigma_7, c.sigma_8, c.sigma_9]])
             hex_code = '{0:2x}{1:2x}{2:2x}'.format(int(c.m_R), int(c.m_G), int(c.m_B))
             data.append({
-                'colour_name': c.colour_name,
+                'colour_name': c.color_name,
                 'r': c.m_R,
                 'g': c.m_G,
                 'b': c.m_B,
@@ -115,14 +116,14 @@ class ColourNamer():
             if math.isnan(self.data[i]['posteriori']):
                 self.data[i]['posteriori'] = 0.0
             names.append({
-                'name': self.data[i]['color_name'],
+                'name': self.data[i]['colour_name'],
                 'a': self.data[i]['mu'][1],
                 'b': self.data[i]['mu'][2],
                 'd': d,
                 'likelihood': self.data[i]['posteriori'],
-                'red': self.data[i]['m_R'],
-                'green': self.data[i]['m_G'],
-                'blue': self.data[i]['m_B']
+                'red': self.data[i]['r'],
+                'green': self.data[i]['g'],
+                'blue': self.data[i]['b']
             })
         return names
 
