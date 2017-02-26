@@ -1,6 +1,7 @@
 import click
 from flask import Flask, render_template, request, current_app
 from flask_babel import Babel
+from sqlalchemy.exc import ProgrammingError
 from .database import db
 from colournaming.namer.controller import read_centroids_from_file, instantiate_namers
 
@@ -79,4 +80,7 @@ def setup_logging(app):
 
 def make_colour_namers(app):
     with app.app_context():
-        app.namers = instantiate_namers()
+        try:
+            app.namers = instantiate_namers()
+        except ProgrammingError:
+            pass

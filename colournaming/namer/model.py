@@ -13,8 +13,8 @@ class ColourCentroid(db.Model):
     __tablename__ = 'colour_centroids'
 
     id = db.Column(db.Integer, primary_key=True)
-    language_id = db.Column(db.Integer, db.ForeignKey('languages.id'))
-    language = db.relationship('Language', backref=db.backref('colours'))
+    # language_id = db.Column(db.Integer, db.ForeignKey('languages.id'))
+    # language = db.relationship('Language', backref=db.backref('colours'))
     color_name = db.Column(db.Unicode(64))
     m_L = db.Column(db.Float())
     m_a = db.Column(db.Float())
