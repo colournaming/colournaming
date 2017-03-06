@@ -60,6 +60,12 @@ def setup_cli(app):
     def dropdb():
         """Drop database tables."""
         db.drop_all()
+    
+    @app.cli.command()
+    @click.pass_context
+    def help(ctx):
+        """Show help message."""
+        print(ctx.parent.get_help())
 
 
 def register_blueprints(app):
