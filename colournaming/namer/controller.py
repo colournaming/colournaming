@@ -1,3 +1,5 @@
+"""Controller for the colournaming system."""
+
 import csv
 import logging
 import math

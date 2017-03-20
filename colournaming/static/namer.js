@@ -5,17 +5,31 @@ var whiteTags;
 function setup() {
     createCanvas(displayWidth, displayHeight);
     textAlign(CENTER);
-    displayCentre = createVector(displayWidth / 2, displayHeight / 2);
     whiteTags = false;
-    loadJSON(url, drawResponse);
 }
 
 function draw() {
 }
 
+function doQuery(hexcode) {
+    hexcode = hexcode.substring(1)
+    queryURL = url + '?colour=' + hexcode;
+    loadJSON(queryURL, drawResponse);
+}
+
+function findCentre() {
+    if (windowWidth * windowHeight >= displayWidth * displayHeight) {
+        displayCentre = createVector(displayWidth / 2, displayHeight / 2);
+    } else {
+        displayCentre = createVector(windowWidth / 2, windowHeight / 2);
+    }
+    return displayCentre
+}
+
 function drawResponse(colour_matches) {
     background(128);
     console.log(colour_matches);
+    displayCentre = findCentre();
     for (c of colour_matches) {
         var pos = createVector(c.a, c.b);
         pos.x = -pos.x; 

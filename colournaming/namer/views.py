@@ -28,16 +28,17 @@ def colours(lang_code):
 def name_colour(lang_code):
     """Get nearest colour names for an RGB combination."""
     try:
-        r = int(request.args['r'])
-        g = int(request.args['g'])
-        b = int(request.args['b'])
+        hexcode = request.args['colour']
+        red = int(hexcode[0:2], 16)
+        green = int(hexcode[2:4], 16)
+        blue = int(hexcode[4:6], 16)
     except KeyError:
         abort(500)
     try:
         namer = current_app.namers[lang_code]
     except KeyError:
         abort(404)
-    return jsonify(namer.colour_name([r, g, b]))
+    return jsonify(namer.colour_name([red, green, blue]))
 
 
 @bp.route('/interface')
