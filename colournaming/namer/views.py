@@ -24,6 +24,11 @@ def colours(lang_code):
     return jsonify(controller.colour_list(lang))
 
 
+@bp.route('/colours')
+def get_colours():
+    return colours(request.args.get('lang'))
+
+
 @bp.route('/lang/<lang_code>/name')
 def name_colour(lang_code):
     """Get nearest colour names for an RGB combination."""
@@ -44,4 +49,4 @@ def name_colour(lang_code):
 @bp.route('/interface')
 def interface():
     """Show the colour namer interface."""
-    return render_template('namer.html')
+    return render_template('namer.html', languages=controller.language_list())

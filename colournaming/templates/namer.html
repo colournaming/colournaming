@@ -2,24 +2,36 @@
 
 {% block css %}
 <link rel="stylesheet" href="{{ url_for('static', filename='farbtastic/farbtastic.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/namer.css') }}">
 {% endblock %}
 
 {% block content %}
-<div class="container-fluid" style="padding-top: 50px">
-    {% include('navbar.html') %}
-    <div class="input-group">
-        <span class="input-group-btn">
-        <button class="btn btn-default" id="goButton" type="button">Go!</button>
-      </span>
-      <input type="text" id="red" class="form-control" placeholder="Search for...">
+<div class="container-fluid" style="padding-top: 10px">
+    <form class="form-inline">
+        <div class="form-group">
+            <label for="languageSelect" class="sr-only">Language</label>
+            <select id="languageSelect" name="languageSelect" class="form-control input-sm">
+                {% for lang in languages %}
+                <option value="{{ lang.code }}">{{ lang.name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="colourSelect" class="sr-only">Colour</label>
+            <select id="colourSelect" name="colourSelect" class="form-control input-sm">
+            </select>
+        </div>
+    </form>
+    <div class="row">
+        <div class="col-xs-4 col-xs-offset-2" id="colourpicker"></div>
     </div>
-    <div id="colourpicker"></div>
 </div>
 {% endblock %}
 
 {% block scripts %}
 <script>
     var url = "{{ url_for('namer.name_colour', lang_code='en')|safe }}";
+    var coloursUrl = "{{ url_for('namer.get_colours')|safe }}";
 </script>
 <script src="{{ url_for('static', filename='farbtastic/farbtastic.min.js') }}"></script>
 <script src="{{ url_for('static', filename='p5js/p5.min.js') }}"></script>

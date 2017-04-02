@@ -24,7 +24,7 @@ mccabe==0.6.1
 numpy==1.12.0
 packaging==16.8
 pockets==0.3.1
-psycopg2==2.6.2
+psycopg2==2.7.1
 py==1.4.32
 pycodestyle==2.2.0
 pydocstyle==1.1.1
