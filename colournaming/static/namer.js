@@ -1,8 +1,14 @@
 var displayCentre;
 var whiteTags;
+var w;
+var h = 300;
 
 function setup() {
-    createCanvas(displayWidth, displayHeight);
+    var $canv = $('#namerCanvas')
+    w = $canv.width()
+    console.log(w, h);
+    var myCanvas = createCanvas(w, h);
+    myCanvas.parent('namerCanvas');
     textAlign(CENTER);
     whiteTags = false;
     updateNames();
@@ -31,7 +37,7 @@ function doQuery(hexcode) {
 }
 
 function findCentre() {
-    if (windowWidth * windowHeight >= displayWidth * displayHeight) {
+    /*if (windowWidth * windowHeight >= displayWidth * displayHeight) {
         x = displayWidth / 2;
         y = displayHeight / 2;
     } else {
@@ -46,6 +52,8 @@ function findCentre() {
         yOffset = 300;
     }
     displayCentre = createVector(x, y - yOffset);
+    */
+    displayCentre = createVector(w / 2, h / 2);
     return displayCentre
 }
 
