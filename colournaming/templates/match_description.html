@@ -1,0 +1,22 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th>RGB</th>
+            <th>{{ colours[0].red }} {{ colours[0].green }} {{ colours[0].blue }}</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></td>
+            <td>{{ colours[0].name }}</td>
+        </tr>
+        <tr>
+            <td><span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span></td>
+            <td>
+                {% for c in colours[1:] %}
+                {{ c.name }}<br>
+                {% endfor %}
+            </td>
+        </tr>
+    </tbody>
+</table>

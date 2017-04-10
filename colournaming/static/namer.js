@@ -1,7 +1,6 @@
 var displayCentre;
 var whiteTags;
 var w;
-var h = 300;
 
 function setup() {
     var $canv = $('#namerCanvas')
@@ -30,29 +29,13 @@ function onColourSelectChange(e) {
 function draw() {
 }
 
-function doQuery(hexcode) {
+function doQuery(hexcode, responseHandler) {
     hexcode = hexcode.substring(1)
     queryURL = url + '?colour=' + hexcode;
-    loadJSON(queryURL, drawResponse);
+    loadJSON(queryURL, responseHandler);
 }
 
 function findCentre() {
-    /*if (windowWidth * windowHeight >= displayWidth * displayHeight) {
-        x = displayWidth / 2;
-        y = displayHeight / 2;
-    } else {
-        x = windowWidth / 2;
-        y = windowHeight / 2;
-    }
-    if (displayHeight < 500) {
-        yOffset = 175;
-    } else if (displayHeight >= 500) {
-        yOffset = 225;
-    } else {
-        yOffset = 300;
-    }
-    displayCentre = createVector(x, y - yOffset);
-    */
     displayCentre = createVector(w / 2, h / 2);
     return displayCentre
 }
@@ -60,7 +43,7 @@ function findCentre() {
 function drawResponse(colour_matches) {
     background(128);
     displayCentre = findCentre();
-    for (c of colour_matches) {
+    for (c of colour_matches.colours) {
         var pos = createVector(c.a, c.b);
         pos.mult(1.2);
         pos.x = -pos.x + 20; 
@@ -79,6 +62,17 @@ function drawResponse(colour_matches) {
         }
         text(c.name, pos.x, pos.y);
     }
+}
+
+function updateWithResponse(colour_matches) {
+    console.log('in updateWithResponse()');
+    c = colour_matches.colours[0]
+    stroke(1)
+    background(128);
+    fill(c.red, c.green, c.blue);
+    rect(w / 2 - 150, 0, 300, h - 2);
+    console.log(colour_matches);
+    $('#colourInfo').html(colour_matches.desc);
 }
 
 function updateNames() {

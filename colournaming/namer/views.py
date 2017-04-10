@@ -1,6 +1,7 @@
 """Views for the namer."""
 
 from flask import Blueprint, jsonify, abort, request, current_app, render_template
+from flask_mobility.decorators import mobilized
 from sqlalchemy.orm.exc import NoResultFound
 from .model import Language
 from . import controller
@@ -43,10 +44,18 @@ def name_colour(lang_code):
         namer = current_app.namers[lang_code]
     except KeyError:
         abort(404)
-    return jsonify(namer.colour_name([red, green, blue]))
+    colours = namer.colour_name([red, green, blue])
+    return jsonify(
+        colours=colours,
+        desc=render_template('match_description.html', colours=colours)
+    )
 
 
 @bp.route('/interface')
 def interface():
     """Show the colour namer interface."""
-    return render_template('namer.html', languages=controller.language_list())
+    if request.mobile:
+        template = 'namer-mobile.html'
+    else:
+        template = 'namer.html'
+    return render_template(template, languages=controller.language_list())

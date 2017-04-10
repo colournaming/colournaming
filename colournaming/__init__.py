@@ -2,6 +2,7 @@ import click
 from flask import Flask, render_template, request, current_app
 from flask_babel import Babel
 from sqlalchemy.exc import ProgrammingError
+import user_agents
 from .database import db
 from colournaming.namer.controller import read_centroids_from_file, instantiate_namers
 
@@ -15,6 +16,7 @@ def create_app():
     set_error_handlers(app)
     setup_logging(app)
     setup_cli(app)
+    set_before_request(app)
     register_blueprints(app)
     make_colour_namers(app)
     return app
@@ -30,6 +32,14 @@ def set_locale_selector(babel):
             return set_lang
         else:
             return request.accept_languages.best_match(available_langs)
+
+
+def set_before_request(app):
+    @app.before_request
+    def before_req():
+        agent_string = request.headers.get('User-Agent')
+        ua = user_agents.parse(agent_string)
+        request.mobile = ua.is_mobile
 
 
 def set_error_handlers(app):
