@@ -40,6 +40,7 @@ def set_before_request(app):
         agent_string = request.headers.get('User-Agent')
         ua = user_agents.parse(agent_string)
         request.mobile = ua.is_mobile
+        print(request.mobile)
 
 
 def set_error_handlers(app):

@@ -7,8 +7,9 @@
 
 {% block content %}
 <div class="container-fluid" style="padding-top: 10px">
-    <div class="row">
-        <div class="col-md-12">
+    {% include('navbar.html') %}
+    <div class="row" style="padding-top: 50px">
+        <div class="col-md-8">
             <form class="form-inline">
                 <div class="form-group">
                     <label for="languageSelect" class="sr-only">Language</label>
@@ -25,12 +26,46 @@
                 </div>
             </form>
         </div>
+        <div class="col-md-4">
+            <form class="form-inline pull-right">
+                <div class="form-group">
+                    <label for="colourNameInput" class="sr-only">Enter a colour name</label>
+                    <input type="text" class="form-control input-sm" id="colourNameInput" placeholder="Enter a colour name">
+                </div>
+                <button type="submit" class="btn btn-default">Go</button>
+            </form>
+        </div>
+    </div>
+    <div class="row" id="nameVisualisation">
+        <div class="col-md-4" id="colourpicker"></div>
+        <div class="col-md-8" id="namerCanvas"></div>
+    </div>
+    <div class="row" id="colourValueDisplay">
+        <div class="col-md-3"> </div>
+        <div class="col-md-3"><h2 class="text-center" id="hexDisplay"></h2></div>
+        <div class="col-md-3"><h2 class="text-center" id="rgbDisplay"></h2></div>
+        <div class="col-md-3"> </div>
     </div>
     <div class="row">
-        <div class="col-md-4" id="colourpicker"></div>
-        <div class="col-md-4" id="namerCanvas"></div>
-        <div class="col-md-4"> </div>
-    </div>
+        <div class="col-md-6">
+            <form class="form-inline">
+                <div class="form-group">
+                    Feel free to improve me:
+                    <label style="margin-left: 10px">
+                        Disagree
+                        <input type="radio" class="form-control" name="agreementLevel" id="agreementLevel0">
+                    </label>
+                    <input type="radio" class="form-control" name="agreementLevel" id="agreementLevel1" style="margin-left: 5px">
+                    <input type="radio" class="form-control" name="agreementLevel" id="agreementLevel2" style="margin-left: 5px" checked>
+                    <input type="radio" class="form-control" name="agreementLevel" id="agreementLevel3" style="margin-left: 5px">
+                    <label>
+                        <input type="radio" class="form-control" name="agreementLevel" id="agreementLevel4">
+                        Agree
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-default" style="margin-left: 10px">Go</button>
+            </form>
+
 </div>
 {% endblock %}
 
@@ -38,6 +73,7 @@
 <script>
     var url = "{{ url_for('namer.name_colour', lang_code='en')|safe }}";
     var coloursUrl = "{{ url_for('namer.get_colours')|safe }}";
+    var h = 400;
 </script>
 <script src="{{ url_for('static', filename='farbtastic/farbtastic.min.js') }}"></script>
 <script src="{{ url_for('static', filename='p5js/p5.min.js') }}"></script>

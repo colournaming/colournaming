@@ -31,22 +31,35 @@ function draw() {
 
 function doQuery(hexcode, responseHandler) {
     hexcode = hexcode.substring(1)
+    rgb = hexToRGB(hexcode);
+    hexString = 'Hex: ' + hexcode.toUpperCase();
+    rgbString = 'RGB: ' + rgb[0] + ', ' + rgb[1] + ', ' + rgb[2]
+    $('#hexDisplay').text(hexString);
+    $('#rgbDisplay').text(rgbString);
     queryURL = url + '?colour=' + hexcode;
     loadJSON(queryURL, responseHandler);
 }
 
-function findCentre() {
-    displayCentre = createVector(w / 2, h / 2);
+function hexToRGB(hexcode) {
+    r = parseInt(hexcode.substring(0, 2), 16);
+    g = parseInt(hexcode.substring(2, 4), 16);
+    b = parseInt(hexcode.substring(4, 6), 16);
+    return [r, g, b];
+}
+
+function textCentre() {
+    displayCentre = createVector((w / 2) + (w / 4), h / 2);
     return displayCentre
 }
 
 function drawResponse(colour_matches) {
     background(128);
-    displayCentre = findCentre();
+    displayCentre = textCentre();
+    textAlign(CENTER);
     for (c of colour_matches.colours) {
         var pos = createVector(c.a, c.b);
-        pos.mult(1.2);
-        pos.x = -pos.x + 20; 
+        pos.mult(2.0);
+        pos.x = -pos.x; 
         pos.y = -pos.y;
         pos.add(displayCentre);
         if (c.d == 0.0) {
@@ -62,6 +75,8 @@ function drawResponse(colour_matches) {
         }
         text(c.name, pos.x, pos.y);
     }
+    ellipseMode(CENTER);
+    ellipse(w / 4, h / 2, h / 2, h / 2);
 }
 
 function updateWithResponse(colour_matches) {

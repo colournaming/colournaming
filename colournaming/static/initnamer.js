@@ -1,8 +1,10 @@
 $(function () {
     console.log("setting up namer interface");
     $('#goButton').on('click', doQuery);
-    $('#colourpicker').farbtastic(function(e) { doQuery(e) }); 
-    var $farb = $('.farbtastic')[0];
-    $farb.style['margin-left'] = 'auto';
-    $farb.style['margin-right'] = 'auto';
+    var farb = $.farbtastic('#colourpicker', function(e) { doQuery(e, drawResponse) }); 
+    var $farbdiv = $('.farbtastic')[0];
+    $farbdiv.style['margin-left'] = 'auto';
+    $farbdiv.style['margin-right'] = 'auto';
+    $farbdiv.style['margin-top'] = '100px';
+    farb.setColor('#ff0000');
 })

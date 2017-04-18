@@ -11,9 +11,11 @@
         <div class="collapse navbar-collapse" id="menu">
             <ul class="nav navbar-nav">
                 <li><a href="{{ url_for('home.index') }}">{{ ('Welcome') }}</a></li>
-                <li><a href="#">{{ _('Research') }}</a></li>
+                <li><a href="{{ url_for('experiment.start') }}">{{ _('Experiment') }}</a></li>
                 <li><a href="{{ url_for('namer.interface') }}">{{ _('Colour Namer') }}</a></li>
+                <li><a href="#">{{ _('Research') }}</a></li>
                 <li><a href="{{ url_for('home.terms_and_conditions') }}">{{ _('Terms and Conditions') }}</a></li>
+                <li><a href="{{ url_for('home.contact') }}">{{ _('Terms and Conditions') }}</a></li>
             </ul>
         </div>
     </div>
