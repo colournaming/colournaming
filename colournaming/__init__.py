@@ -71,7 +71,7 @@ def setup_cli(app):
     def dropdb():
         """Drop database tables."""
         db.drop_all()
-    
+
     @app.cli.command()
     @click.pass_context
     def help(ctx):
