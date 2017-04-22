@@ -41,6 +41,8 @@ snowballstemmer==1.2.1
 Sphinx==1.5.2
 sphinxcontrib-napoleon==0.6.0
 SQLAlchemy==1.1.5
+ua-parser==0.7.3
+user-agents==1.1.0
 wcwidth==0.1.7
 Werkzeug==0.11.15
 wrapt==1.10.8
