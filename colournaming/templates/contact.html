@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='farbtastic/farbtastic.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/namer.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid" style="padding-top: 60px">
+    {% include('navbar.html') %}
+    <p>
+        Please use the following communication form to give us your feedback
+        and comments or if you wish to inform you about the results of this
+        research.
+    </p>
+    <form class="form-horizontal" method="post">
+        {{ form.csrf_token }}
+        <div class="form-group">
+            {{ form.first_name.label(for='first_name', class_='control-label col-sm-1') }}
+            <div class='col-sm-6'>
+                {{ form.first_name(class_='form-control', size=20) }}
+            </div>
+        </div>
+        <div class="form-group">
+            {{ form.last_name.label(for='last_name', class_='control-label col-sm-1') }}
+            <div class='col-sm-6'>
+                {{ form.last_name(class_='form-control', size=20) }}
+            </div>
+        </div>
+        <div class="form-group">
+            {{ form.email.label(for='email', class_='control-label col-sm-1')  }}
+            <div class='col-sm-6'>
+                {{ form.email(class_='form-control', size=20) }}
+            </div>
+        </div>
+        <div class="form-group">
+            {{ form.organisation.label(for='organisation', class_='control-label col-sm-1') }}
+            <div class='col-sm-6'>
+                {{ form.organisation(class_='form-control', size=20) }}
+            </div>
+        </div>
+        <div class="form-group">
+            {{ form.message.label(for='message', class_='control-label col-sm-1') }}
+            <div class='col-sm-6'>
+                {{ form.message(class_='form-control', size=20) }}
+            </div>
+        </div>
+        <div class='col-sm-offset-1 col-sm-6'>
+            <button type="submit" class="btn btn-default">Send</button>
+        </div>
+    </form>
+</div>
+{% endblock %}

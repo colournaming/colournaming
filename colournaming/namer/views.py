@@ -1,7 +1,6 @@
 """Views for the namer."""
 
 from flask import Blueprint, jsonify, abort, request, current_app, render_template
-from flask_mobility.decorators import mobilized
 from sqlalchemy.orm.exc import NoResultFound
 from .model import Language
 from . import controller
