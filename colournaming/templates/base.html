@@ -3,13 +3,15 @@
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <title>Responsive page</title>
         <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap-3.3.7-dist/css/bootstrap.min.css') }}">
+        {% block css %}{% endblock %}
     </head>
     <body>
         {% block content %}{% endblock %}
         <script src="{{ url_for('static', filename='jquery-3.1.0.min.js') }}"></script>
         <script src="{{ url_for('static', filename='bootstrap-3.3.7-dist/js/bootstrap.min.js') }}"></script>
+        {% block scripts %}{% endblock %}
     </body>
 </html>

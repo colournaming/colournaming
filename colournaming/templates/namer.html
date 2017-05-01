@@ -1,0 +1,115 @@
+<<<<<<< Updated upstream
+{% extends 'base.html' %}
+
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='farbtastic/farbtastic.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/namer.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid" style="padding-top: 10px">
+    {% include('navbar.html') %}
+    <div class="row" style="padding-top: 50px">
+        <div class="col-md-8">
+            <form class="form-inline">
+                <div class="form-group">
+                    <label for="languageSelect" class="sr-only">Language</label>
+                    <select id="languageSelect" name="languageSelect" class="form-control input-sm">
+                        {% for lang in languages %}
+                        <option value="{{ lang.code }}">{{ lang.name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="colourSelect" class="sr-only">Colour</label>
+                    <select id="colourSelect" name="colourSelect" class="form-control input-sm">
+                    </select>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-4">
+            <form class="form-inline pull-right">
+                <div class="form-group">
+                    <label for="colourNameInput" class="sr-only">Enter a colour name</label>
+                    <input type="text" class="form-control input-sm" id="colourNameInput" placeholder="Enter a colour name">
+                </div>
+                <button type="submit" class="btn btn-default">Go</button>
+            </form>
+        </div>
+    </div>
+    <div class="row" id="nameVisualisation">
+        <div class="col-md-4" id="colourpicker"></div>
+        <div class="col-md-8" id="namerCanvas"></div>
+    </div>
+    <div class="row" id="colourValueDisplay">
+        <div class="col-md-3"> </div>
+        <div class="col-md-3"><h2 class="text-center" id="hexDisplay"></h2></div>
+        <div class="col-md-3"><h2 class="text-center" id="rgbDisplay"></h2></div>
+        <div class="col-md-3"> </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <form class="form-inline">
+                <div class="form-group">
+                    Feel free to improve me:
+                    <label style="margin-left: 10px">
+                        Disagree
+                        <input type="radio" class="form-control" name="agreementLevel" id="agreementLevel0">
+                    </label>
+                    <input type="radio" class="form-control" name="agreementLevel" id="agreementLevel1" style="margin-left: 5px">
+                    <input type="radio" class="form-control" name="agreementLevel" id="agreementLevel2" style="margin-left: 5px" checked>
+                    <input type="radio" class="form-control" name="agreementLevel" id="agreementLevel3" style="margin-left: 5px">
+                    <label>
+                        <input type="radio" class="form-control" name="agreementLevel" id="agreementLevel4">
+                        Agree
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-default" style="margin-left: 10px">Go</button>
+            </form>
+
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    var url = "{{ url_for('namer.name_colour', lang_code='en')|safe }}";
+    var coloursUrl = "{{ url_for('namer.get_colours')|safe }}";
+    var h = 400;
+</script>
+<script src="{{ url_for('static', filename='farbtastic/farbtastic.min.js') }}"></script>
+<script src="{{ url_for('static', filename='p5js/p5.min.js') }}"></script>
+<script src="{{ url_for('static', filename='p5js/p5.dom.js') }}"></script>
+<script src="{{ url_for('static', filename='namer.js') }}"></script>
+<script src="{{ url_for('static', filename='initnamer.js') }}"></script>
+{% endblock %}
+=======
+{% extends 'base.html' %}
+
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='farbtastic/farbtastic.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid" style="padding-top: 50px">
+    {% include('navbar.html') %}
+    <div class="input-group">
+        <span class="input-group-btn">
+        <button class="btn btn-default" id="goButton" type="button">Go!</button>
+      </span>
+      <input type="text" id="red" class="form-control" placeholder="Search for...">
+    </div>
+    <div id="colourpicker"></div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    var url = "{{ url_for('namer.name_colour', lang_code='en')|safe }}";
+</script>
+<script src="{{ url_for('static', filename='farbtastic/farbtastic.min.js') }}"></script>
+<script src="{{ url_for('static', filename='p5js/p5.min.js') }}"></script>
+<script src="{{ url_for('static', filename='p5js/p5.dom.js') }}"></script>
+<script src="{{ url_for('static', filename='namer.js') }}"></script>
+<script src="{{ url_for('static', filename='initnamer.js') }}"></script>
+{% endblock %}
+>>>>>>> Stashed changes

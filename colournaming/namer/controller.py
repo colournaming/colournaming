@@ -1,3 +1,5 @@
+"""Controller for the colournaming system."""
+
 import csv
 import logging
 import math
@@ -135,7 +137,23 @@ def language_list():
 
 def colour_list(language):
     colours = ColourCentroid.query.filter(ColourCentroid.language == language).all()
-    return [c.color_name for c in colours]
+    colour_list = []
+    for c in colours:
+        cdict = {
+            'name': c.color_name.replace('_', ' ').capitalize(),
+            'code': c.color_name,
+            'hex': _hex_code_for_colour(c)
+        }
+        colour_list.append(cdict)
+    return colour_list
+
+
+def _hex_code_for_colour(colour):
+    print(colour.m_R, hex(int(colour.m_R)))
+    h = hex(int(colour.m_R))[2:]
+    h += hex(int(colour.m_G))[2:]
+    h += hex(int(colour.m_B))[2:]
+    return h
 
 
 def instantiate_namers():

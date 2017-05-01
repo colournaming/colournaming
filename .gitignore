@@ -93,3 +93,6 @@ ENV/
 
 # Secrets
 /data
+
+# Visual Studio Code
+.vscode/

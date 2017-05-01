@@ -1,6 +1,6 @@
 """Views for the namer."""
 
-from flask import Blueprint, jsonify, abort, request, current_app
+from flask import Blueprint, jsonify, abort, request, current_app, render_template
 from sqlalchemy.orm.exc import NoResultFound
 from .model import Language
 from . import controller
@@ -24,17 +24,37 @@ def colours(lang_code):
     return jsonify(controller.colour_list(lang))
 
 
+@bp.route('/colours')
+def get_colours():
+    return colours(request.args.get('lang'))
+
+
 @bp.route('/lang/<lang_code>/name')
 def name_colour(lang_code):
     """Get nearest colour names for an RGB combination."""
     try:
-        r = int(request.args['r'])
-        g = int(request.args['g'])
-        b = int(request.args['b'])
+        hexcode = request.args['colour']
+        red = int(hexcode[0:2], 16)
+        green = int(hexcode[2:4], 16)
+        blue = int(hexcode[4:6], 16)
     except KeyError:
         abort(500)
     try:
         namer = current_app.namers[lang_code]
     except KeyError:
         abort(404)
-    return jsonify(namer.colour_name([r, g, b]))
+    colours = namer.colour_name([red, green, blue])
+    return jsonify(
+        colours=colours,
+        desc=render_template('match_description.html', colours=colours)
+    )
+
+
+@bp.route('/interface')
+def interface():
+    """Show the colour namer interface."""
+    if request.mobile:
+        template = 'namer-mobile.html'
+    else:
+        template = 'namer.html'
+    return render_template(template, languages=controller.language_list())
