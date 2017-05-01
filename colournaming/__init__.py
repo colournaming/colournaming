@@ -1,9 +1,11 @@
 import click
 from flask import Flask, render_template, request, current_app
 from flask_babel import Babel
+from flask_mail import Mail
 from sqlalchemy.exc import ProgrammingError
 import user_agents
 from .database import db
+from .email import mail
 from colournaming.namer.controller import read_centroids_from_file, instantiate_namers
 
 
@@ -11,6 +13,7 @@ def create_app():
     app = Flask(__name__)
     app.config.from_envvar('COLOURNAMING_CFG')
     db.init_app(app)
+    mail.init_app(app)
     babel = Babel(app)
     set_locale_selector(babel)
     set_error_handlers(app)
