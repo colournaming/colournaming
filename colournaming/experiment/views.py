@@ -1,7 +1,6 @@
 """Views for the experiment."""
 
-from flask import Blueprint, jsonify, abort, request, current_app, render_template
-from sqlalchemy.orm.exc import NoResultFound
+from flask import Blueprint
 
 bp = Blueprint('experiment', __name__)
 

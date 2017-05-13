@@ -4,142 +4,176 @@
     {% include('navbar.html') %}
     <div class="row">
         <div class="col-sm-1">&nbsp;</div>
+        <div class="col-xs-12 col-sm-8" style="padding: 0px">
+            <img src="{{ url_for('static', filename='images/computer.jpg') }}"
+                 style="padding: 0; width: 100%" 
+                 class="img-responsive center-block"
+                 alt="{{ _('What color is it?') }}">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-1">&nbsp;</div>
         <div class="col-xs-12 col-sm-8">
             <h1>{{ _('Research') }}</h1>
             <p>
                 {{ _('This research aims to develop an online colour naming '
                 'model to facilitate colour communication within and '
                 'between cultures.') }}
-
-                Title: Colournamer - An Online Colour Naming Model
-                Researcher: Dimitris Mylonas
-                Current Host Academic Institution: Department of Computer Science, University College London (UCL)
-                1st Supervisor: Dr Lewis Griffin
-                2nd Supervisor: Prof Andrew Stockman
-                3rd Supervisor: Dr Lindsay MacDonald
-                Host Academic Institution 2013-2014: Media & Arts Technology, School of Electronic Engineering and Computer Science, Queen Mary University of London (QMUL)
-                Host Academic Institution 2011-2013: Wellcome Laboratory of Neurobiology, Institute of Neuroesthetics, University College London (UCL)
-                PI: Professor Semir Zeki
-                Host Academic Institution 2010-2011: School of Psychology, Laboratory of Visual Perseption, University of Liverpool
-                PI: Professor Sophie Wuerger
-                This project was initiated as part of: MSc Digital Colour Imaging
-                Supervisor: Professor Lindsay MacDonald
-                Course Director: Dr Phil Green
-                Host Academic Institution (2007-2009): London College of Communication, University of Arts
-                Munsell REnotation Data: Rochester Institute of Technology The Munsell Color Science Laboratory
-                CU Dynamic Colour Vision Test: Professor John Barbur at the City University with support from the UK Civil Aviation Authority
-                Web Technical Support: Harris Sidiropoulos
-                Friendly online and offline support: Andi Studer, Netaudio London
-                Interface Web Development: Jonny Stutters, Wellcome Laboratory of Neurobiology, UCL
-                Math Advisor: Dr Michael Studer
-                Video Editing: Dimitris Tsolakis
-                English Translation: Jonathan Dickens
-                Greek Translation: Lina Avramidou
-                Spanish Translation: Lena Cambero
-                Catalan Translation: Gemma Ponsa
-                German Translation: Heidi Pfund
-                Italian Translation: Paola Fumagalli & Chiara Panosetti
-                Simplified Chinese Translation: Ho Alan & Qingmei Huang
-                Traditional Chinese Translation: Ho Alan
-                French Translation: Alex Ajbdraw
-                Korean Translation: 김한나 - Hanna Kim
-                Danish Translation: Nynne Horn
-                Lithuanian Translation: Dovile Meliauskaite
-                Thai Translation: Associate Professor Pichayada Katemake
-                Portuguese Translation: Carla Cruz
-                Swedish Translation: Nicoline Kinch & Karl Ryberg
-                Russian Translation: Anastasia Sorokina, Prof Galina Paramei & Dr Yulia Griber
-                Japanese Translation: Chizuru KOGA
-                Turkish Translation: Begüm Ulusoy & Ayşe Yıldıran
-                Vietnamese Translation: Nguyen Long Giang
-                Dutch Translation: Jeannette Hanenburg
-                Norwegian Translation: A. Prof Kine Angelo
-                Polish Translation: Dr. Agata Kwiatkowska-Lubańska, Cracow Academy of Fine Arts & Dr. Arch. Justyna Tarajko-Kowalska, Cracow University of Technology
-                Illustration: Valero Doval
-                Fine art Printing: CCG, Thessaloniki, Greece
-                Sound recording and English Voice: Patrick Furness, London, UK
-                Greek Voice: Aspa & Vasia Paspali, London, UK & Athens, Greece
-                German Voice: Barbara Gamper, London, UK
-                Spanish Voice: Ignasia Mesa, London, UK
-                Thai Voice: Nanda Khaorapapong, London, UK
-                Russian Voice: Dr Yulia Griber, Smolensk State University, Russia
-                Farbtastic: jQuery color picker plug-in (orientation modified): Steven Wittens
-
-                Networks:
-
-                AIC Study Group on the Language of Colour
-                AIC - International Colour Association
-                The Society for Imaging Science and Technology
-                Fogra Common Colour Appearance
-                Netaudio London
-                Centre for Cognition, Computation and Culture, Goldsmiths
-                Colour Group (Great Britain)
-                Gruppo Del Colore - Associazione Italiana del Colore
-                PRO COR Brazil
-                Swedish Colour Centre Foundation – Svenskt Färgcentrum
-                ColorLab: исследование антропогенной среды и городского пространства
-
-                Purpose of the research:
-
-                To determine multicultural sets of basic colour terms, compounds, modifiers and secondary colour names which are in wide use.
-                To locate multicultural colour names in Munsell, sRGB, CIELAB and CIECAM02.
-                To investigate colour naming and colour categorization within different cultures.
-                To develop a colour-naming model.
-
-                What you will do in this experiment (approximate duration 10 min):
-
-                We will ask you to give us information on your display technology and viewing conditions.
-                We will test your colour vision with a 90 sec short video.
-                We will present to you a series of colour patches, one sample at a time, and ask you to name it by using natural language.
-                We will ask you to give us information on your cultural background.
-
-                Crowdfunding Project:
-
-                In September 2016, we've run a successful Kickstarter project, entitled Colours of Babel, to upgrade our online experiment to run on all new devises, minimize security threats and maintain our online presence free without advertisements. We thank all our 96 supporters for helping us raise 112% of our funding goal. You can find below a colour-coded list with our most precious donors:
-
-                Ruby Donors:
-                'Φωνή' Κέντρο Αγωγής και Λόγου
-                Dr Lindsay MacDonald, Faculty of Engineering Sciences, UCL .
-                Οικογένεια Μυλωνά (Ευάγγελος, Γεωργία, Ιωάννα και Αλέξανδρος).
-                Emerald Donor:
-                Aspa Paspali, Consultant Adolescent Psychiatrist
-                Sapphire Donors:
-                Janet Best, Natific AG
-                Dr Stavros Melemenidis, Stanford University
-                Daniel Flück, Colblindor
-                Martin Dittus, UCL
-
-                Publications/Presentations/Workshops:
-
-                True Colors - interview of Dimitris Mylonas by Despina Trivoli (2009) LiFO 179 pg.50-51, Athens, Greece, November 2009
-                Mylonas, D. (2009) A Colour Naming Investigation within Different Cultures, Oral Presentation, Digital Futures, Image Physics & Psychophysics, Institute of Physics, London, UK, November 2009
-                Mylonas, D. (2009) An Online Colour Naming Model, Oral Presentation, Printing and Graphics Science Group Student Conference, Institute of Physics, London, UK, December 2009
-                Mylonas, D. and MacDonald, L.W. (2010) Locating Colour Names under different viewing conditions on the Net, Conf. CREATE, Gjøvik, Norway, June 2010
-                Mylonas, D. and MacDonald, L.W. (2010) Online Colour Naming Experiment Using Munsell Samples, Proc. CGIV 2010, Joensuu, Finland, June 2010 (pdf)
-                MacDonald, L.W. and Mylonas, D. (2010) Edible Color Names, Proc. AIC 2010 Conf.on ‘Color and Food’, Mar del Plata, Argentina, October 2010
-                Mylonas, D.,(2010) Colour Naming Workshop: Likely Colour Names Card Game, Create Workshops, Bristol, UK, October 2010
-                Mylonas, D., MacDonald, L.W. and Wuerger S. (2010) Towards an Online Colour Naming Model, Proc. CIC 2010, San Antonio, US, November 2010 (pdf)
-                Mylonas, D.(2010), Oral Presentation, WD Wright Award, Online Colour Naming Experiment Using Munsell Samples, Colour Group, London, UK, December 2010
-                Mylonas, D. and MacDonald, L.W. (2012) Colour naming for colour communication. In Colour Design: Theory & Applications, ed Best, J., Woodhead Publishing, Cambridge, UK
-                Mylonas, D. and MacDonald, L.W. (2011) An Online Colour naming Workshop. EVA London Conference, BCS, The Chartered Institute for IT, London, UK, June 2011
-                Colour naming Eglantine by any other name - Johnson (2011) Economist, Colour naming experiment and Colournamer mentioned in The Economist, New York, July, 2011
-                Mylonas, D. (2011) Blue...and the subjective experience of colour (lecture-demo), Lost Property, Amsterdam, Netherlands, November 2011
-                Mylonas, D. (2012) Colour naming workshop on FIRE, FIRE - Community project, London, UK, March 2012
-                MacDonald, L., Paramei, G. and Mylonas D. (2012) Gender differences in colour naming. Conference Progress in Colour Studies 2012, Glasgow, Scotland, July 2012
-                Mylonas, D. (2012) Colour naming for colour communication. Public talk, Symposium on Colour for Business and the Professions, Colour Group (GB), City University, London, UK, November 2012
-                Mylonas, D., Stutters, J., Doval, V. and MacDonald, L. (2013) Colournamer - a synthetic observer for colour communication, AIC 2013 12th International Congress - Sage Gateshead, Newcastle, UK, July 2013
-                Mylonas, D., and MacDonald, L. (2014) Augmenting Basic Colour Terms in English, AISB-50 - Goldsmiths, London, UK, April 2014
-                MacDonald, L. and Mylonas, D. (2014) Gender Differences for Colour Naming in Spanish and English, AIC Interim Meeting, Oaxaca, Mexico, October 2014
-                Mylonas, D., Paramei, G. and MacDonald, L. (2014) Gender Differences in Colour Naming, In: Anderson, Wendy, Carole P. Biggam, Carole Hough and Christian Kay (eds.), Colour Studies: A broad spectrum. 2014. xiv, 417 pp. (pp. 225–239), John Benjamins
-                Mylonas, D., and MacDonald, L. (2015) Augmenting Basic Colour Terms in English, Color Research and Application, Wiley, January 2015
-                Jacob Aron (2015) Lilac and turquoise are as basic as red and orange, New Scientist, Life , February 2015
-                Brooks Hays (2015) Study: Lilac and turquoise are universally recognized, United Press International , February 2015
-                Mylonas, D.(2015) Public talk: Colournamer - a synthetic observer for colour communication, Colour Group (GB) International Colour Day, London, UK, 21st March 2015
-                Mylonas, D., Purver, M., Sadrzadeh, M., MacDonald, L. and Griffin, L. (2015) The Use of English Colour Terms in Big Data, AIC Midterm Meeting, Tokyo, Japan, May 2015
-                Katemake,P., Mylonas, D. MacDonald, L., Prasithrathsint, A. (2015) Comparison Among Three Methods for Thai Colour Naming, AIC Midterm Meeting, Tokyo, Japan, May 2015
-                Грибер Юлия Александровна & Милонас Димитрис(2015) Картография цвета: эмпирический анализ цветонаименований русского языка, Человек и культура, (in press) October, 2015
-
             </p>
+
+            <dl>
+                <dt>Title: </dt><dd>Colournamer - An Online Colour Naming Model</dd>
+                <dt>Researcher: </dt><dd>Dimitris Mylonas</dd>
+                <dt>Current Host Academic Institution: </dt><dd>Department of Computer Science, University College London (UCL)</dd>
+                <dt>1st Supervisor: </dt><dd>Dr Lewis Griffin</dd>
+                <dt>2nd Supervisor: </dt><dd>Prof Andrew Stockman</dd>
+                <dt>3rd Supervisor: </dt><dd>Dr Lindsay MacDonald</dd>
+                <dt>Host Academic Institution 2013-2014: </dt><dd>Media &amp; Arts Technology, School of Electronic Engineering and Computer Science, Queen Mary University of London (QMUL)</dd>
+                <dt>Host Academic Institution 2011-2013: </dt><dd>Wellcome Laboratory of Neurobiology, Institute of Neuroesthetics, University College London (UCL)
+                <dt>PI: </dt><dd>Professor Semir Zeki</dd>
+                <dt>Host Academic Institution 2010-2011: </dt><dd>School of Psychology, Laboratory of Visual Perseption, University of Liverpool</dd></dd>
+                <dt>PI: </dt><dd>Professor Sophie Wuerger</dd>
+                <dt>This project was initiated as part of: </dt><dd>MSc Digital Colour Imaging</dd>
+                <dt>Supervisor: </dt><dd>Professor Lindsay MacDonald</dd>
+                <dt>Course Director: </dt><dd>Dr Phil Green</dd>
+                <dt>Host Academic Institution (2007-2009): </dt><dd>London College of Communication, University of Arts</dd>
+                <dt>Munsell REnotation Data: </dt><dd>Rochester Institute of Technology The Munsell Color Science Laboratory</dd>
+                <dt>CU Dynamic Colour Vision Test: </dt><dd>Professor John Barbur at the City University with support from the UK Civil Aviation Authority</dd>
+                <dt>Web Technical Support: </dt><dd>Harris Sidiropoulos</dd>
+                <dt>Friendly online and offline support: </dt><dd>Andi Studer, Netaudio London</dd>
+                <dt>Interface Web Development: </dt><dd>Jon Stutters, Wellcome Laboratory of Neurobiology, UCL</dd>
+                <dt>Math Advisor: </dt><dd>Dr Michael Studer</dd>
+                <dt>Video Editing: </dt><dd>Dimitris Tsolakis</dd>
+                <dt>English Translation: </dt><dd>Jonathan Dickens</dd>
+                <dt>Greek Translation: </dt><dd>Lina Avramidou</dd>
+                <dt>Spanish Translation: </dt><dd>Lena Cambero</dd>
+                <dt>Catalan Translation: </dt><dd>Gemma Ponsa</dd>
+                <dt>German Translation: </dt><dd>Heidi Pfund</dd>
+                <dt>Italian Translation: </dt><dd>Paola Fumagalli &amp; Chiara Panosetti</dd>
+                <dt>Simplified Chinese Translation: </dt><dd>Ho Alan &amp; Qingmei Huang</dd>
+                <dt>Traditional Chinese Translation: </dt><dd>Ho Alan</dd>
+                <dt>French Translation: </dt><dd>Alex Ajbdraw</dd>
+                <dt>Korean Translation: </dt><dd>김한나 - Hanna Kim</dd>
+                <dt>Danish Translation: </dt><dd>Nynne Horn</dd>
+                <dt>Lithuanian Translation: </dt><dd>Dovile Meliauskaite</dd>
+                <dt>Thai Translation: </dt><dd>Associate Professor Pichayada Katemake</dd>
+                <dt>Portuguese Translation: </dt><dd>Carla Cruz</dd>
+                <dt>Swedish Translation: </dt><dd>Nicoline Kinch &amp; Karl Ryberg</dd>
+                <dt>Russian Translation: </dt><dd>Anastasia Sorokina, Prof Galina Paramei &amp; Dr Yulia Griber</dd>
+                <dt>Japanese Translation: </dt><dd>Chizuru KOGA</dd>
+                <dt>Turkish Translation: </dt><dd>Begüm Ulusoy &amp; Ayşe Yıldıran</dd>
+                <dt>Vietnamese Translation: </dt><dd>Nguyen Long Giang</dd>
+                <dt>Dutch Translation: </dt><dd>Jeannette Hanenburg</dd>
+                <dt>Norwegian Translation: </dt><dd>A. Prof Kine Angelo</dd>
+                <dt>Polish Translation: </dt><dd>Dr. Agata Kwiatkowska-Lubańska, Cracow Academy of Fine Arts &amp; Dr. Arch. Justyna Tarajko-Kowalska, Cracow University of Technology</dd>
+                <dt>Illustration: </dt><dd>Valero Doval</dd>
+                <dt>Fine art Printing: </dt><dd>CCG, Thessaloniki, Greece</dd>
+                <dt>Sound recording and English Voice: </dt><dd>Patrick Furness, London, UK</dd>
+                <dt>Greek Voice: </dt><dd>Aspa &amp; Vasia Paspali, London, UK &amp; Athens, Greece</dd>
+                <dt>German Voice: </dt><dd>Barbara Gamper, London, UK</dd>
+                <dt>Spanish Voice: </dt><dd>Ignasia Mesa, London, UK</dd>
+                <dt>Thai Voice: </dt><dd>Nanda Khaorapapong, London, UK</dd>
+                <dt>Russian Voice: </dt><dd>Dr Yulia Griber, Smolensk State University, Russia</dd>
+                <dt>Farbtastic: </dt><dd>jQuery color picker plug-in (orientation modified): Steven Wittens</dd>
+            </dl>
+
+            <h2>Networks:</h2>
+
+            <ul>
+                <li>AIC Study Group on the Language of Colour</li>
+                <li>AIC - International Colour Association</li>
+                <li>The Society for Imaging Science and Technology</li>
+                <li>Fogra Common Colour Appearance</li>
+                <li>Netaudio London</li>
+                <li>Centre for Cognition, Computation and Culture, Goldsmiths</li>
+                <li>Colour Group (Great Britain)</li>
+                <li>Gruppo Del Colore - Associazione Italiana del Colore</li>
+                <li>PRO COR Brazil</li>
+                <li>Swedish Colour Centre Foundation – Svenskt Färgcentrum</li>
+                <li>ColorLab: исследование антропогенной среды и городского пространства</li>
+            </ul>
+
+            <h2>Purpose of the research:</h2>
+
+            <ul>
+                <li>To determine multicultural sets of basic colour terms, compounds, modifiers and secondary colour names which are in wide use.</li>
+                <li>To locate multicultural colour names in Munsell, sRGB, CIELAB and CIECAM02.</li>
+                <li>To investigate colour naming and colour categorization within different cultures.</li>
+                <li>To develop a colour-naming model.</li>
+            </ul>
+
+            <h2>What you will do in this experiment (approximate duration 10 min):</h2>
+
+            <ul>
+                <li>We will ask you to give us information on your display technology and viewing conditions.</li>
+                <li>We will test your colour vision with a 90 sec short video.</li>
+                <li>We will present to you a series of colour patches, one sample at a time, and ask you to name it by using natural language.</li>
+                <li>We will ask you to give us information on your cultural background.</li>
+            </ul>
+
+            <h2>Crowdfunding Project:</h2>
+
+            <p>
+                In September 2016, we've run a successful Kickstarter project,
+                entitled Colours of Babel, to upgrade our online experiment to
+                run on all new devises, minimize security threats and maintain
+                our online presence free without advertisements. We thank all
+                our 96 supporters for helping us raise 112% of our funding
+                goal. You can find below a colour-coded list with our most
+                precious donors:
+            </p>
+
+            <h3>Ruby Donors:</h3>
+            <ul>
+                <li>'Φωνή' Κέντρο Αγωγής και Λόγου</li>
+                <li>Dr Lindsay MacDonald, Faculty of Engineering Sciences, UCL.</li>
+                <li>Οικογένεια Μυλωνά (Ευάγγελος, Γεωργία, Ιωάννα και Αλέξανδρος).</li>
+            </ul>
+
+            <h3>Emerald Donor:</h3>
+            <ul>
+                <li>Aspa Paspali, Consultant Adolescent Psychiatrist</li>
+            </ul>
+
+            <h3>Sapphire Donors:</h3>
+            <ul>
+                <li>Janet Best, Natific AG</li>
+                <li>Dr Stavros Melemenidis, Stanford University</li>
+                <li>Daniel Flück, Colblindor</li>
+                <li>Martin Dittus, UCL</li>
+            </ul>
+
+            <h3>Publications/Presentations/Workshops:</h3>
+
+            <ul>
+                <li>True Colors - interview of Dimitris Mylonas by Despina Trivoli (2009) LiFO 179 pg.50-51, Athens, Greece, November 2009</li>
+                <li>Mylonas, D. (2009) A Colour Naming Investigation within Different Cultures, Oral Presentation, Digital Futures, Image Physics &amp; Psychophysics, Institute of Physics, London, UK, November 2009</li>
+                <li>Mylonas, D. (2009) An Online Colour Naming Model, Oral Presentation, Printing and Graphics Science Group Student Conference, Institute of Physics, London, UK, December 2009</li>
+                <li>Mylonas, D. and MacDonald, L.W. (2010) Locating Colour Names under different viewing conditions on the Net, Conf. CREATE, Gjøvik, Norway, June 2010</li>
+                <li>Mylonas, D. and MacDonald, L.W. (2010) Online Colour Naming Experiment Using Munsell Samples, Proc. CGIV 2010, Joensuu, Finland, June 2010 (pdf)</li>
+                <li>MacDonald, L.W. and Mylonas, D. (2010) Edible Color Names, Proc. AIC 2010 Conf.on ‘Color and Food’, Mar del Plata, Argentina, October 2010</li>
+                <li>Mylonas, D.,(2010) Colour Naming Workshop: Likely Colour Names Card Game, Create Workshops, Bristol, UK, October 2010</li>
+                <li>Mylonas, D., MacDonald, L.W. and Wuerger S. (2010) Towards an Online Colour Naming Model, Proc. CIC 2010, San Antonio, US, November 2010 (pdf)</li>
+                <li>Mylonas, D.(2010), Oral Presentation, WD Wright Award, Online Colour Naming Experiment Using Munsell Samples, Colour Group, London, UK, December 2010</li>
+                <li>Mylonas, D. and MacDonald, L.W. (2012) Colour naming for colour communication. In Colour Design: Theory &amp; Applications, ed Best, J., Woodhead Publishing, Cambridge, UK</li>
+                <li>Mylonas, D. and MacDonald, L.W. (2011) An Online Colour naming Workshop. EVA London Conference, BCS, The Chartered Institute for IT, London, UK, June 2011</li>
+                <li>Colour naming Eglantine by any other name - Johnson (2011) Economist, Colour naming experiment and Colournamer mentioned in The Economist, New York, July, 2011</li>
+                <li>Mylonas, D. (2011) Blue...and the subjective experience of colour (lecture-demo), Lost Property, Amsterdam, Netherlands, November 2011</li>
+                <li>Mylonas, D. (2012) Colour naming workshop on FIRE, FIRE - Community project, London, UK, March 2012</li>
+                <li>MacDonald, L., Paramei, G. and Mylonas D. (2012) Gender differences in colour naming. Conference Progress in Colour Studies 2012, Glasgow, Scotland, July 2012</li>
+                <li>Mylonas, D. (2012) Colour naming for colour communication. Public talk, Symposium on Colour for Business and the Professions, Colour Group (GB), City University, London, UK, November 2012</li>
+                <li>Mylonas, D., Stutters, J., Doval, V. and MacDonald, L. (2013) Colournamer - a synthetic observer for colour communication, AIC 2013 12th International Congress - Sage Gateshead, Newcastle, UK, July 2013</li>
+                <li>Mylonas, D., and MacDonald, L. (2014) Augmenting Basic Colour Terms in English, AISB-50 - Goldsmiths, London, UK, April 2014</li>
+                <li>MacDonald, L. and Mylonas, D. (2014) Gender Differences for Colour Naming in Spanish and English, AIC Interim Meeting, Oaxaca, Mexico, October 2014</li>
+                <li>Mylonas, D., Paramei, G. and MacDonald, L. (2014) Gender Differences in Colour Naming, In: Anderson, Wendy, Carole P. Biggam, Carole Hough and Christian Kay (eds.), Colour Studies: A broad spectrum. 2014. xiv, 417 pp. (pp. 225–239), John Benjamins</li>
+                <li>Mylonas, D., and MacDonald, L. (2015) Augmenting Basic Colour Terms in English, Color Research and Application, Wiley, January 2015</li>
+                <li>Jacob Aron (2015) Lilac and turquoise are as basic as red and orange, New Scientist, Life , February 2015</li>
+                <li>Brooks Hays (2015) Study: Lilac and turquoise are universally recognized, United Press International , February 2015</li>
+                <li>Mylonas, D.(2015) Public talk: Colournamer - a synthetic observer for colour communication, Colour Group (GB) International Colour Day, London, UK, 21st March 2015</li>
+                <li>Mylonas, D., Purver, M., Sadrzadeh, M., MacDonald, L. and Griffin, L. (2015) The Use of English Colour Terms in Big Data, AIC Midterm Meeting, Tokyo, Japan, May 2015</li>
+                <li>Katemake,P., Mylonas, D. MacDonald, L., Prasithrathsint, A. (2015) Comparison Among Three Methods for Thai Colour Naming, AIC Midterm Meeting, Tokyo, Japan, May 2015</li>
+                <li>Грибер Юлия Александровна &amp; Милонас Димитрис(2015) Картография цвета: эмпирический анализ цветонаименований русского языка, Человек и культура, (in press) October, 2015</li>
+            </ul>
         </div>
     </div>
 </div>
