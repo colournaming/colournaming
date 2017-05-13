@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/experiment.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid" style="padding-top: 10px">
+    <h1>Display properties</h1>
+    <p>
+        Disable Night Shift or Blue Light filters and adjust the brightness of
+        your screen until you can differentiate all steps of the greyscale
+        wheel below.
+    </p>
+    <img src="{{ url_for('static', filename='images/greyscale_wheel.png') }}" alt="Greyscale wheel">
+    <p>How many steps can you see in the greyscale ramp?</p>
+    <form class="form" method="post">
+        {{ form.csrf_token }}
+        {{ form.levels }}
+        <button type="submit">Continue</button>
+    </form>
+</div>
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}

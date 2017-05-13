@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/experiment.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid" style="padding-top: 10px">
+    <h1>Colour Vision Test</h1>
+    <p>Where is the colour target, left or right?</p>
+    <div id="visionTestCanvas"></div>
+    <p>The Universal Colour Discrimination Test was designed by Dr. Caterina Ripamonti.</p>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='p5js/p5.min.js') }}"></script>
+<script src="{{ url_for('static', filename='p5js/p5.dom.js') }}"></script>
+<script src="{{ url_for('static', filename='js/colour_vision.js') }}"></script>
+{% endblock %}

@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 {% extends 'base.html' %}
 
 {% block css %}
@@ -82,34 +81,3 @@
 <script src="{{ url_for('static', filename='namer.js') }}"></script>
 <script src="{{ url_for('static', filename='initnamer.js') }}"></script>
 {% endblock %}
-=======
-{% extends 'base.html' %}
-
-{% block css %}
-<link rel="stylesheet" href="{{ url_for('static', filename='farbtastic/farbtastic.css') }}">
-{% endblock %}
-
-{% block content %}
-<div class="container-fluid" style="padding-top: 50px">
-    {% include('navbar.html') %}
-    <div class="input-group">
-        <span class="input-group-btn">
-        <button class="btn btn-default" id="goButton" type="button">Go!</button>
-      </span>
-      <input type="text" id="red" class="form-control" placeholder="Search for...">
-    </div>
-    <div id="colourpicker"></div>
-</div>
-{% endblock %}
-
-{% block scripts %}
-<script>
-    var url = "{{ url_for('namer.name_colour', lang_code='en')|safe }}";
-</script>
-<script src="{{ url_for('static', filename='farbtastic/farbtastic.min.js') }}"></script>
-<script src="{{ url_for('static', filename='p5js/p5.min.js') }}"></script>
-<script src="{{ url_for('static', filename='p5js/p5.dom.js') }}"></script>
-<script src="{{ url_for('static', filename='namer.js') }}"></script>
-<script src="{{ url_for('static', filename='initnamer.js') }}"></script>
-{% endblock %}
->>>>>>> Stashed changes
