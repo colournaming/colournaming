@@ -9,6 +9,11 @@
     <h1>Colour Vision Test</h1>
     <p>Where is the colour target, left or right?</p>
     <div id="visionTestCanvas"></div>
+    <form class="form-inline">
+        {{ form.csrf_token }}
+        <button id="button-left">Left <span class="glyphicon glyphicon-arrow-left" aria-hidden="True"></span></button>
+        <button id="button-right"><span class="glyphicon glyphicon-arrow-right" aria-hidden="True"></span> Right</button>
+    </form>
     <p>The Universal Colour Discrimination Test was designed by Dr. Caterina Ripamonti.</p>
 </div>
 {% endblock %}
@@ -17,4 +22,7 @@
 <script src="{{ url_for('static', filename='p5js/p5.min.js') }}"></script>
 <script src="{{ url_for('static', filename='p5js/p5.dom.js') }}"></script>
 <script src="{{ url_for('static', filename='js/colour_vision.js') }}"></script>
+<script type="text/javascript">
+    var COLOUR_VISION_SUBMIT_URL = "{{ url_for('experiment.colour_vision') }}"
+</script>
 {% endblock %}

@@ -29,7 +29,6 @@ def set_locale_selector(babel):
     def get_locale():
         set_lang = current_app.config.get('SET_LANGUAGES', None)
         available_langs = current_app.config.get('LANGUAGES', ['en'])
-        print(set_lang, available_langs)
         if set_lang is not None:
             return set_lang
         else:
@@ -42,7 +41,6 @@ def set_before_request(app):
         agent_string = request.headers.get('User-Agent')
         ua = user_agents.parse(agent_string)
         request.mobile = ua.is_mobile
-        print(request.mobile)
 
 
 def set_error_handlers(app):
