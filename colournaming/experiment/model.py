@@ -24,6 +24,12 @@ class ColourVision(enum.Enum):
     tritanomaly = 7
 
 
+class DeviceOrientation(enum.Enum):
+    """Device orientations"""
+    vertical = 1
+    horizontal = 2
+
+
 class LanguageExperience(enum.Enum):
     beginner = 1
     intermediate = 2
@@ -72,10 +78,13 @@ class Participant(db.Model):
     screen_distance = db.Column(db.Float)
     screen_resolution_w = db.Column(db.Integer)
     screen_resolution_h = db.Column(db.Integer)
+    screen_colour_depth = db.Column(db.Integer)
+    device_orientation = db.Column(db.Enum(DeviceOrientation))
 
     education_level = db.Column(db.Enum(EducationLevel))
     language_experience = db.Column(db.Enum(LanguageExperience))
     colour_experience = db.Column(db.Enum(ColourExperience))
+    colour_vision = db.Column(db.Enum(ColourVision))
 
 
 class ColourResponse(db.Model):
