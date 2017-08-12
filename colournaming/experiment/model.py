@@ -1,20 +1,25 @@
+"""Database models used in the colour response experiment."""
+
 import enum
 from colournaming.database import db
 
 
 class Gender(enum.Enum):
+    """Genders."""
     female = 1
     male = 2
     transgender = 3
 
 
 class ColourExperience(enum.Enum):
+    """Experience levels working with colour."""
     beginner = 1
     intermediate = 2
     advanced = 3
 
 
 class ColourVision(enum.Enum):
+    """Colour vision deficencies."""
     normal = 1
     protanopia = 2
     deuteranopia = 3
@@ -31,6 +36,7 @@ class DeviceOrientation(enum.Enum):
 
 
 class LanguageExperience(enum.Enum):
+    """Experience levels in language."""
     beginner = 1
     intermediate = 2
     advanced = 3
@@ -38,6 +44,7 @@ class LanguageExperience(enum.Enum):
 
 
 class EducationLevel(enum.Enum):
+    """Education levels."""
     gcse = 1
     a_level = 2
     graduate = 3
@@ -45,6 +52,7 @@ class EducationLevel(enum.Enum):
 
 
 class AmbientLight(enum.Enum):
+    """Ambient lighting conditions."""
     dark = 1
     typical_domestic = 2
     mid_daylight = 3
@@ -53,6 +61,7 @@ class AmbientLight(enum.Enum):
 
 
 class ScreenLight(enum.Enum):
+    """Screen lighting conditions."""
     dark = 1
     dim = 2
     average = 3
@@ -60,6 +69,7 @@ class ScreenLight(enum.Enum):
 
 
 class Participant(db.Model):
+    """Model for an experiment participant."""
     __tablename__ = 'participants'
 
     id = db.Column(db.Integer, primary_key=True)
@@ -88,6 +98,7 @@ class Participant(db.Model):
 
 
 class ColourResponse(db.Model):
+    """Model for a single experiment response."""
     __tablename__ = 'colour_responses'
 
     id = db.Column(db.Integer, primary_key=True)
