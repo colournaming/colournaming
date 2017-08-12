@@ -14,6 +14,16 @@ class ColourExperience(enum.Enum):
     advanced = 3
 
 
+class ColourVision(enum.Enum):
+    normal = 1
+    protanopia = 2
+    deuteranopia = 3
+    tritanopia = 4
+    protanomaly = 5
+    deuteranomaly = 6
+    tritanomaly = 7
+
+
 class LanguageExperience(enum.Enum):
     beginner = 1
     intermediate = 2
@@ -59,6 +69,10 @@ class Participant(db.Model):
     country_resident = db.Column(db.String)
     ambient_light = db.Column(db.Enum(AmbientLight))
     screen_light = db.Column(db.Enum(ScreenLight))
+    screen_distance = db.Column(db.Float)
+    screen_resolution_w = db.Column(db.Integer)
+    screen_resolution_h = db.Column(db.Integer)
+
     education_level = db.Column(db.Enum(EducationLevel))
     language_experience = db.Column(db.Enum(LanguageExperience))
     colour_experience = db.Column(db.Enum(ColourExperience))
@@ -74,3 +88,5 @@ class ColourResponse(db.Model):
     display_g = db.Column(db.Integer)
     display_b = db.Column(db.Integer)
     name = db.Column(db.String)
+    response_time = db.Column(db.Float)
+    experiment_version = db.Column(db.String)
