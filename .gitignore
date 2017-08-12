@@ -93,6 +93,10 @@ ENV/
 
 # Secrets
 /data
+colournaming-data.tar.gz
 
 # Visual Studio Code
 .vscode/
+
+# Config files
+win.cfg
