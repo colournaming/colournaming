@@ -175,6 +175,8 @@ def read_centroids_from_file(f, language_name, language_code):
         db.session.commit()
     for r in col_csv:
         r['language'] = lang
+        if 'exp' in r:
+            del r['exp']
         c = ColourCentroid(**r)
         db.session.add(c)
     db.session.commit()

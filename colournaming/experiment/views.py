@@ -2,6 +2,7 @@
 
 from flask import Blueprint, jsonify, redirect, render_template, request, session, url_for
 from . import forms
+from . import controller
 
 bp = Blueprint('experiment', __name__)
 
@@ -43,7 +44,10 @@ def colour_vision():
 def name_colour():
     check_in_experiment()
     print(session)
-    return render_template('name_colour.html')
+    form = forms.ColourNameForm()
+    if form.validate_on_submit():
+        print('log data')
+    return render_template('name_colour.html', form=form)
 
 
 @bp.route('/observer_information.html')

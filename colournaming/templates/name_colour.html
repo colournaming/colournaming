@@ -5,9 +5,22 @@
 {% endblock %}
 
 {% block content %}
+<div class="container-fluid" style="padding-top: 10px">
+<h1>Colour Naming</h1>
+<div id="colourNameCanvas"></div>
+<form class="form-inline">
+    {{ form.csrf_token }}
+    {{ form.name }}
+    <button id="submit-name">Submit</button>
+</form>
+
 {% endblock %}
 
 {% block scripts %}
 <script src="{{ url_for('static', filename='p5js/p5.min.js') }}"></script>
 <script src="{{ url_for('static', filename='p5js/p5.dom.js') }}"></script>
+<script src="{{ url_for('static', filename='js/colour_experiment.js') }}"></script>
+<script type="text/javascript">
+    var COLOUR_VISION_SUBMIT_URL = "{{ url_for('experiment.name_colour') }}"
+</script>
 {% endblock %}
