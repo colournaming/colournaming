@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% from 'form_helpers.j2' import render_field %}
 
 {% block css %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/experiment.css') }}">
@@ -16,11 +17,19 @@
     <p>How many steps can you see in the greyscale ramp?</p>
     <form class="form" method="post">
         {{ form.csrf_token }}
+        {{ render_field(ambient_light) }} 
+        {{ render_field(screen_light) }} 
         {{ form.levels }}
+        {{ form.screen_width }}
+        {{ form.screen_height }}
         <button type="submit">Continue</button>
     </form>
 </div>
 {% endblock %}
 
 {% block scripts %}
+<script type="javascript">
+    $('#screen_width')[0].value = screen.width;
+    $('#screen_height')[0].value = screen.height;
+</script>
 {% endblock %}
