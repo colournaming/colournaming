@@ -13,14 +13,20 @@
     {{ form.name }}
     <button id="submit-name">Submit</button>
 </form>
-
+</div>
 {% endblock %}
 
 {% block scripts %}
+<script type="text/javascript">
+    var COLOUR_NAME_RESPONSE_URL = "{{ url_for('experiment.name_colour') }}"
+    var COLOUR_NAME_TARGET_URL = "{{ url_for('experiment.get_target') }}"
+</script>
 <script src="{{ url_for('static', filename='p5js/p5.min.js') }}"></script>
 <script src="{{ url_for('static', filename='p5js/p5.dom.js') }}"></script>
 <script src="{{ url_for('static', filename='js/colour_experiment.js') }}"></script>
 <script type="text/javascript">
-    var COLOUR_VISION_SUBMIT_URL = "{{ url_for('experiment.name_colour') }}"
+    $(function () {
+        $('#submit-name').on('click', recordAnswerShowNext);
+    })
 </script>
 {% endblock %}

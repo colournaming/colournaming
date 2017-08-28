@@ -1,7 +1,7 @@
 """Database models used in the colour response experiment."""
 
 import enum
-from colournaming.database import db
+from ..database import db
 
 
 class Gender(enum.Enum):
@@ -97,6 +97,16 @@ class Participant(db.Model):
     colour_vision = db.Column(db.Enum(ColourVision))
 
 
+class ColourTarget(db.Model):
+    """Model for an experiment target."""
+    __tablename__ = 'colour_targets'
+
+    id = db.Column(db.Integer, primary_key=True)
+    red = db.Column(db.Integer, nullable=False)
+    green = db.Column(db.Integer, nullable=False)
+    blue = db.Column(db.Integer, nullable=False)
+
+
 class ColourResponse(db.Model):
     """Model for a single experiment response."""
     __tablename__ = 'colour_responses'
@@ -104,9 +114,8 @@ class ColourResponse(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     participant_id = db.Column(db.Integer, db.ForeignKey('participants.id'))
     participant = db.relationship('Participant', backref=db.backref('responses'))
-    display_r = db.Column(db.Integer)
-    display_g = db.Column(db.Integer)
-    display_b = db.Column(db.Integer)
+    target_id = db.Column(db.Integer, db.ForeignKey('colour_targets.id'))
+    target = db.relationship('ColourTarget')
     name = db.Column(db.String)
     response_time = db.Column(db.Float)
     experiment_version = db.Column(db.String)

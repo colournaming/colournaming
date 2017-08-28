@@ -1,3 +1,5 @@
+"""Website for the colournaming experiment."""
+
 import click
 from flask import Flask, render_template, request, current_app
 from flask_babel import Babel
@@ -5,10 +7,12 @@ from sqlalchemy.exc import ProgrammingError
 import user_agents
 from .database import db
 from .email import mail
-from colournaming.namer.controller import read_centroids_from_file, instantiate_namers
+from .experiment.controller import read_targets_from_file
+from .namer.controller import read_centroids_from_file, instantiate_namers
 
 
 def create_app():
+    """Create an instance of the app."""
     app = Flask(__name__)
     app.config.from_envvar('COLOURNAMING_CFG')
     db.init_app(app)
@@ -61,6 +65,12 @@ def setup_cli(app):
     def import_centroids(centroids_file, language_name, language_code):
         """Import a centroids file into the database."""
         read_centroids_from_file(centroids_file, language_name, language_code)
+
+    @app.cli.command()
+    @click.argument('targets_file', type=click.File('r'))
+    def import_targets(targets_file):
+        """Import a targets file into the database."""
+        read_targets_from_file(targets_file)
 
     @app.cli.command()
     def initdb():

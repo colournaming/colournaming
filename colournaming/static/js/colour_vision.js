@@ -42,6 +42,7 @@ function checkAnswerShowNext(side) {
   if (testsComplete === TEST_COUNT) {
     var results = {
       csrf_token: $('#csrf_token')[0].value,
+      colour_vision_status: $('#colour_vision_status')[0].value,
       tests_correct: testsCorrect,
       tests_complete: testsComplete
     };

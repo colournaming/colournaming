@@ -14,14 +14,14 @@
         wheel below.
     </p>
     <img src="{{ url_for('static', filename='images/greyscale_wheel.png') }}" alt="Greyscale wheel">
-    <p>How many steps can you see in the greyscale ramp?</p>
     <form class="form" method="post">
         {{ form.csrf_token }}
-        {{ render_field(ambient_light) }} 
-        {{ render_field(screen_light) }} 
-        {{ form.levels }}
+        {{ render_field(form.levels) }}
+        {{ render_field(form.ambient_light) }} 
+        {{ render_field(form.screen_light) }} 
         {{ form.screen_width }}
         {{ form.screen_height }}
+        {{ form.screen_colour_depth }}
         <button type="submit">Continue</button>
     </form>
 </div>
@@ -31,5 +31,6 @@
 <script type="javascript">
     $('#screen_width')[0].value = screen.width;
     $('#screen_height')[0].value = screen.height;
+    $('#screen_colour_depth')[0].value = screen.colorDepth;
 </script>
 {% endblock %}

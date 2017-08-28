@@ -11,11 +11,14 @@ from .model import ColourCentroid, Language
 
 
 class ColourNamer():
+    """Use colour centroid data to find nearest perceptual neighbours of colours."""
+
     def __init__(self, language_code):
         self.data = self.load_data(language_code)
 
     @staticmethod
     def load_data(language_code):
+        """Load colour centroid data from the database."""
         lang = Language.query.filter(Language.code == language_code).one()
         centroids = ColourCentroid.query.filter(ColourCentroid.language == lang).all()
         data = []
@@ -40,6 +43,7 @@ class ColourNamer():
 
     @staticmethod
     def mvnpdf(x, mu, sigma):
+        """Calculate a probability distribution function."""
         det = np.linalg.det(sigma)
         k = np.size(x)
         f = pow(2.0 * math.pi, -0.5 * k) * pow(det, -0.5)
@@ -48,6 +52,7 @@ class ColourNamer():
 
     @staticmethod
     def srgb2xyz(rgb):
+        """Convert SRGB to 3D colour space."""
         M = np.array([[0.4124, 0.3576, 0.1805],
                       [0.2126, 0.7152, 0.0722],
                       [0.0193, 0.1192, 0.9505]])
@@ -59,6 +64,7 @@ class ColourNamer():
 
     @staticmethod
     def scale_component(c):
+        """Scale a colour component."""
         sC = c / 255.0
         sc = pow((sC + 0.055) / 1.055, 2.4)
         if sC <= 0.03928:
@@ -67,6 +73,7 @@ class ColourNamer():
 
     @staticmethod
     def xyz2lab(xyz, rwhite):
+        """Convert 3D colour space coordinate to LAB."""
         x, y, z = xyz
         xn, yn, zn = rwhite
         xrel = x / xn
@@ -90,16 +97,19 @@ class ColourNamer():
 
     @staticmethod
     def euclidean_distance(a, b):
+        """Calculate the euclidean distance between two points."""
         return pow(pow(a[1] - b[1], 2) + pow(a[2] - b[2], 2), 0.5)
 
     @staticmethod
     def calculate_angle(a, b):
+        """Calculate the angle between two points."""
         r = (b[1] - a[1]) / (b[2] - a[2])
         if math.isnan(r):
             r = 0.0
         return r
 
     def colour_name(self, rgb):
+        """Get nearest colours for to an RGB colour."""
         rgb = np.array(rgb)
         testlab = self.xyz2lab(self.srgb2xyz(rgb), [95.04, 100.0, 108.89])
         for i in range(len(self.data)):
@@ -131,11 +141,13 @@ class ColourNamer():
 
 
 def language_list():
+    """Get a list of all known languages."""
     languages = Language.query.all()
     return [{'name': l.name, 'code': l.code} for l in languages]
 
 
 def colour_list(language):
+    """Get a list of all known colours in a given language."""
     colours = ColourCentroid.query.filter(ColourCentroid.language == language).all()
     colour_list = []
     for c in colours:
@@ -149,6 +161,7 @@ def colour_list(language):
 
 
 def _hex_code_for_colour(colour):
+    """Return the hex code for a given colour centroid."""
     print(colour.m_R, hex(int(colour.m_R)))
     h = hex(int(colour.m_R))[2:]
     h += hex(int(colour.m_G))[2:]
@@ -157,6 +170,7 @@ def _hex_code_for_colour(colour):
 
 
 def instantiate_namers():
+    """Create instances of ColourNamer for each known language."""
     namers = {}
     for lang in language_list():
         lang_code = lang['code']
@@ -166,6 +180,7 @@ def instantiate_namers():
 
 
 def read_centroids_from_file(f, language_name, language_code):
+    """Import colour centroids from a file to the database."""
     col_csv = csv.DictReader(f)
     try:
         lang = Language.query.filter(Language.code == language_code).one()

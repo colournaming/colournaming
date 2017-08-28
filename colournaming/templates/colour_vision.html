@@ -20,10 +20,10 @@
 {% endblock %}
 
 {% block scripts %}
-<script src="{{ url_for('static', filename='p5js/p5.min.js') }}"></script>
-<script src="{{ url_for('static', filename='p5js/p5.dom.js') }}"></script>
-<script src="{{ url_for('static', filename='js/colour_vision.js') }}"></script>
 <script type="text/javascript">
     var COLOUR_VISION_SUBMIT_URL = "{{ url_for('experiment.colour_vision') }}"
 </script>
+<script src="{{ url_for('static', filename='p5js/p5.min.js') }}"></script>
+<script src="{{ url_for('static', filename='p5js/p5.dom.js') }}"></script>
+<script src="{{ url_for('static', filename='js/colour_vision.js') }}"></script>
 {% endblock %}
