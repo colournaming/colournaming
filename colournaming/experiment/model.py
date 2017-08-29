@@ -2,6 +2,7 @@
 
 import enum
 from ..database import db
+from sqlalchemy.dialects import postgresql
 
 
 class Gender(enum.Enum):
@@ -80,21 +81,21 @@ class Participant(db.Model):
     user_agent = db.Column(db.String)
     colour_vision_score = db.Column(db.Integer)
     age = db.Column(db.Integer)
-    gender = db.Column(db.Enum(Gender))
+    gender = db.Column(postgresql.ENUM(Gender))
     country_raised = db.Column(db.String)
     country_resident = db.Column(db.String)
-    ambient_light = db.Column(db.Enum(AmbientLight))
-    screen_light = db.Column(db.Enum(ScreenLight))
+    ambient_light = db.Column(postgresql.ENUM(AmbientLight))
+    screen_light = db.Column(postgresql.ENUM(ScreenLight))
     screen_distance = db.Column(db.Float)
     screen_resolution_w = db.Column(db.Integer)
     screen_resolution_h = db.Column(db.Integer)
     screen_colour_depth = db.Column(db.Integer)
-    device_orientation = db.Column(db.Enum(DeviceOrientation))
+    device_orientation = db.Column(postgresql.ENUM(DeviceOrientation))
 
-    education_level = db.Column(db.Enum(EducationLevel))
-    language_experience = db.Column(db.Enum(LanguageExperience))
-    colour_experience = db.Column(db.Enum(ColourExperience))
-    colour_vision = db.Column(db.Enum(ColourVision))
+    education_level = db.Column(postgresql.ENUM(EducationLevel))
+    language_experience = db.Column(postgresql.ENUM(LanguageExperience))
+    colour_experience = db.Column(postgresql.ENUM(ColourExperience))
+    colour_vision = db.Column(postgresql.ENUM(ColourVision))
 
 
 class ColourTarget(db.Model):

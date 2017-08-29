@@ -3,7 +3,7 @@
 import csv
 import random
 from ..database import db
-from .model import ColourTarget, Participant
+from .model import ColourTarget, Participant, ColourResponse
 
 
 def read_targets_from_file(targets_file):
@@ -49,6 +49,7 @@ def save_participant(experiment):
 
 
 def save_response(experiment, response):
+    print('saving response in experiment', experiment)
     participant = Participant.query.filter(
         Participant.id == experiment['participant_id']
     ).one()
@@ -62,5 +63,14 @@ def save_response(experiment, response):
 
 
 def update_participant(experiment):
-    pass
-    
+    participant = Participant.query.filter(
+        Participant.id == experiment['participant_id']
+    ).one()
+    participant.age = experiment['observer']['age']
+    participant.gender = experiment['observer']['gender']
+    participant.colour_experience = experiment['observer']['colour_experience']    
+    participant.language_experience = experiment['observer']['language_experience']    
+    participant.education_level = experiment['observer']['education_level']
+    participant.country_raised = experiment['observer']['country_raised']
+    participant.country_resident = experiment['observer']['country_resident']
+    db.session.commit()

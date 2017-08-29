@@ -42,6 +42,9 @@ def display_properties():
         }
         session.modified = True
         return redirect(url_for('experiment.colour_vision'))
+    if form.errors:
+        for field, error in form.errors.items():
+            print(field, error)
     return render_template('display_properties.html', form=form)
 
 
@@ -58,7 +61,8 @@ def colour_vision():
             'percent_correct': percent_tests_correct,
             'status': form.colour_vision_status.data
         }
-        session.modified = True
+        session['experiment']['participant_id'] = controller.save_participant(session['experiment'])
+        session.modfied = True
         return jsonify({'success': True, 'url': url_for('experiment.name_colour')})
     if form.errors:
         for field, error in form.errors.items():
@@ -72,7 +76,6 @@ def name_colour():
     check_in_experiment()
     form = forms.ColourNameForm()
     if form.validate_on_submit():
-        controller.save_participant(session['experiment'])
         controller.save_response(
             session['experiment'],
             {
@@ -98,7 +101,7 @@ def get_target():
     }) 
 
 
-@bp.route('/observer_information.html')
+@bp.route('/observer_information.html', methods=['GET', 'POST'])
 def observer_information():
     """Show the observer information form and handle responses."""
     check_in_experiment()
@@ -110,7 +113,6 @@ def observer_information():
             'colour_experience': form.colour_experience.data,
             'language_experience': form.language_experience.data,
             'education_level': form.education_level.data,
-            'user_agent': form.user_agent.data,
             'country_raised': form.country_raised.data,
             'country_resident': form.country_resident.data
         }
