@@ -19,7 +19,7 @@
         <p class="justified-text">The participation in this study is only for over 16 years old and voluntary. Please note that you may withdraw at any time without any penalty.</p>
         <h3>Agreement:</h3>
         <p class="justified-text">{{ _('By clicking Start you confirm that you have understood the provided information and agree to take part in this study.') }}</p>
-        <button class="round-button">Start</button>
+        <a class="round-button" href="{{ url_for('experiment.start') }}">Start</a>
     </section>
     <section>
         <h2 id="colour-namer">
