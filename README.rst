@@ -29,6 +29,10 @@ Additional dataset can be added by running e.g.::
 
     docker-compose run --rm web import_centroids /path/to/dataset_fr.csv Francais fr
 
+Colour targets can be added by running e.g.::
+
+    docker-compose run --rm web import_targets /path/to/targets.csv
+
 To stop the test instance run::
 
     docker-compose down
