@@ -16,5 +16,5 @@ after_success:
   - if [ "$TRAVIS_BRANCH" == "master" ]; then
     docker build -t jstutters/colournaming .;
     docker login -u="$DOCKER_USERNAME" -p "$DOCKER_PASSWORD";
-    docker push jstutters/colournaming
+    docker push jstutters/colournaming;
     fi
