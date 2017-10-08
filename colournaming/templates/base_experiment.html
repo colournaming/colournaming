@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="{{ url_for('static', filename='images/favicon.png') }}" rel="shortcut icon">
+        <link href="{{ url_for('static', filename='css/styles-experiment.css') }}" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta content="initial-scale=1, maximum-scale=1" name="viewport">
+        <title>Colournaming Experiment</title>
+        {% block css %}{% endblock %}
+    </head>
+    <body data-spy="scroll" data-target="navigation-bar">
+        {% block content %}{% endblock %}
+        <script src="{{ url_for('static', filename='js/experiment.js') }}"></script>
+        {% block scripts %}{% endblock %}
+    </body>
+</html>

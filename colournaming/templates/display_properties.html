@@ -1,35 +1,57 @@
-{% extends 'base.html' %}
-{% from 'form_helpers.j2' import render_field %}
-
-{% block css %}
-{% endblock %}
+{% extends 'base_experiment.html' %}
+<!-- {% from 'form_helpers.j2' import render_field %} -->
 
 {% block content %}
-<div class="container-fluid" style="padding-top: 10px">
-    <h1>Display properties</h1>
-    <p>
-        Disable Night Shift or Blue Light filters and adjust the brightness of
-        your screen until you can differentiate all steps of the greyscale
-        wheel below.
-    </p>
-    <img src="{{ url_for('static', filename='images/greyscale_wheel.png') }}" alt="Greyscale wheel">
-    <form class="form" method="post">
-        {{ form.csrf_token }}
-        {{ render_field(form.levels) }}
-        {{ render_field(form.ambient_light) }} 
-        {{ render_field(form.screen_light) }} 
-        {{ form.screen_width }}
-        {{ form.screen_height }}
-        {{ form.screen_colour_depth }}
-        <button type="submit">Continue</button>
-    </form>
-</div>
+<header>
+    <h1>Display Properties</h1>
+</header>
+<main>
+    <p class="justified-text">Adjust the brightness of your display if necessary until you can see the differences between all steps of the test image. Disable Night Swift mode or blue light filters if applicable.</p>
+    <svg id="greyscale-circle" version="1.1" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <path d="M 100 100 L 100 0 A 100 100 0 0 1 154 16 Z" id="slice-1"></path>
+        <path d="M 100 100 L 154 16 A 100 100 0 0 1 191 58.5 Z" id="slice-2"></path>
+        <path d="M 100 100 L 191 58.5 A 100 100 0 0 1 199 114 Z" id="slice-3"></path>
+        <path d="M 100 100 L 199 114 A 100 100 0 0 1 175.5 165.5 Z" id="slice-4"></path>
+        <path d="M 100 100 L 175.5 165.5 A 100 100 0 0 1 128 196 Z" id="slice-5"></path>
+        <path d="M 100 100 L 128 196 A 100 100 0 0 1 72 196 Z" id="slice-6"></path>
+        <path d="M 100 100 L 72 196 A 100 100 0 0 1 24.5 165.5 Z" id="slice-7"></path>
+        <path d="M 100 100 L 24.5 165.5 A 100 100 0 0 1 1 114 Z" id="slice-8"></path>
+        <path d="M 100 100 L 1 114 A 100 100 0 0 1 9 58.5 Z" id="slice-9"></path>
+        <path d="M 100 100 L 9 58.5 A 100 100 0 0 1 46 16 Z" id="slice-10"></path>
+        <path d="M 100 100 L 46 16 A 100 100 0 0 1 100 0 Z" id="slice-11"></path>
+        <circle cx="100" cy="100" id="mask" r="40"></circle>
+        <circle cx="100" cy="100" id="outline" r="99.5"></circle>
+    </svg>
+    <p class="centered-text">How many steps can you see?</p>
+    <select class="centered-select" id="levels" name="levels">
+        <option value="-">-</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+    </select>
+</main>
 {% endblock %}
-
-{% block scripts %}
-<script type="text/javascript">
+<!--
+    form.csrf_token
+    render_field(form.levels)
+    render_field(form.ambient_light)
+    render_field(form.screen_light)
+    form.screen_width
+    form.screen_height
+    form.screen_colour_depth
+-->
+<!-- <script type="text/javascript">
     $('#screen_width')[0].value = screen.width;
     $('#screen_height')[0].value = screen.height;
     $('#screen_colour_depth')[0].value = screen.colorDepth;
-</script>
-{% endblock %}
+</script> -->
