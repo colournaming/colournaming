@@ -58,7 +58,6 @@ if ($colourCircle !== null && $colourName !== null && $colourNameForm !== null &
         event.preventDefault();
 
         updateColourResults();
-
         updateColourCircle();
 
         $colourName.value = '';
