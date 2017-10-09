@@ -33,7 +33,14 @@ const $nextColour = document.getElementById('next-colour');
 if ($colourCircle !== null && $colourName !== null && $colourNameForm !== null && $colourNumber !== null && $nextColour !== null && $colourVisionTestPage !== null) {
     updateResults({ colours: undefined });
 
-    $colourCircle.style.backgroundColor = 'rgb(255, 255, 255)';
+    const updateColourCircle = () => {
+        fetch(COLOUR_NAME_TARGET_URL)
+            .then((response) => response.json())
+            // The API does also return an id.
+            .then(({ b, g, r }) => {
+                $colourCircle.style.backgroundColor = `rgb(${ r }, ${ g }, ${ b })`;
+            });
+    };
 
     const updateColourResults = () => {
         const colour = {
@@ -45,16 +52,15 @@ if ($colourCircle !== null && $colourName !== null && $colourNameForm !== null &
         updateResults({ colours });
     };
 
+    updateColourCircle();
+
     $colourNameForm.addEventListener('submit', (event) => {
         event.preventDefault();
 
         updateColourResults();
 
-        const green = Math.floor(Math.random() * 256);
-        const blue = Math.floor(Math.random() * 256);
-        const red = Math.floor(Math.random() * 256);
+        updateColourCircle();
 
-        $colourCircle.style.backgroundColor = `rgb(${ red }, ${ green }, ${ blue })`;
         $colourName.value = '';
         $colourNumber.textContent = `#${ (results.colours) ? results.colours.length + 1 : 0 }`;
         $colourName.focus();
