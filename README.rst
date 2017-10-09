@@ -13,7 +13,8 @@ A local instance of the app can be launched using Docker Compose::
     docker-compose build
     docker-compose up -d postgres
     docker-compose run --rm web initdb
-    docker-compose run --rm web import_centroids English en /path/to/dataset_en.csv
+    docker-compose run --rm web import_centroids /path/to/dataset_en.csv English en
+    docker-compose run --rm web import_targets /path/to/targets.csv
     docker-compose up web
 
 Under Linux the app can now be accessed at `localhost:5000 <http://localhost:5000>`_.
