@@ -96,6 +96,8 @@ def register_blueprints(app):
     app.register_blueprint(namer_module, url_prefix='/namer')
     from colournaming.experiment.views import bp as experiment_module
     app.register_blueprint(experiment_module, url_prefix='/experiment')
+    from colournaming.admin.views import bp as admin_module
+    app.register_blueprint(admin_module, url_prefix='/admin')
 
 
 def setup_logging(app):

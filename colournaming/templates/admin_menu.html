@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block css %}
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid" style="padding-top: 60px">
+    <h1>Colournamer admin functions</h1>
+    <h2><a href="{{ url_for('.show_responses') }}">Download responses</a></h2>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='bootstrap-3.3.7-dist/js/bootstrap.min.js') }}"></script>
+{% endblock %}
