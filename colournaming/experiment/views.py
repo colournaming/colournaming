@@ -38,6 +38,7 @@ def display_properties():
             'screen_height': form.screen_height.data,
             'screen_colour_depth': form.screen_colour_depth.data,
         }
+        session['experiment']['participant_id'] = controller.save_participant(session['experiment'])
         session.modified = True
         return redirect(url_for('experiment.colour_vision'))
     if form.errors:
@@ -55,7 +56,6 @@ def colour_vision():
         session['experiment']['vision'] = {
             'square_disappeared': form.square_disappeared.data
         }
-        session['experiment']['participant_id'] = controller.save_participant(session['experiment'])
         session.modfied = True
         return jsonify({'success': True, 'url': url_for('experiment.name_colour')})
     if form.errors:

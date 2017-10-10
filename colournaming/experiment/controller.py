@@ -33,15 +33,10 @@ def save_participant(experiment):
             ip_address=experiment['client']['ip_address'],
             browser_language=experiment['client']['browser_language'],
             user_agent=experiment['client']['user_agent'],
-            colour_vision=experiment['vision']['status'],
-            colour_vision_score=experiment['vision']['percent_correct'],
-            ambient_light=experiment['display']['ambient_light'],
-            screen_light=experiment['display']['screen_light'],
             greyscale_steps=experiment['display']['greyscale_levels'],
             screen_resolution_w=experiment['display']['screen_width'],
             screen_resolution_h=experiment['display']['screen_height'],
             screen_colour_depth=experiment['display']['screen_colour_depth'],
-            screen_distance=experiment['display']['screen_distance']
         )
         db.session.add(participant)
         db.session.commit()
@@ -69,9 +64,12 @@ def update_participant(experiment):
     ).one()
     participant.age = experiment['observer']['age']
     participant.gender = experiment['observer']['gender']
-    participant.colour_experience = experiment['observer']['colour_experience']    
-    participant.language_experience = experiment['observer']['language_experience']    
+    participant.colour_experience = experiment['observer']['colour_experience']
+    participant.language_experience = experiment['observer']['language_experience']
     participant.education_level = experiment['observer']['education_level']
     participant.country_raised = experiment['observer']['country_raised']
     participant.country_resident = experiment['observer']['country_resident']
+    participant.ambient_light=experiment['display']['ambient_light'],
+    participant.screen_light=experiment['display']['screen_light'],
+    participant.screen_distance=experiment['display']['screen_distance']
     db.session.commit()
