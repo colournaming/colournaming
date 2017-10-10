@@ -36,11 +36,9 @@ if ($levels !== null) {
             updateResults({ greyscaleRampSteps: parseInt(value, 10) });
 
             submitForm({
-                // ambient_light: 'dark',
                 levels: value,
                 screen_colour_depth: screen.colorDepth,
                 screen_height: screen.height,
-                // screen_light: 'dark',
                 screen_width: screen.width
             }, 'name_colour.html');
         } else {
