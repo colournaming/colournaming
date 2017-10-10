@@ -108,10 +108,10 @@ def observer_information():
             'language_experience': form.language_experience.data,
             'education_level': form.education_level.data,
             'country_raised': form.country_raised.data,
-            'country_resident': form.country_resident.data
+            'country_resident': form.country_resident.data,
             'ambient_light': form.ambient_light.data,
-            'screen_light': form.screen_light.data
-            'screen_distance': form.screen_distance.data,
+            'screen_light': form.screen_light.data,
+            'screen_distance': form.screen_distance.data
         }
         session.modified = True
         controller.update_participant(session['experiment'])
