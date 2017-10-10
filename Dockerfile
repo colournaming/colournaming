@@ -4,7 +4,6 @@ COPY requirements.txt /tmp/
 RUN pip install -q -r /tmp/requirements.txt
 COPY colournaming /app/colournaming
 COPY app.py /app
-VOLUME /app
 ENV FLASK_APP /app/app.py
 WORKDIR /app
 ENTRYPOINT ["/usr/local/bin/flask"]
