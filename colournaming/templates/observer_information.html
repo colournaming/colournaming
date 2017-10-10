@@ -190,6 +190,7 @@
             <option value="80-plus">80+ cm</option>
         </select>
     </div>
+    {{ form.csrf_token }}
 </main>
 <footer>
     <a class="centered-button round-button text-button" href="thankyou.html">Results</a>
@@ -198,7 +199,6 @@
 <!-- <div class="container-fluid" style="padding-top: 10px">
     <h1>Observer information</h1>
     <form class="form" method="post">
-        {{ form.csrf_token }}
         {{ render_field(form.age) }}
         {{ render_field(form.gender) }}
         {{ render_field(form.colour_experience) }}
