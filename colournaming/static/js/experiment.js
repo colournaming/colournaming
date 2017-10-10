@@ -101,29 +101,6 @@ if ($colourCircle !== null && $colourName !== null && $colourNameForm !== null &
 
     let dimesions = { height: window.innerHeight, width: window.innerWidth };
 
-    // if (/(iPad|iPhone|iPod)/.test(navigator.userAgent)) {
-    //     const $inputGroup = document.querySelector('.input-group');
-    //
-    //     $colourName.addEventListener('blur', () => {
-    //         if ($inputGroup) {
-    //             $inputGroup.classList.remove('cropped');
-    //         }
-    //
-    //         $colourVisionTestPage.classList.remove('hidden');
-    //     });
-    //
-    //     const hideButton = () => {
-    //         if ($inputGroup) {
-    //             $inputGroup.classList.add('cropped');
-    //         }
-    //
-    //         $colourVisionTestPage.classList.add('hidden');
-    //     };
-    //
-    //     $colourName.addEventListener('click', hideButton);
-    //     $colourName.addEventListener('focus', hideButton);
-    // }
-
     window.addEventListener('resize', () => {
         const height = window.innerHeight;
         const scrollTop = document.scrollingElement.scrollTop;
