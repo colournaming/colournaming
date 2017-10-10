@@ -300,16 +300,15 @@ if ($age !== null && $distance !== null && $educationalLevel !== null && $enviro
 
         submitForm({
             age: results.age,
-            // results.distance
-            // colour_experience
+            ambient_light: results.lightConditions,
+            colour_experience: results.experience,
             country_raised: results.homeCountry,
             country_resident: results.residentCountry,
             education_level: results.educationalLevel,
-            // results.environment
             gender: results.gender,
-            language_experience: results.experience
-            // results.languageSkills
-            // results.lightConditions
+            language_experience: results.languageSkills,
+            screen_distance: results.distance,
+            screen_light: results.environment
         }, $thankYouPage.href);
     });
 
