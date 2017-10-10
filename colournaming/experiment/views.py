@@ -37,9 +37,6 @@ def display_properties():
             'screen_width': form.screen_width.data,
             'screen_height': form.screen_height.data,
             'screen_colour_depth': form.screen_colour_depth.data,
-            'screen_distance': form.screen_distance.data,
-            'ambient_light': form.ambient_light.data,
-            'screen_light': form.screen_light.data
         }
         session.modified = True
         return redirect(url_for('experiment.colour_vision'))
@@ -55,12 +52,8 @@ def colour_vision():
     check_in_experiment()
     form = forms.ColourVisionForm()
     if form.validate_on_submit():
-        correct = float(form.tests_correct.data)
-        complete = float(form.tests_complete.data)
-        percent_tests_correct = int(100.0 * correct / complete)
         session['experiment']['vision'] = {
-            'percent_correct': percent_tests_correct,
-            'status': form.colour_vision_status.data
+            'square_disappeared': form.square_disappeared.data
         }
         session['experiment']['participant_id'] = controller.save_participant(session['experiment'])
         session.modfied = True
@@ -99,7 +92,7 @@ def get_target():
         'r': target.red,
         'g': target.green,
         'b': target.blue
-    }) 
+    })
 
 
 @bp.route('/observer_information.html', methods=['GET', 'POST'])
@@ -116,6 +109,9 @@ def observer_information():
             'education_level': form.education_level.data,
             'country_raised': form.country_raised.data,
             'country_resident': form.country_resident.data
+            'ambient_light': form.ambient_light.data,
+            'screen_light': form.screen_light.data
+            'screen_distance': form.screen_distance.data,
         }
         session.modified = True
         controller.update_participant(session['experiment'])

@@ -2,7 +2,7 @@
 
 from flask_wtf import FlaskForm
 import pycountry
-from wtforms import DecimalField, HiddenField, IntegerField, SelectField, TextField
+from wtforms import BooleanField, DecimalField, HiddenField, IntegerField, SelectField, TextField
 from wtforms.validators import DataRequired
 from wtforms.widgets import HiddenInput
 from . import model
@@ -13,24 +13,14 @@ def _enum_to_choices(enum):
 
 class DisplayForm(FlaskForm):
     """Form for gathering display information."""
-
     levels = SelectField(
-        choices=[(x, x) for x in range(13)], 
+        choices=[(x, x) for x in range(13)],
         coerce=int,
         description="How many steps can you see in the greyscale ramp?"
     )
     screen_height = IntegerField(widget=HiddenInput())
     screen_width = IntegerField(widget=HiddenInput())
     screen_colour_depth = IntegerField(widget=HiddenInput())
-    screen_distance = NumberField("How far are from the display?")
-    ambient_light = SelectField(
-        choices=_enum_to_choices(model.AmbientLight),
-        description="What is the level of ambient lighting where you are?"
-    )
-    screen_light = SelectField(
-        choices=_enum_to_choices(model.ScreenLight),
-        description="What is the lighting level behind your screen?"
-    )
 
 
 class ObserverInformationForm(FlaskForm):
@@ -61,16 +51,21 @@ class ObserverInformationForm(FlaskForm):
         choices=[(x.alpha_2, x.name) for x in pycountry.countries],
         description="In which country are you currently living?"
     )
+    ambient_light = SelectField(
+        choices=_enum_to_choices(model.AmbientLight),
+        description="What is the level of ambient lighting where you are?"
+    )
+    screen_light = SelectField(
+        choices=_enum_to_choices(model.ScreenLight),
+        description="What is the lighting level behind your screen?"
+    )
+    screen_distance = NumberField("How far are from the display (in cm)?")
 
 
 class ColourVisionForm(FlaskForm):
     """Form for gathering colour vision performance."""
 
-    tests_complete =  IntegerField()
-    tests_correct = IntegerField()
-    colour_vision_status = SelectField(
-        choices=_enum_to_choices(model.ColourVision),
-    )
+    square_disappeared =  BooleanField()
 
 
 class ColourNameForm(FlaskForm):
