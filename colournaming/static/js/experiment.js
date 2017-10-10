@@ -171,7 +171,9 @@ if ($appearance !== null) {
         if (value !== '-') {
             updateResults({ appearance: value });
 
-            window.location = 'observer_information.html';
+            submitForm({
+                square_disappeared: value
+            }, 'observer_information.html');
         } else {
             updateResults({ appearance: undefined });
         }
