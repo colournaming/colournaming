@@ -40,7 +40,7 @@ def save_participant(experiment):
             greyscale_steps=experiment['display']['greyscale_levels'],
             screen_resolution_w=experiment['display']['screen_width'],
             screen_resolution_h=experiment['display']['screen_height'],
-            screen_colour_depth=experiment['display']['screen_colour_depth']
+            screen_colour_depth=experiment['display']['screen_colour_depth'],
             screen_distance=experiment['display']['screen_distance']
         )
         db.session.add(participant)
