@@ -1,6 +1,4 @@
 {% extends 'base_experiment.html' %}
-<!-- {% from 'form_helpers.j2' import render_field %} -->
-
 {% block content %}
 <header>
     <h1>Display Properties</h1>
@@ -42,17 +40,3 @@
     {{ form.csrf_token }}
 </main>
 {% endblock %}
-<!--
-    form.csrf_token
-    render_field(form.levels)
-    render_field(form.ambient_light)
-    render_field(form.screen_light)
-    form.screen_width
-    form.screen_height
-    form.screen_colour_depth
--->
-<!-- <script type="text/javascript">
-    $('#screen_width')[0].value = screen.width;
-    $('#screen_height')[0].value = screen.height;
-    $('#screen_colour_depth')[0].value = screen.colorDepth;
-</script> -->

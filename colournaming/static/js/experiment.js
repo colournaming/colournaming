@@ -7,6 +7,25 @@ const updateResults = (delta) => {
 };
 const $levels = document.getElementById('levels');
 
+const submitForm = (data, location) => {
+    const formData = new FormData();
+
+    formData.append('csrf_token', document.getElementById('csrf_token').value);
+
+    Object
+        .keys(data)
+        .forEach((key) => {
+            formData.append(key, data[key]);
+        });
+
+    fetch(window.location, {
+        body: formData,
+        credentials: 'same-origin',
+        method: 'POST'
+    })
+        .then(() => window.location = location);
+};
+
 if ($levels !== null) {
     updateResults({ greyscaleRampSteps: undefined });
 
@@ -16,7 +35,14 @@ if ($levels !== null) {
         if (value !== '-') {
             updateResults({ greyscaleRampSteps: parseInt(value, 10) });
 
-            window.location = 'name_colour.html';
+            submitForm({
+                // ambient_light: 'dark',
+                levels: value,
+                screen_colour_depth: screen.colorDepth,
+                screen_height: screen.height,
+                // screen_light: 'dark',
+                screen_width: screen.width
+            }, 'name_colour.html');
         } else {
             updateResults({ greyscaleRampSteps: undefined });
         }
