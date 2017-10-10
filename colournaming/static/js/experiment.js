@@ -58,8 +58,9 @@ const $colourNameForm = document.getElementById('colour-name-form');
 const $colourNumber = document.getElementById('colour-number');
 const $colourVisionTestPage = document.getElementById('colour-vision-test-page');
 const $nextColour = document.getElementById('next-colour');
+const $startTime = document.getElementById('start-time');
 
-if ($colourCircle !== null && $colourId !== null && $colourName !== null && $colourNameForm !== null && $colourNumber !== null && $nextColour !== null && $colourVisionTestPage !== null) {
+if ($colourCircle !== null && $colourId !== null && $colourName !== null && $colourNameForm !== null && $colourNumber !== null && $colourVisionTestPage !== null && $nextColour !== null && $startTime !== null) {
     updateResults({ colours: undefined });
 
     const updateColourCircle = () => {
@@ -68,6 +69,7 @@ if ($colourCircle !== null && $colourId !== null && $colourName !== null && $col
             .then(({ b, g, id, r }) => {
                 $colourCircle.style.backgroundColor = `rgb(${ r }, ${ g }, ${ b })`;
                 $colourId.value = id;
+                $startTime.value = performance.now();
             });
     };
 
@@ -89,7 +91,7 @@ if ($colourCircle !== null && $colourId !== null && $colourName !== null && $col
         updateColourResults();
         submitForm({
             name: $colourName.value,
-            // @todo response_time_ms
+            response_time_ms: performance.now() - parseFloat($startTime.value),
             target_id: $colourId.value
         });
         updateColourCircle();
@@ -107,7 +109,7 @@ if ($colourCircle !== null && $colourId !== null && $colourName !== null && $col
             updateColourResults();
             submitForm({
                 name: $colourName.value,
-                // @todo response_time_ms
+                response_time_ms: performance.now() - parseFloat($startTime.value),
                 target_id: $colourId.value
             }, 'colour_vision.html');
         } else {
