@@ -1,6 +1,4 @@
 {% extends 'base_experiment.html' %}
-<!-- {% from 'form_helpers.j2' import render_field %} -->
-
 {% block content %}
 <header>
     <h1>Observer Information</h1>
@@ -193,19 +191,6 @@
     {{ form.csrf_token }}
 </main>
 <footer>
-    <a class="centered-button round-button text-button" href="thankyou.html">Results</a>
+    <a class="centered-button round-button text-button" href="thankyou.html" id="thank-you-page">Results</a>
 </footer>
 {% endblock %}
-<!-- <div class="container-fluid" style="padding-top: 10px">
-    <h1>Observer information</h1>
-    <form class="form" method="post">
-        {{ render_field(form.age) }}
-        {{ render_field(form.gender) }}
-        {{ render_field(form.colour_experience) }}
-        {{ render_field(form.language_experience) }}
-        {{ render_field(form.education_level) }}
-        {{ render_field(form.country_raised) }}
-        {{ render_field(form.country_resident) }}
-        <button type="submit">Submit</button>
-    </form>
-</div> -->

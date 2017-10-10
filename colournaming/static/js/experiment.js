@@ -190,8 +190,9 @@ const $homeCountry = document.getElementById('home-country');
 const $languageSkills = document.getElementById('language-skills');
 const $lightConditions = document.getElementById('light-conditions');
 const $residentCountry = document.getElementById('resident-country');
+const $thankYouPage = document.getElementById('thank-you-page');
 
-if ($age !== null && $distance !== null && $educationalLevel !== null && $environment !== null && $experience !== null && $gender !== null && $homeCountry !== null && $languageSkills !== null && $lightConditions !== null && $residentCountry !== null) {
+if ($age !== null && $distance !== null && $educationalLevel !== null && $environment !== null && $experience !== null && $gender !== null && $homeCountry !== null && $languageSkills !== null && $lightConditions !== null && $residentCountry !== null && $thankYouPage !== null) {
     updateResults({ age: undefined, distance: undefined, educationalLevel: undefined, environment: undefined, experience: undefined, gender: undefined, homeCountry: undefined, languageSkills: undefined, lightConditions: undefined, residentCountry: undefined });
 
     $age.addEventListener('change', () => {
@@ -292,6 +293,24 @@ if ($age !== null && $distance !== null && $educationalLevel !== null && $enviro
         } else {
             updateResults({ residentCountry: undefined });
         }
+    });
+
+    $thankYouPage.addEventListener('click', (event) => {
+        event.preventDefault();
+
+        submitForm({
+            age: results.age,
+            // results.distance
+            // colour_experience
+            country_raised: results.homeCountry,
+            country_resident: results.residentCountry,
+            education_level: results.educationalLevel,
+            // results.environment
+            gender: results.gender,
+            language_experience: results.experience
+            // results.languageSkills
+            // results.lightConditions
+        }, $thankYouPage.href);
     });
 
 }
