@@ -22,6 +22,7 @@ class DisplayForm(FlaskForm):
     screen_height = IntegerField(widget=HiddenInput())
     screen_width = IntegerField(widget=HiddenInput())
     screen_colour_depth = IntegerField(widget=HiddenInput())
+    screen_distance = NumberField("How far are from the display?")
     ambient_light = SelectField(
         choices=_enum_to_choices(model.AmbientLight),
         description="What is the level of ambient lighting where you are?"
