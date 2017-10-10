@@ -23,7 +23,11 @@ const submitForm = (data, location) => {
         credentials: 'same-origin',
         method: 'POST'
     })
-        .then(() => window.location = location);
+        .then(() => {
+            if (typeof location === 'string') {
+                window.location = location;
+            }
+        });
 };
 
 if ($levels !== null) {
@@ -48,21 +52,22 @@ if ($levels !== null) {
 }
 
 const $colourCircle = document.getElementById('colour-circle');
+const $colourId = document.getElementById('colour-id');
 const $colourName = document.getElementById('colour-name');
 const $colourNameForm = document.getElementById('colour-name-form');
 const $colourNumber = document.getElementById('colour-number');
 const $colourVisionTestPage = document.getElementById('colour-vision-test-page');
 const $nextColour = document.getElementById('next-colour');
 
-if ($colourCircle !== null && $colourName !== null && $colourNameForm !== null && $colourNumber !== null && $nextColour !== null && $colourVisionTestPage !== null) {
+if ($colourCircle !== null && $colourId !== null && $colourName !== null && $colourNameForm !== null && $colourNumber !== null && $nextColour !== null && $colourVisionTestPage !== null) {
     updateResults({ colours: undefined });
 
     const updateColourCircle = () => {
         fetch(COLOUR_NAME_TARGET_URL)
             .then((response) => response.json())
-            // The API does also return an id.
-            .then(({ b, g, r }) => {
+            .then(({ b, g, id, r }) => {
                 $colourCircle.style.backgroundColor = `rgb(${ r }, ${ g }, ${ b })`;
+                $colourId.value = id;
             });
     };
 
@@ -82,8 +87,14 @@ if ($colourCircle !== null && $colourName !== null && $colourNameForm !== null &
         event.preventDefault();
 
         updateColourResults();
+        submitForm({
+            name: $colourName.value,
+            // @todo response_time_ms
+            target_id: $colourId.value
+        });
         updateColourCircle();
 
+        $colourId.value = '';
         $colourName.value = '';
         $colourNumber.textContent = `#${ (results.colours) ? results.colours.length + 1 : 0 }`;
         $colourName.focus();
@@ -94,9 +105,14 @@ if ($colourCircle !== null && $colourName !== null && $colourNameForm !== null &
 
         if ($colourName.value !== '') {
             updateColourResults();
+            submitForm({
+                name: $colourName.value,
+                // @todo response_time_ms
+                target_id: $colourId.value
+            }, 'colour_vision.html');
+        } else {
+            window.location = 'colour_vision.html';
         }
-
-        window.location = 'colour_vision.html';
     });
 
     let dimesions = { height: window.innerHeight, width: window.innerWidth };

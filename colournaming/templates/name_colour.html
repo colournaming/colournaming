@@ -1,5 +1,4 @@
 {% extends 'base_experiment.html' %}
-
 {% block content %}
 <header>
     <h1>Colour Naming Experiment</h1>
@@ -13,6 +12,7 @@
     <div class="input-group">
         <form id="colour-name-form">
             <input autocomplete="off" autofocus id="colour-name" name="colour-name" type="text">
+            <input id="colour-id" name="colour-id" type="hidden">
             <button id="next-colour" type="submit">
                 <svg version="1.1" viewBox="0 0 30 26" xmlns="http://www.w3.org/2000/svg">
                     <path d="M 10 4 L 20 13 L 10 22"></path>
@@ -26,27 +26,9 @@
     <a id="colour-vision-test-page" class="centered-button round-button text-button" href="colour-vision-test.html">Exit</a>
 </footer>
 {% endblock %}
-<!-- <div class="container-fluid" style="padding-top: 10px">
-<h1>Colour Naming</h1>
-<div id="colourNameCanvas"></div>
-<form class="form-inline">
-    {{ form.name }}
-    <button id="submit-name">Submit</button>
-</form>
-<a href="{{ url_for('experiment.observer_information') }}">Done rating</a>
-</div> -->
 {% block scripts %}
 <script type="text/javascript">
     // var COLOUR_NAME_RESPONSE_URL = "{{ url_for('experiment.name_colour') }}"
     var COLOUR_NAME_TARGET_URL = "{{ url_for('experiment.get_target') }}";
 </script>
-<!--
-<script src="{{ url_for('static', filename='p5js/p5.min.js') }}"></script>
-<script src="{{ url_for('static', filename='p5js/p5.dom.js') }}"></script>
-<script src="{{ url_for('static', filename='js/colour_experiment.js') }}"></script>
-<script type="text/javascript">
-    $(function () {
-        $('#submit-name').on('click', recordAnswerShowNext);
-    })
-</script> -->
 {% endblock %}
