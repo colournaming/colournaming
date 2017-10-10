@@ -1,29 +1,17 @@
-{% extends 'base.html' %}
-
-{% block css %}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/experiment.css') }}">
-{% endblock %}
-
+{% extends 'base_experiment.html' %}
 {% block content %}
-<div class="container-fluid" style="padding-top: 10px">
-    <h1>Colour Vision</h1>
-    <p>Where is the colour target, left or right?</p>
-    <div id="visionTestCanvas"></div>
-    <form class="form-inline">
-        {{ form.csrf_token }}
-        <button id="button-left">Left <span class="glyphicon glyphicon-arrow-left" aria-hidden="True"></span></button>
-        <button id="button-right"><span class="glyphicon glyphicon-arrow-right" aria-hidden="True"></span> Right</button>
-        {{ form.colour_vision_status }}
-    </form>
-    <p>The Universal Colour Discrimination Test was designed by Dr. Caterina Ripamonti.</p>
-</div>
-{% endblock %}
-
-{% block scripts %}
-<script type="text/javascript">
-    var COLOUR_VISION_SUBMIT_URL = "{{ url_for('experiment.colour_vision') }}"
-</script>
-<script src="{{ url_for('static', filename='p5js/p5.min.js') }}"></script>
-<script src="{{ url_for('static', filename='p5js/p5.dom.js') }}"></script>
-<script src="{{ url_for('static', filename='js/colour_vision.js') }}"></script>
+<header>
+    <h1>Colour Vision Test</h1>
+</header>
+<main>
+    <p class="justified-text">The movie lasts for 90 secs and all you need to do is play it and remember if the ‘coloured’ square dissapeared at any time during the movie.</p>
+    <video controls controlsList="nodownload nofullscreen noremoteplayback" muted src="{{ url_for('static', filename='videos/cvt.m4v') }}"></video>
+    <p class="centered-text">Did the ‘coloured’ square dissapear?</p>
+    <select class="centered-select" id="appearance" name="appearance">
+        <option value="-">-</option>
+        <option value="no">No</option>
+        <option value="yes">Yes</option>
+    </select>
+    {{ form.csrf_token }}
+</main>
 {% endblock %}
