@@ -59,7 +59,7 @@ class ObserverInformationForm(FlaskForm):
         choices=_enum_to_choices(model.ScreenLight),
         description="What is the lighting level behind your screen?"
     )
-    screen_distance = NumberField("How far are from the display (in cm)?")
+    screen_distance = DecimalField("How far are from the display (in cm)?")
 
 
 class ColourVisionForm(FlaskForm):
