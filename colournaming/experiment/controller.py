@@ -41,6 +41,7 @@ def save_participant(experiment):
             screen_resolution_w=experiment['display']['screen_width'],
             screen_resolution_h=experiment['display']['screen_height'],
             screen_colour_depth=experiment['display']['screen_colour_depth']
+            screen_distance=experiment['display']['screen_distance']
         )
         db.session.add(participant)
         db.session.commit()

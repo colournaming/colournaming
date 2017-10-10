@@ -37,6 +37,7 @@ def display_properties():
             'screen_width': form.screen_width.data,
             'screen_height': form.screen_height.data,
             'screen_colour_depth': form.screen_colour_depth.data,
+            'screen_distance': form.screen_distance.data,
             'ambient_light': form.ambient_light.data,
             'screen_light': form.screen_light.data
         }
