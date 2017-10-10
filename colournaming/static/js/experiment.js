@@ -96,7 +96,6 @@ if ($colourCircle !== null && $colourId !== null && $colourName !== null && $col
         });
         updateColourCircle();
 
-        $colourId.value = '';
         $colourName.value = '';
         $colourNumber.textContent = `#${ (results.colours) ? results.colours.length + 1 : 0 }`;
         $colourName.focus();
