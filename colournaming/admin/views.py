@@ -17,6 +17,6 @@ def show_responses():
     return Response(get_responses(), mimetype='text/csv')
 
 @bp.route('/participants.csv')
-def show_responses():
+def show_participants():
     """Return participants as CSV."""
     return Response(get_participants(), mimetype='text/csv')
