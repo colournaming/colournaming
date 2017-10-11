@@ -77,4 +77,4 @@ class ColourNameForm(FlaskForm):
     target_id = IntegerField(
         validators=[DataRequired()]
     )
-    response_time_ms = IntegerField()
+    response_time = DecimalField()

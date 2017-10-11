@@ -91,7 +91,7 @@ if ($colourCircle !== null && $colourId !== null && $colourName !== null && $col
         updateColourResults();
         submitForm({
             name: $colourName.value,
-            response_time_ms: performance.now() - parseFloat($startTime.value),
+            response_time: performance.now() - parseFloat($startTime.value),
             target_id: $colourId.value
         });
         updateColourCircle();
@@ -108,7 +108,7 @@ if ($colourCircle !== null && $colourId !== null && $colourName !== null && $col
             updateColourResults();
             submitForm({
                 name: $colourName.value,
-                response_time_ms: performance.now() - parseFloat($startTime.value),
+                response_time: performance.now() - parseFloat($startTime.value),
                 target_id: $colourId.value
             }, 'colour_vision.html');
         } else {
