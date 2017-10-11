@@ -8,7 +8,7 @@ from wtforms.widgets import HiddenInput
 from . import model
 
 def _enum_to_choices(enum):
-    return [(x.name, x.name) for x in enum]
+    return [('', '-')] + [(x.name, x.name) for x in enum]
 
 
 class DisplayForm(FlaskForm):
@@ -26,7 +26,12 @@ class DisplayForm(FlaskForm):
 class ObserverInformationForm(FlaskForm):
     """Form for gathering observer information."""
 
-    age = IntegerField(description="What is your age?")
+    age_choices = [('-1', '-')] + list(zip(range(16, 100), range(16, 100)))
+    age = SelectField(
+        choices=age_choices,
+        description="What is your age?",
+        coerce=int
+    )
     gender = SelectField(
         choices=_enum_to_choices(model.Gender),
         description="What is your gender?"
