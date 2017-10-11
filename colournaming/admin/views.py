@@ -1,6 +1,6 @@
 """Views for the namer."""
 
-from flask import Blueprint, render_template
+from flask import Blueprint, render_template, Response
 from .controller import get_responses
 
 bp = Blueprint('admin', __name__)
@@ -14,4 +14,4 @@ def index():
 @bp.route('/responses.csv')
 def show_responses():
     """Return experiment responses as CSV."""
-    return get_responses()
+    return Response(get_responses(), mimetype='text/csv')
