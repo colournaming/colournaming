@@ -74,7 +74,8 @@ def name_colour():
             session['experiment'],
             {
                 'target_id': form.target_id.data,
-                'name': form.name.data
+                'name': form.name.data,
+                'response_time': form.response_time.data
             }
         )
     if form.errors:

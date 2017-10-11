@@ -52,7 +52,8 @@ def save_response(experiment, response):
     colour_response = ColourResponse(
         participant=participant,
         target_id=response['target_id'],
-        name=response['name']
+        name=response['name'],
+        response_time=response['response_time']
     )
     db.session.add(colour_response)
     db.session.commit()
