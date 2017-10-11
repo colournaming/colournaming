@@ -6,6 +6,7 @@ services:
   - docker
 
 before_install:
+  - docker pull jstutters/colournaming
   - docker-compose build
   - docker-compose up -d postgres
 
