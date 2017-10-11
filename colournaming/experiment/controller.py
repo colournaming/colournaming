@@ -70,7 +70,8 @@ def update_participant(experiment):
     participant.education_level = experiment['observer']['education_level']
     participant.country_raised = experiment['observer']['country_raised']
     participant.country_resident = experiment['observer']['country_resident']
-    participant.ambient_light=experiment['display']['ambient_light'],
-    participant.screen_light=experiment['display']['screen_light'],
-    participant.screen_distance=experiment['display']['screen_distance']
+    participant.ambient_light = experiment['display']['ambient_light'],
+    participant.screen_light = experiment['display']['screen_light'],
+    participant.screen_distance = experiment['display']['screen_distance']
+    participant.colour_target_disappeared = experiment['vision']['target_disappeared']
     db.session.commit()
