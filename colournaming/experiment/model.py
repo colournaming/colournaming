@@ -10,6 +10,9 @@ class Gender(enum.Enum):
     female = 1
     male = 2
     transgender = 3
+    non_binary = 4
+    other = 5
+    prefer_not_to_say = 6
 
 
 class ColourExperience(enum.Enum):

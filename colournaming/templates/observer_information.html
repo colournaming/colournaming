@@ -10,96 +10,30 @@
     </div>
     <div class="justified-box">
         {{ render_field(form.gender) }}
-        <!-- <select id="gender" name="gender">
-            <option value="-">-</option>
-            <option value="female">female</option>
-            <option value="male">male</option>
-            <option value="transgender">transgender</option>
-            <option value="non-binary">Non-binary</option>
-            <option value="other">Other</option>
-            <option value="prefer-not-to-say">Prefer not to say</option>
-        </select> -->
     </div>
     <div class="justified-box">
-        <p>3. How you would describe your experience in working with colour?</p>
-        <select id="experience" name="experience">
-            <option value="-">-</option>
-            <option value="beginner">Beginner</option>
-            <option value="intermediate">Intermediate</option>
-            <option value="advanced">Advanced</option>
-        </select>
+        {{ render_field(form.colour_experience) }}
     </div>
     <div class="justified-box">
-        <p>4. How you would describe your skills in the language of the experiment?</p>
-        <select id="language-skills" name="language-skills">
-            <option value="-">-</option>
-            <option value="Native">Native Speaker</option>
-            <option value="beginner">Beginner</option>
-            <option value="intermediate">Intermediate</option>
-            <option value="advanced">Advanced</option>
-            <option value="bilingual">Bilingual</option>
-        </select>
+        {{ render_field(form.language_experience) }}
     </div>
     <div class="justified-box">
-        <p>5. What is your educational level?</p>
-        <select id="educational-level" name="educational-level">
-            <option value="-">-</option>
-            <option value="gcse">GCSE</option>
-            <option value="a-levels">A levels</option>
-            <option value="bachelor">Bachelor</option>
-            <option value="master">Master</option>
-            <option value="doctorate">Doctorate</option>
-        </select>
+        {{ render_field(form.education_level) }}
     </div>
     <div class="justified-box">
-        <p>6. In which country did you grow up as a child?</p>
-        <select id="home-country" name="home-country">
-            <option value="-">-</option>
-            <option value="uk">UK</option>
-            <option value="germany">Germany</option>
-        </select>
+        {{ render_field(form.country_raised) }}
     </div>
     <div class="justified-box">
-        <p>7. Which is the country where are you currently resident?</p>
-        <select id="resident-country" name="resident-country">
-            <option value="-">-</option>
-            <option value="uk">UK</option>
-            <option value="germany">Germany</option>
-        </select>
+        {{ render_field(form.country_resident) }}
     </div>
     <div class="justified-box">
-        <p>8. How you would describe your light conditions?</p>
-        <select id="light-conditions" name="light-conditions">
-            <option value="-">-</option>
-            <option value="dark">Dark</option>
-            <option value="typical-domestic">Typical Domestic</option>
-            <option value="mid-morning-afternoon-daylight">Mid Morning - Afternoon Daylight</option>
-            <option value="north-sky-daylight">North Sky Daylight</option>
-            <option value="typical-office">Typical Office</option>
-        </select>
+        {{ render_field(form.ambient_light) }}
     </div>
     <div class="justified-box">
-        <p>9. How you would describe the surrounding environment of your screen?</p>
-        <select id="environment" name="environment">
-            <option value="-">-</option>
-            <option value="dark">Dark</option>
-            <option value="dim">Dim</option>
-            <option value="average">Average</option>
-            <option value="bright">Bright</option>
-        </select>
+        {{ render_field(form.screen_light) }}
     </div>
     <div class="justified-box">
-        <p>10. What is the distance from your monitor in cm?</p>
-        <select id="distance" name="distance">
-            <option value="-">-</option>
-            <option value="20">20 cm</option>
-            <option value="30">30 cm</option>
-            <option value="40">40 cm</option>
-            <option value="50">50 cm</option>
-            <option value="60">60 cm</option>
-            <option value="70">70 cm</option>
-            <option value="80-plus">80+ cm</option>
-        </select>
+        {{ render_field(form.screen_distance) }}
     </div>
     {{ form.csrf_token }}
 </main>
