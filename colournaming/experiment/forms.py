@@ -8,7 +8,7 @@ from wtforms.widgets import HiddenInput
 from . import model
 
 def _enum_to_choices(enum):
-    return [(x.name, x.name) for x in enum]
+    return [('', '-')] + [(x.name, x.name.replace('_', ' ').capitalize()) for x in enum]
 
 
 class DisplayForm(FlaskForm):
@@ -26,7 +26,12 @@ class DisplayForm(FlaskForm):
 class ObserverInformationForm(FlaskForm):
     """Form for gathering observer information."""
 
-    age = IntegerField(description="What is your age?")
+    age_choices = [('-1', '-')] + list(zip(range(16, 100), range(16, 100)))
+    age = SelectField(
+        choices=age_choices,
+        description="What is your age?",
+        coerce=int
+    )
     gender = SelectField(
         choices=_enum_to_choices(model.Gender),
         description="What is your gender?"
@@ -44,11 +49,11 @@ class ObserverInformationForm(FlaskForm):
         description="What level of education have you attained?"
     )
     country_raised = SelectField(
-        choices=[(x.alpha_2, x.name) for x in pycountry.countries],
+        choices=[('', '-')] + [(x.alpha_2, x.name) for x in pycountry.countries],
         description="In which country were you raised?"
     )
     country_resident = SelectField(
-        choices=[(x.alpha_2, x.name) for x in pycountry.countries],
+        choices=[('', '-')] + [(x.alpha_2, x.name) for x in pycountry.countries],
         description="In which country are you currently living?"
     )
     ambient_light = SelectField(
@@ -59,7 +64,12 @@ class ObserverInformationForm(FlaskForm):
         choices=_enum_to_choices(model.ScreenLight),
         description="What is the lighting level behind your screen?"
     )
-    screen_distance = DecimalField("How far are from the display (in cm)?")
+    distance_choices = [('-1', '-')] + list(zip(range(30, 70, 10), range(30, 70, 10))) + [('999', '80+')]
+    screen_distance = SelectField(
+        choices=distance_choices,
+        description="What distance are you from your monitor in cm?",
+        coerce=float
+    )
 
 
 class ColourVisionForm(FlaskForm):
