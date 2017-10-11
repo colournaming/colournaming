@@ -322,25 +322,41 @@ if ($results !== null) {
     const { colours } = results;
 
     if (colours) {
-        for (const { name, value } of colours) {
-            const $div = document.createElement('div');
-            const $li = document.createElement('li');
-            const $whiteSpan = document.createElement('span');
-            const $blackSpan = document.createElement('span');
+        Promise
+            .all(Object
+                .keys(colours)
+                .map((key) => {
+                    const { name, value } = colours[key];
 
-            $div.style.backgroundColor = value;
+                    const $div = document.createElement('div');
+                    const $li = document.createElement('li');
+                    const $whiteSpan = document.createElement('span');
+                    const $blackSpan = document.createElement('span');
 
-            $whiteSpan.className = 'white';
-            $whiteSpan.textContent = name;
+                    $div.style.backgroundColor = value;
 
-            $blackSpan.className = 'black';
-            $blackSpan.textContent = 'likely name';
+                    $whiteSpan.className = 'white';
+                    $whiteSpan.textContent = name;
 
-            $li.appendChild($div);
-            $li.appendChild($whiteSpan);
-            $li.appendChild($blackSpan);
+                    const hexColorValue = value
+                        .match(/rgb\(([0-9]+),\s([0-9]+),\s([0-9]+)\)/)
+                        .slice(1)
+                        .map((string) => parseInt(string, 10))
+                        .map((number) => number.toString(16))
+                        .join('');
 
-            $results.appendChild($li);
-        }
+                    $li.appendChild($div);
+                    $li.appendChild($whiteSpan);
+                    $li.appendChild($blackSpan);
+
+                    $results.appendChild($li);
+
+                    return fetch(`/namer/lang/en/name?colour=${ hexColorValue }`)
+                        .then((response) => response.json())
+                        .then((json) => {
+                            $blackSpan.className = 'black';
+                            $blackSpan.textContent = json.colours[0].name;
+                        });
+                }));
     }
 }
