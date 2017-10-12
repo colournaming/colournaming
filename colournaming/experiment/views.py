@@ -53,10 +53,12 @@ def colour_vision():
     check_in_experiment()
     form = forms.ColourVisionForm()
     if form.validate_on_submit():
+        print('colour vision form validated')
         session['experiment']['vision'] = {
             'square_disappeared': form.square_disappeared.data
         }
-        session.modfied = True
+        session.modified = True
+        print(session)
         return jsonify({'success': True, 'url': url_for('experiment.name_colour')})
     if form.errors:
         for field, error in form.errors.items():
@@ -113,6 +115,7 @@ def observer_information():
     check_in_experiment()
     form = forms.ObserverInformationForm()
     if form.validate_on_submit():
+        print('observer information form validated')
         session['experiment']['observer'] = {
             'age': form.age.data,
             'gender': form.gender.data,
@@ -128,6 +131,9 @@ def observer_information():
         session.modified = True
         controller.update_participant(session['experiment'])
         return redirect(url_for('experiment.thankyou'))
+    if form.errors:
+        for field, error in form.errors.items():
+            print(field, repr(getattr(form, field).data), error)
     return render_template('observer_information.html', form=form)
 
 

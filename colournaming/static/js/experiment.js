@@ -186,16 +186,16 @@ const $age = document.getElementById('age');
 const $gender = document.getElementById('gender');
 const $experience = document.getElementById('colour_experience');
 const $languageSkills = document.getElementById('language_experience');
-const $educationalLevel = document.getElementById('educational_level');
+const $educationalLevel = document.getElementById('education_level');
 const $homeCountry = document.getElementById('country_raised');
 const $residentCountry = document.getElementById('country_resident');
-const $lightConditions = document.getElementById('screen_light');
-const $environment = document.getElementById('ambient_light');
+const $lightConditions = document.getElementById('ambient_light');
+const $environment = document.getElementById('screen_light');
 const $distance = document.getElementById('screen_distance');
 const $thankYouPage = document.getElementById('thank-you-page');
 
 if ($age !== null && $distance !== null && $educationalLevel !== null && $environment !== null && $experience !== null && $gender !== null && $homeCountry !== null && $languageSkills !== null && $lightConditions !== null && $residentCountry !== null && $thankYouPage !== null) {
-    updateResults({ age: undefined, distance: undefined, educationalLevel: undefined, environment: undefined, experience: undefined, gender: undefined, homeCountry: undefined, languageSkills: undefined, lightConditions: undefined, residentCountry: undefined });
+    updateResults({ age: -1, distance: -1, educationalLevel: '', environment: '', experience: '', gender: '', homeCountry: '', languageSkills: '', lightConditions: '', residentCountry: '' });
 
     $age.addEventListener('change', () => {
         const value = $age.value;
