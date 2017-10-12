@@ -10,6 +10,9 @@ class Gender(enum.Enum):
     female = 1
     male = 2
     transgender = 3
+    non_binary = 4
+    other = 5
+    prefer_not_to_say = 6
 
 
 class ColourExperience(enum.Enum):
@@ -17,17 +20,6 @@ class ColourExperience(enum.Enum):
     beginner = 1
     intermediate = 2
     advanced = 3
-
-
-class ColourVision(enum.Enum):
-    """Colour vision deficencies."""
-    normal = 1
-    protanopia = 2
-    deuteranopia = 3
-    tritanopia = 4
-    protanomaly = 5
-    deuteranomaly = 6
-    tritanomaly = 7
 
 
 class DeviceOrientation(enum.Enum):
@@ -91,11 +83,10 @@ class Participant(db.Model):
     screen_resolution_h = db.Column(db.Integer)
     screen_colour_depth = db.Column(db.Integer)
     device_orientation = db.Column(postgresql.ENUM(DeviceOrientation))
-
     education_level = db.Column(postgresql.ENUM(EducationLevel))
     language_experience = db.Column(postgresql.ENUM(LanguageExperience))
     colour_experience = db.Column(postgresql.ENUM(ColourExperience))
-    colour_vision = db.Column(postgresql.ENUM(ColourVision))
+    colour_target_disappeared = db.Column(db.Boolean)
 
 
 class ColourTarget(db.Model):

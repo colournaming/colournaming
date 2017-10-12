@@ -58,9 +58,10 @@ const $colourNameForm = document.getElementById('colour-name-form');
 const $colourNumber = document.getElementById('colour-number');
 const $colourVisionTestPage = document.getElementById('colour-vision-test-page');
 const $nextColour = document.getElementById('next-colour');
+const $responseTime = document.getElementById('response-time');
 const $startTime = document.getElementById('start-time');
 
-if ($colourCircle !== null && $colourId !== null && $colourName !== null && $colourNameForm !== null && $colourNumber !== null && $colourVisionTestPage !== null && $nextColour !== null && $startTime !== null) {
+if ($colourCircle !== null && $colourId !== null && $colourName !== null && $colourNameForm !== null && $colourNumber !== null && $colourVisionTestPage !== null && $nextColour !== null && $responseTime !== null && $startTime !== null) {
     updateResults({ colours: undefined });
 
     const updateColourCircle = () => {
@@ -85,19 +86,26 @@ if ($colourCircle !== null && $colourId !== null && $colourName !== null && $col
 
     updateColourCircle();
 
+    $colourName.addEventListener('input', () => {
+        if ($responseTime.value === '') {
+            $responseTime.value = performance.now() - parseFloat($startTime.value);
+        }
+    });
+
     $colourNameForm.addEventListener('submit', (event) => {
         event.preventDefault();
 
         updateColourResults();
         submitForm({
             name: $colourName.value,
-            response_time: performance.now() - parseFloat($startTime.value),
+            response_time: parseFloat($responseTime.value),
             target_id: $colourId.value
         });
         updateColourCircle();
 
         $colourName.value = '';
         $colourNumber.textContent = `#${ (results.colours) ? results.colours.length + 1 : 0 }`;
+        $responseTime.value = '';
         $colourName.focus();
     });
 
