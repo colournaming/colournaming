@@ -258,7 +258,7 @@ footer {
 .social-links {
     margin: 0 auto;
     overflow: hidden;
-    width: 180px;
+    width: 240px;
 }
 
 .social-link {
@@ -288,12 +288,16 @@ footer {
     width: 38px;
 }
 
-.social-link.github {
-    background-image: url(../images/github.png);
+.social-link.email {
+    background-image: url(../images/email.png);
 }
 
 .social-link.facebook {
     background-image: url(../images/facebook.png);
+}
+
+.social-link.github {
+    background-image: url(../images/github.png);
 }
 
 .social-link.twitter {
