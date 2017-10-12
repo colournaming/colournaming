@@ -1,7 +1,7 @@
 """Views for the namer."""
 
 from flask import Blueprint, render_template, Response
-from .controller import get_responses, get_particants
+from .controller import get_responses, get_participants
 
 bp = Blueprint('admin', __name__)
 

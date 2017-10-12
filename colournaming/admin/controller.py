@@ -5,6 +5,7 @@ import io
 
 RESPONSE_FIELDNAMES = [
     'participant_id',
+    'created_on',
     'target_id',
     'response_time',
     'name',
@@ -43,13 +44,14 @@ def get_responses():
         for response in participant.responses:
             output_csv.writerow({
                 'participant_id': participant.id,
+                'created_on': response.created_on,
                 'target_id': response.target_id,
                 'response_time': response.response_time,
                 'name': response.name
             })
     return output.getvalue()
 
-def get_particants():
+def get_participants():
     participants = Participant.query.all()
     output = io.StringIO()
     output_csv = csv.DictWriter(output, PARTICIPANT_FIELDNAMES, restval='NA')
