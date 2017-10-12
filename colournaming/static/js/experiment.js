@@ -316,12 +316,19 @@ if ($age !== null && $distance !== null && $educationalLevel !== null && $enviro
 
 }
 
+const $thankYouText = document.getElementById('thank-you-text');
 const $results = document.getElementById('results');
 
-if ($results !== null) {
+if ($thankYouText !== null && $results !== null) {
     const { colours } = results;
 
     if (colours) {
+        fetch(`/experiment/response_percentage?count=${ colours.length }`)
+            .then((response) => response.json())
+            .then((json) => {
+                $thankYouText.textContent = `Thank you for participating. You are in ‘${ json.top_percentage }’% top colournamers. Feel free to share it with your friends.`;
+            });
+
         Promise
             .all(Object
                 .keys(colours)
