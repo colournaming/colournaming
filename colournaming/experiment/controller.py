@@ -2,6 +2,8 @@
 
 import csv
 import random
+from sqlalchemy import func
+from sqlalchemy.sql.expression import label, text
 from ..database import db
 from .model import ColourTarget, Participant, ColourResponse
 
@@ -14,7 +16,7 @@ def read_targets_from_file(targets_file):
         red = int(t['red'])
         green = int(t['green'])
         blue = int(t['blue'])
-        tdb = ColourTarget(id=id, red=red, green=green, blue=blue) 
+        tdb = ColourTarget(id=id, red=red, green=green, blue=blue)
         db.session.add(tdb)
     db.session.commit()
 
@@ -25,7 +27,19 @@ def get_random_target():
     return random.choice(targets)
 
 
+def response_count_percentage(this_count):
+    """Get the percentage of participants with response counts less than a participant's."""
+    response_counts = db.session.query(
+        func.count(ColourResponse.id)).\
+        group_by(ColourResponse.participant_id).\
+        all()
+    num_participants = db.session.query(Participant.id).count()
+    num_below = len([r for r in response_counts if r[0] < this_count])
+    return (1.0 - (num_below / num_participants)) * 100.0
+
+
 def save_participant(experiment):
+    """Create a new participant record in the database."""
     print('trying to save', experiment)
     participant_id = experiment.get('participant_id')
     if participant_id is None:
@@ -45,6 +59,7 @@ def save_participant(experiment):
 
 
 def save_response(experiment, response):
+    """Create a response record in the database."""
     print('saving response in experiment', experiment)
     participant = Participant.query.filter(
         Participant.id == experiment['participant_id']

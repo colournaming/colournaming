@@ -96,6 +96,17 @@ def get_target():
     })
 
 
+@bp.route('/response_percentage')
+def get_response_percentage():
+    """Percentage who gave more responses."""
+    try:
+        response_count = int(request.args.get('count', 0))
+        perc = controller.response_count_percentage(response_count)
+    except:
+        perc = 0
+    return jsonify(top_percentage=perc)
+
+
 @bp.route('/observer_information.html', methods=['GET', 'POST'])
 def observer_information():
     """Show the observer information form and handle responses."""
