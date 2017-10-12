@@ -316,31 +316,56 @@ if ($age !== null && $distance !== null && $educationalLevel !== null && $enviro
 
 }
 
+const $thankYouText = document.getElementById('thank-you-text');
 const $results = document.getElementById('results');
 
-if ($results !== null) {
+if ($thankYouText !== null && $results !== null) {
     const { colours } = results;
 
     if (colours) {
-        for (const { name, value } of colours) {
-            const $div = document.createElement('div');
-            const $li = document.createElement('li');
-            const $whiteSpan = document.createElement('span');
-            const $blackSpan = document.createElement('span');
+        fetch(`/experiment/response_percentage?count=${ colours.length }`)
+            .then((response) => response.json())
+            .then((json) => {
+                const roundedTopPercentage = Math.round(json.top_percentage);
 
-            $div.style.backgroundColor = value;
+                $thankYouText.textContent = `Thank you for participating. You are in ‘${ roundedTopPercentage }’% top colournamers. Feel free to share it with your friends.`;
+            });
 
-            $whiteSpan.className = 'white';
-            $whiteSpan.textContent = name;
+        Promise
+            .all(Object
+                .keys(colours)
+                .map((key) => {
+                    const { name, value } = colours[key];
 
-            $blackSpan.className = 'black';
-            $blackSpan.textContent = 'likely name';
+                    const $div = document.createElement('div');
+                    const $li = document.createElement('li');
+                    const $whiteSpan = document.createElement('span');
+                    const $blackSpan = document.createElement('span');
 
-            $li.appendChild($div);
-            $li.appendChild($whiteSpan);
-            $li.appendChild($blackSpan);
+                    $div.style.backgroundColor = value;
 
-            $results.appendChild($li);
-        }
+                    $whiteSpan.className = 'white';
+                    $whiteSpan.textContent = name;
+
+                    const hexColorValue = value
+                        .match(/rgb\(([0-9]+),\s([0-9]+),\s([0-9]+)\)/)
+                        .slice(1)
+                        .map((string) => parseInt(string, 10))
+                        .map((number) => number.toString(16))
+                        .join('');
+
+                    $li.appendChild($div);
+                    $li.appendChild($whiteSpan);
+                    $li.appendChild($blackSpan);
+
+                    $results.appendChild($li);
+
+                    return fetch(`/namer/lang/en/name?colour=${ hexColorValue }`)
+                        .then((response) => response.json())
+                        .then((json) => {
+                            $blackSpan.className = 'black';
+                            $blackSpan.textContent = json.colours[0].name;
+                        });
+                }));
     }
 }
