@@ -328,7 +328,7 @@ if ($thankYouText !== null && $results !== null) {
             .then((json) => {
                 const roundedTopPercentage = Math.round(json.top_percentage);
 
-                $thankYouText.textContent = `Thank you for participating. You are in ‘${ roundedTopPercentage }’% top colournamers. Feel free to share it with your friends.`;
+                $thankYouText.textContent = `Thank you for participating. You are in the ${ roundedTopPercentage }% top colournamers. Feel free to share it with your friends.`;
             });
 
         Promise
