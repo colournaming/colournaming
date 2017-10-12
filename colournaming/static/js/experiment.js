@@ -183,15 +183,15 @@ if ($appearance !== null) {
 }
 
 const $age = document.getElementById('age');
-const $distance = document.getElementById('distance');
-const $educationalLevel = document.getElementById('educational-level');
-const $environment = document.getElementById('environment');
-const $experience = document.getElementById('experience');
 const $gender = document.getElementById('gender');
-const $homeCountry = document.getElementById('home-country');
-const $languageSkills = document.getElementById('language-skills');
-const $lightConditions = document.getElementById('light-conditions');
-const $residentCountry = document.getElementById('resident-country');
+const $experience = document.getElementById('colour_experience');
+const $languageSkills = document.getElementById('language_experience');
+const $educationalLevel = document.getElementById('educational_level');
+const $homeCountry = document.getElementById('country_raised');
+const $residentCountry = document.getElementById('country_resident');
+const $lightConditions = document.getElementById('screen_light');
+const $environment = document.getElementById('ambient_light');
+const $distance = document.getElementById('screen_distance');
 const $thankYouPage = document.getElementById('thank-you-page');
 
 if ($age !== null && $distance !== null && $educationalLevel !== null && $environment !== null && $experience !== null && $gender !== null && $homeCountry !== null && $languageSkills !== null && $lightConditions !== null && $residentCountry !== null && $thankYouPage !== null) {
