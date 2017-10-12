@@ -326,7 +326,7 @@ if ($thankYouText !== null && $results !== null) {
         fetch(`/experiment/response_percentage?count=${ colours.length }`)
             .then((response) => response.json())
             .then((json) => {
-                const roundedTopPercentage = Math.round(json.top_percentage * 100) / 100;
+                const roundedTopPercentage = Math.round(json.top_percentage);
 
                 $thankYouText.textContent = `Thank you for participating. You are in ‘${ roundedTopPercentage }’% top colournamers. Feel free to share it with your friends.`;
             });
