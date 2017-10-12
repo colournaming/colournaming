@@ -8,7 +8,8 @@ from wtforms.widgets import HiddenInput
 from . import model
 
 def _enum_to_choices(enum):
-    return [('', '-')] + [(x.name, x.name.replace('_', ' ').capitalize()) for x in enum]
+    choices = [(x.name, x.name.replace('_', ' ').capitalize()) for x in enum]
+    return [('', '-')] + choices
 
 
 class DisplayForm(FlaskForm):
@@ -54,13 +55,15 @@ class ObserverInformationForm(FlaskForm):
         description="What level of education have you attained?",
         validators=[Optional()]
     )
+    country_choices = [('', '-')] + \
+        sorted([(x.alpha_2, x.name) for x in pycountry.countries], key=lambda x: x[1])
     country_raised = SelectField(
-        choices=[('', '-')] + [(x.alpha_2, x.name) for x in pycountry.countries],
+        choices=country_choices,
         description="In which country were you raised?",
         validators=[Optional()]
     )
     country_resident = SelectField(
-        choices=[('', '-')] + [(x.alpha_2, x.name) for x in pycountry.countries],
+        choices=country_choices,
         description="In which country are you currently living?",
         validators=[Optional()]
     )
