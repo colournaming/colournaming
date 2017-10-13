@@ -32,7 +32,46 @@ $(function () {
         });
     }
 
+    function updateNames() {
+        console.log('updateNames');
+        var $nameSelect = $('select#name')[0];
+        var $languageSelect = $('select#language')[0];
+        $.get(COLOUR_NAMER_COLOURS_URL + '?lang=' + $languageSelect.value, function(data) {
+            console.log('got names');
+            $.each(data, function (i, x) {
+                console.log(x);
+                $nameSelect.append($('<option>', {value: x.hex, text: x.name}));
+            })
+        });
+    }
+
+    function updateLanguages() {
+        var $languageSelect = $('select#language')[0];
+        $.get(COLOUR_NAMER_LANGUAGES_URL, function(data) {
+            $.each(data, function (i, x) {
+                console.log(x);
+                $languageSelect.append($('<option>', {value: x.code, text: x.name}));
+            })
+        });
+    }
+
+    function onLanguageSelectChange(e) {
+        console.log('onLanguageSelectChange');
+        updateNames();
+    }
+
+    function onColourSelectChange(e) {
+        col = '#' + e.target.value;
+        doQuery(col);
+        ft = $.farbtastic('#colourpicker');
+        ft.setColor(col);
+    }
+
     $.farbtastic('#colour-picker', function (colour) {
         doQuery(colour);
     }).setColor('#FF0000');
+
+    $('select#language').change(onLanguageSelectChange);
+    $('select#name').change(onColourSelectChange);
+    updateNames();
 })

@@ -4,6 +4,7 @@ from flask import Blueprint, current_app, render_template
 from flask_mail import Message
 from ..email import mail
 from .forms import ContactForm
+from ..namer import controller as namer_controller
 
 bp = Blueprint('home', __name__)
 
@@ -24,7 +25,7 @@ def index():
             '{4}'
         )
         mail.send(msg)
-    return render_template('index.html', form=form)
+    return render_template('index.html', form=form, languages=namer_controller.language_list())
 
 
 @bp.route('research.html')

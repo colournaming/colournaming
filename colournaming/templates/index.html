@@ -28,10 +28,11 @@
         <div class="colour-namer-wrapper">
             <div class="colour-namer-row-wrapper">
                 <select class="left-aligned-select" id="language" name="language">
-                    <option value="english">English</option>
+                    {% for lang in languages %}
+                    <option value="{{ lang.code }}">{{ lang.name }}</option>
+                    {% endfor %}
                 </select>
                 <select class="right-aligned-select" id="name" name="name">
-                    <option value="-">by name</option>
                 </select>
             </div>
             <div class="colour-namer-row-wrapper">
@@ -294,5 +295,7 @@
 {% block scripts %}
 <script>
     var COLOUR_NAMER_URL = "{{ url_for('namer.name_colour', lang_code='en')|safe }}";
+    var COLOUR_NAMER_LANGUAGES_URL = "{{ url_for('namer.languages')|safe }}";
+    var COLOUR_NAMER_COLOURS_URL = "{{ url_for('namer.get_colours')|safe }}";
 </script>
 {% endblock %}
