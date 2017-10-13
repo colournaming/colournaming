@@ -16,7 +16,7 @@ $(function () {
         $('#stats-box-rgb-display').text(rgb.join(' '));
         $('#stats-box-header').css('background-color', hexcode);
 
-        $.getJSON(COLOUR_NAMER_URL + '?colour=' + hexcodeValues, function (data) {
+        $.get(COLOUR_NAMER_URL + '?colour=' + hexcodeValues, function (data) {
             var colourName = data.colours.shift().name;
             var $synonyms = data.colours
                 .map(function (colour) {
