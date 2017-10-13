@@ -8,16 +8,15 @@ $(function () {
     }
 
     function doQuery (hexcode, responseHandler) {
-        hexcode = hexcode.substring(1);
-
-        var rgb = hexToRGB(hexcode);
-        var hexString = 'Hex: ' + hexcode.toUpperCase();
+        var hexcodeValues = hexcode.substring(1);
+        var rgb = hexToRGB(hexcodeValues);
+        var hexString = 'Hex: ' + hexcodeValues.toUpperCase();
         var rgbString = 'RGB: ' + rgb.join(', ');
 
         $('#stats-box-rgb-display').text(rgb.join(' '));
         $('#stats-box-header').css('background-color', hexcode);
 
-        $.getJSON(COLOUR_NAMER_URL + '?colour=' + hexcode, function (data) {
+        $.getJSON(COLOUR_NAMER_URL + '?colour=' + hexcodeValues, function (data) {
             var colourName = data.colours.shift().name;
             var $synonyms = data.colours
                 .map(function (colour) {
