@@ -31,12 +31,26 @@ $(function () {
         });
     }
 
+    function resetSelectName (hexCode) {
+        var $nameSelect = $('select#name');
+
+        if (hexCode === undefined || hexCode.slice(1) !== $nameSelect.val()) {
+            $nameSelect
+                .blur()
+                .val('-')
+                .children(':first-child')
+                .attr('selected', 'selected');
+        }
+    }
+
     function updateNames () {
         var $nameSelect = $('select#name');
         var $languageSelect = $('select#language');
 
         $.get(COLOUR_NAMER_COLOURS_URL + '?lang=' + $languageSelect.val(), function (data) {
-            $nameSelect.empty();
+            $nameSelect.children(':not(:first-child)').remove();
+
+            resetSelectName();
 
             $.each(data, function (_, colour) {
                 $nameSelect.append($('<option/>')
@@ -68,8 +82,9 @@ $(function () {
         $.farbtastic('#colour-picker').setColor('#' + event.target.value);
     }
 
-    $.farbtastic('#colour-picker', function (colour) {
-        doQuery(colour);
+    $.farbtastic('#colour-picker', function (hexCode) {
+        resetSelectName(hexCode);
+        doQuery(hexCode);
     }).setColor('#FF0000');
 
     $('select#language').change(onLanguageSelectChange);
