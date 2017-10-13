@@ -37,12 +37,12 @@
             <div class="colour-namer-row-wrapper">
                 <div id="colour-picker"></div>
                 <div class="stats-box">
-                    <div class="stats-box-header"></div>
+                    <div id="stats-box-header" class="stats-box-header"></div>
                     <dl>
                         <dt>Colour Name:</dt>
-                        <dd>Red</dd>
+                        <dd id="stats-box-colour-name-display">Red</dd>
                         <dt>Synonyms:</dt>
-                        <dd>
+                        <dd id="stats-box-synonyms-display">
                             <ul>
                                 <li>Orange</li>
                                 <li>Pink</li>
@@ -50,7 +50,7 @@
                             </ul>
                         </dd>
                         <dt>RGB:</dt>
-                        <dd>255 10 40</dd>
+                        <dd id="stats-box-rgb-display">255 0 0</dd>
                     </dl>
                 </div>
                 <select class="right-aligned-select" id="agreement" name="agreement">
@@ -290,4 +290,9 @@
     </div>
     <p class="lined-text">Made in London (and Berlin) with lots of love.</p>
 </footer>
+{% endblock %}
+{% block scripts %}
+<script>
+    var COLOUR_NAMER_URL = "{{ url_for('namer.name_colour', lang_code='en')|safe }}";
+</script>
 {% endblock %}
