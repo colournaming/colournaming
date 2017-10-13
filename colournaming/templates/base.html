@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         <link href="{{ url_for('static', filename='images/favicon.png') }}" rel="shortcut icon">
+        <link href="{{ url_for('static', filename='farbtastic/farbtastic.css') }}" rel="stylesheet">
         <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet">
         <meta charset="UTF-8">
         <meta content="initial-scale=1, maximum-scale=1" name="viewport">
@@ -11,6 +12,8 @@
     <body data-spy="scroll" data-target="navigation-bar">
         {% block content %}{% endblock %}
         <script src="{{ url_for('static', filename='jquery-3.1.0.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='farbtastic/farbtastic.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/colour-namer.js') }}"></script>
         <script src="{{ url_for('static', filename='js/hamburger.js') }}"></script>
         {% block scripts %}{% endblock %}
     </body>
