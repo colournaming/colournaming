@@ -1,4 +1,11 @@
 $(function () {
+    var $languageSelect = $('select#language');
+    var $nameSelect = $('select#name');
+    var $statsBoxRGBDisplay = $('#stats-box-rgb-display');
+    var $statsBoxHeader = $('#stats-box-header');
+    var $statsBoxColourNameDisplay = $('#stats-box-colour-name-display');
+    var $statsBoxSynonymsDisplayList = $('#stats-box-synonyms-display ul');
+
     function hexToRGB (hexcode) {
         return [
             parseInt(hexcode.substring(0, 2), 16),
@@ -13,8 +20,8 @@ $(function () {
         var hexString = 'Hex: ' + hexcodeValues.toUpperCase();
         var rgbString = 'RGB: ' + rgb.join(', ');
 
-        $('#stats-box-rgb-display').text(rgb.join(' '));
-        $('#stats-box-header').css('background-color', hexcode);
+        $statsBoxRGBDisplay.text(rgb.join(' '));
+        $statsBoxHeader.css('background-color', hexcode);
 
         $.get(COLOUR_NAMER_URL + '?colour=' + hexcodeValues, function (data) {
             var colourName = data.colours.shift().name;
@@ -26,14 +33,12 @@ $(function () {
                     return $ul.append($li);
                 }, $('<ul>'));
 
-            $('#stats-box-colour-name-display').text(colourName);
-            $('#stats-box-synonyms-display ul').replaceWith($synonyms);
+            $statsBoxColourNameDisplay.text(colourName);
+            $statsBoxSynonymsDisplayList.replaceWith($synonyms);
         });
     }
 
     function resetSelectName (hexCode) {
-        var $nameSelect = $('select#name');
-
         if (hexCode === undefined || hexCode.slice(1) !== $nameSelect.val()) {
             $nameSelect
                 .blur()
@@ -44,9 +49,6 @@ $(function () {
     }
 
     function updateNames () {
-        var $nameSelect = $('select#name');
-        var $languageSelect = $('select#language');
-
         $.get(COLOUR_NAMER_COLOURS_URL + '?lang=' + $languageSelect.val(), function (data) {
             $nameSelect.children(':not(:first-child)').remove();
 
@@ -61,8 +63,6 @@ $(function () {
     }
 
     function updateLanguages () {
-        var $languageSelect = $('select#language');
-
         $.get(COLOUR_NAMER_LANGUAGES_URL, function (data) {
             $languageSelect.empty();
 
@@ -87,8 +87,8 @@ $(function () {
         doQuery(hexCode);
     }).setColor('#FF0000');
 
-    $('select#language').change(onLanguageSelectChange);
-    $('select#name').change(onColourSelectChange);
+    $languageSelect.change(onLanguageSelectChange);
+    $nameSelect.change(onColourSelectChange);
 
     updateLanguages();
     updateNames();
