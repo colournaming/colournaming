@@ -32,39 +32,41 @@ $(function () {
         });
     }
 
-    function updateNames() {
-        console.log('updateNames');
-        var $nameSelect = $('select#name')[0];
-        var $languageSelect = $('select#language')[0];
-        $.get(COLOUR_NAMER_COLOURS_URL + '?lang=' + $languageSelect.value, function(data) {
-            console.log('got names');
-            $.each(data, function (i, x) {
-                console.log(x);
-                $nameSelect.append($('<option>', {value: x.hex, text: x.name}));
-            })
+    function updateNames () {
+        var $nameSelect = $('select#name');
+        var $languageSelect = $('select#language');
+
+        $.get(COLOUR_NAMER_COLOURS_URL + '?lang=' + $languageSelect.val(), function (data) {
+            $nameSelect.empty();
+
+            $.each(data, function (_, colour) {
+                $nameSelect.append($('<option/>')
+                    .attr('value', colour.hex)
+                    .text(colour.name));
+            });
         });
     }
 
-    function updateLanguages() {
-        var $languageSelect = $('select#language')[0];
-        $.get(COLOUR_NAMER_LANGUAGES_URL, function(data) {
-            $.each(data, function (i, x) {
-                console.log(x);
-                $languageSelect.append($('<option>', {value: x.code, text: x.name}));
-            })
+    function updateLanguages () {
+        var $languageSelect = $('select#language');
+
+        $.get(COLOUR_NAMER_LANGUAGES_URL, function (data) {
+            $languageSelect.empty();
+
+            $.each(data, function (_, language) {
+                $languageSelect.append($('<option/>')
+                    .attr('value', language.code)
+                    .text(language.name));
+            });
         });
     }
 
-    function onLanguageSelectChange(e) {
-        console.log('onLanguageSelectChange');
+    function onLanguageSelectChange () {
         updateNames();
     }
 
-    function onColourSelectChange(e) {
-        col = '#' + e.target.value;
-        doQuery(col);
-        ft = $.farbtastic('#colourpicker');
-        ft.setColor(col);
+    function onColourSelectChange (event) {
+        $.farbtastic('#colour-picker').setColor('#' + event.target.value);
     }
 
     $.farbtastic('#colour-picker', function (colour) {
@@ -73,5 +75,7 @@ $(function () {
 
     $('select#language').change(onLanguageSelectChange);
     $('select#name').change(onColourSelectChange);
+
+    updateLanguages();
     updateNames();
 })
