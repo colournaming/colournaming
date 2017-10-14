@@ -295,7 +295,7 @@
 {% endblock %}
 {% block scripts %}
 <script>
-    var COLOUR_NAMER_URL = "{{ url_for('namer.name_colour', lang_code='en')|safe }}";
+    var COLOUR_NAMER_URL = "{{ url_for('namer.languages')|safe }}";
     var COLOUR_NAMER_LANGUAGES_URL = "{{ url_for('namer.languages')|safe }}";
     var COLOUR_NAMER_COLOURS_URL = "{{ url_for('namer.get_colours')|safe }}";
 </script>

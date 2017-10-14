@@ -23,7 +23,7 @@ $(function () {
         $statsBoxHeader.css('background-color', hexcode);
         $statsBoxSynonymsDisplayList = $('#stats-box-synonyms-display ul');
 
-        $.get(COLOUR_NAMER_URL + '?colour=' + hexcodeValues, function (data) {
+        $.get(COLOUR_NAMER_URL + $languageSelect.val() + '/name?colour=' + hexcodeValues, function (data) {
             var colourName = data.colours.shift().name;
             var $synonyms = $('<ul/>');
             $.each(data.colours, function(i, colour) {
