@@ -1,9 +1,11 @@
 """Controller for the colournaming system."""
 
 import csv
+import glob
 import logging
 import math
 import numpy as np
+import os
 from flask import current_app
 from sqlalchemy.orm.exc import NoResultFound
 from ..database import db
@@ -166,6 +168,15 @@ def _hex_code_for_colour(colour):
     h += hex(int(colour.m_G))[2:]
     h += hex(int(colour.m_B))[2:]
     return h
+
+
+def audio_list(lang):
+    """Return a list of available audio files."""
+    print(os.getcwd())
+    path = os.path.join(current_app.static_folder, 'audio', lang)
+    if os.path.exists(path):
+        return [os.path.split(x)[-1] for x in glob.glob(path + '/*.wav')]
+
 
 
 def instantiate_namers():

@@ -50,6 +50,13 @@ def name_colour(lang_code):
     )
 
 
+@bp.route('/audiolist')
+def audio_list():
+    """Get available audio for a language."""
+    lang = request.args.get('lang', 'en')
+    return jsonify(controller.audio_list(lang))
+
+
 @bp.route('/interface')
 def interface():
     """Show the colour namer interface."""
