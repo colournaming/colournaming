@@ -162,7 +162,6 @@ def colour_list(language):
 
 def _hex_code_for_colour(colour):
     """Return the hex code for a given colour centroid."""
-    print(colour.m_R, hex(int(colour.m_R)))
     h = hex(int(colour.m_R))[2:]
     h += hex(int(colour.m_G))[2:]
     h += hex(int(colour.m_B))[2:]
