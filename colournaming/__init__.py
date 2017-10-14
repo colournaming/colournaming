@@ -3,6 +3,7 @@
 import click
 from flask import Flask, render_template, request, current_app
 from flask_babel import Babel
+import pytest
 from sqlalchemy.exc import ProgrammingError
 import user_agents
 from .database import db
@@ -81,6 +82,11 @@ def setup_cli(app):
     def dropdb():
         """Drop database tables."""
         db.drop_all()
+
+    @app.cli.command()
+    def test():
+        """Run the test suite."""
+        pytest.main(['tests'])
 
     @app.cli.command()
     @click.pass_context
