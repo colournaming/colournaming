@@ -28,7 +28,7 @@ $(function () {
             var $synonyms = $('<ul/>');
             $.each(data.colours, function(i, colour) {
                 var $li = $('<li/>')
-                         .text(colour.name)
+                         .text(colour.name.replace('_', ' '))
                 $synonyms.append($li);
             });
             $statsBoxColourNameDisplay.text(colourName);
