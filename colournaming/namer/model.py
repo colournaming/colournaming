@@ -5,8 +5,8 @@ class Language(db.Model):
     __tablename__ = 'languages'
 
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.Unicode(64))
-    code = db.Column(db.String(2))
+    name = db.Column(db.Unicode(64), unique=True)
+    code = db.Column(db.String(2), unique=True)
 
 
 class ColourCentroid(db.Model):
