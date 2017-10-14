@@ -6,6 +6,7 @@ services:
         - "5000:5000"
         volumes:
         - .:/app
+        - ./data/audio:/app/colournaming/static/audio
         environment:
         - COLOURNAMING_CFG=/app/docker.cfg
         - PYTHONPATH=/app

@@ -13,6 +13,8 @@ $(function () {
         ];
     }
 
+    function rgbToHex(r, g, b) {return '#' + r.toString(16) + g.toString(16) + b.toString(16)};
+
     function doQuery (hexcode, responseHandler) {
         var hexcodeValues = hexcode.substring(1);
         var rgb = hexToRGB(hexcodeValues);
@@ -24,7 +26,12 @@ $(function () {
         $statsBoxSynonymsDisplayList = $('#stats-box-synonyms-display ul');
 
         $.get(COLOUR_NAMER_URL + $languageSelect.val() + '/name?colour=' + hexcodeValues, function (data) {
-            var colourName = data.colours.shift().name;
+            var topMatch = data.colours.shift()
+            console.log(topMatch);
+            var colourName = topMatch.name;
+            var topHex = rgbToHex(topMatch.red, topMatch.green, topMatch.blue);
+            console.log(topHex);
+            playSound(topHex);
             var $synonyms = $('<ul/>');
             $.each(data.colours, function(i, colour) {
                 var $li = $('<li/>')
@@ -74,6 +81,7 @@ $(function () {
 
     function onLanguageSelectChange () {
         updateNames();
+        loadAudioSet($languageSelect.val());
     }
 
     function onColourSelectChange (event) {
@@ -90,4 +98,5 @@ $(function () {
 
     updateLanguages();
     updateNames();
+    initAudio();
 })
