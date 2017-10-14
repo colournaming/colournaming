@@ -4,7 +4,6 @@ $(function () {
     var $statsBoxRGBDisplay = $('#stats-box-rgb-display');
     var $statsBoxHeader = $('#stats-box-header');
     var $statsBoxColourNameDisplay = $('#stats-box-colour-name-display');
-    var $statsBoxSynonymsDisplayList = $('#stats-box-synonyms-display ul');
 
     function hexToRGB (hexcode) {
         return [
@@ -22,17 +21,16 @@ $(function () {
 
         $statsBoxRGBDisplay.text(rgb.join(' '));
         $statsBoxHeader.css('background-color', hexcode);
+        $statsBoxSynonymsDisplayList = $('#stats-box-synonyms-display ul');
 
         $.get(COLOUR_NAMER_URL + '?colour=' + hexcodeValues, function (data) {
             var colourName = data.colours.shift().name;
-            var $synonyms = data.colours
-                .map(function (colour) {
-                    return $('<li>').text(colour.name);
-                })
-                .reduce(function ($ul, $li) {
-                    return $ul.append($li);
-                }, $('<ul>'));
-
+            var $synonyms = $('<ul/>');
+            $.each(data.colours, function(i, colour) {
+                var $li = $('<li/>')
+                         .text(colour.name)
+                $synonyms.append($li);
+            });
             $statsBoxColourNameDisplay.text(colourName);
             $statsBoxSynonymsDisplayList.replaceWith($synonyms);
         });
