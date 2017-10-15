@@ -364,7 +364,7 @@ if ($thankYouText !== null && $results !== null) {
                         .then((response) => response.json())
                         .then((json) => {
                             $blackSpan.className = 'black';
-                            $blackSpan.textContent = json.colours[0].name;
+                            $blackSpan.textContent = json.colours[0].name.replace('_', ' ');
                         });
                 }));
     }
