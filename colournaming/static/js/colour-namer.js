@@ -1,6 +1,7 @@
 $(function () {
     var $languageSelect = $('select#language');
     var $nameSelect = $('select#name');
+    var $agreementSelect = $('select#agreement');
     var $statsBoxRGBDisplay = $('#stats-box-rgb-display');
     var $statsBoxHeader = $('#stats-box-header');
     var $statsBoxColourNameDisplay = $('#stats-box-colour-name-display');
@@ -40,6 +41,7 @@ $(function () {
             });
             $statsBoxColourNameDisplay.text(colourName);
             $statsBoxSynonymsDisplayList.replaceWith($synonyms);
+            resetAgreement(); 
         });
     }
 
@@ -51,6 +53,14 @@ $(function () {
                 .children(':first-child')
                 .attr('selected', 'selected');
         }
+    }
+
+    function resetAgreement () {
+            $agreementSelect
+                .blur()
+                .val('-')
+                .children(':first-child')
+                .attr('selected', 'selected');
     }
 
     function updateNames () {
