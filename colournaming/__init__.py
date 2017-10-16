@@ -7,6 +7,7 @@ import pytest
 from raven.contrib.flask import Sentry
 from sqlalchemy.exc import ProgrammingError
 import user_agents
+from whitenoise import WhiteNoise
 from .database import db
 from .email import mail
 from .experiment.controller import read_targets_from_file
@@ -28,6 +29,7 @@ def create_app():
     set_before_request(app)
     register_blueprints(app)
     make_colour_namers(app)
+    app.wsgi_app = WhiteNoise(app.wsgi_app, root='static/')
     return app
 
 
