@@ -4,6 +4,7 @@ import click
 from flask import Flask, render_template, request, current_app
 from flask_babel import Babel
 import pytest
+from raven.contrib.flask import Sentry
 from sqlalchemy.exc import ProgrammingError
 import user_agents
 from .database import db
@@ -16,6 +17,7 @@ def create_app():
     """Create an instance of the app."""
     app = Flask(__name__)
     app.config.from_envvar('COLOURNAMING_CFG')
+    sentry = Sentry(app, dsn=app.config['SENTRY_DSN'])
     db.init_app(app)
     mail.init_app(app)
     babel = Babel(app)
