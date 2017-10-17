@@ -8,24 +8,23 @@ jobs:
       - checkout
 
       - run:
-          name: install docker compose
+          name: Install docker compose
           command: |
             set -x
-            apk add --no-cache python py-pip
+            apk add --no-progress -q --no-cache python py-pip
             pip install docker-compose
 
       - setup_remote_docker
 
       - run:
-          name: build container
+          name: Build container
           command: |
             docker-compose build
             docker-compose up -d postgres
 
       - run:
-          name: run tests
-          command: |
-            docker-compose run --rm web test
+          name: Run tests
+          command: docker-compose run --rm web test
 
       - store_artifacts:
           path: test-reports
