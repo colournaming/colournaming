@@ -1,0 +1,33 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/docker:stable-git
+      
+    steps:
+      - checkout
+
+      - run:
+          name: install docker compose
+          command: |
+            set -x
+            curl -L https://github.com/docker/compose/releases/download/1.11.2/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
+            chmod +x /usr/local/bin/docker-compose
+
+      - setup_remote_docker
+
+      - run:
+          name: build container
+          command: |
+            docker-compose build
+            docker-compose up -d postgres
+
+      - run:
+          name: run tests
+          command: |
+            docker-compose run --rm web test
+
+      - store_artifacts:
+          path: test-reports
+          destination: test-reports
+          
