@@ -47,9 +47,13 @@ def set_locale_selector(babel):
 def set_before_request(app):
     @app.before_request
     def before_req():
-        agent_string = request.headers.get('User-Agent')
-        ua = user_agents.parse(agent_string)
-        request.mobile = ua.is_mobile
+        agent_string = request.headers.get('User-Agent', '')
+        try:
+            ua = user_agents.parse(agent_string)
+        except TypeError:
+            request.mobile = False
+        else:
+            request.mobile = ua.is_mobile
 
 
 def set_error_handlers(app):
