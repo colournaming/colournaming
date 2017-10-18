@@ -8,7 +8,7 @@ jobs:
       - checkout
 
       - run:
-          name: Install docker compose
+          name: Install docker-compose
           command: |
             set -x
             apk add --no-progress -q --no-cache python py-pip
@@ -30,6 +30,7 @@ jobs:
           name: Deploy if branch is master or develop
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" -o "${CIRCLE_BRANCH}" == "develop" ]; then
+              cat .circleci/known_hosts >> ~/.ssh/known_hosts
               ssh circleci@magenta.colornaming.net deploy.sh
             else
               echo "Skipping deployment"
