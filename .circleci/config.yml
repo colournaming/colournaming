@@ -29,7 +29,7 @@ jobs:
       - deploy:
           name: Deploy if branch is master or develop
           command: |
-            cat "${DEPLOY_HOST_KEY}" >> ~/.ssh/known_hosts
+            echo "${DEPLOY_HOST_KEY}" >> ~/.ssh/known_hosts
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
               docker tag colournaming jstutters/colournaming:latest
               docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
