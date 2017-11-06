@@ -5,7 +5,6 @@ var w;
 function setup() {
     var $canv = $('#namerCanvas')
     w = $canv.width()
-    console.log(w, h);
     var myCanvas = createCanvas(w, h);
     myCanvas.parent('namerCanvas');
     textAlign(CENTER);
@@ -80,13 +79,11 @@ function drawResponse(colour_matches) {
 }
 
 function updateWithResponse(colour_matches) {
-    console.log('in updateWithResponse()');
     c = colour_matches.colours[0]
     stroke(1)
     background(128);
     fill(c.red, c.green, c.blue);
     rect(w / 2 - 150, 0, 300, h - 2);
-    console.log(colour_matches);
     $('#colourInfo').html(colour_matches.desc);
 }
 
