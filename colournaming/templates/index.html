@@ -55,14 +55,10 @@
                         <dd id="stats-box-rgb-display">255 0 0</dd>
                     </dl>
                 </div>
-                <select class="right-aligned-select" id="agreement" name="agreement">
-                    <option value="-">Do you agree?</option>
-                    <option value="0">Strongly Agree</option>
-                    <option value="1">Agree</option>
-                    <option value="2">Undecided</option>
-                    <option value="3">Disagree</option>
-                    <option value="4">Strongly Disagree</option>
-                </select>
+                <form id='name_agreement_form'>
+                    {{ name_agreement_form.csrf_token }}
+                    {{ name_agreement_form.agreement(placeholder='-', class_='right-aligned-select') }}
+                </form>
             </div>
         </div>
         <p>This is a βeta version of Colournamer. You will need JavaScript enabled and a browser that supports HTML5 web audio.</p>
@@ -273,18 +269,18 @@
             <a href="#contact">Contact</a>
         </h2>
         <p class="justified-text">Please use the following communication form to give us your feedback and comments or if you wish to inform you about the results of this research.</p>
-        <form method="post">
-            {{ form.csrf_token }}
-            {{ form.first_name.label(for='first_name') }}
-            {{ form.first_name(class_='form-control', size=20) }}
-            {{ form.last_name.label(for='last_name') }}
-            {{ form.last_name(class_='form-control', size=20) }}
-            {{ form.email.label(for='email')  }}
-            {{ form.email(class_='form-control', size=20) }}
-            {{ form.organisation.label(for='organisation') }}
-            {{ form.organisation(class_='form-control', size=20) }}
-            {{ form.message.label(for='message') }}
-            {{ form.message(class_='form-control', size=20) }}
+        <form id='contact_form' method="post">
+            {{ contact_form.csrf_token }}
+            {{ contact_form.first_name.label(for='first_name') }}
+            {{ contact_form.first_name(class_='form-control', size=20) }}
+            {{ contact_form.last_name.label(for='last_name') }}
+            {{ contact_form.last_name(class_='form-control', size=20) }}
+            {{ contact_form.email.label(for='email')  }}
+            {{ contact_form.email(class_='form-control', size=20) }}
+            {{ contact_form.organisation.label(for='organisation') }}
+            {{ contact_form.organisation(class_='form-control', size=20) }}
+            {{ contact_form.message.label(for='message') }}
+            {{ contact_form.message(class_='form-control', size=20) }}
             <button class="submit-button" type="submit">Submit</button>
         </form>
     </section>
@@ -305,6 +301,7 @@
     var COLOUR_NAMER_URL = "{{ url_for('namer.languages')|safe }}";
     var COLOUR_NAMER_LANGUAGES_URL = "{{ url_for('namer.languages')|safe }}";
     var COLOUR_NAMER_COLOURS_URL = "{{ url_for('namer.get_colours')|safe }}";
+    var COLOUR_NAMER_AGREEMENT_URL = "{{ url_for('namer.submit_agreement')|safe }}";
     var AUDIO_DIR = "{{ url_for('static', filename='audio')|safe }}";
     var AUDIO_LIST_URL = "{{ url_for('namer.audio_list')|safe }}";
 </script>

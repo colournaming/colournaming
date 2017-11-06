@@ -2,7 +2,9 @@
 
 from flask import Blueprint, jsonify, abort, request, current_app, render_template
 from sqlalchemy.orm.exc import NoResultFound
-from .model import Language
+from ..database import db
+from .model import Language, NameAgreement
+from .forms import NameAgreementForm
 from . import controller
 
 bp = Blueprint('namer', __name__)
@@ -48,6 +50,37 @@ def name_colour(lang_code):
         colours=colours,
         desc=render_template('match_description.html', colours=colours)
     )
+
+
+@bp.route('/submit_agreement', methods=['POST'])
+def submit_agreement():
+    form = NameAgreementForm()
+    print(
+        form.csrf_token,
+        form.language_code,
+        form.red,
+        form.green,
+        form.blue,
+        form.agreement
+    )
+    if form.validate_on_submit():
+        print('name agreeement form is valid')
+        lang = Language.query.filter(Language.code == form.language_code.data).one()
+        agreement = NameAgreement(
+            language=lang,
+            red=form.red.data,
+            green=form.green.data,
+            blue=form.blue.data,
+            agreement=form.agreement.data
+        )
+        db.session.add(agreement)
+        db.session.commit()
+        return jsonify(success=True)
+    else:
+        if form.errors:
+            for field, error in form.errors.items():
+                print(field, error)
+        return jsonify(success=False)
 
 
 @bp.route('/audiolist')
