@@ -111,3 +111,4 @@ class ColourResponse(db.Model):
     name = db.Column(db.String)
     response_time = db.Column(db.Float)
     experiment_version = db.Column(db.String)
+    created_on = db.Column(db.DateTime)
