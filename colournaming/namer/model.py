@@ -1,4 +1,15 @@
-from colournaming.database import db
+import enum
+from ..database import db
+from sqlalchemy.dialects import postgresql
+
+
+class AgreementLevel(enum.Enum):
+    """Name agreement levels."""
+    strongly_disagree = -2
+    disagree = -1
+    undecided = 0
+    agree = 1
+    strongly_agree = 2
 
 
 class Language(db.Model):
@@ -33,3 +44,15 @@ class ColourCentroid(db.Model):
     m_R = db.Column(db.Float())
     m_G = db.Column(db.Float())
     m_B = db.Column(db.Float())
+
+
+class NameAgreement(db.Model):
+    __tablename__ = 'name_agreements'
+
+    id = db.Column(db.Integer, primary_key=True)
+    language_id = db.Column(db.Integer, db.ForeignKey('languages.id'))
+    language = db.relationship('Language')
+    red = db.Column(db.Integer, nullable=False)
+    green = db.Column(db.Integer, nullable=False)
+    blue = db.Column(db.Integer, nullable=False)
+    agreement = db.Column(postgresql.ENUM(AgreementLevel))

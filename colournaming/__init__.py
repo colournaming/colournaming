@@ -18,7 +18,9 @@ def create_app():
     """Create an instance of the app."""
     app = Flask(__name__)
     app.config.from_envvar('COLOURNAMING_CFG')
-    sentry = Sentry(app, dsn=app.config['SENTRY_DSN'])
+    if app.config.get('DEBUG', False):
+        sentry = Sentry(app, dsn=app.config['SENTRY_DSN'])
+        app.wsgi_app = WhiteNoise(app.wsgi_app, root='static/')
     db.init_app(app)
     mail.init_app(app)
     babel = Babel(app)
@@ -29,7 +31,6 @@ def create_app():
     set_before_request(app)
     register_blueprints(app)
     make_colour_namers(app)
-    app.wsgi_app = WhiteNoise(app.wsgi_app, root='static/')
     return app
 
 

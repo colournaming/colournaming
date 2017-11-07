@@ -1,7 +1,7 @@
 """Views for the namer."""
 
 from flask import Blueprint, current_app, redirect, render_template, Response, session, url_for
-from .controller import get_responses, get_participants
+from .controller import get_agreements, get_responses, get_participants
 from .forms import LoginForm
 
 bp = Blueprint('admin', __name__)
@@ -44,3 +44,11 @@ def show_participants():
     if not session.get('admin_logged_in', False):
         return redirect(url_for('.login'))
     return Response(get_participants(), mimetype='text/csv')
+
+
+@bp.route('/agreements.csv')
+def show_agreements():
+    """Return agreements as CSV."""
+    if not session.get('admin_logged_in', False):
+        return redirect(url_for('.login'))
+    return Response(get_agreements(), mimetype='text/csv')

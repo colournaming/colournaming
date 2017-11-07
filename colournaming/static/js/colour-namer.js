@@ -28,10 +28,8 @@ $(function () {
 
         $.get(COLOUR_NAMER_URL + $languageSelect.val() + '/name?colour=' + hexcodeValues, function (data) {
             var topMatch = data.colours.shift()
-            console.log(topMatch);
             var colourName = topMatch.name;
             var topHex = rgbToHex(topMatch.red, topMatch.green, topMatch.blue);
-            console.log(topHex);
             playSound(topHex);
             var $synonyms = $('<ul/>');
             $.each(data.colours, function(i, colour) {
@@ -98,6 +96,25 @@ $(function () {
         $.farbtastic('#colour-picker').setColor('#' + event.target.value);
     }
 
+    function onAgreementSelectChange (event) {
+        var agreement_level = $('#name_agreement_form #agreement')[0].value;
+        if (agreement_level == "") {
+            return;
+        }
+        rgb_selected = hexToRGB($.farbtastic('#colour-picker').color.substring(1));
+        console.log(rgb_selected);
+        $.post(COLOUR_NAMER_AGREEMENT_URL, {
+            csrf_token: $('#name_agreement_form #csrf_token')[0].value,
+            language_code: $('select#language')[0].value,
+            agreement: $('#name_agreement_form #agreement')[0].value,
+            red: rgb_selected[0],
+            green: rgb_selected[1],
+            blue: rgb_selected[2],
+        }).done(function() {
+            resetAgreement();
+        });
+    }
+
     $.farbtastic('#colour-picker', function (hexCode) {
         resetSelectName(hexCode);
         doQuery(hexCode);
@@ -105,6 +122,7 @@ $(function () {
 
     $languageSelect.change(onLanguageSelectChange);
     $nameSelect.change(onColourSelectChange);
+    $agreementSelect.change(onAgreementSelectChange);
 
     updateLanguages();
     updateNames();
