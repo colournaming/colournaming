@@ -12,13 +12,13 @@
 <main>
     <section>
         <img src="static/images/mobiles.jpg">
-        <p class="justified-text">{{ _('This is a multi-lingual colour naming experiment. By taking part you are helping us to develop an online colour naming model to facilitate colour communication within and across cultures. As part of this simple experiment you will be asked to name a series of colour samples. Please read the agreement statement and click Start now.') }}</p>
-        <h3>Confidentiality:</h3>
-        <p class="justified-text">Your participation in this study will remain confidential. Data is stored on a secure Unix server along with your IP addresses. The experimental data collected in this study will be used to develop an Online Colour Naming Model and may be shared with other researchers if requested. ALL personal data will be removed, so that NO data can be traced back to the observer.</p>
-        <h3>Participation and withdrawal:</h3>
-        <p class="justified-text">The participation in this study is only for over 16 years old and voluntary. Please note that you may withdraw at any time without any penalty.</p>
-        <h3>Agreement:</h3>
-        <p class="justified-text">{{ _('By clicking Start you confirm that you have understood the provided information and agree to take part in this study.') }}</p>
+        <p class="justified-text">{{ _('Welcome to Colour Naming, an online experiment designed to collect colour names in multiple languages with their corresponding colour ranges.') }}</p>
+        
+        <p class="justified-text">You will be asked to name a series of colour samples and provide information about your cultural background and viewing conditions. You are free to omit any question and you may withdraw at any time without penalty. Participation in this study is strictly anonymous and voluntary. All responses are treated as confidential and will be published in aggregated form only.</p>
+        
+        <p class="justified-text">Many individuals find the tasks of this study enjoyable and we believe there are no known risks to participants. The purpose of this research study is to improve colour communication in multilingual environments. Please feel free to contact the principal investigator <a href="mailto:d.mylonas[at]ucl.ac.uk">Dimitris Mylonas</a> or the supervisors <a href="mailto:ucfslwm[at]ucl.ac.uk ">Lindsay MacDonald</a> and <a href="mailto:l.griffin[at]ucl.ac.uk">Lewis Griffin</a> of University College London if you have any questions.</p>
+        
+        <p class="justified-text">{{ _('If you are 16 years of age or older, understand the statements and freely consent to participate in the study, click on the "Start" button to begin the experiment.') }}</p>
         <a class="round-button" href="{{ url_for('experiment.start') }}">Start</a>
     </section>
     <section>
@@ -80,7 +80,6 @@
             1st Supervisor: Dr Lewis Griffin<br>
             2nd Supervisor: Prof Andrew Stockman<br>
             3rd Supervisor: Dr Lindsay MacDonald<br>
-
             Host Academic Institution 2013-2014: <a href="http://www.mat.qmul.ac.uk/">Media &amp; Arts Technology, School of Electronic Engineering and Computer Science, Queen Mary University of London (QMUL)</a><br>
             Host Academic Institution 2011-2013: <a href="http://www.vislab.ucl.ac.uk/">Wellcome Laboratory of Neurobiology, Institute of Neuroesthetics, University College London (UCL)</a><br>
             PI: Professor Semir Zeki<br>
@@ -169,26 +168,8 @@
             </ul>
         </div>
         <div class="padded">
-            <h3>Purpose of the research:</h3>
-            <ul>
-                <li>To determine multicultural sets of basic colour terms, compounds, modifiers and secondary colour names which are in wide use.</li>
-                <li>To locate multicultural colour names in Munsell, sRGB, CIELAB and CIECAM02.</li>
-                <li>To investigate colour naming and colour categorization within different cultures.</li>
-                <li>To develop a colour-naming model.</li>
-            </ul>
-        </div>
-        <div class="padded">
-            <h3>What you will do in this <a href="http://colornaming.net">experiment</a> (approximate duration 10 min):</h3>
-            <ul>
-                <li>We will ask you to give us information on your display technology and viewing conditions.</li>
-                <li>We will test your colour vision with a 90 sec short video.</li>
-                <li>We will present to you a series of colour patches, one sample at a time, and ask you to name it by using natural language.</li>
-                <li>We will ask you to give us information on your cultural background.</li>
-            </ul>
-        </div>
-        <div class="padded">
             <h3>Crowdfunding Project:</h3>
-            <p>In September 2016, we've run a successful Kickstarter project, entitled <a href="https://www.kickstarter.com/projects/111984715/colours-of-babel">Colours of Babel</a>, to upgrade our online experiment to run on all new devises, minimize security threats and maintain our online presence free without advertisements. We thank all our 96 supporters for helping us raise 112% of our funding goal. You can find below a colour-coded list with our most precious donors:</p>
+            <p>In September 2016, we run a successful Kickstarter project, entitled <a href="https://www.kickstarter.com/projects/111984715/colours-of-babel">Colours of Babel</a>, to upgrade our online experiment to run on all new devises, minimize security threats and maintain our online presence free without advertisements. We thank all our 96 supporters for helping us raise 112% of our funding goal. You can find below a colour-coded list with our most precious donors:</p>
         </div>
         <div class="padded">
             <h3>Ruby Donors:</h3>
@@ -228,23 +209,23 @@
         <div class="padded">
             <h3>Publications/Presentations/Workshops:</h3>
             <ol>
-                <li>True Colors - interview of Dimitris Mylonas by Despina Trivoli (2009) <a href="http://www2.libropage.com/edition/LiFO179">LiFO 179 pg.50-51</a>, Athens, Greece, November 2009</li>
+                <li>True Colors - interview of Dimitris Mylonas by Despina Trivoli (2009). LiFO 179 pg.50-51, Athens, Greece, November 2009</li>
                 <li>Mylonas, D. (2009) A Colour Naming Investigation within Different Cultures, Oral Presentation, <a href="http://www.rps-isg.org/DF2009_presentations.php">Digital Futures, Image Physics &amp; Psychophysics</a>, Institute of Physics, London, UK, November 2009</li>
                 <li>Mylonas, D. (2009) An Online Colour Naming Model, Oral Presentation, <a href="http://www.rps-isg.org/?p=464">Printing and Graphics Science Group Student Conference</a>, Institute of Physics, London, UK, December 2009</li>
-                <li>Mylonas, D. and MacDonald, L.W. (2010) Locating Colour Names under different viewing conditions on the Net, Conf. <a href="www.create.uwe.ac.uk/norway_paperlist/mylonas.pdf">CREATE</a>, Gjøvik, Norway, June 2010</li>
-                <li>Mylonas, D. and MacDonald, L.W. (2010) Online Colour Naming Experiment Using Munsell Samples, <a href="http://www.imaging.org/ist/store/physpub.cfm?seriesid=26&amp;pubid=942">Proc. CGIV 2010</a>, Joensuu, Finland, June 2010 <a href="http://colornaming.net/Papers/CGIV_10_Online_Colour_Naming_Experiment_Using_Munsell_Samples_D.Mylonas.pdf">(pdf)</a></li>
+                <li>Mylonas, D. and MacDonald, L.W. (2010) Locating Colour Names under different viewing conditions on the Net, Conf. CREATE, Gjøvik, Norway, June 2010</li>
+                <li>Mylonas, D. and MacDonald, L.W. (2010) Online Colour Naming Experiment Using Munsell Samples, <a href="http://www.imaging.org/ist/store/physpub.cfm?seriesid=26&amp;pubid=942">Proc. CGIV 2010</a>, Joensuu, Finland, June 2010</li>
                 <li>MacDonald, L.W. and Mylonas, D. (2010) Edible Color Names, <a href="http://www.aic2010.blogspot.com/">Proc. AIC 2010 Conf.on ‘Color and Food’</a>, Mar del Plata, Argentina, October 2010</li>
                 <li>Mylonas, D.,(2010) Colour Naming Workshop: Likely Colour Names Card Game, Create Workshops, Bristol, UK, October 2010</li>
-                <li>Mylonas, D., MacDonald, L.W. and Wuerger S. (2010) Towards an Online Colour Naming Model, <a href="http://www.imaging.org/ist/store/physpub.cfm?seriesid=4&amp;pubid=954">Proc. CIC 2010</a>, San Antonio, US, November 2010  <a href="http://colornaming.net/Papers/CIC_10_Towards_online_color_naming_model_D.Mylonas.pdf">(pdf)</a></li>
-                <li>Mylonas, D.(2010), Oral Presentation, <a href="http://www.colour.org.uk/meetingDecember10.html">WD Wright Award</a>, Online Colour Naming Experiment Using Munsell Samples, Colour Group, London, UK, December 2010</li>
+                <li>Mylonas, D., MacDonald, L.W. and Wuerger S. (2010) Towards an Online Colour Naming Model, <a href="http://www.imaging.org/ist/store/physpub.cfm?seriesid=4&amp;pubid=954">Proc. CIC 2010</a>, San Antonio, US, November 2010</li>
+                <li>Mylonas, D.(2010), Oral Presentation, WD Wright Award, Online Colour Naming Experiment Using Munsell Samples, Colour Group GB, London, UK, December 2010</li>
                 <li>Mylonas, D. and MacDonald, L.W. (2012) <a href="http://www.woodheadpublishing.com/en/book.aspx?bookID=2240">Colour naming for colour communication.</a> In Colour Design: Theory &amp; Applications, ed Best, J., Woodhead Publishing, Cambridge, UK</li>
                 <li>Mylonas, D. and MacDonald, L.W. (2011) An Online Colour naming Workshop. <a href="http://www.eva-london.org/">EVA London Conference</a>, BCS, The Chartered Institute for IT, London, UK, June 2011</li>
                 <li>Colour naming Eglantine by any other name - Johnson (2011) <a href="http://www.economist.com/blogs/johnson/2011/07/colour-naming">Economist</a>, Colour naming experiment and Colournamer mentioned in The Economist, New York, July, 2011</li>
                 <li>Mylonas, D. (2011) Blue...and the subjective experience of colour (lecture-demo), Lost Property, Amsterdam, Netherlands, November 2011</li>
                 <li>Mylonas, D. (2012) Colour naming workshop on FIRE, FIRE - Community project, London, UK, March 2012</li>
-                <li>MacDonald, L., Paramei, G. and Mylonas D. (2012) Gender differences in colour naming. <a href="http://www.gla.ac.uk/schools/critical/research/seminarsandevents/glasgowcolourstudiesgroup/pics12/">Conference Progress in Colour Studies 2012</a>, Glasgow, Scotland, July 2012</li>
-                <li>Mylonas, D. (2012) <a href="http://www.colour.org.uk/meetingNovember12.html">Colour naming for colour communication.</a> Public talk, Symposium on Colour for Business and the Professions, Colour Group (GB), City University, London, UK, November 2012</li>
-                <li>Mylonas, D., Stutters, J., Doval, V. and MacDonald, L. (2013) Colournamer - a synthetic observer for colour communication, <a href="http://www.aic2013.org">AIC 2013 12th International Congress - Sage Gateshead,</a> Newcastle, UK, July 2013</li>
+                <li>MacDonald, L., Paramei, G. and Mylonas D. (2012) Gender differences in colour naming. Conference Progress in Colour Studies 2012, Glasgow, Scotland, July 2012</li>
+                <li>Mylonas, D. (2012) <a href="http://www.colour.org.uk/">Colour naming for colour communication.</a> Public talk, Symposium on Colour for Business and the Professions, Colour Group (GB), City University, London, UK, November 2012</li>
+                <li>Mylonas, D., Stutters, J., Doval, V. and MacDonald, L. (2013) Colournamer - a synthetic observer for colour communication, AIC 2013 12th International Congress - Sage Gateshead, Newcastle, UK, July 2013</li>
                 <li>Mylonas, D., and MacDonald, L. (2014) Augmenting Basic Colour Terms in English, <a href="http://aisb50.org">AISB-50 - Goldsmiths,</a> London, UK, April 2014</li>
                 <li>MacDonald, L. and Mylonas, D. (2014) Gender Differences for Colour Naming in Spanish and English, AIC Interim Meeting, Oaxaca, Mexico, October 2014</li>
                 <li>Mylonas, D., Paramei, G. and MacDonald, L. (2014) Gender Differences in Colour Naming, <a href="https://benjamins.com/#catalog/books/z.191.15myl/details">In: Anderson, Wendy, Carole P. Biggam, Carole Hough and Christian Kay (eds.), Colour Studies: A broad spectrum. 2014. xiv, 417 pp. (pp. 225–239),</a> John Benjamins</li>
@@ -258,13 +239,14 @@
                 <li>Mylonas, D. (2015). The role of psychological primaries in cognitive colour spaces: a cross cultural colour naming study. In Colour Vision Meeting 2015, Colour Group GB.</li>
                 <li>Mylonas, D., Andrews, J., Griffin L.D. (2016). Variability in free colour naming across the full colour gamut. In AVA Christmas Meeting, London, UK.</li>
                 <li>Griffin L.D., Mylonas, D. (2016). Why so much talk about “red”? In AVA Christmas Meeting, London, UK.</li>
-                <li>Mylonas, D., MacDonald, L. (2017). Colour Naming for Colour Design. In Colour Design, ed Best, J. Elsevier</li>
+                <li>Mylonas, D., MacDonald, L. (2017). Colour Naming for Colour Design. <a href="https://www.elsevier.com/books/colour-design/best/978-0-08-101270-3"> In Colour Design</a>, ed Best, J. Elsevier</li>
                 <li>Mylonas D. (2017) Where our brain meets the universe. Talk at <a href="https://designmuseum.org/whats-on/talks-courses-and-workshops/chromophobia-colour-in-architecture">Chromophobia: Colour in Architecture</a>. Design Museum, London, UK</li>
                 <li>Mylonas D. (2017) Features of GREEN colour categories across languages. Talk at The Colour Green meeting, Northern Chapter, Colour Group GB, Newcastle, UK.</li>
                 <li>Mylonas, D., MacDonald L., Griffin, L.D. (2017). Differences in Color Naming between British and American English Speakers. In 13th AIC Congress, South Korea.</li>
                 <li>Griber Y., Paramei G.V., Mylonas, D. (2017). Gender Differences in Russian Colour Naming. In 13th AIC Congress, South Korea.</li>
                 <li>Ulusoy B., Griffin L.D., Mylonas, D. (2017). Turkish Colour Naming on the Net. In 13th AIC Congress, South Korea.</li>
-                <li>Paramei G, Gibber Y., Mylonas D. (2017) An online colour naming experiment in Russian using Munsell colour samples, Color Research &amp; Application (in press), DOI:10.1002/col.22190.</li>
+                <li>Paramei G, Gibber Y., Mylonas D. (2017) An online colour naming experiment in Russian using Munsell colour samples, Color Research &amp; Application (in press), <a href="https://onlinelibrary.wiley.com/doi/10.1002/col.22190/full"> DOI:10.1002/col.22190.</a></li>
+                <li>Mylonas, D.(2017), Oral Presentation, WD Wright Award, Differences in Color Naming between British and American English Speakers, Colour Group GB, City University, London, UK, November 2017</li>
             </ol>
         </div>
     </section>
@@ -296,7 +278,7 @@
         <a class="github social-link" href="https://github.com/colournaming/colournaming"><!-- GitHub Logo --></a>
         <a class="email social-link" href="mailto:dmilonas@gmail.com"></a>
     </div>
-    <p class="lined-text">Made in London (and Berlin) with lots of love.</p>
+    <p class="lined-text">Made in London & Berlin</p>
 </footer>
 {% endblock %}
 {% block scripts %}
