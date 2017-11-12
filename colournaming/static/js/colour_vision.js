@@ -50,7 +50,6 @@ function checkAnswerShowNext(side) {
       COLOUR_VISION_SUBMIT_URL, 
       results,
       function(data) {
-        console.log(data);
         window.location.replace(data.url);
       }
     );
