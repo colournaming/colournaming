@@ -101,3 +101,6 @@ colournaming-data.tar.gz
 
 # Config files
 win.cfg
+
+# npm
+node_modules/
