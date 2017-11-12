@@ -1,7 +1,8 @@
-from sqlalchemy.orm.exc import NoResultFound
-from ..experiment.model import Participant
 import csv
 import io
+from sqlalchemy.orm.exc import NoResultFound
+from ..experiment.model import Participant
+from ..namer.model import NameAgreement
 
 RESPONSE_FIELDNAMES = [
     'participant_id',
@@ -9,6 +10,14 @@ RESPONSE_FIELDNAMES = [
     'target_id',
     'response_time',
     'name',
+]
+
+AGREEMENT_FIELDNAMES = [
+    'language_code',
+    'red',
+    'green',
+    'blue',
+    'agreement',
 ]
 
 PARTICIPANT_FIELDNAMES = [
@@ -49,6 +58,21 @@ def get_responses():
                 'response_time': response.response_time,
                 'name': response.name
             })
+    return output.getvalue()
+
+def get_agreements():
+    agreements = NameAgreement.query.all()
+    output = io.StringIO()
+    output_csv = csv.DictWriter(output, AGREEMENT_FIELDNAMES, restval='NA')
+    output_csv.writeheader()
+    for agreement in agreements:
+        output_csv.writerow({
+            'language_code': agreement.language.code,
+            'red': agreement.red,
+            'green': agreement.green,
+            'blue': agreement.blue,
+            'agreement': agreement.agreement
+        })
     return output.getvalue()
 
 def get_participants():

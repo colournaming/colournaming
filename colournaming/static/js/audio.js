@@ -16,7 +16,6 @@ function initAudio() {
         audioAvailable = false;
         return;
     }
-    console.log(audioAvailable);
     sampleBuffers = {};
     loadAudioSet('en');
 }
@@ -26,7 +25,6 @@ function changeAudioSet(lang) {
 }
 
 function loadAudioSet(lang) {
-    console.log(lang);
     if (lang) {
         var url = AUDIO_LIST_URL + "?lang=" + lang;
         $.getJSON(url, function(data) {

@@ -5,6 +5,7 @@ from flask_mail import Message
 from ..email import mail
 from .forms import ContactForm
 from ..namer import controller as namer_controller
+from ..namer.forms import NameAgreementForm
 
 bp = Blueprint('home', __name__)
 
@@ -12,10 +13,11 @@ bp = Blueprint('home', __name__)
 @bp.route('/')
 def index():
     """Render the front page."""
-    form = ContactForm()
-    if form.validate_on_submit():
+    contact_form = ContactForm()
+    name_agreement_form = NameAgreementForm()
+    if contact_form.validate_on_submit():
         msg = Message(
-            'ColourNamer message from {0} {1}'.format(form.first_name, form.last_name),
+            'ColourNamer message from {0} {1}'.format(contact_form.first_name, contact_form.last_name),
             sender='contact@colornaming.net',
             recipients=[current_app.config['CONTACT_EMAIL']]
         )
@@ -25,7 +27,12 @@ def index():
             '{4}'
         )
         mail.send(msg)
-    return render_template('index.html', form=form, languages=namer_controller.language_list())
+    return render_template(
+        'index.html',
+        contact_form=contact_form,
+        name_agreement_form=name_agreement_form,
+        languages=namer_controller.language_list()
+    )
 
 
 @bp.route('research.html')
