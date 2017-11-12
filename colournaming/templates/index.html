@@ -12,13 +12,31 @@
 <main>
     <section>
         <img src="static/images/mobiles.jpg">
-        <p class="justified-text">{{ _('Welcome to Colour Naming, an online experiment designed to collect colour names in multiple languages with their corresponding colour ranges.') }}</p>
+        <p class="justified-text">{{ _('Welcome to Colour Naming, an online
+        experiment designed to collect colour names in multiple languages
+        with their corresponding colour ranges.') }}</p>
         
-        <p class="justified-text">You will be asked to name a series of colour samples and provide information about your cultural background and viewing conditions. You are free to omit any question and you may withdraw at any time without penalty. Participation in this study is strictly anonymous and voluntary. All responses are treated as confidential and will be published in aggregated form only.</p>
+        <p class="justified-text">You will be asked to name a series of
+        colour samples and provide information about your cultural background
+        and viewing conditions. You are free to omit any question and you may
+        withdraw at any time without penalty. Participation in this study is
+        strictly anonymous and voluntary. All responses are treated as
+        confidential and will be published in aggregated form only.</p>
         
-        <p class="justified-text">Many individuals find the tasks of this study enjoyable and we believe there are no known risks to participants. The purpose of this research study is to improve colour communication in multilingual environments. Please feel free to contact the principal investigator <a href="mailto:d.mylonas[at]ucl.ac.uk">Dimitris Mylonas</a> or the supervisors <a href="mailto:ucfslwm[at]ucl.ac.uk ">Lindsay MacDonald</a> and <a href="mailto:l.griffin[at]ucl.ac.uk">Lewis Griffin</a> of University College London if you have any questions.</p>
+        <p class="justified-text">Many individuals find the tasks of this
+        study enjoyable and we believe there are no known risks to
+        participants. The purpose of this research study is to improve colour
+        communication in multilingual environments. Please feel free to
+        contact the principal investigator <a
+        href="mailto:d.mylonas[at]ucl.ac.uk">Dimitris Mylonas</a> or the
+        supervisors <a href="mailto:ucfslwm[at]ucl.ac.uk ">Lindsay
+        MacDonald</a> and <a href="mailto:l.griffin[at]ucl.ac.uk">Lewis
+        Griffin</a> of University College London if you have any
+        questions.</p>
         
-        <p class="justified-text">{{ _('If you are 16 years of age or older, understand the statements and freely consent to participate in the study, click on the "Start" button to begin the experiment.') }}</p>
+        <p class="justified-text">{{ _('If you are 16 years of age or older,
+        understand the statements and freely consent to participate in the
+        study, click on the "Start" button to begin the experiment.') }}</p>
         <a class="round-button" href="{{ url_for('experiment.start') }}">Start</a>
     </section>
     <section>
@@ -61,14 +79,19 @@
                 </form>
             </div>
         </div>
-        <p>This is a βeta version of Colournamer. You will need JavaScript enabled and a browser that supports HTML5 web audio.</p>
+        <p>This is a βeta version of Colournamer. You will need JavaScript
+        enabled and a browser that supports HTML5 web audio.</p>
     </section>
     <section>
         <h2 id="research">
             <a href="#research">{{ _('Research') }}</a>
         </h2>
         <img src="static/images/computer.jpg">
-        <p class="justified-text">{{ _('This research aims to develop an online colour naming model to facilitate colour communication within &amp; between cultures. Our study has been endorsed by the International Colour Association (AIC) throught its Study Group on the Language of Colour.') }}</p>
+        <p class="justified-text">{{ _('This research aims to develop an
+        online colour naming model to facilitate colour communication within
+        &amp; between cultures. Our study has been endorsed by the
+        International Colour Association (AIC) throught its Study Group on
+        the Language of Colour.') }}</p>
         <p class="padded">Title: Colournamer - An Online Colour Naming Model<br>
             Researcher: <a href="http://ucl.academia.edu/DimitrisMylonas">Dimitris Mylonas</a><br>
             Current Host Academic Institution: <a href="http://www.cs.ucl.ac.uk/">Department of Computer Science, University College<br>
@@ -165,7 +188,14 @@
         </div>
         <div class="padded">
             <h3>Crowdfunding Project:</h3>
-            <p>In September 2016, we ran a successful Kickstarter project, entitled <a href="https://www.kickstarter.com/projects/111984715/colours-of-babel">Colours of Babel</a>, to upgrade our online experiment to run on all new devices, minimize security threats and maintain our online presence free without advertisements. We thank all our 96 supporters for helping us raise 112% of our funding goal. You can find below a colour-coded list with our most precious donors:</p>
+            <p>In September 2016, we ran a successful Kickstarter project,
+            entitled <a
+            href="https://www.kickstarter.com/projects/111984715/colours-of-babel">Colours
+            of Babel</a>, to upgrade our online experiment to run on all new
+            devices, minimize security threats and maintain our online
+            presence free without advertisements. We thank all our 96
+            supporters for helping us raise 112% of our funding goal. You can
+            find below a colour-coded list with our most precious donors:</p>
         </div>
         <div class="padded">
             <h3>Ruby Donors:</h3>
@@ -250,7 +280,9 @@
         <h2 id="contact">
             <a href="#contact">Contact</a>
         </h2>
-        <p class="justified-text">Please use the following communication form to give us your feedback and comments or if you wish to inform you about the results of this research.</p>
+        <p class="justified-text">Please use the following communication form
+        to give us your feedback and comments or if you wish to inform you
+        about the results of this research.</p>
         <form id='contact_form' method="post">
             {{ contact_form.csrf_token }}
             {{ contact_form.first_name.label(for='first_name') }}
