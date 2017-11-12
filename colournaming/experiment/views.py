@@ -16,11 +16,15 @@ def check_in_experiment():
 def start():
     """Show the experiment start page."""
     print('resetting experiment')
+    try:
+        browser_language = request.accept_languages[0][0]
+    except IndexError:
+        browser_language = None
     session['experiment'] = {
         'client': {
             'ip_address': request.remote_addr,
             'user_agent': request.user_agent.string,
-            'browser_language': request.accept_languages[0][0]
+            'browser_language': browser_language
         }
     }
     return redirect(url_for('experiment.display_properties'))
