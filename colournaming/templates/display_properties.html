@@ -1,10 +1,10 @@
 {% extends 'base_experiment.html' %}
 {% block content %}
 <header>
-    <h1>Display Properties</h1>
+    <h1>Display Properties Task</h1>
 </header>
 <main>
-    <p class="justified-text">Adjust the brightness of your display if necessary until you can see the differences between all 11 steps of the test image. Disable Night Swift mode or blue light filters if applicable.</p>
+    <p class="justified-text">Adjust the brightness of your display if necessary until you can see the differences between all 11 steps of the greyscale test image. Disable Night Swift mode or blue light filters if applicable.</p>
     <svg id="greyscale-circle" version="1.1" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
         <path d="M 100 100 L 100 0 A 100 100 0 0 1 154 16 Z" id="slice-1"></path>
         <path d="M 100 100 L 154 16 A 100 100 0 0 1 191 58.5 Z" id="slice-2"></path>
@@ -35,7 +35,6 @@
         <option value="9">9</option>
         <option value="10">10</option>
         <option value="11">11</option>
-        <option value="12">12</option>
     </select>
     {{ form.csrf_token }}
 </main>
