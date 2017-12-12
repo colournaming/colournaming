@@ -18,7 +18,7 @@ def create_app():
     """Create an instance of the app."""
     app = Flask(__name__)
     app.config.from_envvar('COLOURNAMING_CFG')
-    if app.config.get('DEBUG', False):
+    if app.config.get('DEBUG', False) is True:
         sentry = Sentry(app, dsn=app.config['SENTRY_DSN'])
         app.wsgi_app = WhiteNoise(app.wsgi_app, root='static/')
     db.init_app(app)

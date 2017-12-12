@@ -18,15 +18,14 @@ jobs:
 
       - run:
           name: Build container
-          command: |
-            docker-compose build
+          command: docker-compose -f docker-compose.prod.yml build
 
       - run:
           name: Run tests
           command: |
-            docker-compose up -d postgres
-            docker-compose run --rm web initdb
-            docker-compose run --rm web test
+            docker-compose -f docker-compose.prod.yml up -d postgres
+            docker-compose -f docker-compose.prod.yml run --rm web initdb
+            docker-compose -f docker-compose.prod.yml run --rm web test
 
       - deploy:
           name: Deploy if branch is master or develop
@@ -46,4 +45,3 @@ jobs:
               echo "Skipping deployment"
             fi
             
-
