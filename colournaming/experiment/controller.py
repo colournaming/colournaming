@@ -35,7 +35,7 @@ def response_count_percentage(this_count):
         all()
     num_participants = db.session.query(Participant.id).count()
     num_below = len([r for r in response_counts if r[0] < this_count])
-    return (1.0 - (num_below / num_participants)) * 100.0
+    return (num_below / num_participants) * 100.0
 
 
 def save_participant(experiment):
