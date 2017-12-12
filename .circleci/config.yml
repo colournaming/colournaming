@@ -20,12 +20,13 @@ jobs:
           name: Build container
           command: |
             docker-compose build
-            docker-compose up -d postgres
-            docker-compose run --rm web initdb
 
       - run:
           name: Run tests
-          command: docker-compose run --rm web test
+          command: |
+            docker-compose up -d postgres
+            docker-compose run --rm web initdb
+            docker-compose run --rm web test
 
       - deploy:
           name: Deploy if branch is master or develop
