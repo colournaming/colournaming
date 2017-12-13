@@ -10362,7 +10362,7 @@ function doQuery (hexcode, responseHandler) {
     var topMatch = data.colours.shift()
     var colourName = topMatch.name;
     var topHex = rgbToHex(topMatch.red, topMatch.green, topMatch.blue);
-    playSound(topHex);
+    Object(__WEBPACK_IMPORTED_MODULE_0__audio__["b" /* playSound */])(topHex);
     var $synonyms = $('<ul/>');
     $.each(data.colours, function(i, colour) {
       var $li = $('<li/>')
@@ -10772,6 +10772,7 @@ $._farbtastic = function (container, callback) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function($) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return initAudio; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return playSound; });
 var context, sampleBuffers, audioAvailable;
 
 function decodeComplete(sampleId, buffer) {

@@ -66,4 +66,4 @@ function playSound(hexcode) {
     }
 }
 
-export { initAudio };
+export { initAudio, playSound };

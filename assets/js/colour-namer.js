@@ -1,5 +1,5 @@
 require('./farbtastic')
-import { initAudio } from './audio'
+import { initAudio, playSound } from './audio'
 
 function hexToRGB (hexcode) {
   return [
