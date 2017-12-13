@@ -1,0 +1,30 @@
+{
+  "name": "colournaming",
+  "version": "1.0.0",
+  "description": "An online colour naming experiment",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/colournaming/colournaming.git"
+  },
+  "author": "Jon Stutters",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/colournaming/colournaming/issues"
+  },
+  "homepage": "https://github.com/colournaming/colournaming#readme",
+  "devDependencies": {
+    "bower": "^1.8.2",
+    "webpack": "^3.10.0",
+    "yarn": "^1.3.2"
+  },
+  "dependencies": {
+    "jquery": "^3.2.1"
+  }
+}

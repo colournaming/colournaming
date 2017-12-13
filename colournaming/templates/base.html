@@ -11,10 +11,11 @@
     </head>
     <body data-spy="scroll" data-target="navigation-bar">
         {% block content %}{% endblock %}
-        <script src="{{ url_for('static', filename='jquery-3.1.0.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='bundle.js') }}"></script>
+        <!-- <script src="{{ url_for('static', filename='jquery-3.1.0.min.js') }}"></script>
         <script src="{{ url_for('static', filename='farbtastic/farbtastic.min.js') }}"></script>
         <script src="{{ url_for('static', filename='js/colour-namer.js') }}"></script>
-        <script src="{{ url_for('static', filename='js/hamburger.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/hamburger.js') }}"></script> -->
         {% block scripts %}{% endblock %}
     </body>
 </html>
