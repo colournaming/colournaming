@@ -56,7 +56,7 @@ def get_responses():
         for response in participant.responses:
             output_csv.writerow({
                 'participant_id': participant.id,
-                'created_on': response.created_on,
+                'created_on': response.created_on.strftime('%Y%m%d %H:%M %Z'),
                 'target_id': response.target_id,
                 'response_time': response.response_time,
                 'name': response.name
