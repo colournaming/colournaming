@@ -9,10 +9,7 @@ class Gender(enum.Enum):
     """Genders."""
     female = 1
     male = 2
-    transgender = 3
-    non_binary = 4
     other = 5
-    prefer_not_to_say = 6
 
 
 class ColourExperience(enum.Enum):
@@ -28,20 +25,31 @@ class DeviceOrientation(enum.Enum):
     horizontal = 2
 
 
+class Device(enum.Enum):
+    """Devices."""
+    smartphone = 1
+    pad = 2
+    laptop = 3
+    desktop = 4
+
+
 class LanguageExperience(enum.Enum):
     """Experience levels in language."""
     beginner = 1
     intermediate = 2
     advanced = 3
     bilingual = 4
+    native_speaker = 5
 
 
 class EducationLevel(enum.Enum):
     """Education levels."""
-    gcse = 1
-    a_level = 2
-    graduate = 3
-    postgraduate = 4
+    no_qualifications = 1
+    secondary_school_degree = 2
+    bachelors_degree = 3
+    masters_degree = 4
+    professional_degree = 5
+    doctorate_degree = 6
 
 
 class AmbientLight(enum.Enum):
@@ -59,6 +67,14 @@ class ScreenLight(enum.Enum):
     dim = 2
     average = 3
     bright = 4
+
+
+class ScreenTemperature(enum.Enum):
+    """Screen temperatures."""
+    neutral_white = 1
+    warm_white = 2
+    bluish_white = 3
+    yellowish_white = 4
 
 
 class Participant(db.Model):

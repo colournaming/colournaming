@@ -37,44 +37,58 @@ class ObserverInformationForm(FlaskForm):
     )
     gender = SelectField(
         choices=_enum_to_choices(model.Gender),
-        description="What is your gender?",
+        description="To which gender do you most identify?",
+        validators=[Optional()]
+    )
+    gender_other = TextField(
+        description="Please specify",
         validators=[Optional()]
     )
     colour_experience = SelectField(
         choices=_enum_to_choices(model.ColourExperience),
-        description="What level of experience do you have working with colour?",
+        description="Describe your experience working with colour?",
         validators=[Optional()]
     )
     language_experience = SelectField(
         choices=_enum_to_choices(model.LanguageExperience),
-        description="What experience do you have with your language?",
+        description="Describe your skill in the language used in this experiment?",
         validators=[Optional()]
     )
     education_level = SelectField(
         choices=_enum_to_choices(model.EducationLevel),
-        description="What level of education have you attained?",
+        description="What is the highest level of education you have completed?",
         validators=[Optional()]
     )
     country_choices = [('', '-')] + \
         sorted([(x.alpha_2, x.name) for x in pycountry.countries], key=lambda x: x[1])
     country_raised = SelectField(
         choices=country_choices,
-        description="In which country were you raised?",
+        description="In which country did you grow up?",
         validators=[Optional()]
     )
     country_resident = SelectField(
         choices=country_choices,
-        description="In which country are you currently living?",
+        description="Where are you living?",
         validators=[Optional()]
     )
-    ambient_light = SelectField(
-        choices=_enum_to_choices(model.AmbientLight),
-        description="What is the level of ambient lighting where you are?",
+    display_device = SelectField(
+        choices=_enum_to_choices(model.Device),
+        description="What is your display device",
+        validators=[Optional()]
+    )
+    screen_temperature = SelectField(
+        choices=_enum_to_choices(model.ScreenTemperature),
+        description="Describe the white graphic elements on your screen",
         validators=[Optional()]
     )
     screen_light = SelectField(
         choices=_enum_to_choices(model.ScreenLight),
-        description="What is the lighting level behind your screen?",
+        description="Describe the surrounding environment behind your device?",
+        validators=[Optional()]
+    )
+    ambient_light = SelectField(
+        choices=_enum_to_choices(model.AmbientLight),
+        description="Describe the lighting conditions of your environment?",
         validators=[Optional()]
     )
     distance_choices = [(-1, '-')] + list(zip(range(30, 70, 10), range(30, 70, 10))) + [(999, '80+')]
