@@ -276,7 +276,7 @@ video {
     float: left;
     font-size: 16px;
     margin: 5px 50px 5px 0;
-    width: calc(100% - 250px);
+    width: calc(100% - 200px);
 }
 
 .justified-box select {
@@ -285,7 +285,7 @@ video {
     display: block;
     float: left;
     height: 30px;
-    width: 200px;
+    width: 132px;
 }
 
 .social-links {
@@ -396,7 +396,7 @@ video {
         display: block;
         float: left;
         height: 30px;
-        width: 200px;
+        width: 132px;
     }
 
     #results li {
