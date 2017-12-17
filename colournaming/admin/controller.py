@@ -87,7 +87,7 @@ def get_participants():
         output_csv.writerow({
             'id': participant.id,
             'ip_address': participant.ip_address,
-            'created_on': participant.created_on,
+            'created_on': participant.created_on.strftime('%Y%m%d %H:%M %Z'),
             'greyscale_steps': participant.greyscale_steps,
             'browser_language': participant.browser_language,
             'user_agent': participant.user_agent,

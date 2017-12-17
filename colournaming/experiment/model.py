@@ -2,8 +2,8 @@
 
 import datetime
 import enum
-from ..database import db
 from sqlalchemy.dialects import postgresql
+from ..database import db
 
 
 class Gender(enum.Enum):
@@ -84,7 +84,7 @@ class Participant(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     ip_address = db.Column(db.String)
-    created_on = db.Column(db.DateTime, default=datetime.datetime.utcnow)
+    created_on = db.Column(db.DateTime(timezone=True), default=datetime.datetime.utcnow)
     greyscale_steps = db.Column(db.Integer)
     browser_language = db.Column(db.String)
     user_agent = db.Column(db.String)
@@ -131,4 +131,4 @@ class ColourResponse(db.Model):
     name = db.Column(db.String)
     response_time = db.Column(db.Float)
     experiment_version = db.Column(db.String)
-    created_on = db.Column(db.DateTime, default=datetime.datetime.utcnow)
+    created_on = db.Column(db.DateTime(timezone=True), default=datetime.datetime.utcnow)
