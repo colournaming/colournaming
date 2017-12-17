@@ -30,7 +30,7 @@ function loadAudioSet(lang) {
         $.getJSON(url, function(data) {
             if (data) {
                 sampleBuffers = {};
-                for (i = 0, end = data.length; i < end; i++) {
+                for (var i = 0, end = data.length; i < end; i++) {
                     var path = AUDIO_DIR + "/" + lang + "/" + data[i];
                     var colCode = data[i].split('.')[0];
                     loadSound(path, colCode);
@@ -65,3 +65,5 @@ function playSound(hexcode) {
         }
     }
 }
+
+export { initAudio, playSound };
