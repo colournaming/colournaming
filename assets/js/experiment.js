@@ -184,18 +184,21 @@ if ($appearance !== null) {
 
 const $age = document.getElementById('age');
 const $gender = document.getElementById('gender');
+const $genderOther = document.getElementById('gender_other');
 const $experience = document.getElementById('colour_experience');
 const $languageSkills = document.getElementById('language_experience');
 const $educationalLevel = document.getElementById('education_level');
 const $homeCountry = document.getElementById('country_raised');
 const $residentCountry = document.getElementById('country_resident');
 const $lightConditions = document.getElementById('ambient_light');
+const $screenTemperature = document.getElementById('screen_temperature');
+const $displayDevice = document.getElementById('display_device');
 const $environment = document.getElementById('screen_light');
 const $distance = document.getElementById('screen_distance');
 const $thankYouPage = document.getElementById('thank-you-page');
 
-if ($age !== null && $distance !== null && $educationalLevel !== null && $environment !== null && $experience !== null && $gender !== null && $homeCountry !== null && $languageSkills !== null && $lightConditions !== null && $residentCountry !== null && $thankYouPage !== null) {
-    updateResults({ age: -1, distance: -1, educationalLevel: '', environment: '', experience: '', gender: '', homeCountry: '', languageSkills: '', lightConditions: '', residentCountry: '' });
+if ($age !== null && $distance !== null && $educationalLevel !== null && $environment !== null && $experience !== null && $gender !== null && $genderOther !== null && $homeCountry !== null && $languageSkills !== null && $lightConditions !== null && $screenTemperature !== null && $residentCountry !== null && $displayDevice !== null && $thankYouPage !== null) {
+    updateResults({ age: -1, distance: -1, educationalLevel: '', environment: '', experience: '', gender: '', genderOther: '', homeCountry: '', languageSkills: '', lightConditions: '', screenTemperature: '', residentCountry: '', displayDevice: ''});
 
     $age.addEventListener('change', () => {
         const value = $age.value;
@@ -237,6 +240,16 @@ if ($age !== null && $distance !== null && $educationalLevel !== null && $enviro
         }
     });
 
+    $screenTemperature.addEventListener('change', () => {
+        const value = $screenTemperature.value;
+
+        if (value !== '-') {
+            updateResults({ screenTemperature: value });
+        } else {
+            updateResults({ screenTemperature: undefined });
+        }
+    });
+
     $experience.addEventListener('change', () => {
         const value = $experience.value;
 
@@ -254,6 +267,22 @@ if ($age !== null && $distance !== null && $educationalLevel !== null && $enviro
             updateResults({ gender: value });
         } else {
             updateResults({ gender: undefined });
+        }
+
+        if (value == 'other') {
+            $('#specify-gender').show();
+        } else {
+            $('#specify-gender').hide();
+        }
+    });
+
+    $genderOther.addEventListener('change', () => {
+        const value = $genderOther.value;
+
+        if (value !== '') {
+            updateResults({ genderOther: value });
+        } else {
+            updateResults({ genderOther: undefined });
         }
     });
 
@@ -297,6 +326,17 @@ if ($age !== null && $distance !== null && $educationalLevel !== null && $enviro
         }
     });
 
+    $displayDevice.addEventListener('change', () => {
+        const value = $displayDevice.value;
+
+        if (value !== '-') {
+            updateResults({ displayDevice: value });
+        } else {
+            updateResults({ displayDevice: undefined });
+        }
+    });
+
+
     $thankYouPage.addEventListener('click', (event) => {
         event.preventDefault();
 
@@ -308,9 +348,12 @@ if ($age !== null && $distance !== null && $educationalLevel !== null && $enviro
             country_resident: results.residentCountry,
             education_level: results.educationalLevel,
             gender: results.gender,
+            gender_other: results.genderOther,
             language_experience: results.languageSkills,
             screen_distance: results.distance,
-            screen_light: results.environment
+            screen_light: results.environment,
+            screen_temperature: results.screenTemperature,
+            display_device: results.displayDevice,
         }, $thankYouPage.href);
     });
 

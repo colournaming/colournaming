@@ -297,6 +297,10 @@ video {
     width: 198px;
 }
 
+.justified-box#specify-gender {
+    display: none;
+}
+
 .social-links {
     margin: 0 auto;
     overflow: hidden;
