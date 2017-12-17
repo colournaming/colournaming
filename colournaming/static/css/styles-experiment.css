@@ -288,6 +288,19 @@ video {
     width: 132px;
 }
 
+.justified-box input {
+    background-color: #FFF;
+    border: none;
+    display: block;
+    float: left;
+    height: 28px;
+    width: 198px;
+}
+
+.justified-box#specify-gender {
+    display: none;
+}
+
 .social-links {
     margin: 0 auto;
     overflow: hidden;
@@ -390,7 +403,7 @@ video {
         width: 100%;
     }
 
-    .justified-box select {
+    .justified-box select, input {
         background-color: #FFF;
         border: none;
         display: block;

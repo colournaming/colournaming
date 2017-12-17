@@ -123,6 +123,7 @@ def observer_information():
         session['experiment']['observer'] = {
             'age': form.age.data,
             'gender': form.gender.data,
+            'gender_other': form.gender_other.data,
             'colour_experience': form.colour_experience.data,
             'language_experience': form.language_experience.data,
             'education_level': form.education_level.data,
@@ -130,7 +131,9 @@ def observer_information():
             'country_resident': form.country_resident.data,
             'ambient_light': form.ambient_light.data,
             'screen_light': form.screen_light.data,
-            'screen_distance': form.screen_distance.data
+            'screen_temperature': form.screen_temperature.data,
+            'screen_distance': form.screen_distance.data,
+            'device': form.display_device.data
         }
         session.modified = True
         controller.update_participant(session['experiment'])

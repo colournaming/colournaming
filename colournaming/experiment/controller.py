@@ -84,6 +84,7 @@ def update_participant(experiment):
             experiment['observer'][k] = None
     participant.age = experiment['observer']['age']
     participant.gender = experiment['observer']['gender']
+    participant.gender_other = experiment['observer']['gender_other']
     participant.colour_experience = experiment['observer']['colour_experience']
     participant.language_experience = experiment['observer']['language_experience']
     participant.education_level = experiment['observer']['education_level']
@@ -91,6 +92,8 @@ def update_participant(experiment):
     participant.country_resident = experiment['observer']['country_resident']
     participant.ambient_light = experiment['observer']['ambient_light']
     participant.screen_light = experiment['observer']['screen_light']
+    participant.screen_temperature = experiment['observer']['screen_temperature']
     participant.screen_distance = experiment['observer']['screen_distance']
+    participant.device = experiment['observer']['device']
     participant.colour_target_disappeared = experiment['vision']['square_disappeared']
     db.session.commit()
