@@ -91,7 +91,7 @@ class ObserverInformationForm(FlaskForm):
         description="Describe the lighting conditions of your environment?",
         validators=[Optional()]
     )
-    distance_choices = [(-1, '-')] + list(zip(range(30, 70, 10), range(30, 70, 10))) + [(999, '80+')]
+    distance_choices = [(-1, '-')] + list(zip(range(10, 100, 10), range(10, 100, 10))) + [(999, '100+')]
     screen_distance = SelectField(
         choices=distance_choices,
         description="What distance are you from your monitor in cm?",
