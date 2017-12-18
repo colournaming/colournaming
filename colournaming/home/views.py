@@ -10,7 +10,7 @@ from ..namer.forms import NameAgreementForm
 bp = Blueprint('home', __name__)
 
 
-@bp.route('/')
+@bp.route('/', methods=['GET', 'POST'])
 def index():
     """Render the front page."""
     contact_form = ContactForm()
