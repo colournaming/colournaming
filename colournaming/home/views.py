@@ -21,7 +21,7 @@ def index():
             sender='contact@colornaming.net',
             recipients=[current_app.config['CONTACT_EMAIL']]
         )
-        msg_text = 'FROM: {0.first_name} {1.last_name} <{0.email}>\nORGANISATION: {0.organisation}\n\n{0.message}'.format(contact_form)
+        msg_text = 'FROM: {0.first_name} {0.last_name} <{0.email}>\nORGANISATION: {0.organisation}\n\n{0.message}'.format(contact_form)
         msg.body = msg_text
         mail.send(msg)
     return render_template(
