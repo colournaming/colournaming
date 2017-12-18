@@ -117,6 +117,7 @@ class ColourTarget(db.Model):
     red = db.Column(db.Integer, nullable=False)
     green = db.Column(db.Integer, nullable=False)
     blue = db.Column(db.Integer, nullable=False)
+    presentation_count = db.Column(db.Integer, nullable=False, default=0)
 
 
 class ColourResponse(db.Model):
