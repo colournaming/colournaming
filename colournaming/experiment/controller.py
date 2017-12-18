@@ -3,7 +3,7 @@
 import csv
 import random
 from sqlalchemy import func
-from sqlalchemy.sql.expression import label, text
+from sqlalchemy.sql.expression import label, text, func
 from ..database import db
 from .model import ColourTarget, Participant, ColourResponse
 
@@ -23,7 +23,18 @@ def read_targets_from_file(targets_file):
 
 def get_random_target():
     """Get a random colour target."""
-    targets = ColourTarget.query.all()
+    max_presentation_count = db.session.query(func.max(ColourTarget.presentation_count)).scalar()
+    print('max_presentation_count =', max_presentation_count)
+    targets = \
+        ColourTarget.query\
+                    .filter(ColourTarget.presentation_count < max_presentation_count)\
+                    .all()
+    if len(targets) == 0:
+        # will occur if all targets have been presented max times
+        targets = ColourTarget.query.all()
+    target = random.choice(targets)
+    target.presentation_count += 1
+    db.session.commit()
     return random.choice(targets)
 
 
