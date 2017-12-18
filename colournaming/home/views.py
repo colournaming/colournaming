@@ -17,7 +17,10 @@ def index():
     name_agreement_form = NameAgreementForm()
     if contact_form.validate_on_submit():
         msg = Message(
-            'ColourNamer message from {0} {1}'.format(contact_form.first_name, contact_form.last_name),
+            'ColourNamer message from {0} {1}'.format(
+                contact_form.first_name.data,
+                contact_form.last_name.data
+            ),
             sender='contact@colornaming.net',
             recipients=[current_app.config['CONTACT_EMAIL']]
         )
