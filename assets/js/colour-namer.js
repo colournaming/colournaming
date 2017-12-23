@@ -147,4 +147,35 @@ $(function () {
   updateLanguages();
   updateNames();
   initAudio();
+
+  const $contactForm = $('#contact_form');
+  const $contactFormErrorMessage = $('#contact-error-message');
+  const $contactFormSuccessMessage = $('#contact-success-message');
+  const $contactFormSubmitButton = $contactForm.find('button[type=submit]');
+
+  $contactForm.submit((event) => {
+    event.preventDefault();
+
+    $contactFormErrorMessage.hide();
+    $contactFormSuccessMessage.hide();
+    $contactFormSubmitButton.prop('disabled', true);
+
+    const formData = new FormData($contactForm.get(0));
+
+    fetch(window.location, {
+      body: formData,
+      credentials: 'same-origin',
+      method: 'POST'
+    })
+      .then((response) => {
+        if (response.ok) {
+          $contactForm[0].reset();
+          $contactFormSuccessMessage.show();
+        } else {
+          $contactFormErrorMessage.show();
+        }
+
+        $contactFormSubmitButton.prop('disabled', false);
+      });
+  });
 })
