@@ -348,22 +348,45 @@ footer {
     display: block;
     float: left;
     height: 40px;
-    margin: 0 10px;
+    margin: 3px 10px 5px;
+    position: relative;
     width: 40px;
+}
+
+.social-link::before {
+    border: 1px solid #808080;
+    border-radius: 22px;
+    content: '';
+    display: block;
+    height: 44px;
+    position: absolute;
+    right: -3px;
+    top: -3px;
+    width: 44px;
 }
 
 .social-link:hover {
     background-size: 28px;
     height: 38px;
-    margin: 1px 11px;
+    margin: 4px 11px 4px;
     width: 38px;
+}
+
+.social-link:hover::before {
+    right: -4px;
+    top: -4px;
 }
 
 .social-link:active {
     background-size: 28px;
     height: 38px;
-    margin: 2px 11px 0;
+    margin: 5px 11px 3px;
     width: 38px;
+}
+
+.social-link:active::before {
+    right: -4px;
+    top: -4px;
 }
 
 .social-link.email {
