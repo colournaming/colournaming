@@ -1,14 +1,14 @@
-# Translations template for colornaming.net
-# Copyright (C) 2017 colornaming.net
-# This file is distributed under the same license as the colornaming.net project.
-# Jon Stutters <jstutters@jeremah.co.uk>, 2017.
+# Translations template for PROJECT.
+# Copyright (C) 2018 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: 0.0.1\n"
-"Report-Msgid-Bugs-To: jstutters@jeremah.co.uk\n"
-"POT-Creation-Date: 2017-02-13 20:48+0000\n"
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2018-01-01 15:17+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,108 +17,121 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
 
-#: colournaming/templates/index.html:10
-#: colournaming/templates/index_translate.html:10
-msgid "What color is it?"
+#: colournaming/home/forms.py:7
+msgid "First name"
 msgstr ""
 
-#: colournaming/templates/index.html:17
-#: colournaming/templates/index_translate.html:17
-msgid "Welcome"
+#: colournaming/home/forms.py:8
+msgid "Last name"
 msgstr ""
 
-#: colournaming/templates/index.html:19
-#: colournaming/templates/index_translate.html:19
+#: colournaming/home/forms.py:9
+msgid "Email"
+msgstr ""
+
+#: colournaming/home/forms.py:10
+msgid "Organisation"
+msgstr ""
+
+#: colournaming/home/forms.py:11
+msgid "Your message"
+msgstr ""
+
+#: colournaming/templates/display_properties.html:4
+msgid "Display Properties Task"
+msgstr ""
+
+#: colournaming/templates/display_properties.html:7
 msgid ""
-"This is a multi-lingual colour naming experiment. It is part of research "
-"on colour naming and colour categorisation within different cultures, and"
-" aims to improve the inter-cultural colour dialogue. By taking part you "
-"are helping us to develop an online colour naming model which will be "
-"based on the colour language provided from your responses."
+"Adjust the brightness of your display if necessary until you can see the "
+"differences between all 11 steps of the greyscale test image. Disable "
+"Night Swift mode or blue light filters if applicable."
 msgstr ""
 
-#: colournaming/templates/index.html:28
-#: colournaming/templates/index_translate.html:28
-msgid ""
-"As part of this simple experiment you will be asked to name a series of "
-"colour samples. It should not take longer than 10 minutes, but if you "
-"would like to quit youare free to withdraw at any time."
+#: colournaming/templates/display_properties.html:23
+msgid "Confirm how many steps you can see?"
 msgstr ""
 
-#: colournaming/templates/index.html:34
-#: colournaming/templates/index_translate.html:34
-msgid "By clicking the Start button you agree to take part in this study."
-msgstr ""
-
-#: colournaming/templates/navbar.html:5
-msgid "Toggle navigation"
-msgstr ""
-
-#: colournaming/templates/navbar.html:14 colournaming/templates/research.html:8
+#: colournaming/templates/index.html:16 colournaming/templates/index.html:81
 msgid "Research"
 msgstr ""
 
-#: colournaming/templates/navbar.html:15
-msgid "Colour Namer"
-msgstr ""
-
-#: colournaming/templates/navbar.html:16
-msgid "Terms and Conditions"
-msgstr ""
-
-#: colournaming/templates/research.html:10
-msgid ""
-"This research aims to develop an online colour naming model to facilitate"
-" colour communication within and between cultures."
-msgstr ""
-
-#: colournaming/templates/terms_and_conditions.html:17
-msgid "Terms and conditions"
-msgstr ""
-
-#: colournaming/templates/terms_and_conditions.html:18
-msgid "Confidentiality"
-msgstr ""
-
-#: colournaming/templates/terms_and_conditions.html:20
-msgid ""
-"Your participation in this study will remain confidential. Data is stored"
-" on a secure Unix server along with your IP addresses. The experimental "
-"data collected in this study will be used to develop an Online Colour "
-"Naming Model and may be shared with other researchers if requested. ALL "
-"personal data will be removed, so that NO data can be traced back to the "
-"observer. "
-msgstr ""
-
-#: colournaming/templates/terms_and_conditions.html:28
-msgid "Participation and withdrawal"
-msgstr ""
-
-#: colournaming/templates/terms_and_conditions.html:30
-msgid ""
-"The participation in this study is only for over 16 years old and "
-"voluntary. Please note that you may withdraw at any time without any "
-"penalty."
-msgstr ""
-
-#: colournaming/templates/terms_and_conditions.html:35
+#: colournaming/templates/index.html:19 colournaming/templates/index.html:275
 msgid "Contact"
 msgstr ""
 
-#: colournaming/templates/terms_and_conditions.html:37
-msgid ""
-"If you have questions on this research, please contact the researcher "
-"Dimitris Mylonas, or you may also contact the supervisor of the project "
-"Professor Lindsay MacDonald."
+#: colournaming/templates/index.html:27
+msgid "Let's play a game, how many colours can you name?"
 msgstr ""
 
-#: colournaming/templates/terms_and_conditions.html:42
-msgid "Agreement"
+#: colournaming/templates/index.html:29
+msgid ""
+"Welcome to Colour Naming, an online experiment designed to collect colour"
+" names in multiple languages with their corresponding colour ranges. You "
+"will be asked to name a series of colour samples and provide information "
+"about your cultural background and viewing conditions. You are free to "
+"omit any question and you may withdraw at any time without penalty. "
+"Participation in this study is strictly anonymous and voluntary. All "
+"responses are treated as confidential and will be published in aggregated"
+" form only."
 msgstr ""
 
-#: colournaming/templates/terms_and_conditions.html:44
+#: colournaming/templates/index.html:31
 msgid ""
-"By clicking Start you confirm that you have understood the provided "
-"information and agree to take part in this study."
+"Many individuals find the tasks of this study enjoyable and we believe "
+"there are no known risks to participants. The purpose of this research "
+"study is to improve colour communication in multilingual environments. "
+"Please feel free to contact the principal investigator <a "
+"href=\"mailto:d.mylonas[at]ucl.ac.uk\">Dimitris Mylonas</a> or the "
+"supervisors <a href=\"mailto:ucfslwm[at]ucl.ac.uk \">Lindsay "
+"MacDonald</a> and <a href=\"mailto:l.griffin[at]ucl.ac.uk\">Lewis "
+"Griffin</a> of University College London if you have any questions."
+msgstr ""
+
+#: colournaming/templates/index.html:33
+msgid ""
+"If you are 16 years of age or older, understand the statements and freely"
+" consent to participate in the study, click on the \"Start\" button to "
+"begin the experiment."
+msgstr ""
+
+#: colournaming/templates/index.html:34
+msgid "Start"
+msgstr ""
+
+#: colournaming/templates/index.html:48
+msgid "by name"
+msgstr ""
+
+#: colournaming/templates/index.html:56
+msgid "Colour name"
+msgstr ""
+
+#: colournaming/templates/index.html:58
+msgid "Synonyms"
+msgstr ""
+
+#: colournaming/templates/index.html:76
+msgid ""
+"This is a βeta version of Colournamer. You will need JavaScript "
+"enabled and a browser that supports HTML5 web audio."
+msgstr ""
+
+#: colournaming/templates/index.html:84
+msgid ""
+"This research aims to develop an "
+"online colour naming model to facilitate colour communication "
+"within and between cultures."
+msgstr ""
+
+#: colournaming/templates/index.html:277
+msgid ""
+"Please use the following communication form "
+"to give us your feedback and comments or if you wish to inform "
+"you about the results of this research."
+msgstr ""
+
+#: colournaming/templates/index.html:292
+msgid "Submit"
 msgstr ""
 

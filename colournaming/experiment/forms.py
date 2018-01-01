@@ -1,6 +1,7 @@
 """Forms used in the colour naming experiment."""
 
 from flask_wtf import FlaskForm
+from flask.ext.babel import lazy_gettext
 import pycountry
 from wtforms import BooleanField, DecimalField, HiddenField, IntegerField, SelectField, TextField
 from wtforms.validators import DataRequired, Optional

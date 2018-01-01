@@ -39,15 +39,3 @@ def index():
         name_agreement_form=name_agreement_form,
         languages=namer_controller.language_list()
     )
-
-
-@bp.route('research.html')
-def research():
-    """Render the research page."""
-    return render_template('research.html')
-
-
-@bp.route('terms_and_conditions.html')
-def terms_and_conditions():
-    """Render the terms and conditions page."""
-    return render_template('terms_and_conditions.html')
