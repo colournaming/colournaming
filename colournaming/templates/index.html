@@ -283,6 +283,8 @@
         <p class="justified-text">Please use the following communication form
         to give us your feedback and comments or if you wish to inform you
         about the results of this research.</p>
+        <p id="contact-error-message" class="justified-text"><!-- ... the error message --></p>
+        <p id="contact-success-message" class="justified-text"><!-- ... the success message --></p>
         <form id='contact_form' method="post">
             {{ contact_form.csrf_token }}
             {{ contact_form.first_name.label(for='first_name') }}

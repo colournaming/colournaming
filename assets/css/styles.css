@@ -267,6 +267,11 @@ h3 ~ .justified-text {
     color: #0F52BA;
 }
 
+#contact-error-message,
+#contact-success-message {
+    display: none;
+}
+
 form {
     margin: 1em auto 2.5em;
     max-width: 680px;
