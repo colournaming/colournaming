@@ -4,13 +4,13 @@
     <h1>Colour Vision Task</h1>
 </header>
 <main>
-    <p class="justified-text">The movie below displays a moving "coloured" square. The square changes colour as the movie plays. You may be able to see the colour for some or all of the time. The movie lasts for 90 secs and all you need to do is play it and remember if the ‘coloured’ square dissapeared at any time during the movie.</p>
+    <p class="justified-text">{{ _("The movie below displays a moving 'coloured' square. The square changes colour as the movie plays. You may be able to see the colour for some or all of the time. The movie lasts for 90 secs and all you need to do is play it and remember if the 'coloured' square disappeared at any time during the movie.") }}</p>
     <video controls controlsList="nodownload nofullscreen noremoteplayback" muted src="{{ url_for('static', filename='videos/cvt.m4v') }}"></video>
-    <p class="centered-text">Did the ‘coloured’ square dissapear?</p>
+    <p class="centered-text">{{ _("Did the 'coloured' square disappear?") }}</p>
     <select class="centered-select" id="appearance" name="appearance">
         <option value="-">-</option>
-        <option value="no">No</option>
-        <option value="yes">Yes</option>
+        <option value="no">{{ _('No') }}</option>
+        <option value="yes">{{ _('Yes') }}</option>
     </select>
     {{ form.csrf_token }}
 </main>
