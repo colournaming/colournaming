@@ -1,6 +1,7 @@
 """Views for the experiment."""
 
 from flask import Blueprint, jsonify, redirect, render_template, request, session, url_for
+from flask_babel import lazy_gettext
 from . import controller, forms
 
 bp = Blueprint('experiment', __name__)
@@ -102,17 +103,6 @@ def get_target():
     })
 
 
-@bp.route('/response_percentage')
-def get_response_percentage():
-    """Percentage who gave more responses."""
-    try:
-        response_count = int(request.args.get('count', 0))
-        perc = controller.response_count_percentage(response_count)
-    except:
-        perc = 0
-    return jsonify(top_percentage=perc)
-
-
 @bp.route('/observer_information.html', methods=['GET', 'POST'])
 def observer_information():
     """Show the observer information form and handle responses."""
@@ -147,4 +137,11 @@ def observer_information():
 @bp.route('/thankyou.html')
 def thankyou():
     """Show the thankyou for participation page."""
-    return render_template('thankyou.html')
+    try:
+        response_count = int(request.args.get('count', 0))
+        perc = controller.response_count_percentage(response_count)
+    except:
+        perc = 0
+    top_namers_msg = lazy_gettext('You are in the 0% top colour namers.')
+    top_namers_msg = top_namers_msg.replace('0%', '{0:.0f}%'.format(perc))
+    return render_template('thankyou.html', top_namers=top_namers_msg)

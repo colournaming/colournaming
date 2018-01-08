@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-01-07 19:33+0000\n"
+"POT-Creation-Date: 2018-01-08 21:58+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,183 +20,187 @@ msgstr ""
 msgid "What is your age?"
 msgstr "Πόσο χρονών είστε;"
 
-#: colournaming/experiment/forms.py:37
+#: colournaming/experiment/forms.py:38
 msgid "Female"
 msgstr "Θηλυκό"
 
-#: colournaming/experiment/forms.py:38
+#: colournaming/experiment/forms.py:39
 msgid "Male"
 msgstr "Αρσενικό"
 
-#: colournaming/experiment/forms.py:39
+#: colournaming/experiment/forms.py:40
 msgid "Other"
 msgstr "Άλλο"
 
-#: colournaming/experiment/forms.py:41
+#: colournaming/experiment/forms.py:42
 msgid "To which gender do you most identify?"
 msgstr "Με ποιο φύλο ταυτίζεστε περισσότερο;"
 
-#: colournaming/experiment/forms.py:45
+#: colournaming/experiment/forms.py:46
 msgid "Please specify"
 msgstr "Παρακαλώ προσδιορίστε"
 
-#: colournaming/experiment/forms.py:50 colournaming/experiment/forms.py:59
+#: colournaming/experiment/forms.py:52 colournaming/experiment/forms.py:62
 msgid "Beginner"
 msgstr "Αρχάρια "
 
-#: colournaming/experiment/forms.py:51 colournaming/experiment/forms.py:60
+#: colournaming/experiment/forms.py:53 colournaming/experiment/forms.py:63
 msgid "Intermediate"
 msgstr "Ενδιάμεση"
 
-#: colournaming/experiment/forms.py:52 colournaming/experiment/forms.py:61
+#: colournaming/experiment/forms.py:54 colournaming/experiment/forms.py:64
 msgid "Advanced"
 msgstr "Άπταιστη"
 
-#: colournaming/experiment/forms.py:54
+#: colournaming/experiment/forms.py:56
 msgid "Describe your experience working with colour"
 msgstr "Περιγράψτε την εμπειρία που έχετε δουλεύοντας με χρώματα"
 
-#: colournaming/experiment/forms.py:62
+#: colournaming/experiment/forms.py:65
 msgid "Bilingual"
 msgstr "Δίγλωσση"
 
-#: colournaming/experiment/forms.py:63
+#: colournaming/experiment/forms.py:66
 msgid "Native speaker"
 msgstr "Μητρική"
 
-#: colournaming/experiment/forms.py:65
+#: colournaming/experiment/forms.py:68
 msgid "Describe your skill in the language used in this experiment"
 msgstr "Περιγράψτε τη γλωσσική ικανότητα σας σε αυτό το πείραμα"
 
-#: colournaming/experiment/forms.py:70
+#: colournaming/experiment/forms.py:74
 msgid "No qualifications"
 msgstr "Γυμνάσιο"
 
-#: colournaming/experiment/forms.py:71
+#: colournaming/experiment/forms.py:75
 msgid "Secondary school degree"
 msgstr "Λύκειο"
 
-#: colournaming/experiment/forms.py:72
+#: colournaming/experiment/forms.py:76
 msgid "Bachelors degree"
 msgstr "Πρώτο Πτυχίο Πανεπιστημίου"
 
-#: colournaming/experiment/forms.py:73
+#: colournaming/experiment/forms.py:77
 msgid "Masters degree"
 msgstr "Μεταπτυχιακό Πτυχίο"
 
-#: colournaming/experiment/forms.py:74
+#: colournaming/experiment/forms.py:78
 msgid "Professional degree"
 msgstr "Επαγγελματικό δίπλωμα"
 
-#: colournaming/experiment/forms.py:75
+#: colournaming/experiment/forms.py:79
 msgid "Doctorate degree"
 msgstr "Διδακτορικό Πτυχίο"
 
-#: colournaming/experiment/forms.py:77
+#: colournaming/experiment/forms.py:81
 msgid "What is the highest level of education you have completed?"
 msgstr "Τι τίτλους σπουδών έχετε;"
 
-#: colournaming/experiment/forms.py:84
+#: colournaming/experiment/forms.py:88
 msgid "In which country did you grow up?"
 msgstr "Σε ποια χώρα έχετε μεγαλώσει;"
 
-#: colournaming/experiment/forms.py:89
+#: colournaming/experiment/forms.py:93
 msgid "Where are you living?"
 msgstr "Σε ποια χώρα κατοικείτε αυτή τη στιγμή;"
 
-#: colournaming/experiment/forms.py:94
+#: colournaming/experiment/forms.py:99
 msgid "Smartphone"
 msgstr "Έξυπνο κινητό"
 
-#: colournaming/experiment/forms.py:95
+#: colournaming/experiment/forms.py:100
 msgid "Pad"
 msgstr "Ταμπλέτα"
 
-#: colournaming/experiment/forms.py:96
+#: colournaming/experiment/forms.py:101
 msgid "Laptop"
 msgstr "Φορητός υπολογιστής"
 
-#: colournaming/experiment/forms.py:97
+#: colournaming/experiment/forms.py:102
 msgid "Desktop"
 msgstr "Επιτραπέζιος υπολογιστής"
 
-#: colournaming/experiment/forms.py:99
+#: colournaming/experiment/forms.py:104
 msgid "What is your display device?"
 msgstr "Τι τεχνολογίας είναι η οθόνη σας;"
 
-#: colournaming/experiment/forms.py:104
+#: colournaming/experiment/forms.py:110
 msgid "Neutral white"
-msgstr "NEUTRAL WHITE"
+msgstr "Λευκό"
 
-#: colournaming/experiment/forms.py:105
+#: colournaming/experiment/forms.py:111
 msgid "Warm white"
-msgstr "WARM WHITE"
+msgstr "Θερμό Λευκό"
 
-#: colournaming/experiment/forms.py:106
+#: colournaming/experiment/forms.py:112
 msgid "Bluish white"
-msgstr "BLUISH WHITE"
+msgstr "Ψυχρό Λευκό"
 
-#: colournaming/experiment/forms.py:107
+#: colournaming/experiment/forms.py:113
 msgid "Yellowish white"
-msgstr "YELLOWISH WHITE"
+msgstr "Κιτρινωπό"
 
-#: colournaming/experiment/forms.py:109
+#: colournaming/experiment/forms.py:115
 msgid "Describe the white graphic elements on your screen"
-msgstr "DESCRIBE THE WHITE GRAPHIC ELEMENTS ON YOUR SCREEN"
+msgstr "Περιγράψτε τη λευκότητα των άσπρων γραφικών στην οθόνη σας"
 
-#: colournaming/experiment/forms.py:114 colournaming/experiment/forms.py:124
+#: colournaming/experiment/forms.py:121 colournaming/experiment/forms.py:132
 msgid "Dark"
 msgstr "Σκοτεινό "
 
-#: colournaming/experiment/forms.py:115
+#: colournaming/experiment/forms.py:122
 msgid "Dim"
 msgstr "Μουντό"
 
-#: colournaming/experiment/forms.py:116
+#: colournaming/experiment/forms.py:123
 msgid "Average"
 msgstr "Φυσιολογικό"
 
-#: colournaming/experiment/forms.py:117
+#: colournaming/experiment/forms.py:124
 msgid "Bright"
 msgstr "Φωτεινό"
 
-#: colournaming/experiment/forms.py:119
+#: colournaming/experiment/forms.py:126
 msgid "Describe the surrounding environment behind your device"
 msgstr "Περιγράψτε το περιβάλλον πίσω από την οθόνη σας;"
 
-#: colournaming/experiment/forms.py:125
+#: colournaming/experiment/forms.py:133
 msgid "Typical domestic"
 msgstr "Τυπικός οικιακός φωτισμός"
 
-#: colournaming/experiment/forms.py:126
+#: colournaming/experiment/forms.py:134
 msgid "Mid daylight"
 msgstr "Μέσω φως ημέρας"
 
-#: colournaming/experiment/forms.py:127
+#: colournaming/experiment/forms.py:135
 msgid "Full daylight"
 msgstr "Λαμπερό φως ημέρας"
 
-#: colournaming/experiment/forms.py:128
+#: colournaming/experiment/forms.py:136
 msgid "Typical office"
 msgstr "Τυπικός φωτισμός γραφείου"
 
-#: colournaming/experiment/forms.py:130
+#: colournaming/experiment/forms.py:138
 msgid "Describe the lighting conditions of your environment"
 msgstr "Περιγράψτε το τις συνθήκες φωτισμού σας;"
 
-#: colournaming/experiment/forms.py:136 colournaming/experiment/forms.py:151
+#: colournaming/experiment/forms.py:144 colournaming/experiment/forms.py:159
 msgid "What distance are you from your monitor in cm?"
 msgstr "Ποια είναι η απόστασή σας από την οθόνη;"
 
-#: colournaming/experiment/forms.py:148
+#: colournaming/experiment/forms.py:156
 #: colournaming/templates/colour_vision.html:12
 msgid "No"
 msgstr "Όχι"
 
-#: colournaming/experiment/forms.py:149
+#: colournaming/experiment/forms.py:157
 #: colournaming/templates/colour_vision.html:13
 msgid "Yes"
 msgstr "Ναι"
+
+#: colournaming/experiment/views.py:145
+msgid "You are in the 0% top colour namers."
+msgstr "YOU ARE IN THE 0% TOP COLOUR NAMERS."
 
 #: colournaming/home/forms.py:7
 msgid "First name"
@@ -218,29 +222,37 @@ msgstr "Οργανισμός"
 msgid "Your message"
 msgstr "Το μήνυμα σας"
 
-#: colournaming/namer/forms.py:18
-msgid "Strongly disagree"
-msgstr "STRONGLY DISAGREE"
-
 #: colournaming/namer/forms.py:19
-msgid "Disagree"
-msgstr "DISAGREE"
+msgid "Strongly disagree"
+msgstr "Διαφωνώ κάθετα"
 
 #: colournaming/namer/forms.py:20
-msgid "Undecided"
-msgstr "UNDECIDED"
+msgid "Disagree"
+msgstr "Διαφωνώ"
 
 #: colournaming/namer/forms.py:21
-msgid "Agree"
-msgstr "AGREE"
+msgid "Undecided"
+msgstr "Δεν γνωρίζω"
 
 #: colournaming/namer/forms.py:22
+msgid "Agree"
+msgstr "Συμφωνώ"
+
+#: colournaming/namer/forms.py:23
 msgid "Strongly agree"
-msgstr "STRONGLY AGREE"
+msgstr "Συμφωνώ απολύτως"
+
+#: colournaming/templates/base.html:9 colournaming/templates/index.html:5
+msgid "Colour Naming"
+msgstr "Ονομασία Χρωμάτων"
 
 #: colournaming/templates/base_experiment.html:8
-msgid "Colournaming Experiment"
-msgstr ""
+msgid "Colour Naming Experiment"
+msgstr "COLOUR NAMING EXPERIMENT"
+
+#: colournaming/templates/colour_vision.html:4
+msgid "Colour Vision Task"
+msgstr "Τεστ Χρωματικής Αντίληψης"
 
 #: colournaming/templates/colour_vision.html:7
 msgid ""
@@ -269,6 +281,10 @@ msgstr "Ρυθμίστε τη φωτεινότητα της οθόνης σας 
 #: colournaming/templates/display_properties.html:23
 msgid "Confirm how many steps you can see?"
 msgstr "Επιβεβαιώστε πόσα ασπρόμαυρα βήματα μπορείτε να δείτε"
+
+#: colournaming/templates/index.html:13 colournaming/templates/index.html:38
+msgid "Colour namer"
+msgstr "Ονομαστής Χρωμάτων"
 
 #: colournaming/templates/index.html:16 colournaming/templates/index.html:80
 msgid "Research"
@@ -370,10 +386,34 @@ msgstr "Παρακαλούμε ονομάστε κάθε χρωματικό δε
 msgid "Next colour"
 msgstr "Επόμενο χρώμα"
 
+#: colournaming/templates/observer_information.html:5
+msgid "Observer Information Task"
+msgstr "Ερωτηματολόγιο Παρατηρητή"
+
 #: colournaming/templates/observer_information.html:8
 msgid ""
 "Please provide us with some information about your background and viewing"
 " conditions. This will help us to better understand the context of your "
 "responses."
 msgstr "Παρακαλώ δώστε  μας λίγες πληροφορίες για εσάς και τις συνθήκες παρατήρησης σας για να μας βοηθήσετε να κατανοήσουμε το γενικότερο πλαίσιο των απαντήσεων σας."
+
+#: colournaming/templates/thankyou.html:5
+msgid "Thank you"
+msgstr "Ευχαριστούμε"
+
+#: colournaming/templates/thankyou.html:8
+msgid "Thank you for participating."
+msgstr "THANK YOU FOR PARTICIPATING."
+
+#: colournaming/templates/thankyou.html:8
+msgid "Feel free to share it with your friends."
+msgstr "FEEL FREE TO SHARE IT WITH YOUR FRIENDS."
+
+#: colournaming/templates/thankyou.html:14
+msgid ""
+"Your responses will be used to improve colour communication within and "
+"across languages. Please feel free to contact us and visit our research "
+"page for more information. Find below your responses in white and the "
+"most popular colour names in black:"
+msgstr "Οι απαντήσεις σας θα χρησιμοποιηθούν για τη βελτίωση της χρωματικής επικοινωνίας μεταξύ διαφορετικών πολιτισμών. Μπορείτε να επικοινωνήσετε μαζί μας και να επισκεφτείτε τη σελίδα με τα αποτελέσματα της έρευνας μας για περισσότερες πληροφορίες. Βρείτε μια σύνοψη των απαντήσεών σας παρακάτω με άσπρο χρώμα και τις πιο δημοφιλής απαντήσεις με μαύρο χρώμα."
 
