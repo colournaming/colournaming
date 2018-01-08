@@ -382,7 +382,11 @@ msgid ""
 "on colour namers. Your response time will be recorded."
 msgstr "Παρακαλούμε ονομάστε κάθε χρωματικό δείγμα με την πιο αντιπροσωπευτική ονομασία χρώματος που μπορείτε να θυμηθείτε.<br>Ονομάστε όσα περισσότερα χρωματικά δείγματα μπορείτε για να υψηλότερη βαθμολογία στη λίστα με τους ονομαστές χρωμάτων. Ο χρόνος απόκρισης θα καταγραφεί."
 
-#: colournaming/templates/name_colour.html:28
+#: colournaming/templates/name_colour.html:14
+msgid "Name the colour of the patch"
+msgstr "Ονομάστε το χρώμα του δείγματος."
+
+#: colournaming/templates/name_colour.html:24
 msgid "Next colour"
 msgstr "Επόμενο χρώμα"
 

@@ -220,7 +220,7 @@ footer {
 .input-group {
     margin: 2.25em auto 3.625em;
     overflow: hidden;
-    width: 300px;
+    width: 340px;
 }
 
 .input-group input {
@@ -236,7 +236,11 @@ footer {
     outline: none;
     padding: 1px 2px;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    width: 264px;
+    width: 239px;
+}
+
+.input-group input::placeholder {
+    color: #CCC;
 }
 
 .input-group button {
@@ -244,18 +248,10 @@ footer {
     border: none;
     border-radius: 0;
     float: left;
+    font-size: 16px;
     height: 30px;
     padding: 0;
-    width: 30px;
-}
-
-.input-group button svg {
-    fill: none;
-    margin: 2px 0;
-    stroke: #808080;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    stroke-width: 3px;
+    width: 95px;
 }
 
 video {
@@ -316,22 +312,45 @@ video {
     display: block;
     float: left;
     height: 40px;
-    margin: 0 10px;
+    margin: 3px 10px 5px;
+    position: relative;
     width: 40px;
+}
+
+.social-link::before {
+    border: 1px solid #FFF;
+    border-radius: 22px;
+    content: '';
+    display: block;
+    height: 44px;
+    position: absolute;
+    right: -3px;
+    top: -3px;
+    width: 44px;
 }
 
 .social-link:hover {
     background-size: 28px;
     height: 38px;
-    margin: 1px 11px;
+    margin: 4px 11px 4px;
     width: 38px;
+}
+
+.social-link:hover::before {
+    right: -4px;
+    top: -4px;
 }
 
 .social-link:active {
     background-size: 28px;
     height: 38px;
-    margin: 2px 11px 0;
+    margin: 5px 11px 3px;
     width: 38px;
+}
+
+.social-link:active::before {
+    right: -4px;
+    top: -4px;
 }
 
 .social-link.email {

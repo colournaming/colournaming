@@ -7,7 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+<<<<<<< HEAD
 "POT-Creation-Date: 2018-01-08 21:58+0000\n"
+=======
+"POT-Creation-Date: 2018-01-08 10:22+0000\n"
+>>>>>>> 73e991902989795689b5edb1c2eb0c0cdfb803db
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -382,7 +386,11 @@ msgid ""
 "on colour namers. Your response time will be recorded."
 msgstr ""
 
-#: colournaming/templates/name_colour.html:28
+#: colournaming/templates/name_colour.html:14
+msgid "Name the colour of the patch"
+msgstr ""
+
+#: colournaming/templates/name_colour.html:24
 msgid "Next colour"
 msgstr ""
 
