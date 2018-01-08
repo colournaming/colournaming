@@ -7,37 +7,31 @@
     <div class="hamburger" id="hamburger">
         <span>Menu</span>
     </div>
-    {% include('navbar.html') %}
+    <nav>
+        <ul>
+            <li>
+                <a href="#colour-namer">ColourNamer</a>
+            </li>
+            <li>
+                <a href="#research">{{ _('Research') }}</a>
+            </li>
+            <li>
+                <a href="#contact">{{ _('Contact') }}</a>
+            </li>
+        </ul>
+    </nav>
 </header>
 <main>
     <section>
         <img src="static/images/mobiles.jpg" alt="People and mobile devices (by Valero Doval)">
-        <p class="justified-text">Let's play a game, how many colours can you name?</p>
+        <p class="justified-text">{{ _("Let's play a game, how many colours can you name?") }}</p>
         
-        <p class="justified-text">Welcome to Colour Naming, an online
-        experiment designed to collect colour names in multiple languages
-        with their corresponding colour ranges. You will be asked to name a series of
-        colour samples and provide information about your cultural background
-        and viewing conditions. You are free to omit any question and you may
-        withdraw at any time without penalty. Participation in this study is
-        strictly anonymous and voluntary. All responses are treated as
-        confidential and will be published in aggregated form only.</p>
+        <p class="justified-text">{{ _("Welcome to Colour Naming, an online experiment designed to collect colour names in multiple languages with their corresponding colour ranges. You will be asked to name a series of colour samples and provide information about your cultural background and viewing conditions. You are free to omit any question and you may withdraw at any time without penalty. Participation in this study is strictly anonymous and voluntary. All responses are treated as confidential and will be published in aggregated form only.") }}</p>
         
-        <p class="justified-text">Many individuals find the tasks of this
-        study enjoyable and we believe there are no known risks to
-        participants. The purpose of this research study is to improve colour
-        communication in multilingual environments. Please feel free to
-        contact the principal investigator <a
-        href="mailto:d.mylonas[at]ucl.ac.uk">Dimitris Mylonas</a> or the
-        supervisors <a href="mailto:ucfslwm[at]ucl.ac.uk ">Lindsay
-        MacDonald</a> and <a href="mailto:l.griffin[at]ucl.ac.uk">Lewis
-        Griffin</a> of University College London if you have any
-        questions.</p>
+        <p class="justified-text">{{ _('Many individuals find the tasks of this study enjoyable and we believe there are no known risks to participants. The purpose of this research study is to improve colour communication in multilingual environments. Please feel free to contact the principal investigator <a href="mailto:d.mylonas[at]ucl.ac.uk">Dimitris Mylonas</a> or the supervisors <a href="mailto:ucfslwm[at]ucl.ac.uk">Lindsay MacDonald</a> and <a href="mailto:l.griffin[at]ucl.ac.uk">Lewis Griffin</a> of University College London if you have any questions.') }}</p>
         
-        <p class="justified-text">{{ _('If you are 16 years of age or older,
-        understand the statements and freely consent to participate in the
-        study, click on the "Start" button to begin the experiment.') }}</p>
-        <a class="round-button" href="{{ url_for('experiment.start') }}">Start</a>
+        <p class="justified-text">{{ _("If you are 16 years of age or older, understand the statements and freely consent to participate in the study, click on the 'Start' button to begin the experiment.") }}</p>
+        <a class="round-button" href="{{ url_for('experiment.start') }}">{{ _("Start") }}</a>
     </section>
     <section>
         <h2 id="colour-namer">
@@ -51,7 +45,7 @@
                     {% endfor %}
                 </select>
                 <select class="right-aligned-select" id="name" name="name">
-                    <option disabled selected value="-">by name</option>
+                    <option disabled selected value="-">{{ _('by name') }}</option>
                 </select>
             </div>
             <div class="colour-namer-row-wrapper">
@@ -59,9 +53,9 @@
                 <div class="stats-box">
                     <div id="stats-box-header" class="stats-box-header"></div>
                     <dl>
-                        <dt>Colour Name:</dt>
+                        <dt>{{ _('Colour name') }}:</dt>
                         <dd id="stats-box-colour-name-display">Red</dd>
-                        <dt>Synonyms:</dt>
+                        <dt>{{ _('Synonyms') }}:</dt>
                         <dd id="stats-box-synonyms-display">
                             <ul>
                                 <li>Orange</li>
@@ -79,17 +73,14 @@
                 </form>
             </div>
         </div>
-        <p>This is a βeta version of Colournamer. You will need JavaScript
-        enabled and a browser that supports HTML5 web audio.</p>
+        <p>{{ _('This is a βeta version of Colournamer. You will need JavaScript enabled and a browser that supports HTML5 web audio.') }}</p>
     </section>
     <section>
         <h2 id="research">
             <a href="#research">{{ _('Research') }}</a>
         </h2>
         <img src="static/images/computer.jpg" alt="People thinking about colours around a computer (by Valero Doval)">
-        <p class="justified-text">{{ _('This research aims to develop an
-        online colour naming model to facilitate colour communication within
-        &amp; between cultures.') }}</p>
+        <p class="justified-text">{{ _('This research aims to develop an online colour naming model to facilitate colour communication within and between cultures.') }}</p>
         <p class="padded">Title: Colournamer - An Online Colour Naming Model<br>
             Researcher: <a href="http://ucl.academia.edu/DimitrisMylonas">Dimitris Mylonas</a><br>
             Current Host Academic Institution: <a href="http://www.cs.ucl.ac.uk/">Department of Computer Science, University College<br>
@@ -278,11 +269,9 @@
     </section>
     <section>
         <h2 id="contact">
-            <a href="#contact">Contact</a>
+            <a href="#contact">{{ _('Contact') }}</a>
         </h2>
-        <p class="justified-text">Please use the following communication form
-        to give us your feedback and comments or if you wish to inform you
-        about the results of this research.</p>
+        <p class="justified-text">{{ _('Please use the following communication form to give us your feedback and comments or if you wish to inform you about the results of this research.') }}</p>
         <form id='contact_form' method="post">
             {{ contact_form.csrf_token }}
             {{ contact_form.first_name.label(for='first_name') }}
@@ -295,7 +284,7 @@
             {{ contact_form.organisation(class_='form-control', size=20) }}
             {{ contact_form.message.label(for='message') }}
             {{ contact_form.message(class_='form-control', size=20) }}
-            <button class="submit-button" type="submit">Submit</button>
+            <button class="submit-button" type="submit">{{ _('Submit') }}</button>
         </form>
     </section>
 </main>
@@ -306,7 +295,7 @@
         <a class="github social-link" href="https://github.com/colournaming/colournaming"><!-- GitHub Logo --></a>
         <a class="email social-link" href="mailto:dmilonas@gmail.com"></a>
     </div>
-    <p class="lined-text">Made in London &amp; Berlin</p>
+    <p class="lined-text">{{ _('Made in London and Berlin') }}</p>
 </footer>
 {% endblock %}
 {% block scripts %}

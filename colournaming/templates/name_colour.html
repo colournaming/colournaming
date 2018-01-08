@@ -1,32 +1,31 @@
 {% extends 'base_experiment.html' %}
 {% block content %}
 <header>
-    <h1>Colour Naming Task</h1>
+    <h1>{{ _('Colour Naming Task') }}</h1>
 </header>
 <main>
-    <p class="justified-text">Name each colour sample with the best representative colour term that you remember.<br>Name as many colour samples as you can for higher ranking on colour namers. Your response time will be recorded.</p>
+    <p class="justified-text">{{ _('Name each colour sample with the best representative colour term that you remember.<br>Name as many colour samples as you can for higher ranking on colour namers. Your response time will be recorded.')}}</p>
     <span id="colour-number">#1</span>
     <div id="colour-circle">
         <div></div>
     </div>
     <div class="input-group">
         <form id="colour-name-form">
-            <input autocomplete="off" autofocus id="colour-name" name="colour-name" placeholder="Name the colour of the patch" type="text">
+            <input autocomplete="off" autofocus id="colour-name" name="colour-name" placeholder={{ _("Name the colour of the patch") }} type="text">
             <input id="colour-id" name="colour-id" type="hidden">
             <input id="start-time" name="start-time" type="hidden">
             <input id="response-time" name="response-time" type="hidden">
-            <button id="next-colour" type="submit">Next Colour</button>
+            <button id="next-colour" type="submit">{{ _('Next colour') }}</button>
         </form>
     </div>
     {{ form.csrf_token }}
 </main>
 <footer>
-    <a id="colour-vision-test-page" class="centered-button round-button text-button" href="colour-vision-test.html">Next Task</a>
+    <a id="colour-vision-test-page" class="centered-button round-button text-button" href="colour-vision-test.html">{{ _('Next colour') }}</a>
 </footer>
 {% endblock %}
 {% block scripts %}
 <script type="text/javascript">
-    // var COLOUR_NAME_RESPONSE_URL = "{{ url_for('experiment.name_colour') }}"
     var COLOUR_NAME_TARGET_URL = "{{ url_for('experiment.get_target') }}";
 </script>
 {% endblock %}
