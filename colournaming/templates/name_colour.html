@@ -15,7 +15,11 @@
             <input id="colour-id" name="colour-id" type="hidden">
             <input id="start-time" name="start-time" type="hidden">
             <input id="response-time" name="response-time" type="hidden">
-            <button id="next-colour" type="submit">{{ _('Next colour') }}</button>
+            <button id="next-colour" type="submit">
+                <svg version="1.1" viewBox="0 0 30 26" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M 10 4 L 20 13 L 10 22"></path>
+                </svg>
+            </button>
         </form>
     </div>
     {{ form.csrf_token }}

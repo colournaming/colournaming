@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-01-08 21:58+0000\n"
+"POT-Creation-Date: 2018-01-08 22:09+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -386,7 +386,7 @@ msgstr "Παρακαλούμε ονομάστε κάθε χρωματικό δε
 msgid "Name the colour of the patch"
 msgstr "Ονομάστε το χρώμα του δείγματος."
 
-#: colournaming/templates/name_colour.html:24
+#: colournaming/templates/name_colour.html:28
 msgid "Next colour"
 msgstr "Επόμενο χρώμα"
 
