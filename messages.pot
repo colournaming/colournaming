@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-01-07 19:33+0000\n"
+"POT-Creation-Date: 2018-01-08 10:22+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,180 +20,180 @@ msgstr ""
 msgid "What is your age?"
 msgstr ""
 
-#: colournaming/experiment/forms.py:37
+#: colournaming/experiment/forms.py:38
 msgid "Female"
 msgstr ""
 
-#: colournaming/experiment/forms.py:38
+#: colournaming/experiment/forms.py:39
 msgid "Male"
 msgstr ""
 
-#: colournaming/experiment/forms.py:39
+#: colournaming/experiment/forms.py:40
 msgid "Other"
 msgstr ""
 
-#: colournaming/experiment/forms.py:41
+#: colournaming/experiment/forms.py:42
 msgid "To which gender do you most identify?"
 msgstr ""
 
-#: colournaming/experiment/forms.py:45
+#: colournaming/experiment/forms.py:46
 msgid "Please specify"
 msgstr ""
 
-#: colournaming/experiment/forms.py:50 colournaming/experiment/forms.py:59
+#: colournaming/experiment/forms.py:52 colournaming/experiment/forms.py:62
 msgid "Beginner"
 msgstr ""
 
-#: colournaming/experiment/forms.py:51 colournaming/experiment/forms.py:60
+#: colournaming/experiment/forms.py:53 colournaming/experiment/forms.py:63
 msgid "Intermediate"
 msgstr ""
 
-#: colournaming/experiment/forms.py:52 colournaming/experiment/forms.py:61
+#: colournaming/experiment/forms.py:54 colournaming/experiment/forms.py:64
 msgid "Advanced"
 msgstr ""
 
-#: colournaming/experiment/forms.py:54
+#: colournaming/experiment/forms.py:56
 msgid "Describe your experience working with colour"
 msgstr ""
 
-#: colournaming/experiment/forms.py:62
+#: colournaming/experiment/forms.py:65
 msgid "Bilingual"
 msgstr ""
 
-#: colournaming/experiment/forms.py:63
+#: colournaming/experiment/forms.py:66
 msgid "Native speaker"
 msgstr ""
 
-#: colournaming/experiment/forms.py:65
+#: colournaming/experiment/forms.py:68
 msgid "Describe your skill in the language used in this experiment"
 msgstr ""
 
-#: colournaming/experiment/forms.py:70
+#: colournaming/experiment/forms.py:74
 msgid "No qualifications"
 msgstr ""
 
-#: colournaming/experiment/forms.py:71
+#: colournaming/experiment/forms.py:75
 msgid "Secondary school degree"
 msgstr ""
 
-#: colournaming/experiment/forms.py:72
+#: colournaming/experiment/forms.py:76
 msgid "Bachelors degree"
 msgstr ""
 
-#: colournaming/experiment/forms.py:73
+#: colournaming/experiment/forms.py:77
 msgid "Masters degree"
 msgstr ""
 
-#: colournaming/experiment/forms.py:74
+#: colournaming/experiment/forms.py:78
 msgid "Professional degree"
 msgstr ""
 
-#: colournaming/experiment/forms.py:75
+#: colournaming/experiment/forms.py:79
 msgid "Doctorate degree"
 msgstr ""
 
-#: colournaming/experiment/forms.py:77
+#: colournaming/experiment/forms.py:81
 msgid "What is the highest level of education you have completed?"
 msgstr ""
 
-#: colournaming/experiment/forms.py:84
+#: colournaming/experiment/forms.py:88
 msgid "In which country did you grow up?"
 msgstr ""
 
-#: colournaming/experiment/forms.py:89
+#: colournaming/experiment/forms.py:93
 msgid "Where are you living?"
 msgstr ""
 
-#: colournaming/experiment/forms.py:94
+#: colournaming/experiment/forms.py:99
 msgid "Smartphone"
 msgstr ""
 
-#: colournaming/experiment/forms.py:95
+#: colournaming/experiment/forms.py:100
 msgid "Pad"
 msgstr ""
 
-#: colournaming/experiment/forms.py:96
+#: colournaming/experiment/forms.py:101
 msgid "Laptop"
 msgstr ""
 
-#: colournaming/experiment/forms.py:97
+#: colournaming/experiment/forms.py:102
 msgid "Desktop"
 msgstr ""
 
-#: colournaming/experiment/forms.py:99
+#: colournaming/experiment/forms.py:104
 msgid "What is your display device?"
 msgstr ""
 
-#: colournaming/experiment/forms.py:104
+#: colournaming/experiment/forms.py:110
 msgid "Neutral white"
 msgstr ""
 
-#: colournaming/experiment/forms.py:105
+#: colournaming/experiment/forms.py:111
 msgid "Warm white"
 msgstr ""
 
-#: colournaming/experiment/forms.py:106
+#: colournaming/experiment/forms.py:112
 msgid "Bluish white"
 msgstr ""
 
-#: colournaming/experiment/forms.py:107
+#: colournaming/experiment/forms.py:113
 msgid "Yellowish white"
 msgstr ""
 
-#: colournaming/experiment/forms.py:109
+#: colournaming/experiment/forms.py:115
 msgid "Describe the white graphic elements on your screen"
 msgstr ""
 
-#: colournaming/experiment/forms.py:114 colournaming/experiment/forms.py:124
+#: colournaming/experiment/forms.py:121 colournaming/experiment/forms.py:132
 msgid "Dark"
 msgstr ""
 
-#: colournaming/experiment/forms.py:115
+#: colournaming/experiment/forms.py:122
 msgid "Dim"
 msgstr ""
 
-#: colournaming/experiment/forms.py:116
+#: colournaming/experiment/forms.py:123
 msgid "Average"
 msgstr ""
 
-#: colournaming/experiment/forms.py:117
+#: colournaming/experiment/forms.py:124
 msgid "Bright"
 msgstr ""
 
-#: colournaming/experiment/forms.py:119
+#: colournaming/experiment/forms.py:126
 msgid "Describe the surrounding environment behind your device"
 msgstr ""
 
-#: colournaming/experiment/forms.py:125
+#: colournaming/experiment/forms.py:133
 msgid "Typical domestic"
 msgstr ""
 
-#: colournaming/experiment/forms.py:126
+#: colournaming/experiment/forms.py:134
 msgid "Mid daylight"
 msgstr ""
 
-#: colournaming/experiment/forms.py:127
+#: colournaming/experiment/forms.py:135
 msgid "Full daylight"
 msgstr ""
 
-#: colournaming/experiment/forms.py:128
+#: colournaming/experiment/forms.py:136
 msgid "Typical office"
 msgstr ""
 
-#: colournaming/experiment/forms.py:130
+#: colournaming/experiment/forms.py:138
 msgid "Describe the lighting conditions of your environment"
 msgstr ""
 
-#: colournaming/experiment/forms.py:136 colournaming/experiment/forms.py:151
+#: colournaming/experiment/forms.py:144 colournaming/experiment/forms.py:159
 msgid "What distance are you from your monitor in cm?"
 msgstr ""
 
-#: colournaming/experiment/forms.py:148
+#: colournaming/experiment/forms.py:156
 #: colournaming/templates/colour_vision.html:12
 msgid "No"
 msgstr ""
 
-#: colournaming/experiment/forms.py:149
+#: colournaming/experiment/forms.py:157
 #: colournaming/templates/colour_vision.html:13
 msgid "Yes"
 msgstr ""
@@ -218,23 +218,23 @@ msgstr ""
 msgid "Your message"
 msgstr ""
 
-#: colournaming/namer/forms.py:18
+#: colournaming/namer/forms.py:19
 msgid "Strongly disagree"
 msgstr ""
 
-#: colournaming/namer/forms.py:19
+#: colournaming/namer/forms.py:20
 msgid "Disagree"
 msgstr ""
 
-#: colournaming/namer/forms.py:20
+#: colournaming/namer/forms.py:21
 msgid "Undecided"
 msgstr ""
 
-#: colournaming/namer/forms.py:21
+#: colournaming/namer/forms.py:22
 msgid "Agree"
 msgstr ""
 
-#: colournaming/namer/forms.py:22
+#: colournaming/namer/forms.py:23
 msgid "Strongly agree"
 msgstr ""
 
@@ -366,7 +366,11 @@ msgid ""
 "on colour namers. Your response time will be recorded."
 msgstr ""
 
-#: colournaming/templates/name_colour.html:28
+#: colournaming/templates/name_colour.html:14
+msgid "Name the colour of the patch"
+msgstr ""
+
+#: colournaming/templates/name_colour.html:24
 msgid "Next colour"
 msgstr ""
 
