@@ -30,6 +30,9 @@ def colours(lang_code):
 def get_colours():
     return colours(request.args.get('lang'))
 
+@bp.route('/lang/default/name')
+def name_colour_default_lang():
+    return name_colour(request.accept_languages[0][0])
 
 @bp.route('/lang/<lang_code>/name')
 def name_colour(lang_code):

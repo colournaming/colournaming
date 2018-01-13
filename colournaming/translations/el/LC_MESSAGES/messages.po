@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-01-08 10:22+0000\n"
+"POT-Creation-Date: 2018-01-08 22:09+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -126,23 +126,23 @@ msgstr "Τι τεχνολογίας είναι η οθόνη σας;"
 
 #: colournaming/experiment/forms.py:110
 msgid "Neutral white"
-msgstr "NEUTRAL WHITE"
+msgstr "Λευκό"
 
 #: colournaming/experiment/forms.py:111
 msgid "Warm white"
-msgstr "WARM WHITE"
+msgstr "Θερμό Λευκό"
 
 #: colournaming/experiment/forms.py:112
 msgid "Bluish white"
-msgstr "BLUISH WHITE"
+msgstr "Ψυχρό Λευκό"
 
 #: colournaming/experiment/forms.py:113
 msgid "Yellowish white"
-msgstr "YELLOWISH WHITE"
+msgstr "Κιτρινωπό"
 
 #: colournaming/experiment/forms.py:115
 msgid "Describe the white graphic elements on your screen"
-msgstr "DESCRIBE THE WHITE GRAPHIC ELEMENTS ON YOUR SCREEN"
+msgstr "Περιγράψτε τη λευκότητα των άσπρων γραφικών στην οθόνη σας"
 
 #: colournaming/experiment/forms.py:121 colournaming/experiment/forms.py:132
 msgid "Dark"
@@ -198,6 +198,10 @@ msgstr "Όχι"
 msgid "Yes"
 msgstr "Ναι"
 
+#: colournaming/experiment/views.py:145
+msgid "You are in the 0% top colour namers."
+msgstr "Βρίσκεστε στους κορυφαίους 0% ονομαστές χρωμάτων."
+
 #: colournaming/home/forms.py:7
 msgid "First name"
 msgstr "Όνομα"
@@ -220,27 +224,35 @@ msgstr "Το μήνυμα σας"
 
 #: colournaming/namer/forms.py:19
 msgid "Strongly disagree"
-msgstr "STRONGLY DISAGREE"
+msgstr "Διαφωνώ κάθετα"
 
 #: colournaming/namer/forms.py:20
 msgid "Disagree"
-msgstr "DISAGREE"
+msgstr "Διαφωνώ"
 
 #: colournaming/namer/forms.py:21
 msgid "Undecided"
-msgstr "UNDECIDED"
+msgstr "Δεν γνωρίζω"
 
 #: colournaming/namer/forms.py:22
 msgid "Agree"
-msgstr "AGREE"
+msgstr "Συμφωνώ"
 
 #: colournaming/namer/forms.py:23
 msgid "Strongly agree"
-msgstr "STRONGLY AGREE"
+msgstr "Συμφωνώ απολύτως"
+
+#: colournaming/templates/base.html:9 colournaming/templates/index.html:5
+msgid "Colour Naming"
+msgstr "Ονομασία Χρωμάτων"
 
 #: colournaming/templates/base_experiment.html:8
-msgid "Colournaming Experiment"
-msgstr ""
+msgid "Colour Naming Experiment"
+msgstr "Πείραμα Ονομασίας Χρωμάτων"
+
+#: colournaming/templates/colour_vision.html:4
+msgid "Colour Vision Task"
+msgstr "Τεστ Χρωματικής Αντίληψης"
 
 #: colournaming/templates/colour_vision.html:7
 msgid ""
@@ -269,6 +281,10 @@ msgstr "Ρυθμίστε τη φωτεινότητα της οθόνης σας 
 #: colournaming/templates/display_properties.html:23
 msgid "Confirm how many steps you can see?"
 msgstr "Επιβεβαιώστε πόσα ασπρόμαυρα βήματα μπορείτε να δείτε"
+
+#: colournaming/templates/index.html:13 colournaming/templates/index.html:38
+msgid "Colour namer"
+msgstr "Ονομαστής Χρωμάτων"
 
 #: colournaming/templates/index.html:16 colournaming/templates/index.html:80
 msgid "Research"
@@ -370,9 +386,13 @@ msgstr "Παρακαλούμε ονομάστε κάθε χρωματικό δε
 msgid "Name the colour of the patch"
 msgstr "Ονομάστε το χρώμα του δείγματος."
 
-#: colournaming/templates/name_colour.html:24
+#: colournaming/templates/name_colour.html:28
 msgid "Next colour"
 msgstr "Επόμενο χρώμα"
+
+#: colournaming/templates/observer_information.html:5
+msgid "Observer Information Task"
+msgstr "Ερωτηματολόγιο Παρατηρητή"
 
 #: colournaming/templates/observer_information.html:8
 msgid ""
@@ -380,4 +400,24 @@ msgid ""
 " conditions. This will help us to better understand the context of your "
 "responses."
 msgstr "Παρακαλώ δώστε  μας λίγες πληροφορίες για εσάς και τις συνθήκες παρατήρησης σας για να μας βοηθήσετε να κατανοήσουμε το γενικότερο πλαίσιο των απαντήσεων σας."
+
+#: colournaming/templates/thankyou.html:5
+msgid "Thank you"
+msgstr "Ευχαριστούμε"
+
+#: colournaming/templates/thankyou.html:8
+msgid "Thank you for participating."
+msgstr "Συγχαρητήρια και ευχαριστούμε για τη συμμετοχή σας."
+
+#: colournaming/templates/thankyou.html:8
+msgid "You can now share the link of the experiment with your friends."
+msgstr "Παρακαλούμε μη διστάσετε να καλέσετε τους φίλους σας να συμμετάσχουν."
+
+#: colournaming/templates/thankyou.html:14
+msgid ""
+"Your responses will be used to improve colour communication within and "
+"across languages. Please feel free to contact us and visit our research "
+"page for more information. Find below your responses in white and the "
+"most popular colour names in black:"
+msgstr "Οι απαντήσεις σας θα χρησιμοποιηθούν για τη βελτίωση της χρωματικής επικοινωνίας μεταξύ διαφορετικών πολιτισμών. Μπορείτε να επικοινωνήσετε μαζί μας και να επισκεφτείτε τη σελίδα με τα αποτελέσματα της έρευνας μας για περισσότερες πληροφορίες. Βρείτε μια σύνοψη των απαντήσεών σας παρακάτω με άσπρο χρώμα και τις πιο δημοφιλής απαντήσεις με μαύρο χρώμα."
 

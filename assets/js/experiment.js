@@ -366,14 +366,6 @@ if ($thankYouText !== null && $results !== null) {
     const { colours } = results;
 
     if (colours) {
-        fetch(`/experiment/response_percentage?count=${ colours.length }`)
-            .then((response) => response.json())
-            .then((json) => {
-                const roundedTopPercentage = Math.round(json.top_percentage);
-
-                $thankYouText.textContent = `Thank you for participating. You are in the ${ roundedTopPercentage }% top colournamers. Feel free to share it with your friends.`;
-            });
-
         Promise
             .all(Object
                 .keys(colours)
@@ -403,7 +395,7 @@ if ($thankYouText !== null && $results !== null) {
 
                     $results.appendChild($li);
 
-                    return fetch(`/namer/lang/en/name?colour=${ hexColorValue }`)
+                    return fetch(`/namer/lang/default/name?colour=${ hexColorValue }`)
                         .then((response) => response.json())
                         .then((json) => {
                             $blackSpan.className = 'black';

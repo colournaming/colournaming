@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-01-08 10:22+0000\n"
+"POT-Creation-Date: 2018-01-08 22:09+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -198,6 +198,10 @@ msgstr ""
 msgid "Yes"
 msgstr ""
 
+#: colournaming/experiment/views.py:145
+msgid "You are in the 0% top colour namers."
+msgstr ""
+
 #: colournaming/home/forms.py:7
 msgid "First name"
 msgstr ""
@@ -238,8 +242,16 @@ msgstr ""
 msgid "Strongly agree"
 msgstr ""
 
+#: colournaming/templates/base.html:9 colournaming/templates/index.html:5
+msgid "Colour Naming"
+msgstr ""
+
 #: colournaming/templates/base_experiment.html:8
-msgid "Colournaming Experiment"
+msgid "Colour Naming Experiment"
+msgstr ""
+
+#: colournaming/templates/colour_vision.html:4
+msgid "Colour Vision Task"
 msgstr ""
 
 #: colournaming/templates/colour_vision.html:7
@@ -268,6 +280,10 @@ msgstr ""
 
 #: colournaming/templates/display_properties.html:23
 msgid "Confirm how many steps you can see?"
+msgstr ""
+
+#: colournaming/templates/index.html:13 colournaming/templates/index.html:38
+msgid "Colour namer"
 msgstr ""
 
 #: colournaming/templates/index.html:16 colournaming/templates/index.html:80
@@ -370,8 +386,12 @@ msgstr ""
 msgid "Name the colour of the patch"
 msgstr ""
 
-#: colournaming/templates/name_colour.html:24
+#: colournaming/templates/name_colour.html:28
 msgid "Next colour"
+msgstr ""
+
+#: colournaming/templates/observer_information.html:5
+msgid "Observer Information Task"
 msgstr ""
 
 #: colournaming/templates/observer_information.html:8
@@ -379,5 +399,25 @@ msgid ""
 "Please provide us with some information about your background and viewing"
 " conditions. This will help us to better understand the context of your "
 "responses."
+msgstr ""
+
+#: colournaming/templates/thankyou.html:5
+msgid "Thank you"
+msgstr ""
+
+#: colournaming/templates/thankyou.html:8
+msgid "Thank you for participating."
+msgstr ""
+
+#: colournaming/templates/thankyou.html:8
+msgid "You can now share the link of the experiment with your friends."
+msgstr ""
+
+#: colournaming/templates/thankyou.html:14
+msgid ""
+"Your responses will be used to improve colour communication within and "
+"across languages. Please feel free to contact us and visit our research "
+"page for more information. Find below your responses in white and the "
+"most popular colour names in black:"
 msgstr ""
 

@@ -2,16 +2,16 @@
 
 {% block content %}
 <header>
-   <h1>Thank you</h1>
+   <h1>{{ _('Thank you') }}</h1>
 </header>
 <main>
-   <p id="thank-you-text" class="justified-text">Thank you for participating. You can now share the link of the experiment with your friends.</p>
+   <p id="thank-you-text" class="justified-text">{{ _('Thank you for participating.') }} {{ top_namers }} {{ _('You can now share the link of the experiment with your friends.') }}</p>
    <div class="social-links">
        <a class="social-link twitter" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fcolornaming.net%2F&amp;text=Let%27s%20play%20a%20game%2C%20how%20many%20colours%20can%20you%20name%3F&amp;via=colornaming&amp;hashtags=colournamer"><!-- Twitter Logo --></a>
        <a class="facebook social-link" href="https://www.facebook.com/sharer/sharer.php?u=colornaming.net" target="_blank"><!-- Facebook Logo --></a>
        <a class="email social-link" href="mailto:?subject=How%20many%20colours%20can%20you%20name%3F&amp;body=Let%27s%20play%20a%20game%2C%20how%20many%20colours%20can%20you%20name%20at%20https%3A%2F%2Fcolornaming.net%20%3F"></a>
    </div>
-   <p class="justified-text">Your responses will be used to improve colour communication within and across languages. Your responses will be used to improve colour communication within and across languages. Please feel free to contact us and visit our research page for more information. Find below your responses in white and the most popular colour names in black:</p>
+   <p class="justified-text">{{ _('Your responses will be used to improve colour communication within and across languages. Please feel free to contact us and visit our research page for more information. Find below your responses in white and the most popular colour names in black:') }}</p>
    <ul id="results"></ul>
 </main>
 {% endblock %}
