@@ -1,6 +1,6 @@
 """Views for the front page."""
 
-from flask import Blueprint, current_app, render_template
+from flask import Blueprint, current_app, render_template, request
 from flask_mail import Message
 from ..email import mail
 from .forms import ContactForm
@@ -37,5 +37,6 @@ def index():
         'index.html',
         contact_form=contact_form,
         name_agreement_form=name_agreement_form,
-        languages=namer_controller.language_list()
+        languages=namer_controller.language_list(),
+        current_language=request.accept_languages[0][0]
     )

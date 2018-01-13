@@ -410,7 +410,7 @@ msgid "Thank you for participating."
 msgstr ""
 
 #: colournaming/templates/thankyou.html:8
-msgid "Feel free to share it with your friends."
+msgid "You can now share the link of the experiment with your friends."
 msgstr ""
 
 #: colournaming/templates/thankyou.html:14

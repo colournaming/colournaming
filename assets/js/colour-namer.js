@@ -144,7 +144,6 @@ $(function () {
     $('header').toggleClass('revealed');
   });
 
-  updateLanguages();
   updateNames();
   initAudio();
 })

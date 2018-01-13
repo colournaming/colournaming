@@ -200,7 +200,7 @@ msgstr "Ναι"
 
 #: colournaming/experiment/views.py:145
 msgid "You are in the 0% top colour namers."
-msgstr "YOU ARE IN THE 0% TOP COLOUR NAMERS."
+msgstr "Βρίσκεστε στους κορυφαίους 0% ονομαστές χρωμάτων."
 
 #: colournaming/home/forms.py:7
 msgid "First name"
@@ -248,7 +248,7 @@ msgstr "Ονομασία Χρωμάτων"
 
 #: colournaming/templates/base_experiment.html:8
 msgid "Colour Naming Experiment"
-msgstr "COLOUR NAMING EXPERIMENT"
+msgstr "Πείραμα Ονομασίας Χρωμάτων"
 
 #: colournaming/templates/colour_vision.html:4
 msgid "Colour Vision Task"
@@ -407,11 +407,11 @@ msgstr "Ευχαριστούμε"
 
 #: colournaming/templates/thankyou.html:8
 msgid "Thank you for participating."
-msgstr "THANK YOU FOR PARTICIPATING."
+msgstr "Συγχαρητήρια και ευχαριστούμε για τη συμμετοχή σας."
 
 #: colournaming/templates/thankyou.html:8
-msgid "Feel free to share it with your friends."
-msgstr "FEEL FREE TO SHARE IT WITH YOUR FRIENDS."
+msgid "You can now share the link of the experiment with your friends."
+msgstr "Παρακαλούμε μη διστάσετε να καλέσετε τους φίλους σας να συμμετάσχουν."
 
 #: colournaming/templates/thankyou.html:14
 msgid ""
