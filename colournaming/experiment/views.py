@@ -26,7 +26,8 @@ def start():
             'ip_address': request.remote_addr,
             'user_agent': request.user_agent.string,
             'browser_language': browser_language
-        }
+        },
+        'response_count': 0
     }
     return redirect(url_for('experiment.display_properties'))
 
@@ -85,6 +86,8 @@ def name_colour():
                 'response_time': form.response_time.data
             }
         )
+        session['experiment']['response_count'] += 1
+        session.modified = True
     if form.errors:
         for field, error in form.errors.items():
             print(field, error)
@@ -138,7 +141,7 @@ def observer_information():
 def thankyou():
     """Show the thankyou for participation page."""
     try:
-        response_count = int(request.args.get('count', 0))
+        response_count = session['experiment'].get('response_count', 0)
         perc = controller.response_count_percentage(response_count)
     except:
         perc = 0
