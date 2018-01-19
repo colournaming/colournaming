@@ -63,6 +63,17 @@ nav ul li a:visited {
     color: inherit;
 }
 
+nav ul li select {
+    background-color: #FFF;
+    border: black;
+    border-width: 1px;
+    border-style: solid;
+    border-right-style: hidden;
+    display: block;
+    height: 30px;
+    width: 95px;
+}
+
 section {
     margin: 0 auto;
     max-width: 986px;
