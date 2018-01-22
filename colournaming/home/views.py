@@ -1,6 +1,6 @@
 """Views for the front page."""
 
-from flask import Blueprint, current_app, render_template, request
+from flask import Blueprint, current_app, render_template, request, session, redirect, url_for
 from flask_mail import Message
 from ..email import mail
 from .forms import ContactForm
@@ -33,10 +33,22 @@ def index():
         )
         msg.body = msg_text
         mail.send(msg)
+    print(current_app.config['LANGUAGES'])
     return render_template(
         'index.html',
         contact_form=contact_form,
         name_agreement_form=name_agreement_form,
         languages=namer_controller.language_list(),
+        interface_languages=current_app.config['LANGUAGES'],
+        interface_language=session.get('interface_language', 'en'),
         current_language=request.accept_languages[0][0]
     )
+
+@bp.route('interface_language')
+def interface_language():
+    lang = request.args.get('lang', None)
+    if lang:
+        session['interface_language'] = lang
+    print(lang)
+    print(session['interface_language'])
+    return redirect(url_for('home.index'))

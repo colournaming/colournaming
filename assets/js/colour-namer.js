@@ -103,6 +103,13 @@ function onColourSelectChange (event) {
   $.farbtastic('#colour-picker').setColor('#' + event.target.value);
 }
 
+function onInterfaceLanguageSelectChange (event) {
+  const $interfaceLanguageSelect = $('select#interface-language');
+  var url = INTERFACE_LANGUAGE_SELECT_URL + '?lang=' + $interfaceLanguageSelect.val();
+  console.log(url);
+  window.location.replace(url);
+}
+
 function onAgreementSelectChange (event) {
   var agreement_level = $('#name_agreement_form #agreement')[0].value;
   if (agreement_level == "") {
@@ -123,6 +130,7 @@ function onAgreementSelectChange (event) {
 }
 
 $(function () {
+  var $interfaceLanguageSelect = $('select#interface-language');
   var $languageSelect = $('select#language');
   var $nameSelect = $('select#name');
   var $agreementSelect = $('select#agreement');
@@ -139,6 +147,7 @@ $(function () {
   $languageSelect.change(onLanguageSelectChange);
   $nameSelect.change(onColourSelectChange);
   $agreementSelect.change(onAgreementSelectChange);
+  $interfaceLanguageSelect.change(onInterfaceLanguageSelectChange);
 
   $('#hamburger').on('click', function () {
     $('header').toggleClass('revealed');

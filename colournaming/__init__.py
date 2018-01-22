@@ -1,7 +1,7 @@
 """Website for the colournaming experiment."""
 
 import click
-from flask import Flask, render_template, request, current_app
+from flask import Flask, render_template, request, current_app, session
 from flask_babel import Babel
 import pytest
 from raven.contrib.flask import Sentry
@@ -37,10 +37,12 @@ def create_app():
 def set_locale_selector(babel):
     @babel.localeselector
     def get_locale():
-        set_lang = current_app.config.get('SET_LANGUAGES', None)
-        available_langs = current_app.config.get('LANGUAGES', ['en'])
-        if set_lang is not None:
-            return set_lang
+        available_langs = [x['code'] for x in current_app.config.get('LANGUAGES')]
+        requested_lang = session.get('interface_language', None)
+        print(requested_lang)
+        print(available_langs)
+        if requested_lang in available_langs:
+            return requested_lang
         else:
             return request.accept_languages.best_match(available_langs)
 

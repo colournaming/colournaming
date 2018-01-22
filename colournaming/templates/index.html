@@ -19,10 +19,12 @@
                 <a href="#contact">{{ _('Contact') }}</a>
             </li>
             <li>
-                <select id="language-select">
-                    <option>English</option>
-                    <option>Greek</option>
+                <select id="interface-language">
+                    {% for language in interface_languages %}
+                    <option value='{{ language.code }}' {% if interface_language==language.code %}selected{% endif %}>{{ language.name }}</option>
+                    {% endfor %}
                 </select>
+
             </li>
         </ul>
     </nav>
@@ -312,6 +314,7 @@
 {% endblock %}
 {% block scripts %}
 <script>
+    var INTERFACE_LANGUAGE_SELECT_URL = "{{ url_for('home.interface_language')|safe }}";
     var COLOUR_NAMER_URL = "{{ url_for('namer.languages')|safe }}";
     var COLOUR_NAMER_LANGUAGES_URL = "{{ url_for('namer.languages')|safe }}";
     var COLOUR_NAMER_COLOURS_URL = "{{ url_for('namer.get_colours')|safe }}";
