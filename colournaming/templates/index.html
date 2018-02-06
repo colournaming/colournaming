@@ -1,13 +1,20 @@
 {% extends 'base.html' %}
 {% block content %}
 <header>
+    <nav class="language-navigation">
+        <select id="interface-language">
+            {% for language in interface_languages %}
+            <option value='{{ language.code }}' {% if interface_language==language.code %}selected{% endif %}>{{ language.name }}</option>
+            {% endfor %}
+        </select>
+    </nav>
     <h1>
         <a href="#">{{ _('Colour Naming') }}</a>
     </h1>
     <div class="hamburger" id="hamburger">
         <span>Menu</span>
     </div>
-    <nav>
+    <nav class="menu-navigation">
         <ul>
             <li>
                 <a href="#colour-namer">{{ _('Colour namer') }}</a>
@@ -17,14 +24,6 @@
             </li>
             <li>
                 <a href="#contact">{{ _('Contact') }}</a>
-            </li>
-            <li>
-                <select id="interface-language">
-                    {% for language in interface_languages %}
-                    <option value='{{ language.code }}' {% if interface_language==language.code %}selected{% endif %}>{{ language.name }}</option>
-                    {% endfor %}
-                </select>
-
             </li>
         </ul>
     </nav>
