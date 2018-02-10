@@ -55,13 +55,9 @@ function resetSelectName (hexCode) {
 }
 
 function resetAgreement () {
-  const $agreementSelect = $('select#agreement');
-  const $languageSelect = $('select#language');
-  $agreementSelect
-    .blur()
-    .val('-')
-    .children(':first-child')
-    .attr('selected', 'selected');
+  console.log('in agreement reset');
+  const $agreementSelect = $('select#agreement :first-child')[0]; 
+  $agreementSelect.selected = true;
 }
 
 function updateNames () {
@@ -115,7 +111,7 @@ function onAgreementSelectChange (event) {
   if (agreement_level == "") {
     return;
   }
-  rgb_selected = hexToRGB($.farbtastic('#colour-picker').color.substring(1));
+  var rgb_selected = hexToRGB($.farbtastic('#colour-picker').color.substring(1));
   console.log(rgb_selected);
   $.post(COLOUR_NAMER_AGREEMENT_URL, {
     csrf_token: $('#name_agreement_form #csrf_token')[0].value,
