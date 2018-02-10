@@ -40,13 +40,8 @@ def get_random_target():
 
 def response_count_percentage(this_count):
     """Get the percentage of participants with response counts less than a participant's."""
-    response_counts = db.session.query(
-        func.count(ColourResponse.id)).\
-        group_by(ColourResponse.participant_id).\
-        all()
-    num_participants = db.session.query(Participant.id).count()
-    num_below = len([r for r in response_counts if r[0] < this_count])
-    return (num_below / num_participants) * 100.0
+    num_targets = db.session.query(ColourTarget.id).count()
+    return (this_count / num_targets) * 100.0
 
 
 def save_participant(experiment):
