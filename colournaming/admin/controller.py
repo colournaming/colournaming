@@ -5,6 +5,7 @@ from ..experiment.model import Participant
 from ..namer.model import NameAgreement
 
 RESPONSE_FIELDNAMES = [
+    'id',
     'participant_id',
     'created_on',
     'target_id',
@@ -13,6 +14,7 @@ RESPONSE_FIELDNAMES = [
 ]
 
 AGREEMENT_FIELDNAMES = [
+    'id',
     'language_code',
     'red',
     'green',
@@ -22,10 +24,10 @@ AGREEMENT_FIELDNAMES = [
 
 PARTICIPANT_FIELDNAMES = [
     'id',
-    'ip_address',
     'created_on',
     'greyscale_steps',
     'browser_language',
+    'interface_language',
     'user_agent',
     'age',
     'gender',
@@ -44,7 +46,8 @@ PARTICIPANT_FIELDNAMES = [
     'education_level',
     'language_experience',
     'colour_experience',
-    'colour_target_disappeared'
+    'colour_target_disappeared',
+    'latlong'
 ]
 
 def get_responses():
@@ -55,6 +58,7 @@ def get_responses():
     for participant in participants:
         for response in participant.responses:
             output_csv.writerow({
+                'id': response.id,
                 'participant_id': participant.id,
                 'created_on': response.created_on.strftime('%Y%m%d %H:%M %Z'),
                 'target_id': response.target_id,
@@ -70,6 +74,7 @@ def get_agreements():
     output_csv.writeheader()
     for agreement in agreements:
         output_csv.writerow({
+            'id': agreement.id,
             'language_code': agreement.language.code,
             'red': agreement.red,
             'green': agreement.green,
@@ -86,10 +91,10 @@ def get_participants():
     for participant in participants:
         output_csv.writerow({
             'id': participant.id,
-            'ip_address': participant.ip_address,
             'created_on': participant.created_on.strftime('%Y%m%d %H:%M %Z'),
             'greyscale_steps': participant.greyscale_steps,
             'browser_language': participant.browser_language,
+            'interface_language': participant.interface_language,
             'user_agent': participant.user_agent,
             'age': participant.age,
             'gender': participant.gender,
@@ -109,5 +114,6 @@ def get_participants():
             'language_experience': participant.language_experience,
             'colour_experience': participant.colour_experience,
             'colour_target_disappeared': participant.colour_target_disappeared
+            'latlong': participant.location
         })
     return output.getvalue()
