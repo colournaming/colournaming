@@ -51,6 +51,7 @@ def save_participant(experiment):
     if participant_id is None:
         participant = Participant(
             browser_language=experiment['client']['browser_language'],
+            interface_language=experiment['client']['interface_language'],
             user_agent=experiment['client']['user_agent'],
             greyscale_steps=experiment['display']['greyscale_levels'],
             screen_resolution_w=experiment['display']['screen_width'],

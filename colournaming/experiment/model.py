@@ -86,6 +86,7 @@ class Participant(db.Model):
     created_on = db.Column(db.DateTime(timezone=True), default=datetime.datetime.utcnow)
     greyscale_steps = db.Column(db.Integer)
     browser_language = db.Column(db.String)
+    interface_language = db.Column(db.String)
     user_agent = db.Column(db.String)
     colour_vision_score = db.Column(db.Integer)
     age = db.Column(db.Integer)

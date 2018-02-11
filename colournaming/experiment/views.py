@@ -24,7 +24,8 @@ def start():
     session['experiment'] = {
         'client': {
             'user_agent': request.user_agent.string,
-            'browser_language': browser_language
+            'browser_language': browser_language,
+            'interface_language': session.get('interface_language', browser_language)
         },
         'response_count': 0
     }
