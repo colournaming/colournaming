@@ -101,5 +101,6 @@ def update_participant(experiment):
     participant.screen_temperature = experiment['observer']['screen_temperature']
     participant.screen_distance = experiment['observer']['screen_distance']
     participant.device = experiment['observer']['device']
+    participant.location = experiment['observer']['location']
     participant.colour_target_disappeared = experiment['vision']['square_disappeared']
     db.session.commit()

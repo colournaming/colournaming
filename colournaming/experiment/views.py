@@ -126,7 +126,8 @@ def observer_information():
             'screen_light': form.screen_light.data,
             'screen_temperature': form.screen_temperature.data,
             'screen_distance': form.screen_distance.data,
-            'device': form.display_device.data
+            'device': form.display_device.data,
+            'location': form.location.data
         }
         session.modified = True
         controller.update_participant(session['experiment'])

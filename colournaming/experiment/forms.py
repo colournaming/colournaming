@@ -25,6 +25,7 @@ class DisplayForm(FlaskForm):
 class ObserverInformationForm(FlaskForm):
     """Form for gathering observer information."""
 
+    location = TextField(widget=HiddenInput())
     age_choices = [(-1, '-')] + list(zip(range(16, 100), range(16, 100)))
     age = SelectField(
         choices=age_choices,

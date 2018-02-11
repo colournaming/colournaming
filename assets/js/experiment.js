@@ -7,6 +7,13 @@ const updateResults = (delta) => {
 };
 const $levels = document.getElementById('levels');
 
+if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function(location) {
+        console.log(location);
+        updateResults({location: String(location.coords.latitude + ',' + location.coords.longitude)});
+    })
+}
+        
 const submitForm = (data, location) => {
     const formData = new FormData();
 
@@ -354,6 +361,7 @@ if ($age !== null && $distance !== null && $educationalLevel !== null && $enviro
             screen_light: results.environment,
             screen_temperature: results.screenTemperature,
             display_device: results.displayDevice,
+            location: results.location
         }, $thankYouPage.href);
     });
 
