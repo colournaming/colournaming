@@ -107,6 +107,7 @@ class Participant(db.Model):
     language_experience = db.Column(postgresql.ENUM(LanguageExperience))
     colour_experience = db.Column(postgresql.ENUM(ColourExperience))
     colour_target_disappeared = db.Column(db.Boolean)
+    location = db.Column(db.String)
 
 
 class ColourTarget(db.Model):
