@@ -28,7 +28,7 @@ function doQuery (hexcode, responseHandler) {
 
   $.get(COLOUR_NAMER_URL + $languageSelect.val() + '/name?colour=' + hexcodeValues, function (data) {
     var topMatch = data.colours.shift()
-    var colourName = topMatch.name;
+    var colourName = topMatch.name.replace('_', ' ');
     var topHex = rgbToHex(topMatch.red, topMatch.green, topMatch.blue);
     playSound(topHex);
     var $synonyms = $('<ul/>');
