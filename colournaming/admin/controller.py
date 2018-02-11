@@ -9,6 +9,9 @@ RESPONSE_FIELDNAMES = [
     'participant_id',
     'created_on',
     'target_id',
+    'red',
+    'green',
+    'blue',
     'response_time',
     'name',
 ]
@@ -62,6 +65,9 @@ def get_responses():
                 'participant_id': participant.id,
                 'created_on': response.created_on.strftime('%Y%m%d %H:%M %Z'),
                 'target_id': response.target_id,
+                'red': response.target.red,
+                'green': response.target.green,
+                'blue': response.target.blue,
                 'response_time': response.response_time,
                 'name': response.name
             })
