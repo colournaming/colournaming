@@ -113,7 +113,7 @@ def get_participants():
             'education_level': participant.education_level,
             'language_experience': participant.language_experience,
             'colour_experience': participant.colour_experience,
-            'colour_target_disappeared': participant.colour_target_disappeared
+            'colour_target_disappeared': participant.colour_target_disappeared,
             'latlong': participant.location
         })
     return output.getvalue()
