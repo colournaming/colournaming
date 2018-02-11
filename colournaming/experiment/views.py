@@ -23,7 +23,6 @@ def start():
         browser_language = None
     session['experiment'] = {
         'client': {
-            'ip_address': request.remote_addr,
             'user_agent': request.user_agent.string,
             'browser_language': browser_language
         },

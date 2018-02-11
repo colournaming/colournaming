@@ -83,7 +83,6 @@ class Participant(db.Model):
     __tablename__ = 'participants'
 
     id = db.Column(db.Integer, primary_key=True)
-    ip_address = db.Column(db.String)
     created_on = db.Column(db.DateTime(timezone=True), default=datetime.datetime.utcnow)
     greyscale_steps = db.Column(db.Integer)
     browser_language = db.Column(db.String)

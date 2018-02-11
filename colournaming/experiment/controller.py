@@ -50,7 +50,6 @@ def save_participant(experiment):
     participant_id = experiment.get('participant_id')
     if participant_id is None:
         participant = Participant(
-            ip_address=experiment['client']['ip_address'],
             browser_language=experiment['client']['browser_language'],
             user_agent=experiment['client']['user_agent'],
             greyscale_steps=experiment['display']['greyscale_levels'],
