@@ -7,7 +7,7 @@ from ..namer.model import NameAgreement
 RESPONSE_FIELDNAMES = [
     'id',
     'participant_id',
-    'created_on',
+    'date_modified',
     'target_id',
     'red',
     'green',
@@ -27,7 +27,7 @@ AGREEMENT_FIELDNAMES = [
 
 PARTICIPANT_FIELDNAMES = [
     'id',
-    'created_on',
+    'date_modified',
     'greyscale_steps',
     'browser_language',
     'interface_language',
