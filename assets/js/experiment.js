@@ -9,7 +9,6 @@ const $levels = document.getElementById('levels');
 
 if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(location) {
-        console.log(location);
         updateResults({location: String(location.coords.latitude + ',' + location.coords.longitude)});
     })
 }
