@@ -1,4 +1,4 @@
-# Russian translations for PROJECT.
+# Translations template for PROJECT.
 # Copyright (C) 2018 ORGANIZATION
 # This file is distributed under the same license as the PROJECT project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
@@ -8,12 +8,9 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2018-02-10 10:03+0000\n"
-"PO-Revision-Date: 2018-02-12 13:19+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: ru\n"
-"Language-Team: ru <LL@li.org>\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -21,245 +18,245 @@ msgstr ""
 
 #: colournaming/experiment/forms.py:31
 msgid "What is your age?"
-msgstr ""
+msgstr "Сколько Вам лет?"
 
 #: colournaming/experiment/forms.py:38
 msgid "Female"
-msgstr ""
+msgstr "Женский"
 
 #: colournaming/experiment/forms.py:39
 msgid "Male"
-msgstr ""
+msgstr "Мужской"
 
 #: colournaming/experiment/forms.py:40
 msgid "Other"
-msgstr ""
+msgstr "Другой"
 
 #: colournaming/experiment/forms.py:42
 msgid "To which gender do you most identify?"
-msgstr ""
+msgstr "Укажите Ваш пол"
 
 #: colournaming/experiment/forms.py:46
 msgid "Please specify"
-msgstr ""
+msgstr "Пожалуйста, уточните"
 
 #: colournaming/experiment/forms.py:52 colournaming/experiment/forms.py:62
 msgid "Beginner"
-msgstr ""
+msgstr "Начальный уровень"
 
 #: colournaming/experiment/forms.py:53 colournaming/experiment/forms.py:63
 msgid "Intermediate"
-msgstr ""
+msgstr "Средний уровень"
 
 #: colournaming/experiment/forms.py:54 colournaming/experiment/forms.py:64
 msgid "Advanced"
-msgstr ""
+msgstr "Продвинутый уровень"
 
 #: colournaming/experiment/forms.py:56
 msgid "Describe your experience working with colour"
-msgstr ""
+msgstr "Опишите Ваш опыт работы с цветом"
 
 #: colournaming/experiment/forms.py:65
 msgid "Bilingual"
-msgstr ""
+msgstr "Я – билингв, говорю на двух языках"
 
 #: colournaming/experiment/forms.py:66
 msgid "Native speaker"
-msgstr ""
+msgstr "Носитель языка"
 
 #: colournaming/experiment/forms.py:68
 msgid "Describe your skill in the language used in this experiment"
-msgstr ""
+msgstr "Укажите уровень владения языком, который Вы выбрали для участия в эксперименте"
 
 #: colournaming/experiment/forms.py:74
 msgid "No qualifications"
-msgstr ""
+msgstr "Нет законченного образования"
 
 #: colournaming/experiment/forms.py:75
 msgid "Secondary school degree"
-msgstr ""
+msgstr "Среднее общее образование"
 
 #: colournaming/experiment/forms.py:76
 msgid "Bachelors degree"
-msgstr ""
+msgstr "Высшее образование (бакалавр)"
 
 #: colournaming/experiment/forms.py:77
 msgid "Masters degree"
-msgstr ""
+msgstr "Высшее образование (магистр)"
 
 #: colournaming/experiment/forms.py:78
 msgid "Professional degree"
-msgstr ""
+msgstr "Профессиональное образование"
 
 #: colournaming/experiment/forms.py:79
 msgid "Doctorate degree"
-msgstr ""
+msgstr "Ученая степень (кандидат, доктор наук)"
 
 #: colournaming/experiment/forms.py:81
 msgid "What is the highest level of education you have completed?"
-msgstr ""
+msgstr "Укажите максимальный уровень Вашего образования"
 
 #: colournaming/experiment/forms.py:88
 msgid "In which country did you grow up?"
-msgstr ""
+msgstr "В какой стране прошло Ваше детство?"
 
 #: colournaming/experiment/forms.py:93
 msgid "Where are you living?"
-msgstr ""
+msgstr "Где Вы живете?"
 
 #: colournaming/experiment/forms.py:99
 msgid "Smartphone"
-msgstr ""
+msgstr "Смартфон"
 
 #: colournaming/experiment/forms.py:100
 msgid "Pad"
-msgstr ""
+msgstr "Планшет"
 
 #: colournaming/experiment/forms.py:101
 msgid "Laptop"
-msgstr ""
+msgstr "Ноутбук"
 
 #: colournaming/experiment/forms.py:102
 msgid "Desktop"
-msgstr ""
+msgstr "Стационарный компьютер"
 
 #: colournaming/experiment/forms.py:104
 msgid "What is your display device?"
-msgstr ""
+msgstr "Какое устройство Вы сейчас используете?"
 
 #: colournaming/experiment/forms.py:110
 msgid "Neutral white"
-msgstr ""
+msgstr "Нейтральный белый"
 
 #: colournaming/experiment/forms.py:111
 msgid "Warm white"
-msgstr ""
+msgstr "Теплый белый"
 
 #: colournaming/experiment/forms.py:112
 msgid "Bluish white"
-msgstr ""
+msgstr "Голубовато-белый"
 
 #: colournaming/experiment/forms.py:113
 msgid "Yellowish white"
-msgstr ""
+msgstr "Желтовато-белый"
 
 #: colournaming/experiment/forms.py:115
 msgid "Describe the white graphic elements on your screen"
-msgstr ""
+msgstr "Опишите цвет белых графических элементов на Вашем экране"
 
 #: colournaming/experiment/forms.py:121 colournaming/experiment/forms.py:132
 msgid "Dark"
-msgstr ""
+msgstr "Темное"
 
 #: colournaming/experiment/forms.py:122
 msgid "Dim"
-msgstr ""
+msgstr "Плохо освещенное"
 
 #: colournaming/experiment/forms.py:123
 msgid "Average"
-msgstr ""
+msgstr "Обычное"
 
 #: colournaming/experiment/forms.py:124
 msgid "Bright"
-msgstr ""
+msgstr "Яркое"
 
 #: colournaming/experiment/forms.py:126
 msgid "Describe the surrounding environment behind your device"
-msgstr ""
+msgstr "Опишите пространство за экраном"
 
 #: colournaming/experiment/forms.py:133
 msgid "Typical domestic"
-msgstr ""
+msgstr "Обычные для дома"
 
 #: colournaming/experiment/forms.py:134
 msgid "Mid daylight"
-msgstr ""
+msgstr "Неяркий дневной свет"
 
 #: colournaming/experiment/forms.py:135
 msgid "Full daylight"
-msgstr ""
+msgstr "Яркий дневной свет"
 
 #: colournaming/experiment/forms.py:136
 msgid "Typical office"
-msgstr ""
+msgstr "Обычные для офиса"
 
 #: colournaming/experiment/forms.py:138
 msgid "Describe the lighting conditions of your environment"
-msgstr ""
+msgstr "Опишите условия освещенности, в которых Вы находитесь"
 
 #: colournaming/experiment/forms.py:144 colournaming/experiment/forms.py:159
 msgid "What distance are you from your monitor in cm?"
-msgstr ""
+msgstr "На каком расстоянии от экрана Вы находитесь в см?"
 
 #: colournaming/experiment/forms.py:156
 #: colournaming/templates/colour_vision.html:12
 msgid "No"
-msgstr ""
+msgstr "Нет"
 
 #: colournaming/experiment/forms.py:157
 #: colournaming/templates/colour_vision.html:13
 msgid "Yes"
-msgstr ""
+msgstr "Да"
 
 #: colournaming/experiment/views.py:148
 msgid "You are in the 0% top colour namers."
-msgstr ""
+msgstr "Вы среди 0% лучших назывателей цвета."
 
 #: colournaming/home/forms.py:7
 msgid "First name"
-msgstr ""
+msgstr "Имя"
 
 #: colournaming/home/forms.py:8
 msgid "Last name"
-msgstr ""
+msgstr "Фамилия"
 
 #: colournaming/home/forms.py:9
 msgid "Email"
-msgstr ""
+msgstr "Email"
 
 #: colournaming/home/forms.py:10
 msgid "Organisation"
-msgstr ""
+msgstr "Организация"
 
 #: colournaming/home/forms.py:11
 msgid "Your message"
-msgstr ""
+msgstr "Ваше сообщение"
 
 #: colournaming/namer/forms.py:18
 msgid "Do you agree?"
-msgstr ""
+msgstr "Вы согласны?"
 
 #: colournaming/namer/forms.py:19
 msgid "Strongly disagree"
-msgstr ""
+msgstr "Полностью не согласен"
 
 #: colournaming/namer/forms.py:20
 msgid "Disagree"
-msgstr ""
+msgstr "Согласен"
 
 #: colournaming/namer/forms.py:21
 msgid "Undecided"
-msgstr ""
+msgstr "Пока не решил"
 
 #: colournaming/namer/forms.py:22
 msgid "Agree"
-msgstr ""
+msgstr "Согласен"
 
 #: colournaming/namer/forms.py:23
 msgid "Strongly agree"
-msgstr ""
+msgstr "Полностью согласен"
 
 #: colournaming/templates/base.html:9 colournaming/templates/index.html:12
 msgid "Colour Naming"
-msgstr ""
+msgstr "Называние цвета "
 
 #: colournaming/templates/base_experiment.html:8
 msgid "Colour Naming Experiment"
-msgstr ""
+msgstr "Эксперимент по называнию цвета"
 
 #: colournaming/templates/colour_vision.html:4
 msgid "Colour Vision Task"
-msgstr ""
+msgstr "Проверка цветового зрения"
 
 #: colournaming/templates/colour_vision.html:7
 msgid ""
@@ -268,42 +265,42 @@ msgid ""
 "all of the time. The movie lasts for 90 secs and all you need to do is "
 "play it and remember if the 'coloured' square disappeared at any time "
 "during the movie."
-msgstr ""
+msgstr "Размещенное ниже видео показывает движущийся цветной квадратик. Этот квадратик меняет свой цвет. Вы можете видеть этот квадратик постоянно или время от времени. Видео длится 90 секунд. Ваша задача – посмотреть его и запомнить, исчезал ли на какое-то время цветной квадратик."
 
 #: colournaming/templates/colour_vision.html:9
 msgid "Did the 'coloured' square disappear?"
-msgstr ""
+msgstr "Исчезал ли на какое-то время цветной квадратик?"
 
 #: colournaming/templates/display_properties.html:4
 msgid "Display Properties Task"
-msgstr ""
+msgstr "Настройка характеристик дисплея"
 
 #: colournaming/templates/display_properties.html:7
 msgid ""
 "Adjust the brightness of your display if necessary until you can see the "
 "differences between all 11 steps of the greyscale test image. Disable "
 "Night Shift mode or blue light filters if applicable."
-msgstr ""
+msgstr "Если нужно, настройте яркость Вашего дисплея так, чтобы Вы могли различать все 11 уровней серой шкалы. Отключите ночной режим и фильтры синего цвета, если Вы их использовали."
 
 #: colournaming/templates/display_properties.html:23
 msgid "Confirm how many steps you can see?"
-msgstr ""
+msgstr "Cколько уровней Вы видите?"
 
 #: colournaming/templates/index.html:20 colournaming/templates/index.html:45
 msgid "Colour namer"
-msgstr ""
+msgstr "Называтель цвета"
 
 #: colournaming/templates/index.html:23 colournaming/templates/index.html:93
 msgid "Research"
-msgstr ""
+msgstr "Исследование"
 
 #: colournaming/templates/index.html:26 colournaming/templates/index.html:285
 msgid "Contact"
-msgstr ""
+msgstr "Контактные данные"
 
 #: colournaming/templates/index.html:34
 msgid "Let's play a game, how many colours can you name?"
-msgstr ""
+msgstr "Давайте сыграем в игру: сколько цветов Вы можете назвать?"
 
 #: colournaming/templates/index.html:36
 msgid ""
@@ -327,98 +324,98 @@ msgid ""
 "supervisors <a href=\"mailto:ucfslwm[at]ucl.ac.uk\">Lindsay MacDonald</a>"
 " and <a href=\"mailto:l.griffin[at]ucl.ac.uk\">Lewis Griffin</a> of "
 "University College London if you have any questions."
-msgstr ""
+msgstr "Задания этого эксперимента совершенно безопасны и, по мнению многих участников, увлекательны.  Исследование направлено на то, чтобы улучшить цветовую коммуникацию в многоязычной среде. Если у Вас есть какие-то вопросы, Вы можете задать их ведущему исследователю <a href=\"mailto:d.mylonas[at]ucl.ac.uk\">Димитрису Милонасу</a> или руководителям проекта <a href=\"mailto:ucfslwm[at]ucl.ac.uk\">Линдсею МакДональду</a> и <a href=\"mailto:l.griffin[at]ucl.ac.uk\">Льюису Гриффину</a> из Университетского колледжа Лондона."
 
 #: colournaming/templates/index.html:40
 msgid ""
 "If you are 16 years of age or older, understand the statements and freely"
 " consent to participate in the study, click on the 'Start' button to "
 "begin the experiment."
-msgstr ""
+msgstr "Если Вам исполнилось 16 лет,  Вы понимаете условия и согласны принять участие в исследовании, нажмите кнопку "Начать", чтобы начать эксперимент."
 
 #: colournaming/templates/index.html:41
 msgid "Start"
-msgstr ""
+msgstr "Начать"
 
 #: colournaming/templates/index.html:61
 msgid "by name"
-msgstr ""
+msgstr "по названию"
 
 #: colournaming/templates/index.html:69
 msgid "Colour name"
-msgstr ""
+msgstr "Цветообозначение"
 
 #: colournaming/templates/index.html:71
 msgid "Synonyms"
-msgstr ""
+msgstr "Синонимы"
 
 #: colournaming/templates/index.html:89
 msgid ""
 "This is a βeta version of Colournamer. You will need JavaScript enabled "
 "and a browser that supports HTML5 web audio."
-msgstr ""
+msgstr "Это бетта версия назывателя цвета. У Вас должен быть включен JavaScript и установлен браузер, поддерживающий HTML5 web audio."
 
 #: colournaming/templates/index.html:96
 msgid ""
 "This research aims to develop an online colour naming model to facilitate"
 " colour communication within and between cultures."
-msgstr ""
+msgstr "Этот проект направлен на разработку новой oн-лайн модели цветообозначений и улучшение межкультурной коммуникации."
 
 #: colournaming/templates/index.html:287
 msgid ""
 "Please use the following communication form to give us your feedback and "
 "comments or if you wish to inform you about the results of this research."
-msgstr ""
+msgstr "Здесь Вы можете оставить свои пожелания и комментарии, а также запростить информацию о результатах эксперимента."
 
 #: colournaming/templates/index.html:300
 msgid "Submit"
-msgstr ""
+msgstr "Отправить"
 
 #: colournaming/templates/index.html:311
 msgid "Made in London and Berlin"
-msgstr ""
+msgstr "Произведено в Лондоне и Берлине"
 
 #: colournaming/templates/name_colour.html:4
 msgid "Colour Naming Task"
-msgstr ""
+msgstr "Называние цвета "
 
 #: colournaming/templates/name_colour.html:7
 msgid ""
 "Name each colour sample with the best representative colour term that you"
 " remember.<br>Name as many colour samples as you can for higher ranking "
 "on colour namers. Your response time will be recorded."
-msgstr ""
+msgstr "Назовите каждый цвет, используя наиболее подходящее цветообозначение. <br>Постарайтесь назвать как можно больше цветовых образцов, чтобы получить более высокий статус среди назывателей цвета. Скорость Ваших ответов будет записываться."
 
 #: colournaming/templates/name_colour.html:14
 msgid "Name the colour of the patch"
-msgstr ""
+msgstr "Назовите цвет "
 
 #: colournaming/templates/name_colour.html:28
 msgid "Next"
-msgstr ""
+msgstr "Следующий"
 
 #: colournaming/templates/observer_information.html:5
 msgid "Observer Information Task"
-msgstr ""
+msgstr "Информация об участнике"
 
 #: colournaming/templates/observer_information.html:8
 msgid ""
 "Please provide us with some information about your background and viewing"
 " conditions. This will help us to better understand the context of your "
 "responses."
-msgstr ""
+msgstr "Пожалуйста, расскажите нам немного о себе и об условиях, в которых Вы проходили эксперимент. Эта информация поможет нам лучше понять Ваши ответы."
 
 #: colournaming/templates/thankyou.html:5
 msgid "Thank you"
-msgstr ""
+msgstr "Спасибо "
 
 #: colournaming/templates/thankyou.html:8
 msgid "Thank you for participating."
-msgstr ""
+msgstr "Спасибо за участие."
 
 #: colournaming/templates/thankyou.html:8
 msgid "You can now share the link of the experiment with your friends."
-msgstr ""
+msgstr "Вы можете отправить ссылку на эксперимент Вашим друзьям."
 
 #: colournaming/templates/thankyou.html:14
 msgid ""
@@ -426,5 +423,5 @@ msgid ""
 "across languages. Please feel free to contact us and visit our research "
 "page for more information. Find below your responses in white and the "
 "most popular colour names in black:"
-msgstr ""
+msgstr "Ваши ответы будут использоваться для того, чтобы улучшить цветовую коммуникацию между носителями различных языков. Для получения более подробной информации Вы можете написать нам или посетить страницу нашего проекта в интернете. Ниже Вы увидите свои ответы (белым) и наиболее популярные цветонаименования (черным)."
 
