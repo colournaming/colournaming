@@ -167,7 +167,7 @@ footer {
     stroke: #808080;
     stroke-linecap: round;
     stroke-linejoin: round;
-    stroke-width: 7px;
+    stroke-width: 3px;
 }
 
 .text-button {
@@ -251,7 +251,7 @@ footer {
     font-size: 16px;
     height: 30px;
     padding: 0;
-    width: 95px;
+    width: 30px;
 }
 
 video {
