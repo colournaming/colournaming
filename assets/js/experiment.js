@@ -7,10 +7,13 @@ const updateResults = (delta) => {
 };
 const $levels = document.getElementById('levels');
 
-if (navigator.geolocation) {
+if (window.location.href.endsWith('observer_information.html')) {
+  /* request geolocation if we're on the observer information page */
+  if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(location) {
         updateResults({location: String(location.coords.latitude + ',' + location.coords.longitude)});
     })
+  }
 }
         
 const submitForm = (data, location) => {
