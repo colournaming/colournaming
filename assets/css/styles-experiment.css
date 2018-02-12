@@ -254,6 +254,11 @@ footer {
     width: 95px;
 }
 
+button#next-colour {
+    height: 30px;
+    width: 30px;
+}
+
 video {
     background-color: #978D86;
     display: block;

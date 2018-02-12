@@ -329,11 +329,6 @@ textarea {
     width: calc(100% - 2em);
 }
 
-button#next-colour {
-    height: 30px;
-    width: 30px;
-}
-
 .submit-button {
     background-color: #808080;
     border: none;
