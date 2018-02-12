@@ -9,6 +9,7 @@ const $levels = document.getElementById('levels');
 
 if (window.location.href.endsWith('observer_information.html')) {
   /* request geolocation if we're on the observer information page */
+  console.log('requesting geolocation');
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(location) {
         updateResults({location: String(location.coords.latitude + ',' + location.coords.longitude)});
