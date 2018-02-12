@@ -236,7 +236,7 @@ footer {
     outline: none;
     padding: 1px 2px;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    width: 239px;
+    width: 300px;
 }
 
 .input-group input::placeholder {
