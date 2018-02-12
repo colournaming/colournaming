@@ -18,245 +18,245 @@ msgstr ""
 
 #: colournaming/experiment/forms.py:31
 msgid "What is your age?"
-msgstr "Πόσο χρονών είστε;"
+msgstr "年齢をお答えください。"
 
 #: colournaming/experiment/forms.py:38
 msgid "Female"
-msgstr "Θηλυκό"
+msgstr "女性"
 
 #: colournaming/experiment/forms.py:39
 msgid "Male"
-msgstr "Αρσενικό"
+msgstr "男性"
 
 #: colournaming/experiment/forms.py:40
 msgid "Other"
-msgstr "Άλλο"
+msgstr "その他"
 
 #: colournaming/experiment/forms.py:42
 msgid "To which gender do you most identify?"
-msgstr "Με ποιο φύλο ταυτίζεστε περισσότερο;"
+msgstr "性別をお答えください。"
 
 #: colournaming/experiment/forms.py:46
 msgid "Please specify"
-msgstr "Παρακαλώ προσδιορίστε"
+msgstr "指定してください。"
 
 #: colournaming/experiment/forms.py:52 colournaming/experiment/forms.py:62
 msgid "Beginner"
-msgstr "Αρχάρια "
+msgstr "初級"
 
 #: colournaming/experiment/forms.py:53 colournaming/experiment/forms.py:63
 msgid "Intermediate"
-msgstr "Ενδιάμεση"
+msgstr "中級"
 
 #: colournaming/experiment/forms.py:54 colournaming/experiment/forms.py:64
 msgid "Advanced"
-msgstr "Άπταιστη"
+msgstr "上級"
 
 #: colournaming/experiment/forms.py:56
 msgid "Describe your experience working with colour"
-msgstr "Περιγράψτε την εμπειρία που έχετε δουλεύοντας με χρώματα"
+msgstr "色彩に関する業務経験をお答えください。"
 
 #: colournaming/experiment/forms.py:65
 msgid "Bilingual"
-msgstr "Δίγλωσση"
+msgstr "バイリンガル"
 
 #: colournaming/experiment/forms.py:66
 msgid "Native speaker"
-msgstr "Μητρική"
+msgstr "母国語"
 
 #: colournaming/experiment/forms.py:68
 msgid "Describe your skill in the language used in this experiment"
-msgstr "Περιγράψτε τη γλωσσική ικανότητα σας σε αυτό το πείραμα"
+msgstr "使用言語の熟練度をお答えください。"
 
 #: colournaming/experiment/forms.py:74
 msgid "No qualifications"
-msgstr "Γυμνάσιο"
+msgstr "該当なし"
 
 #: colournaming/experiment/forms.py:75
 msgid "Secondary school degree"
-msgstr "Λύκειο"
+msgstr "高校卒業"
 
 #: colournaming/experiment/forms.py:76
 msgid "Bachelors degree"
-msgstr "Πρώτο Πτυχίο Πανεπιστημίου"
+msgstr "大学卒業"
 
 #: colournaming/experiment/forms.py:77
 msgid "Masters degree"
-msgstr "Μεταπτυχιακό Πτυχίο"
+msgstr "大学院修士修了"
 
 #: colournaming/experiment/forms.py:78
 msgid "Professional degree"
-msgstr "Επαγγελματικό δίπλωμα"
+msgstr "専門職大学院修了"
 
 #: colournaming/experiment/forms.py:79
 msgid "Doctorate degree"
-msgstr "Διδακτορικό Πτυχίο"
+msgstr "大学院博士修了"
 
 #: colournaming/experiment/forms.py:81
 msgid "What is the highest level of education you have completed?"
-msgstr "Τι τίτλους σπουδών έχετε;"
+msgstr "学位レベルをお答えください。"
 
 #: colournaming/experiment/forms.py:88
 msgid "In which country did you grow up?"
-msgstr "Σε ποια χώρα έχετε μεγαλώσει;"
+msgstr "出身地をお答えください。"
 
 #: colournaming/experiment/forms.py:93
 msgid "Where are you living?"
-msgstr "Σε ποια χώρα κατοικείτε αυτή τη στιγμή;"
+msgstr "現在の居住地をお答えください。"
 
 #: colournaming/experiment/forms.py:99
 msgid "Smartphone"
-msgstr "Έξυπνο κινητό"
+msgstr "スマートフォン"
 
 #: colournaming/experiment/forms.py:100
 msgid "Pad"
-msgstr "Ταμπλέτα"
+msgstr "タブレット端末"
 
 #: colournaming/experiment/forms.py:101
 msgid "Laptop"
-msgstr "Φορητός υπολογιστής"
+msgstr "ノートパソコン"
 
 #: colournaming/experiment/forms.py:102
 msgid "Desktop"
-msgstr "Επιτραπέζιος υπολογιστής"
+msgstr "デスクトップパソコン"
 
 #: colournaming/experiment/forms.py:104
 msgid "What is your display device?"
-msgstr "Τι τεχνολογίας είναι η οθόνη σας;"
+msgstr "ご使用のディスプレイをお答えください。"
 
 #: colournaming/experiment/forms.py:110
 msgid "Neutral white"
-msgstr "Λευκό"
+msgstr "中間調の白"
 
 #: colournaming/experiment/forms.py:111
 msgid "Warm white"
-msgstr "Θερμό Λευκό"
+msgstr "暖かみのある白"
 
 #: colournaming/experiment/forms.py:112
 msgid "Bluish white"
-msgstr "Ψυχρό Λευκό"
+msgstr "青みのある白"
 
 #: colournaming/experiment/forms.py:113
 msgid "Yellowish white"
-msgstr "Κιτρινωπό"
+msgstr "黄色みのある白"
 
 #: colournaming/experiment/forms.py:115
 msgid "Describe the white graphic elements on your screen"
-msgstr "Περιγράψτε τη λευκότητα των άσπρων γραφικών στην οθόνη σας"
+msgstr "ご使用のディスプレイの白さをお答えください。"
 
 #: colournaming/experiment/forms.py:121 colournaming/experiment/forms.py:132
 msgid "Dark"
-msgstr "Σκοτεινό "
+msgstr "暗い"
 
 #: colournaming/experiment/forms.py:122
 msgid "Dim"
-msgstr "Μουντό"
+msgstr "薄暗い"
 
 #: colournaming/experiment/forms.py:123
 msgid "Average"
-msgstr "Φυσιολογικό"
+msgstr "平均的な明るさ"
 
 #: colournaming/experiment/forms.py:124
 msgid "Bright"
-msgstr "Φωτεινό"
+msgstr "明るい"
 
 #: colournaming/experiment/forms.py:126
 msgid "Describe the surrounding environment behind your device"
-msgstr "Περιγράψτε το περιβάλλον πίσω από την οθόνη σας;"
+msgstr "ご使用のディスプレイの周囲環境をお答えください。"
 
 #: colournaming/experiment/forms.py:133
 msgid "Typical domestic"
-msgstr "Τυπικός οικιακός φωτισμός"
+msgstr "一般的な屋内"
 
 #: colournaming/experiment/forms.py:134
 msgid "Mid daylight"
-msgstr "Μέσω φως ημέρας"
+msgstr "昼間"
 
 #: colournaming/experiment/forms.py:135
 msgid "Full daylight"
-msgstr "Λαμπερό φως ημέρας"
+msgstr "真昼間（白昼）"
 
 #: colournaming/experiment/forms.py:136
 msgid "Typical office"
-msgstr "Τυπικός φωτισμός γραφείου"
+msgstr "一般的なオフィス"
 
 #: colournaming/experiment/forms.py:138
 msgid "Describe the lighting conditions of your environment"
-msgstr "Περιγράψτε το τις συνθήκες φωτισμού σας;"
+msgstr "あなたの周囲環境の照明条件をお答えください。"
 
 #: colournaming/experiment/forms.py:144 colournaming/experiment/forms.py:159
 msgid "What distance are you from your monitor in cm?"
-msgstr "Ποια είναι η απόστασή σας από την οθόνη;"
+msgstr "ディスプレイの観察距離をcmでお答えください。"
 
 #: colournaming/experiment/forms.py:156
 #: colournaming/templates/colour_vision.html:12
 msgid "No"
-msgstr "Όχι"
+msgstr "いいえ"
 
 #: colournaming/experiment/forms.py:157
 #: colournaming/templates/colour_vision.html:13
 msgid "Yes"
-msgstr "Ναι"
+msgstr "はい"
 
 #: colournaming/experiment/views.py:148
 msgid "You are in the 0% top colour namers."
-msgstr "Βρίσκεστε στους κορυφαίους 0% ονομαστές χρωμάτων."
+msgstr "あなたは上位0%の色名回答者です。"
 
 #: colournaming/home/forms.py:7
 msgid "First name"
-msgstr "Όνομα"
+msgstr "名"
 
 #: colournaming/home/forms.py:8
 msgid "Last name"
-msgstr "Επώνυμο"
+msgstr "姓"
 
 #: colournaming/home/forms.py:9
 msgid "Email"
-msgstr "Email"
+msgstr "メールアドレス"
 
 #: colournaming/home/forms.py:10
 msgid "Organisation"
-msgstr "Οργανισμός"
+msgstr "所属"
 
 #: colournaming/home/forms.py:11
 msgid "Your message"
-msgstr "Το μήνυμα σας"
+msgstr "あなたのメッセージ"
 
 #: colournaming/namer/forms.py:18
 msgid "Do you agree?"
-msgstr "Συμφωνείτε;"
+msgstr "同意しますか？"
 
 #: colournaming/namer/forms.py:19
 msgid "Strongly disagree"
-msgstr "Διαφωνώ κάθετα"
+msgstr "全く同意できない"
 
 #: colournaming/namer/forms.py:20
 msgid "Disagree"
-msgstr "Διαφωνώ"
+msgstr "同意できる"
 
 #: colournaming/namer/forms.py:21
 msgid "Undecided"
-msgstr "Δεν γνωρίζω"
+msgstr "わからない"
 
 #: colournaming/namer/forms.py:22
 msgid "Agree"
-msgstr "Συμφωνώ"
+msgstr "同意できる"
 
 #: colournaming/namer/forms.py:23
 msgid "Strongly agree"
-msgstr "Συμφωνώ απολύτως"
+msgstr "強く同意できる"
 
 #: colournaming/templates/base.html:9 colournaming/templates/index.html:12
 msgid "Colour Naming"
-msgstr "Ονομασία Χρωμάτων"
+msgstr "Colour Naming"
 
 #: colournaming/templates/base_experiment.html:8
 msgid "Colour Naming Experiment"
-msgstr "Πείραμα Ονομασίας Χρωμάτων"
+msgstr "色名回答実験"
 
 #: colournaming/templates/colour_vision.html:4
 msgid "Colour Vision Task"
-msgstr "Τεστ Χρωματικής Αντίληψης"
+msgstr "色覚テスト"
 
 #: colournaming/templates/colour_vision.html:7
 msgid ""
@@ -265,42 +265,44 @@ msgid ""
 "all of the time. The movie lasts for 90 secs and all you need to do is "
 "play it and remember if the 'coloured' square disappeared at any time "
 "during the movie."
-msgstr "Το βίντεο που ακολουθεί απεικονίζει ένα κινούμενο «χρωματισμένο» τετράγωνο. Το τετράγωνο αλλάζει χρωματισμό καθώς παίζει το βίντεο. Πιθανώς να βλέπετε το χρώμα του σε κάποια διαστήματα ή και συνεχόμενα. Το βίντεο διαρκεί για 90 δευτερόλεπτα. Το μόνο που χρειάζεται να κάνετε είναι να το ξεκινήσετε και να θυμάστε αν το «χρωματισμένο» τετράγωνο εξαφανίστηκε κάποια στιγμή κατά τη διάρκεια του βίντεο."
+msgstr "
+この動画では、色のついた正方形が表示されます。動画を再生すると、正方形の色は変化します。断片的にもしくは連続して色をご覧いただけるかと思います。
+この動画は90秒です。動画の再生中に、色のついた正方形が消えたかどうかを確認してください。"
 
 #: colournaming/templates/colour_vision.html:9
 msgid "Did the 'coloured' square disappear?"
-msgstr "Υπήρξε κάποια στιγμή που το χρωματισμένο τετράγωνο εξαφανίστηκε;"
+msgstr "色のついた正方形は消えましたか？"
 
 #: colournaming/templates/display_properties.html:4
 msgid "Display Properties Task"
-msgstr "Τεστ Ρύθμισης Οθόνης"
+msgstr "画面調整テスト"
 
 #: colournaming/templates/display_properties.html:7
 msgid ""
 "Adjust the brightness of your display if necessary until you can see the "
 "differences between all 11 steps of the greyscale test image. Disable "
 "Night Shift mode or blue light filters if applicable."
-msgstr "Ρυθμίστε τη φωτεινότητα της οθόνης σας αν χρειάζεται ώστε να μπορείτε να δείτε τις διαφορές μεταξύ των 11 δειγμάτων της εικόνας. Απενεργοποιήστε το Night Swift / φίλτρα για τη μπλε ακτινοβολία του κινητού σας αν είναι ενεργοποιημένα."
+msgstr "テスト画像で示される11段階の明るさを区別できるように、ディスプレイの明るさを調整してください。可能であれば、ディスプレイのNight Shiftモードやブルーライト軽減機能を無効にしてください。"
 
 #: colournaming/templates/display_properties.html:23
 msgid "Confirm how many steps you can see?"
-msgstr "Επιβεβαιώστε πόσα ασπρόμαυρα βήματα μπορείτε να δείτε"
+msgstr "明るさは何段階区別できますか？"
 
 #: colournaming/templates/index.html:20 colournaming/templates/index.html:45
 msgid "Colour namer"
-msgstr "Ονομαστής Χρωμάτων"
+msgstr "Colour namer"
 
 #: colournaming/templates/index.html:23 colournaming/templates/index.html:93
 msgid "Research"
-msgstr "Έρευνα"
+msgstr "研究"
 
 #: colournaming/templates/index.html:26 colournaming/templates/index.html:285
 msgid "Contact"
-msgstr "Επικοινωνία"
+msgstr "お問い合わせ"
 
 #: colournaming/templates/index.html:34
 msgid "Let's play a game, how many colours can you name?"
-msgstr "Ελάτε να παίξουμε, πόσα χρώματα μπορείτε να ονομάσετε;"
+msgstr "ゲームの始まりです。あなたは何色の名前をつけられるでしょうか？"
 
 #: colournaming/templates/index.html:36
 msgid ""
@@ -312,7 +314,7 @@ msgid ""
 "Participation in this study is strictly anonymous and voluntary. All "
 "responses are treated as confidential and will be published in aggregated"
 " form only."
-msgstr "Καλώς ήρθατε στο διαδικτυακό πείραμα ονομασίας χρωμάτων. Το πείραμα είναι σχεδιασμένο να συλλέξει ονομασίες χρωμάτων σε διαφορετικές γλώσσες με τo αντίστοιχο χρωματικό τους εύρος. Θα σας ζητηθεί να ονομάσετε μια σειρά χρωματικών δειγμάτων και να μας δώσετε πληροφορίες για εσάς και τις συνθήκες παρατήρησης σας. Είστε ελεύθεροι να παραλείψετε οποιαδήποτε ερώτηση και να διακόψετε τη συμμετοχή σας οποιαδήποτε στιγμή χωρίς καμία κύρωση. Η συμμετοχή σε αυτή την μελέτη είναι ανώνυμη και εθελοντική. Οι απαντήσεις σας θα παραμείνουν εμπιστευτικές και θα δημοσιευτούν μόνο σε συγκεντρωτική μορφή."
+msgstr ""
 
 #: colournaming/templates/index.html:38
 msgid ""
@@ -324,52 +326,52 @@ msgid ""
 "supervisors <a href=\"mailto:ucfslwm[at]ucl.ac.uk\">Lindsay MacDonald</a>"
 " and <a href=\"mailto:l.griffin[at]ucl.ac.uk\">Lewis Griffin</a> of "
 "University College London if you have any questions."
-msgstr "Πολλοί  συμμετέχοντες βρίσκουν το πείραμα διασκεδαστικό και δεν γνωρίζουμε ούτε πιστεύουμε οτι υπάρχουν κίνδυνοι για τους συμμετέχοντες. Ο σκοπός αυτής της έρευνας είναι να βελτιώσει τη χρωματική επικοινωνία σε πολυγλωσσικά περιβάλλοντα. Αν έχετε οποιαδήποτε ερώτηση ή θέλετε να κάνετε κάποιο σχόλιο για εμάς παρακαλούμε ενημερώστε τον κύριο ερευνητή <a href=\"mailto:d.mylonas[at]ucl.ac.uk\">Δημήτρη Μυλωνά</a> ή τους επιβλέποντες <a href=\"mailto:ucfslwm[at]ucl.ac.uk\">Lindsay MacDonald<a/> and <a href=\"mailto:l.griffin@ucl.ac.uk\">Lewis Griffin</a> στο University College London."
+msgstr "多くの参加者はこの実験を楽しんでおり、これまでに実験を通じた不利益の報告はありません。この研究の目的は、多言語が使用される環境で色に関連するコミュニケーションを改善することです。不明な点は、University College Londonに所属する主担当研究者<a href=\"mailto:d.mylonas[at]ucl.ac.uk\">Dimitris Mylonas</a>、指導教員<a href=\"mailto:ucfslwm[at]ucl.ac.uk\">Lindsay MacDonald</a>、<a href=\"mailto:l.griffin[at]ucl.ac.uk\">Lewis Griffin</a>まで、お問い合わせください。"
 
 #: colournaming/templates/index.html:40
 msgid ""
 "If you are 16 years of age or older, understand the statements and freely"
 " consent to participate in the study, click on the 'Start' button to "
 "begin the experiment."
-msgstr "Αν είσαστε 16 χρονών ή μεγαλύτερος, έχετε κατανοήσει τις πληροφορίες που σας δόθηκαν και συμφωνείτε να πάρετε μέρος σε αυτή τη μελέτη ελεύθερα, παρακαλώ πατήστε την Εκκίνηση  για να ξεκινήσει το πείραμα."
+msgstr "もしあなたが16歳以上で、これまでの説明を理解し、研究に参加することに同意する場合には、「開始」ボタンをクリックして実験を開始してください。"
 
 #: colournaming/templates/index.html:41
 msgid "Start"
-msgstr "Εκκίνηση"
+msgstr "開始"
 
 #: colournaming/templates/index.html:61
 msgid "by name"
-msgstr "με όνομα"
+msgstr "色名リスト"
 
 #: colournaming/templates/index.html:69
 msgid "Colour name"
-msgstr "Ονομασία Χρώματος"
+msgstr "色名"
 
 #: colournaming/templates/index.html:71
 msgid "Synonyms"
-msgstr "Συνώνυμα"
+msgstr "類義語"
 
 #: colournaming/templates/index.html:89
 msgid ""
 "This is a βeta version of Colournamer. You will need JavaScript enabled "
 "and a browser that supports HTML5 web audio."
-msgstr "Αυτή είναι μία πειραματική έκδοση του ονομαστή χρωμάτων. Θα χρειαστείτε να ενεργοποιήσετε τη Javascript και ένα πρόγραμμα περιήγησης που να υποστηρίζει HTML5 web audio."
+msgstr "これは、ColourNamerのβ版です。ご使用には、JavaScriptとHTML5をサポートするブラウザが必要です。"
 
 #: colournaming/templates/index.html:96
 msgid ""
 "This research aims to develop an online colour naming model to facilitate"
 " colour communication within and between cultures."
-msgstr "Αυτή η έρευνα έχει ως σκοπό να δημιουργήσει ένα πολύγλωσσο πρόγραμμα ονομασίας χρωμάτων για να βελτιώσει τη χρωματική επικοινωνία μεταξύ διαφορετικών πολιτισμών. "
+msgstr "本研究の目的は、異文化間のカラーコミュニケーションを円滑にするために、オンライン上の色名モデルを開発することです。"
 
 #: colournaming/templates/index.html:287
 msgid ""
 "Please use the following communication form to give us your feedback and "
 "comments or if you wish to inform you about the results of this research."
-msgstr "Παρακαλώ  χρησιμοποιείστε τη παρακάτω φόρμα επικοινωνίας για να μας στείλετε τα σχόλια σας ή αν θέλετε να επικοινωνήσουμε μαζί σας για τα αποτελέσματα της έρευνας."
+msgstr "ご意見、ご要望は、以下のフォームからお寄せください。"
 
 #: colournaming/templates/index.html:300
 msgid "Submit"
-msgstr "Αποστολή"
+msgstr "送信"
 
 #: colournaming/templates/index.html:311
 msgid "Made in London and Berlin"
@@ -377,45 +379,46 @@ msgstr "Made in London and Berlin"
 
 #: colournaming/templates/name_colour.html:4
 msgid "Colour Naming Task"
-msgstr "Τεστ Ονομασίας Χρωμάτων"
+msgstr "カラーネーミング実験"
 
 #: colournaming/templates/name_colour.html:7
 msgid ""
 "Name each colour sample with the best representative colour term that you"
 " remember.<br>Name as many colour samples as you can for higher ranking "
 "on colour namers. Your response time will be recorded."
-msgstr "Παρακαλούμε ονομάστε κάθε χρωματικό δείγμα με την πιο αντιπροσωπευτική ονομασία χρώματος που μπορείτε να θυμηθείτε.<br>Ονομάστε όσα περισσότερα χρωματικά δείγματα μπορείτε για υψηλότερη βαθμολογία στη λίστα με τους ονομαστές χρωμάτων. Ο χρόνος απόκρισης θα καταγραφεί."
+msgstr "それぞれの色見本に対して、思い浮かぶ色名の中から最も適切な色名を回答してください。<br>多くの色見本に対して回答することにより、あなたの色名回答者ランキングがアップします。あなたの回答時間は、記録されます。
+"
 
 #: colournaming/templates/name_colour.html:14
 msgid "Name the colour of the patch"
-msgstr "Ονομάστε το χρώμα του δείγματος."
+msgstr "パッチの色を答える"
 
 #: colournaming/templates/name_colour.html:28
 msgid "Next"
-msgstr "Επόμενο"
+msgstr "次"
 
 #: colournaming/templates/observer_information.html:5
 msgid "Observer Information Task"
-msgstr "Ερωτηματολόγιο Παρατηρητή"
+msgstr "回答者情報"
 
 #: colournaming/templates/observer_information.html:8
 msgid ""
 "Please provide us with some information about your background and viewing"
 " conditions. This will help us to better understand the context of your "
 "responses."
-msgstr "Παρακαλώ δώστε  μας λίγες πληροφορίες για εσάς και τις συνθήκες παρατήρησης σας για να μας βοηθήσετε να κατανοήσουμε το γενικότερο πλαίσιο των απαντήσεων σας."
+msgstr "あなたの経歴と観察条件に関して、いくつかお伺いします。この情報は、あなたの回答内容をよりよく理解するために利用されます。"
 
 #: colournaming/templates/thankyou.html:5
 msgid "Thank you"
-msgstr "Ευχαριστούμε"
+msgstr "ありがとうございます。"
 
 #: colournaming/templates/thankyou.html:8
 msgid "Thank you for participating."
-msgstr "Συγχαρητήρια και ευχαριστούμε για τη συμμετοχή σας."
+msgstr "本研究にご参加いただき、ありがとうございました。"
 
 #: colournaming/templates/thankyou.html:8
 msgid "You can now share the link of the experiment with your friends."
-msgstr "Παρακαλούμε μη διστάσετε να καλέσετε τους φίλους σας να συμμετάσχουν."
+msgstr "本実験を、あなたのご友人にお気軽に紹介してください。"
 
 #: colournaming/templates/thankyou.html:14
 msgid ""
@@ -423,5 +426,5 @@ msgid ""
 "across languages. Please feel free to contact us and visit our research "
 "page for more information. Find below your responses in white and the "
 "most popular colour names in black:"
-msgstr "Οι απαντήσεις σας θα χρησιμοποιηθούν για τη βελτίωση της χρωματικής επικοινωνίας μεταξύ διαφορετικών πολιτισμών. Μπορείτε να επικοινωνήσετε μαζί μας και να επισκεφτείτε τη σελίδα με τα αποτελέσματα της έρευνας μας για περισσότερες πληροφορίες. Βρείτε μια σύνοψη των απαντήσεών σας παρακάτω με άσπρο χρώμα και τις πιο δημοφιλής απαντήσεις με μαύρο χρώμα."
+msgstr "あなたの回答は、様々な言語での色に関するコミュニケーションを改善するために活用されます。詳細は、我々の研究紹介HPをご覧いただき、不明な点はお問い合わせください。以下で、白でのあなたの回答を、黒での最も回答の多かった色名をご覧ください。"
 
