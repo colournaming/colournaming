@@ -47,6 +47,7 @@ def name_colour(lang_code):
     try:
         namer = current_app.namers[lang_code]
     except KeyError:
+        print('No namer available for', lang_code)
         abort(404)
     colours = namer.colour_name([red, green, blue])
     return jsonify(
