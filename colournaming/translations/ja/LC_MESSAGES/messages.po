@@ -7,198 +7,198 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-02-10 10:03+0000\n"
+"POT-Creation-Date: 2018-02-13 10:12+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
+"Generated-By: Babel 2.5.3\n"
 
-#: colournaming/experiment/forms.py:31
+#: colournaming/experiment/forms.py:32
 msgid "What is your age?"
 msgstr "年齢をお答えください。"
 
-#: colournaming/experiment/forms.py:38
+#: colournaming/experiment/forms.py:39
 msgid "Female"
 msgstr "女性"
 
-#: colournaming/experiment/forms.py:39
+#: colournaming/experiment/forms.py:40
 msgid "Male"
 msgstr "男性"
 
-#: colournaming/experiment/forms.py:40
+#: colournaming/experiment/forms.py:41
 msgid "Other"
 msgstr "その他"
 
-#: colournaming/experiment/forms.py:42
+#: colournaming/experiment/forms.py:43
 msgid "To which gender do you most identify?"
 msgstr "性別をお答えください。"
 
-#: colournaming/experiment/forms.py:46
+#: colournaming/experiment/forms.py:47
 msgid "Please specify"
 msgstr "指定してください。"
 
-#: colournaming/experiment/forms.py:52 colournaming/experiment/forms.py:62
+#: colournaming/experiment/forms.py:53 colournaming/experiment/forms.py:63
 msgid "Beginner"
 msgstr "初級"
 
-#: colournaming/experiment/forms.py:53 colournaming/experiment/forms.py:63
+#: colournaming/experiment/forms.py:54 colournaming/experiment/forms.py:64
 msgid "Intermediate"
 msgstr "中級"
 
-#: colournaming/experiment/forms.py:54 colournaming/experiment/forms.py:64
+#: colournaming/experiment/forms.py:55 colournaming/experiment/forms.py:65
 msgid "Advanced"
 msgstr "上級"
 
-#: colournaming/experiment/forms.py:56
+#: colournaming/experiment/forms.py:57
 msgid "Describe your experience working with colour"
 msgstr "色彩に関する業務経験をお答えください。"
 
-#: colournaming/experiment/forms.py:65
+#: colournaming/experiment/forms.py:66
 msgid "Bilingual"
 msgstr "バイリンガル"
 
-#: colournaming/experiment/forms.py:66
+#: colournaming/experiment/forms.py:67
 msgid "Native speaker"
 msgstr "母国語"
 
-#: colournaming/experiment/forms.py:68
+#: colournaming/experiment/forms.py:69
 msgid "Describe your skill in the language used in this experiment"
 msgstr "使用言語の熟練度をお答えください。"
 
-#: colournaming/experiment/forms.py:74
+#: colournaming/experiment/forms.py:75
 msgid "No qualifications"
 msgstr "該当なし"
 
-#: colournaming/experiment/forms.py:75
+#: colournaming/experiment/forms.py:76
 msgid "Secondary school degree"
 msgstr "高校卒業"
 
-#: colournaming/experiment/forms.py:76
+#: colournaming/experiment/forms.py:77
 msgid "Bachelors degree"
 msgstr "大学卒業"
 
-#: colournaming/experiment/forms.py:77
+#: colournaming/experiment/forms.py:78
 msgid "Masters degree"
 msgstr "大学院修士修了"
 
-#: colournaming/experiment/forms.py:78
+#: colournaming/experiment/forms.py:79
 msgid "Professional degree"
 msgstr "専門職大学院修了"
 
-#: colournaming/experiment/forms.py:79
+#: colournaming/experiment/forms.py:80
 msgid "Doctorate degree"
 msgstr "大学院博士修了"
 
-#: colournaming/experiment/forms.py:81
+#: colournaming/experiment/forms.py:82
 msgid "What is the highest level of education you have completed?"
 msgstr "学位レベルをお答えください。"
 
-#: colournaming/experiment/forms.py:88
+#: colournaming/experiment/forms.py:89
 msgid "In which country did you grow up?"
 msgstr "出身地をお答えください。"
 
-#: colournaming/experiment/forms.py:93
+#: colournaming/experiment/forms.py:94
 msgid "Where are you living?"
 msgstr "現在の居住地をお答えください。"
 
-#: colournaming/experiment/forms.py:99
+#: colournaming/experiment/forms.py:100
 msgid "Smartphone"
 msgstr "スマートフォン"
 
-#: colournaming/experiment/forms.py:100
+#: colournaming/experiment/forms.py:101
 msgid "Pad"
 msgstr "タブレット端末"
 
-#: colournaming/experiment/forms.py:101
+#: colournaming/experiment/forms.py:102
 msgid "Laptop"
 msgstr "ノートパソコン"
 
-#: colournaming/experiment/forms.py:102
+#: colournaming/experiment/forms.py:103
 msgid "Desktop"
 msgstr "デスクトップパソコン"
 
-#: colournaming/experiment/forms.py:104
+#: colournaming/experiment/forms.py:105
 msgid "What is your display device?"
 msgstr "ご使用のディスプレイをお答えください。"
 
-#: colournaming/experiment/forms.py:110
+#: colournaming/experiment/forms.py:111
 msgid "Neutral white"
 msgstr "中間調の白"
 
-#: colournaming/experiment/forms.py:111
+#: colournaming/experiment/forms.py:112
 msgid "Warm white"
 msgstr "暖かみのある白"
 
-#: colournaming/experiment/forms.py:112
+#: colournaming/experiment/forms.py:113
 msgid "Bluish white"
 msgstr "青みのある白"
 
-#: colournaming/experiment/forms.py:113
+#: colournaming/experiment/forms.py:114
 msgid "Yellowish white"
 msgstr "黄色みのある白"
 
-#: colournaming/experiment/forms.py:115
+#: colournaming/experiment/forms.py:116
 msgid "Describe the white graphic elements on your screen"
 msgstr "ご使用のディスプレイの白さをお答えください。"
 
-#: colournaming/experiment/forms.py:121 colournaming/experiment/forms.py:132
+#: colournaming/experiment/forms.py:122 colournaming/experiment/forms.py:133
 msgid "Dark"
 msgstr "暗い"
 
-#: colournaming/experiment/forms.py:122
+#: colournaming/experiment/forms.py:123
 msgid "Dim"
 msgstr "薄暗い"
 
-#: colournaming/experiment/forms.py:123
+#: colournaming/experiment/forms.py:124
 msgid "Average"
 msgstr "平均的な明るさ"
 
-#: colournaming/experiment/forms.py:124
+#: colournaming/experiment/forms.py:125
 msgid "Bright"
 msgstr "明るい"
 
-#: colournaming/experiment/forms.py:126
+#: colournaming/experiment/forms.py:127
 msgid "Describe the surrounding environment behind your device"
 msgstr "ご使用のディスプレイの周囲環境をお答えください。"
 
-#: colournaming/experiment/forms.py:133
+#: colournaming/experiment/forms.py:134
 msgid "Typical domestic"
 msgstr "一般的な屋内"
 
-#: colournaming/experiment/forms.py:134
+#: colournaming/experiment/forms.py:135
 msgid "Mid daylight"
 msgstr "昼間"
 
-#: colournaming/experiment/forms.py:135
+#: colournaming/experiment/forms.py:136
 msgid "Full daylight"
 msgstr "真昼間（白昼）"
 
-#: colournaming/experiment/forms.py:136
+#: colournaming/experiment/forms.py:137
 msgid "Typical office"
 msgstr "一般的なオフィス"
 
-#: colournaming/experiment/forms.py:138
+#: colournaming/experiment/forms.py:139
 msgid "Describe the lighting conditions of your environment"
 msgstr "あなたの周囲環境の照明条件をお答えください。"
 
-#: colournaming/experiment/forms.py:144 colournaming/experiment/forms.py:159
+#: colournaming/experiment/forms.py:145 colournaming/experiment/forms.py:160
 msgid "What distance are you from your monitor in cm?"
 msgstr "ディスプレイの観察距離をcmでお答えください。"
 
-#: colournaming/experiment/forms.py:156
+#: colournaming/experiment/forms.py:157
 #: colournaming/templates/colour_vision.html:12
 msgid "No"
 msgstr "いいえ"
 
-#: colournaming/experiment/forms.py:157
+#: colournaming/experiment/forms.py:158
 #: colournaming/templates/colour_vision.html:13
 msgid "Yes"
 msgstr "はい"
 
-#: colournaming/experiment/views.py:148
+#: colournaming/experiment/views.py:149
 msgid "You are in the 0% top colour namers."
 msgstr "あなたは上位0%の色名回答者です。"
 
@@ -311,10 +311,8 @@ msgid ""
 "will be asked to name a series of colour samples and provide information "
 "about your cultural background and viewing conditions. You are free to "
 "omit any question and you may withdraw at any time without penalty. "
-"Participation in this study is strictly anonymous and voluntary. All "
-"responses are treated as confidential and will be published in aggregated"
-" form only."
-msgstr ""
+"Participation in this study is strictly anonymous and voluntary."
+msgstr "色名実験へようこそ。このオンライン実験では、世界各国の様々な言語で色名を収集することを目的としています。この実験では、表示される一連の色見本に対して、適切な色の名前をつけてもらいます。また、あなたの文化的背景と観察条件についても質問されます。実験中、質問の回答を飛ばすことができ、いつでも中断することができます。この研究への参加は任期であり、完全に匿名で処理されます。"
 
 #: colournaming/templates/index.html:38
 msgid ""
@@ -370,6 +368,7 @@ msgid ""
 msgstr "ご意見、ご要望は、以下のフォームからお寄せください。"
 
 #: colournaming/templates/index.html:300
+#: colournaming/templates/observer_information.html:52
 msgid "Submit"
 msgstr "送信"
 
@@ -393,7 +392,7 @@ msgstr "それぞれの色見本に対して、思い浮かぶ色名の中から
 msgid "Name the colour of the patch"
 msgstr "パッチの色を答える"
 
-#: colournaming/templates/name_colour.html:28
+#: colournaming/templates/name_colour.html:29
 msgid "Next"
 msgstr "次"
 

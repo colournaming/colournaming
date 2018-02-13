@@ -7,198 +7,198 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-02-10 10:03+0000\n"
+"POT-Creation-Date: 2018-02-13 10:12+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
+"Generated-By: Babel 2.5.3\n"
 
-#: colournaming/experiment/forms.py:31
+#: colournaming/experiment/forms.py:32
 msgid "What is your age?"
 msgstr "Сколько Вам лет?"
 
-#: colournaming/experiment/forms.py:38
+#: colournaming/experiment/forms.py:39
 msgid "Female"
 msgstr "Женский"
 
-#: colournaming/experiment/forms.py:39
+#: colournaming/experiment/forms.py:40
 msgid "Male"
 msgstr "Мужской"
 
-#: colournaming/experiment/forms.py:40
+#: colournaming/experiment/forms.py:41
 msgid "Other"
 msgstr "Другой"
 
-#: colournaming/experiment/forms.py:42
+#: colournaming/experiment/forms.py:43
 msgid "To which gender do you most identify?"
 msgstr "Укажите Ваш пол"
 
-#: colournaming/experiment/forms.py:46
+#: colournaming/experiment/forms.py:47
 msgid "Please specify"
 msgstr "Пожалуйста, уточните"
 
-#: colournaming/experiment/forms.py:52 colournaming/experiment/forms.py:62
+#: colournaming/experiment/forms.py:53 colournaming/experiment/forms.py:63
 msgid "Beginner"
 msgstr "Начальный уровень"
 
-#: colournaming/experiment/forms.py:53 colournaming/experiment/forms.py:63
+#: colournaming/experiment/forms.py:54 colournaming/experiment/forms.py:64
 msgid "Intermediate"
 msgstr "Средний уровень"
 
-#: colournaming/experiment/forms.py:54 colournaming/experiment/forms.py:64
+#: colournaming/experiment/forms.py:55 colournaming/experiment/forms.py:65
 msgid "Advanced"
 msgstr "Продвинутый уровень"
 
-#: colournaming/experiment/forms.py:56
+#: colournaming/experiment/forms.py:57
 msgid "Describe your experience working with colour"
 msgstr "Опишите Ваш опыт работы с цветом"
 
-#: colournaming/experiment/forms.py:65
+#: colournaming/experiment/forms.py:66
 msgid "Bilingual"
 msgstr "Я – билингв, говорю на двух языках"
 
-#: colournaming/experiment/forms.py:66
+#: colournaming/experiment/forms.py:67
 msgid "Native speaker"
 msgstr "Носитель языка"
 
-#: colournaming/experiment/forms.py:68
+#: colournaming/experiment/forms.py:69
 msgid "Describe your skill in the language used in this experiment"
 msgstr "Укажите уровень владения языком, который Вы выбрали для участия в эксперименте"
 
-#: colournaming/experiment/forms.py:74
+#: colournaming/experiment/forms.py:75
 msgid "No qualifications"
 msgstr "Нет законченного образования"
 
-#: colournaming/experiment/forms.py:75
+#: colournaming/experiment/forms.py:76
 msgid "Secondary school degree"
 msgstr "Среднее общее образование"
 
-#: colournaming/experiment/forms.py:76
+#: colournaming/experiment/forms.py:77
 msgid "Bachelors degree"
 msgstr "Высшее образование (бакалавр)"
 
-#: colournaming/experiment/forms.py:77
+#: colournaming/experiment/forms.py:78
 msgid "Masters degree"
 msgstr "Высшее образование (магистр)"
 
-#: colournaming/experiment/forms.py:78
+#: colournaming/experiment/forms.py:79
 msgid "Professional degree"
 msgstr "Профессиональное образование"
 
-#: colournaming/experiment/forms.py:79
+#: colournaming/experiment/forms.py:80
 msgid "Doctorate degree"
 msgstr "Ученая степень (кандидат, доктор наук)"
 
-#: colournaming/experiment/forms.py:81
+#: colournaming/experiment/forms.py:82
 msgid "What is the highest level of education you have completed?"
 msgstr "Укажите максимальный уровень Вашего образования"
 
-#: colournaming/experiment/forms.py:88
+#: colournaming/experiment/forms.py:89
 msgid "In which country did you grow up?"
 msgstr "В какой стране прошло Ваше детство?"
 
-#: colournaming/experiment/forms.py:93
+#: colournaming/experiment/forms.py:94
 msgid "Where are you living?"
 msgstr "Где Вы живете?"
 
-#: colournaming/experiment/forms.py:99
+#: colournaming/experiment/forms.py:100
 msgid "Smartphone"
 msgstr "Смартфон"
 
-#: colournaming/experiment/forms.py:100
+#: colournaming/experiment/forms.py:101
 msgid "Pad"
 msgstr "Планшет"
 
-#: colournaming/experiment/forms.py:101
+#: colournaming/experiment/forms.py:102
 msgid "Laptop"
 msgstr "Ноутбук"
 
-#: colournaming/experiment/forms.py:102
+#: colournaming/experiment/forms.py:103
 msgid "Desktop"
 msgstr "Стационарный компьютер"
 
-#: colournaming/experiment/forms.py:104
+#: colournaming/experiment/forms.py:105
 msgid "What is your display device?"
 msgstr "Какое устройство Вы сейчас используете?"
 
-#: colournaming/experiment/forms.py:110
+#: colournaming/experiment/forms.py:111
 msgid "Neutral white"
 msgstr "Нейтральный белый"
 
-#: colournaming/experiment/forms.py:111
+#: colournaming/experiment/forms.py:112
 msgid "Warm white"
 msgstr "Теплый белый"
 
-#: colournaming/experiment/forms.py:112
+#: colournaming/experiment/forms.py:113
 msgid "Bluish white"
 msgstr "Голубовато-белый"
 
-#: colournaming/experiment/forms.py:113
+#: colournaming/experiment/forms.py:114
 msgid "Yellowish white"
 msgstr "Желтовато-белый"
 
-#: colournaming/experiment/forms.py:115
+#: colournaming/experiment/forms.py:116
 msgid "Describe the white graphic elements on your screen"
 msgstr "Опишите цвет белых графических элементов на Вашем экране"
 
-#: colournaming/experiment/forms.py:121 colournaming/experiment/forms.py:132
+#: colournaming/experiment/forms.py:122 colournaming/experiment/forms.py:133
 msgid "Dark"
 msgstr "Темное"
 
-#: colournaming/experiment/forms.py:122
+#: colournaming/experiment/forms.py:123
 msgid "Dim"
 msgstr "Плохо освещенное"
 
-#: colournaming/experiment/forms.py:123
+#: colournaming/experiment/forms.py:124
 msgid "Average"
 msgstr "Обычное"
 
-#: colournaming/experiment/forms.py:124
+#: colournaming/experiment/forms.py:125
 msgid "Bright"
 msgstr "Яркое"
 
-#: colournaming/experiment/forms.py:126
+#: colournaming/experiment/forms.py:127
 msgid "Describe the surrounding environment behind your device"
 msgstr "Опишите пространство за экраном"
 
-#: colournaming/experiment/forms.py:133
+#: colournaming/experiment/forms.py:134
 msgid "Typical domestic"
 msgstr "Обычные для дома"
 
-#: colournaming/experiment/forms.py:134
+#: colournaming/experiment/forms.py:135
 msgid "Mid daylight"
 msgstr "Неяркий дневной свет"
 
-#: colournaming/experiment/forms.py:135
+#: colournaming/experiment/forms.py:136
 msgid "Full daylight"
 msgstr "Яркий дневной свет"
 
-#: colournaming/experiment/forms.py:136
+#: colournaming/experiment/forms.py:137
 msgid "Typical office"
 msgstr "Обычные для офиса"
 
-#: colournaming/experiment/forms.py:138
+#: colournaming/experiment/forms.py:139
 msgid "Describe the lighting conditions of your environment"
 msgstr "Опишите условия освещенности, в которых Вы находитесь"
 
-#: colournaming/experiment/forms.py:144 colournaming/experiment/forms.py:159
+#: colournaming/experiment/forms.py:145 colournaming/experiment/forms.py:160
 msgid "What distance are you from your monitor in cm?"
 msgstr "На каком расстоянии от экрана Вы находитесь в см?"
 
-#: colournaming/experiment/forms.py:156
+#: colournaming/experiment/forms.py:157
 #: colournaming/templates/colour_vision.html:12
 msgid "No"
 msgstr "Нет"
 
-#: colournaming/experiment/forms.py:157
+#: colournaming/experiment/forms.py:158
 #: colournaming/templates/colour_vision.html:13
 msgid "Yes"
 msgstr "Да"
 
-#: colournaming/experiment/views.py:148
+#: colournaming/experiment/views.py:149
 msgid "You are in the 0% top colour namers."
 msgstr "Вы среди 0% лучших назывателей цвета."
 
@@ -309,10 +309,8 @@ msgid ""
 "will be asked to name a series of colour samples and provide information "
 "about your cultural background and viewing conditions. You are free to "
 "omit any question and you may withdraw at any time without penalty. "
-"Participation in this study is strictly anonymous and voluntary. All "
-"responses are treated as confidential and will be published in aggregated"
-" form only."
-msgstr ""
+"Participation in this study is strictly anonymous and voluntary."
+msgstr "Добро пожаловать в он-лайн эксперимент по называнию цвета, который создан для того, чтобы записывать цветонаименования различных языков вместе с соответствующими им участками цветового спектра. Вас попросят назвать ряд цветовых образцов и ответить на несколько вопросов о Вас и  об условиях наблюдения. Вы можете пропустить любой вопрос и в любое время прервать сеанс. Участие в этом эксперименте строго анонимно и добровольно. "
 
 #: colournaming/templates/index.html:38
 msgid ""
@@ -368,6 +366,7 @@ msgid ""
 msgstr "Здесь Вы можете оставить свои пожелания и комментарии, а также запростить информацию о результатах эксперимента."
 
 #: colournaming/templates/index.html:300
+#: colournaming/templates/observer_information.html:52
 msgid "Submit"
 msgstr "Отправить"
 
@@ -390,7 +389,7 @@ msgstr "Назовите каждый цвет, используя наибол�
 msgid "Name the colour of the patch"
 msgstr "Назовите цвет "
 
-#: colournaming/templates/name_colour.html:28
+#: colournaming/templates/name_colour.html:29
 msgid "Next"
 msgstr "Следующий"
 
