@@ -10462,6 +10462,7 @@ $(function () {
     doQuery(hexCode);
   }).setColor('#FF0000');
 
+  $(document).on('touch', _audio.resumeAudio);;
   $languageSelect.change(onLanguageSelectChange);
   $nameSelect.change(onColourSelectChange);
   $agreementSelect.change(onAgreementSelectChange);
@@ -10558,9 +10559,21 @@ function playSound(hexcode) {
     }
 }
 
+function resumeAudio() {
+    try {
+        if (audio && context.state === 'suspended') {
+            context.resume();
+            $(document).off('touch', resumeAudio);
+        }
+    } catch (e) {
+        console.log(e);
+    }
+}
+
 exports.initAudio = initAudio;
 exports.playSound = playSound;
 exports.loadAudioSet = loadAudioSet;
+exports.resumeAudio = resumeAudio;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),

@@ -1,5 +1,5 @@
 require('./farbtastic')
-import { initAudio, playSound, loadAudioSet } from './audio'
+import { initAudio, playSound, loadAudioSet, resumeAudio } from './audio'
 
 function hexToRGB (hexcode) {
   return [
@@ -140,6 +140,7 @@ $(function () {
     doQuery(hexCode);
   }).setColor('#FF0000');
 
+  $(document).on('touch', resumeAudio);;
   $languageSelect.change(onLanguageSelectChange);
   $nameSelect.change(onColourSelectChange);
   $agreementSelect.change(onAgreementSelectChange);

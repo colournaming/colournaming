@@ -70,4 +70,15 @@ function playSound(hexcode) {
     }
 }
 
-export { initAudio, playSound, loadAudioSet };
+function resumeAudio() {
+  try {
+    if (audio && context.state === 'suspended') {
+      context.resume();
+      $(document).off('touch', resumeAudio);
+    }
+  } catch(e) {
+    console.log(e);
+  }
+}
+
+export { initAudio, playSound, loadAudioSet, resumeAudio };
