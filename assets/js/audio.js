@@ -13,6 +13,7 @@ function initAudio() {
         context = new (window.AudioContext || window.webkitAudioContext)();
         audioAvailable = true;
     } catch(e) {
+        console.log(e);
         audioAvailable = false;
         return;
     }
