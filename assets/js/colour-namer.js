@@ -140,7 +140,7 @@ $(function () {
     doQuery(hexCode);
   }).setColor('#FF0000');
 
-  $(document).on('touch', resumeAudio);
+  $(document).on('touchstart', resumeAudio);
   $languageSelect.change(onLanguageSelectChange);
   $nameSelect.change(onColourSelectChange);
   $agreementSelect.change(onAgreementSelectChange);

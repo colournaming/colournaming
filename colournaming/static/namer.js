@@ -10462,7 +10462,7 @@ $(function () {
     doQuery(hexCode);
   }).setColor('#FF0000');
 
-  $(document).on('touch', _audio.resumeAudio);
+  $(document).on('touchstart', _audio.resumeAudio);
   $languageSelect.change(onLanguageSelectChange);
   $nameSelect.change(onColourSelectChange);
   $agreementSelect.change(onAgreementSelectChange);
@@ -10542,12 +10542,10 @@ function loadSound(url, sampleId) {
 }
 
 function playSound(hexcode) {
-    if (!audioAvailable) {
-        initAudio();
-    }
     var sampleId = hexcode.substr(1);
     var source = context.createBufferSource();
 
+    resumeAudio();
     if (sampleBuffers[sampleId] !== undefined) {
         source.buffer = sampleBuffers[sampleId];
         source.connect(context.destination);
@@ -10561,9 +10559,9 @@ function playSound(hexcode) {
 
 function resumeAudio() {
     try {
-        if (audio && context.state === 'suspended') {
+        if (audioAvailable && context.state === 'suspended') {
             context.resume();
-            $(document).off('touch', resumeAudio);
+            $(document).off('touchstart', resumeAudio);
         }
     } catch (e) {
         console.log(e);
