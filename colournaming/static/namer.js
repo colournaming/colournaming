@@ -10462,7 +10462,7 @@ $(function () {
     doQuery(hexCode);
   }).setColor('#FF0000');
 
-  $(document).on('touch', _audio.resumeAudio);;
+  $(document).on('touch', _audio.resumeAudio);
   $languageSelect.change(onLanguageSelectChange);
   $nameSelect.change(onColourSelectChange);
   $agreementSelect.change(onAgreementSelectChange);
