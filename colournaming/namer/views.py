@@ -32,7 +32,11 @@ def get_colours():
 
 @bp.route('/lang/default/name')
 def name_colour_default_lang():
-    return name_colour(request.accept_languages[0][0])
+    lang = request.accept_languages[0][0]
+    if '-' in lang:
+        # e.g. if lang = en-GB
+        lang = lang.split('-')[0]
+    return name_colour(lang)
 
 @bp.route('/lang/<lang_code>/name')
 def name_colour(lang_code):
