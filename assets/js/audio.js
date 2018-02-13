@@ -52,6 +52,9 @@ function loadSound(url, sampleId) {
 }
 
 function playSound(hexcode) {
+    if (!audioAvailable) {
+      initAudio();
+    }
     var sampleId = hexcode.substr(1);
     var source = context.createBufferSource();
 
