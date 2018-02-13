@@ -2,15 +2,18 @@
 {% from 'form_helpers.j2' import render_field %}
 {% block content %}
 <header>
-    <h1>Observer Information Task</h1>
+    <h1>{{ _('Observer Information Task') }}</h1>
 </header>
 <main>
-    <p class="justified-text">Please provide us with some information about your background and viewing conditions. This will help us to better understand the context of your responses.</p>
+    <p class="justified-text">{{ _('Please provide us with some information about your background and viewing conditions. This will help us to better understand the context of your responses.') }}</p>
     <div class="justified-box">
         {{ render_field(form.age) }}
     </div>
     <div class="justified-box">
         {{ render_field(form.gender) }}
+    </div>
+    <div class="justified-box" id="specify-gender">
+        {{ render_field(form.gender_other) }}
     </div>
     <div class="justified-box">
         {{ render_field(form.colour_experience) }}
@@ -28,6 +31,12 @@
         {{ render_field(form.country_resident) }}
     </div>
     <div class="justified-box">
+        {{ render_field(form.display_device) }}
+    </div>
+    <div class="justified-box">
+        {{ render_field(form.screen_temperature) }}
+    </div>
+    <div class="justified-box">
         {{ render_field(form.ambient_light) }}
     </div>
     <div class="justified-box">
@@ -36,9 +45,10 @@
     <div class="justified-box">
         {{ render_field(form.screen_distance) }}
     </div>
+    {{ form.location }}
     {{ form.csrf_token }}
 </main>
 <footer>
-    <a class="centered-button round-button text-button" href="thankyou.html" id="thank-you-page">Submit</a>
+    <a class="centered-button round-button text-button" href="thankyou.html" id="thank-you-page">{{ _('Submit') }}</a>
 </footer>
 {% endblock %}

@@ -1,0 +1,16 @@
+body {
+    background-color: rgb(128, 128, 128);
+}
+
+div#colourValueDisplay {
+    background-color: rgb(128, 128, 128);
+}
+
+div#nameVisualisation {
+    background-color: rgb(128, 128, 128);
+    height: 400px;
+}
+
+div#colourpicker {
+    background-color: rgb(128, 128, 128);
+}

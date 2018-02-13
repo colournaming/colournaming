@@ -30,6 +30,13 @@ def colours(lang_code):
 def get_colours():
     return colours(request.args.get('lang'))
 
+@bp.route('/lang/default/name')
+def name_colour_default_lang():
+    lang = request.accept_languages[0][0]
+    if '-' in lang:
+        # e.g. if lang = en-GB
+        lang = lang.split('-')[0]
+    return name_colour(lang)
 
 @bp.route('/lang/<lang_code>/name')
 def name_colour(lang_code):
@@ -44,6 +51,7 @@ def name_colour(lang_code):
     try:
         namer = current_app.namers[lang_code]
     except KeyError:
+        print('No namer available for', lang_code)
         abort(404)
     colours = namer.colour_name([red, green, blue])
     return jsonify(

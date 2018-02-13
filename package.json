@@ -1,0 +1,39 @@
+{
+  "name": "colournaming",
+  "version": "1.0.0",
+  "description": "An online colour naming experiment",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "uglifycss-experiment": "uglifycss assets/css/styles-experiment.css > colournaming/static/css/styles-experiment.css",
+    "uglifycss-styles": "uglifycss assets/css/styles.css > colournaming/static/css/styles.css",
+    "uglifycss-namer": "uglifycss assets/css/namer.css > colournaming/static/css/namer.css",
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/colournaming/colournaming.git"
+  },
+  "author": "Jon Stutters",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/colournaming/colournaming/issues"
+  },
+  "homepage": "https://github.com/colournaming/colournaming#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "bower": "^1.8.2",
+    "uglifycss": "^0.0.27",
+    "uglifyjs-webpack-plugin": "^1.1.3",
+    "webpack": "^3.10.0",
+    "yarn": "^1.3.2"
+  },
+  "dependencies": {
+    "jquery": "^3.2.1"
+  }
+}

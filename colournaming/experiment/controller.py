@@ -3,7 +3,7 @@
 import csv
 import random
 from sqlalchemy import func
-from sqlalchemy.sql.expression import label, text
+from sqlalchemy.sql.expression import label, text, func
 from ..database import db
 from .model import ColourTarget, Participant, ColourResponse
 
@@ -23,19 +23,25 @@ def read_targets_from_file(targets_file):
 
 def get_random_target():
     """Get a random colour target."""
-    targets = ColourTarget.query.all()
+    max_presentation_count = db.session.query(func.max(ColourTarget.presentation_count)).scalar()
+    print('max_presentation_count =', max_presentation_count)
+    targets = \
+        ColourTarget.query\
+                    .filter(ColourTarget.presentation_count < max_presentation_count)\
+                    .all()
+    if len(targets) == 0:
+        # will occur if all targets have been presented max times
+        targets = ColourTarget.query.all()
+    target = random.choice(targets)
+    target.presentation_count += 1
+    db.session.commit()
     return random.choice(targets)
 
 
 def response_count_percentage(this_count):
     """Get the percentage of participants with response counts less than a participant's."""
-    response_counts = db.session.query(
-        func.count(ColourResponse.id)).\
-        group_by(ColourResponse.participant_id).\
-        all()
-    num_participants = db.session.query(Participant.id).count()
-    num_below = len([r for r in response_counts if r[0] < this_count])
-    return (1.0 - (num_below / num_participants)) * 100.0
+    num_targets = db.session.query(ColourTarget.id).count()
+    return (this_count / num_targets) * 100.0
 
 
 def save_participant(experiment):
@@ -44,8 +50,8 @@ def save_participant(experiment):
     participant_id = experiment.get('participant_id')
     if participant_id is None:
         participant = Participant(
-            ip_address=experiment['client']['ip_address'],
             browser_language=experiment['client']['browser_language'],
+            interface_language=experiment['client']['interface_language'],
             user_agent=experiment['client']['user_agent'],
             greyscale_steps=experiment['display']['greyscale_levels'],
             screen_resolution_w=experiment['display']['screen_width'],
@@ -84,6 +90,7 @@ def update_participant(experiment):
             experiment['observer'][k] = None
     participant.age = experiment['observer']['age']
     participant.gender = experiment['observer']['gender']
+    participant.gender_other = experiment['observer']['gender_other']
     participant.colour_experience = experiment['observer']['colour_experience']
     participant.language_experience = experiment['observer']['language_experience']
     participant.education_level = experiment['observer']['education_level']
@@ -91,6 +98,9 @@ def update_participant(experiment):
     participant.country_resident = experiment['observer']['country_resident']
     participant.ambient_light = experiment['observer']['ambient_light']
     participant.screen_light = experiment['observer']['screen_light']
+    participant.screen_temperature = experiment['observer']['screen_temperature']
     participant.screen_distance = experiment['observer']['screen_distance']
+    participant.device = experiment['observer']['device']
+    participant.location = experiment['observer']['location']
     participant.colour_target_disappeared = experiment['vision']['square_disappeared']
     db.session.commit()

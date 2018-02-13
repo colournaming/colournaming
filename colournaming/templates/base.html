@@ -4,17 +4,26 @@
         <link href="{{ url_for('static', filename='images/favicon.png') }}" rel="shortcut icon">
         <link href="{{ url_for('static', filename='farbtastic/farbtastic.css') }}" rel="stylesheet">
         <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet">
+        <link rel="canonical" href="https://colornaming.net">
+        <link rel="alternate" hreflang="el" href="https://colornaming.net?lang=el">
+        <link rel="alternate" hreflang="ru" href="https://colornaming.net?lang=ru">
+        <link rel="alternate" hreflang="ja" href="https://colornaming.net?lang=ja">
         <meta charset="UTF-8">
         <meta content="initial-scale=1, maximum-scale=1" name="viewport">
-        <title>Colournaming</title>
+        <title>{{ _('Colour Naming') }}</title>
         {% block css %}{% endblock %}
     </head>
     <body data-spy="scroll" data-target="navigation-bar">
         {% block content %}{% endblock %}
-        <script src="{{ url_for('static', filename='jquery-3.1.0.min.js') }}"></script>
-        <script src="{{ url_for('static', filename='farbtastic/farbtastic.min.js') }}"></script>
-        <script src="{{ url_for('static', filename='js/colour-namer.js') }}"></script>
-        <script src="{{ url_for('static', filename='js/hamburger.js') }}"></script>
+        <script src="{{ url_for('static', filename='namer.js') }}"></script>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-7033921-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-7033921-1');
+        </script>
         {% block scripts %}{% endblock %}
     </body>
 </html>

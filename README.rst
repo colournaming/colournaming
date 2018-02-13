@@ -39,6 +39,19 @@ To stop the test instance run::
     docker-compose down
 
 
+Front-end development
+=====================
+
+The recommended way to install the Javascript development dependencies is using `yarn <https://yarnpkg.com>`.
+Once yarn is installed run::
+
+    yarn
+
+This will install webpack and the additional tools required to prepare the Javascript for production use.
+Changes to the front-end code should be made to the files in the ``assets/js`` directory.  To build the 
+production Javascript run ``yarn build``.
+
+
 Translation
 ===========
 
