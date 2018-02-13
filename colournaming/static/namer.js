@@ -10545,7 +10545,6 @@ function playSound(hexcode) {
     var sampleId = hexcode.substr(1);
     var source = context.createBufferSource();
 
-    resumeAudio();
     if (sampleBuffers[sampleId] !== undefined) {
         source.buffer = sampleBuffers[sampleId];
         source.connect(context.destination);
