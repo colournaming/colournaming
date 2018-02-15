@@ -172,11 +172,9 @@ def _hex_code_for_colour(colour):
 
 def audio_list(lang):
     """Return a list of available audio files."""
-    print(os.getcwd())
     path = os.path.join(current_app.static_folder, 'audio', lang)
     if os.path.exists(path):
         l = [os.path.split(x)[-1] for x in glob.glob(path + '/*.mp3')]
-        print(l)
         return l
 
 
