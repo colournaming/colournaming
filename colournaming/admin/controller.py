@@ -1,6 +1,5 @@
 import csv
 import io
-from sqlalchemy.orm.exc import NoResultFound
 from ..experiment.model import Participant
 from ..namer.model import NameAgreement
 
@@ -53,6 +52,7 @@ PARTICIPANT_FIELDNAMES = [
     'latlong'
 ]
 
+
 def get_responses():
     participants = Participant.query.all()
     output = io.StringIO()
@@ -63,7 +63,7 @@ def get_responses():
             output_csv.writerow({
                 'id': response.id,
                 'participant_id': participant.id,
-                'created_on': response.created_on.strftime('%Y%m%d %H:%M %Z'),
+                'date_modified': response.created_on.strftime('%Y%m%d %H:%M %Z'),
                 'target_id': response.target_id,
                 'red': response.target.red,
                 'green': response.target.green,
@@ -72,6 +72,7 @@ def get_responses():
                 'name': response.name
             })
     return output.getvalue()
+
 
 def get_agreements():
     agreements = NameAgreement.query.all()
@@ -89,6 +90,7 @@ def get_agreements():
         })
     return output.getvalue()
 
+
 def get_participants():
     participants = Participant.query.all()
     output = io.StringIO()
@@ -97,7 +99,7 @@ def get_participants():
     for participant in participants:
         output_csv.writerow({
             'id': participant.id,
-            'created_on': participant.created_on.strftime('%Y%m%d %H:%M %Z'),
+            'date_modified': participant.created_on.strftime('%Y%m%d %H:%M %Z'),
             'greyscale_steps': participant.greyscale_steps,
             'browser_language': participant.browser_language,
             'interface_language': participant.interface_language,
