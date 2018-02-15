@@ -12,8 +12,8 @@ def login():
     """Admin login page."""
     form = LoginForm()
     if form.validate_on_submit():
-        print(form.password.data, current_app.config.get('ADMIN_PASSWORD'))
-        if form.username.data == 'admin' and form.password.data == current_app.config.get('ADMIN_PASSWORD'):
+        admin_password = current_app.config.get('ADMIN_PASSWORD')
+        if form.username.data == 'admin' and form.password.data == admin_password:
             session['admin_logged_in'] = True
             return redirect(url_for('.index'))
     if form.errors:
