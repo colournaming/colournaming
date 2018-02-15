@@ -39,8 +39,6 @@ def set_locale_selector(babel):
     def get_locale():
         available_langs = [x['code'] for x in current_app.config.get('LANGUAGES')]
         requested_lang = session.get('interface_language', None)
-        print(requested_lang)
-        print(available_langs)
         if requested_lang in available_langs:
             return requested_lang
         else:

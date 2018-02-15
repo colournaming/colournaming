@@ -33,7 +33,11 @@ def index():
         )
         msg.body = msg_text
         mail.send(msg)
-    print(current_app.config['LANGUAGES'])
+    try:
+        current_language = request.accept_languages[0][0].split('-')[0]
+    except IndexError:
+        current_language = 'en'
+
     return render_template(
         'index.html',
         contact_form=contact_form,
@@ -41,8 +45,9 @@ def index():
         languages=namer_controller.language_list(),
         interface_languages=current_app.config['LANGUAGES'],
         interface_language=session.get('interface_language', 'en'),
-        current_language=request.accept_languages[0][0]
+        current_language=current_language
     )
+
 
 @bp.route('interface_language')
 def interface_language():
