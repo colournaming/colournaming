@@ -1,6 +1,10 @@
 """Views for the experiment."""
 
-from flask import Blueprint, jsonify, redirect, render_template, request, session, url_for
+from datetime import datetime
+from functools import wraps, update_wrapper
+from flask import (
+    Blueprint, jsonify, redirect, render_template, request, session, url_for, make_response
+)
 from flask_babel import lazy_gettext
 from . import controller, forms
 
@@ -11,6 +15,18 @@ def check_in_experiment():
     """Redirect to the start of the experiment if the session is not initialized."""
     if 'experiment' not in session:
         return redirect(url_for('experiment.start'))
+
+
+def nocache(view):
+    @wraps(view)
+    def func(*args, **kwargs):
+        response = make_response(view(*args, **kwargs))
+        response.headers['Last-Modified'] = datetime.now()
+        response.headers['Cache-Control'] = 'no-store, no-cache, must-revalidate, post-check=0, pre-check=0, max-age=0'
+        response.headers['Pragma'] = 'no-cache'
+        response.headers['Expires'] = '-1'
+        return response
+    return update_wrapper(func, view)
 
 
 @bp.route('/')
@@ -95,6 +111,7 @@ def name_colour():
 
 
 @bp.route('/get_target.json')
+@nocache
 def get_target():
     """Get a random colour target to name."""
     target = controller.get_random_target()
