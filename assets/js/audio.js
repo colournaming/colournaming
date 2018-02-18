@@ -53,16 +53,18 @@ function loadSound(url, sampleId) {
 }
 
 function playSound(hexcode) {
-    var sampleId = hexcode.substr(1);
-    var source = context.createBufferSource();
+    if (audioAvailable) {
+        var sampleId = hexcode.substr(1);
+        var source = context.createBufferSource();
 
-    if (sampleBuffers[sampleId] !== undefined) {
-        source.buffer = sampleBuffers[sampleId];
-        source.connect(context.destination);
-        try {
-            source.start(0)
-        } catch(e) {
-            source.noteOn(0);
+        if (sampleBuffers[sampleId] !== undefined) {
+            source.buffer = sampleBuffers[sampleId];
+            source.connect(context.destination);
+            try {
+                source.start(0)
+            } catch(e) {
+                source.noteOn(0);
+            }
         }
     }
 }
