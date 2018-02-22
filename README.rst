@@ -55,6 +55,10 @@ production Javascript run ``yarn build``.
 Translation
 ===========
 
+To extract strings run::
+
+    pybabel extract -F babel.cfg -k lazy_gettext -o messages.pot .
+
 To add a new language, from the project root run::
 
     pybabel init -i messages.pot -d colournaming/translations -l [language code]

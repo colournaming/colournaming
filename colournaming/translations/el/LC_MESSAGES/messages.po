@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-02-13 10:12+0000\n"
+"POT-Creation-Date: 2018-02-22 15:45+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.3\n"
+"Generated-By: Babel 2.3.4\n"
 
 #: colournaming/experiment/forms.py:32
 msgid "What is your age?"
@@ -198,7 +198,7 @@ msgstr "Όχι"
 msgid "Yes"
 msgstr "Ναι"
 
-#: colournaming/experiment/views.py:149
+#: colournaming/experiment/views.py:166
 msgid "You are in the 0% top colour namers."
 msgstr "Βρίσκεστε στους κορυφαίους 0% ονομαστές χρωμάτων."
 
@@ -246,7 +246,7 @@ msgstr "Συμφωνώ"
 msgid "Strongly agree"
 msgstr "Συμφωνώ απολύτως"
 
-#: colournaming/templates/base.html:9 colournaming/templates/index.html:12
+#: colournaming/templates/base.html:13 colournaming/templates/index.html:12
 msgid "Colour Naming"
 msgstr "Ονομασία Χρωμάτων"
 
@@ -290,11 +290,11 @@ msgstr "Επιβεβαιώστε πόσα ασπρόμαυρα βήματα μπ
 msgid "Colour namer"
 msgstr "Ονομαστής Χρωμάτων"
 
-#: colournaming/templates/index.html:23 colournaming/templates/index.html:93
+#: colournaming/templates/index.html:23 colournaming/templates/index.html:94
 msgid "Research"
 msgstr "Έρευνα"
 
-#: colournaming/templates/index.html:26 colournaming/templates/index.html:285
+#: colournaming/templates/index.html:26 colournaming/templates/index.html:289
 msgid "Contact"
 msgstr "Επικοινωνία"
 
@@ -335,42 +335,50 @@ msgstr "Αν είσαστε 16 χρονών ή μεγαλύτερος, έχετ�
 msgid "Start"
 msgstr "Εκκίνηση"
 
-#: colournaming/templates/index.html:61
+#: colournaming/templates/index.html:47
+msgid ""
+"This is a synthetic observer trained by participants’ responses to name "
+"each colour in different languages (Mylonas, Stutters, Doval, and "
+"MacDonald, 2013). More languages will be added as more data is becoming "
+"available."
+msgstr "Αυτή η εφαρμογή είναι ένας συνθετικός παρατηρητής εκπαιδευμένος από τις απαντήσεις των συμμετεχόντων για να ονομάζει το κάθε χρώμα σε διάφορες γλώσσες (Mylonas, Stutters, Doval, και MacDonald, 2013). Περισσότερες γλώσσες θα προστεθούν καθώς θα είναι διαθέσιμα περισσότερα δεδομένα."
+
+#: colournaming/templates/index.html:62
 msgid "by name"
 msgstr "με όνομα"
 
-#: colournaming/templates/index.html:69
+#: colournaming/templates/index.html:70
 msgid "Colour name"
 msgstr "Ονομασία Χρώματος"
 
-#: colournaming/templates/index.html:71
+#: colournaming/templates/index.html:72
 msgid "Synonyms"
 msgstr "Συνώνυμα"
 
-#: colournaming/templates/index.html:89
+#: colournaming/templates/index.html:90
 msgid ""
 "This is a βeta version of Colournamer. You will need JavaScript enabled "
 "and a browser that supports HTML5 web audio."
 msgstr "Αυτή είναι μία πειραματική έκδοση του ονομαστή χρωμάτων. Θα χρειαστείτε να ενεργοποιήσετε τη Javascript και ένα πρόγραμμα περιήγησης που να υποστηρίζει HTML5 web audio."
 
-#: colournaming/templates/index.html:96
+#: colournaming/templates/index.html:97
 msgid ""
 "This research aims to develop an online colour naming model to facilitate"
 " colour communication within and between cultures."
 msgstr "Αυτή η έρευνα έχει ως σκοπό να δημιουργήσει ένα πολύγλωσσο πρόγραμμα ονομασίας χρωμάτων για να βελτιώσει τη χρωματική επικοινωνία μεταξύ διαφορετικών πολιτισμών. "
 
-#: colournaming/templates/index.html:287
+#: colournaming/templates/index.html:291
 msgid ""
 "Please use the following communication form to give us your feedback and "
 "comments or if you wish to inform you about the results of this research."
 msgstr "Παρακαλώ  χρησιμοποιείστε τη παρακάτω φόρμα επικοινωνίας για να μας στείλετε τα σχόλια σας ή αν θέλετε να επικοινωνήσουμε μαζί σας για τα αποτελέσματα της έρευνας."
 
-#: colournaming/templates/index.html:300
+#: colournaming/templates/index.html:304
 #: colournaming/templates/observer_information.html:52
 msgid "Submit"
 msgstr "Αποστολή"
 
-#: colournaming/templates/index.html:311
+#: colournaming/templates/index.html:315
 msgid "Made in London and Berlin"
 msgstr "Made in London and Berlin"
 
@@ -381,9 +389,12 @@ msgstr "Τεστ Ονομασίας Χρωμάτων"
 #: colournaming/templates/name_colour.html:7
 msgid ""
 "Name each colour sample with the best representative colour term that you"
-" remember.<br>Name as many colour samples as you can for higher ranking "
-"on colour namers. Your response time will be recorded."
-msgstr "Παρακαλούμε ονομάστε κάθε χρωματικό δείγμα με την πιο αντιπροσωπευτική ονομασία χρώματος που μπορείτε να θυμηθείτε.<br>Ονομάστε όσα περισσότερα χρωματικά δείγματα μπορείτε για υψηλότερη βαθμολογία στη λίστα με τους ονομαστές χρωμάτων. Ο χρόνος απόκρισης θα καταγραφεί."
+" remember.<br>Press the Arrow button [&gt;] or Enter on your keyboard "
+"once you have finished naming the colour for the next colour sample to "
+"appear. Name as many colour samples as you can for higher ranking on "
+"colour namers. You will need to press the Next button to finish naming "
+"colours and start the next task. Your response time will be recorded."
+msgstr "Ονομάστε κάθε χρωματικό δείγμα με την πιο αντιπροσωπευτική ονομασία χρώματος που μπορείτε να θυμηθείτε.<br>Παρακαλώ πιέστε το πλήκτρο με το βέλος [&gt;] ή Enter στο πληκτρολόγιό σας μόλις ολοκληρώσετε την ονομασία του κάθε χρώματος για να εμφανιστεί το επόμενο χρώμα. Ονομάστε όσα περισσότερα χρωματικά δείγματα μπορείτε για υψηλότερη βαθμολογία στη λίστα με τους ονομαστές χρωμάτων. Θα χρειαστεί να πατήσετε το κουμπί Επόμενο για να ολοκληρώσετε την ονομασία των χρωμάτων και να ξεκινήσετε την επόμενη εργασία. Ο χρόνος απόκρισης θα καταγραφεί."
 
 #: colournaming/templates/name_colour.html:14
 msgid "Name the colour of the patch"
