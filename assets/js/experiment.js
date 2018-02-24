@@ -408,7 +408,9 @@ if ($thankYouText !== null && $results !== null) {
 
                     $results.appendChild($li);
 
-                    return fetch(`/namer/lang/default/name?colour=${ hexColorValue }`)
+                    return fetch(`/namer/lang/default/name?colour=${ hexColorValue }`, {
+                        credentials: 'same-origin'
+                    })
                         .then((response) => response.json())
                         .then((json) => {
                             $blackSpan.className = 'black';
