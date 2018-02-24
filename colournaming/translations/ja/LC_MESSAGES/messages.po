@@ -265,9 +265,7 @@ msgid ""
 "all of the time. The movie lasts for 90 secs and all you need to do is "
 "play it and remember if the 'coloured' square disappeared at any time "
 "during the movie."
-msgstr "
-この動画では、色のついた正方形が表示されます。動画を再生すると、正方形の色は変化します。断片的にもしくは連続して色をご覧いただけるかと思います。
-この動画は90秒です。動画の再生中に、色のついた正方形が消えたかどうかを確認してください。"
+msgstr "この動画では、色のついた正方形が表示されます。動画を再生すると、正方形の色は変化します。断片的にもしくは連続して色をご覧いただけるかと思います。この動画は90秒です。動画の再生中に、色のついた正方形が消えたかどうかを確認してください。"
 
 #: colournaming/templates/colour_vision.html:9
 msgid "Did the 'coloured' square disappear?"
