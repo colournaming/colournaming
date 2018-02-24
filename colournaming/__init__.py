@@ -40,9 +40,10 @@ def set_locale_selector(babel):
         available_langs = [x['code'] for x in current_app.config.get('LANGUAGES')]
         requested_lang = session.get('interface_language', None)
         if requested_lang in available_langs:
-            return requested_lang
+            locale = requested_lang
         else:
-            return request.accept_languages.best_match(available_langs)
+            locale = request.accept_languages.best_match(available_langs)
+        return locale
 
 
 def set_before_request(app):

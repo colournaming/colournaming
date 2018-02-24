@@ -1,3 +1,4 @@
+import "babel-polyfill"
 require('./farbtastic')
 import { initAudio, playSound, loadAudioSet, resumeAudio } from './audio'
 

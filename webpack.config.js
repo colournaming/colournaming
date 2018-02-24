@@ -5,7 +5,9 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 module.exports = {
   entry: {
     namer: './assets/js/colour-namer.js',
-    experiment: './assets/js/experiment.js'
+    experiment: './assets/js/experiment.js',
+    'babel-polyfill': 'babel-polyfill',
+    'whatwg-fetch': 'whatwg-fetch'
   },
   output: {
     filename: '[name].js',

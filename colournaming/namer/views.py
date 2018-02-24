@@ -1,6 +1,6 @@
 """Views for the namer."""
 
-from flask import Blueprint, jsonify, abort, request, current_app, render_template
+from flask import Blueprint, jsonify, abort, request, current_app, render_template, session
 from sqlalchemy.orm.exc import NoResultFound
 from ..database import db
 from .model import Language, NameAgreement
@@ -32,10 +32,13 @@ def get_colours():
 
 @bp.route('/lang/default/name')
 def name_colour_default_lang():
-    lang = request.accept_languages[0][0]
-    if '-' in lang:
-        # e.g. if lang = en-GB
-        lang = lang.split('-')[0]
+    lang = session.get('interface_language')
+    if not lang:
+        lang = request.accept_languages[0][0]
+        if '-' in lang:
+            # e.g. if lang = en-GB
+            lang = lang.split('-')[0]
+    print('default lang is:', lang)
     return name_colour(lang)
 
 @bp.route('/lang/<lang_code>/name')

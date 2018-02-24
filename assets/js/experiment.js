@@ -1,3 +1,6 @@
+import "babel-polyfill"
+import "whatwg-fetch"
+
 let results = JSON.parse(localStorage.getItem('results'));
 
 const updateResults = (delta) => {
@@ -9,7 +12,6 @@ const $levels = document.getElementById('levels');
 
 if (window.location.href.endsWith('observer_information.html')) {
   /* request geolocation if we're on the observer information page */
-  console.log('requesting geolocation');
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(location) {
         updateResults({location: String(location.coords.latitude + ',' + location.coords.longitude)});
@@ -406,7 +408,9 @@ if ($thankYouText !== null && $results !== null) {
 
                     $results.appendChild($li);
 
-                    return fetch(`/namer/lang/default/name?colour=${ hexColorValue }`)
+                    return fetch(`/namer/lang/default/name?colour=${ hexColorValue }`, {
+                        credentials: 'same-origin'
+                    })
                         .then((response) => response.json())
                         .then((json) => {
                             $blackSpan.className = 'black';
