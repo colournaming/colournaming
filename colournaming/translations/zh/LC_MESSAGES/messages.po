@@ -325,11 +325,7 @@ msgid ""
 " and <a href=\"mailto:l.griffin[at]ucl.ac.uk\">Lewis Griffin</a> of "
 "University College London if you have any questions."
 msgstr ""
-"基于参与者的积极的体验肯定，相信本测试不会对参与者造成伤害和危害。本研究的目的旨在改善多语种环境下的色彩语言表达。请联系研究负责人 <a "
-"href=\"mailto:d.mylonas[at]ucl.ac.uk\">Dimitris Mylonas</a> <a "
-"href=\"mailto:ucfslwm[at]ucl.ac.uk\">Lindsay MacDonald</a>  <a "
-"href=\"mailto:l.griffin[at]ucl.ac.uk\">Lewis Griffin</a>, University "
-"College London。"
+"基于参与者的积极的体验肯定，相信本测试不会对参与者造成伤害和危害。本研究的目的旨在改善多语种环境下的色彩语言表达。请联系研究负责人 <a href=\"mailto:d.mylonas[at]ucl.ac.uk\">Dimitris Mylonas</a> <a href=\"mailto:ucfslwm[at]ucl.ac.uk\">Lindsay MacDonald</a>  <a \"href=\"mailto:l.griffin[at]ucl.ac.uk\">Lewis Griffin</a>, University College London。"
 
 #: colournaming/templates/index.html:40
 msgid ""
@@ -349,8 +345,7 @@ msgid ""
 "MacDonald, 2013). More languages will be added as more data is becoming "
 "available."
 msgstr ""
-"这是由参与者提供不同语言的颜色命名而生成的综合性的观察方式(Mylonas, Stutters, Doval, and MacDonald, "
-"2013)。本测试将会增加更多的语言选项。"
+"这是由参与者提供不同语言的颜色命名而生成的综合性的观察方式(Mylonas, Stutters, Doval, and MacDonald, 2013)。本测试将会增加更多的语言选项。"
 
 #: colournaming/templates/index.html:62
 msgid "by name"
