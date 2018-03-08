@@ -14,7 +14,7 @@ def read_translations(translation_filename, column):
     while True:
         english = ws['B{0}'.format(row)].value
         try:
-            translated = ws['{0}{1}'.format(column, row)].value.strip()
+            translated = ws['{0}{1}'.format(column, row)].value.strip().replace('\n', '')
         except AttributeError:
             translated = None
         print(english, translated)
