@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-02-22 15:45+0000\n"
+"POT-Creation-Date: 2018-03-08 22:44+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -267,7 +267,12 @@ msgid ""
 "all of the time. The movie lasts for 90 secs and all you need to do is "
 "play it and remember if the 'coloured' square disappeared at any time "
 "during the movie."
-msgstr "The movie below displays a moving 'coloured' square. The square changes colour as the movie plays. You may be able to see the colour for some or all of the time. The movie lasts for 90 secs and all you need to do is play it and remember if the 'coloured' square disappeared at any time during the movie."
+msgstr ""
+"The movie below displays a moving 'coloured' square. The square changes "
+"colour as the movie plays. You may be able to see the colour for some or "
+"all of the time. The movie lasts for 90 secs and all you need to do is "
+"play it and remember if the 'coloured' square disappeared at any time "
+"during the movie."
 
 #: colournaming/templates/colour_vision.html:9
 msgid "Did the 'coloured' square disappear?"
@@ -282,7 +287,10 @@ msgid ""
 "Adjust the brightness of your display if necessary until you can see the "
 "differences between all 11 steps of the greyscale test image. Disable "
 "Night Shift mode or blue light filters if applicable."
-msgstr "Adjust the brightness of your display if necessary until you can see the differences between all 11 steps of the greyscale test image. Disable Night Shift mode or blue light filters if applicable."
+msgstr ""
+"Adjust the brightness of your display if necessary until you can see the "
+"differences between all 11 steps of the greyscale test image. Disable "
+"Night Shift mode or blue light filters if applicable."
 
 #: colournaming/templates/display_properties.html:23
 msgid "Confirm how many steps you can see?"
@@ -296,7 +304,7 @@ msgstr "Colour namer"
 msgid "Research"
 msgstr "Research"
 
-#: colournaming/templates/index.html:26 colournaming/templates/index.html:289
+#: colournaming/templates/index.html:26 colournaming/templates/index.html:293
 msgid "Contact"
 msgstr "Contact"
 
@@ -312,7 +320,13 @@ msgid ""
 "about your cultural background and viewing conditions. You are free to "
 "omit any question and you may withdraw at any time without penalty. "
 "Participation in this study is strictly anonymous and voluntary."
-msgstr "Welcome to Colour Naming, an online experiment designed to collect colour names in multiple languages with their corresponding colour ranges. You will be asked to name a series of colour samples and provide information about your cultural background and viewing conditions. You are free to omit any question and you may withdraw at any time without penalty. Participation in this study is strictly anonymous and voluntary."
+msgstr ""
+"Welcome to Colour Naming, an online experiment designed to collect colour"
+" names in multiple languages with their corresponding colour ranges. You "
+"will be asked to name a series of colour samples and provide information "
+"about your cultural background and viewing conditions. You are free to "
+"omit any question and you may withdraw at any time without penalty. "
+"Participation in this study is strictly anonymous and voluntary."
 
 #: colournaming/templates/index.html:38
 msgid ""
@@ -324,14 +338,25 @@ msgid ""
 "supervisors <a href=\"mailto:ucfslwm[at]ucl.ac.uk\">Lindsay MacDonald</a>"
 " and <a href=\"mailto:l.griffin[at]ucl.ac.uk\">Lewis Griffin</a> of "
 "University College London if you have any questions."
-msgstr "Many individuals find the tasks of this study enjoyable and we believe there are no known risks to participants. The purpose of this research study is to improve colour communication in multilingual environments. Please feel free to contact the principal investigator <a href=\"mailto:d.mylonas[at]ucl.ac.uk\">Dimitris Mylonas</a> or the supervisors <a href=\"mailto:ucfslwm[at]ucl.ac.uk\">Lindsay MacDonald</a> and <a href=\"mailto:l.griffin[at]ucl.ac.uk\">Lewis Griffin</a> of University College London if you have any questions."
+msgstr ""
+"Many individuals find the tasks of this study enjoyable and we believe "
+"there are no known risks to participants. The purpose of this research "
+"study is to improve colour communication in multilingual environments. "
+"Please feel free to contact the principal investigator <a "
+"href=\"mailto:d.mylonas[at]ucl.ac.uk\">Dimitris Mylonas</a> or the "
+"supervisors <a href=\"mailto:ucfslwm[at]ucl.ac.uk\">Lindsay MacDonald</a>"
+" and <a href=\"mailto:l.griffin[at]ucl.ac.uk\">Lewis Griffin</a> of "
+"University College London if you have any questions."
 
 #: colournaming/templates/index.html:40
 msgid ""
 "If you are 16 years of age or older, understand the statements and freely"
 " consent to participate in the study, click on the 'Start' button to "
 "begin the experiment."
-msgstr "If you are 16 years of age or older, understand the statements and freely consent to participate in the study, click on the 'Start' button to begin the experiment."
+msgstr ""
+"If you are 16 years of age or older, understand the statements and freely"
+" consent to participate in the study, click on the 'Start' button to "
+"begin the experiment."
 
 #: colournaming/templates/index.html:41
 msgid "Start"
@@ -343,7 +368,11 @@ msgid ""
 "each colour in different languages (Mylonas, Stutters, Doval, and "
 "MacDonald, 2013). More languages will be added as more data is becoming "
 "available."
-msgstr "This is a synthetic observer trained by participants’ responses to name each colour in different languages (Mylonas, Stutters, Doval, and MacDonald, 2013). More languages will be added as more data is becoming available."
+msgstr ""
+"This is a synthetic observer trained by participants’ responses to name "
+"each colour in different languages (Mylonas, Stutters, Doval, and "
+"MacDonald, 2013). More languages will be added as more data is becoming "
+"available."
 
 #: colournaming/templates/index.html:62
 msgid "by name"
@@ -361,26 +390,32 @@ msgstr "Synonyms"
 msgid ""
 "This is a βeta version of Colournamer. You will need JavaScript enabled "
 "and a browser that supports HTML5 web audio."
-msgstr "This is a βeta version of Colournamer. You will need JavaScript enabled and a browser that supports HTML5 web audio."
+msgstr ""
+"This is a βeta version of Colournamer. You will need JavaScript enabled "
+"and a browser that supports HTML5 web audio."
 
 #: colournaming/templates/index.html:97
 msgid ""
 "This research aims to develop an online colour naming model to facilitate"
 " colour communication within and between cultures."
-msgstr "This research aims to develop an online colour naming model to facilitate colour communication within and between cultures."
+msgstr ""
+"This research aims to develop an online colour naming model to facilitate"
+" colour communication within and between cultures."
 
-#: colournaming/templates/index.html:291
+#: colournaming/templates/index.html:295
 msgid ""
 "Please use the following communication form to give us your feedback and "
 "comments or if you wish to inform you about the results of this research."
-msgstr "Please use the following communication form to give us your feedback and comments or if you wish to inform you about the results of this research."
+msgstr ""
+"Please use the following communication form to give us your feedback and "
+"comments or if you wish to inform you about the results of this research."
 
-#: colournaming/templates/index.html:304
+#: colournaming/templates/index.html:308
 #: colournaming/templates/observer_information.html:52
 msgid "Submit"
 msgstr "Submit"
 
-#: colournaming/templates/index.html:315
+#: colournaming/templates/index.html:319
 msgid "Made in London and Berlin"
 msgstr "Made in London and Berlin"
 
@@ -393,17 +428,17 @@ msgid ""
 "Name each colour sample with the best representative colour term that you"
 " remember.<br>Press the Arrow button [&gt;] or Enter on your keyboard "
 "once you have finished naming the colour for the next colour sample to "
-"appear. Name as many colour samples as you can for higher ranking on "
-"colour namers. You will need to press the Next button to finish naming "
-"colours and start the next task. Your response time will be recorded."
-msgstr "Name each colour sample with the best representative colour term that you remember.<br>Press the Arrow button [&gt;] or Enter on your keyboard once you have finished naming the colour for the next colour sample to appear. Name as many colour samples (&gt;20) as you can for higher ranking on colour namers. You will need to press the Finish button to  start the next task. Your response time will be recorded."
+"appear. Name as many colour samples (20+) as you can for higher ranking "
+"on colour namers. You will need to press the Next button to start the "
+"next task. Your response time will be recorded."
+msgstr ""
 
 #: colournaming/templates/name_colour.html:14
 msgid "Name the colour of the patch"
 msgstr "Name the colour of the patch"
 
 #: colournaming/templates/name_colour.html:29
-msgid "Next"
+msgid "Finish"
 msgstr "Finish"
 
 #: colournaming/templates/observer_information.html:5
@@ -415,7 +450,10 @@ msgid ""
 "Please provide us with some information about your background and viewing"
 " conditions. This will help us to better understand the context of your "
 "responses."
-msgstr "Please provide us with some information about your background and viewing conditions. This will help us to better understand the context of your responses."
+msgstr ""
+"Please provide us with some information about your background and viewing"
+" conditions. This will help us to better understand the context of your "
+"responses."
 
 #: colournaming/templates/thankyou.html:5
 msgid "Thank you"
@@ -435,5 +473,9 @@ msgid ""
 "across languages. Please feel free to contact us and visit our research "
 "page for more information. Find below your responses in white and the "
 "most popular colour names in black:"
-msgstr "Your responses will be used to improve colour communication within and across languages. Please feel free to contact us and visit our research page for more information. Find below your responses in white and the most popular colour names in black:"
+msgstr ""
+"Your responses will be used to improve colour communication within and "
+"across languages. Please feel free to contact us and visit our research "
+"page for more information. Find below your responses in white and the "
+"most popular colour names in black:"
 

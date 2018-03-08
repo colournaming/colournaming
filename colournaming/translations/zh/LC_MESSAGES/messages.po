@@ -1,4 +1,4 @@
-# Translations template for PROJECT.
+# Chinese translations for PROJECT.
 # Copyright (C) 2018 ORGANIZATION
 # This file is distributed under the same license as the PROJECT project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
@@ -10,7 +10,9 @@ msgstr ""
 "POT-Creation-Date: 2018-02-22 15:45+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh\n"
+"Language-Team: zh <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -322,7 +324,7 @@ msgid ""
 "supervisors <a href=\"mailto:ucfslwm[at]ucl.ac.uk\">Lindsay MacDonald</a>"
 " and <a href=\"mailto:l.griffin[at]ucl.ac.uk\">Lewis Griffin</a> of "
 "University College London if you have any questions."
-msgstr "基于参与者的积极的体验肯定，相信本测试不会对参与者造成伤害和危害。本研究的目的旨在改善多语种环境下的色彩语言表达。请联系研究负责人 <a href=\"mailto:d.mylonas[at]ucl.ac.uk\">Dimitris Mylonas,</a> <a href=\"mailto:ucfslwm[at]ucl.ac.uk\">Lindsay MacDonald,</a>  <a href=\"mailto:l.griffin[at]ucl.ac.uk\"> Lewis Griffin</a>, University College London。"
+msgstr "基于参与者的积极的体验肯定，相信本测试不会对参与者造成伤害和危害。本研究的目的旨在改善多语种环境下的色彩语言表达。请联系研究负责人 <a href=\"mailto:d.mylonas[at]ucl.ac.uk\">Dimitris Mylonas,</a> <a href=\"mailto:ucfslwm[at]ucl.ac.uk\"> Lindsay MacDonald,</a>  <a href=\"mailto:l.griffin[at]ucl.ac.uk\"> Lewis Griffin</a>, University College London。"
 
 #: colournaming/templates/index.html:40
 msgid ""
@@ -391,10 +393,10 @@ msgid ""
 "Name each colour sample with the best representative colour term that you"
 " remember.<br>Press the Arrow button [&gt;] or Enter on your keyboard "
 "once you have finished naming the colour for the next colour sample to "
-"appear. Name as many colour samples as you can for higher ranking on "
-"colour namers. You will need to press the Next button to finish naming "
-"colours and start the next task. Your response time will be recorded."
-msgstr "根据你的理解，命名每个色样所代表的颜色名称。<br>按箭头[>]或通过键盘输入色名至下一个色样出现。你可以根据色样将色民依次排序。你需要按‘完成’结束并开始新的测试步骤[&gt;20]。你所回答的时间将被记录。"
+"appear. Name as many colour samples (20+) as you can for higher ranking "
+"on colour namers. You will need to press the Finish button to start the "
+"next task. Your response time will be recorded."
+msgstr "根据你的理解，命名每个色样所代表的颜色名称。<br>按箭头[&gt;]或通过键盘输入色名至下一个色样出现。你可以根据色样将色民依次排序。你需要按‘完成’结束并开始新的测试步骤[20+]。你所回答的时间将被记录。"
 
 #: colournaming/templates/name_colour.html:14
 msgid "Name the colour of the patch"
