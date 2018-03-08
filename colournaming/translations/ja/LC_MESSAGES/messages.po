@@ -282,9 +282,7 @@ msgid ""
 "Adjust the brightness of your display if necessary until you can see the "
 "differences between all 11 steps of the greyscale test image. Disable "
 "Night Shift mode or blue light filters if applicable."
-msgstr ""
-"テスト画像で示される11段階の明るさを区別できるように、ディスプレイの明るさを調整してください。可能であれば、ディスプレイのNight "
-"Shiftモードやブルーライト軽減機能を無効にしてください。"
+msgstr "テスト画像で示される11段階の明るさを区別できるように、ディスプレイの明るさを調整してください。可能であれば、ディスプレイのNight Shiftモードやブルーライト軽減機能を無効にしてください。"
 
 #: colournaming/templates/display_properties.html:23
 msgid "Confirm how many steps you can see?"
@@ -326,12 +324,7 @@ msgid ""
 "supervisors <a href=\"mailto:ucfslwm[at]ucl.ac.uk\">Lindsay MacDonald</a>"
 " and <a href=\"mailto:l.griffin[at]ucl.ac.uk\">Lewis Griffin</a> of "
 "University College London if you have any questions."
-msgstr ""
-"多くの参加者はこの実験を楽しんでおり、これまでに実験を通じた不利益の報告はありません。この研究の目的は、多言語が使用される環境で色に関連するコミュニケーションを改善することです。不明な点は、University"
-" College Londonに所属する主担当研究者<a "
-"href=\"mailto:d.mylonas[at]ucl.ac.uk\">Dimitris Mylonas</a>、指導教員<a "
-"href=\"mailto:ucfslwm[at]ucl.ac.uk\">Lindsay MacDonald</a>、<a "
-"href=\"mailto:l.griffin[at]ucl.ac.uk\">Lewis Griffin</a>まで、お問い合わせください。"
+msgstr "多くの参加者はこの実験を楽しんでおり、これまでに実験を通じた不利益の報告はありません。この研究の目的は、多言語が使用される環境で色に関連するコミュニケーションを改善することです。不明な点は、University College Londonに所属する主担当研究者<a href=\"mailto:d.mylonas[at]ucl.ac.uk\">Dimitris Mylonas</a>、指導教員<a href=\"mailto:ucfslwm[at]ucl.ac.uk\">Lindsay MacDonald</a>、<a href=\"mailto:l.griffin[at]ucl.ac.uk\">Lewis Griffin</a>まで、お問い合わせください。"
 
 #: colournaming/templates/index.html:40
 msgid ""
@@ -350,9 +343,7 @@ msgid ""
 "each colour in different languages (Mylonas, Stutters, Doval, and "
 "MacDonald, 2013). More languages will be added as more data is becoming "
 "available."
-msgstr ""
-"これは、参加者の回答色名によって訓練された各言語ごとの自動色名生成システムです(Mylonas, Stutters, Doval, and "
-"MacDonald, 2013)。 多くの色名データを収集できた言語から順に、今後さらに追加していく予定です。"
+msgstr "これは、参加者の回答色名によって訓練された各言語ごとの自動色名生成システムです(Mylonas, Stutters, Doval, and MacDonald, 2013)。 多くの色名データを収集できた言語から順に、今後さらに追加していく予定です。"
 
 #: colournaming/templates/index.html:62
 msgid "by name"
@@ -405,10 +396,7 @@ msgid ""
 "appear. Name as many colour samples as you can for higher ranking on "
 "colour namers. You will need to press the Next button to finish naming "
 "colours and start the next task. Your response time will be recorded."
-msgstr ""
-"それぞれの色見本に対して、思い浮かぶ色名の中から最も適切な色名を回答してください。<br>現在の色見本の色名の回答を終えたら「&gt;」ボタン、またはキーボードのEnterキーを一度押してください。次の色見本が表示されます。"
-" 色名回答のランキング上位者を目指して、できるだけ多くの色見本に名前をつけてください。 "
-"色名実験を終了する場合には、「次」ボタンを押してください。あなたの回答時間は、記録されます 。"
+msgstr "それぞれの色見本に対して、思い浮かぶ色名の中から最も適切な色名を回答してください。<br>現在の色見本の色名の回答を終えたら「&gt;」ボタン、またはキーボードのEnterキーを一度押してください。次の色見本が表示されます。色名回答のランキング上位者を目指して、できるだけ多くの色見本に名前をつけてください (&gt;20)。色名実験を終了して次へ進むためには、「終了」ボタンを押してください。実験中、あなたの回答時間は記録されます。"
 
 #: colournaming/templates/name_colour.html:14
 msgid "Name the colour of the patch"
@@ -416,7 +404,7 @@ msgstr "パッチの色を答える"
 
 #: colournaming/templates/name_colour.html:29
 msgid "Next"
-msgstr "次"
+msgstr "終了"
 
 #: colournaming/templates/observer_information.html:5
 msgid "Observer Information Task"
@@ -431,7 +419,7 @@ msgstr "あなたの経歴と観察条件に関して、いくつかお伺いし
 
 #: colournaming/templates/thankyou.html:5
 msgid "Thank you"
-msgstr "ありがとうございます。"
+msgstr "ありがとうございました。"
 
 #: colournaming/templates/thankyou.html:8
 msgid "Thank you for participating."
