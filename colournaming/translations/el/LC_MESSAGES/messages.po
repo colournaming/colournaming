@@ -1,4 +1,4 @@
-# Greek translations for PROJECT.
+# Translations template for PROJECT.
 # Copyright (C) 2018 ORGANIZATION
 # This file is distributed under the same license as the PROJECT project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
@@ -10,9 +10,7 @@ msgstr ""
 "POT-Creation-Date: 2018-02-22 15:45+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: el\n"
-"Language-Team: el <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -44,7 +42,7 @@ msgstr "Παρακαλώ προσδιορίστε"
 
 #: colournaming/experiment/forms.py:53 colournaming/experiment/forms.py:63
 msgid "Beginner"
-msgstr "Αρχάρια "
+msgstr "Αρχάρια"
 
 #: colournaming/experiment/forms.py:54 colournaming/experiment/forms.py:64
 msgid "Intermediate"
@@ -148,7 +146,7 @@ msgstr "Περιγράψτε τη λευκότητα των άσπρων γρα�
 
 #: colournaming/experiment/forms.py:122 colournaming/experiment/forms.py:133
 msgid "Dark"
-msgstr "Σκοτεινό "
+msgstr "Σκοτεινό"
 
 #: colournaming/experiment/forms.py:123
 msgid "Dim"
@@ -267,8 +265,7 @@ msgid ""
 "all of the time. The movie lasts for 90 secs and all you need to do is "
 "play it and remember if the 'coloured' square disappeared at any time "
 "during the movie."
-msgstr ""
-"Το βίντεο που ακολουθεί απεικονίζει ένα κινούμενο «χρωματισμένο» τετράγωνο. Το τετράγωνο αλλάζει χρωματισμό καθώς παίζει το βίντεο. Πιθανώς να βλέπετε το χρώμα του σε κάποια διαστήματα ή και συνεχόμενα. Το βίντεο διαρκεί για 90 δευτερόλεπτα. Το μόνο που χρειάζεται να κάνετε είναι να το ξεκινήσετε και να θυμάστε αν το «χρωματισμένο» τετράγωνο εξαφανίστηκε κάποια στιγμή κατά τη διάρκεια του βίντεο."
+msgstr "Το βίντεο που ακολουθεί απεικονίζει ένα κινούμενο «χρωματισμένο» τετράγωνο. Το τετράγωνο αλλάζει χρωματισμό καθώς παίζει το βίντεο. Πιθανώς να βλέπετε το χρώμα του σε κάποια διαστήματα ή και συνεχόμενα. Το βίντεο διαρκεί για 90 δευτερόλεπτα. Το μόνο που χρειάζεται να κάνετε είναι να το ξεκινήσετε και να θυμάστε αν το «χρωματισμένο» τετράγωνο εξαφανίστηκε κάποια στιγμή κατά τη διάρκεια του βίντεο."
 
 #: colournaming/templates/colour_vision.html:9
 msgid "Did the 'coloured' square disappear?"
@@ -283,8 +280,7 @@ msgid ""
 "Adjust the brightness of your display if necessary until you can see the "
 "differences between all 11 steps of the greyscale test image. Disable "
 "Night Shift mode or blue light filters if applicable."
-msgstr ""
-"Ρυθμίστε τη φωτεινότητα της οθόνης σας αν χρειάζεται ώστε να μπορείτε να δείτε τις διαφορές μεταξύ των 11 δειγμάτων της εικόνας. Απενεργοποιήστε το Night Swift / φίλτρα για τη μπλε ακτινοβολία του κινητού σας αν είναι ενεργοποιημένα."
+msgstr "Ρυθμίστε τη φωτεινότητα της οθόνης σας αν χρειάζεται ώστε να μπορείτε να δείτε τις διαφορές μεταξύ των 11 δειγμάτων της εικόνας. Απενεργοποιήστε το Night Swift / φίλτρα για τη μπλε ακτινοβολία του κινητού σας αν είναι ενεργοποιημένα."
 
 #: colournaming/templates/display_properties.html:23
 msgid "Confirm how many steps you can see?"
@@ -314,8 +310,7 @@ msgid ""
 "about your cultural background and viewing conditions. You are free to "
 "omit any question and you may withdraw at any time without penalty. "
 "Participation in this study is strictly anonymous and voluntary."
-msgstr ""
-"Καλώς ήρθατε στο διαδικτυακό πείραμα ονομασίας χρωμάτων. Το πείραμα είναι σχεδιασμένο να συλλέξει ονομασίες χρωμάτων σε διαφορετικές γλώσσες με τo αντίστοιχο χρωματικό τους εύρος. Θα σας ζητηθεί να ονομάσετε μια σειρά χρωματικών δειγμάτων και να μας δώσετε πληροφορίες για εσάς και τις συνθήκες παρατήρησης σας. Είστε ελεύθεροι να παραλείψετε οποιαδήποτε ερώτηση και να διακόψετε τη συμμετοχή σας οποιαδήποτε στιγμή χωρίς καμία κύρωση. Η συμμετοχή σε αυτή την μελέτη είναι ανώνυμη και εθελοντική. "
+msgstr "Καλώς ήρθατε στο διαδικτυακό πείραμα ονομασίας χρωμάτων. Το πείραμα είναι σχεδιασμένο να συλλέξει ονομασίες χρωμάτων σε διαφορετικές γλώσσες με τo αντίστοιχο χρωματικό τους εύρος. Θα σας ζητηθεί να ονομάσετε μια σειρά χρωματικών δειγμάτων και να μας δώσετε πληροφορίες για εσάς και τις συνθήκες παρατήρησης σας. Είστε ελεύθεροι να παραλείψετε οποιαδήποτε ερώτηση και να διακόψετε τη συμμετοχή σας οποιαδήποτε στιγμή χωρίς καμία κύρωση. Η συμμετοχή σε αυτή την μελέτη είναι ανώνυμη και εθελοντική."
 
 #: colournaming/templates/index.html:38
 msgid ""
@@ -327,16 +322,14 @@ msgid ""
 "supervisors <a href=\"mailto:ucfslwm[at]ucl.ac.uk\">Lindsay MacDonald</a>"
 " and <a href=\"mailto:l.griffin[at]ucl.ac.uk\">Lewis Griffin</a> of "
 "University College London if you have any questions."
-msgstr ""
-"Πολλοί  συμμετέχοντες βρίσκουν το πείραμα διασκεδαστικό και δεν γνωρίζουμε ούτε πιστεύουμε οτι υπάρχουν κίνδυνοι για τους συμμετέχοντες. Ο σκοπός αυτής της έρευνας είναι να βελτιώσει τη χρωματική επικοινωνία σε πολυγλωσσικά περιβάλλοντα. Αν έχετε οποιαδήποτε ερώτηση ή θέλετε να κάνετε κάποιο σχόλιο για εμάς παρακαλούμε ενημερώστε τον κύριο ερευνητή <a href=\"mailto:d.mylonas[at]ucl.ac.uk\">Δημήτρη Μυλωνά</a> ή τους επιβλέποντες <a href=\"mailto:ucfslwm[at]ucl.ac.uk\">Lindsay MacDonald<a/> and <a href=\"mailto:l.griffin@ucl.ac.uk\">Lewis Griffin</a> στο University College London."
+msgstr "Πολλοί  συμμετέχοντες βρίσκουν το πείραμα διασκεδαστικό και δεν γνωρίζουμε ούτε πιστεύουμε οτι υπάρχουν κίνδυνοι για τους συμμετέχοντες. Ο σκοπός αυτής της έρευνας είναι να βελτιώσει τη χρωματική επικοινωνία σε πολυγλωσσικά περιβάλλοντα. Αν έχετε οποιαδήποτε ερώτηση ή θέλετε να κάνετε κάποιο σχόλιο για εμάς παρακαλούμε ενημερώστε τον κύριο ερευνητή <a href=\"mailto:d.mylonas[at]ucl.ac.uk\">Δημήτρη Μυλωνά</a> ή τους επιβλέποντες <a href=\"mailto:ucfslwm[at]ucl.ac.uk\">Lindsay MacDonald<a/> and <a href=\"mailto:l.griffin@ucl.ac.uk\">Lewis Griffin</a> στο University College London."
 
 #: colournaming/templates/index.html:40
 msgid ""
 "If you are 16 years of age or older, understand the statements and freely"
 " consent to participate in the study, click on the 'Start' button to "
 "begin the experiment."
-msgstr ""
-"Αν είσαστε 16 χρονών ή μεγαλύτερος, έχετε κατανοήσει τις πληροφορίες που σας δόθηκαν και συμφωνείτε να πάρετε μέρος σε αυτή τη μελέτη ελεύθερα, παρακαλώ πατήστε την Εκκίνηση  για να ξεκινήσει το πείραμα."
+msgstr "Αν είσαστε 16 χρονών ή μεγαλύτερος, έχετε κατανοήσει τις πληροφορίες που σας δόθηκαν και συμφωνείτε να πάρετε μέρος σε αυτή τη μελέτη ελεύθερα, παρακαλώ πατήστε την Εκκίνηση  για να ξεκινήσει το πείραμα."
 
 #: colournaming/templates/index.html:41
 msgid "Start"
@@ -348,8 +341,7 @@ msgid ""
 "each colour in different languages (Mylonas, Stutters, Doval, and "
 "MacDonald, 2013). More languages will be added as more data is becoming "
 "available."
-msgstr ""
-"Αυτή η εφαρμογή είναι ένας συνθετικός παρατηρητής εκπαιδευμένος από τις απαντήσεις των συμμετεχόντων για να ονομάζει το κάθε χρώμα σε διάφορες γλώσσες (Mylonas, Stutters, Doval, και MacDonald, 2013). Περισσότερες γλώσσες θα προστεθούν καθώς θα είναι διαθέσιμα περισσότερα δεδομένα."
+msgstr "Αυτή η εφαρμογή είναι ένας συνθετικός παρατηρητής εκπαιδευμένος από τις απαντήσεις των συμμετεχόντων για να ονομάζει το κάθε χρώμα σε διάφορες γλώσσες (Mylonas, Stutters, Doval, και MacDonald, 2013). Περισσότερες γλώσσες θα προστεθούν καθώς θα είναι διαθέσιμα περισσότερα δεδομένα."
 
 #: colournaming/templates/index.html:62
 msgid "by name"
@@ -367,22 +359,19 @@ msgstr "Συνώνυμα"
 msgid ""
 "This is a βeta version of Colournamer. You will need JavaScript enabled "
 "and a browser that supports HTML5 web audio."
-msgstr ""
-"Αυτή είναι μία πειραματική έκδοση του ονομαστή χρωμάτων. Θα χρειαστείτε να ενεργοποιήσετε τη Javascript και ένα πρόγραμμα περιήγησης που να υποστηρίζει HTML5 web audio."
+msgstr "Αυτή είναι μία πειραματική έκδοση του ονομαστή χρωμάτων. Θα χρειαστείτε να ενεργοποιήσετε τη Javascript και ένα πρόγραμμα περιήγησης που να υποστηρίζει HTML5 web audio."
 
 #: colournaming/templates/index.html:97
 msgid ""
 "This research aims to develop an online colour naming model to facilitate"
 " colour communication within and between cultures."
-msgstr ""
-"Αυτή η έρευνα έχει ως σκοπό να δημιουργήσει ένα πολύγλωσσο πρόγραμμα ονομασίας χρωμάτων για να βελτιώσει τη χρωματική επικοινωνία μεταξύ διαφορετικών πολιτισμών. "
+msgstr "Αυτή η έρευνα έχει ως σκοπό να δημιουργήσει ένα πολύγλωσσο πρόγραμμα ονομασίας χρωμάτων για να βελτιώσει τη χρωματική επικοινωνία μεταξύ διαφορετικών πολιτισμών."
 
 #: colournaming/templates/index.html:291
 msgid ""
 "Please use the following communication form to give us your feedback and "
 "comments or if you wish to inform you about the results of this research."
-msgstr ""
-"Παρακαλώ  χρησιμοποιείστε τη παρακάτω φόρμα επικοινωνίας για να μας στείλετε τα σχόλια σας ή αν θέλετε να επικοινωνήσουμε μαζί σας για τα αποτελέσματα της έρευνας."
+msgstr "Παρακαλώ  χρησιμοποιείστε τη παρακάτω φόρμα επικοινωνίας για να μας στείλετε τα σχόλια σας ή αν θέλετε να επικοινωνήσουμε μαζί σας για τα αποτελέσματα της έρευνας."
 
 #: colournaming/templates/index.html:304
 #: colournaming/templates/observer_information.html:52
@@ -405,15 +394,14 @@ msgid ""
 "appear. Name as many colour samples as you can for higher ranking on "
 "colour namers. You will need to press the Next button to finish naming "
 "colours and start the next task. Your response time will be recorded."
-msgstr ""
-"Ονομάστε κάθε χρωματικό δείγμα με την πιο αντιπροσωπευτική ονομασία χρώματος που μπορείτε να θυμηθείτε.<br>Πιέστε το πλήκτρο με το βέλος [&gt;] ή Enter στο πληκτρολόγιό σας μόλις ολοκληρώσετε την ονομασία του κάθε χρώματος για να εμφανιστεί το επόμενο χρώμα. Ονομάστε όσα περισσότερα χρωματικά δείγματα (&gt;20) μπορείτε για υψηλότερη βαθμολογία στη λίστα με τους ονομαστές χρωμάτων. Θα χρειαστεί να πατήσετε το κουμπί Τέλος για να προχωρήσετε στην επόμενη εργασία. Ο χρόνος απόκρισης θα καταγραφεί."
+msgstr "Ονομάστε κάθε χρωματικό δείγμα με την πιο αντιπροσωπευτική ονομασία χρώματος που μπορείτε να θυμηθείτε.<br>Πιέστε το πλήκτρο με το βέλος [&gt;] ή Enter στο πληκτρολόγιό σας μόλις ολοκληρώσετε την ονομασία του κάθε χρώματος για να εμφανιστεί το επόμενο χρώμα. Ονομάστε όσα περισσότερα χρωματικά δείγματα (&gt;20) μπορείτε για υψηλότερη βαθμολογία στη λίστα με τους ονομαστές χρωμάτων. Θα χρειαστεί να πατήσετε το κουμπί Τέλος για να προχωρήσετε στην επόμενη εργασία. Ο χρόνος απόκρισης θα καταγραφεί."
 
 #: colournaming/templates/name_colour.html:14
 msgid "Name the colour of the patch"
 msgstr "Ονομάστε το χρώμα του δείγματος."
 
 #: colournaming/templates/name_colour.html:29
-msgid "Next"
+msgid "Finish"
 msgstr "Tέλος"
 
 #: colournaming/templates/observer_information.html:5
@@ -425,8 +413,7 @@ msgid ""
 "Please provide us with some information about your background and viewing"
 " conditions. This will help us to better understand the context of your "
 "responses."
-msgstr ""
-"Παρακαλώ δώστε  μας λίγες πληροφορίες για εσάς και τις συνθήκες παρατήρησης σας για να μας βοηθήσετε να κατανοήσουμε το γενικότερο πλαίσιο των απαντήσεων σας."
+msgstr "Παρακαλώ δώστε  μας λίγες πληροφορίες για εσάς και τις συνθήκες παρατήρησης σας για να μας βοηθήσετε να κατανοήσουμε το γενικότερο πλαίσιο των απαντήσεων σας."
 
 #: colournaming/templates/thankyou.html:5
 msgid "Thank you"
@@ -446,6 +433,5 @@ msgid ""
 "across languages. Please feel free to contact us and visit our research "
 "page for more information. Find below your responses in white and the "
 "most popular colour names in black:"
-msgstr ""
-"Οι απαντήσεις σας θα χρησιμοποιηθούν για τη βελτίωση της χρωματικής επικοινωνίας μεταξύ διαφορετικών πολιτισμών. Μπορείτε να επικοινωνήσετε μαζί μας και να επισκεφτείτε τη σελίδα με τα αποτελέσματα της έρευνας μας για περισσότερες πληροφορίες. Βρείτε μια σύνοψη των απαντήσεών σας παρακάτω με άσπρο χρώμα και τις πιο δημοφιλής απαντήσεις με μαύρο χρώμα."
+msgstr "Οι απαντήσεις σας θα χρησιμοποιηθούν για τη βελτίωση της χρωματικής επικοινωνίας μεταξύ διαφορετικών πολιτισμών. Μπορείτε να επικοινωνήσετε μαζί μας και να επισκεφτείτε τη σελίδα με τα αποτελέσματα της έρευνας μας για περισσότερες πληροφορίες. Βρείτε μια σύνοψη των απαντήσεών σας παρακάτω με άσπρο χρώμα και τις πιο δημοφιλής απαντήσεις με μαύρο χρώμα."
 
