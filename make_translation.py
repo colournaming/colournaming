@@ -13,7 +13,10 @@ def read_translations(translation_filename, column):
     translation_dict = defaultdict(str)
     while True:
         english = ws['B{0}'.format(row)].value
-        translated = ws['{0}{1}'.format(column, row)].value
+        try:
+            translated = ws['{0}{1}'.format(column, row)].value.strip()
+        except AttributeError:
+            translated = None
         print(english, translated)
         if not english:
             break
@@ -44,4 +47,6 @@ def main(translation_filename, column, messages_filename, output_filename):
             do_translation(messages, translation_dict, output)
 
 if __name__ == '__main__':
+    if len(sys.argv) != 5:
+        print('Usage: make_translations.py TRANSLATION_SPREADSHEET COLUMN MESSAGES OUTPUT')
     main(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4])
