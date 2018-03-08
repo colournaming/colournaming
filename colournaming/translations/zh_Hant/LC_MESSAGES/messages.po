@@ -298,7 +298,7 @@ msgstr "研究"
 
 #: colournaming/templates/index.html:26 colournaming/templates/index.html:289
 msgid "Contact"
-msgstr "聯繫方式"
+msgstr "聯繫"
 
 #: colournaming/templates/index.html:34
 msgid "Let's play a game, how many colours can you name?"
