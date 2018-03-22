@@ -1,4 +1,4 @@
-# Chinese translations for PROJECT.
+# Translations template for PROJECT.
 # Copyright (C) 2018 ORGANIZATION
 # This file is distributed under the same license as the PROJECT project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
@@ -7,12 +7,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-02-22 15:45+0000\n"
+"POT-Creation-Date: 2018-03-08 22:44+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: zh\n"
-"Language-Team: zh <LL@li.org>\n"
-"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -88,11 +86,11 @@ msgstr "硕士"
 
 #: colournaming/experiment/forms.py:79
 msgid "Professional degree"
-msgstr "专家"
+msgstr "博士"
 
 #: colournaming/experiment/forms.py:80
 msgid "Doctorate degree"
-msgstr "博士"
+msgstr "专家"
 
 #: colournaming/experiment/forms.py:82
 msgid "What is the highest level of education you have completed?"
@@ -144,7 +142,7 @@ msgstr "偏黄的白色"
 
 #: colournaming/experiment/forms.py:116
 msgid "Describe the white graphic elements on your screen"
-msgstr "描述在你的萤屏上出现的白色图形"
+msgstr "描述在你的萤屏上所显示的白色图像"
 
 #: colournaming/experiment/forms.py:122 colournaming/experiment/forms.py:133
 msgid "Dark"
@@ -267,7 +265,7 @@ msgid ""
 "all of the time. The movie lasts for 90 secs and all you need to do is "
 "play it and remember if the 'coloured' square disappeared at any time "
 "during the movie."
-msgstr "此段影像显示了移动的色块。色块会随着影片变化颜色。你可以不断的或在一段时间内看到某种颜色。在长达90秒钟的影像中，你可以操作并记住色块。"
+msgstr "此段影像將出現移动並變化顏色的色块。你可以在一段时间内觀察到看到某种颜色。在长达90秒钟的影像中，你可以操作并记住色块。"
 
 #: colournaming/templates/colour_vision.html:9
 msgid "Did the 'coloured' square disappear?"
@@ -296,9 +294,9 @@ msgstr "色名生成"
 msgid "Research"
 msgstr "研究"
 
-#: colournaming/templates/index.html:26 colournaming/templates/index.html:289
+#: colournaming/templates/index.html:26 colournaming/templates/index.html:293
 msgid "Contact"
-msgstr "联系"
+msgstr "联系方式"
 
 #: colournaming/templates/index.html:34
 msgid "Let's play a game, how many colours can you name?"
@@ -324,7 +322,7 @@ msgid ""
 "supervisors <a href=\"mailto:ucfslwm[at]ucl.ac.uk\">Lindsay MacDonald</a>"
 " and <a href=\"mailto:l.griffin[at]ucl.ac.uk\">Lewis Griffin</a> of "
 "University College London if you have any questions."
-msgstr "基于参与者的积极的体验肯定，相信本测试不会对参与者造成伤害和危害。本研究的目的旨在改善多语种环境下的色彩语言表达。请联系研究负责人 <a href=\"mailto:d.mylonas[at]ucl.ac.uk\">Dimitris Mylonas,</a> <a href=\"mailto:ucfslwm[at]ucl.ac.uk\"> Lindsay MacDonald,</a>  <a href=\"mailto:l.griffin[at]ucl.ac.uk\"> Lewis Griffin</a>, University College London。"
+msgstr "基于参与者的积极的体验肯定，相信本测试不会对参与者造成伤害和危害。本研究的目的旨在改善多语种环境下的色彩语言表达。请联系研究负责人。"
 
 #: colournaming/templates/index.html:40
 msgid ""
@@ -369,18 +367,18 @@ msgid ""
 " colour communication within and between cultures."
 msgstr "本研究目的旨在通过线上颜色命名系统促进不同文化间的颜色表达。"
 
-#: colournaming/templates/index.html:291
+#: colournaming/templates/index.html:295
 msgid ""
 "Please use the following communication form to give us your feedback and "
 "comments or if you wish to inform you about the results of this research."
 msgstr "请用下列表格给予我们你的反馈和建议。"
 
-#: colournaming/templates/index.html:304
+#: colournaming/templates/index.html:308
 #: colournaming/templates/observer_information.html:52
 msgid "Submit"
 msgstr "递交"
 
-#: colournaming/templates/index.html:315
+#: colournaming/templates/index.html:319
 msgid "Made in London and Berlin"
 msgstr "伦敦和柏林制造"
 
@@ -396,7 +394,7 @@ msgid ""
 "appear. Name as many colour samples (20+) as you can for higher ranking "
 "on colour namers. You will need to press the Finish button to start the "
 "next task. Your response time will be recorded."
-msgstr "根据你的理解，命名每个色样所代表的颜色名称。<br>按箭头[&gt;]或通过键盘输入色名至下一个色样出现。你可以根据色样将色民依次排序。你需要按‘完成’结束并开始新的测试步骤[20&#43;]。你所回答的时间将被记录。"
+msgstr ""
 
 #: colournaming/templates/name_colour.html:14
 msgid "Name the colour of the patch"
@@ -404,7 +402,7 @@ msgstr "命名色块"
 
 #: colournaming/templates/name_colour.html:29
 msgid "Finish"
-msgstr "完成"
+msgstr "下一个"
 
 #: colournaming/templates/observer_information.html:5
 msgid "Observer Information Task"
