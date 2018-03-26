@@ -1,4 +1,4 @@
-# Translations template for PROJECT.
+# Chinese translations for PROJECT.
 # Copyright (C) 2018 ORGANIZATION
 # This file is distributed under the same license as the PROJECT project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
@@ -10,7 +10,8 @@ msgstr ""
 "POT-Creation-Date: 2018-03-08 22:44+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh\n"
+"Language-Team: zh <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -394,7 +395,7 @@ msgid ""
 "appear. Name as many colour samples (20+) as you can for higher ranking "
 "on colour namers. You will need to press the Finish button to start the "
 "next task. Your response time will be recorded."
-msgstr ""
+msgstr "根据你的理解，给出每个色样所指代的颜色名称 (20+)。通过键盘输入色名，然后<br>按箭头[>]至下一个色样。你可以按‘完成’开始新的测试步骤。你所回答的时间将被记录。"
 
 #: colournaming/templates/name_colour.html:14
 msgid "Name the colour of the patch"
@@ -402,7 +403,7 @@ msgstr "命名色块"
 
 #: colournaming/templates/name_colour.html:29
 msgid "Finish"
-msgstr "下一个"
+msgstr "完成"
 
 #: colournaming/templates/observer_information.html:5
 msgid "Observer Information Task"
