@@ -266,7 +266,7 @@ msgid ""
 "all of the time. The movie lasts for 90 secs and all you need to do is "
 "play it and remember if the 'coloured' square disappeared at any time "
 "during the movie."
-msgstr "此段影像將出現移动並變化顏色的色块。你可以在一段时间内觀察到看到某种颜色。在长达90秒钟的影像中，你可以操作并记住色块。"
+msgstr "此段影像将出现移动並变化颜色的色块。你可以在一段时间内观察到看到某种颜色。在长达90秒钟的影像中，你可以操作并记住色块。"
 
 #: colournaming/templates/colour_vision.html:9
 msgid "Did the 'coloured' square disappear?"
@@ -395,7 +395,7 @@ msgid ""
 "appear. Name as many colour samples (20+) as you can for higher ranking "
 "on colour namers. You will need to press the Finish button to start the "
 "next task. Your response time will be recorded."
-msgstr "根据你的理解，给出每个色样所指代的颜色名称 (20+)。通过键盘输入色名，然后<br>按箭头[>]至下一个色样。你可以按‘完成’开始新的测试步骤。你所回答的时间将被记录。"
+msgstr "根据你的理解，给出每个色样所指代的颜色名称。通过键盘输入色名，然后<br>按箭头[>]至下一个色样。你的颜色命名排名会根据你的命名的数量来排列。你可以按‘完成’开始新的测试步骤(20+)。你所回答的时间将被记录。"
 
 #: colournaming/templates/name_colour.html:14
 msgid "Name the colour of the patch"
