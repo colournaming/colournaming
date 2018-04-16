@@ -266,7 +266,7 @@ msgid ""
 "all of the time. The movie lasts for 90 secs and all you need to do is "
 "play it and remember if the 'coloured' square disappeared at any time "
 "during the movie."
-msgstr "此段影像將出現移动並變化顏色的色块。你可以在一段时间内觀察到看到某种颜色。在长达90秒钟的影像中，你可以操作并记住色块。"
+msgstr "此段影像將出現移动並變化顏色的色塊。你可以在一段时间内觀察到看到某种颜色。在長達90秒鐘的影像中，你可以操作并記住色塊。"
 
 #: colournaming/templates/colour_vision.html:9
 msgid "Did the 'coloured' square disappear?"
