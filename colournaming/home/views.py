@@ -49,6 +49,15 @@ def index():
     )
 
 
+@bp.route('lang/<lang>')
+def set_language(lang):
+    if lang:
+        session['interface_language'] = lang
+    print(lang)
+    print(session['interface_language'])
+    return redirect(url_for('home.index'))
+
+
 @bp.route('interface_language')
 def interface_language():
     lang = request.args.get('lang', None)
