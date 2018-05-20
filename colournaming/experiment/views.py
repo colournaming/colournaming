@@ -5,8 +5,9 @@ from functools import wraps, update_wrapper
 from flask import (
     Blueprint, jsonify, redirect, render_template, request, session, url_for, make_response
 )
-from flask_babel import lazy_gettext
+from flask_babel import lazy_gettext, get_locale
 from . import controller, forms
+from .. import lang_is_rtl
 
 bp = Blueprint('experiment', __name__)
 
@@ -66,7 +67,7 @@ def display_properties():
     if form.errors:
         for field, error in form.errors.items():
             print(field, error)
-    return render_template('display_properties.html', form=form)
+    return render_template('display_properties.html', rtl=lang_is_rtl(get_locale()), form=form)
 
 
 @bp.route('/colour_vision.html', methods=['GET', 'POST'])
@@ -85,7 +86,7 @@ def colour_vision():
     if form.errors:
         for field, error in form.errors.items():
             print(field, error)
-    return render_template('colour_vision.html', form=form)
+    return render_template('colour_vision.html', form=form, rtl=lang_is_rtl(get_locale()))
 
 
 @bp.route('/name_colour.html', methods=['GET', 'POST'])
@@ -107,7 +108,7 @@ def name_colour():
     if form.errors:
         for field, error in form.errors.items():
             print(field, error)
-    return render_template('name_colour.html', form=form)
+    return render_template('name_colour.html', form=form, rtl=lang_is_rtl(get_locale()))
 
 
 @bp.route('/get_target.json')
@@ -152,7 +153,7 @@ def observer_information():
     if form.errors:
         for field, error in form.errors.items():
             print(field, repr(getattr(form, field).data), error)
-    return render_template('observer_information.html', form=form)
+    return render_template('observer_information.html', form=form, rtl=lang_is_rtl(get_locale()))
 
 
 @bp.route('/thankyou.html')
@@ -165,4 +166,4 @@ def thankyou():
         perc = 0
     top_namers_msg = lazy_gettext('You are in the 0% top colour namers.')
     top_namers_msg = top_namers_msg.replace('0%', '{0:.0f}%'.format(perc))
-    return render_template('thankyou.html', top_namers=top_namers_msg)
+    return render_template('thankyou.html', top_namers=top_namers_msg, rtl=lang_is_rtl(get_locale()))

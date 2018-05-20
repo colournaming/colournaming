@@ -13,7 +13,7 @@
         <title>{{ _('Colour Naming') }}</title>
         {% block css %}{% endblock %}
     </head>
-    <body data-spy="scroll" data-target="navigation-bar">
+    <body data-spy="scroll" data-target="navigation-bar" {% if rtl %}style="direction: rtl"{% endif %}>
         {% block content %}{% endblock %}
         <script src="{{ url_for('static', filename='namer.js') }}"></script>
         <!-- Global site tag (gtag.js) - Google Analytics -->
