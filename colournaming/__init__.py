@@ -131,3 +131,7 @@ def make_colour_namers(app):
             app.namers = instantiate_namers()
         except ProgrammingError:
             pass
+
+
+def lang_is_rtl(locale):
+    return locale.language in ('ar', 'he', 'ckb', 'fa', 'ur')

@@ -1,7 +1,9 @@
 """Views for the front page."""
 
 from flask import Blueprint, current_app, render_template, request, session, redirect, url_for
+from flask_babel import get_locale
 from flask_mail import Message
+from .. import lang_is_rtl
 from ..email import mail
 from .forms import ContactForm
 from ..namer import controller as namer_controller
@@ -45,7 +47,8 @@ def index():
         languages=namer_controller.language_list(),
         interface_languages=current_app.config['LANGUAGES'],
         interface_language=session.get('interface_language', 'en'),
-        current_language=current_language
+        current_language=current_language,
+        rtl=lang_is_rtl(get_locale())
     )
 
 
