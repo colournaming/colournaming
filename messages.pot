@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-02-22 15:45+0000\n"
+"POT-Creation-Date: 2018-03-08 22:44+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -294,7 +294,7 @@ msgstr ""
 msgid "Research"
 msgstr ""
 
-#: colournaming/templates/index.html:26 colournaming/templates/index.html:289
+#: colournaming/templates/index.html:26 colournaming/templates/index.html:293
 msgid "Contact"
 msgstr ""
 
@@ -367,18 +367,18 @@ msgid ""
 " colour communication within and between cultures."
 msgstr ""
 
-#: colournaming/templates/index.html:291
+#: colournaming/templates/index.html:295
 msgid ""
 "Please use the following communication form to give us your feedback and "
 "comments or if you wish to inform you about the results of this research."
 msgstr ""
 
-#: colournaming/templates/index.html:304
+#: colournaming/templates/index.html:308
 #: colournaming/templates/observer_information.html:52
 msgid "Submit"
 msgstr ""
 
-#: colournaming/templates/index.html:315
+#: colournaming/templates/index.html:319
 msgid "Made in London and Berlin"
 msgstr ""
 
@@ -391,9 +391,9 @@ msgid ""
 "Name each colour sample with the best representative colour term that you"
 " remember.<br>Press the Arrow button [&gt;] or Enter on your keyboard "
 "once you have finished naming the colour for the next colour sample to "
-"appear. Name as many colour samples as you can for higher ranking on "
-"colour namers. You will need to press the Next button to finish naming "
-"colours and start the next task. Your response time will be recorded."
+"appear. Name as many colour samples (20+) as you can for higher ranking "
+"on colour namers. You will need to press the Finish button to start the "
+"next task. Your response time will be recorded."
 msgstr ""
 
 #: colournaming/templates/name_colour.html:14
