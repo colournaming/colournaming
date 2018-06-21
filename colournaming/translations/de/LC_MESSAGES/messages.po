@@ -394,8 +394,12 @@ msgid ""
 "appear. Name as many colour samples (20+) as you can for higher ranking "
 "on colour namers. You will need to press the Finish button to start the "
 "next task. Your response time will be recorded."
+<<<<<<< HEAD
 msgstr "Benennen Sie jedes Farbmuster mit dem besten repräsentativen Farbterm, an den Sie sich erinnern. <br> Drücken Sie die Pfeiltaste [&gt;] oder die Eingabetaste auf Ihrer Tastatur, nachdem Sie die Farbe für das nächste Farbmuster benannt haben. Nennen Sie so viele Farbmuster (20+) wie Sie können, um Farbnamen zu rangieren. Sie müssen die Schaltfläche Fertig drücken, um die nächste Aufgabe zu starten. Ihre Bearbeitungszeit wird aufgezeichnet."
 
+=======
+msgstr "Benennen Sie jedes Farbmuster mit dem besten repräsentativen Farbterm, an den Sie sich erinnern. <br> Drücken Sie die Pfeiltaste [& gt;] oder die Eingabetaste auf Ihrer Tastatur, nachdem Sie die Farbe für das nächste Farbmuster benannt haben. Nennen Sie so viele Farbmuster (20+) wie Sie können, um Farbnamen zu rangieren. Sie müssen die Schaltfläche Fertig drücken, um die nächste Aufgabe zu starten. Ihre Bearbeitungszeit wird aufgezeichnet."
+>>>>>>> 6e806bbbb0101d71beec5a30b65c1adbcc85e76f
 #: colournaming/templates/name_colour.html:14
 msgid "Name the colour of the patch"
 msgstr "Benennen Sie die Farbe des Patches"
