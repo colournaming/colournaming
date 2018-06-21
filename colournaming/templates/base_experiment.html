@@ -8,7 +8,7 @@
         <title>{{ _('Colour Naming Experiment') }}</title>
         {% block css %}{% endblock %}
     </head>
-    <body data-spy="scroll" data-target="navigation-bar">
+    <body data-spy="scroll" data-target="navigation-bar" {% if rtl %}style="direction: rtl"{% endif %}>
         {% block content %}{% endblock %}
         {% block scripts %}{% endblock %}
         <script src="{{ url_for('static', filename='experiment.js') }}"></script>
