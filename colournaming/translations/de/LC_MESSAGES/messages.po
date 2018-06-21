@@ -10,8 +10,7 @@ msgstr ""
 "POT-Creation-Date: 2018-03-08 22:44+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: de\n"
-"Language-Team: de <LL@li.org>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -23,19 +22,19 @@ msgstr "Wie alt sind Sie?"
 
 #: colournaming/experiment/forms.py:39
 msgid "Female"
-msgstr "Weiblich"
+msgstr "weiblich"
 
 #: colournaming/experiment/forms.py:40
 msgid "Male"
-msgstr "Männlich"
+msgstr "männlich"
 
 #: colournaming/experiment/forms.py:41
 msgid "Other"
-msgstr "Neutral"
+msgstr "neutral"
 
 #: colournaming/experiment/forms.py:43
 msgid "To which gender do you most identify?"
-msgstr "Mit welchem Geschlecht identifizieren Sie sich am meisten?"
+msgstr "Mit welchem ​​Geschlecht identifizieren Sie sich am meisten?"
 
 #: colournaming/experiment/forms.py:47
 msgid "Please specify"
@@ -395,11 +394,7 @@ msgid ""
 "appear. Name as many colour samples (20+) as you can for higher ranking "
 "on colour namers. You will need to press the Finish button to start the "
 "next task. Your response time will be recorded."
-<<<<<<< HEAD
-msgstr "Benennen Sie jedes Farbmuster mit dem besten repräsentativen Farbterm, an den Sie sich erinnern. <br> Drücken Sie die Pfeiltaste [& gt;] oder die Eingabetaste auf Ihrer Tastatur, nachdem Sie die Farbe für das nächste Farbmuster benannt haben. Nennen Sie so viele Farbmuster (20+) wie Sie können, um Farbnamen zu rangieren. Sie müssen die Schaltfläche Fertig drücken, um die nächste Aufgabe zu starten. Ihre Bearbeitungszeit wird aufgezeichnet."
-=======
-msgstr "Benennen Sie jedes Farbmuster mit dem besten repräsentativen Farbterm, an den Sie sich erinnern. <br> Drücken Sie die Pfeiltaste > oder die Eingabetaste auf Ihrer Tastatur, nachdem Sie die Farbe für das nächste Farbmuster benannt haben. Nennen Sie so viele Farbmuster (20+) wie Sie können, um Farbnamen zu rangieren. Sie müssen die Schaltfläche Fertig drücken, um die nächste Aufgabe zu starten. Ihre Bearbeitungszeit wird aufgezeichnet."
->>>>>>> 644c46ee960fb77af48947da164e036b2afdf9b1
+msgstr "Benennen Sie jedes Farbmuster mit dem besten repräsentativen Farbterm, an den Sie sich erinnern. <br> Drücken Sie die Pfeiltaste [&gt;] oder die Eingabetaste auf Ihrer Tastatur, nachdem Sie die Farbe für das nächste Farbmuster benannt haben. Nennen Sie so viele Farbmuster (20+) wie Sie können, um Farbnamen zu rangieren. Sie müssen die Schaltfläche Fertig drücken, um die nächste Aufgabe zu starten. Ihre Bearbeitungszeit wird aufgezeichnet."
 
 #: colournaming/templates/name_colour.html:14
 msgid "Name the colour of the patch"
