@@ -142,7 +142,7 @@ msgstr "Gelbliches weiß"
 
 #: colournaming/experiment/forms.py:116
 msgid "Describe the white graphic elements on your screen"
-msgstr "Beschreibe die weißen Grafikelemente auf deinem Bildschirm"
+msgstr "Wie erscheinen die weißen Grafikelemente auf Ihrem Bildschirm"
 
 #: colournaming/experiment/forms.py:122 colournaming/experiment/forms.py:133
 msgid "Dark"
@@ -150,7 +150,7 @@ msgstr "Dunkel"
 
 #: colournaming/experiment/forms.py:123
 msgid "Dim"
-msgstr "Dim"
+msgstr "Gedimmt"
 
 #: colournaming/experiment/forms.py:124
 msgid "Average"
@@ -256,7 +256,7 @@ msgstr "Farbnamensforschung Experiment"
 
 #: colournaming/templates/colour_vision.html:4
 msgid "Colour Vision Task"
-msgstr "Farbsehen Aufgabe"
+msgstr "Farbsehen: Aufgabe"
 
 #: colournaming/templates/colour_vision.html:7
 msgid ""
@@ -265,7 +265,7 @@ msgid ""
 "all of the time. The movie lasts for 90 secs and all you need to do is "
 "play it and remember if the 'coloured' square disappeared at any time "
 "during the movie."
-msgstr "Der Film unten zeigt ein sich bewegendes "farbiges" Quadrat. Das Quadrat ändert seine Farbe, wenn der Film abgespielt wird. Möglicherweise können Sie die Farbe für einige Zeit oder die ganze Zeit sehen. Der Film dauert 90 Sekunden und alles, was Sie tun müssen, ist es zu abzuspielen und sich daran zu erinnern, ob das "farbige" Quadrat während des Films verschwindet."
+msgstr "Der Film unten zeigt ein sich bewegendes "farbiges" Quadrat. Das Quadrat ändert seine Farbe, wenn der Film abgespielt wird. Möglicherweise können Sie die Farbe für einige Zeit oder die ganze Zeit sehen. Der Film dauert 90 Sekunden und alles, was Sie tun müssen, ist es abzuspielen und sich daran zu erinnern, ob das "farbige" Quadrat während des Films verschwindet."
 
 #: colournaming/templates/colour_vision.html:9
 msgid "Did the 'coloured' square disappear?"
@@ -284,7 +284,7 @@ msgstr "Passen Sie gegebenenfalls die Helligkeit Ihres Displays an, bis Sie die 
 
 #: colournaming/templates/display_properties.html:23
 msgid "Confirm how many steps you can see?"
-msgstr "Bestätigen Sie, wie viele Schritte Sie sehen können?"
+msgstr "Bestätigen Sie, wie viele Segmente Sie sehen können?"
 
 #: colournaming/templates/index.html:20 colournaming/templates/index.html:45
 msgid "Colour namer"
@@ -322,7 +322,7 @@ msgid ""
 "supervisors <a href=\"mailto:ucfslwm[at]ucl.ac.uk\">Lindsay MacDonald</a>"
 " and <a href=\"mailto:l.griffin[at]ucl.ac.uk\">Lewis Griffin</a> of "
 "University College London if you have any questions."
-msgstr "Viele Menschen empfinden die Aufgaben dieser Studie als angenehm und es gint keien Risiken für die Teilnehmer. Der Zweck dieser Forschungsstudie ist die Verbesserung der Farbkommunikation in mehrsprachigen Umgebungen. Bitte wenden Sie sich an den leitenden Forscher <a href=\"mailto:d.mylonas[at]ucl.ac.uk\"> Dimitris Mylonas </a> oder an die Betreuenden Forscher <a href = \ "mailto: ucfslwm [at ] ucl.ac.uk \ "> Lindsay MacDonald </a> und <a href=\"mailto:l.griffin[at]ucl.ac.uk\"> Lewis Griffin </a> des University College London, wenn Sie irgendwelche Fragen haben."
+msgstr "Viele Menschen empfinden die Aufgaben dieser Studie als angenehm und es gibt keinen Risiken für die Teilnehmer. Der Zweck dieser Forschungsstudie ist die Verbesserung der Farbkommunikation in mehrsprachigen Umgebungen. Bitte wenden Sie sich an den leitenden Forscher <a href=\"mailto:d.mylonas[at]ucl.ac.uk\"> Dimitris Mylonas </a> oder an die betreuenden Forscher <a href = \ "mailto: ucfslwm [at ] ucl.ac.uk \ "> Lindsay MacDonald </a> und <a href=\"mailto:l.griffin[at]ucl.ac.uk\"> Lewis Griffin </a> des University College London, wenn Sie irgendwelche Fragen haben."
 
 #: colournaming/templates/index.html:40
 msgid ""
@@ -345,7 +345,7 @@ msgstr "Dies ist ein synthetischer Beobachter, der durch Antworten der Teilnehme
 
 #: colournaming/templates/index.html:62
 msgid "by name"
-msgstr "namentlich"
+msgstr "nach Namen"
 
 #: colournaming/templates/index.html:70
 msgid "Colour name"
@@ -376,7 +376,7 @@ msgstr "Bitte verwenden Sie das folgende Kommunikationsformular, um uns Ihre Rü
 #: colournaming/templates/index.html:308
 #: colournaming/templates/observer_information.html:52
 msgid "Submit"
-msgstr "Abschicken"
+msgstr "Abschicken "
 
 #: colournaming/templates/index.html:319
 msgid "Made in London and Berlin"
@@ -384,7 +384,7 @@ msgstr "Made in London and Berlin"
 
 #: colournaming/templates/name_colour.html:4
 msgid "Colour Naming Task"
-msgstr "Farbnamensgebungs Aufgabe"
+msgstr "Farbnamensgebung: Aufgabe"
 
 #: colournaming/templates/name_colour.html:7
 msgid ""
@@ -394,7 +394,7 @@ msgid ""
 "appear. Name as many colour samples (20+) as you can for higher ranking "
 "on colour namers. You will need to press the Finish button to start the "
 "next task. Your response time will be recorded."
-msgstr "Benennen Sie jedes Farbmuster mit dem besten repräsentativen Farbterm, an den Sie sich erinnern. <br> Drücken Sie die Pfeiltaste [&gt;] oder die Eingabetaste auf Ihrer Tastatur, nachdem Sie die Farbe für das nächste Farbmuster benannt haben. Nennen Sie so viele Farbmuster (20+) wie Sie können, um Farbnamen zu rangieren. Sie müssen die Schaltfläche Fertig drücken, um die nächste Aufgabe zu starten. Ihre Bearbeitungszeit wird aufgezeichnet."
+msgstr "Benennen Sie jedes Farbmuster mit dem besten repräsentativen Farbbegriff, an den Sie sich erinnern. <br> Drücken Sie die Pfeiltaste [&gt;] oder die Eingabetaste auf Ihrer Tastatur, nachdem Sie die Farbe für das nächste Farbmuster benannt haben. Nennen Sie so viele Farbmuster (20+) wie Sie können, um eine bessere Datengrundlage zur erhalten. Sie müssen die Schaltfläche Fertig drücken, um die nächste Aufgabe zu starten. Ihre Bearbeitungszeit wird aufgezeichnet."
 
 #: colournaming/templates/name_colour.html:14
 msgid "Name the colour of the patch"
@@ -406,7 +406,7 @@ msgstr "Beenden"
 
 #: colournaming/templates/observer_information.html:5
 msgid "Observer Information Task"
-msgstr "Beobachter Informations Aufgabe"
+msgstr "Beobachter Informations: Aufgabe"
 
 #: colournaming/templates/observer_information.html:8
 msgid ""
