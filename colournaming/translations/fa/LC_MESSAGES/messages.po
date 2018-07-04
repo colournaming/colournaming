@@ -10,8 +10,7 @@ msgstr ""
 "POT-Creation-Date: 2018-03-08 22:44+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: fa\n"
-"Language-Team: fa <LL@li.org>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -323,14 +322,14 @@ msgid ""
 "supervisors <a href=\"mailto:ucfslwm[at]ucl.ac.uk\">Lindsay MacDonald</a>"
 " and <a href=\"mailto:l.griffin[at]ucl.ac.uk\">Lewis Griffin</a> of "
 "University College London if you have any questions."
-msgstr "بسیاری از افراد روند این کار را لذت بخش می دانند وما معتقدیم هیچ مشکلی برای شرکت کنندگان وجود ندارد.هدف این تحقیق، ارتقا فهم و درک رنگ (به سبب اختلاف زبان) در محیطهای چند زبانه است.اگر سؤالی دارید لطفا با <a href=\"mailto:d.mylonas[at]ucl.ac.uk\">Dimitris Mylonas</a>  اصلی دانشگاه کالج لندن تماس بگیرید."
+msgstr "بسیاری از افراد روند این کار را لذت بخش می دانند وما معتقدیم هیچ مشکلی برای شرکت کنندگان وجود ندارد.هدف این تحقیق، ارتقا فهم و درک رنگ (به سبب اختلاف زبان) در محیطهای چند زبانه است."
 
 #: colournaming/templates/index.html:40
 msgid ""
 "If you are 16 years of age or older, understand the statements and freely"
 " consent to participate in the study, click on the 'Start' button to "
 "begin the experiment."
-msgstr "اگر شما 16 ساله یا بیشتر هستید، این اظهارات را درک می کنید و به طور آزادانه برای شرکت دربازی تصمیم می گیرید بر روی دکمه «شروع» کلیک کنید تا بازی آغاز شود."
+msgstr "اگر شما  16 ساله یا بیشتر هستید، این اظهارات را درک می کنید و به طور آزادانه برای شرکت دربازی تصمیم می گیریدپس م ی توان ی د بر رو ی دکمه  « شروع  » کل ی ک کن ی د تا باز ی آغاز شود"
 
 #: colournaming/templates/index.html:41
 msgid "Start"
@@ -360,7 +359,7 @@ msgstr "مترادف"
 msgid ""
 "This is a βeta version of Colournamer. You will need JavaScript enabled "
 "and a browser that supports HTML5 web audio."
-msgstr "این یک نسخه βeta از Colournamer است.شما باید جاوا اسکریپت و مرورگری را فعال کنید  که صوت وبHTML5  را پشتیبانی می کند."
+msgstr "این یک نسخه βeta از Colursamer است.شما باید جاوا اسکریپت و مرورگری را فعال کنید  که صوت وبHTML5  را پشتیبانی می کند."
 
 #: colournaming/templates/index.html:97
 msgid ""
@@ -395,7 +394,7 @@ msgid ""
 "appear. Name as many colour samples (20+) as you can for higher ranking "
 "on colour namers. You will need to press the Finish button to start the "
 "next task. Your response time will be recorded."
-msgstr "هر نمونه رنگی (20+)را با اصطلاح رنگی مناسبی که به خاطر می آورید  نام گذاری کنید
+msgstr "هر نمونه رنگی را با اصطلاح رنگی مناسبی که به خاطر می آورید  نام گذاری کنید
 دکمه فلش را فشار دهید یا 
 برای پدیدار شدن نمونه رنگ بعدی  کلید ورود روی صفحه نمایش خود را فشار دهید
 تا آنجا که می توانید برای امتیاز بیشتر نام گذاران رنگ, نمونه های رنگ را نامگذاری کنید
