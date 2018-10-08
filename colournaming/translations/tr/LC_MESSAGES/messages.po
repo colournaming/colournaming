@@ -54,7 +54,7 @@ msgstr "İleri düzey"
 
 #: colournaming/experiment/forms.py:57
 msgid "Describe your experience working with colour"
-msgstr "Renklerle ilgili çalışmalarla olan deneyimini tanımlayınız"
+msgstr "Renk kullanımı ile ilgili deneyiminizi tanımlayınız"
 
 #: colournaming/experiment/forms.py:66
 msgid "Bilingual"
@@ -86,7 +86,7 @@ msgstr "Yüksek lisans derecesi"
 
 #: colournaming/experiment/forms.py:79
 msgid "Professional degree"
-msgstr "Profesyonel yetenekler"
+msgstr "Profesyonel diploma"
 
 #: colournaming/experiment/forms.py:80
 msgid "Doctorate degree"
@@ -280,7 +280,7 @@ msgid ""
 "Adjust the brightness of your display if necessary until you can see the "
 "differences between all 11 steps of the greyscale test image. Disable "
 "Night Shift mode or blue light filters if applicable."
-msgstr "Eğer gerekliyse, ekranınızın parlaklığını deneme görseli üzerindeki 11 basamaklı tüm gri tonlarının arasındaki farklılıkları görene dek ayarlayınız. Gece modu (night shift) veya mavi isik filtresi (blue light filter) kullanıyorsanız devredışı bırakınız."
+msgstr "Eğer gerekliyse, ekranınızın parlaklığını deneme görseli üzerindeki 11 basamaklı tüm gri tonlarının arasındaki farklılıkları görene dek ayarlayınız. Gece modu (night shift) veya mavi ışık filtresi (blue light filter) kullanıyorsanız devredışı bırakınız."
 
 #: colournaming/templates/display_properties.html:23
 msgid "Confirm how many steps you can see?"
@@ -310,7 +310,7 @@ msgid ""
 "about your cultural background and viewing conditions. You are free to "
 "omit any question and you may withdraw at any time without penalty. "
 "Participation in this study is strictly anonymous and voluntary."
-msgstr "Birçok dilde renk adlalarını, kendilerine karşılık gelen renk aralıklarıyla birlikte toplamak için tasarlanan online Renk Adlandırma deneyine hoş geldiniz. Bir seri renk numunesini adlandırmanız, ve kendi kültürel geçmişiniz ve bu deneyi görüntülediğiniz koşullarla ilgili bilgi sağlamanız istenecektir. Herhangi bir soruyu atlamakta ve istediğiniz zaman, herhangi bir yaptırım olmaksızın, deneyden çekilmekte özgürsünüz. Bu çalışmaya katılımınız tamamen gizli ve gönüllüdür."
+msgstr "Birçok dilde renk adlarını, kendilerine karşılık gelen renk aralıklarıyla birlikte toplamak için tasarlanan online Renk Adlandırma deneyine hoş geldiniz. Bir seri renk numunesini adlandırmanız, ve kendi kültürel geçmişiniz ve bu deneyi görüntülediğiniz koşullarla ilgili bilgi sağlamanız istenecektir. Herhangi bir soruyu atlamakta ve istediğiniz zaman, herhangi bir yaptırım olmaksızın, deneyden çekilmekte özgürsünüz. Bu çalışmaya katılımınız tamamen gizli ve gönüllüdür."
 
 #: colournaming/templates/index.html:38
 msgid ""
@@ -329,7 +329,7 @@ msgid ""
 "If you are 16 years of age or older, understand the statements and freely"
 " consent to participate in the study, click on the 'Start' button to "
 "begin the experiment."
-msgstr "Eğer 16 yaşında veya daha büyükseniz, açıklamaları anladıysanız ve çalışmaya katılmaya kendi özgür iradenizle onay veriyorsanız, deneye başlamak için Başla butonuna tıklayınız"
+msgstr "Eğer 16 yaşında veya daha büyükseniz, açıklamaları anladıysanız ve çalışmaya katılmaya kendi özgür iradenizle onay veriyorsanız, deneye başlamak için Başla butonuna tıklayınız."
 
 #: colournaming/templates/index.html:41
 msgid "Start"
@@ -341,7 +341,7 @@ msgid ""
 "each colour in different languages (Mylonas, Stutters, Doval, and "
 "MacDonald, 2013). More languages will be added as more data is becoming "
 "available."
-msgstr "Bu sentetik izlemci katılımcıların cevaplarıyla değişik dillerde her rengi adlandırmak üzere oluşturulmuştur (Mylonas, Stutters, Doval, and MacDonald, 2013). Daha çok veri elde edildikçe daha çok dil eklenecektir."
+msgstr "Bu sentetik izlemci, katılımcıların cevaplarıyla, her rengi değişik dillerde adlandırmak üzere oluşturulmuştur (Mylonas, Stutters, Doval, and MacDonald, 2013). Daha çok veri elde edildikçe daha çok dil eklenecektir."
 
 #: colournaming/templates/index.html:62
 msgid "by name"
@@ -359,13 +359,13 @@ msgstr "Eş anlamlılar"
 msgid ""
 "This is a βeta version of Colournamer. You will need JavaScript enabled "
 "and a browser that supports HTML5 web audio."
-msgstr "Bu Renk Adlandırıcının Beta versiyonudur. JavaScriptin devreye sokulmasina ve HTML5 web audioyu destekleyen bir tarayıcıya ihtiyacınız olacaktır"
+msgstr "Bu Renk Adlandırıcının Beta versiyonudur. JavaScriptin devreye sokulmasına ve HTML5 web audioyu destekleyen bir tarayıcıya ihtiyacınız olacaktır"
 
 #: colournaming/templates/index.html:97
 msgid ""
 "This research aims to develop an online colour naming model to facilitate"
 " colour communication within and between cultures."
-msgstr "Bu araştırma kültürlerin kendi içinde ve kültüreler arasında renk iletişimini kolaylaştıran bir online renk adlandırma modeli geliştirmeyi hedeflemektedir."
+msgstr "Bu araştırma kültürlerin kendi içinde ve kültürler arasında renk iletişimini kolaylaştıran bir online renk adlandırma modeli geliştirmeyi hedeflemektedir."
 
 #: colournaming/templates/index.html:295
 msgid ""
@@ -394,7 +394,7 @@ msgid ""
 "appear. Name as many colour samples (20+) as you can for higher ranking "
 "on colour namers. You will need to press the Finish button to start the "
 "next task. Your response time will be recorded."
-msgstr "Her renk numunesini, hatırlayabildiğiniz, numunedeki rengi en iyi tanımlayacak renk terimiyle adlandırınız.<br> Rengi adlandırdıktan sonra diğer rengin ekranda görünmesi için Ok butonuna [&gt;] veya klavyenizdeki Enter tuşuna basınız. Renk adlandıranlar arasında daha yüksek bir sıralama için adlandırabileceğiniz en fazla sayıda renk numunesini adlandırınız (20+). Renkleri adlandırmayı bitirmek ve sonraki aşamaya başlamak için Sonraki butonuna basmanız gerekecektir. Cevap verme süreniz kaydedilecektir."
+msgstr "Her renk numunesini, hatırlayabildiğiniz, numunedeki rengi en iyi tanımlayacak renk terimiyle adlandırınız.<br> Rengi adlandırdıktan sonra diğer rengin ekranda görünmesi için OK butonuna {&gt;} veya klavyenizdeki Enter tuşuna basınız. Renk adlandıranlar arasında daha yüksek bir sıralama için adlandırabileceğiniz en fazla sayıda renk numunesini adlandırınız. Renkleri adlandırmayı bitirmek ve sonraki aşamaya başlamak için Sonraki butonuna basmanız gerekecektir. Cevap verme süreniz kaydedilecektir."
 
 #: colournaming/templates/name_colour.html:14
 msgid "Name the colour of the patch"
