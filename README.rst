@@ -13,8 +13,8 @@ A local instance of the app can be launched using Docker Compose::
     docker-compose build
     docker-compose up -d postgres
     docker-compose run --rm web initdb
-    docker-compose run --rm web import_centroids /path/to/dataset_en.csv English en
-    docker-compose run --rm web import_targets /path/to/targets.csv
+    docker-compose run --rm web import-centroids /path/to/dataset_en.csv English en
+    docker-compose run --rm web import-targets /path/to/targets.csv
     docker-compose up web
 
 Under Linux the app can now be accessed at `localhost:5000 <http://localhost:5000>`_.
@@ -28,11 +28,11 @@ The database can be reinitialized by running::
 
 Additional dataset can be added by running e.g.::
 
-    docker-compose run --rm web import_centroids /path/to/dataset_fr.csv Francais fr
+    docker-compose run --rm web import-centroids /path/to/dataset_fr.csv Francais fr
 
 Colour targets can be added by running e.g.::
 
-    docker-compose run --rm web import_targets /path/to/targets.csv
+    docker-compose run --rm web import-targets /path/to/targets.csv
 
 To stop the test instance run::
 
