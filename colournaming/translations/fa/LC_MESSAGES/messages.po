@@ -329,7 +329,9 @@ msgid ""
 "If you are 16 years of age or older, understand the statements and freely"
 " consent to participate in the study, click on the 'Start' button to "
 "begin the experiment."
-msgstr "اگر شما  16 ساله یا بیشتر هستید، این اظهارات را درک می کنید و به طور آزادانه برای شرکت دربازی تصمیم می گیریدپس م ی توان ی د بر رو ی دکمه  « شروع  » کل ی ک کن ی د تا باز ی آغاز شود"
+
+اگر شما 16 ساله یا بیشتر هستید، این اظهارات را درک می کنید و به طور آزادانه برای شرکت دربازی تصمیم می گیریدmsgstr "
+"پس می توانید بر روی دکمه ‪"‬شروع‪"‬ کلیک کنید تا بازی آغاز شود
 
 #: colournaming/templates/index.html:41
 msgid "Start"
