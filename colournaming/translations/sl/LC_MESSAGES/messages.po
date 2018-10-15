@@ -122,7 +122,7 @@ msgstr "Namizni računalnik"
 
 #: colournaming/experiment/forms.py:105
 msgid "What is your display device?"
-msgstr "Na nakateri napravi si ogleduje to spletno stran?"
+msgstr "Na kateri napravi si ogledujete to spletno stran?"
 
 #: colournaming/experiment/forms.py:111
 msgid "Neutral white"
@@ -265,7 +265,7 @@ msgid ""
 "all of the time. The movie lasts for 90 secs and all you need to do is "
 "play it and remember if the 'coloured' square disappeared at any time "
 "during the movie."
-msgstr "Na videu je prikazan premikajoč "obarvan" kvadrat, katerega barva se spreminja. Barvo boste lahko videli ves čas ali le nakaj časa. Video traja 90 sekund in vse, kar morate storiti je, da si zapomnite ali je bil obarvan kvadrat med predvajanjem ves čas viden."
+msgstr "Na videu je prikazan premikajoč "obarvan" kvadrat, katerega barva se spreminja. Barvo boste lahko videli ves čas ali le nekaj časa. Video traja 90 sekund in vse, kar morate storiti je, da si zapomnite ali je bil obarvan kvadrat med predvajanjem ves čas viden."
 
 #: colournaming/templates/colour_vision.html:9
 msgid "Did the 'coloured' square disappear?"
@@ -394,7 +394,7 @@ msgid ""
 "appear. Name as many colour samples (20+) as you can for higher ranking "
 "on colour namers. You will need to press the Finish button to start the "
 "next task. Your response time will be recorded."
-msgstr "Poimenujte vsako barvo z imenom, ki po vašem mnenju najbolje opisuje prikazano barvo. <br> Ko končate s poimenovanjem barv, za prikaz naslednje barve pritisnite gumb [&gt;] ali na tipkovnici pritisnite enter. Prosimo, poimenujte čim več prikazanih barv (zaželeno 20+). Za zaključek poimenovanja pritisnite gumb 'Zaključi'."
+msgstr "Poimenujte vsako barvo z imenom, ki po vašem mnenju najbolje opisuje prikazano barvo. <br> Ko končate s poimenovanjem barv, za prikaz naslednje barve pritisnite gumb [&gt;] ali na tipkovnici pritisnite enter. Prosimo, poimenujte čim več prikazanih barv (zaželeno 20+). Za zaključek poimenovanja pritisnite gumb "Zaključi"."
 
 #: colournaming/templates/name_colour.html:14
 msgid "Name the colour of the patch"
@@ -433,5 +433,5 @@ msgid ""
 "across languages. Please feel free to contact us and visit our research "
 "page for more information. Find below your responses in white and the "
 "most popular colour names in black:"
-msgstr "Vaši odgovori bodo uporabljeni za izboljšanje komunikacije barv znotraj in med različnimi jeziki. Za več informacij nas kontaktirajte ali obščite našo spletno stran. Spodaj so izpisani vaši odgovori (v belem) skupaj z najbolj pogostimi poimenovanji ostalih sodelujočih."
+msgstr "Vaši odgovori bodo uporabljeni za izboljšanje komunikacije barv znotraj in med različnimi jeziki. Za več informacij nas kontaktirajte ali obiščite našo spletno stran. Spodaj so izpisani vaši odgovori (v belem) skupaj z najbolj pogostimi poimenovanji ostalih sodelujočih."
 
