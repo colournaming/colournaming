@@ -71,7 +71,7 @@ def get_responses():
                 'response_time': response.response_time,
                 'name': response.name
             })
-    return output.getvalue()
+    return output.getvalue().strip()
 
 
 def get_agreements():
@@ -88,7 +88,7 @@ def get_agreements():
             'blue': agreement.blue,
             'agreement': agreement.agreement
         })
-    return output.getvalue()
+    return output.getvalue().strip()
 
 
 def get_participants():
@@ -124,4 +124,4 @@ def get_participants():
             'colour_target_disappeared': participant.colour_target_disappeared,
             'latlong': participant.location
         })
-    return output.getvalue()
+    return output.getvalue().strip()
