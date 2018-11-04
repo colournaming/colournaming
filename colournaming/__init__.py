@@ -78,6 +78,24 @@ def setup_cli(app):
         read_centroids_from_file(centroids_file, language_name, language_code)
 
     @app.cli.command()
+    @click.argument('filename', type=click.File('w'))
+    def export_responses(filename):
+        """Export responses to CSV."""
+        print(admin.controller.get_responses(), file=filename)
+
+    @app.cli.command()
+    @click.argument('filename', type=click.File('w'))
+    def export_participants(filename):
+        """Export participants to CSV."""
+        print(admin.controller.get_participants(), file=filename)
+
+    @app.cli.command()
+    @click.argument('filename', type=click.File('w'))
+    def export_agreements(filename):
+        """Export agreements to CSV."""
+        print(admin.controller.get_agreements(), file=filename)
+
+    @app.cli.command()
     @click.argument('targets_file', type=click.File('r'))
     def import_targets(targets_file):
         """Import a targets file into the database."""
