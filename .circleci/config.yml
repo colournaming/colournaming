@@ -15,7 +15,7 @@ jobs:
           name: Install docker-compose
           command: |
             set -x
-            apk add --no-progress -q --no-cache python py-pip
+            apk add --no-progress -q --no-cache build-base python py-pip python2-dev libffi-dev openssl-dev libc-dev
             pip install docker-compose
 
       - setup_remote_docker
