@@ -8,14 +8,10 @@ jobs:
       - checkout
 
       - run:
-          name: Install build-base
-          command: apk add --no-progress -q --no-cache build-base
-
-      - run:
           name: Install docker-compose
           command: |
             set -x
-            apk add --no-progress -q --no-cache python py-pip
+            apk add --no-progress -q --no-cache build-base python py-pip python2-dev
             pip install docker-compose
 
       - setup_remote_docker
