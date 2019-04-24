@@ -71,7 +71,7 @@ typed-ast==1.1.0
 typing==3.6.6
 ua-parser==0.8.0
 ujson==1.35
-urllib3==1.24.1
+urllib3==1.25
 user-agents==1.1.0
 uvloop==0.11.3
 virtualenv==16.1.0
