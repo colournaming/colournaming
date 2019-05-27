@@ -226,11 +226,13 @@ h3 ~ .justified-text {
     float: left;
 }
 
+#colour-picker-right {
+    float: right;
+    width: 193px;
+}
+
 .stats-box {
     border: 1px solid black;
-    float: right;
-    margin: 0 0 0 40px;
-    width: 193px;
 }
 
 .stats-box-header {
