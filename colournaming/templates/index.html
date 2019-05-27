@@ -64,27 +64,29 @@
             </div>
             <div class="colour-namer-row-wrapper">
                 <div id="colour-picker"></div>
-                <div class="stats-box">
-                    <div id="stats-box-header" class="stats-box-header"></div>
-                    <dl>
-                        <dt>{{ _('Colour name') }}:</dt>
-                        <dd id="stats-box-colour-name-display">Red</dd>
-                        <dt>{{ _('Synonyms') }}:</dt>
-                        <dd id="stats-box-synonyms-display">
-                            <ul>
-                                <li>Orange</li>
-                                <li>Pink</li>
-                                <li>Burgundy</li>
-                            </ul>
-                        </dd>
-                        <dt>RGB:</dt>
-                        <dd id="stats-box-rgb-display">255 0 0</dd>
-                    </dl>
+                <div id="colour-picker-right">
+                    <div class="stats-box">
+                        <div id="stats-box-header" class="stats-box-header"></div>
+                        <dl>
+                            <dt>{{ _('Colour name') }}:</dt>
+                            <dd id="stats-box-colour-name-display">Red</dd>
+                            <dt>{{ _('Synonyms') }}:</dt>
+                            <dd id="stats-box-synonyms-display">
+                                <ul>
+                                    <li>Orange</li>
+                                    <li>Pink</li>
+                                    <li>Burgundy</li>
+                                </ul>
+                            </dd>
+                            <dt>RGB:</dt>
+                            <dd id="stats-box-rgb-display">255 0 0</dd>
+                        </dl>
+                    </div>
+                    <form id='name_agreement_form'>
+                        {{ name_agreement_form.csrf_token }}
+                        {{ name_agreement_form.agreement(class_='right-aligned-select') }}
+                    </form>
                 </div>
-                <form id='name_agreement_form'>
-                    {{ name_agreement_form.csrf_token }}
-                    {{ name_agreement_form.agreement(class_='right-aligned-select') }}
-                </form>
             </div>
         </div>
         <p>{{ _('This is a βeta version of Colournamer. You will need JavaScript enabled and a browser that supports HTML5 web audio.') }}</p>
