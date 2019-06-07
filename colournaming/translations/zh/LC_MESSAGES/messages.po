@@ -55,7 +55,7 @@ msgstr "高级"
 
 #: colournaming/experiment/forms.py:57
 msgid "Describe your experience working with colour"
-msgstr "描述你有关于色彩的经验"
+msgstr "请描述你与色彩相关的工作经验"
 
 #: colournaming/experiment/forms.py:66
 msgid "Bilingual"
@@ -67,7 +67,7 @@ msgstr "母语"
 
 #: colournaming/experiment/forms.py:69
 msgid "Describe your skill in the language used in this experiment"
-msgstr "描述在本次实验中你的语言运用能力。"
+msgstr "请描述您在本次测试中使用的语言能力（中文）"
 
 #: colournaming/experiment/forms.py:75
 msgid "No qualifications"
@@ -87,11 +87,11 @@ msgstr "硕士"
 
 #: colournaming/experiment/forms.py:79
 msgid "Professional degree"
-msgstr "博士"
+msgstr "职业学位"
 
 #: colournaming/experiment/forms.py:80
 msgid "Doctorate degree"
-msgstr "专家"
+msgstr "博士"
 
 #: colournaming/experiment/forms.py:82
 msgid "What is the highest level of education you have completed?"
@@ -143,7 +143,7 @@ msgstr "偏黄的白色"
 
 #: colournaming/experiment/forms.py:116
 msgid "Describe the white graphic elements on your screen"
-msgstr "描述在你的萤屏上所显示的白色图像"
+msgstr "请描述在你的屏幕上所显示的白色图像"
 
 #: colournaming/experiment/forms.py:122 colournaming/experiment/forms.py:133
 msgid "Dark"
@@ -163,7 +163,7 @@ msgstr "明亮"
 
 #: colournaming/experiment/forms.py:127
 msgid "Describe the surrounding environment behind your device"
-msgstr "描述在你的显示器后的背景环境"
+msgstr "请描述显示器后的背景环境"
 
 #: colournaming/experiment/forms.py:134
 msgid "Typical domestic"
@@ -179,11 +179,11 @@ msgstr "日光充足"
 
 #: colournaming/experiment/forms.py:137
 msgid "Typical office"
-msgstr "一般办公室"
+msgstr "普通办公室环境"
 
 #: colournaming/experiment/forms.py:139
 msgid "Describe the lighting conditions of your environment"
-msgstr "描述你所处环境中的光线条件"
+msgstr "请描述你所处环境中的光线条件"
 
 #: colournaming/experiment/forms.py:145 colournaming/experiment/forms.py:160
 msgid "What distance are you from your monitor in cm?"
@@ -213,11 +213,11 @@ msgstr "姓"
 
 #: colournaming/home/forms.py:9
 msgid "Email"
-msgstr "电邮"
+msgstr "邮箱"
 
 #: colournaming/home/forms.py:10
 msgid "Organisation"
-msgstr "所属组织"
+msgstr "所属单位"
 
 #: colournaming/home/forms.py:11
 msgid "Your message"
@@ -266,7 +266,7 @@ msgid ""
 "all of the time. The movie lasts for 90 secs and all you need to do is "
 "play it and remember if the 'coloured' square disappeared at any time "
 "during the movie."
-msgstr "此段影像将出现移动並变化颜色的色块。你可以在一段时间内观察到看到某种颜色。在长达90秒钟的影像中，你可以操作并记住色块。"
+msgstr "在本段长达90秒的视频中将出现一个不断移动并发生色彩变化的色块。播放本段视频并注意色块的变化，请留意色块是否在某一时刻消失。"
 
 #: colournaming/templates/colour_vision.html:9
 msgid "Did the 'coloured' square disappear?"
@@ -274,22 +274,22 @@ msgstr "色块是否消失？"
 
 #: colournaming/templates/display_properties.html:4
 msgid "Display Properties Task"
-msgstr "显示属性测试"
+msgstr "显示屏幕属性测试"
 
 #: colournaming/templates/display_properties.html:7
 msgid ""
 "Adjust the brightness of your display if necessary until you can see the "
 "differences between all 11 steps of the greyscale test image. Disable "
 "Night Shift mode or blue light filters if applicable."
-msgstr "调节显示的亮度，直至你可以看到黑白测试图像中11个不同的色阶。"
+msgstr "调节显示屏幕的亮度，直至你可以看到黑白测试图像中11个不同的色阶。"
 
 #: colournaming/templates/display_properties.html:23
 msgid "Confirm how many steps you can see?"
-msgstr "确认你可以看到多少色阶？"
+msgstr "你可以看到多少个色阶？"
 
 #: colournaming/templates/index.html:20 colournaming/templates/index.html:45
 msgid "Colour namer"
-msgstr "色名生成"
+msgstr "颜色名称生成"
 
 #: colournaming/templates/index.html:23 colournaming/templates/index.html:94
 msgid "Research"
@@ -301,7 +301,7 @@ msgstr "联系方式"
 
 #: colournaming/templates/index.html:34
 msgid "Let's play a game, how many colours can you name?"
-msgstr "让我们开始测试，你可以指出多少种颜色？"
+msgstr "让我们开始测试，你可以命名出多少种颜色？"
 
 #: colournaming/templates/index.html:36
 msgid ""
@@ -311,7 +311,7 @@ msgid ""
 "about your cultural background and viewing conditions. You are free to "
 "omit any question and you may withdraw at any time without penalty. "
 "Participation in this study is strictly anonymous and voluntary."
-msgstr "欢迎进入颜色命名系统，这是一个为采集色名而设计的多语种线上测试。你将会被要求指出一系列色样的色名，并提供有关于你的文化背景和观察条件。你可以忽略任何所列的问题以及随时无条件退出测试。参与本测试严格采取匿名及自愿的原则。"
+msgstr "欢迎进入颜色命名系统，这是一个为采集颜色名称而设计的多语种线上测试。你将参与测试指出一系列色彩样本的名称，并提供文化背景和观察条件等相关信息。本测试严格遵从匿名和自愿原则,参与者可以选择跳过任何问题或者退出本项测试。"
 
 #: colournaming/templates/index.html:38
 msgid ""
@@ -323,14 +323,14 @@ msgid ""
 "supervisors <a href=\"mailto:ucfslwm[at]ucl.ac.uk\">Lindsay MacDonald</a>"
 " and <a href=\"mailto:l.griffin[at]ucl.ac.uk\">Lewis Griffin</a> of "
 "University College London if you have any questions."
-msgstr "基于参与者的积极的体验肯定，相信本测试不会对参与者造成伤害和危害。本研究的目的旨在改善多语种环境下的色彩语言表达。请联系研究负责人。"
+msgstr "基于参与者积极的反馈,该研究确保不会对参与者带来任何负面影响。本项研究致力于改善在多语种环境下色彩的表达和沟通。如有疑问，请随时与我们联系。"
 
 #: colournaming/templates/index.html:40
 msgid ""
 "If you are 16 years of age or older, understand the statements and freely"
 " consent to participate in the study, click on the 'Start' button to "
 "begin the experiment."
-msgstr "如果你超过16岁，并理解所声明的条款及同意参与本研究，请按开始键进行测试。"
+msgstr "如果你超过16岁，并理解相关条款及同意参与本研究，请按开始键进行测试。"
 
 #: colournaming/templates/index.html:41
 msgid "Start"
@@ -346,7 +346,7 @@ msgstr "这是由参与者提供不同语言的颜色命名而生成的综合性
 
 #: colournaming/templates/index.html:62
 msgid "by name"
-msgstr "按名字"
+msgstr "按名称"
 
 #: colournaming/templates/index.html:70
 msgid "Colour name"
@@ -366,13 +366,13 @@ msgstr "本系统为测试版。你需要JavaScript，及支持HTML5的浏览器
 msgid ""
 "This research aims to develop an online colour naming model to facilitate"
 " colour communication within and between cultures."
-msgstr "本研究目的旨在通过线上颜色命名系统促进不同文化间的颜色表达。"
+msgstr "本研究希望通过线上色彩命名系统采集的数据来促进不同文化之间的色彩表达和沟通。"
 
 #: colournaming/templates/index.html:295
 msgid ""
 "Please use the following communication form to give us your feedback and "
 "comments or if you wish to inform you about the results of this research."
-msgstr "请用下列表格给予我们你的反馈和建议。"
+msgstr "请使用下列表格提供你的反馈和建议。请标明如果你希望被告知最终的研究结果。"
 
 #: colournaming/templates/index.html:308
 #: colournaming/templates/observer_information.html:52
@@ -395,7 +395,7 @@ msgid ""
 "appear. Name as many colour samples (20+) as you can for higher ranking "
 "on colour namers. You will need to press the Finish button to start the "
 "next task. Your response time will be recorded."
-msgstr "根据你的理解，给出每个色样所指代的颜色名称。通过键盘输入色名，然后<br>按箭头[>]至下一个色样。你的颜色命名排名会根据你的命名的数量来排列。你可以按‘完成’开始新的测试步骤(20+)。你所回答的时间将被记录。"
+msgstr "根据你的理解，给出最能代表这个色彩样本的颜色名称。输入名称后可点击右侧箭头[>]或回车键来进行下一个颜色命名。你可以尝试命名尽可能多的颜色(20+)来提高自己在色彩命名者中的排名，也可以按下方的完成键来结束命名测试。右上角将会显示你命名的色彩个数，你的回答时间也将会被记录。"
 
 #: colournaming/templates/name_colour.html:14
 msgid "Name the colour of the patch"
@@ -414,7 +414,7 @@ msgid ""
 "Please provide us with some information about your background and viewing"
 " conditions. This will help us to better understand the context of your "
 "responses."
-msgstr "请提供有关你的背景及观察条件。这将帮助我们更好的理解你所置身的环境。"
+msgstr "请提供有关你的背景及观察条件。这将帮助我们更好地理解你的颜色命名的结果。"
 
 #: colournaming/templates/thankyou.html:5
 msgid "Thank you"
@@ -434,5 +434,4 @@ msgid ""
 "across languages. Please feel free to contact us and visit our research "
 "page for more information. Find below your responses in white and the "
 "most popular colour names in black:"
-msgstr "你的支持可以帮助改善不同语言间的颜色表达。请随时联系我们并访问我们的研究主页获取更多详情。查找你所回答的颜色（白色）及最多回答的颜色（黑色）："
-
+msgstr "你对本项研究的支持可以帮助改善不同语言之间的颜色表达和沟通。请随时联系我们并访问我们的研究主页以获取更多详情。 查看你回答的颜色名称（白色）以及较为普遍的答案（黑色）："
