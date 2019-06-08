@@ -1,4 +1,4 @@
-# Chinese translations for PROJECT.
+# Translations template for PROJECT.
 # Copyright (C) 2018 ORGANIZATION
 # This file is distributed under the same license as the PROJECT project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
@@ -10,8 +10,7 @@ msgstr ""
 "POT-Creation-Date: 2018-03-08 22:44+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: zh\n"
-"Language-Team: zh <LL@li.org>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -435,3 +434,4 @@ msgid ""
 "page for more information. Find below your responses in white and the "
 "most popular colour names in black:"
 msgstr "你对本项研究的支持可以帮助改善不同语言之间的颜色表达和沟通。请随时联系我们并访问我们的研究主页以获取更多详情。 查看你回答的颜色名称（白色）以及较为普遍的答案（黑色）："
+
