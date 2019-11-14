@@ -142,7 +142,7 @@ msgstr "Blanco amarillento"
 
 #: colournaming/experiment/forms.py:116
 msgid "Describe the white graphic elements on your screen"
-msgstr "Describa los elementos gràficos blancos de su pantalla"
+msgstr "Describa los elementos gráficos blancos de su pantalla"
 
 #: colournaming/experiment/forms.py:122 colournaming/experiment/forms.py:133
 msgid "Dark"
@@ -265,7 +265,7 @@ msgid ""
 "all of the time. The movie lasts for 90 secs and all you need to do is "
 "play it and remember if the 'coloured' square disappeared at any time "
 "during the movie."
-msgstr "El siguiente video muestra un cuadrado 'coloreado' en movimiento. El cuadrado cambia de color a medida que se reproduce el video. Es posible que pueda ver el color durante todo o parte del tiempo. El video dura 90 segundos y todo lo que necesita hacer es reproducirla y recordar si el cuadro 'coloreado' ha desaparecido en algún momento durante el video."
+msgstr "El siguiente video muestra un cuadrado 'coloreado' en movimiento. El cuadrado cambia de color a medida que se reproduce el video. Es posible que pueda ver el color durante todo o parte del tiempo. El video dura 90 segundos y todo lo que necesita hacer es reproducirlo y recordar si el cuadro 'coloreado' ha desaparecido en algún momento durante el video."
 
 #: colournaming/templates/colour_vision.html:9
 msgid "Did the 'coloured' square disappear?"
