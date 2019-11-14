@@ -265,7 +265,7 @@ msgid ""
 "all of the time. The movie lasts for 90 secs and all you need to do is "
 "play it and remember if the 'coloured' square disappeared at any time "
 "during the movie."
-msgstr "El següent vídeo mostra un quadrat 'colorit' en moviment. El quadrat canvia de color a mesura que es reprodueix el vídeo. És possible que pugui veure el color durant tot o part del temps. El vídeo dura 90 segons i tot el que heu de fer és reproduir-la i recordar si el quadre 'acolorit' ha desaparecido en algun moment durant el vídeo."
+msgstr "El següent vídeo mostra un quadrat 'colorit' en moviment. El quadrat canvia de color a mesura que es reprodueix el vídeo. És possible que pugui veure el color durant tot o part del temps. El vídeo dura 90 segons i tot el que heu de fer és reproduir-lo i recordar si el quadre 'acolorit' ha desaparegut en algun moment durant el vídeo."
 
 #: colournaming/templates/colour_vision.html:9
 msgid "Did the 'coloured' square disappear?"
@@ -421,7 +421,7 @@ msgstr "Gràcies"
 
 #: colournaming/templates/thankyou.html:8
 msgid "Thank you for participating."
-msgstr "Gràcies per participar"
+msgstr "Gràcies per participar."
 
 #: colournaming/templates/thankyou.html:8
 msgid "You can now share the link of the experiment with your friends."
