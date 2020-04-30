@@ -36,7 +36,7 @@
     "yarn": "^1.22.0"
   },
   "dependencies": {
-    "jquery": "^3.2.1",
+    "jquery": "^3.5.0",
     "whatwg-fetch": "^2.0.3"
   }
 }
