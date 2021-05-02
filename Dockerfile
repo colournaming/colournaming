@@ -1,8 +1,8 @@
 FROM python:3.6
 ENV PYTHONUNBUFFERED 1
 COPY requirements.txt /tmp/
-RUN pip install --upgrade pip && pip install wheel pip-tools
-RUN pip-sync
+RUN pip install pip==21.0.1 && pip install wheel pip-tools
+RUN pip-sync /tmp/requirements.txt
 COPY colournaming /app/colournaming
 COPY app.py /app
 COPY tests /app/tests
