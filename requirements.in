@@ -1,0 +1,14 @@
+flask_wtf
+wtforms
+flask
+flask_sqlalchemy
+flask_mail
+sqlalchemy
+flask_babel
+pycountry
+click
+pytest
+raven
+whitenoise
+numpy
+gunicorn
