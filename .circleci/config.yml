@@ -16,7 +16,7 @@ jobs:
           command: |
             set -x
             apk add --no-progress -q --no-cache musl-dev cargo py-pip python3-dev libffi-dev openssl-dev gcc libc-dev make
-            pip3 install --upgrade pip wheel
+            pip3 install wheel
             pip3 install docker-compose
 
       - setup_remote_docker
