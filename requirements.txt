@@ -58,6 +58,8 @@ packaging==20.9
     # via pytest
 pluggy==0.13.1
     # via pytest
+psycopg2-binary==2.8.6
+    # via -r requirements.in
 py==1.10.0
     # via pytest
 pycountry==20.7.3
@@ -80,6 +82,10 @@ toml==0.10.2
     # via pytest
 typing-extensions==3.10.0.0
     # via importlib-metadata
+ua-parser==0.10.0
+    # via user-agents
+user-agents==2.2.0
+    # via -r requirements.in
 werkzeug==1.0.1
     # via flask
 whitenoise==5.2.0

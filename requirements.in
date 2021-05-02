@@ -12,3 +12,5 @@ raven
 whitenoise
 numpy
 gunicorn
+user-agents
+psycopg2-binary
