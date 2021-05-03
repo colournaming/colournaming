@@ -7,7 +7,6 @@ sqlalchemy
 flask_babel
 pycountry
 click
-pytest
 raven
 whitenoise
 numpy
