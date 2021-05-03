@@ -3,7 +3,6 @@
 from flask_babel import lazy_gettext
 from flask_wtf import FlaskForm
 from wtforms import DecimalField, SelectField, StringField, validators
-from . import model
 
 
 class NameAgreementForm(FlaskForm):

@@ -157,7 +157,7 @@ class ColourNamer:
 def language_list():
     """Get a list of all known languages."""
     languages = Language.query.all()
-    return [{"name": l.name, "code": l.code} for l in languages]
+    return [{"name": language.name, "code": language.code} for language in languages]
 
 
 def colour_list(language):
@@ -186,8 +186,8 @@ def audio_list(lang):
     """Return a list of available audio files."""
     path = os.path.join(current_app.static_folder, "audio", lang)
     if os.path.exists(path):
-        l = [os.path.split(x)[-1] for x in glob.glob(path + "/*.mp3")]
-        return l
+        filenames = [os.path.split(x)[-1] for x in glob.glob(path + "/*.mp3")]
+        return filenames
 
 
 def instantiate_namers():

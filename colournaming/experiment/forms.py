@@ -6,14 +6,12 @@ import pycountry
 from wtforms import (
     BooleanField,
     DecimalField,
-    HiddenField,
     IntegerField,
     SelectField,
     TextField,
 )
 from wtforms.validators import DataRequired, Optional
 from wtforms.widgets import HiddenInput
-from . import model
 
 
 class DisplayForm(FlaskForm):

@@ -165,7 +165,7 @@ def thankyou():
     try:
         response_count = session["experiment"].get("response_count", 0)
         perc = controller.response_count_percentage(response_count)
-    except:
+    except Exception:
         perc = 0
     top_namers_msg = lazy_gettext("You are in the 0% top colour namers.")
     top_namers_msg = top_namers_msg.replace("0%", "{0:.0f}%".format(perc))

@@ -2,8 +2,7 @@
 
 import csv
 import random
-from sqlalchemy import func
-from sqlalchemy.sql.expression import label, text, func
+from sqlalchemy.sql.expression import func
 from ..database import db
 from .model import ColourTarget, Participant, ColourResponse
 
