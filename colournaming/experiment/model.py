@@ -8,6 +8,7 @@ from ..database import db
 
 class Gender(enum.Enum):
     """Genders."""
+
     female = 1
     male = 2
     other = 5
@@ -15,6 +16,7 @@ class Gender(enum.Enum):
 
 class ColourExperience(enum.Enum):
     """Experience levels working with colour."""
+
     beginner = 1
     intermediate = 2
     advanced = 3
@@ -22,12 +24,14 @@ class ColourExperience(enum.Enum):
 
 class DeviceOrientation(enum.Enum):
     """Device orientations"""
+
     vertical = 1
     horizontal = 2
 
 
 class Device(enum.Enum):
     """Devices."""
+
     smartphone = 1
     pad = 2
     laptop = 3
@@ -36,6 +40,7 @@ class Device(enum.Enum):
 
 class LanguageExperience(enum.Enum):
     """Experience levels in language."""
+
     beginner = 1
     intermediate = 2
     advanced = 3
@@ -45,6 +50,7 @@ class LanguageExperience(enum.Enum):
 
 class EducationLevel(enum.Enum):
     """Education levels."""
+
     no_qualifications = 1
     secondary_school_degree = 2
     bachelors_degree = 3
@@ -55,6 +61,7 @@ class EducationLevel(enum.Enum):
 
 class AmbientLight(enum.Enum):
     """Ambient lighting conditions."""
+
     dark = 1
     typical_domestic = 2
     mid_daylight = 3
@@ -64,6 +71,7 @@ class AmbientLight(enum.Enum):
 
 class ScreenLight(enum.Enum):
     """Screen lighting conditions."""
+
     dark = 1
     dim = 2
     average = 3
@@ -72,6 +80,7 @@ class ScreenLight(enum.Enum):
 
 class ScreenTemperature(enum.Enum):
     """Screen temperatures."""
+
     neutral_white = 1
     warm_white = 2
     bluish_white = 3
@@ -80,7 +89,8 @@ class ScreenTemperature(enum.Enum):
 
 class Participant(db.Model):
     """Model for an experiment participant."""
-    __tablename__ = 'participants'
+
+    __tablename__ = "participants"
 
     id = db.Column(db.Integer, primary_key=True)
     created_on = db.Column(db.DateTime(timezone=True), default=datetime.datetime.utcnow)
@@ -112,7 +122,8 @@ class Participant(db.Model):
 
 class ColourTarget(db.Model):
     """Model for an experiment target."""
-    __tablename__ = 'colour_targets'
+
+    __tablename__ = "colour_targets"
 
     id = db.Column(db.Integer, primary_key=True)
     red = db.Column(db.Integer, nullable=False)
@@ -123,13 +134,14 @@ class ColourTarget(db.Model):
 
 class ColourResponse(db.Model):
     """Model for a single experiment response."""
-    __tablename__ = 'colour_responses'
+
+    __tablename__ = "colour_responses"
 
     id = db.Column(db.Integer, primary_key=True)
-    participant_id = db.Column(db.Integer, db.ForeignKey('participants.id'))
-    participant = db.relationship('Participant', backref=db.backref('responses'))
-    target_id = db.Column(db.Integer, db.ForeignKey('colour_targets.id'))
-    target = db.relationship('ColourTarget')
+    participant_id = db.Column(db.Integer, db.ForeignKey("participants.id"))
+    participant = db.relationship("Participant", backref=db.backref("responses"))
+    target_id = db.Column(db.Integer, db.ForeignKey("colour_targets.id"))
+    target = db.relationship("ColourTarget")
     name = db.Column(db.String)
     response_time = db.Column(db.Float)
     experiment_version = db.Column(db.String)

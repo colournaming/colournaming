@@ -12,7 +12,7 @@ from ..database import db
 from .model import ColourCentroid, Language
 
 
-class ColourNamer():
+class ColourNamer:
     """Use colour centroid data to find nearest perceptual neighbours of colours."""
 
     def __init__(self, language_code):
@@ -26,21 +26,27 @@ class ColourNamer():
         data = []
         for c in centroids:
             mu = np.array([c.m_L, c.m_a, c.m_b])
-            sigma = np.array([[c.sigma_1, c.sigma_2, c.sigma_3],
-                              [c.sigma_4, c.sigma_5, c.sigma_6],
-                              [c.sigma_7, c.sigma_8, c.sigma_9]])
-            hex_code = '{0:2x}{1:2x}{2:2x}'.format(int(c.m_R), int(c.m_G), int(c.m_B))
-            data.append({
-                'colour_name': c.color_name,
-                'r': c.m_R,
-                'g': c.m_G,
-                'b': c.m_B,
-                'sigma': sigma,
-                'mu': mu,
-                'hex': hex_code,
-                'den': c.den,
-                'prob': c.prob
-            })
+            sigma = np.array(
+                [
+                    [c.sigma_1, c.sigma_2, c.sigma_3],
+                    [c.sigma_4, c.sigma_5, c.sigma_6],
+                    [c.sigma_7, c.sigma_8, c.sigma_9],
+                ]
+            )
+            hex_code = "{0:2x}{1:2x}{2:2x}".format(int(c.m_R), int(c.m_G), int(c.m_B))
+            data.append(
+                {
+                    "colour_name": c.color_name,
+                    "r": c.m_R,
+                    "g": c.m_G,
+                    "b": c.m_B,
+                    "sigma": sigma,
+                    "mu": mu,
+                    "hex": hex_code,
+                    "den": c.den,
+                    "prob": c.prob,
+                }
+            )
         return data
 
     @staticmethod
@@ -55,9 +61,13 @@ class ColourNamer():
     @staticmethod
     def srgb2xyz(rgb):
         """Convert SRGB to 3D colour space."""
-        M = np.array([[0.4124, 0.3576, 0.1805],
-                      [0.2126, 0.7152, 0.0722],
-                      [0.0193, 0.1192, 0.9505]])
+        M = np.array(
+            [
+                [0.4124, 0.3576, 0.1805],
+                [0.2126, 0.7152, 0.0722],
+                [0.0193, 0.1192, 0.9505],
+            ]
+        )
         sr = ColourNamer.scale_component(rgb[0])
         sg = ColourNamer.scale_component(rgb[1])
         sb = ColourNamer.scale_component(rgb[2])
@@ -116,36 +126,38 @@ class ColourNamer():
         testlab = self.xyz2lab(self.srgb2xyz(rgb), [95.04, 100.0, 108.89])
         for i in range(len(self.data)):
             c = self.data[i]
-            if c['den'] > 1.0e-15:
-                cond_prob = self.mvnpdf(testlab, c['mu'], c['sigma']) / c['den']
+            if c["den"] > 1.0e-15:
+                cond_prob = self.mvnpdf(testlab, c["mu"], c["sigma"]) / c["den"]
             else:
                 cond_prob = 0.0
             if math.isnan(cond_prob):
                 cond_prob = 0.0
-            self.data[i]['posteriori'] = c['prob'] * cond_prob
-        self.data = sorted(self.data, key=lambda c: c['posteriori'], reverse=True)
+            self.data[i]["posteriori"] = c["prob"] * cond_prob
+        self.data = sorted(self.data, key=lambda c: c["posteriori"], reverse=True)
         names = []
         for i in range(4):
-            d = self.euclidean_distance(self.data[0]['mu'], self.data[i]['mu'])
-            if math.isnan(self.data[i]['posteriori']):
-                self.data[i]['posteriori'] = 0.0
-            names.append({
-                'name': self.data[i]['colour_name'],
-                'a': self.data[i]['mu'][1],
-                'b': self.data[i]['mu'][2],
-                'd': d,
-                'likelihood': self.data[i]['posteriori'],
-                'red': self.data[i]['r'],
-                'green': self.data[i]['g'],
-                'blue': self.data[i]['b']
-            })
+            d = self.euclidean_distance(self.data[0]["mu"], self.data[i]["mu"])
+            if math.isnan(self.data[i]["posteriori"]):
+                self.data[i]["posteriori"] = 0.0
+            names.append(
+                {
+                    "name": self.data[i]["colour_name"],
+                    "a": self.data[i]["mu"][1],
+                    "b": self.data[i]["mu"][2],
+                    "d": d,
+                    "likelihood": self.data[i]["posteriori"],
+                    "red": self.data[i]["r"],
+                    "green": self.data[i]["g"],
+                    "blue": self.data[i]["b"],
+                }
+            )
         return names
 
 
 def language_list():
     """Get a list of all known languages."""
     languages = Language.query.all()
-    return [{'name': l.name, 'code': l.code} for l in languages]
+    return [{"name": l.name, "code": l.code} for l in languages]
 
 
 def colour_list(language):
@@ -154,9 +166,9 @@ def colour_list(language):
     colour_list = []
     for c in colours:
         cdict = {
-            'name': c.color_name.replace('_', ' ').capitalize(),
-            'code': c.color_name,
-            'hex': _hex_code_for_colour(c)
+            "name": c.color_name.replace("_", " ").capitalize(),
+            "code": c.color_name,
+            "hex": _hex_code_for_colour(c),
         }
         colour_list.append(cdict)
     return colour_list
@@ -172,9 +184,9 @@ def _hex_code_for_colour(colour):
 
 def audio_list(lang):
     """Return a list of available audio files."""
-    path = os.path.join(current_app.static_folder, 'audio', lang)
+    path = os.path.join(current_app.static_folder, "audio", lang)
     if os.path.exists(path):
-        l = [os.path.split(x)[-1] for x in glob.glob(path + '/*.mp3')]
+        l = [os.path.split(x)[-1] for x in glob.glob(path + "/*.mp3")]
         return l
 
 
@@ -182,9 +194,9 @@ def instantiate_namers():
     """Create instances of ColourNamer for each known language."""
     namers = {}
     for lang in language_list():
-        lang_code = lang['code']
+        lang_code = lang["code"]
         namers[lang_code] = ColourNamer(lang_code)
-        logging.info('namer created for %s', lang_code)
+        logging.info("namer created for %s", lang_code)
     return namers
 
 
@@ -198,9 +210,9 @@ def read_centroids_from_file(f, language_name, language_code):
         db.session.add(lang)
         db.session.commit()
     for r in col_csv:
-        r['language'] = lang
-        if 'exp' in r:
-            del r['exp']
+        r["language"] = lang
+        if "exp" in r:
+            del r["exp"]
         c = ColourCentroid(**r)
         db.session.add(c)
     db.session.commit()

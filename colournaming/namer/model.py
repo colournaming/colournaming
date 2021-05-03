@@ -5,6 +5,7 @@ from sqlalchemy.dialects import postgresql
 
 class AgreementLevel(enum.Enum):
     """Name agreement levels."""
+
     strongly_disagree = -2
     disagree = -1
     undecided = 0
@@ -13,7 +14,7 @@ class AgreementLevel(enum.Enum):
 
 
 class Language(db.Model):
-    __tablename__ = 'languages'
+    __tablename__ = "languages"
 
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.Unicode(64), unique=True)
@@ -21,11 +22,11 @@ class Language(db.Model):
 
 
 class ColourCentroid(db.Model):
-    __tablename__ = 'colour_centroids'
+    __tablename__ = "colour_centroids"
 
     id = db.Column(db.Integer, primary_key=True)
-    language_id = db.Column(db.Integer, db.ForeignKey('languages.id'))
-    language = db.relationship('Language', backref=db.backref('colours'))
+    language_id = db.Column(db.Integer, db.ForeignKey("languages.id"))
+    language = db.relationship("Language", backref=db.backref("colours"))
     color_name = db.Column(db.Unicode(64))
     m_L = db.Column(db.Float())
     m_a = db.Column(db.Float())
@@ -47,11 +48,11 @@ class ColourCentroid(db.Model):
 
 
 class NameAgreement(db.Model):
-    __tablename__ = 'name_agreements'
+    __tablename__ = "name_agreements"
 
     id = db.Column(db.Integer, primary_key=True)
-    language_id = db.Column(db.Integer, db.ForeignKey('languages.id'))
-    language = db.relationship('Language')
+    language_id = db.Column(db.Integer, db.ForeignKey("languages.id"))
+    language = db.relationship("Language")
     red = db.Column(db.Integer, nullable=False)
     green = db.Column(db.Integer, nullable=False)
     blue = db.Column(db.Integer, nullable=False)
