@@ -46,3 +46,7 @@ jobs:
         env:
           FLASK_ENV: development
           COLOURNAMING_CFG: ${{ github.workspace }}/docker.cfg
+      - name: Build docker image
+        uses: docker/build-push-action@v1
+        repository: colournamer/colournamer
+        tag_with_ref: true
