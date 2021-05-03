@@ -39,10 +39,10 @@ jobs:
       - name: Initialise database
         run: flask initdb
         env:
-          FLASK_DEBUG: 1
+          FLASK_ENV: development
           COLOURNAMING_CFG: ${{ github.workspace }}/docker.cfg
       - name: Test with pytest
         run: flask test
         env:
-          FLASK_DEBUG: 1
+          FLASK_ENV: development
           COLOURNAMING_CFG: ${{ github.workspace }}/docker.cfg
