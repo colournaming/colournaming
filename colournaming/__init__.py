@@ -20,6 +20,7 @@ def create_app():
     app = Flask(__name__)
     app.config.from_envvar("COLOURNAMING_CFG")
     if app.config.get("DEBUG", False) is True:
+        print("Not debugging so configuring sentry and whitenoise")
         sentry = Sentry(app, dsn=app.config["SENTRY_DSN"])  # noqa
         app.wsgi_app = WhiteNoise(app.wsgi_app, root="static/")
     db.init_app(app)

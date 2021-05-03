@@ -38,13 +38,11 @@ jobs:
           flake8 colournaming
       - name: Initialise database
         run: flask initdb
-        working-directory: ${{ github.workspace }}
         env:
           FLASK_DEBUG: 1
           COLOURNAMING_CFG: ${{ github.workspace }}/docker.cfg
       - name: Test with pytest
         run: flask test
-        working-directory: ${{ github.workspace }}
         env:
           FLASK_DEBUG: 1
           COLOURNAMING_CFG: ${{ github.workspace }}/docker.cfg
