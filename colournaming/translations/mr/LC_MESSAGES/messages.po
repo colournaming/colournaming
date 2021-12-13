@@ -1,0 +1,437 @@
+# Translations template for PROJECT.
+# Copyright (C) 2018 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2018-03-08 22:44+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: colournaming/experiment/forms.py:32
+msgid "What is your age?"
+msgstr "आपले वय"
+
+#: colournaming/experiment/forms.py:39
+msgid "Female"
+msgstr "स्त्री"
+
+#: colournaming/experiment/forms.py:40
+msgid "Male"
+msgstr "पुरुष"
+
+#: colournaming/experiment/forms.py:41
+msgid "Other"
+msgstr "इतर"
+
+#: colournaming/experiment/forms.py:43
+msgid "To which gender do you most identify?"
+msgstr "लिंग ओळख"
+
+#: colournaming/experiment/forms.py:47
+msgid "Please specify"
+msgstr "नमूद करा"
+
+#: colournaming/experiment/forms.py:53 colournaming/experiment/forms.py:63
+msgid "Beginner"
+msgstr "प्राथमिक"
+
+#: colournaming/experiment/forms.py:54 colournaming/experiment/forms.py:64
+msgid "Intermediate"
+msgstr "मध्यम"
+
+#: colournaming/experiment/forms.py:55 colournaming/experiment/forms.py:65
+msgid "Advanced"
+msgstr "प्रगत"
+
+#: colournaming/experiment/forms.py:57
+msgid "Describe your experience working with colour"
+msgstr "रंगांबाबत काम करण्याचा अनुभव"
+
+#: colournaming/experiment/forms.py:66
+msgid "Bilingual"
+msgstr "द्विभाषी"
+
+#: colournaming/experiment/forms.py:67
+msgid "Native speaker"
+msgstr "मातृभाषिक"
+
+#: colournaming/experiment/forms.py:69
+msgid "Describe your skill in the language used in this experiment"
+msgstr "प्रयोगासाठी वापरलेल्या भाषेतील आपले प्राविण्य नमूद करावे"
+
+#: colournaming/experiment/forms.py:75
+msgid "No qualifications"
+msgstr "कुठलेही नाही"
+
+#: colournaming/experiment/forms.py:76
+msgid "Secondary school degree"
+msgstr "बारावी"
+
+#: colournaming/experiment/forms.py:77
+msgid "Bachelors degree"
+msgstr "पदवीधर"
+
+#: colournaming/experiment/forms.py:78
+msgid "Masters degree"
+msgstr "पदव्युत्तर"
+
+#: colournaming/experiment/forms.py:79
+msgid "Professional degree"
+msgstr "व्यावसायिक पदवी"
+
+#: colournaming/experiment/forms.py:80
+msgid "Doctorate degree"
+msgstr "विद्यावाचस्पती"
+
+#: colournaming/experiment/forms.py:82
+msgid "What is the highest level of education you have completed?"
+msgstr "आपण पारंगत असलेली सर्वोच्च शैक्षणिक पातळी"
+
+#: colournaming/experiment/forms.py:89
+msgid "In which country did you grow up?"
+msgstr "आपण कोणत्या देशात लहानाचे मोठे झालात?"
+
+#: colournaming/experiment/forms.py:94
+msgid "Where are you living?"
+msgstr "आता आपण कुठे राहता?"
+
+#: colournaming/experiment/forms.py:100
+msgid "Smartphone"
+msgstr "स्मार्टफोन"
+
+#: colournaming/experiment/forms.py:101
+msgid "Pad"
+msgstr "टॅबलेट"
+
+#: colournaming/experiment/forms.py:102
+msgid "Laptop"
+msgstr "लॅपटॉप"
+
+#: colournaming/experiment/forms.py:103
+msgid "Desktop"
+msgstr "कॉम्पुटर"
+
+#: colournaming/experiment/forms.py:105
+msgid "What is your display device?"
+msgstr "आपण आत्ता वापरात असलेले साधन"
+
+#: colournaming/experiment/forms.py:111
+msgid "Neutral white"
+msgstr "पांढरा"
+
+#: colournaming/experiment/forms.py:112
+msgid "Warm white"
+msgstr "उष्ण पांढरा"
+
+#: colournaming/experiment/forms.py:113
+msgid "Bluish white"
+msgstr "निळसर पांढरा"
+
+#: colournaming/experiment/forms.py:114
+msgid "Yellowish white"
+msgstr "पिवळट पांढरा"
+
+#: colournaming/experiment/forms.py:116
+msgid "Describe the white graphic elements on your screen"
+msgstr "आपल्या स्क्रीनवरील व्हाईट ग्राफिक एलेमेंट्स नमूद करा"
+
+#: colournaming/experiment/forms.py:122 colournaming/experiment/forms.py:133
+msgid "Dark"
+msgstr "अंधार"
+
+#: colournaming/experiment/forms.py:123
+msgid "Dim"
+msgstr "अंधुक"
+
+#: colournaming/experiment/forms.py:124
+msgid "Average"
+msgstr "मध्यम"
+
+#: colournaming/experiment/forms.py:125
+msgid "Bright"
+msgstr "उज्ज्वल"
+
+#: colournaming/experiment/forms.py:127
+msgid "Describe the surrounding environment behind your device"
+msgstr "आपल्या साधनाच्या आजूबाजूच्या प्रकाशाचे वर्णन करा"
+
+#: colournaming/experiment/forms.py:134
+msgid "Typical domestic"
+msgstr "घरगुती"
+
+#: colournaming/experiment/forms.py:135
+msgid "Mid daylight"
+msgstr "साधारण उजेडात"
+
+#: colournaming/experiment/forms.py:136
+msgid "Full daylight"
+msgstr "पूर्ण उजेडात"
+
+#: colournaming/experiment/forms.py:137
+msgid "Typical office"
+msgstr "ऑफिस मधील"
+
+#: colournaming/experiment/forms.py:139
+msgid "Describe the lighting conditions of your environment"
+msgstr "आपल्या आजूबाजूच्या प्रकाश योजनेविषयी लिहावे"
+
+#: colournaming/experiment/forms.py:145 colournaming/experiment/forms.py:160
+msgid "What distance are you from your monitor in cm?"
+msgstr "आपण स्क्रीन पासून किती अंतरावर (cm) आहात?"
+
+#: colournaming/experiment/forms.py:157
+#: colournaming/templates/colour_vision.html:12
+msgid "No"
+msgstr "नाही"
+
+#: colournaming/experiment/forms.py:158
+#: colournaming/templates/colour_vision.html:13
+msgid "Yes"
+msgstr "हो"
+
+#: colournaming/experiment/views.py:166
+msgid "You are in the 0% top colour namers."
+msgstr "आपण रंग ओळखणाऱ्या उत्तम 0% मधील एक आहात."
+
+#: colournaming/home/forms.py:7
+msgid "First name"
+msgstr "नाव"
+
+#: colournaming/home/forms.py:8
+msgid "Last name"
+msgstr "आडनाव"
+
+#: colournaming/home/forms.py:9
+msgid "Email"
+msgstr "ई-मेल"
+
+#: colournaming/home/forms.py:10
+msgid "Organisation"
+msgstr "संस्था"
+
+#: colournaming/home/forms.py:11
+msgid "Your message"
+msgstr "आपला संदेश"
+
+#: colournaming/namer/forms.py:18
+msgid "Do you agree?"
+msgstr "आपण सहमत आहात का?"
+
+#: colournaming/namer/forms.py:19
+msgid "Strongly disagree"
+msgstr "पूर्णपणे असहमत"
+
+#: colournaming/namer/forms.py:20
+msgid "Disagree"
+msgstr "असहमत"
+
+#: colournaming/namer/forms.py:21
+msgid "Undecided"
+msgstr "अनिश्चित"
+
+#: colournaming/namer/forms.py:22
+msgid "Agree"
+msgstr "सहमत"
+
+#: colournaming/namer/forms.py:23
+msgid "Strongly agree"
+msgstr "पूर्णपणे सहमत"
+
+#: colournaming/templates/base.html:13 colournaming/templates/index.html:12
+msgid "Colour Naming"
+msgstr "रंगांची ओळख"
+
+#: colournaming/templates/base_experiment.html:8
+msgid "Colour Naming Experiment"
+msgstr "रंग-ओळख प्रयोग"
+
+#: colournaming/templates/colour_vision.html:4
+msgid "Colour Vision Task"
+msgstr "रंगांच्या दृष्टिविषयी"
+
+#: colournaming/templates/colour_vision.html:7
+msgid ""
+"The movie below displays a moving 'coloured' square. The square changes "
+"colour as the movie plays. You may be able to see the colour for some or "
+"all of the time. The movie lasts for 90 secs and all you need to do is "
+"play it and remember if the 'coloured' square disappeared at any time "
+"during the movie."
+msgstr "पुढील चित्रफीत बघतांना आपणास एक रंगीत चौकोन दिसेल. चित्रफीत चालू असतांना तो रंगीत चौकोन जागा आणि रंग बदलेल. आपणास तो चौकोन कदाचित पूर्णवेळ किव्हा काहीवेळ दिसेल. आपणास हि ९० सेकंदांची चित्रफीत बघून हे सांगायचे आहे की तो रंगीत चौकोन पूर्णवेळ स्क्रीन वर दिसतो की मध्ये गायब होतो."
+
+#: colournaming/templates/colour_vision.html:9
+msgid "Did the 'coloured' square disappear?"
+msgstr "रंगीत' चौकोन मध्ये गायब झाला का?"
+
+#: colournaming/templates/display_properties.html:4
+msgid "Display Properties Task"
+msgstr "डिस्प्लेची वैशिष्ट्ये"
+
+#: colournaming/templates/display_properties.html:7
+msgid ""
+"Adjust the brightness of your display if necessary until you can see the "
+"differences between all 11 steps of the greyscale test image. Disable "
+"Night Shift mode or blue light filters if applicable."
+msgstr "आपल्या स्क्रीनवरील brightness गरज वाटल्यास वाढवावा जेणेकरून समोरील ११ राखाडी छटांमधील फरक दिसून येईल. आपणास कदाचित night shift mode अथवा blue light filters बंद करावे लागतील."
+
+#: colournaming/templates/display_properties.html:23
+msgid "Confirm how many steps you can see?"
+msgstr "आपल्याला किती छटा स्पष्टपणे दिसतायेत?"
+
+#: colournaming/templates/index.html:20 colournaming/templates/index.html:45
+msgid "Colour namer"
+msgstr "कलर नेमर"
+
+#: colournaming/templates/index.html:23 colournaming/templates/index.html:94
+msgid "Research"
+msgstr "संशोधन"
+
+#: colournaming/templates/index.html:26 colournaming/templates/index.html:293
+msgid "Contact"
+msgstr "संपर्क"
+
+#: colournaming/templates/index.html:34
+msgid "Let's play a game, how many colours can you name?"
+msgstr "एक खेळ खेळूया, यातले किती रंग तुम्हाला ओळखता येतील?"
+
+#: colournaming/templates/index.html:36
+msgid ""
+"Welcome to Colour Naming, an online experiment designed to collect colour"
+" names in multiple languages with their corresponding colour ranges. You "
+"will be asked to name a series of colour samples and provide information "
+"about your cultural background and viewing conditions. You are free to "
+"omit any question and you may withdraw at any time without penalty. "
+"Participation in this study is strictly anonymous and voluntary."
+msgstr "विविध भाषांमधील रंगांची नावे आणि त्यांच्या विविध रंगछटा यांची माहिती जमविणाऱ्या "रंगांची ओळख" या ऑनलाईन उपक्रमात तुमचे स्वागत आहे. तुम्हाला कोणताही प्रश्न वगळायचे व हा प्रयोग कोणत्याही क्षणी सोडून द्यायची मुभा आहे. ह्या प्रयोगातील आपला सहभाग पूर्णपणे ऐच्छिक व गोपनीय आहे."
+
+#: colournaming/templates/index.html:38
+msgid ""
+"Many individuals find the tasks of this study enjoyable and we believe "
+"there are no known risks to participants. The purpose of this research "
+"study is to improve colour communication in multilingual environments. "
+"Please feel free to contact the principal investigator <a "
+"href=\"mailto:d.mylonas[at]ucl.ac.uk\">Dimitris Mylonas</a> or the "
+"supervisors <a href=\"mailto:ucfslwm[at]ucl.ac.uk\">Lindsay MacDonald</a>"
+" and <a href=\"mailto:l.griffin[at]ucl.ac.uk\">Lewis Griffin</a> of "
+"University College London if you have any questions."
+msgstr "या उपक्रमात सहभागी होणाऱ्या बहुतांश लोकांना हा अनुभव आनंददायी वाटतो तसेच या उपक्रमात सहभागी होण्याचे काही धोके नाहीत. या प्रयोगाचा उद्देश रंगांविषयीचा अंतरभाषीय संवाद सोईस्कर करणे आहे. आपल्याला काही सूचना अथवा प्रश्न असल्यास निःसंकोचपणे या अभ्यासाचे प्रमुख संशोधक <a href=\"mailto:d.mylonas[at]ucl.ac.uk\">Dimitris Mylonas</a> अथवा पर्यवेक्षक <a href=\"mailto:ucfslwm[at]ucl.ac.uk\">Lindsay MacDonald</a> आणि <a href=\"mailto:l.griffin[at]ucl.ac.uk\">Lewis Griffin</a> यांना संपर्क साधावा."
+
+#: colournaming/templates/index.html:40
+msgid ""
+"If you are 16 years of age or older, understand the statements and freely"
+" consent to participate in the study, click on the 'Start' button to "
+"begin the experiment."
+msgstr "जर आपण १६ वर्षे अथवा पुढील वयोगटातील असाल तर दिलेली वाक्ये नीट समजून उपक्रमात सहभागी होण्यासाठी आपली संमती द्या. "सुरु" वर क्लिक करून प्रयोगास सुरुवात करा."
+
+#: colournaming/templates/index.html:41
+msgid "Start"
+msgstr "सुरु"
+
+#: colournaming/templates/index.html:47
+msgid ""
+"This is a synthetic observer trained by participants’ responses to name "
+"each colour in different languages (Mylonas, Stutters, Doval, and "
+"MacDonald, 2013). More languages will be added as more data is becoming "
+"available."
+msgstr "प्रत्येक रंगाचे नाव विविध भाषांमध्ये नोंदवण्यासाठी सहभागी उमेदवारांच्या प्रतिक्रियांच्या आधारे प्रशिक्षण दिला जाणारा हा एक मानवनिर्मित निरीक्षक आहे. (Mylonas, Stutters, Doval, and MacDonald, 2013) जसजसा डेटा मिळेल, तसतशी अधिक माहिती यात जोडली जाईल."
+
+#: colournaming/templates/index.html:62
+msgid "by name"
+msgstr "नावाने"
+
+#: colournaming/templates/index.html:70
+msgid "Colour name"
+msgstr "रंगाचे नाव"
+
+#: colournaming/templates/index.html:72
+msgid "Synonyms"
+msgstr "प्रतिशब्द"
+
+#: colournaming/templates/index.html:90
+msgid ""
+"This is a βeta version of Colournamer. You will need JavaScript enabled "
+"and a browser that supports HTML5 web audio."
+msgstr "हे Colornamer चे βeta version आहे. आपणास JavaScript व HTML5 web audio चालणारे browser लागेल."
+
+#: colournaming/templates/index.html:97
+msgid ""
+"This research aims to develop an online colour naming model to facilitate"
+" colour communication within and between cultures."
+msgstr "विविध संस्कृतींमध्ये रंगांविषयी परिसंवाद साधण्यासाठी रंगांची ओळख घडविणारे एक मॉडेल तयार करणे हा या संशोधनाचा हेतू आहे."
+
+#: colournaming/templates/index.html:295
+msgid ""
+"Please use the following communication form to give us your feedback and "
+"comments or if you wish to inform you about the results of this research."
+msgstr "या संशोधनाविषयी आपला अभिप्राय अथवा सूचना कळवण्यासाठी किंवा संशोधनाच्या निष्कर्षांविषयी जाणून घ्यायचे असल्यास सदर फॉर्म चा वापर करावा"
+
+#: colournaming/templates/index.html:308
+#: colournaming/templates/observer_information.html:52
+msgid "Submit"
+msgstr "पाठवा"
+
+#: colournaming/templates/index.html:319
+msgid "Made in London and Berlin"
+msgstr "लंडन व बर्लिन मधील प्रस्तुति"
+
+#: colournaming/templates/name_colour.html:4
+msgid "Colour Naming Task"
+msgstr "रंग ओळख प्रयोग"
+
+#: colournaming/templates/name_colour.html:7
+msgid ""
+"Name each colour sample with the best representative colour term that you"
+" remember.<br>Press the Arrow button [&gt;] or Enter on your keyboard "
+"once you have finished naming the colour for the next colour sample to "
+"appear. Name as many colour samples (20+) as you can for higher ranking "
+"on colour namers. You will need to press the Finish button to start the "
+"next task. Your response time will be recorded."
+msgstr ""
+
+#: colournaming/templates/name_colour.html:14
+msgid "Name the colour of the patch"
+msgstr "या तुकड्याचा रंग ओळखा"
+
+#: colournaming/templates/name_colour.html:29
+msgid "Finish"
+msgstr ""
+
+#: colournaming/templates/observer_information.html:5
+msgid "Observer Information Task"
+msgstr "निरीक्षकाविषयी माहिती"
+
+#: colournaming/templates/observer_information.html:8
+msgid ""
+"Please provide us with some information about your background and viewing"
+" conditions. This will help us to better understand the context of your "
+"responses."
+msgstr "कृपया आपली पार्श्वभूमी व दृष्टी स्वास्थ्य याविषयी माहिती द्या. जेणेकरून आम्हाला आपल्या उत्तरांचा संदर्भ लक्षात घेण्यास मदत होईल."
+
+#: colournaming/templates/thankyou.html:5
+msgid "Thank you"
+msgstr "धन्यवाद"
+
+#: colournaming/templates/thankyou.html:8
+msgid "Thank you for participating."
+msgstr "प्रयोगात सहभागी होण्यासाठी आभार"
+
+#: colournaming/templates/thankyou.html:8
+msgid "You can now share the link of the experiment with your friends."
+msgstr "आपण ह्या प्रयोगाची लिंक आपल्या मित्रपरिवार आणि नातेवाईकांना पाठवू शकता."
+
+#: colournaming/templates/thankyou.html:14
+msgid ""
+"Your responses will be used to improve colour communication within and "
+"across languages. Please feel free to contact us and visit our research "
+"page for more information. Find below your responses in white and the "
+"most popular colour names in black:"
+msgstr "भिन्न भाषांमध्ये रंगांविषयी होणारे संवाद वाढवण्यासाठी आपली प्रतिक्रिया वापरण्यात येईल. अधिक माहितीसाठी कृपया आमच्याशी संपर्क साधा आणि आमच्या रिसर्च पेजला अवश्य भेट द्या. खाली तुमच्या प्रतिक्रिया पांढऱ्या रंगात आणि रंगांची नावे काळया रंगात दिली आहेत."
+
