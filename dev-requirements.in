@@ -1,4 +1,5 @@
 -c requirements.txt
 flake8
 pytest
+openpyxl
 black
