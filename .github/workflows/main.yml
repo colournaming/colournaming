@@ -45,13 +45,13 @@ jobs:
         run: venv/bin/flask initdb
         env:
           FLASK_ENV: development
-          COLOURNAMING_CFG: ${{ github.workspace }}/docker.cfg
+          COLOURNAMING_CFG: ${{ github.workspace }}/github.cfg
       - 
         name: Test with pytest
         run: venv/bin/flask test
         env:
           FLASK_ENV: development
-          COLOURNAMING_CFG: ${{ github.workspace }}/docker.cfg
+          COLOURNAMING_CFG: ${{ github.workspace }}/github.cfg
       - 
         name: Login to Docker Hub
         uses: docker/login-action@v1
