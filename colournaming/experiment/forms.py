@@ -8,7 +8,7 @@ from wtforms import (
     DecimalField,
     IntegerField,
     SelectField,
-    TextField,
+    StringField,
 )
 from wtforms.validators import DataRequired, Optional
 from wtforms.widgets import HiddenInput
@@ -31,7 +31,7 @@ class DisplayForm(FlaskForm):
 class ObserverInformationForm(FlaskForm):
     """Form for gathering observer information."""
 
-    location = TextField(widget=HiddenInput())
+    location = StringField(widget=HiddenInput())
     age_choices = [(-1, "-")] + list(zip(range(16, 100), range(16, 100)))
     age = SelectField(
         choices=age_choices,
@@ -49,7 +49,7 @@ class ObserverInformationForm(FlaskForm):
         description=lazy_gettext("To which gender do you most identify?"),
         validators=[Optional()],
     )
-    gender_other = TextField(description=lazy_gettext("Please specify"), validators=[Optional()])
+    gender_other = StringField(description=lazy_gettext("Please specify"), validators=[Optional()])
     colour_experience = SelectField(
         choices=[
             ("", "-"),
@@ -169,6 +169,6 @@ class ColourVisionForm(FlaskForm):
 class ColourNameForm(FlaskForm):
     """Form for recording a colour name response."""
 
-    name = TextField(validators=[DataRequired()])
+    name = StringField(validators=[DataRequired()])
     target_id = IntegerField(validators=[DataRequired()])
     response_time = DecimalField()
