@@ -28,27 +28,42 @@ jobs:
           - 5432:5432
 
     steps:
-      - name: Checkout code
+      - 
+        name: Checkout code
         uses: actions/checkout@v2
-      - name: Install dependencies
+      - 
+        name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install wheel flake8 pytest pip-tools
           if [ -f requirements.txt ] && [ -f dev-requirements.txt ]; then pip-sync requirements.txt dev-requirements.txt; fi
-      - name: Lint with flake8
+      - 
+        name: Lint with flake8
         run: |
           flake8 colournaming
-      - name: Initialise database
+      - 
+        name: Initialise database
         run: flask initdb
         env:
           FLASK_ENV: development
           COLOURNAMING_CFG: ${{ github.workspace }}/docker.cfg
-      - name: Test with pytest
+      - 
+        name: Test with pytest
         run: flask test
         env:
           FLASK_ENV: development
           COLOURNAMING_CFG: ${{ github.workspace }}/docker.cfg
-      - name: Build docker image
+      - 
+        name: Login to Docker Hub
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKER_HUB_USERNAME }}
+          password: ${{ secrets.DOCKER_HUB_ACTION_TOKEN }}
+      - 
+        name: Setup Docker Buildx
+        uses: docker/setup-buildx-action@v1
+      -  
+        name: Build docker image
         uses: docker/build-push-action@v2
         with:
           context: .
