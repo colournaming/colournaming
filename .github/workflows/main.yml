@@ -39,16 +39,16 @@ jobs:
       - 
         name: Lint with flake8
         run: |
-          flake8 colournaming
+          venv/bin/flake8 colournaming
       - 
         name: Initialise database
-        run: flask initdb
+        run: venv/bin/flask initdb
         env:
           FLASK_ENV: development
           COLOURNAMING_CFG: ${{ github.workspace }}/docker.cfg
       - 
         name: Test with pytest
-        run: flask test
+        run: venv/bin/flask test
         env:
           FLASK_ENV: development
           COLOURNAMING_CFG: ${{ github.workspace }}/docker.cfg
