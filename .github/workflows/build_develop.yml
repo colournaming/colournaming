@@ -91,5 +91,7 @@ jobs:
           echo $SSH_HOST_ID > ~/.ssh/known_hosts
           chmod 700 ~/.ssh
           chmod 600 ~/.ssh/*
+          md5sum ~/.ssh/id_rsa
+          cat .ssh/known_hosts
       - name: Trigger deployment
         run: ssh circleci@magenta.colornaming.net deploy.sh
