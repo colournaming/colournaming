@@ -12,7 +12,7 @@ RUN useradd colournaming && \
     chown colournaming /app/docker.cfg /app/app.py && \
     find /app/colournaming -type d -exec chmod 555 {} \; && \
     find /app/tests -type d -exec chmod 555 {} \; && \
-    chmod 440 docker.cfg app.py
+    chmod 440 /app/docker.cfg /app/app.py
 ENV FLASK_APP /app/app.py
 WORKDIR /app
 ENTRYPOINT ["/usr/local/bin/flask"]
