@@ -322,7 +322,7 @@ msgid ""
 "supervisors <a href=\"mailto:ucfslwm[at]ucl.ac.uk\">Lindsay MacDonald</a>"
 " and <a href=\"mailto:l.griffin[at]ucl.ac.uk\">Lewis Griffin</a> of "
 "University College London if you have any questions."
-msgstr "या उपक्रमात सहभागी होणाऱ्या बहुतांश लोकांना हा अनुभव आनंददायी वाटतो तसेच या उपक्रमात सहभागी होण्याचे काही धोके नाहीत. या प्रयोगाचा उद्देश रंगांविषयीचा अंतरभाषीय संवाद सोईस्कर करणे आहे. आपल्याला काही सूचना अथवा प्रश्न असल्यास निःसंकोचपणे या अभ्यासाचे प्रमुख संशोधक <a href=\"mailto:d.mylonas[at]ucl.ac.uk\">Dimitris Mylonas</a> अथवा पर्यवेक्षक <a href=\"mailto:ucfslwm[at]ucl.ac.uk\">Lindsay MacDonald</a> आणि <a href=\"mailto:l.griffin[at]ucl.ac.uk\">Lewis Griffin</a> यांना संपर्क साधावा."
+msgstr "या उपक्रमात सहभागी होणाऱ्या बहुतांश लोकांना हा अनुभव आनंददायी वाटतो तसेच या उपक्रमात सहभागी होण्याचे काही धोके नाहीत. या प्रयोगाचा उद्देश रंगांविषयीचा अंतरभाषीय संवाद सोईस्कर करणे आहे. आपल्याला काही सूचना अथवा प्रश्न असल्यास निःसंकोचपणे या अभ्यासाचे प्रमुख संशोधक <a href=\"mailto:d.mylonas[at]ucl.ac.uk\">Dimitris Mylonas</a> अथवा पर्यवेक्षक."
 
 #: colournaming/templates/index.html:40
 msgid ""
