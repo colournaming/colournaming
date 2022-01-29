@@ -8,6 +8,7 @@ from raven.contrib.flask import Sentry
 from sqlalchemy.exc import ProgrammingError
 import user_agents
 from whitenoise import WhiteNoise
+from . import admin
 from .database import db
 from .email import mail
 from .experiment.controller import read_targets_from_file
@@ -17,10 +18,10 @@ from .namer.controller import read_centroids_from_file, instantiate_namers
 def create_app():
     """Create an instance of the app."""
     app = Flask(__name__)
-    app.config.from_envvar('COLOURNAMING_CFG')
-    if app.config.get('DEBUG', False) is True:
-        sentry = Sentry(app, dsn=app.config['SENTRY_DSN'])
-        app.wsgi_app = WhiteNoise(app.wsgi_app, root='static/')
+    app.config.from_envvar("COLOURNAMING_CFG")
+    if app.config.get("DEBUG", False) is False:
+        sentry = Sentry(app, dsn=app.config["SENTRY_DSN"])  # noqa
+        app.wsgi_app = WhiteNoise(app.wsgi_app, root="static/")
     db.init_app(app)
     mail.init_app(app)
     babel = Babel(app)
@@ -37,8 +38,8 @@ def create_app():
 def set_locale_selector(babel):
     @babel.localeselector
     def get_locale():
-        available_langs = [x['code'] for x in current_app.config.get('LANGUAGES')]
-        requested_lang = session.get('interface_language', None)
+        available_langs = [x["code"] for x in current_app.config.get("LANGUAGES")]
+        requested_lang = session.get("interface_language", None)
         if requested_lang in available_langs:
             locale = requested_lang
         else:
@@ -49,7 +50,7 @@ def set_locale_selector(babel):
 def set_before_request(app):
     @app.before_request
     def before_req():
-        agent_string = request.headers.get('User-Agent', '')
+        agent_string = request.headers.get("User-Agent", "")
         try:
             ua = user_agents.parse(agent_string)
         except TypeError:
@@ -61,42 +62,42 @@ def set_before_request(app):
 def set_error_handlers(app):
     @app.errorhandler(404)
     def not_found(error):
-            return render_template('404.html'), 404
+        return render_template("404.html"), 404
 
     @app.errorhandler(401)
     def permission_denied(error):
-            return render_template('401.html'), 401
+        return render_template("401.html"), 401
 
 
 def setup_cli(app):
     @app.cli.command()
-    @click.argument('centroids_file', type=click.File('r'))
-    @click.argument('language_name')
-    @click.argument('language_code')
+    @click.argument("centroids_file", type=click.File("r"))
+    @click.argument("language_name")
+    @click.argument("language_code")
     def import_centroids(centroids_file, language_name, language_code):
         """Import a centroids file into the database."""
         read_centroids_from_file(centroids_file, language_name, language_code)
 
     @app.cli.command()
-    @click.argument('filename', type=click.File('w'))
+    @click.argument("filename", type=click.File("w"))
     def export_responses(filename):
         """Export responses to CSV."""
         print(admin.controller.get_responses(), file=filename)
 
     @app.cli.command()
-    @click.argument('filename', type=click.File('w'))
+    @click.argument("filename", type=click.File("w"))
     def export_participants(filename):
         """Export participants to CSV."""
         print(admin.controller.get_participants(), file=filename)
 
     @app.cli.command()
-    @click.argument('filename', type=click.File('w'))
+    @click.argument("filename", type=click.File("w"))
     def export_agreements(filename):
         """Export agreements to CSV."""
         print(admin.controller.get_agreements(), file=filename)
 
     @app.cli.command()
-    @click.argument('targets_file', type=click.File('r'))
+    @click.argument("targets_file", type=click.File("r"))
     def import_targets(targets_file):
         """Import a targets file into the database."""
         read_targets_from_file(targets_file)
@@ -114,7 +115,7 @@ def setup_cli(app):
     @app.cli.command()
     def test():
         """Run the test suite."""
-        pytest.main(['tests'])
+        pytest.main(["tests"])
 
     @app.cli.command()
     @click.pass_context
@@ -125,20 +126,25 @@ def setup_cli(app):
 
 def register_blueprints(app):
     from colournaming.home.views import bp as home_module
-    app.register_blueprint(home_module, url_prefix='/')
+
+    app.register_blueprint(home_module, url_prefix="/")
     from colournaming.namer.views import bp as namer_module
-    app.register_blueprint(namer_module, url_prefix='/namer')
+
+    app.register_blueprint(namer_module, url_prefix="/namer")
     from colournaming.experiment.views import bp as experiment_module
-    app.register_blueprint(experiment_module, url_prefix='/experiment')
+
+    app.register_blueprint(experiment_module, url_prefix="/experiment")
     from colournaming.admin.views import bp as admin_module
-    app.register_blueprint(admin_module, url_prefix='/admin')
+
+    app.register_blueprint(admin_module, url_prefix="/admin")
 
 
 def setup_logging(app):
     if not app.debug:
         import logging
         from logging.handlers import RotatingFileHandler
-        handler = RotatingFileHandler('colournaming.log', maxBytes=10000, backupCount=1)
+
+        handler = RotatingFileHandler("colournaming.log", maxBytes=10000, backupCount=1)
         handler.setLevel(logging.INFO)
         app.logger.addHandler(handler)
 
@@ -152,4 +158,4 @@ def make_colour_namers(app):
 
 
 def lang_is_rtl(locale):
-    return locale.language in ('ar', 'he', 'ckb', 'fa', 'ur')
+    return locale.language in ("ar", "he", "ckb", "fa", "ur")

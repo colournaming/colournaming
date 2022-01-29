@@ -3,7 +3,6 @@
 from flask_babel import lazy_gettext
 from flask_wtf import FlaskForm
 from wtforms import DecimalField, SelectField, StringField, validators
-from . import model
 
 
 class NameAgreementForm(FlaskForm):
@@ -15,12 +14,12 @@ class NameAgreementForm(FlaskForm):
     blue = DecimalField()
     agreement = SelectField(
         choices=[
-            ('', lazy_gettext('Do you agree?')),
-            ('strongly_disagree', lazy_gettext('Strongly disagree')),
-            ('disagree', lazy_gettext('Disagree')),
-            ('undecided', lazy_gettext('Undecided')),
-            ('agree', lazy_gettext('Agree')),
-            ('strongly_agree', lazy_gettext('Strongly agree')),
+            ("", lazy_gettext("Do you agree?")),
+            ("strongly_disagree", lazy_gettext("Strongly disagree")),
+            ("disagree", lazy_gettext("Disagree")),
+            ("undecided", lazy_gettext("Undecided")),
+            ("agree", lazy_gettext("Agree")),
+            ("strongly_agree", lazy_gettext("Strongly agree")),
         ],
-        default=''
+        default="",
     )

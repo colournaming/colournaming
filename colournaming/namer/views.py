@@ -1,22 +1,30 @@
 """Views for the namer."""
 
-from flask import Blueprint, jsonify, abort, request, current_app, render_template, session
+from flask import (
+    Blueprint,
+    jsonify,
+    abort,
+    request,
+    current_app,
+    render_template,
+    session,
+)
 from sqlalchemy.orm.exc import NoResultFound
 from ..database import db
 from .model import Language, NameAgreement
 from .forms import NameAgreementForm
 from . import controller
 
-bp = Blueprint('namer', __name__)
+bp = Blueprint("namer", __name__)
 
 
-@bp.route('/lang/')
+@bp.route("/lang/")
 def languages():
     """List known languages."""
     return jsonify(controller.language_list())
 
 
-@bp.route('/lang/<lang_code>/colours')
+@bp.route("/lang/<lang_code>/colours")
 def colours(lang_code):
     """List colours known for a language."""
     try:
@@ -26,26 +34,28 @@ def colours(lang_code):
     return jsonify(controller.colour_list(lang))
 
 
-@bp.route('/colours')
+@bp.route("/colours")
 def get_colours():
-    return colours(request.args.get('lang'))
+    return colours(request.args.get("lang"))
 
-@bp.route('/lang/default/name')
+
+@bp.route("/lang/default/name")
 def name_colour_default_lang():
-    lang = session.get('interface_language')
+    lang = session.get("interface_language")
     if not lang:
         lang = request.accept_languages[0][0]
-        if '-' in lang:
+        if "-" in lang:
             # e.g. if lang = en-GB
-            lang = lang.split('-')[0]
-    print('default lang is:', lang)
+            lang = lang.split("-")[0]
+    print("default lang is:", lang)
     return name_colour(lang)
 
-@bp.route('/lang/<lang_code>/name')
+
+@bp.route("/lang/<lang_code>/name")
 def name_colour(lang_code):
     """Get nearest colour names for an RGB combination."""
     try:
-        hexcode = request.args['colour']
+        hexcode = request.args["colour"]
         red = int(hexcode[0:2], 16)
         green = int(hexcode[2:4], 16)
         blue = int(hexcode[4:6], 16)
@@ -54,16 +64,13 @@ def name_colour(lang_code):
     try:
         namer = current_app.namers[lang_code]
     except KeyError:
-        print('No namer available for', lang_code)
+        print("No namer available for", lang_code)
         abort(404)
     colours = namer.colour_name([red, green, blue])
-    return jsonify(
-        colours=colours,
-        desc=render_template('match_description.html', colours=colours)
-    )
+    return jsonify(colours=colours, desc=render_template("match_description.html", colours=colours))
 
 
-@bp.route('/submit_agreement', methods=['POST'])
+@bp.route("/submit_agreement", methods=["POST"])
 def submit_agreement():
     form = NameAgreementForm()
     print(
@@ -72,17 +79,17 @@ def submit_agreement():
         form.red,
         form.green,
         form.blue,
-        form.agreement
+        form.agreement,
     )
     if form.validate_on_submit():
-        print('name agreeement form is valid')
+        print("name agreeement form is valid")
         lang = Language.query.filter(Language.code == form.language_code.data).one()
         agreement = NameAgreement(
             language=lang,
             red=form.red.data,
             green=form.green.data,
             blue=form.blue.data,
-            agreement=form.agreement.data
+            agreement=form.agreement.data,
         )
         db.session.add(agreement)
         db.session.commit()
@@ -94,18 +101,18 @@ def submit_agreement():
         return jsonify(success=False)
 
 
-@bp.route('/audiolist')
+@bp.route("/audiolist")
 def audio_list():
     """Get available audio for a language."""
-    lang = request.args.get('lang', 'en')
+    lang = request.args.get("lang", "en")
     return jsonify(controller.audio_list(lang))
 
 
-@bp.route('/interface')
+@bp.route("/interface")
 def interface():
     """Show the colour namer interface."""
     if request.mobile:
-        template = 'namer-mobile.html'
+        template = "namer-mobile.html"
     else:
-        template = 'namer.html'
+        template = "namer.html"
     return render_template(template, languages=controller.language_list())

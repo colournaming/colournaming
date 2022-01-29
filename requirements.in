@@ -7,10 +7,10 @@ sqlalchemy
 flask_babel
 pycountry
 click
-pytest
 raven
 whitenoise
 numpy
 gunicorn
 user-agents
 psycopg2-binary
+pytest
