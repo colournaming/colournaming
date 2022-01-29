@@ -79,11 +79,11 @@ jobs:
       -
         name: Configure SSH
         env:
-          SSH_KEY: ${{ secrets.SSH_KEY }}
+          SSH_KEY: ${{ secrets.SSH_ID }}
           SSH_HOST_ID: ${{ secrets.SSH_HOST_ID }}
         run: |
           mkdir -p ~/.ssh
-          echo $SSH_KEY > ~/.ssh/id_rsa
+          echo $SSH_ID > ~/.ssh/id_rsa
           echo $SSH_HOST_ID > ~/.ssh/known_hosts
           chmod 700 ~/.ssh
           chmod 600 ~/.ssh/*
