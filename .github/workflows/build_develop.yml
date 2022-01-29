@@ -85,5 +85,7 @@ jobs:
           mkdir -p ~/.ssh
           echo $SSH_KEY > ~/.ssh/id_rsa
           echo $SSH_HOST_ID > ~/.ssh/known_hosts
+          chmod 700 ~/.ssh
+          chmod 600 ~/.ssh/*
       - name: Trigger deployment
         run: ssh circleci@magenta.colornaming.net deploy.sh
