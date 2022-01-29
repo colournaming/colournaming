@@ -7,7 +7,7 @@ sqlalchemy
 flask_babel
 pycountry
 click
-raven
+sentry_sdk
 whitenoise
 numpy
 gunicorn

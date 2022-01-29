@@ -10,6 +10,8 @@ babel==2.9.1
     # via flask-babel
 blinker==1.4
     # via flask-mail
+certifi==2021.10.8
+    # via sentry-sdk
 click==8.0.3
     # via
     #   -r requirements.in
@@ -67,7 +69,7 @@ pytz==2021.3
     # via
     #   babel
     #   flask-babel
-raven==6.10.0
+sentry-sdk==1.5.4
     # via -r requirements.in
 sqlalchemy==1.4.31
     # via
@@ -77,6 +79,8 @@ toml==0.10.2
     # via pytest
 ua-parser==0.10.0
     # via user-agents
+urllib3==1.26.8
+    # via sentry-sdk
 user-agents==2.2.0
     # via -r requirements.in
 werkzeug==2.0.2
