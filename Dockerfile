@@ -10,10 +10,8 @@ COPY docker.cfg /app
 RUN adduser --disabled-password -gecos '' colournaming && \
     chown -R colournaming /app && \
     chown colournaming /app/docker.cfg /app/app.py && \
-    find /app/colournaming -type d -exec chmod 555 {} \; && \
-    find /app/tests -type d -exec chmod 555 {} \; && \
-    chmod 440 /app/docker.cfg /app/app.py && \
-    chmod 555 /app && \
+    find /app -type d -exec chmod 555 {} \; && \
+    find /app -type f -exec chmod 444 {} \; && \
     touch /app/colournaming.log && \
     chmod 666 /app/colournaming.log
 ENV FLASK_APP /app/app.py
