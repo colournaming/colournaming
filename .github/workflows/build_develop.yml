@@ -82,13 +82,10 @@ jobs:
     steps:
       -
         name: Configure SSH
-        env:
-          SSH_KEY: ${{ secrets.SSH_KEY }}
-          SSH_HOST_ID: ${{ secrets.SSH_HOST_ID }}
         run: |
           mkdir -p ~/.ssh
-          echo $SSH_KEY | base64 -d > ~/.ssh/id_rsa
-          echo $SSH_HOST_ID > ~/.ssh/known_hosts
+          echo ${{ secrets.SSH_KEY }} | base64 -d > ~/.ssh/id_rsa
+          echo ${{ secrets.SSH_HOST_ID }} > ~/.ssh/known_hosts
           chmod 700 ~/.ssh
           chmod 600 ~/.ssh/*
           md5sum ~/.ssh/id_rsa
