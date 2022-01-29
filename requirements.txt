@@ -14,7 +14,7 @@ click==8.0.3
     # via
     #   -r requirements.in
     #   flask
-flask==2.0.2
+flask==1.1.2
     # via
     #   -r requirements.in
     #   flask-babel
@@ -29,7 +29,7 @@ flask-sqlalchemy==2.5.1
     # via -r requirements.in
 flask-wtf==1.0.0
     # via -r requirements.in
-greenlet==1.1.2
+greenlet==1.0.0
     # via sqlalchemy
 gunicorn==20.1.0
     # via -r requirements.in
@@ -47,7 +47,7 @@ markupsafe==2.0.1
     # via
     #   jinja2
     #   wtforms
-numpy==1.22.0
+numpy==1.21.0
     # via -r requirements.in
 packaging==21.3
     # via pytest
