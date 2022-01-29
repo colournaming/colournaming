@@ -1,13 +1,60 @@
-name: Build develop image
+name: Test and build develop image
 
 on:
   push:
     branches: [ develop ]
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
 
+    services:
+      postgres:
+        image: postgres
+        env:
+          POSTGRES_PASSWORD: testpass
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+        ports:
+          - 5432:5432
+
+    steps:
+      - 
+        name: Checkout code
+        uses: actions/checkout@v2
+      - 
+        name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
+          cache: 'pip'
+      - 
+        name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip pip-tools
+          if [ -f requirements.txt ] && [ -f dev-requirements.txt ]; then pip-sync requirements.txt dev-requirements.txt; fi
+      - 
+        name: Lint with flake8
+        run: |
+          flake8 colournaming
+      - 
+        name: Initialise database
+        run: flask initdb
+        env:
+          FLASK_ENV: development
+          COLOURNAMING_CFG: ${{ github.workspace }}/github.cfg
+      - 
+        name: Test with pytest
+        run: flask test
+        env:
+          FLASK_ENV: development
+          COLOURNAMING_CFG: ${{ github.workspace }}/github.cfg
+  build:
+    runs-on: ubuntu-latest
+    needs: test
     steps:
       - 
         name: Checkout code
@@ -29,3 +76,20 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/colournamer:develop
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      -
+        name: Configure SSH
+        env:
+          SSH_KEY: ${{ secrets.SSH_KEY }}
+          SSH_HOST_ID: ${{ secrets.SSH_HOST_ID }}
+        run: |
+          mkdir -p ~/.ssh
+          echo $SSH_KEY > ~/.ssh/id_rsa
+          echo $SSH_HOST_ID > ~/.ssh/known_hosts
+          chmod 700 ~/.ssh
+          chmod 600 ~/.ssh/*
+      - name: Trigger deployment
+        run: ssh circleci@magenta.colornaming.net deploy.sh
