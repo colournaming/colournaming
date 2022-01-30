@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+from argparse import ArgumentParser
 from collections import defaultdict
 import os.path
 import sys
@@ -47,6 +48,16 @@ def main(translation_filename, column, messages_filename, output_filename):
             do_translation(messages, translation_dict, output)
 
 if __name__ == '__main__':
-    if len(sys.argv) != 5:
-        print('Usage: make_translations.py TRANSLATION_SPREADSHEET COLUMN MESSAGES OUTPUT')
-    main(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4])
+    parser = ArgumentParser("Generate a pybabel messages file from a spreadsheet.")
+    parser.add_argument('spreadsheet', help="Spreadsheet containing the translations (.xlsx format)")
+    parser.add_argument('column', help="Column from the spreadsheet containing the new language (single letter)")
+    parser.add_argument('messages', help="messages.pot file from pybabel")
+    parser.add_argument('output', help="Destination file e.g. colournaming/translations/en/LC_MESSAGES")
+    args = parser.parse_args()
+
+    main(
+        args.spreadsheet,
+        args.column,
+        args.messages,
+        args.output
+    )
