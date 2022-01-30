@@ -26,10 +26,6 @@ The database can be reinitialized by running::
     docker-compose run --rm web dropdb
     docker-compose run --rm web initdb
 
-Additional dataset can be added by running e.g.::
-
-    docker-compose run --rm web import-centroids /path/to/dataset_fr.csv Francais fr
-
 Colour targets can be added by running e.g.::
 
     docker-compose run --rm web import-targets /path/to/targets.csv
@@ -37,6 +33,22 @@ Colour targets can be added by running e.g.::
 To stop the test instance run::
 
     docker-compose down
+
+
+Adding datasets
+===============
+
+To add a new language to the colournamer you need a CSV containing the centroids
+of each colour term and set of .wav files containing the spoken name of each
+colour.  The audio files should be placed into a new subdirectory of
+assets/audio e.g. assets/audio/en for English (the country code must be two
+characters).  Add a new rule to the Makefile following the existing ones tehn
+run ``make``.  Running make should create a directory of .mp3 files in
+colournaming/static/audio.
+
+Next add the centroids to the database::
+
+    docker-compose run --rm web import-centroids /path/to/dataset_fr.csv Francais fr
 
 
 Front-end development
