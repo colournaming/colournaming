@@ -5,11 +5,6 @@ NAME = 'colournaming'
 version = open(os.path.join(NAME, 'VERSION')).read().strip()
 
 
-def readme():
-    with open('README.rst') as f:
-        return f.read()
-
-
 setup(
     name=NAME,
     version=version,
@@ -19,7 +14,6 @@ setup(
     author='Jon Stutters',
     author_email='jstutters@jeremah.co.uk',
     description='An online colour naming experiment',
-    long_description=readme(),
     url='colornaming.net',
     install_requires=[],
     setup_requires=['pytest-runner'],
