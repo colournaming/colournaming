@@ -38,9 +38,10 @@ To stop the test instance run::
 Adding datasets
 ===============
 
-To add a new language to the colournamer you need a CSV containing the centroids
-of each colour term and set of .wav files containing the spoken name of each
-colour.  The audio files should be placed into a new subdirectory of
+To add a new language to the colournamer you need a CSV containing the
+centroids of each colour term and set of .wav files containing the spoken name
+of each colour.  An example of the centroids CSV can be found in the ``docs``
+directory.  The audio files should be placed into a new subdirectory of
 assets/audio e.g. assets/audio/en for English (the country code must be two
 characters).  Add a new rule to the Makefile following the existing ones tehn
 run ``make``.  Running make should create a directory of .mp3 files in
