@@ -1,4 +1,4 @@
-all: audio
+all: audio pip
 
 audio: de el en es ru th tr na
 
@@ -51,3 +51,9 @@ colournaming/static/audio/tr/%.mp3: assets/audio/tr/%.wav
 colournaming/static/audio/na/%.mp3: assets/audio/na/%.wav
 	mkdir -p $(dir $@)
 	lame --silent --preset voice $< $@
+
+%.txt: %.in
+	pip-compile $<
+
+pip: requirements.txt dev-requirements.txt
+	pip-sync $^
