@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../assets/css/namer.css"],
+  "sourcesContent": ["body {\n    background-color: rgb(128, 128, 128);\n}\n\ndiv#colourValueDisplay {\n    background-color: rgb(128, 128, 128);\n}\n\ndiv#nameVisualisation {\n    background-color: rgb(128, 128, 128);\n    height: 400px;\n}\n\ndiv#colourpicker {\n    background-color: rgb(128, 128, 128);\n}\n"],
+  "mappings": "AAAA,4BACI,sBAOJ,sBACI,sBACA,aAGJ,iBACI",
+  "names": []
+}

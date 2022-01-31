@@ -1,4 +1,6 @@
-import "babel-polyfill"
+import jquery from 'jquery';
+window.jQuery = jquery;
+window.$ = jquery;
 require('./farbtastic')
 import { initAudio, playSound, loadAudioSet, resumeAudio } from './audio'
 
@@ -56,7 +58,6 @@ function resetSelectName (hexCode) {
 }
 
 function resetAgreement () {
-  console.log('in agreement reset');
   const $agreementSelect = $('select#agreement :first-child')[0]; 
   $agreementSelect.selected = true;
 }

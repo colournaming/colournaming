@@ -1,4 +1,3 @@
-import "babel-polyfill"
 import "whatwg-fetch"
 
 let results = JSON.parse(localStorage.getItem('results'));
