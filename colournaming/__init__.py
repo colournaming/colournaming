@@ -1,10 +1,11 @@
 """Website for the colournaming experiment."""
 
+import sentry_sdk
 import click
 from flask import Flask, render_template, request, current_app, session
+from sentry_sdk.integrations.flask import FlaskIntegration
 from flask_babel import Babel
 import pytest
-from raven.contrib.flask import Sentry
 from sqlalchemy.exc import ProgrammingError
 import user_agents
 from whitenoise import WhiteNoise
@@ -20,7 +21,11 @@ def create_app():
     app = Flask(__name__)
     app.config.from_envvar("COLOURNAMING_CFG")
     if app.config.get("DEBUG", False) is False:
-        sentry = Sentry(app, dsn=app.config["SENTRY_DSN"])  # noqa
+        sentry_sdk.init(
+            dsn=app.config["SENTRY_DSN"],
+            integrations=[FlaskIntegration()],
+            traces_sample_rate=1.0
+        )
         app.wsgi_app = WhiteNoise(app.wsgi_app, root="static/")
     db.init_app(app)
     mail.init_app(app)

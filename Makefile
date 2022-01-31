@@ -1,6 +1,6 @@
-all: audio
+all: audio pip
 
-audio: de el en es ru th tr
+audio: de el en es ru th tr na
 
 .PHONY: all audio
 
@@ -17,6 +17,8 @@ ru: $(patsubst assets/audio/ru/%.wav,colournaming/static/audio/ru/%.mp3,$(wildca
 th: $(patsubst assets/audio/th/%.wav,colournaming/static/audio/th/%.mp3,$(wildcard assets/audio/th/*.wav))
 
 tr: $(patsubst assets/audio/tr/%.wav,colournaming/static/audio/tr/%.mp3,$(wildcard assets/audio/tr/*.wav))
+
+na: $(patsubst assets/audio/na/%.wav,colournaming/static/audio/na/%.mp3,$(wildcard assets/audio/na/*.wav))
 
 colournaming/static/audio/de/%.mp3: assets/audio/de/%.wav
 	mkdir -p $(dir $@)
@@ -45,3 +47,13 @@ colournaming/static/audio/th/%.mp3: assets/audio/th/%.wav
 colournaming/static/audio/tr/%.mp3: assets/audio/tr/%.wav
 	mkdir -p $(dir $@)
 	lame --silent --preset voice $< $@
+
+colournaming/static/audio/na/%.mp3: assets/audio/na/%.wav
+	mkdir -p $(dir $@)
+	lame --silent --preset voice $< $@
+
+%.txt: %.in
+	pip-compile $<
+
+pip: requirements.txt dev-requirements.txt
+	pip-sync $^
