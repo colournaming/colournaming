@@ -12,7 +12,7 @@ from whitenoise import WhiteNoise
 from . import admin
 from .database import db
 from .email import mail
-from .experiment.controller import read_targets_from_file
+from .experimentcol.controller import read_targets_from_file as read_col_targets_from_file
 from .namer.controller import read_centroids_from_file, instantiate_namers
 
 
@@ -101,9 +101,9 @@ def setup_cli(app):
 
     @app.cli.command()
     @click.argument("targets_file", type=click.File("r"))
-    def import_targets(targets_file):
+    def import_col_targets(targets_file):
         """Import a targets file into the database."""
-        read_targets_from_file(targets_file)
+        read_col_targets_from_file(targets_file)
 
     @app.cli.command()
     def initdb():
@@ -129,16 +129,15 @@ def setup_cli(app):
 
 def register_blueprints(app):
     from colournaming.home.views import bp as home_module
-
-    app.register_blueprint(home_module, url_prefix="/")
     from colournaming.namer.views import bp as namer_module
-
-    app.register_blueprint(namer_module, url_prefix="/namer")
-    from colournaming.experiment.views import bp as experiment_module
-
-    app.register_blueprint(experiment_module, url_prefix="/experiment")
+    from colournaming.experimentcol.views import bp as experimentcol_module
+    from colournaming.experimentcolbg.views import bp as experimentcolbg_module
     from colournaming.admin.views import bp as admin_module
 
+    app.register_blueprint(home_module, url_prefix="/")
+    app.register_blueprint(namer_module, url_prefix="/namer")
+    app.register_blueprint(experimentcol_module, url_prefix="/experimentcol")
+    app.register_blueprint(experimentcolbg_module, url_prefix="/experimentcolbg")
     app.register_blueprint(admin_module, url_prefix="/admin")
 
 

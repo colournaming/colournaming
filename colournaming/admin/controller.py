@@ -1,6 +1,6 @@
 import csv
 import io
-from ..experiment.model import Participant
+from ..experimentcol.model import Participant
 from ..namer.model import NameAgreement
 
 RESPONSE_FIELDNAMES = [

@@ -16,13 +16,13 @@ from flask_babel import lazy_gettext, get_locale
 from . import controller, forms
 from .. import lang_is_rtl
 
-bp = Blueprint("experiment", __name__)
+bp = Blueprint("experimentcolbg", __name__)
 
 
 def check_in_experiment():
     """Redirect to the start of the experiment if the session is not initialized."""
     if "experiment" not in session:
-        return redirect(url_for("experiment.start"))
+        return redirect(url_for("experimentcolbg.start"))
 
 
 def nocache(view):
