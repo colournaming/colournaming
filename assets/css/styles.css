@@ -141,13 +141,18 @@ h3 ~ .justified-text {
     margin: 0 auto 1em;
 }
 
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
 .round-button {
     background-color: #80E3D2;
     border: 2px solid #000;
     border-radius: 65.5px;
     cursor: pointer;
     display: block;
-    font-size: 27px;
+    font-size: 12px;
     height: 123px;
     line-height: 123px;
     margin: 1em auto;
