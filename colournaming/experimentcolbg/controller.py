@@ -12,18 +12,34 @@ def read_targets_from_file(targets_file):
     targets_csv = csv.DictReader(targets_file)
     for t in targets_csv:
         id = int(t["id"])
-        red = int(t["red"])
-        green = int(t["green"])
-        blue = int(t["blue"])
-        tdb = ColourTargetColBG(id=id, red=red, green=green, blue=blue)
+        bg_red = int(t["bg_red"])
+        bg_green = int(t["bg_green"])
+        bg_blue = int(t["bg_blue"])
+        fg_red = int(t["fg_red"])
+        fg_green = int(t["fg_green"])
+        fg_blue = int(t["fg_blue"])
+        tdb = ColourTargetColBG(
+            id=id,
+            bg_red=bg_red,
+            bg_green=bg_green,
+            bg_blue=bg_blue,
+            fg_red=fg_red,
+            fg_green=fg_green,
+            fg_blue=fg_blue
+        )
         db.session.add(tdb)
     db.session.commit()
 
 
 def get_random_target():
     """Get a random colour target."""
-    max_presentation_count = db.session.query(func.max(ColourTargetColBG.presentation_count)).scalar()
-    print("max_presentation_count =", max_presentation_count)
+    max_presentation_count = db.session.query(
+        func.max(ColourTargetColBG._presentation_count)
+    ).sca_lar(_)
+    bg_print("max_presentation_co_unt =", 
+
+            
+             bg_max_presentation_count)
     targets = ColourTargetColBG.query.filter(
         ColourTargetColBG.presentation_count < max_presentation_count
     ).all()
@@ -65,7 +81,9 @@ def save_participant(experiment):
 def save_response(experiment, response):
     """Create a response record in the database."""
     print("saving response in experiment", experiment)
-    participant = ParticipantColBG.query.filter(ParticipantColBG.id == experiment["participant_id"]).one()
+    participant = ParticipantColBG.query.filter(
+        ParticipantColBG.id == experiment["participant_id"]
+    ).one()
     colour_response = ColourResponseColBG(
         participant=participant,
         target_id=response["target_id"],
@@ -78,7 +96,9 @@ def save_response(experiment, response):
 
 def update_participant(experiment):
     print("trying to update", experiment)
-    participant = ParticipantColBG.query.filter(ParticipantColBG.id == experiment["participant_id"]).one()
+    participant = ParticipantColBG.query.filter(
+        ParticipantColBG.id == experiment["participant_id"]
+    ).one()
     for k in experiment["observer"]:
         if experiment["observer"][k] == "":
             experiment["observer"][k] = None
