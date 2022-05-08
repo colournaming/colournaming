@@ -4,28 +4,40 @@ import csv
 import random
 from sqlalchemy.sql.expression import func
 from ..database import db
-from .model import ColourTargetColBG, ParticipantColBG, ColourResponseColBG
+from .model import BackgroundColour, ColourTargetColBG, ParticipantColBG, ColourResponseColBG
 
 
 def read_targets_from_file(targets_file):
     """Read colour targets from file."""
     targets_csv = csv.DictReader(targets_file)
     for t in targets_csv:
-        id = int(t["id"])
-        bg_red = int(t["bg_red"])
-        bg_green = int(t["bg_green"])
-        bg_blue = int(t["bg_blue"])
-        fg_red = int(t["fg_red"])
-        fg_green = int(t["fg_green"])
-        fg_blue = int(t["fg_blue"])
+        id = int(t["color_id"])
+        red = int(t["R"])
+        green = int(t["G"])
+        blue = int(t["B"])
         tdb = ColourTargetColBG(
             id=id,
-            bg_red=bg_red,
-            bg_green=bg_green,
-            bg_blue=bg_blue,
-            fg_red=fg_red,
-            fg_green=fg_green,
-            fg_blue=fg_blue
+            red=red,
+            green=green,
+            blue=blue
+        )
+        db.session.add(tdb)
+    db.session.commit()
+
+
+def read_backgrounds_from_file(targets_file):
+    """Read colour backgrounds from file."""
+    targets_csv = csv.DictReader(targets_file)
+    for t in targets_csv:
+        id = int(t["bg_id"])
+        red = int(t["R"])
+        green = int(t["G"])
+        blue = int(t["B"])
+        tdb = BackgroundColour(
+            id=id,
+            red=red,
+            green=green,
+            blue=blue
         )
         db.session.add(tdb)
     db.session.commit()
@@ -34,12 +46,9 @@ def read_targets_from_file(targets_file):
 def get_random_target():
     """Get a random colour target."""
     max_presentation_count = db.session.query(
-        func.max(ColourTargetColBG._presentation_count)
-    ).sca_lar(_)
-    bg_print("max_presentation_co_unt =", 
-
-            
-             bg_max_presentation_count)
+        func.max(ColourTargetColBG.presentation_count)
+    ).scalar()
+    print("max_presentation_count =", max_presentation_count)
     targets = ColourTargetColBG.query.filter(
         ColourTargetColBG.presentation_count < max_presentation_count
     ).all()

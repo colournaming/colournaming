@@ -49,18 +49,27 @@ class ParticipantColBG(db.Model):
     location = db.Column(db.String)
 
 
+class BackgroundColour(db.Model):
+    """Model for an experiment background colour."""
+
+    __tablename__ = "background_colour_colbg"
+
+    id = db.Column(db.Integer, primary_key=True)
+    red = db.Column(db.Integer, nullable=False)
+    green = db.Column(db.Integer, nullable=False)
+    blue = db.Column(db.Integer, nullable=False)
+    presentation_count = db.Column(db.Integer, nullable=False, default=0)
+
+
 class ColourTargetColBG(db.Model):
     """Model for an experiment target."""
 
     __tablename__ = "colour_targets_colbg"
 
     id = db.Column(db.Integer, primary_key=True)
-    bg_red = db.Column(db.Integer, nullable=False)
-    bg_green = db.Column(db.Integer, nullable=False)
-    bg_blue = db.Column(db.Integer, nullable=False)
-    fg_red = db.Column(db.Integer, nullable=False)
-    fg_green = db.Column(db.Integer, nullable=False)
-    fg_blue = db.Column(db.Integer, nullable=False)
+    red = db.Column(db.Integer, nullable=False)
+    green = db.Column(db.Integer, nullable=False)
+    blue = db.Column(db.Integer, nullable=False)
     presentation_count = db.Column(db.Integer, nullable=False, default=0)
 
 
@@ -74,6 +83,8 @@ class ColourResponseColBG(db.Model):
     participant = db.relationship("ParticipantColBG", backref=db.backref("responses"))
     target_id = db.Column(db.Integer, db.ForeignKey("colour_targets_colbg.id"))
     target = db.relationship("ColourTargetColBG")
+    background_id = db.Column(db.Integer, db.ForeignKey("background_colour_colbg.id"))
+    background = db.relationship("BackgroundColour")
     name = db.Column(db.String)
     response_time = db.Column(db.Float)
     experiment_version = db.Column(db.String)
