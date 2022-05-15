@@ -13,7 +13,10 @@ from . import admin
 from .database import db
 from .email import mail
 from .experimentcol.controller import read_targets_from_file as read_col_targets_from_file
-from .experimentcolbg.controller import read_backgrounds_from_file, read_targets_from_file as read_colbg_targets_from_file
+from .experimentcolbg.controller import (
+    read_backgrounds_from_file,
+    read_targets_from_file as read_colbg_targets_from_file
+)
 from .namer.controller import read_centroids_from_file, instantiate_namers
 
 
