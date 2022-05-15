@@ -61,6 +61,28 @@ def get_random_target():
     return random.choice(targets)
 
 
+def get_random_background():
+    """Get a random colour background."""
+    max_presentation_count = db.session.query(
+        func.max(BackgroundColour.presentation_count)
+    ).scalar()
+    print("max_presentation_count =", max_presentation_count)
+    targets = BackgroundColour.query.filter(
+        BackgroundColour.presentation_count < max_presentation_count
+    ).all()
+    if len(targets) == 0:
+        # will occur if all targets have been presented max times
+        targets = BackgroundColour.query.all()
+    target = random.choice(targets)
+    target.presentation_count += 1
+    db.session.commit()
+    return (
+        target.red,
+        target.blue,
+        target.green
+    )
+
+
 def response_count_percentage(this_count):
     """Get the percentage of participants with response counts less than a participant's."""
     num_targets = db.session.query(ColourTargetColBG.id).count()

@@ -25,6 +25,10 @@ def check_in_experiment():
         return redirect(url_for("experimentcolbg.start"))
 
 
+def rgb_tuple_to_css_rgb(background):
+    return "rgb({0}, {1}, {2})".format(*background)
+
+
 def nocache(view):
     @wraps(view)
     def func(*args, **kwargs):
@@ -55,8 +59,9 @@ def start():
             "interface_language": session.get("interface_language", browser_language),
         },
         "response_count": 0,
+        "background_colour": controller.get_random_background(),
     }
-    return redirect(url_for("experiment.display_properties"))
+    return redirect(url_for("experimentcolbg.display_properties"))
 
 
 @bp.route("/display_properties.html", methods=["GET", "POST"])
@@ -73,7 +78,7 @@ def display_properties():
         }
         session["experiment"]["participant_id"] = controller.save_participant(session["experiment"])
         session.modified = True
-        return redirect(url_for("experiment.colour_vision"))
+        return redirect(url_for("experimentcolbg.colour_vision"))
     if form.errors:
         for field, error in form.errors.items():
             print(field, error)
@@ -90,7 +95,7 @@ def colour_vision():
         session["experiment"]["vision"] = {"square_disappeared": form.square_disappeared.data}
         session.modified = True
         print(session)
-        return jsonify({"success": True, "url": url_for("experiment.name_colour")})
+        return jsonify({"success": True, "url": url_for("experimentcolbg.name_colour")})
     if form.errors:
         for field, error in form.errors.items():
             print(field, error)
@@ -116,7 +121,13 @@ def name_colour():
     if form.errors:
         for field, error in form.errors.items():
             print(field, error)
-    return render_template("name_colour.html", form=form, rtl=lang_is_rtl(get_locale()))
+    return render_template(
+        "name_colour.html",
+        get_target_url=url_for("experimentcolbg.get_target"),
+        background_colour=rgb_tuple_to_css_rgb(session["experiment"]["background_colour"]),
+        form=form,
+        rtl=lang_is_rtl(get_locale())
+    )
 
 
 @bp.route("/get_target.json")
@@ -152,7 +163,7 @@ def observer_information():
         }
         session.modified = True
         controller.update_participant(session["experiment"])
-        return redirect(url_for("experiment.thankyou"))
+        return redirect(url_for("experimentcolbg.thankyou"))
     if form.errors:
         for field, error in form.errors.items():
             print(field, repr(getattr(form, field).data), error)

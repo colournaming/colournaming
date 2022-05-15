@@ -56,7 +56,7 @@ def start():
         },
         "response_count": 0,
     }
-    return redirect(url_for("experiment.display_properties"))
+    return redirect(url_for("experimentcol.display_properties"))
 
 
 @bp.route("/display_properties.html", methods=["GET", "POST"])
@@ -73,7 +73,7 @@ def display_properties():
         }
         session["experiment"]["participant_id"] = controller.save_participant(session["experiment"])
         session.modified = True
-        return redirect(url_for("experiment.colour_vision"))
+        return redirect(url_for("experimentcol.colour_vision"))
     if form.errors:
         for field, error in form.errors.items():
             print(field, error)
@@ -90,7 +90,7 @@ def colour_vision():
         session["experiment"]["vision"] = {"square_disappeared": form.square_disappeared.data}
         session.modified = True
         print(session)
-        return jsonify({"success": True, "url": url_for("experiment.name_colour")})
+        return jsonify({"success": True, "url": url_for("experimentcol.name_colour")})
     if form.errors:
         for field, error in form.errors.items():
             print(field, error)
@@ -116,7 +116,13 @@ def name_colour():
     if form.errors:
         for field, error in form.errors.items():
             print(field, error)
-    return render_template("name_colour.html", form=form, rtl=lang_is_rtl(get_locale()))
+    return render_template(
+        "name_colour.html",
+        get_target_url=url_for('experimentcol.get_target'),
+        background_colour="rgb(128, 128, 128)",
+        form=form,
+        rtl=lang_is_rtl(get_locale())
+    )
 
 
 @bp.route("/get_target.json")
@@ -152,7 +158,7 @@ def observer_information():
         }
         session.modified = True
         controller.update_participant(session["experiment"])
-        return redirect(url_for("experiment.thankyou"))
+        return redirect(url_for("experimentcol.thankyou"))
     if form.errors:
         for field, error in form.errors.items():
             print(field, repr(getattr(form, field).data), error)
