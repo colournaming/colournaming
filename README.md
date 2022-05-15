@@ -52,16 +52,15 @@ Next add the centroids to the database:
 Front-end development
 ---------------------
 
-The recommended way to install the Javascript development dependencies
-is using [yarn](https://yarnpkg.com). Once yarn is
-installed run:
+The recommended way to install the Javascript development dependencies is using
+npm. Once npm is installed run:
 
-    yarn
+    npm install
 
-This will install webpack and the additional tools required to prepare
-the Javascript for production use. Changes to the front-end code should
-be made to the files in the `assets/js` directory. To build the
-production Javascript run `yarn build`.
+This will install the additional tools required to prepare the Javascript and
+CSS for production use. Changes to the front-end files should be made to the
+files in the `assets/js` and `assets/css` directory. To build the production
+front-end assets run `make js` and `make css`.
 
 Translation
 -----------

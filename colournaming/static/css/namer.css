@@ -1,1 +1,2 @@
-body{background-color:gray}div#colourValueDisplay{background-color:gray}div#nameVisualisation{background-color:gray;height:400px}div#colourpicker{background-color:gray}
+body,div#colourValueDisplay{background-color:gray}div#nameVisualisation{background-color:gray;height:400px}div#colourpicker{background-color:gray}
+/*# sourceMappingURL=namer.css.map */

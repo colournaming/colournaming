@@ -1,4 +1,4 @@
-all: audio pip
+all: audio pip css js
 
 audio: de el en es ru th tr na
 
@@ -57,3 +57,22 @@ colournaming/static/audio/na/%.mp3: assets/audio/na/%.wav
 
 pip: requirements.txt dev-requirements.txt
 	pip-sync $^
+
+css: colournaming/static/css/styles.css colournaming/static/css/styles-experiment.css colournaming/static/css/namer.css
+
+colournaming/static/css/styles.css: assets/css/styles.css
+	npm run esbuild-css-styles
+
+colournaming/static/css/styles-experiment.css: assets/css/styles-experiment.css
+	npm run esbuild-css-styles-experiment
+
+colournaming/static/css/namer.css: assets/css/namer.css
+	npm run esbuild-css-namer
+
+js: colournaming/static/js/namer.js colournaming/static/js/experiment.js
+
+colournaming/static/js/experiment.js: assets/js/experiment.js
+	npm run esbuild-js-experiment
+
+colournaming/static/js/namer.js: assets/js/namer.js
+	npm run esbuild-js-namer

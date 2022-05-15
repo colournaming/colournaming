@@ -22,9 +22,7 @@ def create_app():
     app.config.from_envvar("COLOURNAMING_CFG")
     if app.config.get("DEBUG", False) is False:
         sentry_sdk.init(
-            dsn=app.config["SENTRY_DSN"],
-            integrations=[FlaskIntegration()],
-            traces_sample_rate=1.0
+            dsn=app.config["SENTRY_DSN"], integrations=[FlaskIntegration()], traces_sample_rate=1.0
         )
         app.wsgi_app = WhiteNoise(app.wsgi_app, root="static/")
     db.init_app(app)
