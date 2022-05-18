@@ -76,11 +76,7 @@ def get_random_background():
     target = random.choice(targets)
     target.presentation_count += 1
     db.session.commit()
-    return (
-        target.red,
-        target.blue,
-        target.green
-    )
+    return target.id, (target.red, target.blue, target.green)
 
 
 def response_count_percentage(this_count):
@@ -120,6 +116,7 @@ def save_response(experiment, response):
         target_id=response["target_id"],
         name=response["name"],
         response_time=response["response_time"],
+        background_id=experiment["background_id"]
     )
     db.session.add(colour_response)
     db.session.commit()

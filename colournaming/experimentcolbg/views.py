@@ -52,6 +52,7 @@ def start():
         browser_language = request.accept_languages[0][0]
     except IndexError:
         browser_language = None
+    background_id, background_colour = controller.get_random_background()
     session["experiment"] = {
         "client": {
             "user_agent": request.user_agent.string,
@@ -59,7 +60,8 @@ def start():
             "interface_language": session.get("interface_language", browser_language),
         },
         "response_count": 0,
-        "background_colour": controller.get_random_background(),
+        "background_id": background_id,
+        "background_colour": background_colour
     }
     return redirect(url_for("experimentcolbg.display_properties"))
 
