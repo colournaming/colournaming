@@ -82,7 +82,12 @@ def display_properties():
     if form.errors:
         for field, error in form.errors.items():
             print(field, error)
-    return render_template("display_properties.html", rtl=lang_is_rtl(get_locale()), form=form)
+    return render_template(
+        "display_properties.html",
+        background_colour=rgb_tuple_to_css_rgb(session["experiment"]["background_colour"]),
+        rtl=lang_is_rtl(get_locale()),
+        form=form
+    )
 
 
 @bp.route("/colour_vision.html", methods=["GET", "POST"])
