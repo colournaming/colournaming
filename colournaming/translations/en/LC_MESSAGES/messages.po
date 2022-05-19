@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-03-08 22:44+0000\n"
+"POT-Creation-Date: 2022-01-30 13:04+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -16,191 +16,191 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
+"Generated-By: Babel 2.9.1\n"
 
-#: colournaming/experiment/forms.py:32
+#: colournaming/experiment/forms.py:38
 msgid "What is your age?"
 msgstr "What is your age?"
 
-#: colournaming/experiment/forms.py:39
+#: colournaming/experiment/forms.py:45
 msgid "Female"
 msgstr "Female"
 
-#: colournaming/experiment/forms.py:40
+#: colournaming/experiment/forms.py:46
 msgid "Male"
 msgstr "Male"
 
-#: colournaming/experiment/forms.py:41
+#: colournaming/experiment/forms.py:47
 msgid "Other"
 msgstr "Other"
 
-#: colournaming/experiment/forms.py:43
+#: colournaming/experiment/forms.py:49
 msgid "To which gender do you most identify?"
 msgstr "To which gender do you most identify?"
 
-#: colournaming/experiment/forms.py:47
+#: colournaming/experiment/forms.py:52
 msgid "Please specify"
 msgstr "Please specify"
 
-#: colournaming/experiment/forms.py:53 colournaming/experiment/forms.py:63
+#: colournaming/experiment/forms.py:56 colournaming/experiment/forms.py:66
 msgid "Beginner"
 msgstr "Beginner"
 
-#: colournaming/experiment/forms.py:54 colournaming/experiment/forms.py:64
+#: colournaming/experiment/forms.py:57 colournaming/experiment/forms.py:67
 msgid "Intermediate"
 msgstr "Intermediate"
 
-#: colournaming/experiment/forms.py:55 colournaming/experiment/forms.py:65
+#: colournaming/experiment/forms.py:58 colournaming/experiment/forms.py:68
 msgid "Advanced"
 msgstr "Advanced"
 
-#: colournaming/experiment/forms.py:57
+#: colournaming/experiment/forms.py:60
 msgid "Describe your experience working with colour"
 msgstr "Describe your experience working with colour"
 
-#: colournaming/experiment/forms.py:66
+#: colournaming/experiment/forms.py:69
 msgid "Bilingual"
 msgstr "Bilingual"
 
-#: colournaming/experiment/forms.py:67
+#: colournaming/experiment/forms.py:70
 msgid "Native speaker"
 msgstr "Native speaker"
 
-#: colournaming/experiment/forms.py:69
+#: colournaming/experiment/forms.py:72
 msgid "Describe your skill in the language used in this experiment"
 msgstr "Describe your skill in the language used in this experiment"
 
-#: colournaming/experiment/forms.py:75
+#: colournaming/experiment/forms.py:78
 msgid "No qualifications"
 msgstr "No qualifications"
 
-#: colournaming/experiment/forms.py:76
+#: colournaming/experiment/forms.py:79
 msgid "Secondary school degree"
 msgstr "Secondary school degree"
 
-#: colournaming/experiment/forms.py:77
+#: colournaming/experiment/forms.py:80
 msgid "Bachelors degree"
 msgstr "Bachelors degree"
 
-#: colournaming/experiment/forms.py:78
+#: colournaming/experiment/forms.py:81
 msgid "Masters degree"
 msgstr "Masters degree"
 
-#: colournaming/experiment/forms.py:79
+#: colournaming/experiment/forms.py:82
 msgid "Professional degree"
 msgstr "Professional degree"
 
-#: colournaming/experiment/forms.py:80
+#: colournaming/experiment/forms.py:83
 msgid "Doctorate degree"
 msgstr "Doctorate degree"
 
-#: colournaming/experiment/forms.py:82
+#: colournaming/experiment/forms.py:85
 msgid "What is the highest level of education you have completed?"
 msgstr "What is the highest level of education you have completed?"
 
-#: colournaming/experiment/forms.py:89
+#: colournaming/experiment/forms.py:93
 msgid "In which country did you grow up?"
 msgstr "In which country did you grow up?"
 
-#: colournaming/experiment/forms.py:94
+#: colournaming/experiment/forms.py:98
 msgid "Where are you living?"
 msgstr "Where are you living?"
 
-#: colournaming/experiment/forms.py:100
+#: colournaming/experiment/forms.py:104
 msgid "Smartphone"
 msgstr "Smartphone"
 
-#: colournaming/experiment/forms.py:101
+#: colournaming/experiment/forms.py:105
 msgid "Pad"
 msgstr "Pad"
 
-#: colournaming/experiment/forms.py:102
+#: colournaming/experiment/forms.py:106
 msgid "Laptop"
 msgstr "Laptop"
 
-#: colournaming/experiment/forms.py:103
+#: colournaming/experiment/forms.py:107
 msgid "Desktop"
 msgstr "Desktop"
 
-#: colournaming/experiment/forms.py:105
+#: colournaming/experiment/forms.py:109
 msgid "What is your display device?"
 msgstr "What is your display device?"
 
-#: colournaming/experiment/forms.py:111
+#: colournaming/experiment/forms.py:115
 msgid "Neutral white"
 msgstr "Neutral white"
 
-#: colournaming/experiment/forms.py:112
+#: colournaming/experiment/forms.py:116
 msgid "Warm white"
 msgstr "Warm white"
 
-#: colournaming/experiment/forms.py:113
+#: colournaming/experiment/forms.py:117
 msgid "Bluish white"
 msgstr "Bluish white"
 
-#: colournaming/experiment/forms.py:114
+#: colournaming/experiment/forms.py:118
 msgid "Yellowish white"
 msgstr "Yellowish white"
 
-#: colournaming/experiment/forms.py:116
+#: colournaming/experiment/forms.py:120
 msgid "Describe the white graphic elements on your screen"
 msgstr "Describe the white graphic elements on your screen"
 
-#: colournaming/experiment/forms.py:122 colournaming/experiment/forms.py:133
+#: colournaming/experiment/forms.py:126 colournaming/experiment/forms.py:137
 msgid "Dark"
 msgstr "Dark"
 
-#: colournaming/experiment/forms.py:123
+#: colournaming/experiment/forms.py:127
 msgid "Dim"
 msgstr "Dim"
 
-#: colournaming/experiment/forms.py:124
+#: colournaming/experiment/forms.py:128
 msgid "Average"
 msgstr "Average"
 
-#: colournaming/experiment/forms.py:125
+#: colournaming/experiment/forms.py:129
 msgid "Bright"
 msgstr "Bright"
 
-#: colournaming/experiment/forms.py:127
+#: colournaming/experiment/forms.py:131
 msgid "Describe the surrounding environment behind your device"
 msgstr "Describe the surrounding environment behind your device"
 
-#: colournaming/experiment/forms.py:134
+#: colournaming/experiment/forms.py:138
 msgid "Typical domestic"
 msgstr "Typical domestic"
 
-#: colournaming/experiment/forms.py:135
+#: colournaming/experiment/forms.py:139
 msgid "Mid daylight"
 msgstr "Mid daylight"
 
-#: colournaming/experiment/forms.py:136
+#: colournaming/experiment/forms.py:140
 msgid "Full daylight"
 msgstr "Full daylight"
 
-#: colournaming/experiment/forms.py:137
+#: colournaming/experiment/forms.py:141
 msgid "Typical office"
 msgstr "Typical office"
 
-#: colournaming/experiment/forms.py:139
+#: colournaming/experiment/forms.py:143
 msgid "Describe the lighting conditions of your environment"
 msgstr "Describe the lighting conditions of your environment"
 
-#: colournaming/experiment/forms.py:145 colournaming/experiment/forms.py:160
+#: colournaming/experiment/forms.py:151 colournaming/experiment/forms.py:162
 msgid "What distance are you from your monitor in cm?"
 msgstr "What distance are you from your monitor in cm?"
 
-#: colournaming/experiment/forms.py:157
+#: colournaming/experiment/forms.py:161
 #: colournaming/templates/colour_vision.html:12
 msgid "No"
 msgstr "No"
 
-#: colournaming/experiment/forms.py:158
+#: colournaming/experiment/forms.py:161
 #: colournaming/templates/colour_vision.html:13
 msgid "Yes"
 msgstr "Yes"
 
-#: colournaming/experiment/views.py:166
+#: colournaming/experiment/views.py:170
 msgid "You are in the 0% top colour namers."
 msgstr "You are in the 0% top colour namers."
 
@@ -224,27 +224,27 @@ msgstr "Organisation"
 msgid "Your message"
 msgstr "Your message"
 
-#: colournaming/namer/forms.py:18
+#: colournaming/namer/forms.py:17
 msgid "Do you agree?"
 msgstr "Do you agree?"
 
-#: colournaming/namer/forms.py:19
+#: colournaming/namer/forms.py:18
 msgid "Strongly disagree"
 msgstr "Strongly disagree"
 
-#: colournaming/namer/forms.py:20
+#: colournaming/namer/forms.py:19
 msgid "Disagree"
 msgstr "Disagree"
 
-#: colournaming/namer/forms.py:21
+#: colournaming/namer/forms.py:20
 msgid "Undecided"
 msgstr "Undecided"
 
-#: colournaming/namer/forms.py:22
+#: colournaming/namer/forms.py:21
 msgid "Agree"
 msgstr "Agree"
 
-#: colournaming/namer/forms.py:23
+#: colournaming/namer/forms.py:22
 msgid "Strongly agree"
 msgstr "Strongly agree"
 
@@ -300,11 +300,11 @@ msgstr "Confirm how many steps you can see?"
 msgid "Colour namer"
 msgstr "Colour namer"
 
-#: colournaming/templates/index.html:23 colournaming/templates/index.html:94
+#: colournaming/templates/index.html:23 colournaming/templates/index.html:96
 msgid "Research"
 msgstr "Research"
 
-#: colournaming/templates/index.html:26 colournaming/templates/index.html:293
+#: colournaming/templates/index.html:26 colournaming/templates/index.html:327
 msgid "Contact"
 msgstr "Contact"
 
@@ -329,15 +329,14 @@ msgstr ""
 "Participation in this study is strictly anonymous and voluntary."
 
 #: colournaming/templates/index.html:38
+#, fuzzy
 msgid ""
 "Many individuals find the tasks of this study enjoyable and we believe "
 "there are no known risks to participants. The purpose of this research "
 "study is to improve colour communication in multilingual environments. "
 "Please feel free to contact the principal investigator <a "
-"href=\"mailto:d.mylonas[at]ucl.ac.uk\">Dimitris Mylonas</a> or the "
-"supervisors <a href=\"mailto:ucfslwm[at]ucl.ac.uk\">Lindsay MacDonald</a>"
-" and <a href=\"mailto:l.griffin[at]ucl.ac.uk\">Lewis Griffin</a> of "
-"University College London if you have any questions."
+"href=\"mailto:dimitris.mylonas[at]nchlondon.ac.uk\">Dimitris Mylonas</a> "
+"if you have any questions."
 msgstr ""
 "Many individuals find the tasks of this study enjoyable and we believe "
 "there are no known risks to participants. The purpose of this research "
@@ -349,10 +348,12 @@ msgstr ""
 "University College London if you have any questions."
 
 #: colournaming/templates/index.html:40
+#, fuzzy
 msgid ""
 "If you are 16 years of age or older, understand the statements and freely"
 " consent to participate in the study, click on the 'Start' button to "
-"begin the experiment."
+"begin the experiment against a neutral grey background or the 'Chromatic "
+"Start' button to begin the experiment against chromatic backgrounds."
 msgstr ""
 "If you are 16 years of age or older, understand the statements and freely"
 " consent to participate in the study, click on the 'Start' button to "
@@ -378,15 +379,15 @@ msgstr ""
 msgid "by name"
 msgstr "by name"
 
-#: colournaming/templates/index.html:70
+#: colournaming/templates/index.html:71
 msgid "Colour name"
 msgstr "Colour name"
 
-#: colournaming/templates/index.html:72
+#: colournaming/templates/index.html:73
 msgid "Synonyms"
 msgstr "Synonyms"
 
-#: colournaming/templates/index.html:90
+#: colournaming/templates/index.html:92
 msgid ""
 "This is a βeta version of Colournamer. You will need JavaScript enabled "
 "and a browser that supports HTML5 web audio."
@@ -394,7 +395,7 @@ msgstr ""
 "This is a βeta version of Colournamer. You will need JavaScript enabled "
 "and a browser that supports HTML5 web audio."
 
-#: colournaming/templates/index.html:97
+#: colournaming/templates/index.html:99
 msgid ""
 "This research aims to develop an online colour naming model to facilitate"
 " colour communication within and between cultures."
@@ -402,7 +403,7 @@ msgstr ""
 "This research aims to develop an online colour naming model to facilitate"
 " colour communication within and between cultures."
 
-#: colournaming/templates/index.html:295
+#: colournaming/templates/index.html:329
 msgid ""
 "Please use the following communication form to give us your feedback and "
 "comments or if you wish to inform you about the results of this research."
@@ -410,12 +411,12 @@ msgstr ""
 "Please use the following communication form to give us your feedback and "
 "comments or if you wish to inform you about the results of this research."
 
-#: colournaming/templates/index.html:308
+#: colournaming/templates/index.html:342
 #: colournaming/templates/observer_information.html:52
 msgid "Submit"
 msgstr "Submit"
 
-#: colournaming/templates/index.html:319
+#: colournaming/templates/index.html:353
 msgid "Made in London and Berlin"
 msgstr "Made in London and Berlin"
 
@@ -429,7 +430,7 @@ msgid ""
 " remember.<br>Press the Arrow button [&gt;] or Enter on your keyboard "
 "once you have finished naming the colour for the next colour sample to "
 "appear. Name as many colour samples (20+) as you can for higher ranking "
-"on colour namers. You will need to press the Next button to start the "
+"on colour namers. You will need to press the Finish button to start the "
 "next task. Your response time will be recorded."
 msgstr ""
 
@@ -478,4 +479,19 @@ msgstr ""
 "across languages. Please feel free to contact us and visit our research "
 "page for more information. Find below your responses in white and the "
 "most popular colour names in black:"
+
+#~ msgid ""
+#~ "Name each colour sample with the "
+#~ "best representative colour term that you"
+#~ " remember.<br>Press the Arrow button [&gt;]"
+#~ " or Enter on your keyboard once "
+#~ "you have finished naming the colour "
+#~ "for the next colour sample to "
+#~ "appear. Name as many colour samples "
+#~ "(20+) as you can for higher "
+#~ "ranking on colour namers. You will "
+#~ "need to press the Next button to"
+#~ " start the next task. Your response"
+#~ " time will be recorded."
+#~ msgstr ""
 
