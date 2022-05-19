@@ -11,14 +11,13 @@ def read_translations(translation_filename, column):
     translation_workbook = openpyxl.load_workbook(translation_filename)
     ws = translation_workbook.active
     row = 4
-    translation_dict = defaultdict(str)
+    translation_dict = dict()
     while True:
         english = ws["B{0}".format(row)].value
         try:
             translated = ws["{0}{1}".format(column, row)].value.strip().replace("\n", "")
         except AttributeError:
             translated = None
-        print(english, translated)
         if not english:
             break
         translation_dict[english] = translated
@@ -37,7 +36,9 @@ def do_translation(messages, translation_dict, output):
         elif l.startswith('"') and state == "MSGID":
             msgid += l[1:-1]
         elif l == 'msgstr ""':
-            l = 'msgstr "' + translation_dict[msgid] + '"'
+            if msgid not in translation_dict:
+                print(l, "not found in translation dictionary")
+            l = 'msgstr "' + translation_dict.get(msgid, "") + '"'
         output.write(l + "\n")
 
 
