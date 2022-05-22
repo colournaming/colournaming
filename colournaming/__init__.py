@@ -122,6 +122,18 @@ def setup_cli(app):
         read_backgrounds_from_file(backgrounds_file)
 
     @app.cli.command()
+    @click.argument("filename", type=click.File("w"))
+    def export_colbg_responses(filename):
+        """Export coloured background responses to CSV."""
+        print(admin.controller.get_colbg_responses(), file=filename)
+
+    @app.cli.command()
+    @click.argument("filename", type=click.File("w"))
+    def export_colbg_participants(filename):
+        """Export coloured background participants to CSV."""
+        print(admin.controller.get_colbg_participants(), file=filename)
+
+    @app.cli.command()
     def initdb():
         """Create database tables."""
         db.create_all()
