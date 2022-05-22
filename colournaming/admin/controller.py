@@ -175,7 +175,6 @@ def get_colbg_responses():
     return output.getvalue().strip()
 
 
-
 def get_colbg_participants():
     participants = ParticipantColBG.query.all()
     output = io.StringIO()
