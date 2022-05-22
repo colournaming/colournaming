@@ -166,6 +166,7 @@ h3 ~ .justified-text {
     outline: none;
     padding: 0;
     position: relative;
+    color: #eeeeee;
     text-align: center;
     text-decoration: none;
     width: 123px;
