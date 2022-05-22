@@ -8,7 +8,6 @@ from flask_babel import Babel
 import pytest
 from sqlalchemy.exc import ProgrammingError
 import user_agents
-from whitenoise import WhiteNoise
 from . import admin
 from .database import db
 from .email import mail
@@ -28,7 +27,6 @@ def create_app():
         sentry_sdk.init(
             dsn=app.config["SENTRY_DSN"], integrations=[FlaskIntegration()], traces_sample_rate=1.0
         )
-        app.wsgi_app = WhiteNoise(app.wsgi_app, root="static/")
     db.init_app(app)
     mail.init_app(app)
     babel = Babel(app)
