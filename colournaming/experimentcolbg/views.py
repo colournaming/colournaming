@@ -106,7 +106,12 @@ def colour_vision():
     if form.errors:
         for field, error in form.errors.items():
             print(field, error)
-    return render_template("colour_vision.html", form=form, rtl=lang_is_rtl(get_locale()))
+    return render_template(
+        "colour_vision.html",
+        background_colour=rgb_tuple_to_css_rgb(session["experiment"]["background_colour"]),
+        form=form,
+        rtl=lang_is_rtl(get_locale())
+    )
 
 
 @bp.route("/name_colour.html", methods=["GET", "POST"])
@@ -174,7 +179,12 @@ def observer_information():
     if form.errors:
         for field, error in form.errors.items():
             print(field, repr(getattr(form, field).data), error)
-    return render_template("observer_information.html", form=form, rtl=lang_is_rtl(get_locale()))
+    return render_template(
+        "observer_information.html",
+        form=form,
+        background_colour=rgb_tuple_to_css_rgb(session["experiment"]["background_colour"]),
+        rtl=lang_is_rtl(get_locale())
+    )
 
 
 @bp.route("/thankyou.html")
@@ -188,5 +198,8 @@ def thankyou():
     top_namers_msg = lazy_gettext("You are in the 0% top colour namers.")
     top_namers_msg = top_namers_msg.replace("0%", "{0:.0f}%".format(perc))
     return render_template(
-        "thankyou.html", top_namers=top_namers_msg, rtl=lang_is_rtl(get_locale())
+        "thankyou.html",
+        top_namers=top_namers_msg,
+        background_colour=rgb_tuple_to_css_rgb(session["experiment"]["background_colour"]),
+        rtl=lang_is_rtl(get_locale())
     )
