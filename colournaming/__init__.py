@@ -87,7 +87,7 @@ def setup_cli(app):
     @click.argument("filename", type=click.File("w"))
     def export_responses(filename):
         """Export responses to CSV."""
-        admin.controller.get_responses(file=filename)
+        admin.controller.get_responses(filename)
 
     @app.cli.command()
     @click.argument("filename", type=click.File("w"))
