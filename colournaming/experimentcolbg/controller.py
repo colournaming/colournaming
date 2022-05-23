@@ -76,7 +76,7 @@ def get_random_background():
     target = random.choice(targets)
     target.presentation_count += 1
     db.session.commit()
-    return target.id, (target.red, target.blue, target.green)
+    return target.id, (target.red, target.green, target.blue)
 
 
 def response_count_percentage(this_count):
