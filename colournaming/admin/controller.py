@@ -1,5 +1,4 @@
 import csv
-import io
 from ..experimentcol.model import Participant
 from ..experimentcolbg.model import ParticipantColBG
 from ..namer.model import NameAgreement
