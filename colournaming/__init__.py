@@ -87,19 +87,19 @@ def setup_cli(app):
     @click.argument("filename", type=click.File("w"))
     def export_responses(filename):
         """Export responses to CSV."""
-        print(admin.controller.get_responses(), file=filename)
+        admin.controller.get_responses(filename)
 
     @app.cli.command()
     @click.argument("filename", type=click.File("w"))
     def export_participants(filename):
         """Export participants to CSV."""
-        print(admin.controller.get_participants(), file=filename)
+        admin.controller.get_participants(filename)
 
     @app.cli.command()
     @click.argument("filename", type=click.File("w"))
     def export_agreements(filename):
         """Export agreements to CSV."""
-        print(admin.controller.get_agreements(), file=filename)
+        admin.controller.get_agreements(filename)
 
     @app.cli.command()
     @click.argument("targets_file", type=click.File("r"))
@@ -109,27 +109,29 @@ def setup_cli(app):
 
     @app.cli.command()
     @click.argument("targets_file", type=click.File("r"))
-    def import_colbg_targets(targets_file):
+    @click.option("--delete-existing", is_flag=True)
+    def import_colbg_targets(targets_file, delete_existing):
         """Import a targets file into the database."""
-        read_colbg_targets_from_file(targets_file)
+        read_colbg_targets_from_file(targets_file, delete_existing=delete_existing)
 
     @app.cli.command()
     @click.argument("backgrounds_file", type=click.File("r"))
-    def import_colbg_backgrounds(backgrounds_file):
+    @click.option("--delete-existing", is_flag=True)
+    def import_colbg_backgrounds(backgrounds_file, delete_existing):
         """Import a targets file into the database."""
-        read_backgrounds_from_file(backgrounds_file)
+        read_backgrounds_from_file(backgrounds_file, delete_existing=delete_existing)
 
     @app.cli.command()
     @click.argument("filename", type=click.File("w"))
     def export_colbg_responses(filename):
         """Export coloured background responses to CSV."""
-        print(admin.controller.get_colbg_responses(), file=filename)
+        admin.controller.get_colbg_responses(filename)
 
     @app.cli.command()
     @click.argument("filename", type=click.File("w"))
     def export_colbg_participants(filename):
         """Export coloured background participants to CSV."""
-        print(admin.controller.get_colbg_participants(), file=filename)
+        admin.controller.get_colbg_participants(filename)
 
     @app.cli.command()
     def initdb():

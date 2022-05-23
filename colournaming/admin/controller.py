@@ -1,5 +1,4 @@
 import csv
-import io
 from ..experimentcol.model import Participant
 from ..experimentcolbg.model import ParticipantColBG
 from ..namer.model import NameAgreement
@@ -69,10 +68,9 @@ PARTICIPANT_FIELDNAMES = [
 ]
 
 
-def get_responses():
+def get_responses(fh):
     participants = Participant.query.all()
-    output = io.StringIO()
-    output_csv = csv.DictWriter(output, RESPONSE_FIELDNAMES, restval="NA", dialect="unix")
+    output_csv = csv.DictWriter(fh, RESPONSE_FIELDNAMES, restval="NA", dialect="unix")
     output_csv.writeheader()
     for participant in participants:
         for response in participant.responses:
@@ -89,13 +87,11 @@ def get_responses():
                     "name": response.name,
                 }
             )
-    return output.getvalue().strip()
 
 
-def get_agreements():
+def get_agreements(fh):
     agreements = NameAgreement.query.all()
-    output = io.StringIO()
-    output_csv = csv.DictWriter(output, AGREEMENT_FIELDNAMES, restval="NA", dialect="unix")
+    output_csv = csv.DictWriter(fh, AGREEMENT_FIELDNAMES, restval="NA", dialect="unix")
     output_csv.writeheader()
     for agreement in agreements:
         output_csv.writerow(
@@ -108,13 +104,11 @@ def get_agreements():
                 "agreement": agreement.agreement,
             }
         )
-    return output.getvalue().strip()
 
 
-def get_participants():
+def get_participants(fh):
     participants = Participant.query.all()
-    output = io.StringIO()
-    output_csv = csv.DictWriter(output, PARTICIPANT_FIELDNAMES, restval="NA", dialect="unix")
+    output_csv = csv.DictWriter(fh, PARTICIPANT_FIELDNAMES, restval="NA", dialect="unix")
     output_csv.writeheader()
     for participant in participants:
         output_csv.writerow(
@@ -146,13 +140,11 @@ def get_participants():
                 "latlong": participant.location,
             }
         )
-    return output.getvalue().strip()
 
 
-def get_colbg_responses():
+def get_colbg_responses(fh):
     participants = ParticipantColBG.query.all()
-    output = io.StringIO()
-    output_csv = csv.DictWriter(output, RESPONSE_COLBG_FIELDNAMES, restval="NA", dialect="unix")
+    output_csv = csv.DictWriter(fh, RESPONSE_COLBG_FIELDNAMES, restval="NA", dialect="unix")
     output_csv.writeheader()
     for participant in participants:
         for response in participant.responses:
@@ -172,13 +164,11 @@ def get_colbg_responses():
                     "name": response.name,
                 }
             )
-    return output.getvalue().strip()
 
 
-def get_colbg_participants():
+def get_colbg_participants(fh):
     participants = ParticipantColBG.query.all()
-    output = io.StringIO()
-    output_csv = csv.DictWriter(output, PARTICIPANT_FIELDNAMES, restval="NA", dialect="unix")
+    output_csv = csv.DictWriter(fh, PARTICIPANT_FIELDNAMES, restval="NA", dialect="unix")
     output_csv.writeheader()
     for participant in participants:
         output_csv.writerow(
@@ -210,4 +200,3 @@ def get_colbg_participants():
                 "latlong": participant.location,
             }
         )
-    return output.getvalue().strip()

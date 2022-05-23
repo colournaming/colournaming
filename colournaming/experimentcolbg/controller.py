@@ -7,8 +7,10 @@ from ..database import db
 from .model import BackgroundColour, ColourTargetColBG, ParticipantColBG, ColourResponseColBG
 
 
-def read_targets_from_file(targets_file):
+def read_targets_from_file(targets_file, delete_existing=False):
     """Read colour targets from file."""
+    if delete_existing:
+        ColourTargetColBG.query.delete()
     targets_csv = csv.DictReader(targets_file)
     for t in targets_csv:
         id = int(t["color_id"])
@@ -25,9 +27,11 @@ def read_targets_from_file(targets_file):
     db.session.commit()
 
 
-def read_backgrounds_from_file(targets_file):
+def read_backgrounds_from_file(targets_file, delete_existing=False):
     """Read colour backgrounds from file."""
     targets_csv = csv.DictReader(targets_file)
+    if delete_existing:
+        BackgroundColour.query.delete()
     for t in targets_csv:
         id = int(t["bg_id"])
         red = int(t["R"])
