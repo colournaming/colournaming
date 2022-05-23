@@ -84,10 +84,9 @@ def setup_cli(app):
         read_centroids_from_file(centroids_file, language_name, language_code)
 
     @app.cli.command()
-    @click.argument("filename", type=click.File("w"))
-    def export_responses(filename):
+    def export_responses():
         """Export responses to CSV."""
-        print(admin.controller.get_responses(), file=filename)
+        admin.controller.get_responses()
 
     @app.cli.command()
     @click.argument("filename", type=click.File("w"))
