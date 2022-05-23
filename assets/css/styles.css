@@ -141,19 +141,32 @@ h3 ~ .justified-text {
     margin: 0 auto 1em;
 }
 
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.round-button-2 {
+    background-color: rgb(51, 48, 186);
+}
+
+.round-button-1 {
+    background-color: rgb(128, 128, 128);
+}
+
 .round-button {
-    background-color: #80E3D2;
     border: 2px solid #000;
     border-radius: 65.5px;
     cursor: pointer;
     display: block;
-    font-size: 27px;
+    font-size: 16px;
     height: 123px;
     line-height: 123px;
     margin: 1em auto;
     outline: none;
     padding: 0;
     position: relative;
+    color: #eeeeee;
     text-align: center;
     text-decoration: none;
     width: 123px;

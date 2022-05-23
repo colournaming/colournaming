@@ -1,204 +1,260 @@
 # Translations template for PROJECT.
-# Copyright (C) 2018 ORGANIZATION
+# Copyright (C) 2022 ORGANIZATION
 # This file is distributed under the same license as the PROJECT project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-03-08 22:44+0000\n"
+"POT-Creation-Date: 2022-05-19 18:57+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
+"Generated-By: Babel 2.9.1\n"
 
-#: colournaming/experiment/forms.py:32
+#: colournaming/experimentcol/forms.py:38
+#: colournaming/experimentcolbg/forms.py:38
 msgid "What is your age?"
 msgstr "你的年龄？"
 
-#: colournaming/experiment/forms.py:39
+#: colournaming/experimentcol/forms.py:45
+#: colournaming/experimentcolbg/forms.py:45
 msgid "Female"
 msgstr "女性"
 
-#: colournaming/experiment/forms.py:40
+#: colournaming/experimentcol/forms.py:46
+#: colournaming/experimentcolbg/forms.py:46
 msgid "Male"
 msgstr "男性"
 
-#: colournaming/experiment/forms.py:41
+#: colournaming/experimentcol/forms.py:47
+#: colournaming/experimentcolbg/forms.py:47
 msgid "Other"
 msgstr "其他"
 
-#: colournaming/experiment/forms.py:43
+#: colournaming/experimentcol/forms.py:49
+#: colournaming/experimentcolbg/forms.py:49
 msgid "To which gender do you most identify?"
 msgstr "你的性別？"
 
-#: colournaming/experiment/forms.py:47
+#: colournaming/experimentcol/forms.py:52
+#: colournaming/experimentcolbg/forms.py:52
 msgid "Please specify"
 msgstr "请说明"
 
-#: colournaming/experiment/forms.py:53 colournaming/experiment/forms.py:63
+#: colournaming/experimentcol/forms.py:56
+#: colournaming/experimentcol/forms.py:66
+#: colournaming/experimentcolbg/forms.py:56
+#: colournaming/experimentcolbg/forms.py:66
 msgid "Beginner"
 msgstr "初级"
 
-#: colournaming/experiment/forms.py:54 colournaming/experiment/forms.py:64
+#: colournaming/experimentcol/forms.py:57
+#: colournaming/experimentcol/forms.py:67
+#: colournaming/experimentcolbg/forms.py:57
+#: colournaming/experimentcolbg/forms.py:67
 msgid "Intermediate"
 msgstr "中级"
 
-#: colournaming/experiment/forms.py:55 colournaming/experiment/forms.py:65
+#: colournaming/experimentcol/forms.py:58
+#: colournaming/experimentcol/forms.py:68
+#: colournaming/experimentcolbg/forms.py:58
+#: colournaming/experimentcolbg/forms.py:68
 msgid "Advanced"
 msgstr "高级"
 
-#: colournaming/experiment/forms.py:57
+#: colournaming/experimentcol/forms.py:60
+#: colournaming/experimentcolbg/forms.py:60
 msgid "Describe your experience working with colour"
 msgstr "请描述你与色彩相关的工作经验"
 
-#: colournaming/experiment/forms.py:66
+#: colournaming/experimentcol/forms.py:69
+#: colournaming/experimentcolbg/forms.py:69
 msgid "Bilingual"
 msgstr "双语"
 
-#: colournaming/experiment/forms.py:67
+#: colournaming/experimentcol/forms.py:70
+#: colournaming/experimentcolbg/forms.py:70
 msgid "Native speaker"
 msgstr "母语"
 
-#: colournaming/experiment/forms.py:69
+#: colournaming/experimentcol/forms.py:72
+#: colournaming/experimentcolbg/forms.py:72
 msgid "Describe your skill in the language used in this experiment"
 msgstr "请描述您在本次测试中使用的语言能力（中文）"
 
-#: colournaming/experiment/forms.py:75
+#: colournaming/experimentcol/forms.py:78
+#: colournaming/experimentcolbg/forms.py:78
 msgid "No qualifications"
 msgstr "无"
 
-#: colournaming/experiment/forms.py:76
+#: colournaming/experimentcol/forms.py:79
+#: colournaming/experimentcolbg/forms.py:79
 msgid "Secondary school degree"
 msgstr "高中"
 
-#: colournaming/experiment/forms.py:77
+#: colournaming/experimentcol/forms.py:80
+#: colournaming/experimentcolbg/forms.py:80
 msgid "Bachelors degree"
 msgstr "本科"
 
-#: colournaming/experiment/forms.py:78
+#: colournaming/experimentcol/forms.py:81
+#: colournaming/experimentcolbg/forms.py:81
 msgid "Masters degree"
 msgstr "硕士"
 
-#: colournaming/experiment/forms.py:79
+#: colournaming/experimentcol/forms.py:82
+#: colournaming/experimentcolbg/forms.py:82
 msgid "Professional degree"
 msgstr "职业学位"
 
-#: colournaming/experiment/forms.py:80
+#: colournaming/experimentcol/forms.py:83
+#: colournaming/experimentcolbg/forms.py:83
 msgid "Doctorate degree"
 msgstr "博士"
 
-#: colournaming/experiment/forms.py:82
+#: colournaming/experimentcol/forms.py:85
+#: colournaming/experimentcolbg/forms.py:85
 msgid "What is the highest level of education you have completed?"
 msgstr "你的最高学历"
 
-#: colournaming/experiment/forms.py:89
+#: colournaming/experimentcol/forms.py:93
+#: colournaming/experimentcolbg/forms.py:93
 msgid "In which country did you grow up?"
 msgstr "出生国家"
 
-#: colournaming/experiment/forms.py:94
+#: colournaming/experimentcol/forms.py:98
+#: colournaming/experimentcolbg/forms.py:98
 msgid "Where are you living?"
 msgstr "现居地"
 
-#: colournaming/experiment/forms.py:100
+#: colournaming/experimentcol/forms.py:104
+#: colournaming/experimentcolbg/forms.py:104
 msgid "Smartphone"
 msgstr "智能手机"
 
-#: colournaming/experiment/forms.py:101
+#: colournaming/experimentcol/forms.py:105
+#: colournaming/experimentcolbg/forms.py:105
 msgid "Pad"
 msgstr "平板设备"
 
-#: colournaming/experiment/forms.py:102
+#: colournaming/experimentcol/forms.py:106
+#: colournaming/experimentcolbg/forms.py:106
 msgid "Laptop"
 msgstr "手提电脑"
 
-#: colournaming/experiment/forms.py:103
+#: colournaming/experimentcol/forms.py:107
+#: colournaming/experimentcolbg/forms.py:107
 msgid "Desktop"
 msgstr "台式电脑"
 
-#: colournaming/experiment/forms.py:105
+#: colournaming/experimentcol/forms.py:109
+#: colournaming/experimentcolbg/forms.py:109
 msgid "What is your display device?"
 msgstr "你所使用的是什么显示设备？"
 
-#: colournaming/experiment/forms.py:111
+#: colournaming/experimentcol/forms.py:115
+#: colournaming/experimentcolbg/forms.py:115
 msgid "Neutral white"
 msgstr "自然的白色"
 
-#: colournaming/experiment/forms.py:112
+#: colournaming/experimentcol/forms.py:116
+#: colournaming/experimentcolbg/forms.py:116
 msgid "Warm white"
 msgstr "偏暖的白色"
 
-#: colournaming/experiment/forms.py:113
+#: colournaming/experimentcol/forms.py:117
+#: colournaming/experimentcolbg/forms.py:117
 msgid "Bluish white"
 msgstr "偏蓝的白色"
 
-#: colournaming/experiment/forms.py:114
+#: colournaming/experimentcol/forms.py:118
+#: colournaming/experimentcolbg/forms.py:118
 msgid "Yellowish white"
 msgstr "偏黄的白色"
 
-#: colournaming/experiment/forms.py:116
+#: colournaming/experimentcol/forms.py:120
+#: colournaming/experimentcolbg/forms.py:120
 msgid "Describe the white graphic elements on your screen"
 msgstr "请描述在你的屏幕上所显示的白色图像"
 
-#: colournaming/experiment/forms.py:122 colournaming/experiment/forms.py:133
+#: colournaming/experimentcol/forms.py:126
+#: colournaming/experimentcol/forms.py:137
+#: colournaming/experimentcolbg/forms.py:126
+#: colournaming/experimentcolbg/forms.py:137
 msgid "Dark"
 msgstr "黑暗"
 
-#: colournaming/experiment/forms.py:123
+#: colournaming/experimentcol/forms.py:127
+#: colournaming/experimentcolbg/forms.py:127
 msgid "Dim"
 msgstr "昏暗"
 
-#: colournaming/experiment/forms.py:124
+#: colournaming/experimentcol/forms.py:128
+#: colournaming/experimentcolbg/forms.py:128
 msgid "Average"
 msgstr "一般"
 
-#: colournaming/experiment/forms.py:125
+#: colournaming/experimentcol/forms.py:129
+#: colournaming/experimentcolbg/forms.py:129
 msgid "Bright"
 msgstr "明亮"
 
-#: colournaming/experiment/forms.py:127
+#: colournaming/experimentcol/forms.py:131
+#: colournaming/experimentcolbg/forms.py:131
 msgid "Describe the surrounding environment behind your device"
 msgstr "请描述显示器后的背景环境"
 
-#: colournaming/experiment/forms.py:134
+#: colournaming/experimentcol/forms.py:138
+#: colournaming/experimentcolbg/forms.py:138
 msgid "Typical domestic"
 msgstr "一般"
 
-#: colournaming/experiment/forms.py:135
+#: colournaming/experimentcol/forms.py:139
+#: colournaming/experimentcolbg/forms.py:139
 msgid "Mid daylight"
 msgstr "日光普通"
 
-#: colournaming/experiment/forms.py:136
+#: colournaming/experimentcol/forms.py:140
+#: colournaming/experimentcolbg/forms.py:140
 msgid "Full daylight"
 msgstr "日光充足"
 
-#: colournaming/experiment/forms.py:137
+#: colournaming/experimentcol/forms.py:141
+#: colournaming/experimentcolbg/forms.py:141
 msgid "Typical office"
 msgstr "普通办公室环境"
 
-#: colournaming/experiment/forms.py:139
+#: colournaming/experimentcol/forms.py:143
+#: colournaming/experimentcolbg/forms.py:143
 msgid "Describe the lighting conditions of your environment"
 msgstr "请描述你所处环境中的光线条件"
 
-#: colournaming/experiment/forms.py:145 colournaming/experiment/forms.py:160
+#: colournaming/experimentcol/forms.py:151
+#: colournaming/experimentcol/forms.py:162
+#: colournaming/experimentcolbg/forms.py:151
+#: colournaming/experimentcolbg/forms.py:162
 msgid "What distance are you from your monitor in cm?"
 msgstr "描述你和显示器之间的距离（公分）"
 
-#: colournaming/experiment/forms.py:157
+#: colournaming/experimentcol/forms.py:161
+#: colournaming/experimentcolbg/forms.py:161
 #: colournaming/templates/colour_vision.html:12
 msgid "No"
 msgstr "否"
 
-#: colournaming/experiment/forms.py:158
+#: colournaming/experimentcol/forms.py:161
+#: colournaming/experimentcolbg/forms.py:161
 #: colournaming/templates/colour_vision.html:13
 msgid "Yes"
 msgstr "是"
 
-#: colournaming/experiment/views.py:166
+#: colournaming/experimentcol/views.py:176
+#: colournaming/experimentcolbg/views.py:188
 msgid "You are in the 0% top colour namers."
 msgstr "你是前0%的色彩命名者"
 
@@ -222,27 +278,27 @@ msgstr "所属单位"
 msgid "Your message"
 msgstr "留言"
 
-#: colournaming/namer/forms.py:18
+#: colournaming/namer/forms.py:17
 msgid "Do you agree?"
 msgstr "同意？"
 
-#: colournaming/namer/forms.py:19
+#: colournaming/namer/forms.py:18
 msgid "Strongly disagree"
 msgstr "完全不同意"
 
-#: colournaming/namer/forms.py:20
+#: colournaming/namer/forms.py:19
 msgid "Disagree"
 msgstr "不同意"
 
-#: colournaming/namer/forms.py:21
+#: colournaming/namer/forms.py:20
 msgid "Undecided"
 msgstr "不确定"
 
-#: colournaming/namer/forms.py:22
+#: colournaming/namer/forms.py:21
 msgid "Agree"
 msgstr "同意"
 
-#: colournaming/namer/forms.py:23
+#: colournaming/namer/forms.py:22
 msgid "Strongly agree"
 msgstr "完全同意"
 
@@ -286,15 +342,15 @@ msgstr "调节显示屏幕的亮度，直至你可以看到黑白测试图像中
 msgid "Confirm how many steps you can see?"
 msgstr "你可以看到多少个色阶？"
 
-#: colournaming/templates/index.html:20 colournaming/templates/index.html:45
+#: colournaming/templates/index.html:20 colournaming/templates/index.html:48
 msgid "Colour namer"
 msgstr "颜色名称生成"
 
-#: colournaming/templates/index.html:23 colournaming/templates/index.html:94
+#: colournaming/templates/index.html:23 colournaming/templates/index.html:99
 msgid "Research"
 msgstr "研究"
 
-#: colournaming/templates/index.html:26 colournaming/templates/index.html:293
+#: colournaming/templates/index.html:26 colournaming/templates/index.html:330
 msgid "Contact"
 msgstr "联系方式"
 
@@ -318,24 +374,23 @@ msgid ""
 "there are no known risks to participants. The purpose of this research "
 "study is to improve colour communication in multilingual environments. "
 "Please feel free to contact the principal investigator <a "
-"href=\"mailto:d.mylonas[at]ucl.ac.uk\">Dimitris Mylonas</a> or the "
-"supervisors <a href=\"mailto:ucfslwm[at]ucl.ac.uk\">Lindsay MacDonald</a>"
-" and <a href=\"mailto:l.griffin[at]ucl.ac.uk\">Lewis Griffin</a> of "
-"University College London if you have any questions."
-msgstr "基于参与者积极的反馈,该研究确保不会对参与者带来任何负面影响。本项研究致力于改善在多语种环境下色彩的表达和沟通。如有疑问，请随时与我们联系。"
+"href=\"mailto:dimitris.mylonas[at]nchlondon.ac.uk\">Dimitris Mylonas</a> "
+"if you have any questions."
+msgstr "基于参与者积极的反馈,该研究确保不会对参与者带来任何负面影响。本项研究致力于改善在多语种环境下色彩的表达和沟通。如有疑问，请随时与我们联系 <a href=\"mailto:d.mylonas[at]ucl.ac.uk\">Dimitris Mylonas</a>。"
 
 #: colournaming/templates/index.html:40
 msgid ""
 "If you are 16 years of age or older, understand the statements and freely"
 " consent to participate in the study, click on the 'Start' button to "
-"begin the experiment."
-msgstr "如果你超过16岁，并理解相关条款及同意参与本研究，请按开始键进行测试。"
+"begin the experiment against a neutral grey background or the 'Chromatic "
+"Start' button to begin the experiment against chromatic backgrounds."
+msgstr "如果你超过16岁，并理解相关条款及同意参与本研究，单击“灰色开始”按钮以开始针对中性灰色背景的实验，或单击“彩色开始”按钮以开始针对彩色背景的实验。"
 
-#: colournaming/templates/index.html:41
+#: colournaming/templates/index.html:42 colournaming/templates/index.html:43
 msgid "Start"
 msgstr "开始"
 
-#: colournaming/templates/index.html:47
+#: colournaming/templates/index.html:50
 msgid ""
 "This is a synthetic observer trained by participants’ responses to name "
 "each colour in different languages (Mylonas, Stutters, Doval, and "
@@ -343,42 +398,42 @@ msgid ""
 "available."
 msgstr "这是由参与者提供不同语言的颜色命名而生成的综合性的观察方式(Mylonas, Stutters, Doval, and MacDonald, 2013)。本测试将会增加更多的语言选项。"
 
-#: colournaming/templates/index.html:62
+#: colournaming/templates/index.html:65
 msgid "by name"
 msgstr "按名称"
 
-#: colournaming/templates/index.html:70
+#: colournaming/templates/index.html:74
 msgid "Colour name"
 msgstr "颜色名称"
 
-#: colournaming/templates/index.html:72
+#: colournaming/templates/index.html:76
 msgid "Synonyms"
 msgstr "同义词"
 
-#: colournaming/templates/index.html:90
+#: colournaming/templates/index.html:95
 msgid ""
 "This is a βeta version of Colournamer. You will need JavaScript enabled "
 "and a browser that supports HTML5 web audio."
 msgstr "本系统为测试版。你需要JavaScript，及支持HTML5的浏览器保证测试的正常操作。"
 
-#: colournaming/templates/index.html:97
+#: colournaming/templates/index.html:102
 msgid ""
 "This research aims to develop an online colour naming model to facilitate"
 " colour communication within and between cultures."
 msgstr "本研究希望通过线上色彩命名系统采集的数据来促进不同文化之间的色彩表达和沟通。"
 
-#: colournaming/templates/index.html:295
+#: colournaming/templates/index.html:332
 msgid ""
 "Please use the following communication form to give us your feedback and "
 "comments or if you wish to inform you about the results of this research."
 msgstr "请使用下列表格提供你的反馈和建议。请标明如果你希望被告知最终的研究结果。"
 
-#: colournaming/templates/index.html:308
+#: colournaming/templates/index.html:345
 #: colournaming/templates/observer_information.html:52
 msgid "Submit"
 msgstr "递交"
 
-#: colournaming/templates/index.html:319
+#: colournaming/templates/index.html:356
 msgid "Made in London and Berlin"
 msgstr "伦敦和柏林制造"
 
@@ -394,7 +449,7 @@ msgid ""
 "appear. Name as many colour samples (20+) as you can for higher ranking "
 "on colour namers. You will need to press the Finish button to start the "
 "next task. Your response time will be recorded."
-msgstr "根据你的理解，给出最能代表这个色彩样本的颜色名称。输入名称后可点击右侧箭头[>]或回车键来进行下一个颜色命名。你可以尝试命名尽可能多的颜色(20+)来提高自己在色彩命名者中的排名，也可以按下方的完成键来结束命名测试。右上角将会显示你命名的色彩个数，你的回答时间也将会被记录。"
+msgstr ""
 
 #: colournaming/templates/name_colour.html:14
 msgid "Name the colour of the patch"

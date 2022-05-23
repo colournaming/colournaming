@@ -8,7 +8,6 @@ flask_babel
 pycountry
 click
 sentry_sdk
-whitenoise
 numpy
 gunicorn
 user-agents

@@ -31,6 +31,7 @@
 {% endblock %}
 {% block scripts %}
 <script type="text/javascript">
-    var COLOUR_NAME_TARGET_URL = "{{ url_for('experiment.get_target') }}";
+    var COLOUR_NAME_TARGET_URL = "{{ get_target_url }}";
+    var COLOUR_NAME_BACKGROUND_URL = "{{ get_background_url }}";
 </script>
 {% endblock %}

@@ -1,96 +1,25 @@
 """Database models used in the colour response experiment."""
 
 import datetime
-import enum
 from sqlalchemy.dialects import postgresql
-from ..database import db
+from ..database import (
+    AmbientLight,
+    Device,
+    Gender,
+    ScreenLight,
+    ScreenTemperature,
+    DeviceOrientation,
+    EducationLevel,
+    LanguageExperience,
+    ColourExperience,
+    db,
+)
 
 
-class Gender(enum.Enum):
-    """Genders."""
-
-    female = 1
-    male = 2
-    other = 5
-
-
-class ColourExperience(enum.Enum):
-    """Experience levels working with colour."""
-
-    beginner = 1
-    intermediate = 2
-    advanced = 3
-
-
-class DeviceOrientation(enum.Enum):
-    """Device orientations"""
-
-    vertical = 1
-    horizontal = 2
-
-
-class Device(enum.Enum):
-    """Devices."""
-
-    smartphone = 1
-    pad = 2
-    laptop = 3
-    desktop = 4
-
-
-class LanguageExperience(enum.Enum):
-    """Experience levels in language."""
-
-    beginner = 1
-    intermediate = 2
-    advanced = 3
-    bilingual = 4
-    native_speaker = 5
-
-
-class EducationLevel(enum.Enum):
-    """Education levels."""
-
-    no_qualifications = 1
-    secondary_school_degree = 2
-    bachelors_degree = 3
-    masters_degree = 4
-    professional_degree = 5
-    doctorate_degree = 6
-
-
-class AmbientLight(enum.Enum):
-    """Ambient lighting conditions."""
-
-    dark = 1
-    typical_domestic = 2
-    mid_daylight = 3
-    full_daylight = 4
-    typical_office = 5
-
-
-class ScreenLight(enum.Enum):
-    """Screen lighting conditions."""
-
-    dark = 1
-    dim = 2
-    average = 3
-    bright = 4
-
-
-class ScreenTemperature(enum.Enum):
-    """Screen temperatures."""
-
-    neutral_white = 1
-    warm_white = 2
-    bluish_white = 3
-    yellowish_white = 4
-
-
-class Participant(db.Model):
+class ParticipantColBG(db.Model):
     """Model for an experiment participant."""
 
-    __tablename__ = "participants"
+    __tablename__ = "participants_colbg"
 
     id = db.Column(db.Integer, primary_key=True)
     created_on = db.Column(db.DateTime(timezone=True), default=datetime.datetime.utcnow)
@@ -120,10 +49,10 @@ class Participant(db.Model):
     location = db.Column(db.String)
 
 
-class ColourTarget(db.Model):
-    """Model for an experiment target."""
+class BackgroundColour(db.Model):
+    """Model for an experiment background colour."""
 
-    __tablename__ = "colour_targets"
+    __tablename__ = "background_colour_colbg"
 
     id = db.Column(db.Integer, primary_key=True)
     red = db.Column(db.Integer, nullable=False)
@@ -132,16 +61,30 @@ class ColourTarget(db.Model):
     presentation_count = db.Column(db.Integer, nullable=False, default=0)
 
 
-class ColourResponse(db.Model):
-    """Model for a single experiment response."""
+class ColourTargetColBG(db.Model):
+    """Model for an experiment target."""
 
-    __tablename__ = "colour_responses"
+    __tablename__ = "colour_targets_colbg"
 
     id = db.Column(db.Integer, primary_key=True)
-    participant_id = db.Column(db.Integer, db.ForeignKey("participants.id"))
-    participant = db.relationship("Participant", backref=db.backref("responses"))
-    target_id = db.Column(db.Integer, db.ForeignKey("colour_targets.id"))
-    target = db.relationship("ColourTarget")
+    red = db.Column(db.Integer, nullable=False)
+    green = db.Column(db.Integer, nullable=False)
+    blue = db.Column(db.Integer, nullable=False)
+    presentation_count = db.Column(db.Integer, nullable=False, default=0)
+
+
+class ColourResponseColBG(db.Model):
+    """Model for a single experiment response."""
+
+    __tablename__ = "colour_responses_colbg"
+
+    id = db.Column(db.Integer, primary_key=True)
+    participant_id = db.Column(db.Integer, db.ForeignKey("participants_colbg.id"))
+    participant = db.relationship("ParticipantColBG", backref=db.backref("responses"))
+    target_id = db.Column(db.Integer, db.ForeignKey("colour_targets_colbg.id"))
+    target = db.relationship("ColourTargetColBG")
+    background_id = db.Column(db.Integer, db.ForeignKey("background_colour_colbg.id"))
+    background = db.relationship("BackgroundColour")
     name = db.Column(db.String)
     response_time = db.Column(db.Float)
     experiment_version = db.Column(db.String)

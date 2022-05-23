@@ -19,252 +19,252 @@ msgstr ""
 #: colournaming/experimentcol/forms.py:38
 #: colournaming/experimentcolbg/forms.py:38
 msgid "What is your age?"
-msgstr "¿Cuál es su edad?"
+msgstr "Скільки Вам років?"
 
 #: colournaming/experimentcol/forms.py:45
 #: colournaming/experimentcolbg/forms.py:45
 msgid "Female"
-msgstr "Femenino"
+msgstr "Жіноча"
 
 #: colournaming/experimentcol/forms.py:46
 #: colournaming/experimentcolbg/forms.py:46
 msgid "Male"
-msgstr "Masculino"
+msgstr "Чоловіча"
 
 #: colournaming/experimentcol/forms.py:47
 #: colournaming/experimentcolbg/forms.py:47
 msgid "Other"
-msgstr "Otro"
+msgstr "Інша"
 
 #: colournaming/experimentcol/forms.py:49
 #: colournaming/experimentcolbg/forms.py:49
 msgid "To which gender do you most identify?"
-msgstr "¿Con qué genero se identifica más?"
+msgstr "Укажіть Вашу стать"
 
 #: colournaming/experimentcol/forms.py:52
 #: colournaming/experimentcolbg/forms.py:52
 msgid "Please specify"
-msgstr "Por favor, especifique"
+msgstr "Просимо уточнити"
 
 #: colournaming/experimentcol/forms.py:56
 #: colournaming/experimentcol/forms.py:66
 #: colournaming/experimentcolbg/forms.py:56
 #: colournaming/experimentcolbg/forms.py:66
 msgid "Beginner"
-msgstr "Principiante"
+msgstr "Початковий рівень"
 
 #: colournaming/experimentcol/forms.py:57
 #: colournaming/experimentcol/forms.py:67
 #: colournaming/experimentcolbg/forms.py:57
 #: colournaming/experimentcolbg/forms.py:67
 msgid "Intermediate"
-msgstr "Intermedio"
+msgstr "Середній рівень"
 
 #: colournaming/experimentcol/forms.py:58
 #: colournaming/experimentcol/forms.py:68
 #: colournaming/experimentcolbg/forms.py:58
 #: colournaming/experimentcolbg/forms.py:68
 msgid "Advanced"
-msgstr "Avanzado"
+msgstr "Високий рівень"
 
 #: colournaming/experimentcol/forms.py:60
 #: colournaming/experimentcolbg/forms.py:60
 msgid "Describe your experience working with colour"
-msgstr "Describa su experiencia trabajando con el color"
+msgstr "Опишіть свій досвід роботи з кольором"
 
 #: colournaming/experimentcol/forms.py:69
 #: colournaming/experimentcolbg/forms.py:69
 msgid "Bilingual"
-msgstr "Bilingüe"
+msgstr "Я — білінгв, володію двома мовами"
 
 #: colournaming/experimentcol/forms.py:70
 #: colournaming/experimentcolbg/forms.py:70
 msgid "Native speaker"
-msgstr "Hablante nativo"
+msgstr "Носій мови"
 
 #: colournaming/experimentcol/forms.py:72
 #: colournaming/experimentcolbg/forms.py:72
 msgid "Describe your skill in the language used in this experiment"
-msgstr "Describa su nivel en el idioma utilitzado en este experimento"
+msgstr "Вкажіть рівень володіння мовою, яку Ви обрали для участі в експерименті"
 
 #: colournaming/experimentcol/forms.py:78
 #: colournaming/experimentcolbg/forms.py:78
 msgid "No qualifications"
-msgstr "Sin estudios"
+msgstr "Немає кваліфікації"
 
 #: colournaming/experimentcol/forms.py:79
 #: colournaming/experimentcolbg/forms.py:79
 msgid "Secondary school degree"
-msgstr "Estudios secundarios"
+msgstr "Загальна середня освіта"
 
 #: colournaming/experimentcol/forms.py:80
 #: colournaming/experimentcolbg/forms.py:80
 msgid "Bachelors degree"
-msgstr "Estudios universitarios"
+msgstr "Бакалавр"
 
 #: colournaming/experimentcol/forms.py:81
 #: colournaming/experimentcolbg/forms.py:81
 msgid "Masters degree"
-msgstr "Máster"
+msgstr "Магістр"
 
 #: colournaming/experimentcol/forms.py:82
 #: colournaming/experimentcolbg/forms.py:82
 msgid "Professional degree"
-msgstr "Formación profesional o ciclo formativo"
+msgstr "Професійна освіта"
 
 #: colournaming/experimentcol/forms.py:83
 #: colournaming/experimentcolbg/forms.py:83
 msgid "Doctorate degree"
-msgstr "Doctorado"
+msgstr "Вчений ступінь"
 
 #: colournaming/experimentcol/forms.py:85
 #: colournaming/experimentcolbg/forms.py:85
 msgid "What is the highest level of education you have completed?"
-msgstr "¿Cuál es el nivel más alto de estudios que ha completado?"
+msgstr "Вкажіть найвищий рівень отриманої Вами освіти"
 
 #: colournaming/experimentcol/forms.py:93
 #: colournaming/experimentcolbg/forms.py:93
 msgid "In which country did you grow up?"
-msgstr "¿En qué país creció?"
+msgstr "В якій країні минуло Ваше дитинство?"
 
 #: colournaming/experimentcol/forms.py:98
 #: colournaming/experimentcolbg/forms.py:98
 msgid "Where are you living?"
-msgstr "¿Dónde vive?"
+msgstr "Де Ви проживаєте?"
 
 #: colournaming/experimentcol/forms.py:104
 #: colournaming/experimentcolbg/forms.py:104
 msgid "Smartphone"
-msgstr "Teléfono móvil"
+msgstr "Смартфон"
 
 #: colournaming/experimentcol/forms.py:105
 #: colournaming/experimentcolbg/forms.py:105
 msgid "Pad"
-msgstr "Tablet"
+msgstr "Планшет"
 
 #: colournaming/experimentcol/forms.py:106
 #: colournaming/experimentcolbg/forms.py:106
 msgid "Laptop"
-msgstr "Ordenador portátil"
+msgstr "Ноутбук"
 
 #: colournaming/experimentcol/forms.py:107
 #: colournaming/experimentcolbg/forms.py:107
 msgid "Desktop"
-msgstr "Ordenador de sobremesa"
+msgstr "Стаціонарний комп'ютер"
 
 #: colournaming/experimentcol/forms.py:109
 #: colournaming/experimentcolbg/forms.py:109
 msgid "What is your display device?"
-msgstr "¿Qué tipo de pantalla utiliza?"
+msgstr "Який пристрій Ви наразі використовуєте?"
 
 #: colournaming/experimentcol/forms.py:115
 #: colournaming/experimentcolbg/forms.py:115
 msgid "Neutral white"
-msgstr "Blanco neutro"
+msgstr "Нейтральний білий"
 
 #: colournaming/experimentcol/forms.py:116
 #: colournaming/experimentcolbg/forms.py:116
 msgid "Warm white"
-msgstr "Blanco cálido"
+msgstr "Теплий білий"
 
 #: colournaming/experimentcol/forms.py:117
 #: colournaming/experimentcolbg/forms.py:117
 msgid "Bluish white"
-msgstr "Blanco azulado"
+msgstr "Блакитнувато-білий"
 
 #: colournaming/experimentcol/forms.py:118
 #: colournaming/experimentcolbg/forms.py:118
 msgid "Yellowish white"
-msgstr "Blanco amarillento"
+msgstr "Жовтувато-білий"
 
 #: colournaming/experimentcol/forms.py:120
 #: colournaming/experimentcolbg/forms.py:120
 msgid "Describe the white graphic elements on your screen"
-msgstr "Describa los elementos gráficos blancos de su pantalla"
+msgstr "Опишіть відтінок білих графічних елементів на Вашому екрані"
 
 #: colournaming/experimentcol/forms.py:126
 #: colournaming/experimentcol/forms.py:137
 #: colournaming/experimentcolbg/forms.py:126
 #: colournaming/experimentcolbg/forms.py:137
 msgid "Dark"
-msgstr "Oscuro"
+msgstr "Темний"
 
 #: colournaming/experimentcol/forms.py:127
 #: colournaming/experimentcolbg/forms.py:127
 msgid "Dim"
-msgstr "Penumbra"
+msgstr "Погано освітлений"
 
 #: colournaming/experimentcol/forms.py:128
 #: colournaming/experimentcolbg/forms.py:128
 msgid "Average"
-msgstr "Normal"
+msgstr "Звичайний"
 
 #: colournaming/experimentcol/forms.py:129
 #: colournaming/experimentcolbg/forms.py:129
 msgid "Bright"
-msgstr "Luminoso"
+msgstr "Яскравий"
 
 #: colournaming/experimentcol/forms.py:131
 #: colournaming/experimentcolbg/forms.py:131
 msgid "Describe the surrounding environment behind your device"
-msgstr "Describa el entorno detrás de su pantalla"
+msgstr "Опишіть простір за Вашим екраном"
 
 #: colournaming/experimentcol/forms.py:138
 #: colournaming/experimentcolbg/forms.py:138
 msgid "Typical domestic"
-msgstr "Doméstica común"
+msgstr "Типове домашнє освітлення"
 
 #: colournaming/experimentcol/forms.py:139
 #: colournaming/experimentcolbg/forms.py:139
 msgid "Mid daylight"
-msgstr "Luz natural (media)"
+msgstr "Неяскраве денне освітлення"
 
 #: colournaming/experimentcol/forms.py:140
 #: colournaming/experimentcolbg/forms.py:140
 msgid "Full daylight"
-msgstr "Luz natural (completa)"
+msgstr "Яскраве денне освітлення"
 
 #: colournaming/experimentcol/forms.py:141
 #: colournaming/experimentcolbg/forms.py:141
 msgid "Typical office"
-msgstr "Oficina común"
+msgstr "Типове офісне освітлення"
 
 #: colournaming/experimentcol/forms.py:143
 #: colournaming/experimentcolbg/forms.py:143
 msgid "Describe the lighting conditions of your environment"
-msgstr "Describa las condiciones de iluminación de su entorno"
+msgstr "Опишіть умови освітлення, в яких Ви знаходитесь"
 
 #: colournaming/experimentcol/forms.py:151
 #: colournaming/experimentcol/forms.py:162
 #: colournaming/experimentcolbg/forms.py:151
 #: colournaming/experimentcolbg/forms.py:162
 msgid "What distance are you from your monitor in cm?"
-msgstr "¿A qué distancia en cms. está de su pantalla?"
+msgstr "На якій відстані від монітора Ви знаходитесь (см)?"
 
 #: colournaming/experimentcol/forms.py:161
 #: colournaming/experimentcolbg/forms.py:161
 #: colournaming/templates/colour_vision.html:12
 msgid "No"
-msgstr "No"
+msgstr "Ні"
 
 #: colournaming/experimentcol/forms.py:161
 #: colournaming/experimentcolbg/forms.py:161
 #: colournaming/templates/colour_vision.html:13
 msgid "Yes"
-msgstr "Sí"
+msgstr "Так"
 
 #: colournaming/experimentcol/views.py:176
 #: colournaming/experimentcolbg/views.py:188
 msgid "You are in the 0% top colour namers."
-msgstr "Está en el 0% superior de los mejores asignadores de nombres de color."
+msgstr "Ви серед 0% найкращих кольороназивачів."
 
 #: colournaming/home/forms.py:7
 msgid "First name"
-msgstr "Nombre"
+msgstr "Ім'я"
 
 #: colournaming/home/forms.py:8
 msgid "Last name"
-msgstr "Apellido"
+msgstr "Прізвище"
 
 #: colournaming/home/forms.py:9
 msgid "Email"
@@ -272,47 +272,47 @@ msgstr "Email"
 
 #: colournaming/home/forms.py:10
 msgid "Organisation"
-msgstr "Organización"
+msgstr "Організація"
 
 #: colournaming/home/forms.py:11
 msgid "Your message"
-msgstr "Su mensaje"
+msgstr "Ваше повідомлення"
 
 #: colournaming/namer/forms.py:17
 msgid "Do you agree?"
-msgstr "¿De acuerdo?"
+msgstr "Ви згодні?"
 
 #: colournaming/namer/forms.py:18
 msgid "Strongly disagree"
-msgstr "Completamente en desacuerdo"
+msgstr "Категорично не згоден"
 
 #: colournaming/namer/forms.py:19
 msgid "Disagree"
-msgstr "En desacuerdo"
+msgstr "Не згоден"
 
 #: colournaming/namer/forms.py:20
 msgid "Undecided"
-msgstr "Neutre"
+msgstr "Важко відповісти"
 
 #: colournaming/namer/forms.py:21
 msgid "Agree"
-msgstr "De acuerdo"
+msgstr "Згоден"
 
 #: colournaming/namer/forms.py:22
 msgid "Strongly agree"
-msgstr "Completamente de acuerdo"
+msgstr "Повністю згоден"
 
 #: colournaming/templates/base.html:13 colournaming/templates/index.html:12
 msgid "Colour Naming"
-msgstr "Nombrado de colores"
+msgstr "Називання кольору"
 
 #: colournaming/templates/base_experiment.html:8
 msgid "Colour Naming Experiment"
-msgstr "Experimento de nombrado de colores"
+msgstr "Експеримент з називання кольору"
 
 #: colournaming/templates/colour_vision.html:4
 msgid "Colour Vision Task"
-msgstr "Visión en color"
+msgstr "Перевірка кольорового зору"
 
 #: colournaming/templates/colour_vision.html:7
 msgid ""
@@ -321,42 +321,42 @@ msgid ""
 "all of the time. The movie lasts for 90 secs and all you need to do is "
 "play it and remember if the 'coloured' square disappeared at any time "
 "during the movie."
-msgstr "El siguiente video muestra un cuadrado 'coloreado' en movimiento. El cuadrado cambia de color a medida que se reproduce el video. Es posible que pueda ver el color durante todo o parte del tiempo. El video dura 90 segundos y todo lo que necesita hacer es reproducirlo y recordar si el cuadro 'coloreado' ha desaparecido en algún momento durante el video."
+msgstr "На відео нижче показано кольоровий рухомий квадрат, який змінює свій колір. Цей квадрат можна бачити час від часу або постійно. Відео триває 90 секунд. Ваше завдання – програти відео до кінця та виявити, чи зникав кольоровий квадрат на деякий час."
 
 #: colournaming/templates/colour_vision.html:9
 msgid "Did the 'coloured' square disappear?"
-msgstr "¿Ha desaparecido el cuadro 'coloreado'?"
+msgstr "Чи зникав кольоровий квадрат?"
 
 #: colournaming/templates/display_properties.html:4
 msgid "Display Properties Task"
-msgstr "Propiedades de la pantalla"
+msgstr "Налаштування параметрів дисплея"
 
 #: colournaming/templates/display_properties.html:7
 msgid ""
 "Adjust the brightness of your display if necessary until you can see the "
 "differences between all 11 steps of the greyscale test image. Disable "
 "Night Shift mode or blue light filters if applicable."
-msgstr "Ajuste el brillo de su pantalla si es necesario hasta que pueda ver las diferencias entre los 11 niveles de la escala de gris de la imagen de prueba. Deshabilite el modo nocturno o los filtros de luz azul si están activados."
+msgstr "За потреби, налаштуйте яскравість Вашого дисплея так, щоб Ви розрізняли всі 11 рівнів сірої шкали. Якщо Ви використовуєте нічний режим або фільтри синього кольору, то, будь ласка, вимкніть їх."
 
 #: colournaming/templates/display_properties.html:23
 msgid "Confirm how many steps you can see?"
-msgstr "Confirme, ¿cuántos niveles puede ver?"
+msgstr "Скільки рівнів Ви бачите?"
 
 #: colournaming/templates/index.html:20 colournaming/templates/index.html:48
 msgid "Colour namer"
-msgstr "Modelo de nombrar colores"
+msgstr "Називач кольору"
 
 #: colournaming/templates/index.html:23 colournaming/templates/index.html:99
 msgid "Research"
-msgstr "Investigación"
+msgstr "Дослідження"
 
 #: colournaming/templates/index.html:26 colournaming/templates/index.html:330
 msgid "Contact"
-msgstr "Contacto"
+msgstr "Контактна інформація"
 
 #: colournaming/templates/index.html:34
 msgid "Let's play a game, how many colours can you name?"
-msgstr "Vamos a jugar a un juego. ¿Cuántos colores puede nombrar?"
+msgstr "Пограймо у гру: скільки кольорів Ви зможете назвати?"
 
 #: colournaming/templates/index.html:36
 msgid ""
@@ -366,7 +366,7 @@ msgid ""
 "about your cultural background and viewing conditions. You are free to "
 "omit any question and you may withdraw at any time without penalty. "
 "Participation in this study is strictly anonymous and voluntary."
-msgstr "Bienvenido a Color Naming, un experimento en línea diseñado para recopilar nombres de colores en varios idiomas con sus correspondientes gamas de color. Se le pedirá que nombre una serie de muestras de color y proporcione información sobre sus antecedentes culturales y condiciones de visualización. Puede omitir cualquier pregunta y puede retirarse en cualquier momento sin penalización. La participación en este estudio es estrictamente anónima y voluntaria."
+msgstr "Запрошуємо до онлайн експерименту, метою якого є збір найменування кольорів різними мовами світу разом із відповідними колірними спектрами. Вам потрібно будете назвати ряд колірних зразків і відповісти на кілька запитань про Ваше етнічне походження та умови спостереження. Ви можете пропустити будь-яке запитання або перервати сеанс за бажанням. Участь в експерименті добровільна та повністю анонімна. Всі відповіді обробляються та аналізуються лише узагальнено."
 
 #: colournaming/templates/index.html:38
 msgid ""
@@ -376,7 +376,7 @@ msgid ""
 "Please feel free to contact the principal investigator <a "
 "href=\"mailto:dimitris.mylonas[at]nchlondon.ac.uk\">Dimitris Mylonas</a> "
 "if you have any questions."
-msgstr "Muchas personas consideran que las tareas de este estudio son agradables y creemos que no hay riesgos conocidos para los participantes. El propósito de esta investigación es mejorar la comunicación del color en entornos multilingües. Si tiene alguna pregunta, no dude en ponerse en contacto con el investigador principal <a href=\"mailto:d.mylonas[at]ucl.ac.uk\">Dimitris Mylonas</a>."
+msgstr "Брати участь у нашого експерименті цілком безпечно, та на думку багатьох учасників, цікаво. Метою цього дослідження є покращення колірної комунікації в багатомовному середовищі. Якщо у Вас виникли будь-які запитання, будь ласка, зв’яжіться з нашим провідним дослідником <a href=\"mailto:d.mylonas[at]ucl.ac.uk\">Дімітрісом Мілонас</a>."
 
 #: colournaming/templates/index.html:40
 msgid ""
@@ -384,11 +384,11 @@ msgid ""
 " consent to participate in the study, click on the 'Start' button to "
 "begin the experiment against a neutral grey background or the 'Chromatic "
 "Start' button to begin the experiment against chromatic backgrounds."
-msgstr "Si tiene 16 años de edad o más, comprende las instrucciones y consiente libremente en participar en el estudio, haga clic en el botón  "Comenzar gris" para comenzar el experimento con un fondo gris neutro o en el botón "Comenzar cromático" para comenzar el experimento con fondos cromáticos."
+msgstr "Якщо Вам виповнилося 16 років і Ви розумієте умови та згодні взяти участь у дослідженні, натисніть або кнопку "Сірий старт" — розпочати експеримент на нейтральному сірому тлі, або кнопку "Хроматичний старт" — розпочати експеримент на хроматичному тлі."
 
 #: colournaming/templates/index.html:42 colournaming/templates/index.html:43
 msgid "Start"
-msgstr "Comenzar"
+msgstr "Старт"
 
 #: colournaming/templates/index.html:50
 msgid ""
@@ -396,50 +396,50 @@ msgid ""
 "each colour in different languages (Mylonas, Stutters, Doval, and "
 "MacDonald, 2013). More languages will be added as more data is becoming "
 "available."
-msgstr "Este es un observador sintético entrenado con las respuestas de los participantes para nombrar cada color en diferentes idiomas (Mylonas, Stutters, Doval y MacDonald, 2013). Se agregarán más idiomas a medida que haya más datos disponibles."
+msgstr "Це штучностворений спостерігач, навчений на відповідях учасників називати кольори різними мовами (Mylonas, Stutters, Doval, and MacDonald, 2013). Із накопиченням даних кількість мов збільшуватиметься."
 
 #: colournaming/templates/index.html:65
 msgid "by name"
-msgstr "por nombre"
+msgstr "за назвою"
 
 #: colournaming/templates/index.html:74
 msgid "Colour name"
-msgstr "Nombre de color"
+msgstr "Назва кольору"
 
 #: colournaming/templates/index.html:76
 msgid "Synonyms"
-msgstr "Sinónimos"
+msgstr "Синоніми"
 
 #: colournaming/templates/index.html:95
 msgid ""
 "This is a βeta version of Colournamer. You will need JavaScript enabled "
 "and a browser that supports HTML5 web audio."
-msgstr "Esta es una versión βeta de Colournamer. Necesitará tener JavaScript habilitado y un navegador que admita audio web HTML5."
+msgstr "Це бета-версія Називача кольору. У Вас має бути увімкнена підтримка JavaScript та встановлений браузер із функцією HTML5 web audio."
 
 #: colournaming/templates/index.html:102
 msgid ""
 "This research aims to develop an online colour naming model to facilitate"
 " colour communication within and between cultures."
-msgstr "Esta investigación tiene como objetivo desarrollar un modelo de nombres de color en línea para facilitar la comunicación intra e intercultural del color."
+msgstr "Метою цього проєкту є розробка онлайн моделі назв кольорів для покращення міжкультурної комунікації."
 
 #: colournaming/templates/index.html:332
 msgid ""
 "Please use the following communication form to give us your feedback and "
 "comments or if you wish to inform you about the results of this research."
-msgstr "Utilice el siguiente formulario para darnos su opinión y comentarios o si desea información sobre los resultados de esta investigación."
+msgstr "Тут Ви можете залишити свої побажання та коментарі, а також отримати інформацію про результати експерименту."
 
 #: colournaming/templates/index.html:345
 #: colournaming/templates/observer_information.html:52
 msgid "Submit"
-msgstr "Enviar"
+msgstr "Надіслати"
 
 #: colournaming/templates/index.html:356
 msgid "Made in London and Berlin"
-msgstr "Hecho en Londres y Berlín"
+msgstr "Зроблено в Лондоні і Берліні"
 
 #: colournaming/templates/name_colour.html:4
 msgid "Colour Naming Task"
-msgstr "Nombrado de colores"
+msgstr "Називання кольору"
 
 #: colournaming/templates/name_colour.html:7
 msgid ""
@@ -453,34 +453,34 @@ msgstr ""
 
 #: colournaming/templates/name_colour.html:14
 msgid "Name the colour of the patch"
-msgstr "Nombre el color de la muestra"
+msgstr "Назвіть колір"
 
 #: colournaming/templates/name_colour.html:29
 msgid "Finish"
-msgstr "Finalizar"
+msgstr "Готово"
 
 #: colournaming/templates/observer_information.html:5
 msgid "Observer Information Task"
-msgstr "Información del observador"
+msgstr "Інформація про учасника"
 
 #: colournaming/templates/observer_information.html:8
 msgid ""
 "Please provide us with some information about your background and viewing"
 " conditions. This will help us to better understand the context of your "
 "responses."
-msgstr "Proporcione información sobre sus antecedentes y condiciones de visualización. Esto nos ayudará a comprender mejor el contexto de sus respuestas."
+msgstr "Будь ласка, розкажіть про себе та умови, в яких Ви проходили експеримент. Ця інформація допоможе нам краще зрозуміти Ваші відповіді."
 
 #: colournaming/templates/thankyou.html:5
 msgid "Thank you"
-msgstr "Gracias"
+msgstr "Дякуємо"
 
 #: colournaming/templates/thankyou.html:8
 msgid "Thank you for participating."
-msgstr "Gracias por participar."
+msgstr "Дякуємо за участь."
 
 #: colournaming/templates/thankyou.html:8
 msgid "You can now share the link of the experiment with your friends."
-msgstr "Ahora puede compartir el enlace del experimento con sus contactos."
+msgstr "Ви можете надіслати посилання на експеримент Вашим друзям."
 
 #: colournaming/templates/thankyou.html:14
 msgid ""
@@ -488,5 +488,5 @@ msgid ""
 "across languages. Please feel free to contact us and visit our research "
 "page for more information. Find below your responses in white and the "
 "most popular colour names in black:"
-msgstr "Sus respuestas se utilizarán para mejorar la comunicación del color intra y entre idiomas. No dude en contactarnos y visitar la página de nuestra investigación para obtener más información. Abajo puede encontrar sus respuestas en blanco y los nombres de color más populares en negro:"
+msgstr "Ваші відповіді будуть використані для того, щоб покращити колірну комунікацію між носіями різних мов. Для отримання детальнішої інформації Ви можете зв'язатися з нами або відвідати інтернет-сторінку нашого проєкту. Нижче Ви побачите свої відповіді (білим) та найпопулярніші найменування кольорів(чорним)."
 

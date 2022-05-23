@@ -1,204 +1,260 @@
 # Translations template for PROJECT.
-# Copyright (C) 2018 ORGANIZATION
+# Copyright (C) 2022 ORGANIZATION
 # This file is distributed under the same license as the PROJECT project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-03-08 22:44+0000\n"
+"POT-Creation-Date: 2022-05-19 18:57+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
+"Generated-By: Babel 2.9.1\n"
 
-#: colournaming/experiment/forms.py:32
+#: colournaming/experimentcol/forms.py:38
+#: colournaming/experimentcolbg/forms.py:38
 msgid "What is your age?"
 msgstr "Yaşınız"
 
-#: colournaming/experiment/forms.py:39
+#: colournaming/experimentcol/forms.py:45
+#: colournaming/experimentcolbg/forms.py:45
 msgid "Female"
 msgstr "Kadın"
 
-#: colournaming/experiment/forms.py:40
+#: colournaming/experimentcol/forms.py:46
+#: colournaming/experimentcolbg/forms.py:46
 msgid "Male"
 msgstr "Erkek"
 
-#: colournaming/experiment/forms.py:41
+#: colournaming/experimentcol/forms.py:47
+#: colournaming/experimentcolbg/forms.py:47
 msgid "Other"
 msgstr "Diğer"
 
-#: colournaming/experiment/forms.py:43
+#: colournaming/experimentcol/forms.py:49
+#: colournaming/experimentcolbg/forms.py:49
 msgid "To which gender do you most identify?"
 msgstr "Daha çok hangi cinsiyet kimliğiyle tanımlanıyorsunuz?"
 
-#: colournaming/experiment/forms.py:47
+#: colournaming/experimentcol/forms.py:52
+#: colournaming/experimentcolbg/forms.py:52
 msgid "Please specify"
 msgstr "Lütfen belirtiniz"
 
-#: colournaming/experiment/forms.py:53 colournaming/experiment/forms.py:63
+#: colournaming/experimentcol/forms.py:56
+#: colournaming/experimentcol/forms.py:66
+#: colournaming/experimentcolbg/forms.py:56
+#: colournaming/experimentcolbg/forms.py:66
 msgid "Beginner"
 msgstr "Başlangıç düzeyi"
 
-#: colournaming/experiment/forms.py:54 colournaming/experiment/forms.py:64
+#: colournaming/experimentcol/forms.py:57
+#: colournaming/experimentcol/forms.py:67
+#: colournaming/experimentcolbg/forms.py:57
+#: colournaming/experimentcolbg/forms.py:67
 msgid "Intermediate"
 msgstr "Orta düzey"
 
-#: colournaming/experiment/forms.py:55 colournaming/experiment/forms.py:65
+#: colournaming/experimentcol/forms.py:58
+#: colournaming/experimentcol/forms.py:68
+#: colournaming/experimentcolbg/forms.py:58
+#: colournaming/experimentcolbg/forms.py:68
 msgid "Advanced"
 msgstr "İleri düzey"
 
-#: colournaming/experiment/forms.py:57
+#: colournaming/experimentcol/forms.py:60
+#: colournaming/experimentcolbg/forms.py:60
 msgid "Describe your experience working with colour"
 msgstr "Renk kullanımı ile ilgili deneyiminizi tanımlayınız"
 
-#: colournaming/experiment/forms.py:66
+#: colournaming/experimentcol/forms.py:69
+#: colournaming/experimentcolbg/forms.py:69
 msgid "Bilingual"
 msgstr "İki dil bilen"
 
-#: colournaming/experiment/forms.py:67
+#: colournaming/experimentcol/forms.py:70
+#: colournaming/experimentcolbg/forms.py:70
 msgid "Native speaker"
 msgstr "Ana dilim"
 
-#: colournaming/experiment/forms.py:69
+#: colournaming/experimentcol/forms.py:72
+#: colournaming/experimentcolbg/forms.py:72
 msgid "Describe your skill in the language used in this experiment"
 msgstr "Deneyde kullanılan dildeki yeterliliğinizi tanımlayınız"
 
-#: colournaming/experiment/forms.py:75
+#: colournaming/experimentcol/forms.py:78
+#: colournaming/experimentcolbg/forms.py:78
 msgid "No qualifications"
 msgstr "Diplomasız"
 
-#: colournaming/experiment/forms.py:76
+#: colournaming/experimentcol/forms.py:79
+#: colournaming/experimentcolbg/forms.py:79
 msgid "Secondary school degree"
 msgstr "Lise mezunu"
 
-#: colournaming/experiment/forms.py:77
+#: colournaming/experimentcol/forms.py:80
+#: colournaming/experimentcolbg/forms.py:80
 msgid "Bachelors degree"
 msgstr "Lisans derecesi"
 
-#: colournaming/experiment/forms.py:78
+#: colournaming/experimentcol/forms.py:81
+#: colournaming/experimentcolbg/forms.py:81
 msgid "Masters degree"
 msgstr "Yüksek lisans derecesi"
 
-#: colournaming/experiment/forms.py:79
+#: colournaming/experimentcol/forms.py:82
+#: colournaming/experimentcolbg/forms.py:82
 msgid "Professional degree"
 msgstr "Profesyonel diploma"
 
-#: colournaming/experiment/forms.py:80
+#: colournaming/experimentcol/forms.py:83
+#: colournaming/experimentcolbg/forms.py:83
 msgid "Doctorate degree"
 msgstr "Doktora derecesi"
 
-#: colournaming/experiment/forms.py:82
+#: colournaming/experimentcol/forms.py:85
+#: colournaming/experimentcolbg/forms.py:85
 msgid "What is the highest level of education you have completed?"
 msgstr "Tamamladığınız en yüksek eğitim düzeyi nedir?"
 
-#: colournaming/experiment/forms.py:89
+#: colournaming/experimentcol/forms.py:93
+#: colournaming/experimentcolbg/forms.py:93
 msgid "In which country did you grow up?"
 msgstr "Hangi ülkede büyüdünüz?"
 
-#: colournaming/experiment/forms.py:94
+#: colournaming/experimentcol/forms.py:98
+#: colournaming/experimentcolbg/forms.py:98
 msgid "Where are you living?"
 msgstr "Nerede yaşıyorsunuz?"
 
-#: colournaming/experiment/forms.py:100
+#: colournaming/experimentcol/forms.py:104
+#: colournaming/experimentcolbg/forms.py:104
 msgid "Smartphone"
 msgstr "Akıllı telefon"
 
-#: colournaming/experiment/forms.py:101
+#: colournaming/experimentcol/forms.py:105
+#: colournaming/experimentcolbg/forms.py:105
 msgid "Pad"
 msgstr "Tablet"
 
-#: colournaming/experiment/forms.py:102
+#: colournaming/experimentcol/forms.py:106
+#: colournaming/experimentcolbg/forms.py:106
 msgid "Laptop"
 msgstr "Dizüstü"
 
-#: colournaming/experiment/forms.py:103
+#: colournaming/experimentcol/forms.py:107
+#: colournaming/experimentcolbg/forms.py:107
 msgid "Desktop"
 msgstr "Masaüstü"
 
-#: colournaming/experiment/forms.py:105
+#: colournaming/experimentcol/forms.py:109
+#: colournaming/experimentcolbg/forms.py:109
 msgid "What is your display device?"
 msgstr "Deneyi görüntülediğiz aygıt nedir?"
 
-#: colournaming/experiment/forms.py:111
+#: colournaming/experimentcol/forms.py:115
+#: colournaming/experimentcolbg/forms.py:115
 msgid "Neutral white"
 msgstr "Doğal beyaz"
 
-#: colournaming/experiment/forms.py:112
+#: colournaming/experimentcol/forms.py:116
+#: colournaming/experimentcolbg/forms.py:116
 msgid "Warm white"
 msgstr "Sıcak beyaz"
 
-#: colournaming/experiment/forms.py:113
+#: colournaming/experimentcol/forms.py:117
+#: colournaming/experimentcolbg/forms.py:117
 msgid "Bluish white"
 msgstr "Mavimsi beyaz"
 
-#: colournaming/experiment/forms.py:114
+#: colournaming/experimentcol/forms.py:118
+#: colournaming/experimentcolbg/forms.py:118
 msgid "Yellowish white"
 msgstr "Sarımsı beyaz"
 
-#: colournaming/experiment/forms.py:116
+#: colournaming/experimentcol/forms.py:120
+#: colournaming/experimentcolbg/forms.py:120
 msgid "Describe the white graphic elements on your screen"
 msgstr "Ekranınızdaki beyaz grafik ögeleri tanımlayınız"
 
-#: colournaming/experiment/forms.py:122 colournaming/experiment/forms.py:133
+#: colournaming/experimentcol/forms.py:126
+#: colournaming/experimentcol/forms.py:137
+#: colournaming/experimentcolbg/forms.py:126
+#: colournaming/experimentcolbg/forms.py:137
 msgid "Dark"
 msgstr "Karanlık"
 
-#: colournaming/experiment/forms.py:123
+#: colournaming/experimentcol/forms.py:127
+#: colournaming/experimentcolbg/forms.py:127
 msgid "Dim"
 msgstr "Loş"
 
-#: colournaming/experiment/forms.py:124
+#: colournaming/experimentcol/forms.py:128
+#: colournaming/experimentcolbg/forms.py:128
 msgid "Average"
 msgstr "Ortalama"
 
-#: colournaming/experiment/forms.py:125
+#: colournaming/experimentcol/forms.py:129
+#: colournaming/experimentcolbg/forms.py:129
 msgid "Bright"
 msgstr "Parlak"
 
-#: colournaming/experiment/forms.py:127
+#: colournaming/experimentcol/forms.py:131
+#: colournaming/experimentcolbg/forms.py:131
 msgid "Describe the surrounding environment behind your device"
 msgstr "Aygıtınızın arkasındaki çevre ortamını tanımlayınız"
 
-#: colournaming/experiment/forms.py:134
+#: colournaming/experimentcol/forms.py:138
+#: colournaming/experimentcolbg/forms.py:138
 msgid "Typical domestic"
 msgstr "Tipik konut aydınlatma"
 
-#: colournaming/experiment/forms.py:135
+#: colournaming/experimentcol/forms.py:139
+#: colournaming/experimentcolbg/forms.py:139
 msgid "Mid daylight"
 msgstr "Gün ortası günışığı"
 
-#: colournaming/experiment/forms.py:136
+#: colournaming/experimentcol/forms.py:140
+#: colournaming/experimentcolbg/forms.py:140
 msgid "Full daylight"
 msgstr "Tam günışığı"
 
-#: colournaming/experiment/forms.py:137
+#: colournaming/experimentcol/forms.py:141
+#: colournaming/experimentcolbg/forms.py:141
 msgid "Typical office"
 msgstr "Tipik ofis"
 
-#: colournaming/experiment/forms.py:139
+#: colournaming/experimentcol/forms.py:143
+#: colournaming/experimentcolbg/forms.py:143
 msgid "Describe the lighting conditions of your environment"
 msgstr "Bulunduğunuz ortamın aydınlatma koşullarını tanımlayınız"
 
-#: colournaming/experiment/forms.py:145 colournaming/experiment/forms.py:160
+#: colournaming/experimentcol/forms.py:151
+#: colournaming/experimentcol/forms.py:162
+#: colournaming/experimentcolbg/forms.py:151
+#: colournaming/experimentcolbg/forms.py:162
 msgid "What distance are you from your monitor in cm?"
 msgstr "Monitörünüzden kaç santimetre uzaktasınız?"
 
-#: colournaming/experiment/forms.py:157
+#: colournaming/experimentcol/forms.py:161
+#: colournaming/experimentcolbg/forms.py:161
 #: colournaming/templates/colour_vision.html:12
 msgid "No"
 msgstr "Hayır"
 
-#: colournaming/experiment/forms.py:158
+#: colournaming/experimentcol/forms.py:161
+#: colournaming/experimentcolbg/forms.py:161
 #: colournaming/templates/colour_vision.html:13
 msgid "Yes"
 msgstr "Evet"
 
-#: colournaming/experiment/views.py:166
+#: colournaming/experimentcol/views.py:176
+#: colournaming/experimentcolbg/views.py:188
 msgid "You are in the 0% top colour namers."
 msgstr "Renk adlandıranlar arasında %0 üst dilimindesiniz"
 
@@ -222,27 +278,27 @@ msgstr "Organizasyon"
 msgid "Your message"
 msgstr "Mesajınız"
 
-#: colournaming/namer/forms.py:18
+#: colournaming/namer/forms.py:17
 msgid "Do you agree?"
 msgstr "Katılıyor musunuz?"
 
-#: colournaming/namer/forms.py:19
+#: colournaming/namer/forms.py:18
 msgid "Strongly disagree"
 msgstr "Kesinlikle katılmıyorum"
 
-#: colournaming/namer/forms.py:20
+#: colournaming/namer/forms.py:19
 msgid "Disagree"
 msgstr "Katılmıyorum"
 
-#: colournaming/namer/forms.py:21
+#: colournaming/namer/forms.py:20
 msgid "Undecided"
 msgstr "Kararsızım"
 
-#: colournaming/namer/forms.py:22
+#: colournaming/namer/forms.py:21
 msgid "Agree"
 msgstr "Katılıyorum"
 
-#: colournaming/namer/forms.py:23
+#: colournaming/namer/forms.py:22
 msgid "Strongly agree"
 msgstr "Kesinlikle katılıyorum"
 
@@ -286,15 +342,15 @@ msgstr "Eğer gerekliyse, ekranınızın parlaklığını deneme görseli üzeri
 msgid "Confirm how many steps you can see?"
 msgstr "Kaç basamak görebildiğinizi onaylayınız?"
 
-#: colournaming/templates/index.html:20 colournaming/templates/index.html:45
+#: colournaming/templates/index.html:20 colournaming/templates/index.html:48
 msgid "Colour namer"
 msgstr "Renk Adlandırıcı"
 
-#: colournaming/templates/index.html:23 colournaming/templates/index.html:94
+#: colournaming/templates/index.html:23 colournaming/templates/index.html:99
 msgid "Research"
 msgstr "Araştırma"
 
-#: colournaming/templates/index.html:26 colournaming/templates/index.html:293
+#: colournaming/templates/index.html:26 colournaming/templates/index.html:330
 msgid "Contact"
 msgstr "İletişim"
 
@@ -318,24 +374,23 @@ msgid ""
 "there are no known risks to participants. The purpose of this research "
 "study is to improve colour communication in multilingual environments. "
 "Please feel free to contact the principal investigator <a "
-"href=\"mailto:d.mylonas[at]ucl.ac.uk\">Dimitris Mylonas</a> or the "
-"supervisors <a href=\"mailto:ucfslwm[at]ucl.ac.uk\">Lindsay MacDonald</a>"
-" and <a href=\"mailto:l.griffin[at]ucl.ac.uk\">Lewis Griffin</a> of "
-"University College London if you have any questions."
-msgstr "Daha önceki katılımcılarımızın bir çoğu bu çalışmanın aşamalarını eğlenceli buldu ve katılımcılar için bilinen bir riski olmadığına inanıyoruz. Çalışmanın amacı çok dilli ortamlarda renk iletişimini geliştirmektir. Eğer sorularınız olursa baş araştırmacı  <a href=\"mailto:d.mylonas[at]ucl.ac.uk\">Dimitris Mylonas</a> veya danışmanları <a href=\"mailto:ucfslwm[at]ucl.ac.uk\">Lindsay MacDonald</a> ve <a href=\"mailto:l.griffin[at]ucl.ac.uk\">Lewis Griffin</a> (University College London) ile iletişime geçmekten çekinmeyiniz."
+"href=\"mailto:dimitris.mylonas[at]nchlondon.ac.uk\">Dimitris Mylonas</a> "
+"if you have any questions."
+msgstr "Daha önceki katılımcılarımızın bir çoğu bu çalışmanın aşamalarını eğlenceli buldu ve katılımcılar için bilinen bir riski olmadığına inanıyoruz. Çalışmanın amacı çok dilli ortamlarda renk iletişimini geliştirmektir. Eğer sorularınız olursa baş araştırmacı  <a href=\"mailto:d.mylonas[at]ucl.ac.uk\">Dimitris Mylonas</a> ile iletişime geçmekten çekinmeyiniz."
 
 #: colournaming/templates/index.html:40
 msgid ""
 "If you are 16 years of age or older, understand the statements and freely"
 " consent to participate in the study, click on the 'Start' button to "
-"begin the experiment."
-msgstr "Eğer 16 yaşında veya daha büyükseniz, açıklamaları anladıysanız ve çalışmaya katılmaya kendi özgür iradenizle onay veriyorsanız, deneye başlamak için Başla butonuna tıklayınız."
+"begin the experiment against a neutral grey background or the 'Chromatic "
+"Start' button to begin the experiment against chromatic backgrounds."
+msgstr "Eğer 16 yaşında veya daha büyükseniz, açıklamaları anladıysanız ve çalışmaya katılmaya kendi özgür iradenizle onay veriyorsanız, deneye nötr gri bir arka plana karşı başlatmak için "Gri Başla" düğmesine veya deneye kromatik arka planlara karşı başlatmak için "Kromatik Başla" düğmesine tıklayın."
 
-#: colournaming/templates/index.html:41
+#: colournaming/templates/index.html:42 colournaming/templates/index.html:43
 msgid "Start"
 msgstr "Başla"
 
-#: colournaming/templates/index.html:47
+#: colournaming/templates/index.html:50
 msgid ""
 "This is a synthetic observer trained by participants’ responses to name "
 "each colour in different languages (Mylonas, Stutters, Doval, and "
@@ -343,42 +398,42 @@ msgid ""
 "available."
 msgstr "Bu sentetik izlemci, katılımcıların cevaplarıyla, her rengi değişik dillerde adlandırmak üzere oluşturulmuştur (Mylonas, Stutters, Doval, and MacDonald, 2013). Daha çok veri elde edildikçe daha çok dil eklenecektir."
 
-#: colournaming/templates/index.html:62
+#: colournaming/templates/index.html:65
 msgid "by name"
 msgstr "Adıyla"
 
-#: colournaming/templates/index.html:70
+#: colournaming/templates/index.html:74
 msgid "Colour name"
 msgstr "Renk Adı"
 
-#: colournaming/templates/index.html:72
+#: colournaming/templates/index.html:76
 msgid "Synonyms"
 msgstr "Eş anlamlılar"
 
-#: colournaming/templates/index.html:90
+#: colournaming/templates/index.html:95
 msgid ""
 "This is a βeta version of Colournamer. You will need JavaScript enabled "
 "and a browser that supports HTML5 web audio."
 msgstr "Bu Renk Adlandırıcının Beta versiyonudur. JavaScriptin devreye sokulmasına ve HTML5 web audioyu destekleyen bir tarayıcıya ihtiyacınız olacaktır"
 
-#: colournaming/templates/index.html:97
+#: colournaming/templates/index.html:102
 msgid ""
 "This research aims to develop an online colour naming model to facilitate"
 " colour communication within and between cultures."
 msgstr "Bu araştırma kültürlerin kendi içinde ve kültürler arasında renk iletişimini kolaylaştıran bir online renk adlandırma modeli geliştirmeyi hedeflemektedir."
 
-#: colournaming/templates/index.html:295
+#: colournaming/templates/index.html:332
 msgid ""
 "Please use the following communication form to give us your feedback and "
 "comments or if you wish to inform you about the results of this research."
 msgstr "Eğer bize geribildirimlerinizi ve yorumlarınızı göndermek veya bu araştırmanın sonuçlarıyla ilgili sizi bilgilendirmemizi isterseniz, lütfen aşağıdaki iletişim formunu kullanınız."
 
-#: colournaming/templates/index.html:308
+#: colournaming/templates/index.html:345
 #: colournaming/templates/observer_information.html:52
 msgid "Submit"
 msgstr "Gönder"
 
-#: colournaming/templates/index.html:319
+#: colournaming/templates/index.html:356
 msgid "Made in London and Berlin"
 msgstr "Londra'da ve Berlin'de yapılmıştır"
 
@@ -394,7 +449,7 @@ msgid ""
 "appear. Name as many colour samples (20+) as you can for higher ranking "
 "on colour namers. You will need to press the Finish button to start the "
 "next task. Your response time will be recorded."
-msgstr "Her renk numunesini, hatırlayabildiğiniz, numunedeki rengi en iyi tanımlayacak renk terimiyle adlandırınız.<br> Rengi adlandırdıktan sonra diğer rengin ekranda görünmesi için OK butonuna {&gt;} veya klavyenizdeki Enter tuşuna basınız. Renk adlandıranlar arasında daha yüksek bir sıralama için adlandırabileceğiniz en fazla sayıda renk numunesini adlandırınız (20+). Renkleri adlandırmayı bitirmek ve sonraki aşamaya başlamak için Sonraki butonuna basmanız gerekecektir. Cevap verme süreniz kaydedilecektir."
+msgstr ""
 
 #: colournaming/templates/name_colour.html:14
 msgid "Name the colour of the patch"
