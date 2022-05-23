@@ -1,5 +1,4 @@
 import csv
-import io
 from ..experimentcol.model import Participant
 from ..experimentcolbg.model import ParticipantColBG
 from ..namer.model import NameAgreement
@@ -69,10 +68,9 @@ PARTICIPANT_FIELDNAMES = [
 ]
 
 
-def get_responses():
+def get_responses(fh):
     participants = Participant.query.all()
-    output = io.StringIO()
-    output_csv = csv.DictWriter(output, RESPONSE_FIELDNAMES, restval="NA", dialect="unix")
+    output_csv = csv.DictWriter(fh, RESPONSE_FIELDNAMES, restval="NA", dialect="unix")
     output_csv.writeheader()
     for participant in participants:
         for response in participant.responses:
@@ -89,7 +87,6 @@ def get_responses():
                     "name": response.name,
                 }
             )
-    return output.getvalue().strip()
 
 
 def get_agreements():
