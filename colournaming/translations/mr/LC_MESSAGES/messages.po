@@ -449,7 +449,7 @@ msgid ""
 "appear. Name as many colour samples (20+) as you can for higher ranking "
 "on colour namers. You will need to press the Finish button to start the "
 "next task. Your response time will be recorded."
-msgstr ""
+msgstr "प्रत्येक रंगाचे आपणास माहिती असलेले नाव अथवा त्यातल्यात्यात जवळचे नाव लिहा. रंगाचे नाव लिहून झाल्यावर बाणाचे चिन्ह अथवा "enter" दाबा. अशाने पुढचा रंग समोर येईल. आपणास शक्य तितक्या रंगांचे नाव ओळखण्याचा प्रयत्न करा. आपणास पुढील प्रयोग सुरु कर्णयसाठी "शेवट" वर क्लिक करावे लागेल. आपण प्रतिसाद देण्यासाठी घेतलेल्या वेळाची नोंद होईल."
 
 #: colournaming/templates/name_colour.html:14
 msgid "Name the colour of the patch"

@@ -449,7 +449,7 @@ msgid ""
 "appear. Name as many colour samples (20+) as you can for higher ranking "
 "on colour namers. You will need to press the Finish button to start the "
 "next task. Your response time will be recorded."
-msgstr ""
+msgstr "Назовите цвет, используя наиболее подходящее цветообозначение. <br>После того, как Вы запишете выбранное название цвета, нажмите кнопку со стрелкой [&gt;] или клавишу "Ввод", чтобы появился следующий цветовой образец. Назовите как можно больше цветовых образцов (20+), чтобы получить более высокий статус среди назывателей цвета. Чтобы закончить называть цвета и перейти к следующему заданию,  нужно будет нажать кнопку "конец". Скорость Ваших ответов будет записываться."
 
 #: colournaming/templates/name_colour.html:14
 msgid "Name the colour of the patch"

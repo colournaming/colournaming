@@ -449,7 +449,7 @@ msgid ""
 "appear. Name as many colour samples (20+) as you can for higher ranking "
 "on colour namers. You will need to press the Finish button to start the "
 "next task. Your response time will be recorded."
-msgstr ""
+msgstr "Asigne un nombre a cada muestra de color con el mejor término de color representativo que recuerde. <br>Presione el botón de flecha [&gt;] o Enter en su teclado una vez haya terminado de nombrar el color para que aparezca la siguiente muestra de color. Nombre tantas muestras de color (20+) como pueda para obtener una mejor clasificación como etiquetador de colores. Deberá presionar el botón Finalizar para comenzar la siguiente tarea. Su tiempo de respuesta será registrado."
 
 #: colournaming/templates/name_colour.html:14
 msgid "Name the colour of the patch"
