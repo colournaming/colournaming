@@ -1,6 +1,5 @@
 """Views for the namer."""
 
-import json
 from flask import (
     Blueprint,
     jsonify,
