@@ -12,7 +12,7 @@ A local instance of the app can be launched using Docker Compose:
     docker-compose up -d postgres
     docker-compose run --rm web initdb
     docker-compose run --rm web import-centroids /path/to/dataset_en.csv English en
-    docker-compose run --rm web import-targets /path/to/targets.csv
+    docker-compose run --rm web import-col-targets /path/to/targets.csv
     docker-compose up web
 
 Under Linux the app can now be accessed at
