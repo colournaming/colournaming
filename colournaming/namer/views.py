@@ -34,6 +34,20 @@ def colours(lang_code):
     return jsonify(controller.colour_list(lang))
 
 
+@bp.route("/lang/<lang_code>/colours/<colour>")
+def rgb_from_colour(lang_code, colour):
+    try:
+        lang = Language.query.filter(Language.code == lang_code).one()
+    except NoResultFound:
+        abort(404)
+    colours = controller.colour_list(lang)
+    matches = [c for c in colours if colour == c["name"] or colour == c["code"]]
+    if matches:
+        return jsonify(matches[0])
+    else:
+        abort(404)
+
+
 @bp.route("/colours")
 def get_colours():
     return colours(request.args.get("lang"))
