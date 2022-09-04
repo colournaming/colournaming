@@ -9,7 +9,15 @@ from flask import (
     session,
     url_for,
 )
-from .controller import get_agreements, get_responses, get_participants
+from .controller import (
+    get_agreements,
+    get_responses,
+    get_participants,
+    get_colbg_responses,
+    get_colbg_participants,
+    get_mturk_responses,
+    get_mturk_participants,
+)
 from .forms import LoginForm
 
 bp = Blueprint("admin", __name__)
@@ -60,3 +68,35 @@ def show_agreements():
     if not session.get("admin_logged_in", False):
         return redirect(url_for(".login"))
     return Response(get_agreements(), mimetype="text/csv")
+
+
+@bp.route("/colbg_responses.csv")
+def show_colbg_responses():
+    """Return colour background experiment responses as CSV."""
+    if not session.get("admin_logged_in", False):
+        return redirect(url_for(".login"))
+    return Response(get_colbg_responses(), mimetype="text/csv")
+
+
+@bp.route("/colbg_participants.csv")
+def show_colbg_participants():
+    """Return colour background participants as CSV."""
+    if not session.get("admin_logged_in", False):
+        return redirect(url_for(".login"))
+    return Response(get_colbg_participants(), mimetype="text/csv")
+
+
+@bp.route("/mturk_responses.csv")
+def show_mturk_responses():
+    """Return Mechanical Turk experiment responses as CSV."""
+    if not session.get("admin_logged_in", False):
+        return redirect(url_for(".login"))
+    return Response(get_mturk_responses(), mimetype="text/csv")
+
+
+@bp.route("/mturk_participants.csv")
+def show_mturk_participants():
+    """Return Mechanical Turk participants as CSV."""
+    if not session.get("admin_logged_in", False):
+        return redirect(url_for(".login"))
+    return Response(get_mturk_participants(), mimetype="text/csv")

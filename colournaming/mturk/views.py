@@ -3,6 +3,7 @@
 from datetime import datetime
 from functools import wraps, update_wrapper
 from flask import (
+    abort,
     Blueprint,
     jsonify,
     redirect,
@@ -13,16 +14,22 @@ from flask import (
     make_response,
 )
 from flask_babel import lazy_gettext, get_locale
+
+from colournaming.mturk.exceptions import MTurkIDNotFound
 from . import controller, forms
 from .. import lang_is_rtl
 
-bp = Blueprint("experimentcol", __name__)
+bp = Blueprint("mturk", __name__)
 
 
 def check_in_experiment():
     """Redirect to the start of the experiment if the session is not initialized."""
     if "experiment" not in session:
-        return redirect(url_for("experimentcol.start"))
+        return redirect(url_for("mturk.start"))
+
+
+def rgb_tuple_to_css_rgb(background):
+    return "rgb({0}, {1}, {2})".format(*background)
 
 
 def nocache(view):
@@ -40,23 +47,37 @@ def nocache(view):
     return update_wrapper(func, view)
 
 
-@bp.route("/")
-def start():
+@bp.route("/<mturk_id>")
+def start(mturk_id):
     """Show the experiment start page."""
-    print("resetting experiment")
     try:
         browser_language = request.accept_languages[0][0]
     except IndexError:
         browser_language = None
+    try:
+        background_id, background_colour = controller.get_random_background()
+    except IndexError:
+        abort(500, "No backgrounds have been imported")
+    try:
+        mturk_task = controller.get_mturk_task_by_id(mturk_id)
+    except MTurkIDNotFound:
+        abort(404, "Unknown participant ID")
+    except Exception:
+        abort(500)
+    if mturk_task.participant is not None:
+        abort(500, "Task already completed")
     session["experiment"] = {
         "client": {
             "user_agent": request.user_agent.string,
             "browser_language": browser_language,
             "interface_language": session.get("interface_language", browser_language),
         },
+        "task_id": mturk_task.task_id,
         "response_count": 0,
+        "background_id": background_id,
+        "background_colour": background_colour,
     }
-    return redirect(url_for("experimentcol.display_properties"))
+    return redirect(url_for("mturk.display_properties"))
 
 
 @bp.route("/display_properties.html", methods=["GET", "POST"])
@@ -73,11 +94,17 @@ def display_properties():
         }
         session["experiment"]["participant_id"] = controller.save_participant(session["experiment"])
         session.modified = True
-        return redirect(url_for("experimentcol.colour_vision"))
+        print(session)
+        return redirect(url_for("mturk.colour_vision"))
     if form.errors:
         for field, error in form.errors.items():
             print(field, error)
-    return render_template("display_properties.html", rtl=lang_is_rtl(get_locale()), form=form)
+    return render_template(
+        "display_properties.html",
+        background_colour=rgb_tuple_to_css_rgb(session["experiment"]["background_colour"]),
+        rtl=lang_is_rtl(get_locale()),
+        form=form,
+    )
 
 
 @bp.route("/colour_vision.html", methods=["GET", "POST"])
@@ -90,11 +117,16 @@ def colour_vision():
         session["experiment"]["vision"] = {"square_disappeared": form.square_disappeared.data}
         session.modified = True
         print(session)
-        return jsonify({"success": True, "url": url_for("experimentcol.name_colour")})
+        return jsonify({"success": True, "url": url_for("experimentcolbg.name_colour")})
     if form.errors:
         for field, error in form.errors.items():
             print(field, error)
-    return render_template("colour_vision.html", form=form, rtl=lang_is_rtl(get_locale()))
+    return render_template(
+        "colour_vision.html",
+        background_colour=rgb_tuple_to_css_rgb(session["experiment"]["background_colour"]),
+        form=form,
+        rtl=lang_is_rtl(get_locale()),
+    )
 
 
 @bp.route("/name_colour.html", methods=["GET", "POST"])
@@ -118,8 +150,8 @@ def name_colour():
             print(field, error)
     return render_template(
         "name_colour.html",
-        get_target_url=url_for("experimentcol.get_target"),
-        background_colour="rgb(128, 128, 128)",
+        get_target_url=url_for("experimentcolbg.get_target"),
+        background_colour=rgb_tuple_to_css_rgb(session["experiment"]["background_colour"]),
         form=form,
         rtl=lang_is_rtl(get_locale()),
     )
@@ -129,7 +161,10 @@ def name_colour():
 @nocache
 def get_target():
     """Get a random colour target to name."""
-    target = controller.get_random_target()
+    try:
+        target = controller.get_random_target()
+    except IndexError:
+        abort(500, "No targets have been imported")
     return jsonify({"id": target.id, "r": target.red, "g": target.green, "b": target.blue})
 
 
@@ -158,11 +193,16 @@ def observer_information():
         }
         session.modified = True
         controller.update_participant(session["experiment"])
-        return redirect(url_for("experimentcol.thankyou"))
+        return redirect(url_for("mturk.thankyou"))
     if form.errors:
         for field, error in form.errors.items():
             print(field, repr(getattr(form, field).data), error)
-    return render_template("observer_information.html", form=form, rtl=lang_is_rtl(get_locale()))
+    return render_template(
+        "observer_information.html",
+        form=form,
+        background_colour=rgb_tuple_to_css_rgb(session["experiment"]["background_colour"]),
+        rtl=lang_is_rtl(get_locale()),
+    )
 
 
 @bp.route("/thankyou.html")
@@ -176,5 +216,11 @@ def thankyou():
     top_namers_msg = lazy_gettext("You are in the 0% top colour namers.")
     top_namers_msg = top_namers_msg.replace("0%", "{0:.0f}%".format(perc))
     return render_template(
-        "thankyou.html", top_namers=top_namers_msg, rtl=lang_is_rtl(get_locale())
+        "thankyou.html",
+        mturk_completion=controller.get_mturk_task_by_id(
+            session["experiment"]["task_id"]
+        ).completion_id,
+        top_namers=top_namers_msg,
+        background_colour=rgb_tuple_to_css_rgb(session["experiment"]["background_colour"]),
+        rtl=lang_is_rtl(get_locale()),
     )
