@@ -161,12 +161,14 @@ def register_blueprints(app):
     from colournaming.experimentcol.views import bp as experimentcol_module
     from colournaming.experimentcolbg.views import bp as experimentcolbg_module
     from colournaming.admin.views import bp as admin_module
+    from colournaming.mturk.views import bp as mturk_module
 
     app.register_blueprint(home_module, url_prefix="/")
     app.register_blueprint(namer_module, url_prefix="/namer")
     app.register_blueprint(experimentcol_module, url_prefix="/experimentcol")
     app.register_blueprint(experimentcolbg_module, url_prefix="/experimentcolbg")
     app.register_blueprint(admin_module, url_prefix="/admin")
+    app.register_blueprint(mturk_module, url_prefix="/mturk")
 
 
 def setup_logging(app):
