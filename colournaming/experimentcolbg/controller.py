@@ -17,12 +17,7 @@ def read_targets_from_file(targets_file, delete_existing=False):
         red = int(t["R"])
         green = int(t["G"])
         blue = int(t["B"])
-        tdb = ColourTargetColBG(
-            id=id,
-            red=red,
-            green=green,
-            blue=blue
-        )
+        tdb = ColourTargetColBG(id=id, red=red, green=green, blue=blue)
         db.session.add(tdb)
     db.session.commit()
 
@@ -37,12 +32,7 @@ def read_backgrounds_from_file(targets_file, delete_existing=False):
         red = int(t["R"])
         green = int(t["G"])
         blue = int(t["B"])
-        tdb = BackgroundColour(
-            id=id,
-            red=red,
-            green=green,
-            blue=blue
-        )
+        tdb = BackgroundColour(id=id, red=red, green=green, blue=blue)
         db.session.add(tdb)
     db.session.commit()
 
@@ -120,7 +110,7 @@ def save_response(experiment, response):
         target_id=response["target_id"],
         name=response["name"],
         response_time=response["response_time"],
-        background_id=experiment["background_id"]
+        background_id=experiment["background_id"],
     )
     db.session.add(colour_response)
     db.session.commit()

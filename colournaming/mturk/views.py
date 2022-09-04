@@ -75,7 +75,7 @@ def start(mturk_id):
         "task_id": mturk_task.task_id,
         "response_count": 0,
         "background_id": background_id,
-        "background_colour": background_colour
+        "background_colour": background_colour,
     }
     return redirect(url_for("mturk.display_properties"))
 
@@ -103,7 +103,7 @@ def display_properties():
         "display_properties.html",
         background_colour=rgb_tuple_to_css_rgb(session["experiment"]["background_colour"]),
         rtl=lang_is_rtl(get_locale()),
-        form=form
+        form=form,
     )
 
 
@@ -125,7 +125,7 @@ def colour_vision():
         "colour_vision.html",
         background_colour=rgb_tuple_to_css_rgb(session["experiment"]["background_colour"]),
         form=form,
-        rtl=lang_is_rtl(get_locale())
+        rtl=lang_is_rtl(get_locale()),
     )
 
 
@@ -153,7 +153,7 @@ def name_colour():
         get_target_url=url_for("experimentcolbg.get_target"),
         background_colour=rgb_tuple_to_css_rgb(session["experiment"]["background_colour"]),
         form=form,
-        rtl=lang_is_rtl(get_locale())
+        rtl=lang_is_rtl(get_locale()),
     )
 
 
@@ -201,7 +201,7 @@ def observer_information():
         "observer_information.html",
         form=form,
         background_colour=rgb_tuple_to_css_rgb(session["experiment"]["background_colour"]),
-        rtl=lang_is_rtl(get_locale())
+        rtl=lang_is_rtl(get_locale()),
     )
 
 
@@ -222,5 +222,5 @@ def thankyou():
         ).completion_id,
         top_namers=top_namers_msg,
         background_colour=rgb_tuple_to_css_rgb(session["experiment"]["background_colour"]),
-        rtl=lang_is_rtl(get_locale())
+        rtl=lang_is_rtl(get_locale()),
     )

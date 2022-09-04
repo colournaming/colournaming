@@ -10,9 +10,13 @@ from flask import (
     url_for,
 )
 from .controller import (
-    get_agreements, get_responses, get_participants,
-    get_colbg_responses, get_colbg_participants,
-    get_mturk_responses, get_mturk_participants
+    get_agreements,
+    get_responses,
+    get_participants,
+    get_colbg_responses,
+    get_colbg_participants,
+    get_mturk_responses,
+    get_mturk_participants,
 )
 from .forms import LoginForm
 

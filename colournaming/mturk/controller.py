@@ -21,12 +21,7 @@ def read_targets_from_file(targets_file, delete_existing=False):
         red = int(t["R"])
         green = int(t["G"])
         blue = int(t["B"])
-        tdb = ColourTargetColBG(
-            id=id,
-            red=red,
-            green=green,
-            blue=blue
-        )
+        tdb = ColourTargetColBG(id=id, red=red, green=green, blue=blue)
         db.session.add(tdb)
     db.session.commit()
 
@@ -41,21 +36,14 @@ def read_backgrounds_from_file(targets_file, delete_existing=False):
         red = int(t["R"])
         green = int(t["G"])
         blue = int(t["B"])
-        tdb = BackgroundColour(
-            id=id,
-            red=red,
-            green=green,
-            blue=blue
-        )
+        tdb = BackgroundColour(id=id, red=red, green=green, blue=blue)
         db.session.add(tdb)
     db.session.commit()
 
 
 def get_random_colour(colour_class):
     """Get a random colour target or background."""
-    max_presentation_count = db.session.query(
-        func.max(colour_class.presentation_count)
-    ).scalar()
+    max_presentation_count = db.session.query(func.max(colour_class.presentation_count)).scalar()
     if max_presentation_count is None:
         max_presentation_count = 0
     targets = ColourTargetColBG.query.filter(
@@ -119,7 +107,7 @@ def save_participant(experiment):
             screen_resolution_w=experiment["display"]["screen_width"],
             screen_resolution_h=experiment["display"]["screen_height"],
             screen_colour_depth=experiment["display"]["screen_colour_depth"],
-            task_id=mturk_task.id
+            task_id=mturk_task.id,
         )
         db.session.add(participant)
         db.session.commit()
@@ -138,7 +126,7 @@ def save_response(experiment, response):
         target_id=response["target_id"],
         name=response["name"],
         response_time=response["response_time"],
-        background_id=experiment["background_id"]
+        background_id=experiment["background_id"],
     )
     db.session.add(colour_response)
     db.session.commit()

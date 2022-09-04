@@ -118,10 +118,10 @@ def name_colour():
             print(field, error)
     return render_template(
         "name_colour.html",
-        get_target_url=url_for('experimentcol.get_target'),
+        get_target_url=url_for("experimentcol.get_target"),
         background_colour="rgb(128, 128, 128)",
         form=form,
-        rtl=lang_is_rtl(get_locale())
+        rtl=lang_is_rtl(get_locale()),
     )
 
 
