@@ -140,7 +140,7 @@ def setup_cli(app):
         """Create a new Mechanical Turk task."""
         new_tasks = create_mturk_task(count=count)
         for task in new_tasks:
-            print(task.task_id)
+            print(task.task_id, task.completion_id, sep=",")
 
     @app.cli.command()
     def initdb():
