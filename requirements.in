@@ -13,3 +13,4 @@ gunicorn
 user-agents
 psycopg2-binary
 pytest
+pydantic

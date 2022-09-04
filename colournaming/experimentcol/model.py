@@ -1,7 +1,11 @@
 """Database models used in the colour response experiment."""
 
 import datetime
+from typing import Optional
+
+from pydantic import BaseModel
 from sqlalchemy.dialects import postgresql
+
 from ..database import (
     AmbientLight,
     Device,
@@ -14,6 +18,25 @@ from ..database import (
     ColourExperience,
     db,
 )
+
+
+class ExperimentClient(BaseModel):
+    user_agent: str
+    browser_language: str
+    interface_language: str
+
+
+class ExperimentDisplay(BaseModel):
+    greyscale_levels: int
+    screen_width: int
+    screen_height: int
+    screen_colour_depth: int
+
+
+class ExperimentRecord(BaseModel):
+    client: ExperimentClient
+    response_count: int = 0    
+    display: ExperimentDisplay
 
 
 class Participant(db.Model):
