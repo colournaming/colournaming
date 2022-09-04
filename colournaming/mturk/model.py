@@ -24,7 +24,7 @@ class MturkTask(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     task_id = db.Column(db.String, unique=True, default=secrets.token_urlsafe)
     completion_id = db.Column(db.String, unique=True, default=secrets.token_urlsafe)
-    partipant = db.relationship("MturkParticipantColBG", back_populates="task", uselist=False)
+    participant = db.relationship("MturkParticipantColBG", back_populates="task", uselist=False)
 
 
 class MturkParticipantColBG(db.Model):

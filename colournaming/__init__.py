@@ -16,6 +16,7 @@ from .experimentcolbg.controller import (
     read_backgrounds_from_file,
     read_targets_from_file as read_colbg_targets_from_file
 )
+from .mturk.controller import create_mturk_task
 from .namer.controller import read_centroids_from_file, instantiate_namers
 
 
@@ -132,6 +133,14 @@ def setup_cli(app):
     def export_colbg_participants(filename):
         """Export coloured background participants to CSV."""
         admin.controller.get_colbg_participants(filename)
+
+    @app.cli.command()
+    @click.option("--count", "-c", type=int, default=1, help="How many tasks to create")
+    def new_mturk_task(count):
+        """Create a new Mechanical Turk task."""
+        new_tasks = create_mturk_task(count=count)
+        for task in new_tasks:
+            print(task.task_id)
 
     @app.cli.command()
     def initdb():

@@ -2,9 +2,12 @@
 
 import csv
 import random
+from sqlalchemy.orm.exc import NoResultFound
 from sqlalchemy.sql.expression import func
+
+from colournaming.mturk.exceptions import MTurkIDNotFound
 from ..database import db
-from .model import MturkParticipantColBG, MturkColourResponseColBG
+from .model import MturkTask, MturkParticipantColBG, MturkColourResponseColBG
 from ..experimentcolbg.model import BackgroundColour, ColourTargetColBG
 
 
@@ -67,6 +70,24 @@ def get_random_colour(colour_class):
     return random.choice(targets)
 
 
+def create_mturk_task(count=1):
+    new_tasks = []
+    for _ in range(count):
+        task = MturkTask()
+        db.session.add(task)
+        new_tasks.append(task)
+    db.session.commit()
+    return new_tasks
+
+
+def get_mturk_task_by_id(mturk_id):
+    try:
+        task = MturkTask.query.filter(MturkTask.task_id == mturk_id).one()
+    except NoResultFound:
+        return MTurkIDNotFound
+    return task
+
+
 def get_random_target():
     """Get a random colour target."""
     return get_random_colour(ColourTargetColBG)
@@ -88,6 +109,7 @@ def save_participant(experiment):
     """Create a new participant record in the database."""
     print("trying to save", experiment)
     participant_id = experiment.get("participant_id")
+    mturk_task = get_mturk_task_by_id(experiment["task_id"])
     if participant_id is None:
         participant = MturkParticipantColBG(
             browser_language=experiment["client"]["browser_language"],
@@ -97,6 +119,7 @@ def save_participant(experiment):
             screen_resolution_w=experiment["display"]["screen_width"],
             screen_resolution_h=experiment["display"]["screen_height"],
             screen_colour_depth=experiment["display"]["screen_colour_depth"],
+            task_id=mturk_task.id
         )
         db.session.add(participant)
         db.session.commit()

@@ -14,6 +14,8 @@ from flask import (
     make_response,
 )
 from flask_babel import lazy_gettext, get_locale
+
+from colournaming.mturk.exceptions import MTurkIDNotFound
 from . import controller, forms
 from .. import lang_is_rtl
 
@@ -45,10 +47,9 @@ def nocache(view):
     return update_wrapper(func, view)
 
 
-@bp.route("/")
-def start():
+@bp.route("/<mturk_id>")
+def start(mturk_id):
     """Show the experiment start page."""
-    print("resetting experiment")
     try:
         browser_language = request.accept_languages[0][0]
     except IndexError:
@@ -57,12 +58,21 @@ def start():
         background_id, background_colour = controller.get_random_background()
     except IndexError:
         abort(500, "No backgrounds have been imported")
+    try:
+        mturk_task = controller.get_mturk_task_by_id(mturk_id)
+    except MTurkIDNotFound:
+        abort(404, "Unknown participant ID")
+    except Exception:
+        abort(500)
+    if mturk_task.participant is not None:
+        abort(500, "Task already completed")
     session["experiment"] = {
         "client": {
             "user_agent": request.user_agent.string,
             "browser_language": browser_language,
             "interface_language": session.get("interface_language", browser_language),
         },
+        "task_id": mturk_task.task_id,
         "response_count": 0,
         "background_id": background_id,
         "background_colour": background_colour
@@ -84,6 +94,7 @@ def display_properties():
         }
         session["experiment"]["participant_id"] = controller.save_participant(session["experiment"])
         session.modified = True
+        print(session)
         return redirect(url_for("mturk.colour_vision"))
     if form.errors:
         for field, error in form.errors.items():
@@ -206,6 +217,9 @@ def thankyou():
     top_namers_msg = top_namers_msg.replace("0%", "{0:.0f}%".format(perc))
     return render_template(
         "thankyou.html",
+        mturk_completion=controller.get_mturk_task_by_id(
+            session["experiment"]["task_id"]
+        ).completion_id,
         top_namers=top_namers_msg,
         background_colour=rgb_tuple_to_css_rgb(session["experiment"]["background_colour"]),
         rtl=lang_is_rtl(get_locale())

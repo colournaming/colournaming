@@ -1,0 +1,2 @@
+class MTurkIDNotFound(Exception):
+    pass
