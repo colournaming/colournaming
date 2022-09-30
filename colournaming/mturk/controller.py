@@ -46,7 +46,7 @@ def get_random_colour(colour_class):
     max_presentation_count = db.session.query(func.max(colour_class.presentation_count)).scalar()
     if max_presentation_count is None:
         max_presentation_count = 0
-    targets = ColourTargetColBG.query.filter(
+    targets = colour_class.query.filter(
         colour_class.presentation_count < max_presentation_count
     ).all()
     if len(targets) == 0:
@@ -58,14 +58,16 @@ def get_random_colour(colour_class):
     return random.choice(targets)
 
 
-def create_mturk_task(count=1):
-    new_tasks = []
-    for _ in range(count):
-        task = MturkTask()
-        db.session.add(task)
-        new_tasks.append(task)
+def create_mturk_task():
+    task = MturkTask()
+    db.session.add(task)
     db.session.commit()
-    return new_tasks
+    return task
+
+
+def list_mturk_tasks():
+    tasks = MturkTask.query.all()
+    return tasks
 
 
 def get_mturk_task_by_id(mturk_id):
@@ -84,6 +86,7 @@ def get_random_target():
 def get_random_background():
     """Get a random colour background."""
     target = get_random_colour(BackgroundColour)
+    print("random background is", target)
     return target.id, (target.red, target.green, target.blue)
 
 
@@ -128,6 +131,7 @@ def save_response(experiment, response):
         response_time=response["response_time"],
         background_id=experiment["background_id"],
     )
+    print(colour_response)
     db.session.add(colour_response)
     db.session.commit()
 

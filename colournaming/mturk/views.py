@@ -15,7 +15,6 @@ from flask import (
 )
 from flask_babel import lazy_gettext, get_locale
 
-from colournaming.mturk.exceptions import MTurkIDNotFound
 from . import controller, forms
 from .. import lang_is_rtl
 
@@ -47,8 +46,8 @@ def nocache(view):
     return update_wrapper(func, view)
 
 
-@bp.route("/<mturk_id>")
-def start(mturk_id):
+@bp.route("/")
+def start():
     """Show the experiment start page."""
     try:
         browser_language = request.accept_languages[0][0]
@@ -58,14 +57,7 @@ def start(mturk_id):
         background_id, background_colour = controller.get_random_background()
     except IndexError:
         abort(500, "No backgrounds have been imported")
-    try:
-        mturk_task = controller.get_mturk_task_by_id(mturk_id)
-    except MTurkIDNotFound:
-        abort(404, "Unknown participant ID")
-    except Exception:
-        abort(500)
-    if mturk_task.participant is not None:
-        abort(500, "Task already completed")
+    mturk_task = controller.create_mturk_task()
     session["experiment"] = {
         "client": {
             "user_agent": request.user_agent.string,
@@ -94,7 +86,6 @@ def display_properties():
         }
         session["experiment"]["participant_id"] = controller.save_participant(session["experiment"])
         session.modified = True
-        print(session)
         return redirect(url_for("mturk.colour_vision"))
     if form.errors:
         for field, error in form.errors.items():
@@ -145,12 +136,18 @@ def name_colour():
         )
         session["experiment"]["response_count"] += 1
         session.modified = True
+        print("session:", session["experiment"])
+        if session["experiment"]["response_count"] >= 10:
+            print("redirecting to observer information", session["experiment"]["response_count"])
+            return redirect(url_for("mturk.colour_vision"))
+        else:
+            print("not redirecting", session["experiment"]["response_count"])
     if form.errors:
         for field, error in form.errors.items():
             print(field, error)
     return render_template(
         "name_colour.html",
-        get_target_url=url_for("experimentcolbg.get_target"),
+        get_target_url=url_for("mturk.get_target"),
         background_colour=rgb_tuple_to_css_rgb(session["experiment"]["background_colour"]),
         form=form,
         rtl=lang_is_rtl(get_locale()),
