@@ -108,7 +108,7 @@ def colour_vision():
         session["experiment"]["vision"] = {"square_disappeared": form.square_disappeared.data}
         session.modified = True
         print(session)
-        return jsonify({"success": True, "url": url_for("experimentcolbg.name_colour")})
+        return redirect(url_for("mturk.name_colour"))
     if form.errors:
         for field, error in form.errors.items():
             print(field, error)
@@ -139,7 +139,7 @@ def name_colour():
         print("session:", session["experiment"])
         if session["experiment"]["response_count"] >= 10:
             print("redirecting to observer information", session["experiment"]["response_count"])
-            return redirect(url_for("mturk.colour_vision"))
+            return redirect(url_for("mturk.observer_information"))
         else:
             print("not redirecting", session["experiment"]["response_count"])
     if form.errors:

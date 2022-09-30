@@ -38,8 +38,10 @@ const submitForm = (data, location) => {
             }
             console.log(response)
             if (response.redirected) {
+                console.log("redirecting")
                 window.location = response.url;
             } else if (typeof location === 'string') {
+                console.log("setting window.location to location")
                 window.location = location;
             }
             return response;
