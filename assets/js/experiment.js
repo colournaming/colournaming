@@ -1,5 +1,3 @@
-import "whatwg-fetch"
-
 let results = JSON.parse(localStorage.getItem('results'));
 
 const updateResults = (delta) => {
@@ -34,11 +32,21 @@ const submitForm = (data, location) => {
         credentials: 'same-origin',
         method: 'POST'
     })
-        .then(() => {
-            if (typeof location === 'string') {
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error ${res.status}`);
+            }
+            console.log(response)
+            if (response.redirected) {
+                console.log("redirecting")
+                window.location = response.url;
+            } else if (typeof location === 'string') {
+                console.log("setting window.location to location")
                 window.location = location;
             }
-        });
+            return response;
+        })
+        .catch((error) => console.error("Error:",error));
 };
 
 if ($levels !== null) {
