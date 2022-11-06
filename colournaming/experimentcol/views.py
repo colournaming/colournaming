@@ -13,7 +13,7 @@ from flask import (
     make_response,
 )
 from flask_babel import lazy_gettext, get_locale
-from . import controller, forms
+from . import controller, forms, model
 from .. import lang_is_rtl
 
 bp = Blueprint("experimentcol", __name__)
@@ -48,14 +48,13 @@ def start():
         browser_language = request.accept_languages[0][0]
     except IndexError:
         browser_language = None
-    session["experiment"] = {
-        "client": {
-            "user_agent": request.user_agent.string,
-            "browser_language": browser_language,
-            "interface_language": session.get("interface_language", browser_language),
-        },
-        "response_count": 0,
-    }
+    experiment = model.ExperimentRecord.parse_obj(session["experiment"])
+    experiment.client = model.ExperimentClient(
+        user_agent=request.user_agent.string,
+        browser_language=browser_language,
+        interface_language=session.get("interface_language", browser_language)
+    )
+    session["experiment"] = dict(experiment)
     return redirect(url_for("experimentcol.display_properties"))
 
 
@@ -65,12 +64,13 @@ def display_properties():
     check_in_experiment()
     form = forms.DisplayForm()
     if form.validate_on_submit():
-        session["experiment"]["display"] = {
-            "greyscale_levels": form.levels.data,
-            "screen_width": form.screen_width.data,
-            "screen_height": form.screen_height.data,
-            "screen_colour_depth": form.screen_colour_depth.data,
-        }
+        experiment = model.ExperimentRecord.parse_obj(session["experiment"])
+        experiment.display = model.ExperimentDisplay(
+            greyscale_levels=form.levels.data,
+            screen_width=form.screen_width.data,
+            screen_height=form.screen_height.data,
+            screen_colour_depth=form.screen_colour_depth.data,
+        )
         session["experiment"]["participant_id"] = controller.save_participant(session["experiment"])
         session.modified = True
         return redirect(url_for("experimentcol.colour_vision"))

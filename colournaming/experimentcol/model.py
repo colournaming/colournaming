@@ -34,9 +34,9 @@ class ExperimentDisplay(BaseModel):
 
 
 class ExperimentRecord(BaseModel):
-    client: ExperimentClient
-    response_count: int = 0    
-    display: ExperimentDisplay
+    client: Optional(ExperimentClient)
+    response_count: int = 0
+    display: Optional(ExperimentDisplay)
 
 
 class Participant(db.Model):
