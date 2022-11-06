@@ -1,5 +1,12 @@
 let results = JSON.parse(localStorage.getItem('results'));
 
+const copyMturkCodeToClipboard = () => {
+    const mturkCode = document.getElementById('mturk-code');
+    navigator.clipboard.writeText(mturkCode.innerText);
+}
+
+window.copyMturkCodeToClipboard = copyMturkCodeToClipboard;
+
 const updateResults = (delta) => {
     results = Object.assign({ }, results, delta);
 
