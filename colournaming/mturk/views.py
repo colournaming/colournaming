@@ -13,7 +13,7 @@ from flask import (
     url_for,
     make_response,
 )
-from flask_babel import lazy_gettext, get_locale
+from flask_babel import get_locale
 
 from . import controller, forms
 from .. import lang_is_rtl
