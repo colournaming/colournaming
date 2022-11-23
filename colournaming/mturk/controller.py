@@ -58,8 +58,12 @@ def get_random_colour(colour_class):
     return random.choice(targets)
 
 
-def create_mturk_task():
-    task = MturkTask()
+def create_mturk_task(prolific_id, study_id, session_id):
+    task = MturkTask(
+        prolific_id=prolific_id,
+        study_id=study_id,
+        session_id=session_id
+    )
     db.session.add(task)
     db.session.commit()
     return task
