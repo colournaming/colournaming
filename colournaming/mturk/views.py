@@ -57,14 +57,19 @@ def start():
         background_id, background_colour = controller.get_random_background()
     except IndexError:
         abort(500, "No backgrounds have been imported")
-    mturk_task = controller.create_mturk_task()
+    prolific_id = request.args.get("PROLIFIC_PID")
+    study_id = request.args.get("STUDY_ID")
+    session_id = request.args.get("SESSION_ID")
+    if not all(prolific_id, study_id, session_id):
+        abort(500, "Missing Prolific ID")
+    mturk_task = controller.create_mturk_task(prolific_id, study_id, session_id)
     session["experiment"] = {
         "client": {
             "user_agent": request.user_agent.string,
             "browser_language": browser_language,
             "interface_language": session.get("interface_language", browser_language),
         },
-        "task_id": mturk_task.task_id,
+        "task_id": mturk_task.id,
         "response_count": 0,
         "background_id": background_id,
         "background_colour": background_colour,
@@ -205,19 +210,4 @@ def observer_information():
 @bp.route("/thankyou.html")
 def thankyou():
     """Show the thankyou for participation page."""
-    try:
-        response_count = session["experiment"].get("response_count", 0)
-        perc = controller.response_count_percentage(response_count)
-    except Exception:
-        perc = 0
-    top_namers_msg = lazy_gettext("You are in the 0% top colour namers.")
-    top_namers_msg = top_namers_msg.replace("0%", "{0:.0f}%".format(perc))
-    return render_template(
-        "thankyou.html",
-        mturk_completion=controller.get_mturk_task_by_id(
-            session["experiment"]["task_id"]
-        ).completion_id,
-        top_namers=top_namers_msg,
-        background_colour=rgb_tuple_to_css_rgb(session["experiment"]["background_colour"]),
-        rtl=lang_is_rtl(get_locale()),
-    )
+    return redirect("https://app.prolific.co/submissions/complete?cc=C8MYG78Z")

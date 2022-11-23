@@ -22,8 +22,9 @@ class MturkTask(db.Model):
 
     __tablename__ = "mturk_tasks"
     id = db.Column(db.Integer, primary_key=True)
-    task_id = db.Column(db.String, unique=True, default=secrets.token_urlsafe)
-    completion_id = db.Column(db.String, unique=True, default=secrets.token_urlsafe)
+    prolific_id = db.Column(db.String, unique=True, default=None)
+    study_id = db.Column(db.String, default=None)
+    session_id = db.Column(db.String, default=None)
     participant = db.relationship("MturkParticipantColBG", back_populates="task", uselist=False)
 
 
