@@ -1,7 +1,6 @@
 """Database models used in the colour response experiment."""
 
 import datetime
-import secrets
 from sqlalchemy.dialects import postgresql
 from ..database import (
     AmbientLight,
