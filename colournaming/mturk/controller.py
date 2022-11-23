@@ -76,7 +76,7 @@ def list_mturk_tasks():
 
 def get_mturk_task_by_id(mturk_id):
     try:
-        task = MturkTask.query.filter(MturkTask.task_id == mturk_id).one()
+        task = MturkTask.query.filter(MturkTask.id == mturk_id).one()
     except NoResultFound:
         return MTurkIDNotFound
     return task
