@@ -60,7 +60,7 @@ def start():
     prolific_id = request.args.get("PROLIFIC_PID")
     study_id = request.args.get("STUDY_ID")
     session_id = request.args.get("SESSION_ID")
-    if not all(prolific_id, study_id, session_id):
+    if not all([prolific_id, study_id, session_id]):
         abort(500, "Missing Prolific ID")
     mturk_task = controller.create_mturk_task(prolific_id, study_id, session_id)
     session["experiment"] = {
