@@ -13,7 +13,7 @@ from flask import (
     url_for,
     make_response,
 )
-from flask_babel import get_locale
+from flask_babel import get_locale, lazy_gettext
 
 from . import controller, forms
 from .. import lang_is_rtl
@@ -210,4 +210,17 @@ def observer_information():
 @bp.route("/thankyou.html")
 def thankyou():
     """Show the thankyou for participation page."""
-    return redirect("https://app.prolific.co/submissions/complete?cc=C8MYG78Z")
+    try:
+        response_count = session["experiment"].get("response_count", 0)
+        perc = controller.response_count_percentage(response_count)
+    except Exception:
+        perc = 0
+    top_namers_msg = lazy_gettext("You are in the 0% top colour namers.")
+    top_namers_msg = top_namers_msg.replace("0%", "{0:.0f}%".format(perc))
+    return render_template(
+        "thankyou.html",
+        mturk_completion="https://app.prolific.co/submissions/complete?cc=C8MYG78Z",
+        top_namers=top_namers_msg,
+        background_colour=rgb_tuple_to_css_rgb(session["experiment"]["background_colour"]),
+        rtl=lang_is_rtl(get_locale()),
+    )
