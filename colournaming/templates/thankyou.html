@@ -6,7 +6,7 @@
 </header>
 <main>
    <p id="thank-you-text" class="justified-text">{{ _('Thank you for participating.') }} {{ top_namers }} {{ _('You can now share the link of the experiment with your friends.') }}</p>
-   {% if mturk_completion is defined -%}<p class="justified-text"><strong>Mechanical Turk award: <span id="mturk-code">Click here to return to Prolific and complete the task</span></strong></p>{% endif %}
+   {% if mturk_completion is defined -%}<p class="justified-text"><strong><a href="{{ mturk_completion }}">Click here to return to Prolific and complete the task</a></strong></p>{% endif %}
    <div class="social-links">
        <a class="social-link twitter" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fcolornaming.net%2F&amp;text=Let%27s%20play%20a%20game%2C%20how%20many%20colours%20can%20you%20name%3F&amp;via=colornaming&amp;hashtags=colournamer"><!-- Twitter Logo --></a>
        <a class="facebook social-link" href="https://www.facebook.com/sharer/sharer.php?u=colornaming.net" target="_blank"><!-- Facebook Logo --></a>
