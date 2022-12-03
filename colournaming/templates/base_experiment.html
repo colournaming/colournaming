@@ -1,6 +1,13 @@
 {% if background_colour is not defined -%}
 {% set background_colour = "rgb(128, 128, 128)" -%}
 {% endif -%}
+{% if dark_font -%}
+{% set text_colour = "rgb(30, 30, 30)" -%}
+{% set arrow_colour = "rgb(220, 220, 220)" -%}
+{% else -%}
+{% set text_colour = "rgb(255, 255, 255)" -%}
+{% set arrow_colour = "rgb(30, 30, 30)" -%}
+{% endif -%}
 <!DOCTYPE html>
 <html>
     <head>
@@ -10,8 +17,35 @@
         <meta content="initial-scale=1, maximum-scale=1" name="viewport">
         <title>{{ _('Colour Naming Experiment') }}</title>
         {% block css %}{% endblock %}
+        <style>
+        body {
+            color: {{ text_colour }};
+            background: {{ background_colour }};
+            {% if rtl %}direction: rtl;{% endif %}
+        }
+        header {
+            border-top: 1px solid {{ text_colour }};
+        }
+        polyline#next_colour_button {
+            fill: {{ arrow_colour }};
+            stroke: {{ arrow_colour }};
+            stroke-width: 2.5;
+        }
+        button#next-colour {
+            background-color: {{ text_colour }};
+        }
+        .input-group input {
+            border: 1px solid {{ text_colour }};
+            border-top: 201px solid {{ text_colour }};
+            color: {{ text_colour }};
+        }
+        .round-button {
+            color: {{ arrow_colour }};
+            background-color: {{ text_colour }};
+        }
+        </style>
     </head>
-    <body data-spy="scroll" data-target="navigation-bar" style="background: {{ background_colour }}; {% if rtl %}; direction: rtl{% endif %}">
+    <body data-spy="scroll" data-target="navigation-bar" style=>
         {% block content %}{% endblock %}
         {% block scripts %}{% endblock %}
         <script src="{{ url_for('static', filename='js/experiment.js') }}"></script>
