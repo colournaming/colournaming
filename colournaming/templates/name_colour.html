@@ -25,7 +25,9 @@
     {{ form.csrf_token }}
 </main>
 <footer>
+    {% if not hide_finish %}
     <a id="colour-vision-test-page" class="centered-button round-button text-button" href="colour-vision-test.html">{{ _('Finish') }}</a>
+    {% endif %}
 </footer>
 {% endblock %}
 {% block scripts %}

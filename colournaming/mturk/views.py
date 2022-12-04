@@ -163,6 +163,7 @@ def name_colour():
         dark_font=session["experiment"]["dark_font"],
         form=form,
         rtl=lang_is_rtl(get_locale()),
+        hide_finish=True
     )
 
 
