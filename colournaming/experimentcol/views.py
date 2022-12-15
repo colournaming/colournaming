@@ -4,6 +4,7 @@ from datetime import datetime
 from functools import wraps, update_wrapper
 from flask import (
     Blueprint,
+    abort,
     jsonify,
     redirect,
     render_template,
@@ -90,11 +91,15 @@ def colour_vision():
         session["experiment"]["vision"] = {"square_disappeared": form.square_disappeared.data}
         session.modified = True
         print(session)
-        return jsonify({"success": True, "url": url_for("experimentcol.name_colour")})
+        redirect(url_for("experimentcol.name_colour"))
     if form.errors:
         for field, error in form.errors.items():
             print(field, error)
-    return render_template("colour_vision.html", form=form, rtl=lang_is_rtl(get_locale()))
+    return render_template(
+        "colour_vision.html",
+        form=form,
+        rtl=lang_is_rtl(get_locale())
+    )
 
 
 @bp.route("/name_colour.html", methods=["GET", "POST"])
@@ -129,7 +134,10 @@ def name_colour():
 @nocache
 def get_target():
     """Get a random colour target to name."""
-    target = controller.get_random_target()
+    try:
+        target = controller.get_random_target()
+    except IndexError:
+        abort(500, "No targets have been imported")
     return jsonify({"id": target.id, "r": target.red, "g": target.green, "b": target.blue})
 
 

@@ -1,5 +1,6 @@
 """Views for the namer."""
 
+import re
 from flask import (
     Blueprint,
     jsonify,
@@ -16,6 +17,8 @@ from .forms import NameAgreementForm
 from . import controller
 
 bp = Blueprint("namer", __name__)
+
+hex_colour_regex = re.compile(r'[0-9A-Fa-f]{6}')
 
 
 @bp.route("/lang/")
@@ -70,6 +73,8 @@ def name_colour(lang_code):
     """Get nearest colour names for an RGB combination."""
     try:
         hexcode = request.args["colour"]
+        if not hex_colour_regex.match(hexcode):
+            abort(500)
         red = int(hexcode[0:2], 16)
         green = int(hexcode[2:4], 16)
         blue = int(hexcode[4:6], 16)
