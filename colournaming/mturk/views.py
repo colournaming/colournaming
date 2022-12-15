@@ -162,6 +162,7 @@ def name_colour():
         background_colour=rgb_tuple_to_css_rgb(session["experiment"]["background_colour"]),
         dark_font=session["experiment"]["dark_font"],
         max_presentations=226,
+        prolific=True,
         form=form,
         rtl=lang_is_rtl(get_locale()),
         hide_finish=True
