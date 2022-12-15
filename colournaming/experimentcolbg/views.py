@@ -157,7 +157,10 @@ def name_colour():
 @nocache
 def get_target():
     """Get a random colour target to name."""
-    target = controller.get_random_target()
+    try:
+        target = controller.get_random_target()
+    except IndexError:
+        abort(500, "No targets have been imported")
     return jsonify({"id": target.id, "r": target.red, "g": target.green, "b": target.blue})
 
 

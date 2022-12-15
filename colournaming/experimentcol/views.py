@@ -91,7 +91,7 @@ def colour_vision():
         session["experiment"]["vision"] = {"square_disappeared": form.square_disappeared.data}
         session.modified = True
         print(session)
-        redirect(url_for("experimentcol.name_colour"))
+        return redirect(url_for("experimentcol.name_colour"))
     if form.errors:
         for field, error in form.errors.items():
             print(field, error)
