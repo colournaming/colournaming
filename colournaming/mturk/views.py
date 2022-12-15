@@ -148,7 +148,7 @@ def name_colour():
         session["experiment"]["response_count"] += 1
         session.modified = True
         print("session:", session["experiment"])
-        if session["experiment"]["response_count"] >= 10:
+        if session["experiment"]["response_count"] >= 226:
             print("redirecting to observer information", session["experiment"]["response_count"])
             return redirect(url_for("mturk.observer_information"))
         else:
@@ -161,6 +161,7 @@ def name_colour():
         get_target_url=url_for("mturk.get_target"),
         background_colour=rgb_tuple_to_css_rgb(session["experiment"]["background_colour"]),
         dark_font=session["experiment"]["dark_font"],
+        max_presentations=226,
         form=form,
         rtl=lang_is_rtl(get_locale()),
         hide_finish=True

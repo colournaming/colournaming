@@ -5,7 +5,7 @@
 </header>
 <main>
     <p class="justified-text">{{ _('Name each colour sample with the best representative colour term that you remember.<br>Press the Arrow button [&gt;] or Enter on your keyboard once you have finished naming the colour for the next colour sample to appear. Name as many colour samples (20+) as you can for higher ranking on colour namers. You will need to press the Finish button to start the next task. Your response time will be recorded.') }}</p>
-    <span id="colour-number">#1</span>
+    <span id="colour-number">#1 {{ if max_presentations }}/ {{ max_presentations }}</span>
     <div id="colour-circle">
         <div></div>
     </div>
