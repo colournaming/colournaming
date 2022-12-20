@@ -234,7 +234,12 @@ def get_mturk_participants(fh):
         "study_id",
         "session_id",
     )
-    output_csv = csv.DictWriter(fh, PARTICIPANT_FIELDNAMES + mturk_columns, restval="NA", dialect="unix")
+    output_csv = csv.DictWriter(
+        fh,
+        PARTICIPANT_FIELDNAMES + mturk_columns,
+        restval="NA",
+        dialect="unix"
+    )
     output_csv.writeheader()
     for participant in participants:
         output_csv.writerow(
