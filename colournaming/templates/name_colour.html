@@ -15,7 +15,7 @@
     </div>
     <div class="input-group">
         <form id="colour-name-form">
-            <input autocomplete="off" autofocus id="colour-name" name="colour-name" placeholder={{ _("Name the colour of the patch") }} type="text">
+            <input autocomplete="off" autofocus id="colour-name" name="colour-name" required maxlength="50" pattern="[A-Za-z]{3,}" placeholder={{ _("Name the colour of the patch") }} type="text">
             <input id="colour-id" name="colour-id" type="hidden">
             <input id="start-time" name="start-time" type="hidden">
             <input id="response-time" name="response-time" type="hidden">
