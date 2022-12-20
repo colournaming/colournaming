@@ -1,5 +1,3 @@
-import "whatwg-fetch"
-
 let results = JSON.parse(localStorage.getItem('results'));
 
 const updateResults = (delta) => {
@@ -34,11 +32,21 @@ const submitForm = (data, location) => {
         credentials: 'same-origin',
         method: 'POST'
     })
-        .then(() => {
-            if (typeof location === 'string') {
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error ${response.status}`);
+            }
+            console.log(response)
+            if (response.redirected) {
+                console.log("redirecting")
+                window.location = response.url;
+            } else if (typeof location === 'string') {
+                console.log("setting window.location to " + location)
                 window.location = location;
             }
-        });
+            return response;
+        })
+        .catch((error) => console.error("Error:",error));
 };
 
 if ($levels !== null) {
@@ -115,7 +123,12 @@ if ($colourCircle !== null && $colourId !== null && $colourName !== null && $col
         updateColourCircle();
 
         $colourName.value = '';
-        $colourNumber.textContent = `#${ (results.colours) ? results.colours.length + 1 : 0 }`;
+        if (typeof MAX_PRESENTATIONS === 'undefined' || MAX_PRESENTATIONS == null) {
+            $colourNumber.textContent = `#${ (results.colours) ? results.colours.length + 1 : 0 }`;
+        } else {
+            $colourNumber.textContent = `#${ (results.colours) ? results.colours.length + 1 : 0 } / ${ MAX_PRESENTATIONS }`;
+        }
+        //$colourNumber.textContent = `#${ (results.colours) ? results.colours.length + 1 : 0 }`;
         $responseTime.value = '';
         $colourName.focus();
     });
@@ -129,9 +142,9 @@ if ($colourCircle !== null && $colourId !== null && $colourName !== null && $col
                 name: $colourName.value,
                 response_time: performance.now() - parseFloat($startTime.value),
                 target_id: $colourId.value
-            }, 'colour_vision.html');
+            }, 'name_colour.html');
         } else {
-            window.location = 'colour_vision.html';
+            window.location = 'observer_information.html';
         }
     });
 

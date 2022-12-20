@@ -3,8 +3,8 @@
 from datetime import datetime
 from functools import wraps, update_wrapper
 from flask import (
-    Blueprint,
     abort,
+    Blueprint,
     jsonify,
     redirect,
     render_template,
@@ -13,18 +13,19 @@ from flask import (
     url_for,
     make_response,
 )
-from flask_babel import lazy_gettext, get_locale
+from flask_babel import get_locale, lazy_gettext
+
 from . import controller, forms
 from .. import lang_is_rtl
 from ..utils import rgb2lab
 
-bp = Blueprint("experimentcolbg", __name__)
+bp = Blueprint("mturk", __name__)
 
 
 def check_in_experiment():
     """Redirect to the start of the experiment if the session is not initialized."""
     if "experiment" not in session:
-        return redirect(url_for("experimentcolbg.start"))
+        return redirect(url_for("mturk.start"))
 
 
 def rgb_tuple_to_css_rgb(background):
@@ -49,7 +50,6 @@ def nocache(view):
 @bp.route("/")
 def start():
     """Show the experiment start page."""
-    print("resetting experiment")
     try:
         browser_language = request.accept_languages[0][0]
     except IndexError:
@@ -60,18 +60,25 @@ def start():
         abort(500, "No backgrounds have been imported")
     background_colour_lab = rgb2lab(background_colour)
     dark_font = background_colour_lab[0] > 80
+    prolific_id = request.args.get("PROLIFIC_PID")
+    study_id = request.args.get("STUDY_ID")
+    session_id = request.args.get("SESSION_ID")
+    if not all([prolific_id, study_id, session_id]):
+        abort(500, "Missing Prolific ID")
+    mturk_task = controller.create_mturk_task(prolific_id, study_id, session_id)
     session["experiment"] = {
         "client": {
             "user_agent": request.user_agent.string,
             "browser_language": browser_language,
             "interface_language": session.get("interface_language", browser_language),
         },
+        "task_id": mturk_task.id,
         "response_count": 0,
         "background_id": background_id,
         "background_colour": background_colour,
         "dark_font": dark_font
     }
-    return redirect(url_for("experimentcolbg.display_properties"))
+    return redirect(url_for("mturk.display_properties"))
 
 
 @bp.route("/display_properties.html", methods=["GET", "POST"])
@@ -88,7 +95,7 @@ def display_properties():
         }
         session["experiment"]["participant_id"] = controller.save_participant(session["experiment"])
         session.modified = True
-        return redirect(url_for("experimentcolbg.colour_vision"))
+        return redirect(url_for("mturk.colour_vision"))
     if form.errors:
         for field, error in form.errors.items():
             print(field, error)
@@ -111,7 +118,7 @@ def colour_vision():
         session["experiment"]["vision"] = {"square_disappeared": form.square_disappeared.data}
         session.modified = True
         print(session)
-        return redirect(url_for("experimentcolbg.name_colour"))
+        return redirect(url_for("mturk.name_colour"))
     if form.errors:
         for field, error in form.errors.items():
             print(field, error)
@@ -119,8 +126,8 @@ def colour_vision():
         "colour_vision.html",
         background_colour=rgb_tuple_to_css_rgb(session["experiment"]["background_colour"]),
         dark_font=session["experiment"]["dark_font"],
-        form=form,
         rtl=lang_is_rtl(get_locale()),
+        form=form,
     )
 
 
@@ -140,16 +147,25 @@ def name_colour():
         )
         session["experiment"]["response_count"] += 1
         session.modified = True
+        print("session:", session["experiment"])
+        if session["experiment"]["response_count"] >= 226:
+            print("redirecting to observer information", session["experiment"]["response_count"])
+            return redirect(url_for("mturk.observer_information"))
+        else:
+            print("not redirecting", session["experiment"]["response_count"])
     if form.errors:
         for field, error in form.errors.items():
             print(field, error)
     return render_template(
         "name_colour.html",
-        get_target_url=url_for("experimentcolbg.get_target"),
+        get_target_url=url_for("mturk.get_target"),
         background_colour=rgb_tuple_to_css_rgb(session["experiment"]["background_colour"]),
         dark_font=session["experiment"]["dark_font"],
+        max_presentations=226,
+        prolific=True,
         form=form,
         rtl=lang_is_rtl(get_locale()),
+        hide_finish=True
     )
 
 
@@ -189,7 +205,7 @@ def observer_information():
         }
         session.modified = True
         controller.update_participant(session["experiment"])
-        return redirect(url_for("experimentcolbg.thankyou"))
+        return redirect(url_for("mturk.thankyou"))
     if form.errors:
         for field, error in form.errors.items():
             print(field, repr(getattr(form, field).data), error)
@@ -214,6 +230,7 @@ def thankyou():
     top_namers_msg = top_namers_msg.replace("0%", "{0:.0f}%".format(perc))
     return render_template(
         "thankyou.html",
+        mturk_completion="https://app.prolific.co/submissions/complete?cc=C8MYG78Z",
         top_namers=top_namers_msg,
         background_colour=rgb_tuple_to_css_rgb(session["experiment"]["background_colour"]),
         dark_font=session["experiment"]["dark_font"],

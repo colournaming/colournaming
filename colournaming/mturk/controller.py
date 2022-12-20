@@ -2,9 +2,13 @@
 
 import csv
 import random
+from sqlalchemy.orm.exc import NoResultFound
 from sqlalchemy.sql.expression import func
+
+from colournaming.mturk.exceptions import MTurkIDNotFound
 from ..database import db
-from .model import BackgroundColour, ColourTargetColBG, ParticipantColBG, ColourResponseColBG
+from .model import MturkTask, MturkParticipantColBG, MturkColourResponseColBG
+from ..experimentcolbg.model import BackgroundColour, ColourTargetColBG
 
 
 def read_targets_from_file(targets_file, delete_existing=False):
@@ -37,39 +41,56 @@ def read_backgrounds_from_file(targets_file, delete_existing=False):
     db.session.commit()
 
 
-def get_random_target():
-    """Get a random colour target."""
-    max_presentation_count = db.session.query(
-        func.max(ColourTargetColBG.presentation_count)
-    ).scalar()
-    print("max_presentation_count =", max_presentation_count)
-    targets = ColourTargetColBG.query.filter(
-        ColourTargetColBG.presentation_count < max_presentation_count
+def get_random_colour(colour_class):
+    """Get a random colour target or background."""
+    max_presentation_count = db.session.query(func.max(colour_class.presentation_count)).scalar()
+    if max_presentation_count is None:
+        max_presentation_count = 0
+    targets = colour_class.query.filter(
+        colour_class.presentation_count < max_presentation_count
     ).all()
     if len(targets) == 0:
         # will occur if all targets have been presented max times
-        targets = ColourTargetColBG.query.all()
+        targets = colour_class.query.all()
     target = random.choice(targets)
     target.presentation_count += 1
     db.session.commit()
     return random.choice(targets)
 
 
+def create_mturk_task(prolific_id, study_id, session_id):
+    task = MturkTask(
+        prolific_id=prolific_id,
+        study_id=study_id,
+        session_id=session_id
+    )
+    db.session.add(task)
+    db.session.commit()
+    return task
+
+
+def list_mturk_tasks():
+    tasks = MturkTask.query.all()
+    return tasks
+
+
+def get_mturk_task_by_id(mturk_id):
+    try:
+        task = MturkTask.query.filter(MturkTask.id == mturk_id).one()
+    except NoResultFound:
+        return MTurkIDNotFound
+    return task
+
+
+def get_random_target():
+    """Get a random colour target."""
+    return get_random_colour(ColourTargetColBG)
+
+
 def get_random_background():
     """Get a random colour background."""
-    max_presentation_count = db.session.query(
-        func.max(BackgroundColour.presentation_count)
-    ).scalar()
-    print("max_presentation_count =", max_presentation_count)
-    targets = BackgroundColour.query.filter(
-        BackgroundColour.presentation_count < max_presentation_count
-    ).all()
-    if len(targets) == 0:
-        # will occur if all targets have been presented max times
-        targets = BackgroundColour.query.all()
-    target = random.choice(targets)
-    target.presentation_count += 1
-    db.session.commit()
+    target = get_random_colour(BackgroundColour)
+    print("random background is", target)
     return target.id, (target.red, target.green, target.blue)
 
 
@@ -83,8 +104,9 @@ def save_participant(experiment):
     """Create a new participant record in the database."""
     print("trying to save", experiment)
     participant_id = experiment.get("participant_id")
+    mturk_task = get_mturk_task_by_id(experiment["task_id"])
     if participant_id is None:
-        participant = ParticipantColBG(
+        participant = MturkParticipantColBG(
             browser_language=experiment["client"]["browser_language"],
             interface_language=experiment["client"]["interface_language"],
             user_agent=experiment["client"]["user_agent"],
@@ -92,6 +114,7 @@ def save_participant(experiment):
             screen_resolution_w=experiment["display"]["screen_width"],
             screen_resolution_h=experiment["display"]["screen_height"],
             screen_colour_depth=experiment["display"]["screen_colour_depth"],
+            task_id=mturk_task.id,
         )
         db.session.add(participant)
         db.session.commit()
@@ -102,24 +125,25 @@ def save_participant(experiment):
 def save_response(experiment, response):
     """Create a response record in the database."""
     print("saving response in experiment", experiment)
-    participant = ParticipantColBG.query.filter(
-        ParticipantColBG.id == experiment["participant_id"]
+    participant = MturkParticipantColBG.query.filter(
+        MturkParticipantColBG.id == experiment["participant_id"]
     ).one()
-    colour_response = ColourResponseColBG(
+    colour_response = MturkColourResponseColBG(
         participant=participant,
         target_id=response["target_id"],
         name=response["name"],
         response_time=response["response_time"],
         background_id=experiment["background_id"],
     )
+    print(colour_response)
     db.session.add(colour_response)
     db.session.commit()
 
 
 def update_participant(experiment):
     print("trying to update", experiment)
-    participant = ParticipantColBG.query.filter(
-        ParticipantColBG.id == experiment["participant_id"]
+    participant = MturkParticipantColBG.query.filter(
+        MturkParticipantColBG.id == experiment["participant_id"]
     ).one()
     for k in experiment["observer"]:
         if experiment["observer"][k] == "":

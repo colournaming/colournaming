@@ -4,21 +4,24 @@
     <h1>{{ _('Colour Naming Task') }}</h1>
 </header>
 <main>
+    {% if prolific | default(False) %}
+    <p class="justified-text">Name each colour sample with the best representative colour term that you remember.<br>Press the Arrow button [&gt;] or Enter on your keyboard once you have finished naming the colour for the next colour sample to appear. Your response time will be recorded.</p>
+    {% else %}
     <p class="justified-text">{{ _('Name each colour sample with the best representative colour term that you remember.<br>Press the Arrow button [&gt;] or Enter on your keyboard once you have finished naming the colour for the next colour sample to appear. Name as many colour samples (20+) as you can for higher ranking on colour namers. You will need to press the Finish button to start the next task. Your response time will be recorded.') }}</p>
-    <span id="colour-number">#1</span>
+    {% endif %}
+    <span id="colour-number">#1 {% if max_presentations %}/ {{ max_presentations }}{% endif %}</span>
     <div id="colour-circle">
         <div></div>
     </div>
     <div class="input-group">
         <form id="colour-name-form">
-            <input autocomplete="off" autofocus id="colour-name" name="colour-name" placeholder={{ _("Name the colour of the patch") }} type="text">
+            <input autocomplete="off" autofocus id="colour-name" name="colour-name" required maxlength="50" pattern="[A-Za-z]{3,}[A-Za-z\s]*" placeholder={{ _("Name the colour of the patch") }} type="text">
             <input id="colour-id" name="colour-id" type="hidden">
             <input id="start-time" name="start-time" type="hidden">
             <input id="response-time" name="response-time" type="hidden">
             <button id="next-colour" type="submit">
                 <svg version="1.1" viewBox="0 0 30 26" xmlns="http://www.w3.org/2000/svg">
-                    <polyline points="10,5 20,14 10,23"
-                     style="fill:white; stroke:#808080; stroke-width:2.5"></polyline>
+                    <polyline id="next_colour_button" points="10,5 20,14 10,23"></polyline>
                 </svg>
             </button>
         </form>
@@ -26,12 +29,13 @@
     {{ form.csrf_token }}
 </main>
 <footer>
-    <a id="colour-vision-test-page" class="centered-button round-button text-button" href="colour-vision-test.html">{{ _('Finish') }}</a>
+    <a id="colour-vision-test-page" {% if hide_finish -%}style="display: none"{% endif -%} class="centered-button round-button text-button" href="observer_information.html">{{ _('Finish') }}</a>
 </footer>
 {% endblock %}
 {% block scripts %}
 <script type="text/javascript">
     var COLOUR_NAME_TARGET_URL = "{{ get_target_url }}";
     var COLOUR_NAME_BACKGROUND_URL = "{{ get_background_url }}";
+    var MAX_PRESENTATIONS = {{ max_presentations | default('null') }};
 </script>
 {% endblock %}
