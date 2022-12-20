@@ -229,11 +229,11 @@ def get_mturk_responses(fh):
 
 def get_mturk_participants(fh):
     participants = MturkParticipantColBG.query.all()
-    mturk_columns = (
+    mturk_columns = [
         "prolific_id",
         "study_id",
         "session_id",
-    )
+    ]
     output_csv = csv.DictWriter(
         fh,
         PARTICIPANT_FIELDNAMES + mturk_columns,
