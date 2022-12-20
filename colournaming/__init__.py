@@ -135,6 +135,18 @@ def setup_cli(app):
         admin.controller.get_colbg_participants(filename)
 
     @app.cli.command()
+    @click.argument("filename", type=click.File("w"))
+    def export_mturk_responses(filename):
+        """Export coloured background responses to CSV."""
+        admin.controller.get_mturk_responses(filename)
+
+    @app.cli.command()
+    @click.argument("filename", type=click.File("w"))
+    def export_mturk_participants(filename):
+        """Export coloured background participants to CSV."""
+        admin.controller.get_mturk_participants(filename)
+
+    @app.cli.command()
     def mturk_tasks():
         """List completed Mechanical Turk tasks."""
         completed_tasks = list_mturk_tasks()

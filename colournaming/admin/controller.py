@@ -1,6 +1,7 @@
 import csv
 from ..experimentcol.model import Participant
 from ..experimentcolbg.model import ParticipantColBG
+from ..mturk.model import MturkParticipantColBG
 from ..namer.model import NameAgreement
 
 RESPONSE_FIELDNAMES = [
@@ -203,7 +204,7 @@ def get_colbg_participants(fh):
 
 
 def get_mturk_responses(fh):
-    participants = ParticipantColBG.query.all()
+    participants = MturkParticipantColBG.query.all()
     output_csv = csv.DictWriter(fh, RESPONSE_COLBG_FIELDNAMES, restval="NA", dialect="unix")
     output_csv.writeheader()
     for participant in participants:
@@ -227,8 +228,13 @@ def get_mturk_responses(fh):
 
 
 def get_mturk_participants(fh):
-    participants = ParticipantColBG.query.all()
-    output_csv = csv.DictWriter(fh, PARTICIPANT_FIELDNAMES, restval="NA", dialect="unix")
+    participants = MturkParticipantColBG.query.all()
+    mturk_columns = (
+        "prolific_id",
+        "study_id",
+        "session_id",
+    )
+    output_csv = csv.DictWriter(fh, PARTICIPANT_FIELDNAMES + mturk_columns, restval="NA", dialect="unix")
     output_csv.writeheader()
     for participant in participants:
         output_csv.writerow(
@@ -258,7 +264,8 @@ def get_mturk_participants(fh):
                 "colour_experience": participant.colour_experience,
                 "colour_target_disappeared": participant.colour_target_disappeared,
                 "latlong": participant.location,
-                "mturk_task_id": participant.task.task_id,
-                "mturk_completion_id": participant.task.task_id,
+                "prolific_id": participant.task.prolific_id,
+                "study_id": participant.task.study_id,
+                "session_id": participant.task.session_id,
             }
         )
