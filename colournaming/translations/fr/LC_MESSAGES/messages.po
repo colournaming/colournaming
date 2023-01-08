@@ -376,7 +376,7 @@ msgid ""
 "Please feel free to contact the principal investigator <a "
 "href=\"mailto:dimitris.mylonas[at]nchlondon.ac.uk\">Dimitris Mylonas</a> "
 "if you have any questions."
-msgstr ""
+msgstr "De nombreuses personnes trouvent les tâches de cette étude amusantes et aucun risque connu pour les participants n'est à noter. Le but de cette étude de recherche est d'améliorer la communication multilingue des couleurs. N'hésitez pas à contacter le chercheur <a href=\"mailto:d.mylonas[at]ucl.ac.uk\">Dimitris Mylonas</a> pour plus de renseignements."
 
 #: colournaming/templates/index.html:40
 msgid ""
@@ -384,7 +384,7 @@ msgid ""
 " consent to participate in the study, click on the 'Start' button to "
 "begin the experiment against a neutral grey background or the 'Chromatic "
 "Start' button to begin the experiment against chromatic backgrounds."
-msgstr ""
+msgstr "Si vous avez plus de 16 ans, vous pouvez participer à cette expérience en lisant les conditions, puis en appuyant sur un des deux boutons "Démarrer". Vous pouvez choisir si l'expérience se déroule sur fond gris (bouton gris) ou sur fond coloré (bouton coloré)."
 
 #: colournaming/templates/index.html:42 colournaming/templates/index.html:43
 msgid "Start"
@@ -449,7 +449,7 @@ msgid ""
 "appear. Name as many colour samples (20+) as you can for higher ranking "
 "on colour namers. You will need to press the Finish button to start the "
 "next task. Your response time will be recorded."
-msgstr ""
+msgstr "Nommez chaque échantillon de couleur avec le terme de couleur le plus représentatif dont vous vous souvenez.<br>Appuyez sur la flèche [&gt;] ou sur la touche 'Entrée' de votre clavier après avoir écrit le nom de la couleur pour que l'échantillon de couleur suivant apparaisse. Nommez autant d'échantillons de couleurs (plus de 20) que vous pouvez pour un classement plus élevé sur les noms de couleurs. Pour démarrer la tâche suivante, vous devrez appuyer sur le bouton "Terminer". Votre temps de réponse est enregistré."
 
 #: colournaming/templates/name_colour.html:14
 msgid "Name the colour of the patch"
