@@ -51,7 +51,9 @@ def show_responses():
     """Return experiment responses as CSV."""
     if not session.get("admin_logged_in", False):
         return redirect(url_for(".login"))
-    return Response(get_responses(), mimetype="text/csv")
+    f = io.StringIO()
+    get_responses(f)
+    return Response(f.read(), mimetype="text/csv")
 
 
 @bp.route("/participants.csv")
