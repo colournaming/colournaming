@@ -1,5 +1,7 @@
 """Views for the namer."""
 
+import io
+
 from flask import (
     Blueprint,
     current_app,
