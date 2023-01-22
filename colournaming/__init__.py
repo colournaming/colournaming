@@ -30,8 +30,7 @@ def create_app():
         )
     db.init_app(app)
     mail.init_app(app)
-    babel = Babel(app)
-    set_locale_selector(babel)
+    babel = Babel(app, locale_selector=get_locale)
     set_error_handlers(app)
     setup_logging(app)
     setup_cli(app)
@@ -41,16 +40,14 @@ def create_app():
     return app
 
 
-def set_locale_selector(babel):
-    @babel.localeselector
-    def get_locale():
-        available_langs = [x["code"] for x in current_app.config.get("LANGUAGES")]
-        requested_lang = session.get("interface_language", None)
-        if requested_lang in available_langs:
-            locale = requested_lang
-        else:
-            locale = request.accept_languages.best_match(available_langs)
-        return locale
+def get_locale():
+    available_langs = [x["code"] for x in current_app.config.get("LANGUAGES")]
+    requested_lang = session.get("interface_language", None)
+    if requested_lang in available_langs:
+        locale = requested_lang
+    else:
+        locale = request.accept_languages.best_match(available_langs)
+    return locale
 
 
 def set_before_request(app):
