@@ -30,7 +30,7 @@ def create_app():
         )
     db.init_app(app)
     mail.init_app(app)
-    babel = Babel(app, locale_selector=get_locale)
+    Babel(app, locale_selector=get_locale)
     set_error_handlers(app)
     setup_logging(app)
     setup_cli(app)
