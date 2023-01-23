@@ -20,32 +20,32 @@ msgstr ""
 #: colournaming/experimentcol/forms.py:38
 #: colournaming/experimentcolbg/forms.py:38 colournaming/mturk/forms.py:38
 msgid "What is your age?"
-msgstr "شما چند سال دارید"
+msgstr "Koliko imate godina?"
 
 #: colournaming/experimentcol/forms.py:45
 #: colournaming/experimentcolbg/forms.py:45 colournaming/mturk/forms.py:45
 msgid "Female"
-msgstr "زن"
+msgstr "Ženski"
 
 #: colournaming/experimentcol/forms.py:46
 #: colournaming/experimentcolbg/forms.py:46 colournaming/mturk/forms.py:46
 msgid "Male"
-msgstr "مرد"
+msgstr "Muški"
 
 #: colournaming/experimentcol/forms.py:47
 #: colournaming/experimentcolbg/forms.py:47 colournaming/mturk/forms.py:47
 msgid "Other"
-msgstr "موارد دیگر"
+msgstr "Drugo"
 
 #: colournaming/experimentcol/forms.py:49
 #: colournaming/experimentcolbg/forms.py:49 colournaming/mturk/forms.py:49
 msgid "To which gender do you most identify?"
-msgstr "به کدام گروه جنسی هویت بیشتری احساس می کنید."
+msgstr "Sa kojim rodom se najviše identifikujete?"
 
 #: colournaming/experimentcol/forms.py:52
 #: colournaming/experimentcolbg/forms.py:52 colournaming/mturk/forms.py:52
 msgid "Please specify"
-msgstr "لطفا مشخص کنید"
+msgstr "Molimo vas da odredite"
 
 #: colournaming/experimentcol/forms.py:56
 #: colournaming/experimentcol/forms.py:66
@@ -53,7 +53,7 @@ msgstr "لطفا مشخص کنید"
 #: colournaming/experimentcolbg/forms.py:66 colournaming/mturk/forms.py:56
 #: colournaming/mturk/forms.py:66
 msgid "Beginner"
-msgstr "مبتدی"
+msgstr "Početni nivo"
 
 #: colournaming/experimentcol/forms.py:57
 #: colournaming/experimentcol/forms.py:67
@@ -61,7 +61,7 @@ msgstr "مبتدی"
 #: colournaming/experimentcolbg/forms.py:67 colournaming/mturk/forms.py:57
 #: colournaming/mturk/forms.py:67
 msgid "Intermediate"
-msgstr "متوسط"
+msgstr "Srednji nivo"
 
 #: colournaming/experimentcol/forms.py:58
 #: colournaming/experimentcol/forms.py:68
@@ -69,122 +69,122 @@ msgstr "متوسط"
 #: colournaming/experimentcolbg/forms.py:68 colournaming/mturk/forms.py:58
 #: colournaming/mturk/forms.py:68
 msgid "Advanced"
-msgstr "پیشرفته"
+msgstr "Napredni nivo"
 
 #: colournaming/experimentcol/forms.py:60
 #: colournaming/experimentcolbg/forms.py:60 colournaming/mturk/forms.py:60
 msgid "Describe your experience working with colour"
-msgstr "تجربه خود در کار با رنگ توصیف کنید"
+msgstr "Označite koliko imate iskustva u radu sa bojama"
 
 #: colournaming/experimentcol/forms.py:69
 #: colournaming/experimentcolbg/forms.py:69 colournaming/mturk/forms.py:69
 msgid "Bilingual"
-msgstr "دو زبانه"
+msgstr "Dvojezičan/na sam"
 
 #: colournaming/experimentcol/forms.py:70
 #: colournaming/experimentcolbg/forms.py:70 colournaming/mturk/forms.py:70
 msgid "Native speaker"
-msgstr "سخنران بومی"
+msgstr "To mi je maternji jezik"
 
 #: colournaming/experimentcol/forms.py:72
 #: colournaming/experimentcolbg/forms.py:72 colournaming/mturk/forms.py:72
 msgid "Describe your skill in the language used in this experiment"
-msgstr "مهارت زبان مورد استفاده خود در این بازی توصیف کنید"
+msgstr "Označite nivo znanja jezika na kom ste radili ovaj eksperiment"
 
 #: colournaming/experimentcol/forms.py:78
 #: colournaming/experimentcolbg/forms.py:78 colournaming/mturk/forms.py:78
 msgid "No qualifications"
-msgstr "بدون مدارک"
+msgstr "osnovna škola"
 
 #: colournaming/experimentcol/forms.py:79
 #: colournaming/experimentcolbg/forms.py:79 colournaming/mturk/forms.py:79
 msgid "Secondary school degree"
-msgstr "مدرسه متوسطه"
+msgstr "srednja škola"
 
 #: colournaming/experimentcol/forms.py:80
 #: colournaming/experimentcolbg/forms.py:80 colournaming/mturk/forms.py:80
 msgid "Bachelors degree"
-msgstr "مدرک کارشناسی"
+msgstr "osnovne akademske studije"
 
 #: colournaming/experimentcol/forms.py:81
 #: colournaming/experimentcolbg/forms.py:81 colournaming/mturk/forms.py:81
 msgid "Masters degree"
-msgstr "مدرک کارشناسی ارشد"
+msgstr "master akademske studije"
 
 #: colournaming/experimentcol/forms.py:82
 #: colournaming/experimentcolbg/forms.py:82 colournaming/mturk/forms.py:82
 msgid "Professional degree"
-msgstr "درجه حرفه ای"
+msgstr "osnovne strukovne studije"
 
 #: colournaming/experimentcol/forms.py:83
 #: colournaming/experimentcolbg/forms.py:83 colournaming/mturk/forms.py:83
 msgid "Doctorate degree"
-msgstr "مدرک دکترا"
+msgstr "doktorske akademske studije"
 
 #: colournaming/experimentcol/forms.py:85
 #: colournaming/experimentcolbg/forms.py:85 colournaming/mturk/forms.py:85
 msgid "What is the highest level of education you have completed?"
-msgstr "بالاترین سطح تحصیلات شما که تا امروز به پایان رسانیده اید چیست"
+msgstr "Koji je najviši stepen obrazovanja koji ste stekli?"
 
 #: colournaming/experimentcol/forms.py:93
 #: colournaming/experimentcolbg/forms.py:93 colournaming/mturk/forms.py:93
 msgid "In which country did you grow up?"
-msgstr "در کدام کشور بزرگ شده اید"
+msgstr "U kojoj državi ste odrasli?"
 
 #: colournaming/experimentcol/forms.py:98
 #: colournaming/experimentcolbg/forms.py:98 colournaming/mturk/forms.py:98
 msgid "Where are you living?"
-msgstr "کجا زندگی میکنید"
+msgstr "U kojoj državi živite?"
 
 #: colournaming/experimentcol/forms.py:104
 #: colournaming/experimentcolbg/forms.py:104 colournaming/mturk/forms.py:104
 msgid "Smartphone"
-msgstr "گوشی های هوشمند"
+msgstr "Mobilni telefon"
 
 #: colournaming/experimentcol/forms.py:105
 #: colournaming/experimentcolbg/forms.py:105 colournaming/mturk/forms.py:105
 msgid "Pad"
-msgstr "تشک موش رایانه"
+msgstr "Tablet"
 
 #: colournaming/experimentcol/forms.py:106
 #: colournaming/experimentcolbg/forms.py:106 colournaming/mturk/forms.py:106
 msgid "Laptop"
-msgstr "رایانه همراه"
+msgstr "Laptop računar"
 
 #: colournaming/experimentcol/forms.py:107
 #: colournaming/experimentcolbg/forms.py:107 colournaming/mturk/forms.py:107
 msgid "Desktop"
-msgstr "رایانه رومیزی"
+msgstr "Desktop računar"
 
 #: colournaming/experimentcol/forms.py:109
 #: colournaming/experimentcolbg/forms.py:109 colournaming/mturk/forms.py:109
 msgid "What is your display device?"
-msgstr "دستگاه نمایشگر شما چیست؟"
+msgstr "Na kom uređaju ste radili eksperiment?"
 
 #: colournaming/experimentcol/forms.py:115
 #: colournaming/experimentcolbg/forms.py:115 colournaming/mturk/forms.py:115
 msgid "Neutral white"
-msgstr "سفید طبیعی"
+msgstr "Neutralna bela"
 
 #: colournaming/experimentcol/forms.py:116
 #: colournaming/experimentcolbg/forms.py:116 colournaming/mturk/forms.py:116
 msgid "Warm white"
-msgstr "سفید گرم"
+msgstr "Topla bela"
 
 #: colournaming/experimentcol/forms.py:117
 #: colournaming/experimentcolbg/forms.py:117 colournaming/mturk/forms.py:117
 msgid "Bluish white"
-msgstr "سفید متمایل به صورتی"
+msgstr "Plavičasto bela"
 
 #: colournaming/experimentcol/forms.py:118
 #: colournaming/experimentcolbg/forms.py:118 colournaming/mturk/forms.py:118
 msgid "Yellowish white"
-msgstr "سفید متمایل به زرد"
+msgstr "Žućkasto bela"
 
 #: colournaming/experimentcol/forms.py:120
 #: colournaming/experimentcolbg/forms.py:120 colournaming/mturk/forms.py:120
 msgid "Describe the white graphic elements on your screen"
-msgstr "عناصر گرافیکی سفید روی صفحه نمایش خود را شرح دهید"
+msgstr "Neki grafički elementi na sivoj pozadini ovog upitnika su bele boje. Kako biste je opisali?"
 
 #: colournaming/experimentcol/forms.py:126
 #: colournaming/experimentcol/forms.py:137
@@ -192,52 +192,52 @@ msgstr "عناصر گرافیکی سفید روی صفحه نمایش خود ر�
 #: colournaming/experimentcolbg/forms.py:137 colournaming/mturk/forms.py:126
 #: colournaming/mturk/forms.py:137
 msgid "Dark"
-msgstr "تاریک"
+msgstr "Mračno"
 
 #: colournaming/experimentcol/forms.py:127
 #: colournaming/experimentcolbg/forms.py:127 colournaming/mturk/forms.py:127
 msgid "Dim"
-msgstr "کم نور"
+msgstr "Prigušeno"
 
 #: colournaming/experimentcol/forms.py:128
 #: colournaming/experimentcolbg/forms.py:128 colournaming/mturk/forms.py:128
 msgid "Average"
-msgstr "میانگین"
+msgstr "Prosečno"
 
 #: colournaming/experimentcol/forms.py:129
 #: colournaming/experimentcolbg/forms.py:129 colournaming/mturk/forms.py:129
 msgid "Bright"
-msgstr "روشن"
+msgstr "Svetlo"
 
 #: colournaming/experimentcol/forms.py:131
 #: colournaming/experimentcolbg/forms.py:131 colournaming/mturk/forms.py:131
 msgid "Describe the surrounding environment behind your device"
-msgstr "محیط اطراف دستگاه خود را توصیف کنید"
+msgstr "Koji izraz najbolje opisuje osvetljenje iza uređaja na kom ste radili eksperiment?"
 
 #: colournaming/experimentcol/forms.py:138
 #: colournaming/experimentcolbg/forms.py:138 colournaming/mturk/forms.py:138
 msgid "Typical domestic"
-msgstr "حوزه معمولی"
+msgstr "Tipično kućno osvetljenje"
 
 #: colournaming/experimentcol/forms.py:139
 #: colournaming/experimentcolbg/forms.py:139 colournaming/mturk/forms.py:139
 msgid "Mid daylight"
-msgstr "نور میانه روز"
+msgstr "Uobičajeno dnevno svetlo"
 
 #: colournaming/experimentcol/forms.py:140
 #: colournaming/experimentcolbg/forms.py:140 colournaming/mturk/forms.py:140
 msgid "Full daylight"
-msgstr "نورکامل روز"
+msgstr "Jako/intenzivno dnevno svetlo"
 
 #: colournaming/experimentcol/forms.py:141
 #: colournaming/experimentcolbg/forms.py:141 colournaming/mturk/forms.py:141
 msgid "Typical office"
-msgstr "دفترکار  معمولی"
+msgstr "Tipično kancelarijsko osvetljenje"
 
 #: colournaming/experimentcol/forms.py:143
 #: colournaming/experimentcolbg/forms.py:143 colournaming/mturk/forms.py:143
 msgid "Describe the lighting conditions of your environment"
-msgstr "شرایط نورمحیط خود را توصیف کنید"
+msgstr "Opišite uslove osvetljenja u vašem trenutnom okruženju"
 
 #: colournaming/experimentcol/forms.py:151
 #: colournaming/experimentcol/forms.py:162
@@ -245,80 +245,80 @@ msgstr "شرایط نورمحیط خود را توصیف کنید"
 #: colournaming/experimentcolbg/forms.py:162 colournaming/mturk/forms.py:151
 #: colournaming/mturk/forms.py:162
 msgid "What distance are you from your monitor in cm?"
-msgstr "چند سانتی متر از صفحه نمایش رایانه فاصله دارید؟"
+msgstr "Koliko ste u centimetrima udaljeni od ekrana?"
 
 #: colournaming/experimentcol/forms.py:161
 #: colournaming/experimentcolbg/forms.py:161 colournaming/mturk/forms.py:161
 #: colournaming/templates/colour_vision.html:12
 msgid "No"
-msgstr "خیر"
+msgstr "Ne"
 
 #: colournaming/experimentcol/forms.py:161
 #: colournaming/experimentcolbg/forms.py:161 colournaming/mturk/forms.py:161
 #: colournaming/templates/colour_vision.html:13
 msgid "Yes"
-msgstr "بله"
+msgstr "Da"
 
 #: colournaming/experimentcol/views.py:184
 #: colournaming/experimentcolbg/views.py:213 colournaming/mturk/views.py:229
 msgid "You are in the 0% top colour namers."
-msgstr "شما جز X درصد نام گذاران برتر رنگ هستید."
+msgstr "Vi ste u X% najboljih učesnika u zadatku imenovanja boja."
 
 #: colournaming/home/forms.py:7
 msgid "First name"
-msgstr "نام"
+msgstr "Ime"
 
 #: colournaming/home/forms.py:8
 msgid "Last name"
-msgstr "نام خانوادگی"
+msgstr "Prezime"
 
 #: colournaming/home/forms.py:9
 msgid "Email"
-msgstr "آدرس پست الکترونیکی"
+msgstr "Imejl adresa"
 
 #: colournaming/home/forms.py:10
 msgid "Organisation"
-msgstr "تشکیلات"
+msgstr "Organizacija"
 
 #: colournaming/home/forms.py:11
 msgid "Your message"
-msgstr "پیام شما"
+msgstr "Vaša poruka"
 
 #: colournaming/namer/forms.py:17
 msgid "Do you agree?"
-msgstr "موافقید؟"
+msgstr "Da li se slažete?"
 
 #: colournaming/namer/forms.py:18
 msgid "Strongly disagree"
-msgstr "به شدت مخالف"
+msgstr "Uopšte se ne slažem"
 
 #: colournaming/namer/forms.py:19
 msgid "Disagree"
-msgstr "مخالف"
+msgstr "Ne slažem se"
 
 #: colournaming/namer/forms.py:20
 msgid "Undecided"
-msgstr "بدون تصمیم"
+msgstr "Neodlučan/na sam"
 
 #: colournaming/namer/forms.py:21
 msgid "Agree"
-msgstr "موافق"
+msgstr "Slažem se"
 
 #: colournaming/namer/forms.py:22
 msgid "Strongly agree"
-msgstr "کاملا موافق"
+msgstr "U potpunosti se slažem"
 
 #: colournaming/templates/base.html:13 colournaming/templates/index.html:12
 msgid "Colour Naming"
-msgstr "نامگذاری رنگ"
+msgstr "Imenovanje boja"
 
 #: colournaming/templates/base_experiment.html:18
 msgid "Colour Naming Experiment"
-msgstr "تجربه نامگذاری رنگ"
+msgstr "Eksperiment Imenovanja boja"
 
 #: colournaming/templates/colour_vision.html:4
 msgid "Colour Vision Task"
-msgstr "مهارت دید رنگ"
+msgstr "Zadatak Opažanja boja"
 
 #: colournaming/templates/colour_vision.html:7
 msgid ""
@@ -327,42 +327,42 @@ msgid ""
 "all of the time. The movie lasts for 90 secs and all you need to do is "
 "play it and remember if the 'coloured' square disappeared at any time "
 "during the movie."
-msgstr "فیلم زیر یک مربع متحرک رنگی را نمایش می دهد.در موقع نمایش فیلم ,مربع رنگ را تغییر می دهد.شما برای برخی یا کل زمان ممکن است قادر به دیدن رنگ باشیدمدت نمایش فیلم 90 ثانیه است و شما کافیست تنها مشغول بازی با آن باشید و زمان هایی که مربع "رنگی" در طول فیلم ناپدید شد را به خاطر بسپارید."
+msgstr "Na snimku je prikazan "obojeni" kvadrat koji se pomera. Tokom trajanja snimka, boja kvadrata se menja. Boju ćete moći da vidite ili neko vreme ili tokom trajanja celog snimka. Snimak traje 90 sekundi i sve što treba da uradite je da ga pogledate i da zapamtite da li je "obojeni" kvadrat nestao u bilo kom tokom trenutku trajanja snimka."
 
 #: colournaming/templates/colour_vision.html:9
 msgid "Did the 'coloured' square disappear?"
-msgstr "آیا مربع "رنگی" ناپدید شد؟"
+msgstr "Da li je "obojeni" kvadrat nestao?"
 
 #: colournaming/templates/display_properties.html:4
 msgid "Display Properties Task"
-msgstr "نمایش ویژگی های کار(بازی)"
+msgstr "Zadatak karakteristika ekrana"
 
 #: colournaming/templates/display_properties.html:7
 msgid ""
 "Adjust the brightness of your display if necessary until you can see the "
 "differences between all 11 steps of the greyscale test image. Disable "
 "Night Shift mode or blue light filters if applicable."
-msgstr "در صورت لزوم، روشنایی صفحه نمایش خود را تنظیم کنیدتا زمانی که بتوانید تفاوت بین تمام 11 تصویرآزمون سیاه و سفید را ببینید. حالت فیلترشب یا فیلترهای نور آبی را در صورت امکان غیرفعال کنید"
+msgstr "Ukoliko je potrebno, podesite svetlinu svog ekrana sve dok ne budete videli razliku između svih 11 koraka na test krugu sa sivim nijansama. Isključite "Noćni režim" ekrana i filtere za plavo svetlo ukoliko je vam je nešto od toga uključeno."
 
 #: colournaming/templates/display_properties.html:23
 msgid "Confirm how many steps you can see?"
-msgstr "معلوم است که تا چند مراحل را می ببینید؟"
+msgstr "Potvrdite koliko koraka možete da vidite?"
 
 #: colournaming/templates/index.html:20 colournaming/templates/index.html:48
 msgid "Colour namer"
-msgstr "نامگذار رنگ"
+msgstr "Imenik boja"
 
 #: colournaming/templates/index.html:23 colournaming/templates/index.html:99
 msgid "Research"
-msgstr "پژوهش"
+msgstr "Istraživanje"
 
 #: colournaming/templates/index.html:26 colournaming/templates/index.html:342
 msgid "Contact"
-msgstr "تماس"
+msgstr "Kontakt"
 
 #: colournaming/templates/index.html:34
 msgid "Let's play a game, how many colours can you name?"
-msgstr "بیایید یک بازی کنیم، چند رنگ را می توانید نام ببرید؟"
+msgstr "Hajde da igramo igricu: koliko boja možete da imenujete?"
 
 #: colournaming/templates/index.html:36
 msgid ""
@@ -372,7 +372,7 @@ msgid ""
 "about your cultural background and viewing conditions. You are free to "
 "omit any question and you may withdraw at any time without penalty. "
 "Participation in this study is strictly anonymous and voluntary."
-msgstr "به نامگذاری رنگ, یک تجربه آنلاین که برای جمع آوری نام رنگ ها در چندین زبان با در نظر گرفتن محدوده رنگی متناظر با آن زبان طراحی شده است,خوش آمدید. از شما خواسته می شود مجموعه ای از نمونه های رنگی را نام ببرید واطلاعات مربوط به پیشینه فرهنگی و شرایط بصری خود را ارائه دهید.شما در حذف سوالات مختار هستید و در هر زمان که بخواهید می توانید بدون پرداخت جریمه بازی را ترک کنید. مشارکت در این مطالعه کاملا داوطلبانه است."
+msgstr "Dobrodošli u Imenovanje Boja, onlajn eksperiment dizajniran sa ciljem da se prikupe nazivi za boje u različitim jezicima, zajedno sa opsegom boja na koje se ti nazivi odnose. Vaš zadatak će biti da imenujete niz obojenih uzoraka i da ostavite nekoliko podataka o sebi i o uslovima u kojima ste radili eksperiment. Možete da preskočite bilo koje pitanje i možete da prekinete svoje učešće u ovom istraživanju u bilo kom trenutku bez ikakavih posledica. Učešće u istraživanju je u potpunosti anonimno i dobrovoljno."
 
 #: colournaming/templates/index.html:38
 msgid ""
@@ -382,7 +382,7 @@ msgid ""
 "Please feel free to contact the principal investigator <a "
 "href=\"mailto:dimitris.mylonas[at]nchlondon.ac.uk\">Dimitris Mylonas</a> "
 "if you have any questions."
-msgstr "بسیاری از افراد روند این کار را لذت بخش می دانند وما معتقدیم هیچ مشکلی برای شرکت کنندگان وجود ندارد.هدف این تحقیق، ارتقا فهم و درک رنگ (به سبب اختلاف زبان) در محیطهای چند زبانه است.برای اطلاعات بیشتر تماس بگیرید <a href=\"mailto:d.mylonas[at]ucl.ac.uk\">Dimitris Mylonas</a>"
+msgstr "Većina ljudi zadatke u ovom istraživanju smatra zabavnim i nama nije poznato da postoje bilo kakvi rizici od učešća. Svrha ovog istraživanja je da se unapredi višejezična komunikacija o bojama u kontekstu. Budite slobodni da kontaktirate glavnog istraživača <a href=\"mailto:d.mylonas[at]ucl.ac.uk\">Dimitris Mylonas</a> ukoliko imate bilo kakvih pitanja."
 
 #: colournaming/templates/index.html:40
 msgid ""
@@ -390,11 +390,11 @@ msgid ""
 " consent to participate in the study, click on the 'Start' button to "
 "begin the experiment against a neutral grey background or the 'Chromatic "
 "Start' button to begin the experiment against chromatic backgrounds."
-msgstr "اگر شما  16 ساله یا بیشتر هستید، این اظهارات را درک می کنید و به طور آزادانه برای شرکت دربازی تصمیم می گیریدروی دکمه "شروع کنید خاکستری" کلیک کنید تا آزمایش را در پس زمینه خاکستری خنثی شروع کنید یا دکمه "شروع کنید رنگی" را برای شروع آزمایش در پس زمینه های رنگی کلیک کنید."
+msgstr "Ako imate 16 ili više godina, razumete sve napisano i dobrovoljno pristajete da učestvujete u istraživanju, kliknite na sivo dugme "Start" da započnete eksperiment sa neutralnom sivom pozadinom ili na obojeno dugme "Start" da započnete eksperiment sa pozadinom u boji."
 
 #: colournaming/templates/index.html:42 colournaming/templates/index.html:43
 msgid "Start"
-msgstr "شروع کنید"
+msgstr "Start"
 
 #: colournaming/templates/index.html:50
 msgid ""
@@ -402,50 +402,50 @@ msgid ""
 "each colour in different languages (Mylonas, Stutters, Doval, and "
 "MacDonald, 2013). More languages will be added as more data is becoming "
 "available."
-msgstr "این یک ناظر مصنوعی است که توسط پاسخ های شرکت کنندگان ارتقا می یابد تا هر رنگ را در زبان های مختلف نامگذاری کنند. زبان های بیشتری اضافه خواهند شد، زیرا اطلاعات بیشتری در دسترس می باشد (Mylonas, Stutters, Doval, and MacDonald, 2013)."
+msgstr "Ovo je virtuelni posmatrač koji je naučen da odgovara na osnovu odgovora ispitanika na različitim jezicima (Mylonas, Stutters, Doval, and MacDonald, 2013). Novi jezici će biti dodati čim podaci postanu dostupni."
 
 #: colournaming/templates/index.html:65
 msgid "by name"
-msgstr "بر اساس اسم"
+msgstr "prema nazivu"
 
 #: colournaming/templates/index.html:74
 msgid "Colour name"
-msgstr "نام رنگ"
+msgstr "Naziv za boju"
 
 #: colournaming/templates/index.html:76
 msgid "Synonyms"
-msgstr "مترادف"
+msgstr "Sinonimi"
 
 #: colournaming/templates/index.html:95
 msgid ""
 "This is a βeta version of Colournamer. You will need JavaScript enabled "
 "and a browser that supports HTML5 web audio."
-msgstr "این یک نسخه βeta از Colursamer است.شما باید جاوا اسکریپت و مرورگری را فعال کنید  که صوت وبHTML5  را پشتیبانی می کند."
+msgstr "Ovo je Beta verzija Imenika boja. Biće vam potreban JavaScript koji radi kao i da vam pretraživač (brauzer) podržava HTML5 web audio."
 
 #: colournaming/templates/index.html:102
 msgid ""
 "This research aims to develop an online colour naming model to facilitate"
 " colour communication within and between cultures."
-msgstr "این پژوهش در نظر دارد یک مدل نامگذاری رنگی آنلاین را برای تسهیل ارتباط رنگ (فهم و درک رنگ) درون و بین فرهنگها توسعه دهد"
+msgstr "Ovo istraživanje ima za cilj da razvije onlajn model imenovanja boja koji bi olakšao komunikaciju o bojama unutar i između različitih kultura."
 
 #: colournaming/templates/index.html:344
 msgid ""
 "Please use the following communication form to give us your feedback and "
 "comments or if you wish to inform you about the results of this research."
-msgstr "لطفا فرم ارتباطی زیر را برای بازخورد نظرات خود و یا به منظور مطلع شدن از نتایج این تحقیق استفاده نمایید"
+msgstr "Molimo vas da iskoristite ovu kontakt formu ukoliko želite da podelite svoje utiske, ostavite komentar ili ukoliko želite da vas obavestimo o razultatima ovog istraživanja."
 
 #: colournaming/templates/index.html:357
 #: colournaming/templates/observer_information.html:52
 msgid "Submit"
-msgstr "ارسال"
+msgstr "Pošalji"
 
 #: colournaming/templates/index.html:368
 msgid "Made in London and Berlin"
-msgstr "ساخته شده در لندن و برلین"
+msgstr "Kreirano u Londonu i Berlinu."
 
 #: colournaming/templates/name_colour.html:4
 msgid "Colour Naming Task"
-msgstr "مهارت نامگذاری رنگ"
+msgstr "Zadatak Imenovanja boja"
 
 #: colournaming/templates/name_colour.html:10
 msgid ""
@@ -455,43 +455,43 @@ msgid ""
 "appear. Name as many colour samples (20+) as you can for higher ranking "
 "on colour namers. You will need to press the Finish button to start the "
 "next task. Your response time will be recorded."
-msgstr "هر نمونه رنگی را با اصطلاح رنگی مناسبی که به خاطر می آورید  نام گذاری کنیددکمه فلش را فشار دهید یا برای پدیدار شدن نمونه رنگ بعدی  کلید ورود روی صفحه نمایش خود را فشار دهیدتا آنجا که می توانید برای امتیاز بیشتر نام گذاران رنگ, نمونه های رنگ را نامگذاری کنیدبرای ورود به مهارت بعدی دکمه پایان را بزنید زمان پاسخگویی شما محاسبه می شود"
+msgstr "Imenujte svaku boju koristeći najadekvatniji naziv kog možete da se setite. Kada iskucate naziv boje, pritisnite  Strelicu ili taster Enter na vašoj tastaturi kako bi se pojavila sledeća boja. Imenujte što više boja možete (barem 20) kako biste zauzeli što bolju poziciju na našoj listi učesnika. Da biste prešli na sledeći zadatak, biće potrebno da pritisnete dugme Završi. Vreme koje vam je potrebno za odgovaranje će biti zabeleženo."
 
 #: colournaming/templates/name_colour.html:18
 msgid "Name the colour of the patch"
-msgstr "رنگ قطعه را بنویسید"
+msgstr "Upišite naziv boje"
 
 #: colournaming/templates/name_colour.html:32
 msgid "Finish"
-msgstr "پایان"
+msgstr "Završi"
 
 #: colournaming/templates/observer_information.html:5
 msgid "Observer Information Task"
-msgstr "بررسی اطلاعات کار"
+msgstr "Informacije o ispitaniku"
 
 #: colournaming/templates/observer_information.html:8
 msgid ""
 "Please provide us with some information about your background and viewing"
 " conditions. This will help us to better understand the context of your "
 "responses."
-msgstr "لطفا اطلاعاتی در مورد گذشته خود و کیفت بصری خود ارائه دهید. این به ما در درک پاسخهایتان کمک می کند."
+msgstr "Molimo vas da odgovorite na nekoliko pitanja o sebi i o uslovima u kojima ste radili eksperiment. Ovo će nam pomoći da bolje razumemo vaše odgovore."
 
 #: colournaming/templates/thankyou.html:5
 msgid "Thank you"
-msgstr "متشکرم"
+msgstr "Hvala."
 
 #: colournaming/templates/thankyou.html:8
 msgid "Thank you for participating."
-msgstr "از شرکت شما سپاسگزارم"
+msgstr "Hvala vam na učešću u istraživanju."
 
 #: colournaming/templates/thankyou.html:8
 msgid "You can now share the link of the experiment with your friends."
-msgstr "شما هم اکنون می توانید لینک تجربه خود را با دوستانتان به اشتراک بگذارید."
+msgstr "Možete podeliti link do eksperimenta sa svojim prijateljima."
 
 #: colournaming/templates/thankyou.html:15
 msgid ""
 "Your responses will be used to improve colour communication within and "
 "across languages. Please feel free to contact us and visit our research "
 "page for more information. Find below a summary of your responses."
-msgstr "پاسخ های شما برای بهبود ادراک رنگی بین زبان ها استفاده می شودلطفا برای ارتباط با ما راحت باشیدو برای اطلاعات بیشتر به صفحه تحقیق ما مراجعه کنید.پاسخ های خود را به رنگ سفید و"
+msgstr "Vaši odgovori će biti korišćeni da se unapredi komunikacija o bojama kako unutar jednog jezika, tako i između različitih jezika. Budite slobodni da nas kontaktirate i da za više informacija kliknete na "Istraživanje" na gornjem meniju. Ispod su belom bojom ispisani vaši odgovori."
 
