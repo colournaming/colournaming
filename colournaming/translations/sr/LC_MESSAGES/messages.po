@@ -335,18 +335,18 @@ msgstr "Da li je "obojeni" kvadrat nestao?"
 
 #: colournaming/templates/display_properties.html:4
 msgid "Display Properties Task"
-msgstr "Zadatak karakteristika ekrana"
+msgstr "Zadatak Utvrđivanja karakteristika ekrana"
 
 #: colournaming/templates/display_properties.html:7
 msgid ""
 "Adjust the brightness of your display if necessary until you can see the "
 "differences between all 11 steps of the greyscale test image. Disable "
 "Night Shift mode or blue light filters if applicable."
-msgstr "Ukoliko je potrebno, podesite svetlinu svog ekrana sve dok ne budete videli razliku između svih 11 koraka na test krugu sa sivim nijansama. Isključite "Noćni režim" ekrana i filtere za plavo svetlo ukoliko je vam je nešto od toga uključeno."
+msgstr "Ukoliko je potrebno, podesite svetlinu svog ekrana sve dok ne budete videli razliku između svih 11 nijansi na test krugu sa sivim nijansama. Isključite "Noćni režim" ekrana i filtere za plavo svetlo ukoliko vam je nešto od toga uključeno."
 
 #: colournaming/templates/display_properties.html:23
 msgid "Confirm how many steps you can see?"
-msgstr "Potvrdite koliko koraka možete da vidite?"
+msgstr "Potvrdite koliko nijansi možete da vidite?"
 
 #: colournaming/templates/index.html:20 colournaming/templates/index.html:48
 msgid "Colour namer"
@@ -372,7 +372,7 @@ msgid ""
 "about your cultural background and viewing conditions. You are free to "
 "omit any question and you may withdraw at any time without penalty. "
 "Participation in this study is strictly anonymous and voluntary."
-msgstr "Dobrodošli u Imenovanje Boja, onlajn eksperiment dizajniran sa ciljem da se prikupe nazivi za boje u različitim jezicima, zajedno sa opsegom boja na koje se ti nazivi odnose. Vaš zadatak će biti da imenujete niz obojenih uzoraka i da ostavite nekoliko podataka o sebi i o uslovima u kojima ste radili eksperiment. Možete da preskočite bilo koje pitanje i možete da prekinete svoje učešće u ovom istraživanju u bilo kom trenutku bez ikakavih posledica. Učešće u istraživanju je u potpunosti anonimno i dobrovoljno."
+msgstr "Dobrodošli u Imenovanje Boja, onlajn eksperiment napravljen sa ciljem da se prikupe nazivi za boje u različitim jezicima, kao i opseg boja na koje se ti nazivi odnose. Vaš zadatak će biti da imenujete niz boja i da ostavite nekoliko podataka o sebi i o uslovima u kojima ste radili eksperiment. Možete preskočiti bilo koje pitanje i možete da prekinete svoje učešće u ovom istraživanju u bilo kom trenutku, bez ikakavih posledica. Učešće u istraživanju je u potpunosti anonimno i dobrovoljno."
 
 #: colournaming/templates/index.html:38
 msgid ""
@@ -402,7 +402,7 @@ msgid ""
 "each colour in different languages (Mylonas, Stutters, Doval, and "
 "MacDonald, 2013). More languages will be added as more data is becoming "
 "available."
-msgstr "Ovo je virtuelni posmatrač koji je naučen da odgovara na osnovu odgovora ispitanika na različitim jezicima (Mylonas, Stutters, Doval, and MacDonald, 2013). Novi jezici će biti dodati čim podaci postanu dostupni."
+msgstr "Ovo je Veštački Posmatrač koji je treniran da imenuje boje na različitim jezicima na osnovu odgovora ispitanika (Mylonas, Stutters, Doval, and MacDonald, 2013). Novi jezici se dodaju kako podaci postaju dostupni."
 
 #: colournaming/templates/index.html:65
 msgid "by name"
@@ -420,7 +420,7 @@ msgstr "Sinonimi"
 msgid ""
 "This is a βeta version of Colournamer. You will need JavaScript enabled "
 "and a browser that supports HTML5 web audio."
-msgstr "Ovo je Beta verzija Imenika boja. Biće vam potreban JavaScript koji radi kao i da vam pretraživač (brauzer) podržava HTML5 web audio."
+msgstr "Ovo je Beta verzija Imenika boja. Biće vam potreban JavaScript koji radi kao i  pretraživač (brauzer) koji podržava HTML5 web audio."
 
 #: colournaming/templates/index.html:102
 msgid ""
@@ -432,7 +432,7 @@ msgstr "Ovo istraživanje ima za cilj da razvije onlajn model imenovanja boja ko
 msgid ""
 "Please use the following communication form to give us your feedback and "
 "comments or if you wish to inform you about the results of this research."
-msgstr "Molimo vas da iskoristite ovu kontakt formu ukoliko želite da podelite svoje utiske, ostavite komentar ili ukoliko želite da vas obavestimo o razultatima ovog istraživanja."
+msgstr "Molimo vas da iskoristite ovu kontakt formu ukoliko želite da podelite svoje utiske, ostavite komentar ili ukoliko želite da vas obavestimo o rezultatima ovog istraživanja."
 
 #: colournaming/templates/index.html:357
 #: colournaming/templates/observer_information.html:52
@@ -455,7 +455,7 @@ msgid ""
 "appear. Name as many colour samples (20+) as you can for higher ranking "
 "on colour namers. You will need to press the Finish button to start the "
 "next task. Your response time will be recorded."
-msgstr "Imenujte svaku boju koristeći najadekvatniji naziv kog možete da se setite. Kada iskucate naziv boje, pritisnite  Strelicu ili taster Enter na vašoj tastaturi kako bi se pojavila sledeća boja. Imenujte što više boja možete (barem 20) kako biste zauzeli što bolju poziciju na našoj listi učesnika. Da biste prešli na sledeći zadatak, biće potrebno da pritisnete dugme Završi. Vreme koje vam je potrebno za odgovaranje će biti zabeleženo."
+msgstr "Imenujte svaku boju koristeći naziv koji je najbolje opisuje, a kog možete da se setite.<br>Kada iskucate naziv boje, pritisnite Strelicu pored tog naziva [&gt;] ili taster Enter na vašoj tastaturi kako bi se pojavila sledeća boja. Imenujte što više boja možete (barem 20) kako biste zauzeli što bolju poziciju na našoj listi učesnika. Da biste prešli na sledeći zadatak, biće potrebno da pritisnete dugme Završi. Vreme koje vam je potrebno za odgovaranje će biti zabeleženo."
 
 #: colournaming/templates/name_colour.html:18
 msgid "Name the colour of the patch"
@@ -493,5 +493,5 @@ msgid ""
 "Your responses will be used to improve colour communication within and "
 "across languages. Please feel free to contact us and visit our research "
 "page for more information. Find below a summary of your responses."
-msgstr "Vaši odgovori će biti korišćeni da se unapredi komunikacija o bojama kako unutar jednog jezika, tako i između različitih jezika. Budite slobodni da nas kontaktirate i da za više informacija kliknete na "Istraživanje" na gornjem meniju. Ispod su belom bojom ispisani vaši odgovori."
+msgstr "Vaši odgovori će biti korišćeni da se unapredi komunikacija o bojama kako unutar jednog jezika, tako i između različitih jezika. Budite slobodni da nas kontaktirate i da za više informacija kliknete na "Istraživanje" na gornjem meniju na početnoj stranici. Ispod su belom bojom ispisani vaši odgovori, a crnom bojom najčešći odgovori."
 
