@@ -262,7 +262,7 @@ msgstr "Da"
 #: colournaming/experimentcol/views.py:184
 #: colournaming/experimentcolbg/views.py:213 colournaming/mturk/views.py:229
 msgid "You are in the 0% top colour namers."
-msgstr "Vi ste u X% najboljih učesnika u zadatku imenovanja boja."
+msgstr "Vi ste u 0% najboljih učesnika u zadatku imenovanja boja."
 
 #: colournaming/home/forms.py:7
 msgid "First name"
