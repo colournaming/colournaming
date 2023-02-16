@@ -3,7 +3,7 @@ wtforms
 flask
 flask_sqlalchemy
 flask_mail
-sqlalchemy
+sqlalchemy < 2.0
 flask_babel
 pycountry
 click
