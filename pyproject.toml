@@ -1,3 +1,6 @@
 [tool.black]
 line-length=100
 exclude = 'targets.py'
+
+[tool.pyright]
+venvPath = '.venv3.10'
