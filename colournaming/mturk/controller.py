@@ -41,7 +41,7 @@ def read_backgrounds_from_file(targets_file, delete_existing=False):
     db.session.commit()
 
 
-def get_random_colour(colour_class):
+def get_random_colour(colour_class, increment_presentation=True):
     """Get a random colour target or background."""
     max_presentation_count = db.session.query(func.max(colour_class.presentation_count)).scalar()
     if max_presentation_count is None:
@@ -53,7 +53,8 @@ def get_random_colour(colour_class):
         # will occur if all targets have been presented max times
         targets = colour_class.query.all()
     target = random.choice(targets)
-    target.presentation_count += 1
+    if increment_presentation:
+        target.presentation_count += 1
     db.session.commit()
     return random.choice(targets)
 
@@ -89,7 +90,7 @@ def get_random_target():
 
 def get_random_background():
     """Get a random colour background."""
-    target = get_random_colour(BackgroundColour)
+    target = get_random_colour(BackgroundColour, increment_presentation=False)
     print("random background is", target)
     return target.id, (target.red, target.green, target.blue)
 
@@ -138,6 +139,9 @@ def save_response(experiment, response):
     print(colour_response)
     db.session.add(colour_response)
     db.session.commit()
+    return MturkColourResponseColBG.query.filter(
+        MturkColourResponseColBG.participant == participant
+    ).count()
 
 
 def update_participant(experiment):
@@ -163,4 +167,8 @@ def update_participant(experiment):
     participant.device = experiment["observer"]["device"]
     participant.location = experiment["observer"]["location"]
     participant.colour_target_disappeared = experiment["vision"]["square_disappeared"]
+    background = BackgroundColour.query.filter(
+        BackgroundColour.id == experiment["background_id"]
+    ).one()
+    background.presentation_count += 1
     db.session.commit()

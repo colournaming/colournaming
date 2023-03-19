@@ -4,6 +4,7 @@ from datetime import datetime
 from functools import wraps, update_wrapper
 from flask import (
     abort,
+    current_app,
     Blueprint,
     jsonify,
     redirect,
@@ -135,9 +136,12 @@ def colour_vision():
 def name_colour():
     """Show the name colour form and handle responses."""
     check_in_experiment()
+    response_goal = int(current_app.config.get("MTURK_RESPONSE_COUNT", "226"))
     form = forms.ColourNameForm()
     if form.validate_on_submit():
-        controller.save_response(
+        if not session["experiment"]:
+            abort(500)
+        response_count = controller.save_response(
             session["experiment"],
             {
                 "target_id": form.target_id.data,
@@ -145,10 +149,10 @@ def name_colour():
                 "response_time": form.response_time.data,
             },
         )
-        session["experiment"]["response_count"] += 1
+        session["experiment"]["response_count"] = response_count
         session.modified = True
         print("session:", session["experiment"])
-        if session["experiment"]["response_count"] >= 226:
+        if session["experiment"]["response_count"] >= response_goal:
             print("redirecting to observer information", session["experiment"]["response_count"])
             return redirect(url_for("mturk.observer_information"))
         else:

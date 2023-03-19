@@ -68,7 +68,6 @@ def get_random_background():
         # will occur if all targets have been presented max times
         targets = BackgroundColour.query.all()
     target = random.choice(targets)
-    target.presentation_count += 1
     db.session.commit()
     return target.id, (target.red, target.green, target.blue)
 
@@ -139,4 +138,8 @@ def update_participant(experiment):
     participant.device = experiment["observer"]["device"]
     participant.location = experiment["observer"]["location"]
     participant.colour_target_disappeared = experiment["vision"]["square_disappeared"]
+    background = BackgroundColour.query.filter(
+        BackgroundColour.id == experiment["background_id"]
+    ).one()
+    background.presentation_count += 1
     db.session.commit()
