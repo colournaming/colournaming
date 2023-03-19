@@ -138,6 +138,9 @@ def save_response(experiment, response):
     print(colour_response)
     db.session.add(colour_response)
     db.session.commit()
+    return MturkColourResponseColBG.query.filter(
+        MturkColourResponseColBG.participant == participant
+    ).count()
 
 
 def update_participant(experiment):
