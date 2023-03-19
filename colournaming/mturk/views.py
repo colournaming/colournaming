@@ -136,9 +136,11 @@ def colour_vision():
 def name_colour():
     """Show the name colour form and handle responses."""
     check_in_experiment()
-    response_goal = int(current_app.config["MTURK_RESPONSE_COUNT"])
+    response_goal = int(current_app.config.get("MTURK_RESPONSE_COUNT", "226"))
     form = forms.ColourNameForm()
     if form.validate_on_submit():
+        if not session["experiment"]:
+            abort(500)
         response_count = controller.save_response(
             session["experiment"],
             {
