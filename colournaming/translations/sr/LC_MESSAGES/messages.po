@@ -493,5 +493,5 @@ msgid ""
 "Your responses will be used to improve colour communication within and "
 "across languages. Please feel free to contact us and visit our research "
 "page for more information. Find below a summary of your responses."
-msgstr "Vaši odgovori će biti korišćeni da se unapredi komunikacija o bojama kako unutar jednog jezika, tako i između različitih jezika. Budite slobodni da nas kontaktirate i da za više informacija kliknete na "Istraživanje" na gornjem meniju na početnoj stranici. Ispod su belom bojom ispisani vaši odgovori, a crnom bojom najčešći odgovori."
+msgstr "Vaši odgovori će biti korišćeni da se unapredi komunikacija o bojama kako unutar jednog jezika, tako i između različitih jezika. Budite slobodni da nas kontaktirate i da za više informacija kliknete na "Istraživanje" na gornjem meniju na početnoj stranici.  Ispod su  ispisani vaši odgovori."
 
