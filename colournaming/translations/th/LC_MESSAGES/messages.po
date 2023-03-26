@@ -20,32 +20,32 @@ msgstr ""
 #: colournaming/experimentcol/forms.py:38
 #: colournaming/experimentcolbg/forms.py:38 colournaming/mturk/forms.py:38
 msgid "What is your age?"
-msgstr "Koliko imate godina?"
+msgstr "อายุของท่าน"
 
 #: colournaming/experimentcol/forms.py:45
 #: colournaming/experimentcolbg/forms.py:45 colournaming/mturk/forms.py:45
 msgid "Female"
-msgstr "Ženski"
+msgstr "หญิง"
 
 #: colournaming/experimentcol/forms.py:46
 #: colournaming/experimentcolbg/forms.py:46 colournaming/mturk/forms.py:46
 msgid "Male"
-msgstr "Muški"
+msgstr "ชาย"
 
 #: colournaming/experimentcol/forms.py:47
 #: colournaming/experimentcolbg/forms.py:47 colournaming/mturk/forms.py:47
 msgid "Other"
-msgstr "Drugo"
+msgstr "อื่น ๆ"
 
 #: colournaming/experimentcol/forms.py:49
 #: colournaming/experimentcolbg/forms.py:49 colournaming/mturk/forms.py:49
 msgid "To which gender do you most identify?"
-msgstr "Sa kojim rodom se najviše identifikujete?"
+msgstr "เพศที่ระบุตัวตนของคุณที่สุด"
 
 #: colournaming/experimentcol/forms.py:52
 #: colournaming/experimentcolbg/forms.py:52 colournaming/mturk/forms.py:52
 msgid "Please specify"
-msgstr "Molimo vas da odredite"
+msgstr "โปรดระบุ"
 
 #: colournaming/experimentcol/forms.py:56
 #: colournaming/experimentcol/forms.py:66
@@ -53,7 +53,7 @@ msgstr "Molimo vas da odredite"
 #: colournaming/experimentcolbg/forms.py:66 colournaming/mturk/forms.py:56
 #: colournaming/mturk/forms.py:66
 msgid "Beginner"
-msgstr "Početni nivo"
+msgstr "ขั้นต้น"
 
 #: colournaming/experimentcol/forms.py:57
 #: colournaming/experimentcol/forms.py:67
@@ -61,7 +61,7 @@ msgstr "Početni nivo"
 #: colournaming/experimentcolbg/forms.py:67 colournaming/mturk/forms.py:57
 #: colournaming/mturk/forms.py:67
 msgid "Intermediate"
-msgstr "Srednji nivo"
+msgstr "ขั้นกลาง"
 
 #: colournaming/experimentcol/forms.py:58
 #: colournaming/experimentcol/forms.py:68
@@ -69,122 +69,122 @@ msgstr "Srednji nivo"
 #: colournaming/experimentcolbg/forms.py:68 colournaming/mturk/forms.py:58
 #: colournaming/mturk/forms.py:68
 msgid "Advanced"
-msgstr "Napredni nivo"
+msgstr "ขั้นเทพ"
 
 #: colournaming/experimentcol/forms.py:60
 #: colournaming/experimentcolbg/forms.py:60 colournaming/mturk/forms.py:60
 msgid "Describe your experience working with colour"
-msgstr "Označite koliko imate iskustva u radu sa bojama"
+msgstr "ระบุประสบการณ์การทำงานกับสี"
 
 #: colournaming/experimentcol/forms.py:69
 #: colournaming/experimentcolbg/forms.py:69 colournaming/mturk/forms.py:69
 msgid "Bilingual"
-msgstr "Dvojezičan/na sam"
+msgstr "สองภาษา"
 
 #: colournaming/experimentcol/forms.py:70
 #: colournaming/experimentcolbg/forms.py:70 colournaming/mturk/forms.py:70
 msgid "Native speaker"
-msgstr "To mi je maternji jezik"
+msgstr "ภาษาแม่"
 
 #: colournaming/experimentcol/forms.py:72
 #: colournaming/experimentcolbg/forms.py:72 colournaming/mturk/forms.py:72
 msgid "Describe your skill in the language used in this experiment"
-msgstr "Označite nivo znanja jezika na kom ste radili ovaj eksperiment"
+msgstr "ระบุทักษะทางภาษาของคุณที่ใช้ในการทดลองนี้"
 
 #: colournaming/experimentcol/forms.py:78
 #: colournaming/experimentcolbg/forms.py:78 colournaming/mturk/forms.py:78
 msgid "No qualifications"
-msgstr "osnovna škola"
+msgstr "ไม่มีวุฒิ"
 
 #: colournaming/experimentcol/forms.py:79
 #: colournaming/experimentcolbg/forms.py:79 colournaming/mturk/forms.py:79
 msgid "Secondary school degree"
-msgstr "srednja škola"
+msgstr "มัธยมศึกษา"
 
 #: colournaming/experimentcol/forms.py:80
 #: colournaming/experimentcolbg/forms.py:80 colournaming/mturk/forms.py:80
 msgid "Bachelors degree"
-msgstr "osnovne akademske studije"
+msgstr "ปริญญาตรี"
 
 #: colournaming/experimentcol/forms.py:81
 #: colournaming/experimentcolbg/forms.py:81 colournaming/mturk/forms.py:81
 msgid "Masters degree"
-msgstr "master akademske studije"
+msgstr "ปริญญาโท"
 
 #: colournaming/experimentcol/forms.py:82
 #: colournaming/experimentcolbg/forms.py:82 colournaming/mturk/forms.py:82
 msgid "Professional degree"
-msgstr "osnovne strukovne studije"
+msgstr "สายอาชีพ"
 
 #: colournaming/experimentcol/forms.py:83
 #: colournaming/experimentcolbg/forms.py:83 colournaming/mturk/forms.py:83
 msgid "Doctorate degree"
-msgstr "doktorske akademske studije"
+msgstr "ปริญญาเอก"
 
 #: colournaming/experimentcol/forms.py:85
 #: colournaming/experimentcolbg/forms.py:85 colournaming/mturk/forms.py:85
 msgid "What is the highest level of education you have completed?"
-msgstr "Koji je najviši stepen obrazovanja koji ste stekli?"
+msgstr "ระบุระดับการศึกษาสูงสุดของท่าน"
 
 #: colournaming/experimentcol/forms.py:93
 #: colournaming/experimentcolbg/forms.py:93 colournaming/mturk/forms.py:93
 msgid "In which country did you grow up?"
-msgstr "U kojoj državi ste odrasli?"
+msgstr "คุณเติบโตมาในประเทศใด"
 
 #: colournaming/experimentcol/forms.py:98
 #: colournaming/experimentcolbg/forms.py:98 colournaming/mturk/forms.py:98
 msgid "Where are you living?"
-msgstr "U kojoj državi živite?"
+msgstr "คุณอาศัยอยู่ในประเทศใด"
 
 #: colournaming/experimentcol/forms.py:104
 #: colournaming/experimentcolbg/forms.py:104 colournaming/mturk/forms.py:104
 msgid "Smartphone"
-msgstr "Mobilni telefon"
+msgstr "จอโทรศัพท์"
 
 #: colournaming/experimentcol/forms.py:105
 #: colournaming/experimentcolbg/forms.py:105 colournaming/mturk/forms.py:105
 msgid "Pad"
-msgstr "Tablet"
+msgstr "จอแพด"
 
 #: colournaming/experimentcol/forms.py:106
 #: colournaming/experimentcolbg/forms.py:106 colournaming/mturk/forms.py:106
 msgid "Laptop"
-msgstr "Laptop računar"
+msgstr "จอแลพท็อป"
 
 #: colournaming/experimentcol/forms.py:107
 #: colournaming/experimentcolbg/forms.py:107 colournaming/mturk/forms.py:107
 msgid "Desktop"
-msgstr "Desktop računar"
+msgstr "จอคอมตั้งโต๊ะ"
 
 #: colournaming/experimentcol/forms.py:109
 #: colournaming/experimentcolbg/forms.py:109 colournaming/mturk/forms.py:109
 msgid "What is your display device?"
-msgstr "Na kom uređaju ste radili eksperiment?"
+msgstr "จอภาพคุณเป็นแบบไหน"
 
 #: colournaming/experimentcol/forms.py:115
 #: colournaming/experimentcolbg/forms.py:115 colournaming/mturk/forms.py:115
 msgid "Neutral white"
-msgstr "Neutralna bela"
+msgstr "ขาวกลาง"
 
 #: colournaming/experimentcol/forms.py:116
 #: colournaming/experimentcolbg/forms.py:116 colournaming/mturk/forms.py:116
 msgid "Warm white"
-msgstr "Topla bela"
+msgstr "ขาวอมส้ม"
 
 #: colournaming/experimentcol/forms.py:117
 #: colournaming/experimentcolbg/forms.py:117 colournaming/mturk/forms.py:117
 msgid "Bluish white"
-msgstr "Plavičasto bela"
+msgstr "ขาวอมน้ำเงิน"
 
 #: colournaming/experimentcol/forms.py:118
 #: colournaming/experimentcolbg/forms.py:118 colournaming/mturk/forms.py:118
 msgid "Yellowish white"
-msgstr "Žućkasto bela"
+msgstr "ขาวอมเหลือง"
 
 #: colournaming/experimentcol/forms.py:120
 #: colournaming/experimentcolbg/forms.py:120 colournaming/mturk/forms.py:120
 msgid "Describe the white graphic elements on your screen"
-msgstr "Neki grafički elementi na sivoj pozadini ovog upitnika su bele boje. Kako biste je opisali?"
+msgstr "ระบุส่วนที่เป็นสีขาวของจอภาพของท่าน"
 
 #: colournaming/experimentcol/forms.py:126
 #: colournaming/experimentcol/forms.py:137
@@ -192,52 +192,52 @@ msgstr "Neki grafički elementi na sivoj pozadini ovog upitnika su bele boje. Ka
 #: colournaming/experimentcolbg/forms.py:137 colournaming/mturk/forms.py:126
 #: colournaming/mturk/forms.py:137
 msgid "Dark"
-msgstr "Mračno"
+msgstr "มืด"
 
 #: colournaming/experimentcol/forms.py:127
 #: colournaming/experimentcolbg/forms.py:127 colournaming/mturk/forms.py:127
 msgid "Dim"
-msgstr "Prigušeno"
+msgstr "สลัว"
 
 #: colournaming/experimentcol/forms.py:128
 #: colournaming/experimentcolbg/forms.py:128 colournaming/mturk/forms.py:128
 msgid "Average"
-msgstr "Prosečno"
+msgstr "สว่างปานกลาง"
 
 #: colournaming/experimentcol/forms.py:129
 #: colournaming/experimentcolbg/forms.py:129 colournaming/mturk/forms.py:129
 msgid "Bright"
-msgstr "Svetlo"
+msgstr "สว่างจ้า"
 
 #: colournaming/experimentcol/forms.py:131
 #: colournaming/experimentcolbg/forms.py:131 colournaming/mturk/forms.py:131
 msgid "Describe the surrounding environment behind your device"
-msgstr "Koji izraz najbolje opisuje osvetljenje iza uređaja na kom ste radili eksperiment?"
+msgstr "ระบุสภาพแวดล้อมด้านหลังของจอภาพ"
 
 #: colournaming/experimentcol/forms.py:138
 #: colournaming/experimentcolbg/forms.py:138 colournaming/mturk/forms.py:138
 msgid "Typical domestic"
-msgstr "Tipično kućno osvetljenje"
+msgstr "แสงภายในบ้านเรือน"
 
 #: colournaming/experimentcol/forms.py:139
 #: colournaming/experimentcolbg/forms.py:139 colournaming/mturk/forms.py:139
 msgid "Mid daylight"
-msgstr "Uobičajeno dnevno svetlo"
+msgstr "แสงกึ่งกลางวัน"
 
 #: colournaming/experimentcol/forms.py:140
 #: colournaming/experimentcolbg/forms.py:140 colournaming/mturk/forms.py:140
 msgid "Full daylight"
-msgstr "Jako/intenzivno dnevno svetlo"
+msgstr "แสงกลางวัน"
 
 #: colournaming/experimentcol/forms.py:141
 #: colournaming/experimentcolbg/forms.py:141 colournaming/mturk/forms.py:141
 msgid "Typical office"
-msgstr "Tipično kancelarijsko osvetljenje"
+msgstr "แสงภายในสำนักงาน"
 
 #: colournaming/experimentcol/forms.py:143
 #: colournaming/experimentcolbg/forms.py:143 colournaming/mturk/forms.py:143
 msgid "Describe the lighting conditions of your environment"
-msgstr "Opišite uslove osvetljenja u vašem trenutnom okruženju"
+msgstr "ระบุสภาวะแสงในสภาพแวดล้อมที่ใช้ในการทดลองนี้"
 
 #: colournaming/experimentcol/forms.py:151
 #: colournaming/experimentcol/forms.py:162
@@ -245,80 +245,80 @@ msgstr "Opišite uslove osvetljenja u vašem trenutnom okruženju"
 #: colournaming/experimentcolbg/forms.py:162 colournaming/mturk/forms.py:151
 #: colournaming/mturk/forms.py:162
 msgid "What distance are you from your monitor in cm?"
-msgstr "Koliko ste u centimetrima udaljeni od ekrana?"
+msgstr "ระยะระหว่างจอถึงตาคุณ"
 
 #: colournaming/experimentcol/forms.py:161
 #: colournaming/experimentcolbg/forms.py:161 colournaming/mturk/forms.py:161
 #: colournaming/templates/colour_vision.html:12
 msgid "No"
-msgstr "Ne"
+msgstr "ไม่"
 
 #: colournaming/experimentcol/forms.py:161
 #: colournaming/experimentcolbg/forms.py:161 colournaming/mturk/forms.py:161
 #: colournaming/templates/colour_vision.html:13
 msgid "Yes"
-msgstr "Da"
+msgstr "ใช่"
 
 #: colournaming/experimentcol/views.py:184
 #: colournaming/experimentcolbg/views.py:213 colournaming/mturk/views.py:229
 msgid "You are in the 0% top colour namers."
-msgstr "Vi ste u 0% najboljih učesnika u zadatku imenovanja boja."
+msgstr "ท่านอยู่ในระดับ 0% ของผู้ระบุคำเรียกสี"
 
 #: colournaming/home/forms.py:7
 msgid "First name"
-msgstr "Ime"
+msgstr "ชื่อ"
 
 #: colournaming/home/forms.py:8
 msgid "Last name"
-msgstr "Prezime"
+msgstr "นามสกุล"
 
 #: colournaming/home/forms.py:9
 msgid "Email"
-msgstr "Imejl adresa"
+msgstr "อีเมล"
 
 #: colournaming/home/forms.py:10
 msgid "Organisation"
-msgstr "Organizacija"
+msgstr "หน่วยงาน"
 
 #: colournaming/home/forms.py:11
 msgid "Your message"
-msgstr "Vaša poruka"
+msgstr "ข้อคิดเห็น"
 
 #: colournaming/namer/forms.py:17
 msgid "Do you agree?"
-msgstr "Da li se slažete?"
+msgstr "ท่านเห็นด้วยหรือไม่"
 
 #: colournaming/namer/forms.py:18
 msgid "Strongly disagree"
-msgstr "Uopšte se ne slažem"
+msgstr "ไม่เห็นด้วยอย่างยิ่ง"
 
 #: colournaming/namer/forms.py:19
 msgid "Disagree"
-msgstr "Ne slažem se"
+msgstr "ไม่เห็นด้วย"
 
 #: colournaming/namer/forms.py:20
 msgid "Undecided"
-msgstr "Neodlučan/na sam"
+msgstr "ไม่แน่ใจ"
 
 #: colournaming/namer/forms.py:21
 msgid "Agree"
-msgstr "Slažem se"
+msgstr "เห็นด้วย"
 
 #: colournaming/namer/forms.py:22
 msgid "Strongly agree"
-msgstr "U potpunosti se slažem"
+msgstr "เห็นด้วยอย่างยิ่ง"
 
 #: colournaming/templates/base.html:13 colournaming/templates/index.html:12
 msgid "Colour Naming"
-msgstr "Imenovanje boja"
+msgstr "การระบุคำเรียกสี"
 
 #: colournaming/templates/base_experiment.html:18
 msgid "Colour Naming Experiment"
-msgstr "Eksperiment Imenovanja boja"
+msgstr "การทดลองการระบุคำเรียกสี"
 
 #: colournaming/templates/colour_vision.html:4
 msgid "Colour Vision Task"
-msgstr "Zadatak Opažanja boja"
+msgstr "การทดสอบการมองเห็น"
 
 #: colournaming/templates/colour_vision.html:7
 msgid ""
@@ -327,42 +327,42 @@ msgid ""
 "all of the time. The movie lasts for 90 secs and all you need to do is "
 "play it and remember if the 'coloured' square disappeared at any time "
 "during the movie."
-msgstr "Na snimku je prikazan "obojeni" kvadrat koji se pomera. Tokom trajanja snimka, boja kvadrata se menja. Boju ćete moći da vidite ili neko vreme ili tokom trajanja celog snimka. Snimak traje 90 sekundi i sve što treba da uradite je da ga pogledate i da zapamtite da li je "obojeni" kvadrat nestao u bilo kom tokom trenutku trajanja snimka."
+msgstr "คลิปด้านล่างนี้แสดงสี่เหลี่ยมมีสีที่เคลื่อนที่ตลอดเวลาและมีการเปลี่ยนสีขณะเคลื่อนที่ ท่านอาจเห็นการเปลี่ยนสีไปตลอดหรืออาจไม่เห็น คลิปมีความยาว 90 วินาที โปรดสังเกตว่าท่านเห็นสี่เหลี่ยมสีหายไปในบางช่วงบ้างหรือไม่"
 
 #: colournaming/templates/colour_vision.html:9
 msgid "Did the 'coloured' square disappear?"
-msgstr "Da li je "obojeni" kvadrat nestao?"
+msgstr "ท่านเห็นสี่เหลี่ยมสีหายไปในบางช่วงใช่หรือไม่"
 
 #: colournaming/templates/display_properties.html:4
 msgid "Display Properties Task"
-msgstr "Zadatak Utvrđivanja karakteristika ekrana"
+msgstr "สมบัติของจอภาพ"
 
 #: colournaming/templates/display_properties.html:7
 msgid ""
 "Adjust the brightness of your display if necessary until you can see the "
 "differences between all 11 steps of the greyscale test image. Disable "
 "Night Shift mode or blue light filters if applicable."
-msgstr "Ukoliko je potrebno, podesite svetlinu svog ekrana sve dok ne budete videli razliku između svih 11 nijansi na test krugu sa sivim nijansama. Isključite "Noćni režim" ekrana i filtere za plavo svetlo ukoliko vam je nešto od toga uključeno."
+msgstr "ปรับความสว่างของจอภาพ (หากจำเป็น) จนกระทั่งเห็นความต่างของสีเทา 11 ระดับ ให้ปิดการปรับแสงโหมดกลางคืน หรือฟิลเตอร์สีน้ำเงิน"
 
 #: colournaming/templates/display_properties.html:23
 msgid "Confirm how many steps you can see?"
-msgstr "Potvrdite koliko nijansi možete da vidite?"
+msgstr "กรุณายืนยัน จำนวนระดับสีเทาที่ท่านเห็น"
 
 #: colournaming/templates/index.html:20 colournaming/templates/index.html:48
 msgid "Colour namer"
-msgstr "Imenik boja"
+msgstr "ผู้ระบุคำเรียกสี"
 
 #: colournaming/templates/index.html:23 colournaming/templates/index.html:99
 msgid "Research"
-msgstr "Istraživanje"
+msgstr "งานวิจัย"
 
 #: colournaming/templates/index.html:26 colournaming/templates/index.html:342
 msgid "Contact"
-msgstr "Kontakt"
+msgstr "ติดต่อ"
 
 #: colournaming/templates/index.html:34
 msgid "Let's play a game, how many colours can you name?"
-msgstr "Hajde da igramo igricu: koliko boja možete da imenujete?"
+msgstr "มาเล่นเกมส์กันว่าคุณสามารถระบุคำเรียกสีได้กี่สี"
 
 #: colournaming/templates/index.html:36
 msgid ""
@@ -372,7 +372,7 @@ msgid ""
 "about your cultural background and viewing conditions. You are free to "
 "omit any question and you may withdraw at any time without penalty. "
 "Participation in this study is strictly anonymous and voluntary."
-msgstr "Dobrodošli u Imenovanje Boja, onlajn eksperiment napravljen sa ciljem da se prikupe nazivi za boje u različitim jezicima, kao i opseg boja na koje se ti nazivi odnose. Vaš zadatak će biti da imenujete niz boja i da ostavite nekoliko podataka o sebi i o uslovima u kojima ste radili eksperiment. Možete preskočiti bilo koje pitanje i možete da prekinete svoje učešće u ovom istraživanju u bilo kom trenutku, bez ikakavih posledica. Učešće u istraživanju je u potpunosti anonimno i dobrovoljno."
+msgstr "ขอต้อนรับเข้าสู่การทดลองการระบุคำเรียกสีออนไลน์เพื่อรวบรวมคำเรียกจากหลายภาษาให้กับสีในขอบเขตเดียวกัน ท่านจะได้รับชุดสีตัวอย่างเพื่อขอให้ระบุคำเรียก และให้ข้อมูลพื้นฐานทางวัฒนธรรมของท่าน รวมถึงข้อมูลสภาวะการสังเกตสี ท่านสามารถเลือกที่จะไม่ตอบคำถามและอาจถอนตัวไม่ทำการทดลองต่อเมื่อใดก็ได้ โดยไม่มีความผิดใด ๆ ข้อมูลของผู้เข้าร่วมในการศึกษาวิจัยครั้งนี้จะไม่มีการเปิดเผยและการเข้าร่วมเป็นไปด้วยความสมัครใจเท่านั้น"
 
 #: colournaming/templates/index.html:38
 msgid ""
@@ -382,7 +382,7 @@ msgid ""
 "Please feel free to contact the principal investigator <a "
 "href=\"mailto:dimitris.mylonas[at]nchlondon.ac.uk\">Dimitris Mylonas</a> "
 "if you have any questions."
-msgstr "Većina ljudi zadatke u ovom istraživanju smatra zabavnim i nama nije poznato da postoje bilo kakvi rizici od učešća. Svrha ovog istraživanja je da se unapredi višejezična komunikacija o bojama u kontekstu. Budite slobodni da kontaktirate glavnog istraživača <a href=\"mailto:d.mylonas[at]ucl.ac.uk\">Dimitris Mylonas</a> ukoliko imate bilo kakvih pitanja."
+msgstr "หลายท่านอาจพบว่าการระบุคำเรียกสีในการศึกษาครั้งนี้มีความสนุกและเราเชื่อว่าไม่มีความเสี่ยงใดในการเข้าร่วม จุดประสงค์ของการวิจัยครั้งนี้เพื่อปรับปรุงการสื่อสารสีในหลากหลายภาษา หากมีข้อสงสัยสอบถามผู้วิจัยได้ที่  <a href=\"mailto:dimitris.mylonas[at]nchlondon.ac.uk\">Dimitris Mylonas</a>"
 
 #: colournaming/templates/index.html:40
 msgid ""
@@ -390,11 +390,11 @@ msgid ""
 " consent to participate in the study, click on the 'Start' button to "
 "begin the experiment against a neutral grey background or the 'Chromatic "
 "Start' button to begin the experiment against chromatic backgrounds."
-msgstr "Ako imate 16 ili više godina, razumete sve napisano i dobrovoljno pristajete da učestvujete u istraživanju, kliknite na sivo dugme "Start" da započnete eksperiment sa neutralnom sivom pozadinom ili na obojeno dugme "Start" da započnete eksperiment sa pozadinom u boji."
+msgstr "หากท่านอายุ 16 ปีหรือมากกว่า สามารถเข้าใจคำสั่งและคำอธิบายและยินยอมโดยสมัครใจในการเข้าร่วมการศึกษา/วิจัยครั้งนี้ สามารถคลิกปุ่ม "เริ่ม" เพื่อเริ่มต้นทำการทดลองแบบมีแบคกราวน์สีเทา หรือกด "เริ่มแบบมีสี" เพื่อเริ่มต้นทำการทดลองแบบมีแบคกราวน์เป็นสีได้เลย"
 
 #: colournaming/templates/index.html:42 colournaming/templates/index.html:43
 msgid "Start"
-msgstr "Start"
+msgstr "เริ่ม"
 
 #: colournaming/templates/index.html:50
 msgid ""
@@ -402,50 +402,50 @@ msgid ""
 "each colour in different languages (Mylonas, Stutters, Doval, and "
 "MacDonald, 2013). More languages will be added as more data is becoming "
 "available."
-msgstr "Ovo je Veštački Posmatrač koji je treniran da imenuje boje na različitim jezicima na osnovu odgovora ispitanika (Mylonas, Stutters, Doval, and MacDonald, 2013). Novi jezici se dodaju kako podaci postaju dostupni."
+msgstr "ที่เห็นนี้เป็นผู้สังเกตการณ์จำลองที่ผ่านการฝึกมาจากการตอบของผู้เข้าร่วมระบุสี (Mylonas, Stutters, Doval, and MacDonald, 2013) ภาษาอื่นจะได้รับการเพิ่มเข้าไปหลังจากที่มีข้อมูลพร้อม"
 
 #: colournaming/templates/index.html:65
 msgid "by name"
-msgstr "prema nazivu"
+msgstr "โดยคำเรียก"
 
 #: colournaming/templates/index.html:74
 msgid "Colour name"
-msgstr "Naziv za boju"
+msgstr "คำเรียกสี"
 
 #: colournaming/templates/index.html:76
 msgid "Synonyms"
-msgstr "Sinonimi"
+msgstr "คำเหมือน"
 
 #: colournaming/templates/index.html:95
 msgid ""
 "This is a βeta version of Colournamer. You will need JavaScript enabled "
 "and a browser that supports HTML5 web audio."
-msgstr "Ovo je Beta verzija Imenika boja. Biće vam potreban JavaScript koji radi kao i  pretraživač (brauzer) koji podržava HTML5 web audio."
+msgstr "การระบุคำเรียกสีนี้เป็นเวอร์ชั่นบีต้า จำเป็นต้องมีจาวาสคริปต์และบราวเซอร์ที่สนับสนุน HTML5 เว็บเสียง"
 
 #: colournaming/templates/index.html:102
 msgid ""
 "This research aims to develop an online colour naming model to facilitate"
 " colour communication within and between cultures."
-msgstr "Ovo istraživanje ima za cilj da razvije onlajn model imenovanja boja koji bi olakšao komunikaciju o bojama unutar i između različitih kultura."
+msgstr "งานวิจัยมีจุดประสงค์เพื่อพัฒนาโมเดลการระบุคำเรียกสีออนไลน์ในการสื่อสารสีภายในวัฒนธรรมตนเองหรือข้ามวัฒนธรรม"
 
 #: colournaming/templates/index.html:344
 msgid ""
 "Please use the following communication form to give us your feedback and "
 "comments or if you wish to inform you about the results of this research."
-msgstr "Molimo vas da iskoristite ovu kontakt formu ukoliko želite da podelite svoje utiske, ostavite komentar ili ukoliko želite da vas obavestimo o rezultatima ovog istraživanja."
+msgstr "หากมีข้อติชม ความคิดเห็นและต้องการทราบผลการวิจัยโปรดใช้ช่องทางนี้แจ้งให้เราทราบจักขอบคุณยิ่ง"
 
 #: colournaming/templates/index.html:357
 #: colournaming/templates/observer_information.html:52
 msgid "Submit"
-msgstr "Pošalji"
+msgstr "ส่ง"
 
 #: colournaming/templates/index.html:368
 msgid "Made in London and Berlin"
-msgstr "Kreirano u Londonu i Berlinu."
+msgstr "ทำในลอนดอนและเบอร์ลิน"
 
 #: colournaming/templates/name_colour.html:4
 msgid "Colour Naming Task"
-msgstr "Zadatak Imenovanja boja"
+msgstr "การระบุคำเรียกสี"
 
 #: colournaming/templates/name_colour.html:10
 msgid ""
@@ -455,43 +455,43 @@ msgid ""
 "appear. Name as many colour samples (20+) as you can for higher ranking "
 "on colour namers. You will need to press the Finish button to start the "
 "next task. Your response time will be recorded."
-msgstr "Imenujte svaku boju koristeći naziv koji je najbolje opisuje, a kog možete da se setite.<br>Kada iskucate naziv boje, pritisnite Strelicu pored tog naziva [&gt;] ili taster Enter na vašoj tastaturi kako bi se pojavila sledeća boja. Imenujte što više boja možete (barem 20) kako biste zauzeli što bolju poziciju na našoj listi učesnika. Da biste prešli na sledeći zadatak, biće potrebno da pritisnete dugme Završi. Vreme koje vam je potrebno za odgovaranje će biti zabeleženo."
+msgstr "ระบุคำเรียกสีที่คุณนึกออกในขณะนี้และเป็นตัวแทนของตัวอย่างสีที่เห็นมากที่สุด <br>กดปุ่มลูกศร [&gt;] หรือกด Enter บนคีย์บอร์ดเมื่อสิ้นสุดการใส่คำเรียกสีเพื่อดูตัวอย่างสีถัดไป ทำเช่นนี้ไปให้มากที่สุดเท่าที่สามารถทำได้ (มากกว่า 20) เพื่อให้ได้เป็นผู้ที่มีลำดับสูงสุดในการเป็นผู้ระบุคำเรียกสี ท่านต้องกดปุ่ม สิ้นสุด เพื่อเริ่มทำสีถัดไป เวลาในการระบุคำเรียกสีจะถูกบันทึกไว้"
 
 #: colournaming/templates/name_colour.html:18
 msgid "Name the colour of the patch"
-msgstr "Upišite naziv boje"
+msgstr "ระบุคำเรียกสีกับแถบสีนี้"
 
 #: colournaming/templates/name_colour.html:32
 msgid "Finish"
-msgstr "Završi"
+msgstr "สิ้นสุด"
 
 #: colournaming/templates/observer_information.html:5
 msgid "Observer Information Task"
-msgstr "Informacije o ispitaniku"
+msgstr "ข้อมูลผู้สังเกต"
 
 #: colournaming/templates/observer_information.html:8
 msgid ""
 "Please provide us with some information about your background and viewing"
 " conditions. This will help us to better understand the context of your "
 "responses."
-msgstr "Molimo vas da odgovorite na nekoliko pitanja o sebi i o uslovima u kojima ste radili eksperiment. Ovo će nam pomoći da bolje razumemo vaše odgovore."
+msgstr "โปรดให้ข้อมูลของท่านและข้อมูลการสังเกต ข้อมูลนี้จะช่วยให้เราเข้าใจบริบทการตอบสนองการมองเห็นสีของคุณได้ดี"
 
 #: colournaming/templates/thankyou.html:5
 msgid "Thank you"
-msgstr "Hvala."
+msgstr "ขอบพระคุณ"
 
 #: colournaming/templates/thankyou.html:8
 msgid "Thank you for participating."
-msgstr "Hvala vam na učešću u istraživanju."
+msgstr "ขอบพระคุณสำหรับการเข้าร่วม"
 
 #: colournaming/templates/thankyou.html:8
 msgid "You can now share the link of the experiment with your friends."
-msgstr "Možete podeliti link do eksperimenta sa svojim prijateljima."
+msgstr "ท่านสามารถแชร์ลิ้งก์การทดลองนี้ไปให้เพื่อนได้"
 
 #: colournaming/templates/thankyou.html:15
 msgid ""
 "Your responses will be used to improve colour communication within and "
 "across languages. Please feel free to contact us and visit our research "
 "page for more information. Find below a summary of your responses."
-msgstr "Vaši odgovori će biti korišćeni da se unapredi komunikacija o bojama kako unutar jednog jezika, tako i između različitih jezika. Budite slobodni da nas kontaktirate i da za više informacija kliknete na "Istraživanje" na gornjem meniju na početnoj stranici.  Ispod su  ispisani vaši odgovori."
+msgstr "คำตอบของท่านจะนำไปใช้เพื่อปรับปรุงการสื่อสารสีภายในภาษาและข้ามภาษา ท่านสามารถติดต่อเราได้ทุกเมื่อและเยี่ยมชมเพจงานวิจัยเราเพื่อดูข้อมูลเพิ่มเติม ด้านล่างนี้เป็นสรุปคำตอบของท่านโดยย่อ"
 
