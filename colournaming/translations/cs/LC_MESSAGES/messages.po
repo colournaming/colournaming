@@ -1,0 +1,497 @@
+# Translations template for PROJECT.
+# Copyright (C) 2023 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2023-01-22 18:03+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.11.0\n"
+
+#: colournaming/experimentcol/forms.py:38
+#: colournaming/experimentcolbg/forms.py:38 colournaming/mturk/forms.py:38
+msgid "What is your age?"
+msgstr "Kolik Vám je let?"
+
+#: colournaming/experimentcol/forms.py:45
+#: colournaming/experimentcolbg/forms.py:45 colournaming/mturk/forms.py:45
+msgid "Female"
+msgstr "Žena"
+
+#: colournaming/experimentcol/forms.py:46
+#: colournaming/experimentcolbg/forms.py:46 colournaming/mturk/forms.py:46
+msgid "Male"
+msgstr "Muž"
+
+#: colournaming/experimentcol/forms.py:47
+#: colournaming/experimentcolbg/forms.py:47 colournaming/mturk/forms.py:47
+msgid "Other"
+msgstr "Jiné"
+
+#: colournaming/experimentcol/forms.py:49
+#: colournaming/experimentcolbg/forms.py:49 colournaming/mturk/forms.py:49
+msgid "To which gender do you most identify?"
+msgstr "S jakým pohlavím se nejvíce identifikujete?"
+
+#: colournaming/experimentcol/forms.py:52
+#: colournaming/experimentcolbg/forms.py:52 colournaming/mturk/forms.py:52
+msgid "Please specify"
+msgstr "Prosíme o upřesnění"
+
+#: colournaming/experimentcol/forms.py:56
+#: colournaming/experimentcol/forms.py:66
+#: colournaming/experimentcolbg/forms.py:56
+#: colournaming/experimentcolbg/forms.py:66 colournaming/mturk/forms.py:56
+#: colournaming/mturk/forms.py:66
+msgid "Beginner"
+msgstr "Začátečník"
+
+#: colournaming/experimentcol/forms.py:57
+#: colournaming/experimentcol/forms.py:67
+#: colournaming/experimentcolbg/forms.py:57
+#: colournaming/experimentcolbg/forms.py:67 colournaming/mturk/forms.py:57
+#: colournaming/mturk/forms.py:67
+msgid "Intermediate"
+msgstr "Středně pokročilý"
+
+#: colournaming/experimentcol/forms.py:58
+#: colournaming/experimentcol/forms.py:68
+#: colournaming/experimentcolbg/forms.py:58
+#: colournaming/experimentcolbg/forms.py:68 colournaming/mturk/forms.py:58
+#: colournaming/mturk/forms.py:68
+msgid "Advanced"
+msgstr "Pokročilý"
+
+#: colournaming/experimentcol/forms.py:60
+#: colournaming/experimentcolbg/forms.py:60 colournaming/mturk/forms.py:60
+msgid "Describe your experience working with colour"
+msgstr "Popište své zkušenosti v práci s barvami"
+
+#: colournaming/experimentcol/forms.py:69
+#: colournaming/experimentcolbg/forms.py:69 colournaming/mturk/forms.py:69
+msgid "Bilingual"
+msgstr "Bilingvní"
+
+#: colournaming/experimentcol/forms.py:70
+#: colournaming/experimentcolbg/forms.py:70 colournaming/mturk/forms.py:70
+msgid "Native speaker"
+msgstr "Rodilý mluvčí"
+
+#: colournaming/experimentcol/forms.py:72
+#: colournaming/experimentcolbg/forms.py:72 colournaming/mturk/forms.py:72
+msgid "Describe your skill in the language used in this experiment"
+msgstr "Popište své znalosti jazyka, který jste ve studii používali"
+
+#: colournaming/experimentcol/forms.py:78
+#: colournaming/experimentcolbg/forms.py:78 colournaming/mturk/forms.py:78
+msgid "No qualifications"
+msgstr "základní škola"
+
+#: colournaming/experimentcol/forms.py:79
+#: colournaming/experimentcolbg/forms.py:79 colournaming/mturk/forms.py:79
+msgid "Secondary school degree"
+msgstr "střední škola/gymnázium"
+
+#: colournaming/experimentcol/forms.py:80
+#: colournaming/experimentcolbg/forms.py:80 colournaming/mturk/forms.py:80
+msgid "Bachelors degree"
+msgstr "bakalářské"
+
+#: colournaming/experimentcol/forms.py:81
+#: colournaming/experimentcolbg/forms.py:81 colournaming/mturk/forms.py:81
+msgid "Masters degree"
+msgstr "magisterské"
+
+#: colournaming/experimentcol/forms.py:82
+#: colournaming/experimentcolbg/forms.py:82 colournaming/mturk/forms.py:82
+msgid "Professional degree"
+msgstr "vyšší odborné"
+
+#: colournaming/experimentcol/forms.py:83
+#: colournaming/experimentcolbg/forms.py:83 colournaming/mturk/forms.py:83
+msgid "Doctorate degree"
+msgstr "doktorské"
+
+#: colournaming/experimentcol/forms.py:85
+#: colournaming/experimentcolbg/forms.py:85 colournaming/mturk/forms.py:85
+msgid "What is the highest level of education you have completed?"
+msgstr "Jaké je Vaše nejvyšší dosažené vzdělání?"
+
+#: colournaming/experimentcol/forms.py:93
+#: colournaming/experimentcolbg/forms.py:93 colournaming/mturk/forms.py:93
+msgid "In which country did you grow up?"
+msgstr "V jaké zemi jste vyrostl*a?"
+
+#: colournaming/experimentcol/forms.py:98
+#: colournaming/experimentcolbg/forms.py:98 colournaming/mturk/forms.py:98
+msgid "Where are you living?"
+msgstr "Kde žijete?"
+
+#: colournaming/experimentcol/forms.py:104
+#: colournaming/experimentcolbg/forms.py:104 colournaming/mturk/forms.py:104
+msgid "Smartphone"
+msgstr "mobilní telefon"
+
+#: colournaming/experimentcol/forms.py:105
+#: colournaming/experimentcolbg/forms.py:105 colournaming/mturk/forms.py:105
+msgid "Pad"
+msgstr "tablet"
+
+#: colournaming/experimentcol/forms.py:106
+#: colournaming/experimentcolbg/forms.py:106 colournaming/mturk/forms.py:106
+msgid "Laptop"
+msgstr "notebook"
+
+#: colournaming/experimentcol/forms.py:107
+#: colournaming/experimentcolbg/forms.py:107 colournaming/mturk/forms.py:107
+msgid "Desktop"
+msgstr "stolní počítač"
+
+#: colournaming/experimentcol/forms.py:109
+#: colournaming/experimentcolbg/forms.py:109 colournaming/mturk/forms.py:109
+msgid "What is your display device?"
+msgstr "Na jakém zařízení jste se studie zúčastnil*a?"
+
+#: colournaming/experimentcol/forms.py:115
+#: colournaming/experimentcolbg/forms.py:115 colournaming/mturk/forms.py:115
+msgid "Neutral white"
+msgstr "neutrální bílá"
+
+#: colournaming/experimentcol/forms.py:116
+#: colournaming/experimentcolbg/forms.py:116 colournaming/mturk/forms.py:116
+msgid "Warm white"
+msgstr "teplá bílá"
+
+#: colournaming/experimentcol/forms.py:117
+#: colournaming/experimentcolbg/forms.py:117 colournaming/mturk/forms.py:117
+msgid "Bluish white"
+msgstr "namodralá bílá"
+
+#: colournaming/experimentcol/forms.py:118
+#: colournaming/experimentcolbg/forms.py:118 colournaming/mturk/forms.py:118
+msgid "Yellowish white"
+msgstr "nažloutlá bílá"
+
+#: colournaming/experimentcol/forms.py:120
+#: colournaming/experimentcolbg/forms.py:120 colournaming/mturk/forms.py:120
+msgid "Describe the white graphic elements on your screen"
+msgstr "Popište bílé prvky na Vaší obrazovce"
+
+#: colournaming/experimentcol/forms.py:126
+#: colournaming/experimentcol/forms.py:137
+#: colournaming/experimentcolbg/forms.py:126
+#: colournaming/experimentcolbg/forms.py:137 colournaming/mturk/forms.py:126
+#: colournaming/mturk/forms.py:137
+msgid "Dark"
+msgstr "tmavé"
+
+#: colournaming/experimentcol/forms.py:127
+#: colournaming/experimentcolbg/forms.py:127 colournaming/mturk/forms.py:127
+msgid "Dim"
+msgstr "šeré"
+
+#: colournaming/experimentcol/forms.py:128
+#: colournaming/experimentcolbg/forms.py:128 colournaming/mturk/forms.py:128
+msgid "Average"
+msgstr "průměrné"
+
+#: colournaming/experimentcol/forms.py:129
+#: colournaming/experimentcolbg/forms.py:129 colournaming/mturk/forms.py:129
+msgid "Bright"
+msgstr "světlé"
+
+#: colournaming/experimentcol/forms.py:131
+#: colournaming/experimentcolbg/forms.py:131 colournaming/mturk/forms.py:131
+msgid "Describe the surrounding environment behind your device"
+msgstr "Popište prostředí za Vaším zařízením"
+
+#: colournaming/experimentcol/forms.py:138
+#: colournaming/experimentcolbg/forms.py:138 colournaming/mturk/forms.py:138
+msgid "Typical domestic"
+msgstr "běžné domácí osvětlení"
+
+#: colournaming/experimentcol/forms.py:139
+#: colournaming/experimentcolbg/forms.py:139 colournaming/mturk/forms.py:139
+msgid "Mid daylight"
+msgstr "denní světlo/zataženo"
+
+#: colournaming/experimentcol/forms.py:140
+#: colournaming/experimentcolbg/forms.py:140 colournaming/mturk/forms.py:140
+msgid "Full daylight"
+msgstr "plné denní světlo"
+
+#: colournaming/experimentcol/forms.py:141
+#: colournaming/experimentcolbg/forms.py:141 colournaming/mturk/forms.py:141
+msgid "Typical office"
+msgstr "běžné kancelářské osvětlení"
+
+#: colournaming/experimentcol/forms.py:143
+#: colournaming/experimentcolbg/forms.py:143 colournaming/mturk/forms.py:143
+msgid "Describe the lighting conditions of your environment"
+msgstr "Popište světelné podmínky prostředí, ve kterém se nacházíte"
+
+#: colournaming/experimentcol/forms.py:151
+#: colournaming/experimentcol/forms.py:162
+#: colournaming/experimentcolbg/forms.py:151
+#: colournaming/experimentcolbg/forms.py:162 colournaming/mturk/forms.py:151
+#: colournaming/mturk/forms.py:162
+msgid "What distance are you from your monitor in cm?"
+msgstr "Jak daleko jste od obrazovky v centimetrech?"
+
+#: colournaming/experimentcol/forms.py:161
+#: colournaming/experimentcolbg/forms.py:161 colournaming/mturk/forms.py:161
+#: colournaming/templates/colour_vision.html:12
+msgid "No"
+msgstr "Ne"
+
+#: colournaming/experimentcol/forms.py:161
+#: colournaming/experimentcolbg/forms.py:161 colournaming/mturk/forms.py:161
+#: colournaming/templates/colour_vision.html:13
+msgid "Yes"
+msgstr "Ano"
+
+#: colournaming/experimentcol/views.py:184
+#: colournaming/experimentcolbg/views.py:213 colournaming/mturk/views.py:229
+msgid "You are in the 0% top colour namers."
+msgstr "Umístil*a jste se mezi 0 % nejlepších účastníků pojmenovávání barev."
+
+#: colournaming/home/forms.py:7
+msgid "First name"
+msgstr "Jméno"
+
+#: colournaming/home/forms.py:8
+msgid "Last name"
+msgstr "Příjmení"
+
+#: colournaming/home/forms.py:9
+msgid "Email"
+msgstr "E-mail"
+
+#: colournaming/home/forms.py:10
+msgid "Organisation"
+msgstr "Organizace"
+
+#: colournaming/home/forms.py:11
+msgid "Your message"
+msgstr "Vaše zpráva"
+
+#: colournaming/namer/forms.py:17
+msgid "Do you agree?"
+msgstr "Souhlasíte?"
+
+#: colournaming/namer/forms.py:18
+msgid "Strongly disagree"
+msgstr "nesouhlasím"
+
+#: colournaming/namer/forms.py:19
+msgid "Disagree"
+msgstr "spíše nesouhlasím"
+
+#: colournaming/namer/forms.py:20
+msgid "Undecided"
+msgstr "nejsem si jist*a"
+
+#: colournaming/namer/forms.py:21
+msgid "Agree"
+msgstr "spíše souhlasím"
+
+#: colournaming/namer/forms.py:22
+msgid "Strongly agree"
+msgstr "souhlasím"
+
+#: colournaming/templates/base.html:13 colournaming/templates/index.html:12
+msgid "Colour Naming"
+msgstr "Pojmenovávání barev"
+
+#: colournaming/templates/base_experiment.html:18
+msgid "Colour Naming Experiment"
+msgstr "Studie pojmenovávání barev"
+
+#: colournaming/templates/colour_vision.html:4
+msgid "Colour Vision Task"
+msgstr "Barevné vidění"
+
+#: colournaming/templates/colour_vision.html:7
+msgid ""
+"The movie below displays a moving 'coloured' square. The square changes "
+"colour as the movie plays. You may be able to see the colour for some or "
+"all of the time. The movie lasts for 90 secs and all you need to do is "
+"play it and remember if the 'coloured' square disappeared at any time "
+"during the movie."
+msgstr "Na této animaci je zobrazen pohybující se „barevný“ čtverec. Barva čtverce se v průběhu animace mění. Čtverec je možné vidět buď po část nebo celou dobu přehrávání. Animace trvá 90 sekund a jediné co musíte udělat je pustit si ji a zapamatovat si, zda „barevný“ čtverec někdy během přehrávání zmizel či nikoliv."
+
+#: colournaming/templates/colour_vision.html:9
+msgid "Did the 'coloured' square disappear?"
+msgstr "Zmizel „barevný“ čtverec?"
+
+#: colournaming/templates/display_properties.html:4
+msgid "Display Properties Task"
+msgstr "Nastavení obrazovky"
+
+#: colournaming/templates/display_properties.html:7
+msgid ""
+"Adjust the brightness of your display if necessary until you can see the "
+"differences between all 11 steps of the greyscale test image. Disable "
+"Night Shift mode or blue light filters if applicable."
+msgstr "Je-li to potřeba, upravte jas Vaší obrazovky tak, abyste byli schopni rozlišit všech 11 stupňů šedi tohoto zkušebního obrázku. Ujistěte se, že máte vypnutý režim Night Shift či jiné filtry modrého světla."
+
+#: colournaming/templates/display_properties.html:23
+msgid "Confirm how many steps you can see?"
+msgstr "Potvrďte prosím, kolik stupňů šedi vidíte?"
+
+#: colournaming/templates/index.html:20 colournaming/templates/index.html:48
+msgid "Colour namer"
+msgstr "Pojmenovávač barev"
+
+#: colournaming/templates/index.html:23 colournaming/templates/index.html:99
+msgid "Research"
+msgstr "Věda"
+
+#: colournaming/templates/index.html:26 colournaming/templates/index.html:342
+msgid "Contact"
+msgstr "Kontakt"
+
+#: colournaming/templates/index.html:34
+msgid "Let's play a game, how many colours can you name?"
+msgstr "Zahrajme si hru: kolik barev umíte pojmenovat?"
+
+#: colournaming/templates/index.html:36
+msgid ""
+"Welcome to Colour Naming, an online experiment designed to collect colour"
+" names in multiple languages with their corresponding colour ranges. You "
+"will be asked to name a series of colour samples and provide information "
+"about your cultural background and viewing conditions. You are free to "
+"omit any question and you may withdraw at any time without penalty. "
+"Participation in this study is strictly anonymous and voluntary."
+msgstr "Vítejte u pojmenovávání barev, online studii zaměřené na sbírání názvů barev v různých jazycích a rozsahů barev, které těmto názvům odpovídají. Vaším úkolem bude pojmenovat několik vzorků barev a úvést pár údajů o sobě a prostředí, ve kterém se studie účastníte. Budete mít možnost přeskočit jakoukoliv otázku a svou účast můžete kdykoliv odvolat bez jakéhokoliv postihu. Účast na této studii je zcela anonymní a dobrovolná."
+
+#: colournaming/templates/index.html:38
+msgid ""
+"Many individuals find the tasks of this study enjoyable and we believe "
+"there are no known risks to participants. The purpose of this research "
+"study is to improve colour communication in multilingual environments. "
+"Please feel free to contact the principal investigator <a "
+"href=\"mailto:dimitris.mylonas[at]nchlondon.ac.uk\">Dimitris Mylonas</a> "
+"if you have any questions."
+msgstr "Většinu lidí tato studie baví a nejsme si vědomi žádného rizika, které by z ní účastníkům vyplývalo. Cílem této studie je zlepšení vícejazyčné komunikace o barvách v kontextu. V případě jakýchkoliv dotazů neváhejte kontaktovat hlavního řešitele projektu, kterým je <a href=\"mailto:d.mylonas[at]ucl.ac.uk\">Dimitris Mylonas</a>."
+
+#: colournaming/templates/index.html:40
+msgid ""
+"If you are 16 years of age or older, understand the statements and freely"
+" consent to participate in the study, click on the 'Start' button to "
+"begin the experiment against a neutral grey background or the 'Chromatic "
+"Start' button to begin the experiment against chromatic backgrounds."
+msgstr "Pokud je vám 16 a více let, rozumíte instrukcím a dobrovolně souhlasíte s účastí na této studii, klikněte na šedivé tlačítko „Začít“, chcete-li studii zahájit na šedivém pozadí, nebo na barevné tlačítko „Začít“, chcete-li studii zahájit na barevném pozadí."
+
+#: colournaming/templates/index.html:42 colournaming/templates/index.html:43
+msgid "Start"
+msgstr "Začít"
+
+#: colournaming/templates/index.html:50
+msgid ""
+"This is a synthetic observer trained by participants’ responses to name "
+"each colour in different languages (Mylonas, Stutters, Doval, and "
+"MacDonald, 2013). More languages will be added as more data is becoming "
+"available."
+msgstr "To to je umělý pozorovatel, který se na základě odpovědí účastníků naučil pojmenovávat barvy v různých jazycích (Mylonas, Stutters, Doval a MacDonald, 2013). Se získáváním dalších dat přibudou i další jazyky."
+
+#: colournaming/templates/index.html:65
+msgid "by name"
+msgstr "dle jména"
+
+#: colournaming/templates/index.html:74
+msgid "Colour name"
+msgstr "Název barvy"
+
+#: colournaming/templates/index.html:76
+msgid "Synonyms"
+msgstr "Synonyma"
+
+#: colournaming/templates/index.html:95
+msgid ""
+"This is a βeta version of Colournamer. You will need JavaScript enabled "
+"and a browser that supports HTML5 web audio."
+msgstr "Toto je βeta verze Pojmenovávače barev. Budete potřebovat povolený JavaScript a prohlížeč, který podporuje HTML5."
+
+#: colournaming/templates/index.html:102
+msgid ""
+"This research aims to develop an online colour naming model to facilitate"
+" colour communication within and between cultures."
+msgstr "Cílem tohoto výzkumu je vyvinout online model pojmenovávání barev za účelem usnadnění komunikace o barvách v rámci různých kultur i mezi nimi."
+
+#: colournaming/templates/index.html:344
+msgid ""
+"Please use the following communication form to give us your feedback and "
+"comments or if you wish to inform you about the results of this research."
+msgstr "Pokud si přejete být informování o výsledcích tohoto výzkumu, případně máte zpětnou vazbu či jiné připomínky, můžete nás kontaktovat pomocí následujícího formuláře:"
+
+#: colournaming/templates/index.html:357
+#: colournaming/templates/observer_information.html:52
+msgid "Submit"
+msgstr "Odeslat"
+
+#: colournaming/templates/index.html:368
+msgid "Made in London and Berlin"
+msgstr "Vytvořeno v Londýně a v Berlíně"
+
+#: colournaming/templates/name_colour.html:4
+msgid "Colour Naming Task"
+msgstr "Názvy barev"
+
+#: colournaming/templates/name_colour.html:10
+msgid ""
+"Name each colour sample with the best representative colour term that you"
+" remember.<br>Press the Arrow button [&gt;] or Enter on your keyboard "
+"once you have finished naming the colour for the next colour sample to "
+"appear. Name as many colour samples (20+) as you can for higher ranking "
+"on colour namers. You will need to press the Finish button to start the "
+"next task. Your response time will be recorded."
+msgstr "Pojmenujte každý vzorek barvy tím nejvýstižnějším termínem, na který si vzpomenete.<br>Jste-li hotovi, na další barvu se dostanete stisknutím tlačítka se šipkou [&gt;] nebo klávesou Enter na Vaší klávesnici. Pojmenujte tolik barev, kolik můžete (20+), abyste se umístili na vyšších místech mezi všemi účastníky. Na další úkol se dostanete stisknutím tlačítka Konec. Čas Vašich odpovědí se zaznamenává."
+
+#: colournaming/templates/name_colour.html:18
+msgid "Name the colour of the patch"
+msgstr "Pojmenujte barvu vzorku"
+
+#: colournaming/templates/name_colour.html:32
+msgid "Finish"
+msgstr "Konec"
+
+#: colournaming/templates/observer_information.html:5
+msgid "Observer Information Task"
+msgstr "Informace o účastníkovi"
+
+#: colournaming/templates/observer_information.html:8
+msgid ""
+"Please provide us with some information about your background and viewing"
+" conditions. This will help us to better understand the context of your "
+"responses."
+msgstr "Prosíme Vás o vyplnění pár informací o Vás a o prostředí, ve kterém jste se studie účastnili. To nám pomůže zasadit Vaše odpovědi do kontextu."
+
+#: colournaming/templates/thankyou.html:5
+msgid "Thank you"
+msgstr "Děkujeme"
+
+#: colournaming/templates/thankyou.html:8
+msgid "Thank you for participating."
+msgstr "Děkujeme za účast."
+
+#: colournaming/templates/thankyou.html:8
+msgid "You can now share the link of the experiment with your friends."
+msgstr "Odkaz na tuto studii můžete nyní sdílet se svými přáteli."
+
+#: colournaming/templates/thankyou.html:15
+msgid ""
+"Your responses will be used to improve colour communication within and "
+"across languages. Please feel free to contact us and visit our research "
+"page for more information. Find below a summary of your responses."
+msgstr "Vaše odpovědi budou použity ke zlepšení komunikace o barvách v rámci jazyků i mezi nimi. Pro více informací nás neváhejte kontaktovat nebo navštívte naši stránku o výzkumu. Níže jsou uvedeny Vaše odpovědi bílé a nejčastější názvy barev černě:"
+
