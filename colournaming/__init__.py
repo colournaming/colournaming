@@ -1,9 +1,7 @@
 """Website for the colournaming experiment."""
 
-import sentry_sdk
 import click
 from flask import Flask, render_template, request, current_app, session
-from sentry_sdk.integrations.flask import FlaskIntegration
 from flask_babel import Babel
 import pytest
 from sqlalchemy.exc import ProgrammingError
@@ -24,10 +22,6 @@ def create_app():
     """Create an instance of the app."""
     app = Flask(__name__)
     app.config.from_envvar("COLOURNAMING_CFG")
-    if app.config.get("DEBUG", False) is False:
-        sentry_sdk.init(
-            dsn=app.config["SENTRY_DSN"], integrations=[FlaskIntegration()], traces_sample_rate=1.0
-        )
     db.init_app(app)
     mail.init_app(app)
     Babel(app, locale_selector=get_locale)

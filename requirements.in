@@ -7,7 +7,6 @@ sqlalchemy < 2.0
 flask_babel
 pycountry
 click
-sentry_sdk
 numpy
 gunicorn
 user-agents

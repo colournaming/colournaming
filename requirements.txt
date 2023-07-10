@@ -10,8 +10,6 @@ blinker==1.6.2
     # via
     #   flask
     #   flask-mail
-certifi==2023.5.7
-    # via sentry-sdk
 click==8.1.4
     # via
     #   -r requirements.in
@@ -66,8 +64,6 @@ pytest==7.4.0
     # via -r requirements.in
 pytz==2023.3
     # via flask-babel
-sentry-sdk==1.27.1
-    # via -r requirements.in
 sqlalchemy==1.4.49
     # via
     #   -r requirements.in
@@ -76,8 +72,6 @@ tomli==2.0.1
     # via pytest
 ua-parser==0.18.0
     # via user-agents
-urllib3==2.0.3
-    # via sentry-sdk
 user-agents==2.2.0
     # via -r requirements.in
 werkzeug==2.3.6
