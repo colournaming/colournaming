@@ -38,7 +38,11 @@ def do_translation(messages, translation_dict, output):
         elif l == 'msgstr ""':
             if msgid not in translation_dict:
                 print(l, "not found in translation dictionary")
-            l = 'msgstr "' + translation_dict.get(msgid, "") + '"'
+            try:
+                l = 'msgstr "' + translation_dict.get(msgid, "") + '"'
+            except TypeError:
+                print("TypeError for {}, value is {}".format(msgid, translation_dict.get(msgid, "")))
+                sys.exit(1)
         output.write(l + "\n")
 
 
