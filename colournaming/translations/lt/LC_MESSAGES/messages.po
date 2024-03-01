@@ -53,7 +53,7 @@ msgstr "Prašome nurodyti"
 #: colournaming/experimentcolbg/forms.py:66 colournaming/mturk/forms.py:56
 #: colournaming/mturk/forms.py:66
 msgid "Beginner"
-msgstr "Pradedantysis"
+msgstr "Pradedantysis (-čioji)"
 
 #: colournaming/experimentcol/forms.py:57
 #: colournaming/experimentcol/forms.py:67
@@ -61,7 +61,7 @@ msgstr "Pradedantysis"
 #: colournaming/experimentcolbg/forms.py:67 colournaming/mturk/forms.py:57
 #: colournaming/mturk/forms.py:67
 msgid "Intermediate"
-msgstr "Vidutiniškai pažengęs"
+msgstr "Vidutiniškai pažengęs (-usi)"
 
 #: colournaming/experimentcol/forms.py:58
 #: colournaming/experimentcol/forms.py:68
@@ -69,7 +69,7 @@ msgstr "Vidutiniškai pažengęs"
 #: colournaming/experimentcolbg/forms.py:68 colournaming/mturk/forms.py:58
 #: colournaming/mturk/forms.py:68
 msgid "Advanced"
-msgstr "Pažengęs"
+msgstr "Pažengęs (-usi)"
 
 #: colournaming/experimentcol/forms.py:60
 #: colournaming/experimentcolbg/forms.py:60 colournaming/mturk/forms.py:60
@@ -79,12 +79,12 @@ msgstr "Apibūdinkite savo patirtį dirbant su spalvomis"
 #: colournaming/experimentcol/forms.py:69
 #: colournaming/experimentcolbg/forms.py:69 colournaming/mturk/forms.py:69
 msgid "Bilingual"
-msgstr "Dvikalbis"
+msgstr "Dvikalbis (-ė)"
 
 #: colournaming/experimentcol/forms.py:70
 #: colournaming/experimentcolbg/forms.py:70 colournaming/mturk/forms.py:70
 msgid "Native speaker"
-msgstr "Gimtakalbis"
+msgstr "Gimtakalbis (-ė)"
 
 #: colournaming/experimentcol/forms.py:72
 #: colournaming/experimentcolbg/forms.py:72 colournaming/mturk/forms.py:72
@@ -159,7 +159,7 @@ msgstr "Stacionarus kompiuteris"
 #: colournaming/experimentcol/forms.py:109
 #: colournaming/experimentcolbg/forms.py:109 colournaming/mturk/forms.py:109
 msgid "What is your display device?"
-msgstr "Per kokį ekraną atliksite eksperimentą?"
+msgstr "Per kokį ekraną atliekate eksperimentą?"
 
 #: colournaming/experimentcol/forms.py:115
 #: colournaming/experimentcolbg/forms.py:115 colournaming/mturk/forms.py:115
@@ -184,7 +184,7 @@ msgstr "Gelsvai balta"
 #: colournaming/experimentcol/forms.py:120
 #: colournaming/experimentcolbg/forms.py:120 colournaming/mturk/forms.py:120
 msgid "Describe the white graphic elements on your screen"
-msgstr "Apibūdinkite baltus grafinius elementus ekrane"
+msgstr "Kokios spalvos yra balti grafiniai elementai (pvz., teksto pasirinkimo laukeliai) ekrane?"
 
 #: colournaming/experimentcol/forms.py:126
 #: colournaming/experimentcol/forms.py:137
@@ -192,22 +192,22 @@ msgstr "Apibūdinkite baltus grafinius elementus ekrane"
 #: colournaming/experimentcolbg/forms.py:137 colournaming/mturk/forms.py:126
 #: colournaming/mturk/forms.py:137
 msgid "Dark"
-msgstr "Tamsi"
+msgstr "Tamsus"
 
 #: colournaming/experimentcol/forms.py:127
 #: colournaming/experimentcolbg/forms.py:127 colournaming/mturk/forms.py:127
 msgid "Dim"
-msgstr "Pritemdinta"
+msgstr "Pritemdintas"
 
 #: colournaming/experimentcol/forms.py:128
 #: colournaming/experimentcolbg/forms.py:128 colournaming/mturk/forms.py:128
 msgid "Average"
-msgstr "Vidutinė"
+msgstr "Vidutinis"
 
 #: colournaming/experimentcol/forms.py:129
 #: colournaming/experimentcolbg/forms.py:129 colournaming/mturk/forms.py:129
 msgid "Bright"
-msgstr "Šviesi"
+msgstr "Šviesus"
 
 #: colournaming/experimentcol/forms.py:131
 #: colournaming/experimentcolbg/forms.py:131 colournaming/mturk/forms.py:131
@@ -245,7 +245,7 @@ msgstr "Apibūdinkite savo aplinkos apšvietimo sąlygas"
 #: colournaming/experimentcolbg/forms.py:162 colournaming/mturk/forms.py:151
 #: colournaming/mturk/forms.py:162
 msgid "What distance are you from your monitor in cm?"
-msgstr "Koks atstumas (centimetrais) tarp tavęs ir tavo monitoriaus?"
+msgstr "Koks atstumas (centimetrais) tarp jūsų ir jūsų monitoriaus?"
 
 #: colournaming/experimentcol/forms.py:161
 #: colournaming/experimentcolbg/forms.py:161 colournaming/mturk/forms.py:161
@@ -262,7 +262,7 @@ msgstr "Taip"
 #: colournaming/experimentcol/views.py:184
 #: colournaming/experimentcolbg/views.py:213 colournaming/mturk/views.py:229
 msgid "You are in the 0% top colour namers."
-msgstr "Jūs esate tarp 0% geriausių spalvų įvardintojų"
+msgstr "Jūs esate tarp 0% geriausių spalvų vardintojų."
 
 #: colournaming/home/forms.py:7
 msgid "First name"
@@ -298,7 +298,7 @@ msgstr "Nesutinku"
 
 #: colournaming/namer/forms.py:20
 msgid "Undecided"
-msgstr "Neapsispręndęs/-usi"
+msgstr "Neapsispręndęs (-usi)"
 
 #: colournaming/namer/forms.py:21
 msgid "Agree"
@@ -327,7 +327,7 @@ msgid ""
 "all of the time. The movie lasts for 90 secs and all you need to do is "
 "play it and remember if the 'coloured' square disappeared at any time "
 "during the movie."
-msgstr "Toliau pateiktame įraše rodomas judantis „spalvotas“ kvadratėlis. Įrašo eigoje, kvadratėlio spalva keičiasi. Gali būti, kad matysite spalvą tam tikrą laiką arba visą laiką. Įrašas trunka 90 sekundžių. Tereikia jį paleisti ir įsiminti, ar „spalvotas“ kvadratėlis dingo bet kuriuo įrašo metu ar ne."
+msgstr "Toliau pateiktame įraše rodomas judantis spalvotas kvadratėlis. Įrašo eigoje, kvadratėlio spalva keičiasi. Gali būti, kad matysite spalvą tam tikrą laiką arba visą laiką. Įrašas trunka 90 sekundžių. Tereikia jį paleisti ir įsiminti, ar spalvotas kvadratėlis dingo bet kuriuo įrašo metu ar ne."
 
 #: colournaming/templates/colour_vision.html:9
 msgid "Did the 'coloured' square disappear?"
@@ -362,7 +362,7 @@ msgstr "Susisiekti"
 
 #: colournaming/templates/index.html:34
 msgid "Let's play a game, how many colours can you name?"
-msgstr "Pažaiskime žaidimą! Kiek spalvų gali pavadinti?"
+msgstr "Pažaiskime žaidimą! Kiek spalvų galite pavadinti?"
 
 #: colournaming/templates/index.html:36
 msgid ""
@@ -372,7 +372,7 @@ msgid ""
 "about your cultural background and viewing conditions. You are free to "
 "omit any question and you may withdraw at any time without penalty. "
 "Participation in this study is strictly anonymous and voluntary."
-msgstr "Sveiki atvykę į Spalvų Įvardinimą - internetinį eksperimentą, kuris buvo sukurtas siekiant surinkti spalvų pavadinimus įvairiomis kalbomis ir nustatyti jų atitikmenis spalvų spektre. Jūsų bus paprašyta pavadinti spalvas iš pavyzdžių rinkinio ir pateikti informaciją apie jūsų kultūrinę aplinką bei peržiūros sąlygas. Galite praleisti bet kurį klausimą ir bet kada galite pasitraukti be nuobaudos. Dalyvavimas šiame tyrime yra visiškai anonimiškas ir savanoriškas."
+msgstr "Sveiki atvykę į Spalvų Įvardinimą - internetinį eksperimentą, kuris buvo sukurtas siekiant surinkti spalvų pavadinimus įvairiomis kalbomis ir nustatyti jų atitikmenis spalvų spektre. Jums bus pateikti įvairių spalvų pavyzdžiai ir paprašyta tas spalvas įvardinti. Taip pat bus paprašyta suteikti informacijos apie jūsų kultūrinę aplinką bei sąlygas, kurioms esant dalyvaujate spalvų peržiūros ir įvardinimo eksperimente. Galite praleisti bet kurį klausimą ir bet kada pasitraukti iš eksperimento be nuobaudos. Dalyvavimas šiame tyrime yra visiškai anonimiškas ir savanoriškas."
 
 #: colournaming/templates/index.html:38
 msgid ""
@@ -382,7 +382,7 @@ msgid ""
 "Please feel free to contact the principal investigator <a "
 "href=\"mailto:dimitris.mylonas[at]nchlondon.ac.uk\">Dimitris Mylonas</a> "
 "if you have any questions."
-msgstr "Daugeliui žmonių šio tyrimo užduotys atrodo smagios, ir manome, kad dalyviams nėra jokios žinomos rizikos. Šio tyrimo tikslas yra tobulinti spalvų komunikaciją daugiakalbėje aplinkoje. Šio tyrimo tikslas – pagerinti spalvų komunikaciją daugiakalbėje aplinkoje. Jei turite klausimų, susisiekite su pagrindiniu tyrėju <a href=\"mailto:dimitris.mylonas[at]nchlondon.ac.uk\">Dimitris Mylonas</a>"
+msgstr "Eksperimente dalyvavusiems žmonėms šio tyrimo užduotys atrodė smagios, nesukėlė jokių nepageidaujamų reakcijų. Manome, kad tyrimas nesukelia jokios žinomos rizikos jį atliekančiajam. Tyrimo tikslas – pagerinti spalvų komunikaciją daugiakalbėje aplinkoje. Jei turite klausimų, susisiekite su pagrindiniu tyrėju <a href=\"mailto:dimitris.mylonas[at]nchlondon.ac.uk\">Dimitris Mylonas</a>"
 
 #: colournaming/templates/index.html:40
 msgid ""
@@ -390,7 +390,7 @@ msgid ""
 " consent to participate in the study, click on the 'Start' button to "
 "begin the experiment against a neutral grey background or the 'Chromatic "
 "Start' button to begin the experiment against chromatic backgrounds."
-msgstr "Jei jums 16 ar daugiau metų, suprantate teiginius ir laisva valia sutinkate dalyvauti tyrime, spustelėkite mygtuką „Pradėti“, kad pradėtumėte eksperimentą neutraliame pilkame fone arba mygtuką „Pradėti Chromatiškai“, kad pradėtumėte eksperimentą chromatiniuose fonuose."
+msgstr "Jei jums 16 ar daugiau metų, suprantate teiginius ir laisva valia sutinkate dalyvauti tyrime, spustelėkite mygtuką „Pradėti“, tam kad pradėtumėte eksperimentą neutraliame pilkame fone arba mygtuką „Pradėti“ ant spalvoto fono, kad pradėtumėte eksperimentą chromatiniuose fonuose."
 
 #: colournaming/templates/index.html:42 colournaming/templates/index.html:43
 msgid "Start"
@@ -402,7 +402,7 @@ msgid ""
 "each colour in different languages (Mylonas, Stutters, Doval, and "
 "MacDonald, 2013). More languages will be added as more data is becoming "
 "available."
-msgstr "Čia yra sintetinis stebėtojas, išmokytas įvardyti kiekvieną spalvą skirtingomis kalbomis pagal dalyvių atsakymus (Mylonas, Stutters, Doval ir MacDonald, 2013). Kai turėsime daugiau duomenų, įtrauksime daugiau kalbų."
+msgstr "Čia yra sintetinis stebėtojas, išmokytas įvardyti kiekvieną spalvą skirtingomis kalbomis remiantis tyrimo dalyvių atsakymais (Mylonas, Stutters, Doval ir MacDonald, 2013). Kai turėsime daugiau duomenų, įtrauksime daugiau kalbų."
 
 #: colournaming/templates/index.html:65
 msgid "by name"
@@ -420,7 +420,7 @@ msgstr "Sinonimai"
 msgid ""
 "This is a βeta version of Colournamer. You will need JavaScript enabled "
 "and a browser that supports HTML5 web audio."
-msgstr "Tai yra βeta Colournamer versija. Jums reikės įgalinti „JavaScript“ ir naudoti naršyklę, palaikančią HTML5 žiniatinklio garsą."
+msgstr "Tai yra „βeta Colournamer“ versija. Jums reikės įgalinti „JavaScript“ ir naudoti naršyklę, palaikančią HTML5 žiniatinklio garsą."
 
 #: colournaming/templates/index.html:102
 msgid ""
@@ -432,7 +432,7 @@ msgstr "Šio tyrimo tikslas - sukurti internetinį modelį, kuris palengvintų s
 msgid ""
 "Please use the following communication form to give us your feedback and "
 "comments or if you wish to inform you about the results of this research."
-msgstr "Jei norite pateikti atsiliepimų ir pastabų arba norite gauti informacijos apie šio tyrimo rezultatus, naudokite šią komunikacijos formą."
+msgstr "Jei norite pateikti atsiliepimų ar pastabų arba norite sužinoti daugiau apie tyrimo rezultatus, naudokite šią kontaktinę formą."
 
 #: colournaming/templates/index.html:357
 #: colournaming/templates/observer_information.html:52
@@ -455,11 +455,11 @@ msgid ""
 "appear. Name as many colour samples (20+) as you can for higher ranking "
 "on colour namers. You will need to press the Finish button to start the "
 "next task. Your response time will be recorded."
-msgstr "Pavadinkite kiekvieną spalvų pavyzdį naudodami geriausiai prisimenamą spalvų terminą.<br>Paspauskite rodyklės mygtuką [&gt;] arba klaviatūroje Enter, kai baigsite pavadinti spalvą, kad būtų rodomas kitas spalvos pavyzdys. Pavadinkite kuo daugiau spalvų pavyzdžių (20 ir daugiau), kad gautumėte aukštesnį spalvų pavadinimų reitingą. Norėdami pradėti kitą užduotį, turėsite paspausti mygtuką  „Baigti“. Jūsų atsakymo laikas bus įrašytas."
+msgstr "Pavadinkite kiekvieną spalvos pavyzdį naudodami spalvos terminą, kurį geriausiai prisimenate.<br>Paspauskite rodyklės mygtuką [&gt;] arba klaviatūroje „Enter“, kai pavadinsite spalvą, tam kad būtų rodomas kitas spalvos pavyzdys. Pavadinkite kuo daugiau spalvų pavyzdžių (20 ir daugiau), kad gautumėte aukštesnį spalvų vadintojo reitingą. Norėdami pradėti kitą užduotį, turėsite paspausti mygtuką  „Baigti“. Jūsų atsakymo laikas bus įrašytas."
 
 #: colournaming/templates/name_colour.html:18
 msgid "Name the colour of the patch"
-msgstr "Spalvos kvadratėlio pavadinimas"
+msgstr "Spalva"
 
 #: colournaming/templates/name_colour.html:32
 msgid "Finish"
@@ -467,7 +467,7 @@ msgstr "Baigti"
 
 #: colournaming/templates/observer_information.html:5
 msgid "Observer Information Task"
-msgstr "Stebėtojo informacijos užduotis"
+msgstr "Informacija apie spalvų vardintoją"
 
 #: colournaming/templates/observer_information.html:8
 msgid ""
@@ -493,5 +493,5 @@ msgid ""
 "Your responses will be used to improve colour communication within and "
 "across languages. Please feel free to contact us and visit our research "
 "page for more information. Find below a summary of your responses."
-msgstr "Jūsų atsakymai bus naudojami siekiant pagerinti bendravimą, susijusį su spalvomis, tiek tarp kalbančių ta pačia kalba, tiek bendravimą apie spalvas tarp skirtingų kalbų. Drąsiai kreipkitės į mus bei apsilankykite mūsų tyrimų puslapyje, norėdami gauti daugiau informacijos. Žemiau rasite savo atsakymų santrauką."
+msgstr "Jūsų atsakymai bus naudojami siekiant pagerinti bendravimą, susijusį su spalvomis, tiek tarp kalbančių ta pačia kalba, tiek bendravimą apie spalvas tarp skirtingų kalbų. Drąsiai kreipkitės į mus bei apsilankykite mūsų tyrimų puslapyje, jei norite sužinoti daugiau. Žemiau rasite savo atsakymų suvestinę."
 
