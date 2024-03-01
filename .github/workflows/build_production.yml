@@ -2,7 +2,7 @@ name: Test and build production image
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
 
 jobs:
   test:
