@@ -188,7 +188,7 @@ def setup_logging(app):
         import logging
         from logging.handlers import RotatingFileHandler
 
-        handler = RotatingFileHandler("colournaming.log", maxBytes=10000, backupCount=1)
+        handler = RotatingFileHandler(current_app.config.get("LOG_PATH", "colournaming.log"), maxBytes=10000, backupCount=1)
         handler.setLevel(logging.INFO)
         app.logger.addHandler(handler)
 
