@@ -56,7 +56,8 @@ def start():
     except IndexError:
         browser_language = None
     try:
-        background_id, background_colour = controller.get_random_background()
+        # background_id, background_colour = controller.get_random_background()
+        background_id, background_colour = -1, (128, 128, 128)
     except IndexError:
         abort(500, "No backgrounds have been imported")
     background_colour_lab = rgb2lab(background_colour)
@@ -232,9 +233,13 @@ def thankyou():
         perc = 0
     top_namers_msg = lazy_gettext("You are in the 0% top colour namers.")
     top_namers_msg = top_namers_msg.replace("0%", "{0:.0f}%".format(perc))
+    mturk_completion = current_app.config.get(
+        "MTURK_COMPLETION_URL",
+        "https://app.prolific.co/submissions/complete?cc=C8MYG78Z"
+    )
     return render_template(
         "thankyou.html",
-        mturk_completion="https://app.prolific.co/submissions/complete?cc=C8MYG78Z",
+        mturk_completion=mturk_completion,
         top_namers=top_namers_msg,
         background_colour=rgb_tuple_to_css_rgb(session["experiment"]["background_colour"]),
         dark_font=session["experiment"]["dark_font"],
