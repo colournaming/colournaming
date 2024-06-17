@@ -166,7 +166,7 @@ def name_colour():
         get_target_url=url_for("mturk.get_target"),
         background_colour=rgb_tuple_to_css_rgb(session["experiment"]["background_colour"]),
         dark_font=session["experiment"]["dark_font"],
-        max_presentations=226,
+        max_presentations=response_goal,
         prolific=True,
         form=form,
         rtl=lang_is_rtl(get_locale()),
