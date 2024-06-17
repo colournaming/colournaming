@@ -137,7 +137,7 @@ def colour_vision():
 def name_colour():
     """Show the name colour form and handle responses."""
     check_in_experiment()
-    response_goal = int(current_app.config.get("MTURK_RESPONSE_COUNT", "226"))
+    response_goal = int(current_app.config.get("PROLIFIC_RESPONSE_COUNT", "226"))
     form = forms.ColourNameForm()
     if form.validate_on_submit():
         if not session["experiment"]:
@@ -234,7 +234,7 @@ def thankyou():
     top_namers_msg = lazy_gettext("You are in the 0% top colour namers.")
     top_namers_msg = top_namers_msg.replace("0%", "{0:.0f}%".format(perc))
     mturk_completion = current_app.config.get(
-        "MTURK_COMPLETION_URL",
+        "PROLIFIC_COMPLETION_URL",
         "https://app.prolific.co/submissions/complete?cc=C8MYG78Z"
     )
     return render_template(
