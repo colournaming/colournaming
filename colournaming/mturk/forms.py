@@ -159,7 +159,6 @@ class ColourVisionForm(FlaskForm):
     square_disappeared = SelectField(
         choices=[("-", "-"), ("no", lazy_gettext("No")), ("yes", lazy_gettext("Yes"))],
         description=lazy_gettext("Did the square disappear?"),
-        coerce=int,
         validators=[Optional()],
     )
 
