@@ -163,7 +163,6 @@ class ColourVisionForm(FlaskForm):
         coerce=int,
         validators=[Optional()],
     )
-    #square_disappeared = BooleanField(validators=[Optional()])
 
 
 class ColourNameForm(FlaskForm):
