@@ -117,6 +117,7 @@ def colour_vision():
     form = forms.ColourVisionForm()
     if form.validate_on_submit():
         print("colour vision form validated")
+        print(form.square_disappeared)
         session["experiment"]["vision"] = {"square_disappeared": form.square_disappeared.data}
         session.modified = True
         print(session)

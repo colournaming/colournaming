@@ -145,7 +145,7 @@ def save_response(experiment, response):
 
 
 def update_participant(experiment):
-    print("trying to update", experiment)
+    print("trying to update experiment for participant ", experiment["participant_id"])
     participant = MturkParticipantColBG.query.filter(
         MturkParticipantColBG.id == experiment["participant_id"]
     ).one()
