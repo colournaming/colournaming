@@ -117,7 +117,13 @@ def colour_vision():
     form = forms.ColourVisionForm()
     if form.validate_on_submit():
         print("colour vision form validated")
-        session["experiment"]["vision"] = {"square_disappeared": form.square_disappeared.data}
+        if form.square_disappeared.data == "yes":
+            square_disappeared = True
+        elif form.square_disappeared.data == "no":
+            square_disappeared = False
+        else:
+            square_disappeared = None
+        session["experiment"]["vision"] = {"square_disappeared": square_disappeared}
         session.modified = True
         print(session)
         return redirect(url_for("mturk.name_colour"))
