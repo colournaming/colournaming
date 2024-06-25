@@ -57,7 +57,7 @@ def start():
         browser_language = None
     try:
         # background_id, background_colour = controller.get_random_background()
-        background_id, background_colour = None, (128, 128, 128)
+        background_id, background_colour = -1, (128, 128, 128)
     except IndexError:
         abort(500, "No backgrounds have been imported")
     background_colour_lab = rgb2lab(background_colour)
