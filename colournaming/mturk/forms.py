@@ -159,11 +159,11 @@ class ColourVisionForm(FlaskForm):
 
     square_disappeared = SelectField(
         choices=[("-", "-"), ("no", lazy_gettext("No")), ("yes", lazy_gettext("Yes"))],
-        description=lazy_gettext("What distance are you from your monitor in cm?"),
-        coerce=float,
+        description=lazy_gettext("Did the square disappear?"),
+        coerce=int,
         validators=[Optional()],
     )
-    square_disappeared = BooleanField(validators=[Optional()])
+    #square_disappeared = BooleanField(validators=[Optional()])
 
 
 class ColourNameForm(FlaskForm):
