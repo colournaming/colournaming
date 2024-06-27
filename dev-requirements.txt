@@ -4,7 +4,7 @@
 #
 #    pip-compile --resolver=backtracking dev-requirements.in
 #
-black==24.4.0
+black==24.4.2
     # via -r dev-requirements.in
 click==8.1.7
     # via
@@ -28,13 +28,13 @@ packaging==24.0
     #   black
 pathspec==0.12.1
     # via black
-platformdirs==4.2.0
+platformdirs==4.2.1
     # via black
 pycodestyle==2.11.1
     # via flake8
 pyflakes==3.2.0
     # via flake8
-pyright==1.1.358
+pyright==1.1.361
     # via -r dev-requirements.in
 tomli==2.0.1
     # via

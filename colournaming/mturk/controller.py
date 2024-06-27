@@ -47,7 +47,8 @@ def get_random_colour(colour_class, increment_presentation=True):
     if max_presentation_count is None:
         max_presentation_count = 0
     targets = colour_class.query.filter(
-        colour_class.presentation_count < max_presentation_count
+        colour_class.presentation_count < max_presentation_count,
+        colour_class.id >= 0
     ).all()
     if len(targets) == 0:
         # will occur if all targets have been presented max times
@@ -145,7 +146,7 @@ def save_response(experiment, response):
 
 
 def update_participant(experiment):
-    print("trying to update", experiment)
+    print("trying to update experiment for participant ", experiment["participant_id"])
     participant = MturkParticipantColBG.query.filter(
         MturkParticipantColBG.id == experiment["participant_id"]
     ).one()
