@@ -85,7 +85,7 @@ def get_mturk_task_by_id(mturk_id):
 
 def get_random_target():
     """Get a random colour target."""
-    return get_random_colour(ColourTargetColBG)
+    return get_random_colour(ColourTarget)
 
 
 def get_random_background():
