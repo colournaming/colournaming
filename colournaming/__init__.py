@@ -179,7 +179,6 @@ def register_blueprints(app):
     app.register_blueprint(namer_module, url_prefix="/namer")
     app.register_blueprint(experimentcol_module, url_prefix="/experimentcol")
     app.register_blueprint(experimentcolbg_module, url_prefix="/experimentcolbg")
-    app.register_blueprint(admin_module, url_prefix="/admin")
     app.register_blueprint(mturk_module, url_prefix="/mturk")
 
 
