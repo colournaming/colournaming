@@ -6,7 +6,6 @@ from flask_babel import Babel
 import pytest
 from sqlalchemy.exc import ProgrammingError
 import user_agents
-from . import admin
 from .database import db
 from .email import mail
 from .experimentcol.controller import read_targets_from_file as read_col_targets_from_file
@@ -76,24 +75,6 @@ def setup_cli(app):
         read_centroids_from_file(centroids_file, language_name, language_code)
 
     @app.cli.command()
-    @click.argument("filename", type=click.File("w"))
-    def export_responses(filename):
-        """Export responses to CSV."""
-        admin.controller.get_responses(filename)
-
-    @app.cli.command()
-    @click.argument("filename", type=click.File("w"))
-    def export_participants(filename):
-        """Export participants to CSV."""
-        admin.controller.get_participants(filename)
-
-    @app.cli.command()
-    @click.argument("filename", type=click.File("w"))
-    def export_agreements(filename):
-        """Export agreements to CSV."""
-        admin.controller.get_agreements(filename)
-
-    @app.cli.command()
     @click.argument("targets_file", type=click.File("r"))
     def import_col_targets(targets_file):
         """Import a targets file into the database."""
@@ -112,30 +93,6 @@ def setup_cli(app):
     def import_colbg_backgrounds(backgrounds_file, delete_existing):
         """Import a targets file into the database."""
         read_backgrounds_from_file(backgrounds_file, delete_existing=delete_existing)
-
-    @app.cli.command()
-    @click.argument("filename", type=click.File("w"))
-    def export_colbg_responses(filename):
-        """Export coloured background responses to CSV."""
-        admin.controller.get_colbg_responses(filename)
-
-    @app.cli.command()
-    @click.argument("filename", type=click.File("w"))
-    def export_colbg_participants(filename):
-        """Export coloured background participants to CSV."""
-        admin.controller.get_colbg_participants(filename)
-
-    @app.cli.command()
-    @click.argument("filename", type=click.File("w"))
-    def export_mturk_responses(filename):
-        """Export coloured background responses to CSV."""
-        admin.controller.get_mturk_responses(filename)
-
-    @app.cli.command()
-    @click.argument("filename", type=click.File("w"))
-    def export_mturk_participants(filename):
-        """Export coloured background participants to CSV."""
-        admin.controller.get_mturk_participants(filename)
 
     @app.cli.command()
     def mturk_tasks():
