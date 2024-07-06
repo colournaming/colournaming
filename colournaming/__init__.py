@@ -172,7 +172,6 @@ def register_blueprints(app):
     from colournaming.namer.views import bp as namer_module
     from colournaming.experimentcol.views import bp as experimentcol_module
     from colournaming.experimentcolbg.views import bp as experimentcolbg_module
-    from colournaming.admin.views import bp as admin_module
     from colournaming.mturk.views import bp as mturk_module
 
     app.register_blueprint(home_module, url_prefix="/")
