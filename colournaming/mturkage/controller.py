@@ -7,7 +7,7 @@ from sqlalchemy.sql.expression import func
 
 from colournaming.mturk.exceptions import MTurkIDNotFound
 from ..database import db
-from .model import MturkTask, MturkAgeParticipant, MturkAgeColourResponse
+from .model import MturkAgeTask, MturkAgeParticipant, MturkAgeColourResponse
 from ..experimentcol.model import ColourTarget
 
 
@@ -46,7 +46,7 @@ def get_random_colour(colour_class, increment_presentation=True):
 
 
 def create_mturk_task(prolific_id, study_id, session_id):
-    task = MturkTask(
+    task = MturkAgeTask(
         prolific_id=prolific_id,
         study_id=study_id,
         session_id=session_id
@@ -57,13 +57,13 @@ def create_mturk_task(prolific_id, study_id, session_id):
 
 
 def list_mturk_tasks():
-    tasks = MturkTask.query.all()
+    tasks = MturkAgeTask.query.all()
     return tasks
 
 
 def get_mturk_task_by_id(mturk_id):
     try:
-        task = MturkTask.query.filter(MturkTask.id == mturk_id).one()
+        task = MturkAgeTask.query.filter(MturkAgeTask.id == mturk_id).one()
     except NoResultFound:
         return MTurkIDNotFound
     return task
