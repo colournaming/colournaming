@@ -104,7 +104,7 @@ def setup_cli(app):
             print(task.completion_id, len(task.participant.responses), sep=",")
 
     @app.cli.command()
-    def mturk_tasks():
+    def mturk_age_tasks():
         """List completed Mechanical Turk age tasks."""
         completed_tasks = list_mturk_age_tasks()
         print("completion_id,response_count")
