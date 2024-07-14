@@ -20,7 +20,7 @@ from . import controller, forms
 from .. import lang_is_rtl
 from ..utils import rgb2lab
 
-bp = Blueprint("mturk", __name__)
+bp = Blueprint("mturkage", __name__)
 
 
 def check_in_experiment():
