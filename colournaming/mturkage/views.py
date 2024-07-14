@@ -72,9 +72,10 @@ def start():
         },
         "task_id": mturk_task.id,
         "response_count": 0,
-        "dark_font": dark_font
+        "dark_font": dark_font,
+        "background_colour": background_colour
     }
-    return redirect(url_for("mturk.display_properties"))
+    return redirect(url_for(".display_properties"))
 
 
 @bp.route("/display_properties.html", methods=["GET", "POST"])
@@ -91,7 +92,7 @@ def display_properties():
         }
         session["experiment"]["participant_id"] = controller.save_participant(session["experiment"])
         session.modified = True
-        return redirect(url_for("mturk.colour_vision"))
+        return redirect(url_for(".colour_vision"))
     if form.errors:
         for field, error in form.errors.items():
             print(field, error)
@@ -120,7 +121,7 @@ def colour_vision():
         session["experiment"]["vision"] = {"square_disappeared": square_disappeared}
         session.modified = True
         print(session)
-        return redirect(url_for("mturk.name_colour"))
+        return redirect(url_for(".name_colour"))
     if form.errors:
         for field, error in form.errors.items():
             print(field, error)
@@ -163,7 +164,7 @@ def name_colour():
             print(field, error)
     return render_template(
         "name_colour.html",
-        get_target_url=url_for("mturk.get_target"),
+        get_target_url=url_for(".get_target"),
         background_colour=rgb_tuple_to_css_rgb(session["experiment"]["background_colour"]),
         dark_font=session["experiment"]["dark_font"],
         max_presentations=response_goal,
@@ -210,7 +211,7 @@ def observer_information():
         }
         session.modified = True
         controller.update_participant(session["experiment"])
-        return redirect(url_for("mturk.thankyou"))
+        return redirect(url_for(".thankyou"))
     if form.errors:
         for field, error in form.errors.items():
             print(field, repr(getattr(form, field).data), error)
