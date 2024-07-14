@@ -59,7 +59,7 @@ class MturkAgeParticipant(db.Model):
     colour_target_disappeared = db.Column(db.Boolean)
     location = db.Column(db.String)
     task_id = db.Column(db.Integer, db.ForeignKey("mturk_age_tasks.id"))
-    task = db.relationship("MturkTask")
+    task = db.relationship("MturkAgeTask")
 
 
 class MturkAgeColourResponse(db.Model):
