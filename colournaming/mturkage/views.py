@@ -26,7 +26,7 @@ bp = Blueprint("mturkage", __name__)
 def check_in_experiment():
     """Redirect to the start of the experiment if the session is not initialized."""
     if "experiment" not in session:
-        return redirect(url_for("mturk.start"))
+        return redirect(url_for("mturkage.start"))
 
 
 def rgb_tuple_to_css_rgb(background):
@@ -156,7 +156,7 @@ def name_colour():
         print("session:", session["experiment"])
         if session["experiment"]["response_count"] >= response_goal:
             print("redirecting to observer information", session["experiment"]["response_count"])
-            return redirect(url_for("mturk.observer_information"))
+            return redirect(url_for(".observer_information"))
         else:
             print("not redirecting", session["experiment"]["response_count"])
     if form.errors:
