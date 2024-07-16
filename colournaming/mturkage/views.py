@@ -235,7 +235,7 @@ def thankyou():
     top_namers_msg = lazy_gettext("You are in the 0% top colour namers.")
     top_namers_msg = top_namers_msg.replace("0%", "{0:.0f}%".format(perc))
     mturk_completion = current_app.config.get(
-        "PROLIFIC_COMPLETION_URL",
+        "PROLIFIC_AGE_COMPLETION_URL",
         "https://app.prolific.co/submissions/complete?cc=C8MYG78Z"
     )
     return render_template(
