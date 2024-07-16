@@ -56,8 +56,7 @@ def start():
     except IndexError:
         browser_language = None
     try:
-        # background_id, background_colour = controller.get_random_background()
-        background_id, background_colour = -1, (128, 128, 128)
+        background_id, background_colour = controller.get_random_background()
     except IndexError:
         abort(500, "No backgrounds have been imported")
     background_colour_lab = rgb2lab(background_colour)
@@ -143,7 +142,7 @@ def colour_vision():
 def name_colour():
     """Show the name colour form and handle responses."""
     check_in_experiment()
-    response_goal = int(current_app.config.get("PROLIFIC_RESPONSE_COUNT", "226"))
+    response_goal = int(current_app.config.get("MTURK_RESPONSE_COUNT", "226"))
     form = forms.ColourNameForm()
     if form.validate_on_submit():
         if not session["experiment"]:
@@ -172,7 +171,7 @@ def name_colour():
         get_target_url=url_for("mturk.get_target"),
         background_colour=rgb_tuple_to_css_rgb(session["experiment"]["background_colour"]),
         dark_font=session["experiment"]["dark_font"],
-        max_presentations=response_goal,
+        max_presentations=226,
         prolific=True,
         form=form,
         rtl=lang_is_rtl(get_locale()),
@@ -239,13 +238,9 @@ def thankyou():
         perc = 0
     top_namers_msg = lazy_gettext("You are in the 0% top colour namers.")
     top_namers_msg = top_namers_msg.replace("0%", "{0:.0f}%".format(perc))
-    mturk_completion = current_app.config.get(
-        "PROLIFIC_COMPLETION_URL",
-        "https://app.prolific.co/submissions/complete?cc=C8MYG78Z"
-    )
     return render_template(
         "thankyou.html",
-        mturk_completion=mturk_completion,
+        mturk_completion="https://app.prolific.co/submissions/complete?cc=C8MYG78Z",
         top_namers=top_namers_msg,
         background_colour=rgb_tuple_to_css_rgb(session["experiment"]["background_colour"]),
         dark_font=session["experiment"]["dark_font"],

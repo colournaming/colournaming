@@ -4,6 +4,7 @@ from flask_wtf import FlaskForm
 from flask_babel import lazy_gettext
 import pycountry
 from wtforms import (
+    BooleanField,
     DecimalField,
     IntegerField,
     SelectField,
