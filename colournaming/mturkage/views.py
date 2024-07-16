@@ -138,7 +138,7 @@ def colour_vision():
 def name_colour():
     """Show the name colour form and handle responses."""
     check_in_experiment()
-    response_goal = int(current_app.config.get("PROLIFIC_RESPONSE_COUNT", "226"))
+    response_goal = int(current_app.config.get("PROLIFIC_AGE_RESPONSE_COUNT", "226"))
     form = forms.ColourNameForm()
     if form.validate_on_submit():
         if not session["experiment"]:
