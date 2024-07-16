@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 
 from argparse import ArgumentParser
-from collections import defaultdict
-import os.path
 import sys
 import openpyxl
 
@@ -28,22 +26,22 @@ def read_translations(translation_filename, column):
 def do_translation(messages, translation_dict, output):
     msgid = ""
     state = None
-    for l in messages:
-        l = l.strip()
-        if l.startswith("msgid"):
-            msgid = l.split(" ", maxsplit=1)[1][1:-1]
+    for message in messages:
+        message = message.strip()
+        if message.startswith("msgid"):
+            msgid = message.split(" ", maxsplit=1)[1][1:-1]
             state = "MSGID"
-        elif l.startswith('"') and state == "MSGID":
-            msgid += l[1:-1]
-        elif l == 'msgstr ""':
+        elif message.startswith('"') and state == "MSGID":
+            msgid += message[1:-1]
+        elif message == 'msgstr ""':
             if msgid not in translation_dict:
-                print(l, "not found in translation dictionary")
+                print(message, "not found in translation dictionary")
             try:
-                l = 'msgstr "' + translation_dict.get(msgid, "") + '"'
+                message = 'msgstr "' + translation_dict.get(msgid, "") + '"'
             except TypeError:
                 print("TypeError for {}, value is {}".format(msgid, translation_dict.get(msgid, "")))
                 sys.exit(1)
-        output.write(l + "\n")
+        output.write(message + "\n")
 
 
 def main(translation_filename, column, messages_filename, output_filename):

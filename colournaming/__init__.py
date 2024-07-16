@@ -6,7 +6,6 @@ from flask_babel import Babel
 import pytest
 from sqlalchemy.exc import ProgrammingError
 import user_agents
-from . import admin
 from .database import db
 from .email import mail
 from .experimentcol.controller import read_targets_from_file as read_col_targets_from_file
@@ -15,6 +14,7 @@ from .experimentcolbg.controller import (
     read_targets_from_file as read_colbg_targets_from_file,
 )
 from .mturk.controller import list_mturk_tasks
+from .mturkage.controller import list_mturk_tasks as list_mturk_age_tasks
 from .namer.controller import read_centroids_from_file, instantiate_namers
 
 
@@ -76,24 +76,6 @@ def setup_cli(app):
         read_centroids_from_file(centroids_file, language_name, language_code)
 
     @app.cli.command()
-    @click.argument("filename", type=click.File("w"))
-    def export_responses(filename):
-        """Export responses to CSV."""
-        admin.controller.get_responses(filename)
-
-    @app.cli.command()
-    @click.argument("filename", type=click.File("w"))
-    def export_participants(filename):
-        """Export participants to CSV."""
-        admin.controller.get_participants(filename)
-
-    @app.cli.command()
-    @click.argument("filename", type=click.File("w"))
-    def export_agreements(filename):
-        """Export agreements to CSV."""
-        admin.controller.get_agreements(filename)
-
-    @app.cli.command()
     @click.argument("targets_file", type=click.File("r"))
     def import_col_targets(targets_file):
         """Import a targets file into the database."""
@@ -114,33 +96,17 @@ def setup_cli(app):
         read_backgrounds_from_file(backgrounds_file, delete_existing=delete_existing)
 
     @app.cli.command()
-    @click.argument("filename", type=click.File("w"))
-    def export_colbg_responses(filename):
-        """Export coloured background responses to CSV."""
-        admin.controller.get_colbg_responses(filename)
-
-    @app.cli.command()
-    @click.argument("filename", type=click.File("w"))
-    def export_colbg_participants(filename):
-        """Export coloured background participants to CSV."""
-        admin.controller.get_colbg_participants(filename)
-
-    @app.cli.command()
-    @click.argument("filename", type=click.File("w"))
-    def export_mturk_responses(filename):
-        """Export coloured background responses to CSV."""
-        admin.controller.get_mturk_responses(filename)
-
-    @app.cli.command()
-    @click.argument("filename", type=click.File("w"))
-    def export_mturk_participants(filename):
-        """Export coloured background participants to CSV."""
-        admin.controller.get_mturk_participants(filename)
-
-    @app.cli.command()
     def mturk_tasks():
         """List completed Mechanical Turk tasks."""
         completed_tasks = list_mturk_tasks()
+        print("completion_id,response_count")
+        for task in completed_tasks:
+            print(task.completion_id, len(task.participant.responses), sep=",")
+
+    @app.cli.command()
+    def mturk_age_tasks():
+        """List completed Mechanical Turk age tasks."""
+        completed_tasks = list_mturk_age_tasks()
         print("completion_id,response_count")
         for task in completed_tasks:
             print(task.completion_id, len(task.participant.responses), sep=",")
@@ -172,15 +138,15 @@ def register_blueprints(app):
     from colournaming.namer.views import bp as namer_module
     from colournaming.experimentcol.views import bp as experimentcol_module
     from colournaming.experimentcolbg.views import bp as experimentcolbg_module
-    from colournaming.admin.views import bp as admin_module
     from colournaming.mturk.views import bp as mturk_module
+    from colournaming.mturkage.views import bp as mturk_age_module
 
     app.register_blueprint(home_module, url_prefix="/")
     app.register_blueprint(namer_module, url_prefix="/namer")
     app.register_blueprint(experimentcol_module, url_prefix="/experimentcol")
     app.register_blueprint(experimentcolbg_module, url_prefix="/experimentcolbg")
-    app.register_blueprint(admin_module, url_prefix="/admin")
     app.register_blueprint(mturk_module, url_prefix="/mturk")
+    app.register_blueprint(mturk_age_module, url_prefix="/mturkage")
 
 
 def setup_logging(app):

@@ -20,13 +20,13 @@ from . import controller, forms
 from .. import lang_is_rtl
 from ..utils import rgb2lab
 
-bp = Blueprint("mturk", __name__)
+bp = Blueprint("mturkage", __name__)
 
 
 def check_in_experiment():
     """Redirect to the start of the experiment if the session is not initialized."""
     if "experiment" not in session:
-        return redirect(url_for("mturk.start"))
+        return redirect(url_for("mturkage.start"))
 
 
 def rgb_tuple_to_css_rgb(background):
@@ -55,10 +55,7 @@ def start():
         browser_language = request.accept_languages[0][0]
     except IndexError:
         browser_language = None
-    try:
-        background_id, background_colour = controller.get_random_background()
-    except IndexError:
-        abort(500, "No backgrounds have been imported")
+    background_colour = (128, 128, 128)
     background_colour_lab = rgb2lab(background_colour)
     dark_font = background_colour_lab[0] > 80
     prolific_id = request.args.get("PROLIFIC_PID")
@@ -75,11 +72,10 @@ def start():
         },
         "task_id": mturk_task.id,
         "response_count": 0,
-        "background_id": background_id,
-        "background_colour": background_colour,
-        "dark_font": dark_font
+        "dark_font": dark_font,
+        "background_colour": background_colour
     }
-    return redirect(url_for("mturk.display_properties"))
+    return redirect(url_for(".display_properties"))
 
 
 @bp.route("/display_properties.html", methods=["GET", "POST"])
@@ -96,7 +92,7 @@ def display_properties():
         }
         session["experiment"]["participant_id"] = controller.save_participant(session["experiment"])
         session.modified = True
-        return redirect(url_for("mturk.colour_vision"))
+        return redirect(url_for(".colour_vision"))
     if form.errors:
         for field, error in form.errors.items():
             print(field, error)
@@ -125,7 +121,7 @@ def colour_vision():
         session["experiment"]["vision"] = {"square_disappeared": square_disappeared}
         session.modified = True
         print(session)
-        return redirect(url_for("mturk.name_colour"))
+        return redirect(url_for(".name_colour"))
     if form.errors:
         for field, error in form.errors.items():
             print(field, error)
@@ -142,7 +138,7 @@ def colour_vision():
 def name_colour():
     """Show the name colour form and handle responses."""
     check_in_experiment()
-    response_goal = int(current_app.config.get("MTURK_RESPONSE_COUNT", "226"))
+    response_goal = int(current_app.config.get("PROLIFIC_AGE_RESPONSE_COUNT", "226"))
     form = forms.ColourNameForm()
     if form.validate_on_submit():
         if not session["experiment"]:
@@ -160,7 +156,7 @@ def name_colour():
         print("session:", session["experiment"])
         if session["experiment"]["response_count"] >= response_goal:
             print("redirecting to observer information", session["experiment"]["response_count"])
-            return redirect(url_for("mturk.observer_information"))
+            return redirect(url_for(".observer_information"))
         else:
             print("not redirecting", session["experiment"]["response_count"])
     if form.errors:
@@ -168,10 +164,10 @@ def name_colour():
             print(field, error)
     return render_template(
         "name_colour.html",
-        get_target_url=url_for("mturk.get_target"),
+        get_target_url=url_for(".get_target"),
         background_colour=rgb_tuple_to_css_rgb(session["experiment"]["background_colour"]),
         dark_font=session["experiment"]["dark_font"],
-        max_presentations=226,
+        max_presentations=response_goal,
         prolific=True,
         form=form,
         rtl=lang_is_rtl(get_locale()),
@@ -215,7 +211,7 @@ def observer_information():
         }
         session.modified = True
         controller.update_participant(session["experiment"])
-        return redirect(url_for("mturk.thankyou"))
+        return redirect(url_for(".thankyou"))
     if form.errors:
         for field, error in form.errors.items():
             print(field, repr(getattr(form, field).data), error)
@@ -238,9 +234,13 @@ def thankyou():
         perc = 0
     top_namers_msg = lazy_gettext("You are in the 0% top colour namers.")
     top_namers_msg = top_namers_msg.replace("0%", "{0:.0f}%".format(perc))
+    mturk_completion = current_app.config.get(
+        "PROLIFIC_AGE_COMPLETION_URL",
+        "https://app.prolific.co/submissions/complete?cc=C8MYG78Z"
+    )
     return render_template(
         "thankyou.html",
-        mturk_completion="https://app.prolific.co/submissions/complete?cc=C8MYG78Z",
+        mturk_completion=mturk_completion,
         top_namers=top_namers_msg,
         background_colour=rgb_tuple_to_css_rgb(session["experiment"]["background_colour"]),
         dark_font=session["experiment"]["dark_font"],
