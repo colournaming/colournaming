@@ -327,7 +327,7 @@ msgid ""
 "all of the time. The movie lasts for 90 secs and all you need to do is "
 "play it and remember if the 'coloured' square disappeared at any time "
 "during the movie."
-msgstr "O vídeo exibe um quadrado “colorido” em movimento. O quadrado muda de cor à medida que o vídeo avança. Você deverá ver as cores durante todo o vídeo ou durante apenas algum tempo. A duração do vídeo é de 90 segundos, e tudo o que você precisa fazer é reproduzi-lo e verificar se o quadrado “colorido” desapareceu em algum momento."
+msgstr "O vídeo exibe um quadrado \"colorido\" em movimento. O quadrado muda de cor à medida que o vídeo avança. Você deverá ver as cores durante todo o vídeo ou durante apenas algum tempo. A duração do vídeo é de 90 segundos, e tudo o que você precisa fazer é reproduzi-lo e verificar se o quadrado \"colorido\" desapareceu em algum momento."
 
 #: colournaming/templates/colour_vision.html:9
 msgid "Did the 'coloured' square disappear?"
