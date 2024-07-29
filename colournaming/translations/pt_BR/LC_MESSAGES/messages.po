@@ -222,7 +222,7 @@ msgstr "Iluminação doméstica típica"
 #: colournaming/experimentcol/forms.py:139
 #: colournaming/experimentcolbg/forms.py:139 colournaming/mturk/forms.py:139
 msgid "Mid daylight"
-msgstr "Meio da manha/ tarde"
+msgstr "Meio da manhã/ tarde"
 
 #: colournaming/experimentcol/forms.py:140
 #: colournaming/experimentcolbg/forms.py:140 colournaming/mturk/forms.py:140
@@ -266,7 +266,7 @@ msgstr "Você está em 0% no ranque de nomeadores de cor"
 
 #: colournaming/home/forms.py:7
 msgid "First name"
-msgstr "Primeiro nome"
+msgstr "Nome"
 
 #: colournaming/home/forms.py:8
 msgid "Last name"
@@ -327,7 +327,7 @@ msgid ""
 "all of the time. The movie lasts for 90 secs and all you need to do is "
 "play it and remember if the 'coloured' square disappeared at any time "
 "during the movie."
-msgstr "O vídeo exibe um quadrado \"colorido\" em movimento. O quadrado muda de cor à medida que o vídeo avança. Você deverá ver as cores durante todo o vídeo ou durante apenas algum tempo. A duração do vídeo é de 90 segundos, e tudo o que você precisa fazer é reproduzi-lo e verificar se o quadrado \"colorido\" desapareceu em algum momento."
+msgstr "O vídeo exibe um quadrado “colorido” em movimento. O quadrado muda de cor à medida que o vídeo avança. Você deverá ver as cores durante todo o vídeo ou durante apenas algum tempo. A duração do vídeo é de 90 segundos, e tudo o que você precisa fazer é reproduzi-lo e verificar se o quadrado “colorido” desapareceu em algum momento."
 
 #: colournaming/templates/colour_vision.html:9
 msgid "Did the 'coloured' square disappear?"
@@ -342,7 +342,7 @@ msgid ""
 "Adjust the brightness of your display if necessary until you can see the "
 "differences between all 11 steps of the greyscale test image. Disable "
 "Night Shift mode or blue light filters if applicable."
-msgstr "Se necessário, ajuste o brilho de seu monitor até que vocÊ veja a diferença entre as 11 listras de escala de cinza na imagem de teste. Desabilite quaisquer aplicativos ou configurações de filtros de modo noturno (Night Shift, F.lux etc)"
+msgstr "Se necessário, ajuste o brilho de seu monitor até que você veja a diferença entre as 11 listras de escala de cinza na imagem de teste. Desabilite quaisquer aplicativos ou configurações de filtros de modo noturno (Night Shift, F.lux etc)"
 
 #: colournaming/templates/display_properties.html:23
 msgid "Confirm how many steps you can see?"
@@ -372,7 +372,7 @@ msgid ""
 "about your cultural background and viewing conditions. You are free to "
 "omit any question and you may withdraw at any time without penalty. "
 "Participation in this study is strictly anonymous and voluntary."
-msgstr "Bem-vindo(a) ao experimento online de Nomeação de Cor, designado a coletar nomes de cores em diferentes línguas com sua respectiva gama de cor. Você será solicitado para nomear uma série de amostras de cores e providenciar algumas informações sobre sua origem cultural e condições de visualização do monitor e do ambiente durante a realização. Você é livre para omitir quaisquer informações, bem como se retirar do experimento a qualquer momento sem nenhuma penalidade. A participação deste estudo é estritamente anônima e totalmente voluntária."
+msgstr "Bem-vindo(a) ao experimento online de Nomeação de Cor, designado a coletar nomes de cores em diferentes línguas, incluindo sua respectiva gama de cor. Você será solicitado para nomear uma série de amostras de cores e providenciar algumas informações sobre sua origem cultural e condições de visualização do monitor e do ambiente durante a realização. Você é livre para omitir quaisquer informações, bem como se retirar do experimento a qualquer momento sem nenhuma penalidade. A participação deste estudo é estritamente anônima e totalmente voluntária."
 
 #: colournaming/templates/index.html:38
 msgid ""
@@ -382,7 +382,7 @@ msgid ""
 "Please feel free to contact the principal investigator <a "
 "href=\"mailto:dimitris.mylonas[at]nchlondon.ac.uk\">Dimitris Mylonas</a> "
 "if you have any questions."
-msgstr "A maioria das pessoas acha a tarefa desse estudo agravável de ser realizada e nós acreditamos que não existe nenhum risco ao participante. O propósito desta pesquisa é melhorar a comunicação das cores em ambientes multiculturais. Por favor, se você tiver alguma dúvida, sinta-se livre para entrar em contato com o investigador principal <a href=\"mailto:dimitris.mylonas[at]nchlondon.ac.uk\">Dimitris Mylonas</a>"
+msgstr "A maioria das pessoas acha a tarefa desse estudo agravável de ser realizada e nós acreditamos que não exista nenhum risco ao participante. O propósito desta pesquisa é melhorar a comunicação das cores em ambientes multiculturais. Por favor, se você tiver alguma dúvida, sinta-se a vontade para entrar em contato com o investigador principal <a href=\"mailto:dimitris.mylonas[at]nulondon.ac.uk\">Dimitris Mylonas</a>"
 
 #: colournaming/templates/index.html:40
 msgid ""
@@ -402,7 +402,7 @@ msgid ""
 "each colour in different languages (Mylonas, Stutters, Doval, and "
 "MacDonald, 2013). More languages will be added as more data is becoming "
 "available."
-msgstr "Este é um observador sintético treinado pelas respostas dos participantes para nomear cada cor em diferentes idiomas (Mylonas, Stutters, Doval e MacDonald, 2013). Mais idiomas serão adicionados à medida que mais dados forem disponibilizados."
+msgstr "Este é um participante artificial, treinado com as respostas dos participantes para nomear cada cor em diferentes idiomas (Mylonas, Stutters, Doval e MacDonald, 2013). Mais idiomas serão adicionados à medida que mais dados forem disponibilizados."
 
 #: colournaming/templates/index.html:65
 msgid "by name"
@@ -455,7 +455,7 @@ msgid ""
 "appear. Name as many colour samples (20+) as you can for higher ranking "
 "on colour namers. You will need to press the Finish button to start the "
 "next task. Your response time will be recorded."
-msgstr "Nomeia cada amostra de cor com o termo que você se lembrar que melhor represente esta cor.<br>Pressione a setinha [&gt;] ou Enter do seu teclado quando você tiver terminado de nomear a cor para prosseguir para a próxima amostra. De nome para a maior quantidade de amostras que você conseguir (20+) para que você possa atingir altos níveis no ranque de nomeadores de cores. Aperte Finalizar para prosseguir para o próximo passo. O tempo de sua resposta será gravado."
+msgstr "Nomeia cada amostra de cor com o termo que, para você, melhor representa esta cor.<br>Aperte a setinha [&gt;] com o mouse ou aperte a tecla Enter quando você tiver terminado de nomear a cor para prosseguir para a próxima amostra. Tente nomear a maior quantidade de cores que você conseguir (20+). Assim, você poderá atingir um alto nível no ranque dos nomeadores de cores. Aperte Finalizar para prosseguir para o próximo passo. O tempo de sua resposta será gravado."
 
 #: colournaming/templates/name_colour.html:18
 msgid "Name the colour of the patch"
