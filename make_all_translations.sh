@@ -20,4 +20,4 @@ python make_translation.py ~/win/Dropbox/colourNaming_allDevices/Translation_she
 python make_translation.py ~/win/Dropbox/colourNaming_allDevices/Translation_sheet_all_languages_2022_c2w.xlsx t messages.pot colournaming/translations/cs/LC_MESSAGES/messages.po
 python make_translation.py ~/win/Dropbox/colourNaming_allDevices/Translation_sheet_all_languages_2022_c2w.xlsx u messages.pot colournaming/translations/lt/LC_MESSAGES/messages.po
 python make_translation.py ~/win/Dropbox/colourNaming_allDevices/Translation_sheet_all_languages_2022_c2w.xlsx v messages.pot colournaming/translations/no/LC_MESSAGES/messages.po
-python make_translation.py ~/win/Dropbox/colourNaming_allDevices/Translation_sheet_all_languages_2022_c2w.xlsx w messages.pot colournaming/translations/pt_br/LC_MESSAGES/messages.po
+python make_translation.py ~/win/Dropbox/colourNaming_allDevices/Translation_sheet_all_languages_2022_c2w.xlsx w messages.pot colournaming/translations/pt_BR/LC_MESSAGES/messages.po
