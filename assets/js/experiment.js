@@ -84,7 +84,7 @@ if ($colourCircle !== null && $colourId !== null && $colourName !== null && $col
     updateResults({ colours: undefined });
 
     const updateColourCircle = () => {
-        fetch(COLOUR_NAME_TARGET_URL)
+        return fetch(COLOUR_NAME_TARGET_URL)
             .then((response) => response.json())
             .then(({ b, g, id, r }) => {
                 $colourCircle.style.backgroundColor = `rgb(${ r }, ${ g }, ${ b })`;
@@ -113,6 +113,7 @@ if ($colourCircle !== null && $colourId !== null && $colourName !== null && $col
 
     $colourNameForm.addEventListener('submit', (event) => {
         event.preventDefault();
+	$colourName.disabled = true;
 
         updateColourResults();
         submitForm({
@@ -120,7 +121,9 @@ if ($colourCircle !== null && $colourId !== null && $colourName !== null && $col
             response_time: parseFloat($responseTime.value),
             target_id: $colourId.value
         });
-        updateColourCircle();
+        updateColourCircle().then(() => {
+	    $colourName.disabled = false
+	});
 
         $colourName.value = '';
         if (typeof MAX_PRESENTATIONS === 'undefined' || MAX_PRESENTATIONS == null) {
