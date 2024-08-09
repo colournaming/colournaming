@@ -109,3 +109,5 @@ production.cfg
 node_modules/
 
 .dir-locals.el
+\#*
+\.#*
