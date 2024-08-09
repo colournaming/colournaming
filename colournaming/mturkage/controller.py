@@ -29,7 +29,9 @@ def read_targets_from_file(targets_file, delete_existing=False):
 def get_random_colour(colour_class, increment_presentation=True):
     """Get a random colour target."""
     with db.session.begin():
-        max_presentation_count = db.session.query(func.max(colour_class.presentation_count)).scalar()
+        max_presentation_count = db.session.query(
+            func.max(colour_class.presentation_count)
+        ).scalar()
         if max_presentation_count is None:
             max_presentation_count = 0
         targets = colour_class.query.filter(
