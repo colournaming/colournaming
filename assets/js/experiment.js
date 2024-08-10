@@ -125,6 +125,8 @@ if ($colourCircle !== null && $colourId !== null && $colourName !== null && $col
         updateColourCircle().then(() => {
 	    $colourName.disabled = false;
 	    $nextColour.disabled = false;
+            $responseTime.value = '';
+            $colourName.focus();
 	});
 
         $colourName.value = '';
@@ -133,9 +135,6 @@ if ($colourCircle !== null && $colourId !== null && $colourName !== null && $col
         } else {
             $colourNumber.textContent = `#${ (results.colours) ? results.colours.length + 1 : 0 } / ${ MAX_PRESENTATIONS }`;
         }
-        //$colourNumber.textContent = `#${ (results.colours) ? results.colours.length + 1 : 0 }`;
-        $responseTime.value = '';
-        $colourName.focus();
     });
 
     $colourVisionTestPage.addEventListener('click', (event) => {
