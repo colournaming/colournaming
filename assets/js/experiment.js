@@ -113,7 +113,10 @@ if ($colourCircle !== null && $colourId !== null && $colourName !== null && $col
 
     $colourNameForm.addEventListener('submit', (event) => {
         event.preventDefault();
-	$colourName.disabled = true;
+	var colourName = document.getElementById('colour-name')
+	var nextColour = document.getElementById('next-colour')
+	colourName.disabled = true;
+	nextColour.disabled = true;
 
         updateColourResults();
         submitForm({
@@ -122,7 +125,8 @@ if ($colourCircle !== null && $colourId !== null && $colourName !== null && $col
             target_id: $colourId.value
         });
         updateColourCircle().then(() => {
-	    $colourName.disabled = false
+	    colourName.disabled = true;
+	    nextColour.disabled = true;
 	});
 
         $colourName.value = '';
