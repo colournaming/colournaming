@@ -8,12 +8,12 @@ Testing
 
 A local instance of the app can be launched using Docker Compose:
 
-    docker-compose build
-    docker-compose up -d postgres
-    docker-compose run --rm web initdb
-    docker-compose run --rm web import-centroids /path/to/dataset_en.csv English en
-    docker-compose run --rm web import-col-targets /path/to/targets.csv
-    docker-compose up web
+    docker compose build
+    docker compose up -d postgres
+    docker compose run --rm web initdb
+    docker compose run --rm web import-centroids /path/to/dataset_en.csv English en
+    docker compose run --rm web import-col-targets /path/to/targets.csv
+    docker compose up web
 
 Under Linux the app can now be accessed at
 [localhost:5000](http://localhost:5000). If you\'re using docker-machine
@@ -22,16 +22,22 @@ address and browse to port 5000 on that address.
 
 The database can be reinitialized by running:
 
-    docker-compose run --rm web dropdb
-    docker-compose run --rm web initdb
+    docker compose run --rm web dropdb
+    docker compose run --rm web initdb
 
 Colour targets can be added by running e.g.:
 
-    docker-compose run --rm web import-targets /path/to/targets.csv
+    docker compose run --rm web import-targets /path/to/targets.csv
 
 To stop the test instance run:
 
-    docker-compose down
+    docker compose down
+	
+The above commands are available through the colnam.sh command:
+
+	colnam.sh -u  # start the test instance
+	colnam.sh -r  # reinitialize the test database
+	colnam.sh -d  # tear down the test instance
 
 Adding datasets
 ---------------
@@ -47,7 +53,7 @@ a directory of .mp3 files in colournaming/static/audio.
 
 Next add the centroids to the database:
 
-    docker-compose run --rm web import-centroids /path/to/dataset_fr.csv Francais fr
+    docker compose run --rm web import-centroids /path/to/dataset_fr.csv Francais fr
 
 Front-end development
 ---------------------
