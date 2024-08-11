@@ -6,6 +6,7 @@ Help()
 {
 	# Display help
 	echo "-u: Bring up test setup"
+	echo "-r: Reinitialize the database"
 	echo "-d: Tear down test setup"
 	echo "-h: Print help message"
 }
