@@ -8,7 +8,9 @@ from sqlalchemy.exc import ProgrammingError
 import user_agents
 from .database import db
 from .email import mail
-from .experimentcol.controller import read_targets_from_file as read_col_targets_from_file
+from .experimentcol.controller import (
+    read_targets_from_file as read_col_targets_from_file,
+)
 from .experimentcolbg.controller import (
     read_backgrounds_from_file,
     read_targets_from_file as read_colbg_targets_from_file,
@@ -157,7 +159,7 @@ def setup_logging(app):
         handler = RotatingFileHandler(
             app.config.get("LOG_PATH", "colournaming.log"),
             maxBytes=10000,
-            backupCount=1
+            backupCount=1,
         )
         handler.setLevel(logging.INFO)
         app.logger.addHandler(handler)

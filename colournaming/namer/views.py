@@ -18,7 +18,7 @@ from . import controller
 
 bp = Blueprint("namer", __name__)
 
-hex_colour_regex = re.compile(r'[0-9A-Fa-f]{6}')
+hex_colour_regex = re.compile(r"[0-9A-Fa-f]{6}")
 
 
 @bp.route("/lang/")
@@ -86,7 +86,9 @@ def name_colour(lang_code):
         print("No namer available for", lang_code)
         abort(404)
     colours = namer.colour_name([red, green, blue])
-    return jsonify(colours=colours, desc=render_template("match_description.html", colours=colours))
+    return jsonify(
+        colours=colours, desc=render_template("match_description.html", colours=colours)
+    )
 
 
 @bp.route("/submit_agreement", methods=["POST"])

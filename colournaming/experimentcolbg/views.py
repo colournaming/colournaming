@@ -36,9 +36,9 @@ def nocache(view):
     def func(*args, **kwargs):
         response = make_response(view(*args, **kwargs))
         response.headers["Last-Modified"] = datetime.now()
-        response.headers[
-            "Cache-Control"
-        ] = "no-store, no-cache, must-revalidate, post-check=0, pre-check=0, max-age=0"
+        response.headers["Cache-Control"] = (
+            "no-store, no-cache, must-revalidate, post-check=0, pre-check=0, max-age=0"
+        )
         response.headers["Pragma"] = "no-cache"
         response.headers["Expires"] = "-1"
         return response
@@ -69,7 +69,7 @@ def start():
         "response_count": 0,
         "background_id": background_id,
         "background_colour": background_colour,
-        "dark_font": dark_font
+        "dark_font": dark_font,
     }
     return redirect(url_for("experimentcolbg.display_properties"))
 
@@ -86,7 +86,9 @@ def display_properties():
             "screen_height": form.screen_height.data,
             "screen_colour_depth": form.screen_colour_depth.data,
         }
-        session["experiment"]["participant_id"] = controller.save_participant(session["experiment"])
+        session["experiment"]["participant_id"] = controller.save_participant(
+            session["experiment"]
+        )
         session.modified = True
         return redirect(url_for("experimentcolbg.colour_vision"))
     if form.errors:
@@ -94,7 +96,9 @@ def display_properties():
             print(field, error)
     return render_template(
         "display_properties.html",
-        background_colour=rgb_tuple_to_css_rgb(session["experiment"]["background_colour"]),
+        background_colour=rgb_tuple_to_css_rgb(
+            session["experiment"]["background_colour"]
+        ),
         dark_font=session["experiment"]["dark_font"],
         rtl=lang_is_rtl(get_locale()),
         form=form,
@@ -108,7 +112,9 @@ def colour_vision():
     form = forms.ColourVisionForm()
     if form.validate_on_submit():
         print("colour vision form validated")
-        session["experiment"]["vision"] = {"square_disappeared": form.square_disappeared.data}
+        session["experiment"]["vision"] = {
+            "square_disappeared": form.square_disappeared.data
+        }
         session.modified = True
         print(session)
         return redirect(url_for("experimentcolbg.name_colour"))
@@ -117,7 +123,9 @@ def colour_vision():
             print(field, error)
     return render_template(
         "colour_vision.html",
-        background_colour=rgb_tuple_to_css_rgb(session["experiment"]["background_colour"]),
+        background_colour=rgb_tuple_to_css_rgb(
+            session["experiment"]["background_colour"]
+        ),
         dark_font=session["experiment"]["dark_font"],
         form=form,
         rtl=lang_is_rtl(get_locale()),
@@ -146,7 +154,9 @@ def name_colour():
     return render_template(
         "name_colour.html",
         get_target_url=url_for("experimentcolbg.get_target"),
-        background_colour=rgb_tuple_to_css_rgb(session["experiment"]["background_colour"]),
+        background_colour=rgb_tuple_to_css_rgb(
+            session["experiment"]["background_colour"]
+        ),
         dark_font=session["experiment"]["dark_font"],
         form=form,
         rtl=lang_is_rtl(get_locale()),
@@ -161,7 +171,9 @@ def get_target():
         target = controller.get_random_target()
     except IndexError:
         abort(500, "No targets have been imported")
-    return jsonify({"id": target.id, "r": target.red, "g": target.green, "b": target.blue})
+    return jsonify(
+        {"id": target.id, "r": target.red, "g": target.green, "b": target.blue}
+    )
 
 
 @bp.route("/observer_information.html", methods=["GET", "POST"])
@@ -196,7 +208,9 @@ def observer_information():
     return render_template(
         "observer_information.html",
         form=form,
-        background_colour=rgb_tuple_to_css_rgb(session["experiment"]["background_colour"]),
+        background_colour=rgb_tuple_to_css_rgb(
+            session["experiment"]["background_colour"]
+        ),
         dark_font=session["experiment"]["dark_font"],
         rtl=lang_is_rtl(get_locale()),
     )
@@ -215,7 +229,9 @@ def thankyou():
     return render_template(
         "thankyou.html",
         top_namers=top_namers_msg,
-        background_colour=rgb_tuple_to_css_rgb(session["experiment"]["background_colour"]),
+        background_colour=rgb_tuple_to_css_rgb(
+            session["experiment"]["background_colour"]
+        ),
         dark_font=session["experiment"]["dark_font"],
         rtl=lang_is_rtl(get_locale()),
     )

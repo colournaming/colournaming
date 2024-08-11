@@ -22,7 +22,9 @@ def read_targets_from_file(targets_file):
 
 def get_random_target():
     """Get a random colour target."""
-    max_presentation_count = db.session.query(func.max(ColourTarget.presentation_count)).scalar()
+    max_presentation_count = db.session.query(
+        func.max(ColourTarget.presentation_count)
+    ).scalar()
     print("max_presentation_count =", max_presentation_count)
     targets = ColourTarget.query.filter(
         ColourTarget.presentation_count < max_presentation_count
@@ -65,7 +67,9 @@ def save_participant(experiment):
 def save_response(experiment, response):
     """Create a response record in the database."""
     print("saving response in experiment", experiment)
-    participant = Participant.query.filter(Participant.id == experiment["participant_id"]).one()
+    participant = Participant.query.filter(
+        Participant.id == experiment["participant_id"]
+    ).one()
     colour_response = ColourResponse(
         participant=participant,
         target_id=response["target_id"],
@@ -78,7 +82,9 @@ def save_response(experiment, response):
 
 def update_participant(experiment):
     print("trying to update", experiment)
-    participant = Participant.query.filter(Participant.id == experiment["participant_id"]).one()
+    participant = Participant.query.filter(
+        Participant.id == experiment["participant_id"]
+    ).one()
     for k in experiment["observer"]:
         if experiment["observer"][k] == "":
             experiment["observer"][k] = None

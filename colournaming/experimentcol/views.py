@@ -31,9 +31,9 @@ def nocache(view):
     def func(*args, **kwargs):
         response = make_response(view(*args, **kwargs))
         response.headers["Last-Modified"] = datetime.now()
-        response.headers[
-            "Cache-Control"
-        ] = "no-store, no-cache, must-revalidate, post-check=0, pre-check=0, max-age=0"
+        response.headers["Cache-Control"] = (
+            "no-store, no-cache, must-revalidate, post-check=0, pre-check=0, max-age=0"
+        )
         response.headers["Pragma"] = "no-cache"
         response.headers["Expires"] = "-1"
         return response
@@ -72,13 +72,17 @@ def display_properties():
             "screen_height": form.screen_height.data,
             "screen_colour_depth": form.screen_colour_depth.data,
         }
-        session["experiment"]["participant_id"] = controller.save_participant(session["experiment"])
+        session["experiment"]["participant_id"] = controller.save_participant(
+            session["experiment"]
+        )
         session.modified = True
         return redirect(url_for("experimentcol.colour_vision"))
     if form.errors:
         for field, error in form.errors.items():
             print(field, error)
-    return render_template("display_properties.html", rtl=lang_is_rtl(get_locale()), form=form)
+    return render_template(
+        "display_properties.html", rtl=lang_is_rtl(get_locale()), form=form
+    )
 
 
 @bp.route("/colour_vision.html", methods=["GET", "POST"])
@@ -88,7 +92,9 @@ def colour_vision():
     form = forms.ColourVisionForm()
     if form.validate_on_submit():
         print("colour vision form validated")
-        session["experiment"]["vision"] = {"square_disappeared": form.square_disappeared.data}
+        session["experiment"]["vision"] = {
+            "square_disappeared": form.square_disappeared.data
+        }
         session.modified = True
         print(session)
         return redirect(url_for("experimentcol.name_colour"))
@@ -96,9 +102,7 @@ def colour_vision():
         for field, error in form.errors.items():
             print(field, error)
     return render_template(
-        "colour_vision.html",
-        form=form,
-        rtl=lang_is_rtl(get_locale())
+        "colour_vision.html", form=form, rtl=lang_is_rtl(get_locale())
     )
 
 
@@ -138,7 +142,9 @@ def get_target():
         target = controller.get_random_target()
     except IndexError:
         abort(500, "No targets have been imported")
-    return jsonify({"id": target.id, "r": target.red, "g": target.green, "b": target.blue})
+    return jsonify(
+        {"id": target.id, "r": target.red, "g": target.green, "b": target.blue}
+    )
 
 
 @bp.route("/observer_information.html", methods=["GET", "POST"])
@@ -170,7 +176,9 @@ def observer_information():
     if form.errors:
         for field, error in form.errors.items():
             print(field, repr(getattr(form, field).data), error)
-    return render_template("observer_information.html", form=form, rtl=lang_is_rtl(get_locale()))
+    return render_template(
+        "observer_information.html", form=form, rtl=lang_is_rtl(get_locale())
+    )
 
 
 @bp.route("/thankyou.html")

@@ -36,7 +36,7 @@ def get_random_colour(colour_class, increment_presentation=True):
             max_presentation_count = 0
         targets = colour_class.query.filter(
             colour_class.presentation_count < max_presentation_count,
-            colour_class.id >= 0
+            colour_class.id >= 0,
         ).all()
         if len(targets) == 0:
             # will occur if all targets have been presented max times
@@ -50,9 +50,7 @@ def get_random_colour(colour_class, increment_presentation=True):
 
 def create_mturk_task(prolific_id, study_id, session_id):
     task = MturkAgeTask(
-        prolific_id=prolific_id,
-        study_id=study_id,
-        session_id=session_id
+        prolific_id=prolific_id, study_id=study_id, session_id=session_id
     )
     db.session.add(task)
     db.session.commit()

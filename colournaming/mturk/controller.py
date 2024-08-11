@@ -43,7 +43,9 @@ def read_backgrounds_from_file(targets_file, delete_existing=False):
 
 def get_random_colour(colour_class, increment_presentation=True):
     """Get a random colour target or background."""
-    max_presentation_count = db.session.query(func.max(colour_class.presentation_count)).scalar()
+    max_presentation_count = db.session.query(
+        func.max(colour_class.presentation_count)
+    ).scalar()
     if max_presentation_count is None:
         max_presentation_count = 0
     targets = colour_class.query.filter(
@@ -60,11 +62,7 @@ def get_random_colour(colour_class, increment_presentation=True):
 
 
 def create_mturk_task(prolific_id, study_id, session_id):
-    task = MturkTask(
-        prolific_id=prolific_id,
-        study_id=study_id,
-        session_id=session_id
-    )
+    task = MturkTask(prolific_id=prolific_id, study_id=study_id, session_id=session_id)
     db.session.add(task)
     db.session.commit()
     return task

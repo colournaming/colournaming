@@ -32,7 +32,6 @@ def rgb2lab(inputColor):
 
     num = 0
     for value in XYZ:
-
         if value > 0.008856:
             value = value ** (0.3333333333333333)
         else:

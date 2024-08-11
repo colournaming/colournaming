@@ -4,7 +4,12 @@ import csv
 import random
 from sqlalchemy.sql.expression import func
 from ..database import db
-from .model import BackgroundColour, ColourTargetColBG, ParticipantColBG, ColourResponseColBG
+from .model import (
+    BackgroundColour,
+    ColourTargetColBG,
+    ParticipantColBG,
+    ColourResponseColBG,
+)
 
 
 def read_targets_from_file(targets_file, delete_existing=False):

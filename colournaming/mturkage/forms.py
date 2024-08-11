@@ -48,7 +48,9 @@ class ObserverInformationForm(FlaskForm):
         description=lazy_gettext("To which gender do you most identify?"),
         validators=[Optional()],
     )
-    gender_other = StringField(description=lazy_gettext("Please specify"), validators=[Optional()])
+    gender_other = StringField(
+        description=lazy_gettext("Please specify"), validators=[Optional()]
+    )
     colour_experience = SelectField(
         choices=[
             ("", "-"),
@@ -68,7 +70,9 @@ class ObserverInformationForm(FlaskForm):
             ("bilingual", lazy_gettext("Bilingual")),
             ("native_speaker", lazy_gettext("Native speaker")),
         ],
-        description=lazy_gettext("Describe your skill in the language used in this experiment"),
+        description=lazy_gettext(
+            "Describe your skill in the language used in this experiment"
+        ),
         validators=[Optional()],
     )
     education_level = SelectField(
@@ -81,7 +85,9 @@ class ObserverInformationForm(FlaskForm):
             ("professional_degree", lazy_gettext("Professional degree")),
             ("doctorate_degree", lazy_gettext("Doctorate degree")),
         ],
-        description=lazy_gettext("What is the highest level of education you have completed?"),
+        description=lazy_gettext(
+            "What is the highest level of education you have completed?"
+        ),
         validators=[Optional()],
     )
     country_choices = [("", "-")] + sorted(
@@ -127,7 +133,9 @@ class ObserverInformationForm(FlaskForm):
             ("average", lazy_gettext("Average")),
             ("bright", lazy_gettext("Bright")),
         ],
-        description=lazy_gettext("Describe the surrounding environment behind your device"),
+        description=lazy_gettext(
+            "Describe the surrounding environment behind your device"
+        ),
         validators=[Optional()],
     )
     ambient_light = SelectField(
@@ -139,11 +147,15 @@ class ObserverInformationForm(FlaskForm):
             ("full_daylight", lazy_gettext("Full daylight")),
             ("typical_office", lazy_gettext("Typical office")),
         ],
-        description=lazy_gettext("Describe the lighting conditions of your environment"),
+        description=lazy_gettext(
+            "Describe the lighting conditions of your environment"
+        ),
         validators=[Optional()],
     )
     distance_choices = (
-        [(-1, "-")] + list(zip(range(10, 100, 10), range(10, 100, 10))) + [(999, "100+")]
+        [(-1, "-")]
+        + list(zip(range(10, 100, 10), range(10, 100, 10)))
+        + [(999, "100+")]
     )
     screen_distance = SelectField(
         choices=distance_choices,

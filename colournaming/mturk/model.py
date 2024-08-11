@@ -24,7 +24,9 @@ class MturkTask(db.Model):
     prolific_id = db.Column(db.String, default=None)
     study_id = db.Column(db.String, default=None)
     session_id = db.Column(db.String, default=None)
-    participant = db.relationship("MturkParticipantColBG", back_populates="task", uselist=False)
+    participant = db.relationship(
+        "MturkParticipantColBG", back_populates="task", uselist=False
+    )
 
 
 class MturkParticipantColBG(db.Model):
@@ -69,7 +71,9 @@ class MturkColourResponseColBG(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     participant_id = db.Column(db.Integer, db.ForeignKey("mturk_participants_colbg.id"))
-    participant = db.relationship("MturkParticipantColBG", backref=db.backref("responses"))
+    participant = db.relationship(
+        "MturkParticipantColBG", backref=db.backref("responses")
+    )
     target_id = db.Column(db.Integer, db.ForeignKey("colour_targets_colbg.id"))
     target = db.relationship("ColourTargetColBG")
     background_id = db.Column(db.Integer, db.ForeignKey("background_colour_colbg.id"))
