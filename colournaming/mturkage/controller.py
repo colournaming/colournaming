@@ -8,7 +8,7 @@ from sqlalchemy.sql.expression import func
 from colournaming.mturk.exceptions import MTurkIDNotFound
 from ..database import db
 from .model import MturkAgeTask, MturkAgeParticipant, MturkAgeColourResponse
-from ..experimentcolbg.model import ColourTargetColBG as ColourTarget
+from ..experimentcol.model import ColourTarget
 
 
 def read_targets_from_file(targets_file, delete_existing=False):
