@@ -28,20 +28,23 @@ def read_targets_from_file(targets_file, delete_existing=False):
 
 def get_random_colour(colour_class, increment_presentation=True):
     """Get a random colour target."""
-    max_presentation_count = db.session.query(func.max(colour_class.presentation_count)).scalar()
-    if max_presentation_count is None:
-        max_presentation_count = 0
-    targets = colour_class.query.filter(
-        colour_class.presentation_count < max_presentation_count,
-        colour_class.id >= 0
-    ).all()
-    if len(targets) == 0:
-        # will occur if all targets have been presented max times
-        targets = colour_class.query.all()
-    target = random.choice(targets)
-    if increment_presentation:
-        target.presentation_count += 1
-    db.session.commit()
+    with db.session.begin():
+        max_presentation_count = db.session.query(
+            func.max(colour_class.presentation_count)
+        ).scalar()
+        if max_presentation_count is None:
+            max_presentation_count = 0
+        targets = colour_class.query.filter(
+            colour_class.presentation_count < max_presentation_count,
+            colour_class.id >= 0
+        ).all()
+        if len(targets) == 0:
+            # will occur if all targets have been presented max times
+            targets = colour_class.query.all()
+        target = random.choice(targets)
+        if increment_presentation:
+            target.presentation_count += 1
+        db.session.commit()
     return random.choice(targets)
 
 

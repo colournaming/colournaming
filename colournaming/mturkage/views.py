@@ -48,7 +48,7 @@ def nocache(view):
     return update_wrapper(func, view)
 
 
-@bp.route("/")
+@bp.route("/start")
 def start():
     """Show the experiment start page."""
     try:
