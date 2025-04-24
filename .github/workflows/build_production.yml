@@ -31,14 +31,13 @@ jobs:
       - name: Install dependencies
         run: uv sync --locked --extra dev
       - name: Lint with flake8
-        run: flake8 colournaming
+        run: uv run flake8 colournaming
       - name: Initialise database
         run: uv run flask initdb
         env:
           FLASK_DEBUG: '1'
           COLOURNAMING_CFG: ${{ github.workspace }}/github.cfg
-      - 
-        name: Test with pytest
+      - name: Test with pytest
         run: uv run flask test
         env:
           FLASK_DEBUG: '1'
