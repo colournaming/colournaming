@@ -22,33 +22,23 @@ jobs:
           - 5432:5432
 
     steps:
-      - 
-        name: Checkout code
+      - name: Checkout code
         uses: actions/checkout@v4
-      - 
-        name: Setup python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.10'
-          cache: 'pip'
-      - 
-        name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip pip-tools
-          if [ -f requirements.txt ] && [ -f dev-requirements.txt ]; then pip-sync requirements.txt dev-requirements.txt; fi
-      - 
-        name: Lint with flake8
-        run: |
-          flake8 colournaming
-      - 
-        name: Initialise database
-        run: flask initdb
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+      - name: Setup python
+        run: uv python install
+      - name: Install dependencies
+        run: uv sync --locked --extra dev
+      - name: Lint with ruff
+        run: uv run ruff check colournaming
+      - name: Initialise database
+        run: uv run flask initdb
         env:
           FLASK_DEBUG: '1'
           COLOURNAMING_CFG: ${{ github.workspace }}/github.cfg
-      - 
-        name: Test with pytest
-        run: flask test
+      - name: Test with pytest
+        run: uv run flask test
         env:
           FLASK_DEBUG: '1'
           COLOURNAMING_CFG: ${{ github.workspace }}/github.cfg
@@ -56,20 +46,16 @@ jobs:
     runs-on: ubuntu-latest
     needs: test
     steps:
-      - 
-        name: Checkout code
+      - name: Checkout code
         uses: actions/checkout@v4
-      - 
-        name: Login to Docker Hub
+      - name: Login to Docker Hub
         uses: docker/login-action@v3
         with:
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
-      - 
-        name: Setup Docker Buildx
+      - name: Setup Docker Buildx
         uses: docker/setup-buildx-action@v3
-      -  
-        name: Build docker image
+      - name: Build docker image
         uses: docker/build-push-action@v5
         with:
           context: .
@@ -80,8 +66,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      -
-        name: Configure SSH
+      - name: Configure SSH
         run: |
           install -m 600 -D /dev/null ~/.ssh/id_rsa
           echo "${{ secrets.SSH_KEY }}" | base64 -d > ~/.ssh/id_rsa
