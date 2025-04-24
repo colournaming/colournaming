@@ -48,14 +48,10 @@ exclude = 'targets.py'
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 
-[tool.flake8]
-exclude = ".venv, venv"
-max-line-length = 100
-
 [project.optional-dependencies]
 dev = [
-    "flake8",
     "openpyxl",
     "black",
     "pyright",
+    "ruff>=0.11.6",
 ]
