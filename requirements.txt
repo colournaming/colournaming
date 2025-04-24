@@ -10,6 +10,8 @@ click==8.1.7
     # via
     #   -r requirements.in
     #   flask
+exceptiongroup==1.2.2
+    # via pytest
 flask==3.0.3
     # via
     #   -r requirements.in
@@ -27,8 +29,10 @@ flask-wtf==1.2.1
     # via -r requirements.in
 greenlet==3.0.3
     # via sqlalchemy
-gunicorn==22.0.0
+gunicorn==23.0.0
     # via -r requirements.in
+importlib-metadata==8.6.1
+    # via flask
 iniconfig==2.0.0
     # via pytest
 itsdangerous==2.2.0
@@ -64,6 +68,8 @@ sqlalchemy==1.4.52
     # via
     #   -r requirements.in
     #   flask-sqlalchemy
+tomli==2.2.1
+    # via pytest
 ua-parser==0.18.0
     # via user-agents
 user-agents==2.2.0
@@ -74,3 +80,5 @@ wtforms==3.1.2
     # via
     #   -r requirements.in
     #   flask-wtf
+zipp==3.21.0
+    # via importlib-metadata
