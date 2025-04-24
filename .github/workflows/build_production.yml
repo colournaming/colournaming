@@ -22,33 +22,24 @@ jobs:
           - 5432:5432
 
     steps:
-      - 
-        name: Checkout code
+      - name: Checkout code
         uses: actions/checkout@v4
-      - 
-        name: Setup python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.10'
-          cache: 'pip'
-      - 
-        name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip pip-tools
-          if [ -f requirements.txt ] && [ -f dev-requirements.txt ]; then pip-sync requirements.txt dev-requirements.txt; fi
-      - 
-        name: Lint with flake8
-        run: |
-          flake8 colournaming
-      - 
-        name: Initialise database
-        run: flask initdb
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+      - name: Setup python
+        run: uv python install
+      - name: Install dependencies
+        run: uv sync --locked --extra dev
+      - name: Lint with flake8
+        run: flake8 colournaming
+      - name: Initialise database
+        run: uv run flask initdb
         env:
           FLASK_DEBUG: '1'
           COLOURNAMING_CFG: ${{ github.workspace }}/github.cfg
       - 
         name: Test with pytest
-        run: flask test
+        run: uv run flask test
         env:
           FLASK_DEBUG: '1'
           COLOURNAMING_CFG: ${{ github.workspace }}/github.cfg

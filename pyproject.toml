@@ -1,3 +1,61 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "colournaming"
+dynamic = ["version"]
+description = "An online colour naming experiment"
+authors = [
+    {name = "Jon Stutters", email = "jstutters@jeremah.co.uk"}
+]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = "3.13"
+classifiers = []
+dependencies = [
+    "flask_wtf",
+    "wtforms",
+    "flask",
+    "flask_sqlalchemy",
+    "flask_mail",
+    "sqlalchemy<2.0",
+    "flask_babel",
+    "pycountry",
+    "click",
+    "numpy",
+    "gunicorn",
+    "user-agents",
+    "psycopg2-binary",
+    "pytest",
+]
+
+[project.urls]
+homepage = "https://colornaming.net"
+
+[tool.setuptools]
+packages = {find = {exclude = ["tests"]}}
+include-package-data = true
+zip-safe = true
+
+[tool.setuptools.dynamic]
+version = {file = "colournaming/VERSION"}
+
 [tool.black]
-line-length=100
+line-length = 100
 exclude = 'targets.py'
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.flake8]
+exclude = ".venv, venv"
+max-line-length = 100
+
+[project.optional-dependencies]
+dev = [
+    "flake8",
+    "openpyxl",
+    "black",
+    "pyright",
+]
