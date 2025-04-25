@@ -10,12 +10,11 @@ USER colournaming
 ENV FLASK_APP /app/app.py
 COPY pyproject.toml /app
 COPY uv.lock /app
-COPY colournaming /app
-COPY colournaming /app
+COPY colournaming /app/colournaming
 COPY app.py /app
 COPY tests /app
 COPY docker.cfg /app
 WORKDIR /app
-RUN uv sync --locked
+RUN uv python install 3.13 && uv sync --locked
 ENTRYPOINT ["uv", "run", "flask"]
 CMD ["run"]
