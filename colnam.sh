@@ -13,17 +13,21 @@ Help()
 
 ImportTargets()
 {
+	echo "Importing centroids"
 	docker compose run --rm web import-centroids docs/dataset_en.csv English en
+	echo "Importing colour targets"
 	docker compose run --rm web import-col-targets targets.csv
-	docker compose run --rm web import-colbg-targets colbg_targets.csv
-	docker compose run --rm web import-colbg-backgrounds colbg_targets.csv
+	echo "Importing colour background targets"
+	docker compose run --rm web import-colbg-targets colbg_fg_targets.csv
+	echo "Importing colour background backgrounds"
+	docker compose run --rm web import-colbg-backgrounds colbg_bg_targets.csv
 }
 
 
 Up()
 {
 	# Bring up test setup
-    	docker compose build
+	docker compose build
 	docker compose up -d postgres
 	docker compose run --rm web initdb
 	ImportTargets
@@ -34,14 +38,14 @@ Reinit()
 {
 	# Reinitialize the database
 	docker compose run --rm web dropdb
-    	docker compose run --rm web initdb
+	docker compose run --rm web initdb
 	ImportTargets
 }
 
 Down()
 {
 	# Tear down test setup
-   	docker compose down
+   	docker compose down -v
 }
 
 if [[ $# != 1 ]]; then
@@ -49,21 +53,21 @@ if [[ $# != 1 ]]; then
       exit 1
 fi
 
-while getopts ":hurd:" option; do
+while getopts ":hurd" option; do
       case $option in
-      	   h) # display help
+		h) # display help
 	      Help
 	      exit;;
-	   u) # bring up test setup
+	    u) # bring up test setup
 	      Up
 	      exit;;
-	   r) # reinitialize databse
+	    r) # reinitialize databse
 	      Reinit
 	      exit;;
-	   d) # tear down test setup
+	    d) # tear down test setup
 	      Down
 	      exit;;
-	   \?) # Invalid option
+	    \?) # Invalid option
 	      echo "Error: Invalid argument"
 	      exit 1;;
       esac

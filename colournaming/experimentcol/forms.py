@@ -169,6 +169,6 @@ class ColourVisionForm(FlaskForm):
 class ColourNameForm(FlaskForm):
     """Form for recording a colour name response."""
 
-    name = StringField(validators=[DataRequired()])
+    name = StringField(validators=[DataRequired()], render_kw={"autocomplete": "off", "autocorrect": "off", "autocapitalize": "off", "spellcheck": "false"})
     target_id = IntegerField(validators=[DataRequired()])
     response_time = DecimalField()

@@ -1,21 +1,43 @@
-version: '3.3'
-
 services:
-    web:
-        build: .
-        image: colournaming
-        ports:
-        - "5000:5000"
-        environment:
-        - COLOURNAMING_CFG=/app/docker.cfg
-        - PYTHONPATH=/app
-        - FLASK_DEBUG=1
-        command: run -h 0.0.0.0 -p 5000
-        volumes:
-        - .:/app
-    postgres:
-        image: "postgres"
-        ports:
-        - "5432:5432"
-        environment:
-        - POSTGRES_PASSWORD=testpass
+  web:
+    build: 
+      context: .
+    image: colournaming
+    ports:
+      - "5000:5000"
+    environment:
+      COLOURNAMING_CFG: /app/docker.cfg
+      PYTHONPATH: /app
+      FLASK_DEBUG: 1
+    command: run -h 0.0.0.0 -p 5000
+    volumes:
+      - ./:/app
+    depends_on:
+      - postgres
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  postgres:
+    image: postgres:latest
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_PASSWORD: testpass
+      POSTGRES_USER: postgres
+      POSTGRES_DB: colournaming
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  postgres_data:

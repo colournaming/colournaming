@@ -1,21 +1,20 @@
-FROM python:3.10
+FROM python:3.13-slim-bookworm
+COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
 ENV PYTHONUNBUFFERED 1
-COPY requirements.txt /tmp/
-RUN pip install pip==21.0.1 && pip install wheel pip-tools
-RUN pip-sync /tmp/requirements.txt
-COPY colournaming /app/colournaming
-COPY app.py /app
-COPY tests /app/tests
-COPY docker.cfg /app
+RUN mkdir /app
 RUN adduser --disabled-password -gecos '' colournaming && \
     chown -R colournaming /app && \
-    chown colournaming /app/docker.cfg /app/app.py && \
-    find /app -type d -exec chmod 555 {} \; && \
-    find /app -type f -exec chmod 444 {} \; && \
     touch /app/colournaming.log && \
     chmod 666 /app/colournaming.log
-ENV FLASK_APP /app/app.py
-WORKDIR /app
-ENTRYPOINT ["/usr/local/bin/flask"]
 USER colournaming
+ENV FLASK_APP /app/app.py
+COPY pyproject.toml /app
+COPY uv.lock /app
+COPY colournaming /app/colournaming
+COPY app.py /app
+COPY tests /app
+COPY docker.cfg /app
+WORKDIR /app
+RUN uv python install 3.13 && uv sync --locked
+ENTRYPOINT ["uv", "run", "flask"]
 CMD ["run"]
