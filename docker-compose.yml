@@ -21,6 +21,24 @@ services:
       timeout: 10s
       retries: 3
       start_period: 40s
+    networks:
+      - frontend
+      - backend
+
+  matomo:
+    image: matomo:latest
+    ports:
+      - "8080:80"
+    environment:
+      MATOMO_DATABASE_HOST: mariadb
+      MATOMMO_DATABASE_USERNAME: matomo
+      MATOMO_DATABASE_PASSWORD: 1ihaohvcg13t1
+      MTOMO_DATABASE_DBNAME: matomo
+    volumes:
+      - matomo_www_data:/var/www/html
+    networks:
+      - frontend
+      - backend
 
   postgres:
     image: postgres:latest
@@ -38,6 +56,26 @@ services:
       interval: 10s
       timeout: 5s
       retries: 5
+    networks:
+      - backend
+
+  mariadb:
+    image: mariadb:latest
+    environment:
+      MARIADB_ROOT_PASSWORD: hofihao14g24
+      MARIADB_USER: matomo
+      MARIADB_PASSWORD: 1ihaohvcg13t1
+      MARIADB_DATABASE: matomo
+    volumes:
+      - mariadb_data:/var/lib/mysql
+    networks:
+      - backend
+
+networks:
+  frontend:
+  backend:
 
 volumes:
   postgres_data:
+  mariadb_data:
+  matomo_www_data:
