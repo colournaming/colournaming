@@ -31,9 +31,9 @@ services:
       - "8080:80"
     environment:
       MATOMO_DATABASE_HOST: mariadb
-      MATOMMO_DATABASE_USERNAME: matomo
+      MATOMO_DATABASE_USERNAME: matomo
       MATOMO_DATABASE_PASSWORD: 1ihaohvcg13t1
-      MTOMO_DATABASE_DBNAME: matomo
+      MATOMO_DATABASE_DBNAME: matomo
     volumes:
       - matomo_www_data:/var/www/html
     networks:
