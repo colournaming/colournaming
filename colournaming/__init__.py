@@ -172,4 +172,4 @@ def make_colour_namers(app):
 
 
 def lang_is_rtl(locale):
-    return locale.language in ("ar", "he", "ckb", "fa", "ur")
+    return locale.language in ("ar", "he", "ckb", "fa", "ur", "sd")
