@@ -380,7 +380,7 @@ msgid ""
 "there are no known risks to participants. The purpose of this research "
 "study is to improve colour communication in multilingual environments. "
 "Please feel free to contact the principal investigator <a "
-"href=\"mailto:dimitris.mylonas[at]nchlondon.ac.uk\">Dimitris Mylonas</a> "
+"href=\"mailto:dimitris.mylonas[at]nulondon.ac.uk\">Dimitris Mylonas</a> "
 "if you have any questions."
 msgstr "Брати участь у нашого експерименті цілком безпечно, та на думку багатьох учасників, цікаво. Метою цього дослідження є покращення колірної комунікації в багатомовному середовищі. Якщо у Вас виникли будь-які запитання, будь ласка, зв’яжіться з нашим провідним дослідником <a href=\"mailto:d.mylonas[at]ucl.ac.uk\">Дімітрісом Мілонас</a>."
 

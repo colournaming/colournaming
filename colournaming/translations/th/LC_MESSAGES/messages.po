@@ -380,9 +380,9 @@ msgid ""
 "there are no known risks to participants. The purpose of this research "
 "study is to improve colour communication in multilingual environments. "
 "Please feel free to contact the principal investigator <a "
-"href=\"mailto:dimitris.mylonas[at]nchlondon.ac.uk\">Dimitris Mylonas</a> "
+"href=\"mailto:dimitris.mylonas[at]nulondon.ac.uk\">Dimitris Mylonas</a> "
 "if you have any questions."
-msgstr "หลายท่านอาจพบว่าการระบุคำเรียกสีในการศึกษาครั้งนี้มีความสนุกและเราเชื่อว่าไม่มีความเสี่ยงใดในการเข้าร่วม จุดประสงค์ของการวิจัยครั้งนี้เพื่อปรับปรุงการสื่อสารสีในหลากหลายภาษา หากมีข้อสงสัยสอบถามผู้วิจัยได้ที่  <a href=\"mailto:dimitris.mylonas[at]nchlondon.ac.uk\">Dimitris Mylonas</a>"
+msgstr "หลายท่านอาจพบว่าการระบุคำเรียกสีในการศึกษาครั้งนี้มีความสนุกและเราเชื่อว่าไม่มีความเสี่ยงใดในการเข้าร่วม จุดประสงค์ของการวิจัยครั้งนี้เพื่อปรับปรุงการสื่อสารสีในหลากหลายภาษา หากมีข้อสงสัยสอบถามผู้วิจัยได้ที่  <a href=\"mailto:dimitris.mylonas[at]nulondon.ac.uk\">Dimitris Mylonas</a>"
 
 #: colournaming/templates/index.html:40
 msgid ""
