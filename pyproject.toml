@@ -28,7 +28,7 @@ dependencies = [
     "user-agents",
     "psycopg2-binary",
     "pytest",
-    "greenlet >= 3.0.3",
+    "greenlet >= 3.3.0",
 ]
 
 [project.urls]
