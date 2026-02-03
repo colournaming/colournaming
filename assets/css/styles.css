@@ -147,7 +147,9 @@ h3 ~ .justified-text {
 }
 
 .round-button-2 {
-    background-color: rgb(51, 48, 186);
+    background-image: url(../images/colourful_button.png);
+    background-size: 220%;
+    background-position: center;
 }
 
 .round-button-1 {
