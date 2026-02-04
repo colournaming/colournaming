@@ -222,6 +222,8 @@ color_id,R,G,B,Label
 221,83,0,255,Splus
 222,171,255,0,Sminus
 223,255,0,36,Lplus
+-1,128,128,128,grey
 224,0,255,219,Lminus
 225,0,255,165,Mplus
 226,255,0,90,Mminus
+
