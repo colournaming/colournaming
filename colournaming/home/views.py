@@ -7,6 +7,7 @@ from flask import (
     request,
     session,
     redirect,
+    send_from_directory,
     url_for,
 )
 from flask_babel import get_locale
@@ -56,6 +57,14 @@ def index():
         interface_language=session.get("interface_language", "en"),
         current_language=current_language,
         rtl=lang_is_rtl(get_locale()),
+    )
+
+
+@bp.route("robots.txt")
+def robots():
+    """Serve robots.txt from the domain root."""
+    return send_from_directory(
+        current_app.static_folder, "robots.txt", mimetype="text/plain"
     )
 
 
