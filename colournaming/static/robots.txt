@@ -1,0 +1,65 @@
+# robots.txt for colornaming.net (Colour Spinner demo served under /spinner)
+#
+# This file is served at the domain root (https://colornaming.net/robots.txt) —
+# that is the only location crawlers consult. All paths below are therefore
+# written relative to the root and include the /spinner prefix.
+#
+# The dynamic endpoints below each fan out into several backend renders
+# (mapper / profiler / thesaurus / translation) and emit large SVG payloads.
+# Crawling permutations of them is the main driver of outbound traffic, so we
+# ask well-behaved bots to stay off them and to crawl the rest slowly.
+
+User-agent: *
+Crawl-delay: 10
+Disallow: /spinner/colour
+Disallow: /spinner/colour_rgb
+Disallow: /spinner/colour_properties
+Disallow: /spinner/color_picker
+Disallow: /spinner/predict
+Disallow: /spinner/thesaurus
+Disallow: /spinner/translation
+Disallow: /spinner/space
+Disallow: /spinner/space_to_rgb
+Disallow: /spinner/simulate
+# Experiment and MTurk flows are interactive, session-driven survey pages
+# with no SEO value (and JSON target endpoints that fan out per request).
+Disallow: /experimentcol/
+Disallow: /experimentcolbg/
+Disallow: /mturk/
+Disallow: /mturkage/
+# Dynamic namer endpoints: per-colour lookups, naming, audio and JSON that
+# expand into large permutations the same way the /spinner endpoints do.
+Disallow: /namer/lang/
+Disallow: /namer/colours
+Disallow: /namer/name
+Disallow: /namer/audiolist
+Disallow: /namer/interface
+Disallow: /namer/submit_agreement
+# Language-switch redirects are crawl traps (one URL per ?lang= value).
+Disallow: /lang/
+Disallow: /interface_language
+
+# Block the most aggressive AI/scraper bots from the app entirely.
+User-agent: GPTBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
