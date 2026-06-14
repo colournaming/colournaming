@@ -25,7 +25,7 @@
   },
   "homepage": "https://github.com/colournaming/colournaming#readme",
   "devDependencies": {
-    "esbuild": "^0.25.0"
+    "esbuild": "^0.28.1"
   },
   "dependencies": {
     "jquery": "^3.6.0",
