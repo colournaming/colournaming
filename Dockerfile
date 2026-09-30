@@ -13,7 +13,7 @@ RUN addgroup --gid ${GROUP_ID} colournaming && \
     touch /app/colournaming.log && \
     chmod 666 /app/colournaming.log
 USER colournaming
-ENV FLASK_APP /app/app.py
+ENV FLASK_APP=/app/app.py
 COPY pyproject.toml /app
 COPY uv.lock /app
 COPY colournaming /app/colournaming
