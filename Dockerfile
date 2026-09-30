@@ -1,6 +1,6 @@
 FROM python:3.13-slim-bookworm
 COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
-ENV PYTHONUNBUFFERED 1
+ENV PYTHONUNBUFFERED=1
 
 # Accept UID and GID as build arguments (default to 1000 if not provided)
 ARG USER_ID=1000
