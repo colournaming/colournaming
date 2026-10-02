@@ -63,7 +63,8 @@ def start():
 @bp.route("/display_properties.html", methods=["GET", "POST"])
 def display_properties():
     """Show the display properties form and handle responses."""
-    check_in_experiment()
+    if (response := check_in_experiment()) is not None:
+        return response
     form = forms.DisplayForm()
     if form.validate_on_submit():
         session["experiment"]["display"] = {
@@ -84,7 +85,8 @@ def display_properties():
 @bp.route("/colour_vision.html", methods=["GET", "POST"])
 def colour_vision():
     """Show the colour vision test and handle responses."""
-    check_in_experiment()
+    if (response := check_in_experiment()) is not None:
+        return response
     form = forms.ColourVisionForm()
     if form.validate_on_submit():
         print("colour vision form validated")
@@ -105,7 +107,8 @@ def colour_vision():
 @bp.route("/name_colour.html", methods=["GET", "POST"])
 def name_colour():
     """Show the name colour form and handle responses."""
-    check_in_experiment()
+    if (response := check_in_experiment()) is not None:
+        return response
     form = forms.ColourNameForm()
     if form.validate_on_submit():
         controller.save_response(
@@ -144,7 +147,8 @@ def get_target():
 @bp.route("/observer_information.html", methods=["GET", "POST"])
 def observer_information():
     """Show the observer information form and handle responses."""
-    check_in_experiment()
+    if (response := check_in_experiment()) is not None:
+        return response
     form = forms.ObserverInformationForm()
     if form.validate_on_submit():
         print("observer information form validated")
