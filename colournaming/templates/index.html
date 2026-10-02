@@ -382,6 +382,9 @@
             <a href="#contact">{{ _('Contact') }}</a>
         </h2>
         <p class="justified-text">{{ _('Please use the following communication form to give us your feedback and comments or if you wish to inform you about the results of this research.') }}</p>
+        {% if contact_error %}
+        <p class="justified-text" role="alert">{{ _('Sorry, your message could not be sent. Please try again later.') }}</p>
+        {% endif %}
         <form id='contact_form' method="post">
             {{ contact_form.csrf_token }}
             {{ contact_form.first_name.label(for='first_name') }}

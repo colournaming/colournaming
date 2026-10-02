@@ -26,6 +26,7 @@ def index():
     """Render the front page."""
     contact_form = ContactForm()
     name_agreement_form = NameAgreementForm()
+    contact_error = False
     if contact_form.validate_on_submit():
         msg = Message(
             "ColourNamer message from {0} {1}".format(
@@ -42,7 +43,11 @@ def index():
             contact_form.message.data,
         )
         msg.body = msg_text
-        mail.send(msg)
+        try:
+            mail.send(msg)
+        except OSError:
+            current_app.logger.exception("Failed to send contact form message")
+            contact_error = True
     try:
         current_language = request.accept_languages[0][0].split("-")[0]
     except IndexError:
@@ -52,6 +57,7 @@ def index():
         "index.html",
         contact_form=contact_form,
         name_agreement_form=name_agreement_form,
+        contact_error=contact_error,
         languages=namer_controller.language_list(),
         interface_languages=current_app.config["LANGUAGES"],
         interface_language=session.get("interface_language", "en"),
