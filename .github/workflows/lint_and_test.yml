@@ -40,6 +40,8 @@ jobs:
         run: uv python install
       - name: Install dependencies
         run: uv sync --locked --extra dev
+      - name: Install Playwright browser
+        run: uv run playwright install --with-deps chromium
       - name: Lint with ruff
         run: uv run ruff check colournaming
       - name: Initialise database
