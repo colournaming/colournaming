@@ -192,6 +192,15 @@ def test_pages_render_with_background(client, backgrounds, page):
     assert rgb_tuple_to_css_rgb(colour).encode() in rv.data
 
 
+@pytest.mark.parametrize("answer, expected", [("yes", True), ("no", False), ("-", None)])
+def test_colour_vision_answers(client, backgrounds, answer, expected):
+    client.get("/experimentcolbg/")
+    rv = client.post("/experimentcolbg/colour_vision.html", data={"square_disappeared": answer})
+    assert rv.headers["Location"].endswith("/experimentcolbg/name_colour.html")
+    with client.session_transaction() as sess:
+        assert sess["experiment"]["vision"]["square_disappeared"] is expected
+
+
 def test_full_experiment(client, colbg_targets, backgrounds):
     client.get("/experimentcolbg/")
     with client.session_transaction() as sess:
@@ -199,7 +208,7 @@ def test_full_experiment(client, colbg_targets, backgrounds):
 
     rv = client.post("/experimentcolbg/display_properties.html", data=DISPLAY_FORM)
     assert rv.headers["Location"].endswith("/experimentcolbg/colour_vision.html")
-    rv = client.post("/experimentcolbg/colour_vision.html", data={})
+    rv = client.post("/experimentcolbg/colour_vision.html", data={"square_disappeared": "no"})
     assert rv.headers["Location"].endswith("/experimentcolbg/name_colour.html")
     rv = client.post(
         "/experimentcolbg/name_colour.html",
