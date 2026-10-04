@@ -7,7 +7,7 @@ import math
 import numpy as np
 import os
 from flask import current_app
-from sqlalchemy.orm.exc import NoResultFound
+from sqlalchemy.exc import NoResultFound
 from ..database import db
 from .model import ColourCentroid, Language
 
@@ -21,8 +21,10 @@ class ColourNamer:
     @staticmethod
     def load_data(language_code):
         """Load colour centroid data from the database."""
-        lang = Language.query.filter(Language.code == language_code).one()
-        centroids = ColourCentroid.query.filter(ColourCentroid.language == lang).all()
+        lang = db.session.scalars(db.select(Language).where(Language.code == language_code)).one()
+        centroids = db.session.scalars(
+            db.select(ColourCentroid).where(ColourCentroid.language == lang)
+        ).all()
         data = []
         for c in centroids:
             mu = np.array([c.m_L, c.m_a, c.m_b])
@@ -156,13 +158,15 @@ class ColourNamer:
 
 def language_list():
     """Get a list of all known languages."""
-    languages = Language.query.all()
+    languages = db.session.scalars(db.select(Language)).all()
     return [{"name": language.name, "code": language.code} for language in languages]
 
 
 def colour_list(language):
     """Get a list of all known colours in a given language."""
-    colours = ColourCentroid.query.filter(ColourCentroid.language == language).all()
+    colours = db.session.scalars(
+        db.select(ColourCentroid).where(ColourCentroid.language == language)
+    ).all()
     colour_list = []
     for c in colours:
         cdict = {
@@ -201,7 +205,7 @@ def read_centroids_from_file(f, language_name, language_code):
     """Import colour centroids from a file to the database."""
     col_csv = csv.DictReader(f)
     try:
-        lang = Language.query.filter(Language.code == language_code).one()
+        lang = db.session.scalars(db.select(Language).where(Language.code == language_code)).one()
     except NoResultFound:
         lang = Language(name=language_name, code=language_code)
         db.session.add(lang)

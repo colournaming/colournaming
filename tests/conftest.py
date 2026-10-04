@@ -49,6 +49,7 @@ def app():
     with app.app_context():
         db.session.remove()
         db.drop_all()
+        db.engine.dispose()
 
 
 @pytest.fixture(autouse=True)

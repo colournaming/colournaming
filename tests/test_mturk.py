@@ -4,6 +4,7 @@ import io
 
 import pytest
 
+from colournaming.database import db
 from colournaming.experimentcolbg.model import BackgroundColour
 from colournaming.mturk import controller
 from colournaming.mturk.exceptions import MTurkIDNotFound
@@ -112,7 +113,7 @@ def test_save_participant_response_and_update(colbg_targets, backgrounds):
     controller.update_participant(experiment)
     participant = MturkParticipantColBG.query.one()
     assert participant.gender_other == "nb"
-    assert BackgroundColour.query.get(1).presentation_count == 1
+    assert db.session.get(BackgroundColour, 1).presentation_count == 1
 
 
 # --- views --------------------------------------------------------------------------------------

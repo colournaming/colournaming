@@ -2,7 +2,7 @@ import io
 
 import pytest
 
-from colournaming.database import AmbientLight, Device, Gender
+from colournaming.database import AmbientLight, Device, Gender, db
 from colournaming.experimentcol import controller
 from colournaming.experimentcol.model import ColourResponse, ColourTarget, Participant
 from helpers import DISPLAY_FORM, OBSERVER_FORM
@@ -84,7 +84,7 @@ def test_response_count_percentage(col_targets):
 
 def test_save_participant_creates_record():
     participant_id = controller.save_participant(make_experiment())
-    p = Participant.query.get(participant_id)
+    p = db.session.get(Participant, participant_id)
     assert p.browser_language == "en-GB"
     assert p.interface_language == "en"
     assert p.user_agent == "ua"
@@ -116,7 +116,7 @@ def test_update_participant():
     experiment["observer"] = observer_data()
     experiment["vision"] = {"square_disappeared": True}
     controller.update_participant(experiment)
-    p = Participant.query.get(experiment["participant_id"])
+    p = db.session.get(Participant, experiment["participant_id"])
     assert p.age == 35
     assert p.gender == Gender.female
     assert p.ambient_light == AmbientLight.dark
