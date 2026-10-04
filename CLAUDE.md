@@ -89,6 +89,12 @@ uv run pytest
 uv run flask test
 ```
 
+The tests in `tests/integration/` drive each experiment from start to finish in a browser with Playwright and check what is stored in the database. They need Chromium, which is installed with:
+
+```bash
+uv run playwright install chromium
+```
+
 Tests require a PostgreSQL database. In CI, the database configuration is set via the `COLOURNAMING_CFG` environment variable pointing to `github.cfg`.
 
 ## Code Quality

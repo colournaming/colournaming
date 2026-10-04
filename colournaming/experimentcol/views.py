@@ -20,10 +20,16 @@ from .. import lang_is_rtl
 bp = Blueprint("experimentcol", __name__)
 
 
-def check_in_experiment():
+def experiment_required(view):
     """Redirect to the start of the experiment if the session is not initialized."""
-    if "experiment" not in session:
-        return redirect(url_for("experimentcol.start"))
+
+    @wraps(view)
+    def func(*args, **kwargs):
+        if "experiment" not in session:
+            return redirect(url_for("experimentcol.start"))
+        return view(*args, **kwargs)
+
+    return func
 
 
 def nocache(view):
@@ -61,10 +67,9 @@ def start():
 
 
 @bp.route("/display_properties.html", methods=["GET", "POST"])
+@experiment_required
 def display_properties():
     """Show the display properties form and handle responses."""
-    if (response := check_in_experiment()) is not None:
-        return response
     form = forms.DisplayForm()
     if form.validate_on_submit():
         session["experiment"]["display"] = {
@@ -83,14 +88,19 @@ def display_properties():
 
 
 @bp.route("/colour_vision.html", methods=["GET", "POST"])
+@experiment_required
 def colour_vision():
     """Show the colour vision test and handle responses."""
-    if (response := check_in_experiment()) is not None:
-        return response
     form = forms.ColourVisionForm()
     if form.validate_on_submit():
         print("colour vision form validated")
-        session["experiment"]["vision"] = {"square_disappeared": form.square_disappeared.data}
+        if form.square_disappeared.data == "yes":
+            square_disappeared = True
+        elif form.square_disappeared.data == "no":
+            square_disappeared = False
+        else:
+            square_disappeared = None
+        session["experiment"]["vision"] = {"square_disappeared": square_disappeared}
         session.modified = True
         print(session)
         return redirect(url_for("experimentcol.name_colour"))
@@ -105,10 +115,9 @@ def colour_vision():
 
 
 @bp.route("/name_colour.html", methods=["GET", "POST"])
+@experiment_required
 def name_colour():
     """Show the name colour form and handle responses."""
-    if (response := check_in_experiment()) is not None:
-        return response
     form = forms.ColourNameForm()
     if form.validate_on_submit():
         controller.save_response(
@@ -145,10 +154,9 @@ def get_target():
 
 
 @bp.route("/observer_information.html", methods=["GET", "POST"])
+@experiment_required
 def observer_information():
     """Show the observer information form and handle responses."""
-    if (response := check_in_experiment()) is not None:
-        return response
     form = forms.ObserverInformationForm()
     if form.validate_on_submit():
         print("observer information form validated")

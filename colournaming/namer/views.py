@@ -10,7 +10,7 @@ from flask import (
     render_template,
     session,
 )
-from sqlalchemy.orm.exc import NoResultFound
+from sqlalchemy.exc import NoResultFound
 from ..database import db
 from .model import Language, NameAgreement
 from .forms import NameAgreementForm
@@ -31,7 +31,7 @@ def languages():
 def colours(lang_code):
     """List colours known for a language."""
     try:
-        lang = Language.query.filter(Language.code == lang_code).one()
+        lang = db.session.scalars(db.select(Language).where(Language.code == lang_code)).one()
     except NoResultFound:
         abort(404)
     return jsonify(controller.colour_list(lang))
@@ -40,7 +40,7 @@ def colours(lang_code):
 @bp.route("/lang/<lang_code>/colours/<colour>")
 def rgb_from_colour(lang_code, colour):
     try:
-        lang = Language.query.filter(Language.code == lang_code).one()
+        lang = db.session.scalars(db.select(Language).where(Language.code == lang_code)).one()
     except NoResultFound:
         abort(404)
     colours = controller.colour_list(lang)
@@ -102,7 +102,9 @@ def submit_agreement():
     )
     if form.validate_on_submit():
         print("name agreeement form is valid")
-        lang = Language.query.filter(Language.code == form.language_code.data).one()
+        lang = db.session.scalars(
+            db.select(Language).where(Language.code == form.language_code.data)
+        ).one()
         agreement = NameAgreement(
             language=lang,
             red=form.red.data,

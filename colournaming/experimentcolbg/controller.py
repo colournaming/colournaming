@@ -10,7 +10,7 @@ from .model import BackgroundColour, ColourTargetColBG, ParticipantColBG, Colour
 def read_targets_from_file(targets_file, delete_existing=False):
     """Read colour targets from file."""
     if delete_existing:
-        ColourTargetColBG.query.delete()
+        db.session.execute(db.delete(ColourTargetColBG))
     targets_csv = csv.DictReader(targets_file)
     for t in targets_csv:
         id = int(t["color_id"])
@@ -26,7 +26,7 @@ def read_backgrounds_from_file(targets_file, delete_existing=False):
     """Read colour backgrounds from file."""
     targets_csv = csv.DictReader(targets_file)
     if delete_existing:
-        BackgroundColour.query.delete()
+        db.session.execute(db.delete(BackgroundColour))
     for t in targets_csv:
         id = int(t["bg_id"])
         red = int(t["R"])
@@ -39,34 +39,40 @@ def read_backgrounds_from_file(targets_file, delete_existing=False):
 
 def get_random_target():
     """Get a random colour target."""
-    max_presentation_count = db.session.query(
-        func.max(ColourTargetColBG.presentation_count)
-    ).scalar()
-    print("max_presentation_count =", max_presentation_count)
-    targets = ColourTargetColBG.query.filter(
-        ColourTargetColBG.presentation_count < max_presentation_count
+    max_presentation_count = db.session.scalar(
+        db.select(func.max(ColourTargetColBG.presentation_count))
+    )
+    if max_presentation_count is None:
+        max_presentation_count = 0
+    targets = db.session.scalars(
+        db.select(ColourTargetColBG).where(
+            ColourTargetColBG.presentation_count < max_presentation_count
+        )
     ).all()
     if len(targets) == 0:
         # will occur if all targets have been presented max times
-        targets = ColourTargetColBG.query.all()
+        targets = db.session.scalars(db.select(ColourTargetColBG)).all()
     target = random.choice(targets)
     target.presentation_count += 1
     db.session.commit()
-    return random.choice(targets)
+    return target
 
 
 def get_random_background():
     """Get a random colour background."""
-    max_presentation_count = db.session.query(
-        func.max(BackgroundColour.presentation_count)
-    ).scalar()
-    print("max_presentation_count =", max_presentation_count)
-    targets = BackgroundColour.query.filter(
-        BackgroundColour.presentation_count < max_presentation_count
+    max_presentation_count = db.session.scalar(
+        db.select(func.max(BackgroundColour.presentation_count))
+    )
+    if max_presentation_count is None:
+        max_presentation_count = 0
+    targets = db.session.scalars(
+        db.select(BackgroundColour).where(
+            BackgroundColour.presentation_count < max_presentation_count
+        )
     ).all()
     if len(targets) == 0:
         # will occur if all targets have been presented max times
-        targets = BackgroundColour.query.all()
+        targets = db.session.scalars(db.select(BackgroundColour)).all()
     target = random.choice(targets)
     db.session.commit()
     return target.id, (target.red, target.green, target.blue)
@@ -74,7 +80,7 @@ def get_random_background():
 
 def response_count_percentage(this_count):
     """Get the percentage of participants with response counts less than a participant's."""
-    num_targets = db.session.query(ColourTargetColBG.id).count()
+    num_targets = db.session.scalar(db.select(func.count(ColourTargetColBG.id)))
     return (this_count / num_targets) * 100.0
 
 
@@ -101,8 +107,8 @@ def save_participant(experiment):
 def save_response(experiment, response):
     """Create a response record in the database."""
     print("saving response in experiment", experiment)
-    participant = ParticipantColBG.query.filter(
-        ParticipantColBG.id == experiment["participant_id"]
+    participant = db.session.scalars(
+        db.select(ParticipantColBG).where(ParticipantColBG.id == experiment["participant_id"])
     ).one()
     colour_response = ColourResponseColBG(
         participant=participant,
@@ -117,8 +123,8 @@ def save_response(experiment, response):
 
 def update_participant(experiment):
     print("trying to update", experiment)
-    participant = ParticipantColBG.query.filter(
-        ParticipantColBG.id == experiment["participant_id"]
+    participant = db.session.scalars(
+        db.select(ParticipantColBG).where(ParticipantColBG.id == experiment["participant_id"])
     ).one()
     for k in experiment["observer"]:
         if experiment["observer"][k] == "":
@@ -138,8 +144,8 @@ def update_participant(experiment):
     participant.device = experiment["observer"]["device"]
     participant.location = experiment["observer"]["location"]
     participant.colour_target_disappeared = experiment["vision"]["square_disappeared"]
-    background = BackgroundColour.query.filter(
-        BackgroundColour.id == experiment["background_id"]
+    background = db.session.scalars(
+        db.select(BackgroundColour).where(BackgroundColour.id == experiment["background_id"])
     ).one()
     background.presentation_count += 1
     db.session.commit()

@@ -2,7 +2,7 @@
 
 import csv
 import random
-from sqlalchemy.orm.exc import NoResultFound
+from sqlalchemy.exc import NoResultFound
 from sqlalchemy.sql.expression import func
 
 from colournaming.mturk.exceptions import MTurkIDNotFound
@@ -14,7 +14,7 @@ from ..experimentcol.model import ColourTarget
 def read_targets_from_file(targets_file, delete_existing=False):
     """Read colour targets from file."""
     if delete_existing:
-        ColourTarget.query.delete()
+        db.session.execute(db.delete(ColourTarget))
     targets_csv = csv.DictReader(targets_file)
     for t in targets_csv:
         id = int(t["color_id"])
@@ -29,23 +29,25 @@ def read_targets_from_file(targets_file, delete_existing=False):
 def get_random_colour(colour_class, increment_presentation=True):
     """Get a random colour target."""
     with db.session.begin():
-        max_presentation_count = db.session.query(
-            func.max(colour_class.presentation_count)
-        ).scalar()
+        max_presentation_count = db.session.scalar(
+            db.select(func.max(colour_class.presentation_count))
+        )
         if max_presentation_count is None:
             max_presentation_count = 0
-        targets = colour_class.query.filter(
-            colour_class.presentation_count < max_presentation_count,
-            colour_class.id >= 0
+        targets = db.session.scalars(
+            db.select(colour_class).where(
+                colour_class.presentation_count < max_presentation_count,
+                colour_class.id >= 0
+            )
         ).all()
         if len(targets) == 0:
             # will occur if all targets have been presented max times
-            targets = colour_class.query.all()
+            targets = db.session.scalars(db.select(colour_class)).all()
         target = random.choice(targets)
         if increment_presentation:
             target.presentation_count += 1
         db.session.commit()
-    return random.choice(targets)
+    return target
 
 
 def create_mturk_task(prolific_id, study_id, session_id):
@@ -60,15 +62,15 @@ def create_mturk_task(prolific_id, study_id, session_id):
 
 
 def list_mturk_tasks():
-    tasks = MturkAgeTask.query.all()
+    tasks = db.session.scalars(db.select(MturkAgeTask)).all()
     return tasks
 
 
 def get_mturk_task_by_id(mturk_id):
     try:
-        task = MturkAgeTask.query.filter(MturkAgeTask.id == mturk_id).one()
+        task = db.session.scalars(db.select(MturkAgeTask).where(MturkAgeTask.id == mturk_id)).one()
     except NoResultFound:
-        return MTurkIDNotFound
+        raise MTurkIDNotFound(mturk_id)
     return task
 
 
@@ -79,7 +81,7 @@ def get_random_target():
 
 def response_count_percentage(this_count):
     """Get the percentage of participants with response counts less than a participant's."""
-    num_targets = db.session.query(ColourTarget.id).count()
+    num_targets = db.session.scalar(db.select(func.count(ColourTarget.id)))
     return (this_count / num_targets) * 100.0
 
 
@@ -108,8 +110,8 @@ def save_participant(experiment):
 def save_response(experiment, response):
     """Create a response record in the database."""
     print("saving response in experiment", experiment)
-    participant = MturkAgeParticipant.query.filter(
-        MturkAgeParticipant.id == experiment["participant_id"]
+    participant = db.session.scalars(
+        db.select(MturkAgeParticipant).where(MturkAgeParticipant.id == experiment["participant_id"])
     ).one()
     colour_response = MturkAgeColourResponse(
         participant=participant,
@@ -120,15 +122,17 @@ def save_response(experiment, response):
     print(colour_response)
     db.session.add(colour_response)
     db.session.commit()
-    return MturkAgeColourResponse.query.filter(
-        MturkAgeColourResponse.participant == participant
-    ).count()
+    return db.session.scalar(
+        db.select(func.count())
+        .select_from(MturkAgeColourResponse)
+        .where(MturkAgeColourResponse.participant == participant)
+    )
 
 
 def update_participant(experiment):
     print("trying to update experiment for participant ", experiment["participant_id"])
-    participant = MturkAgeParticipant.query.filter(
-        MturkAgeParticipant.id == experiment["participant_id"]
+    participant = db.session.scalars(
+        db.select(MturkAgeParticipant).where(MturkAgeParticipant.id == experiment["participant_id"])
     ).one()
     for k in experiment["observer"]:
         if experiment["observer"][k] == "":

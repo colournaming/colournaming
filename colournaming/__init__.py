@@ -99,17 +99,13 @@ def setup_cli(app):
     def mturk_tasks():
         """List completed Mechanical Turk tasks."""
         completed_tasks = list_mturk_tasks()
-        print("completion_id,response_count")
-        for task in completed_tasks:
-            print(task.completion_id, len(task.participant.responses), sep=",")
+        print_mturk_tasks(completed_tasks)
 
     @app.cli.command()
     def mturk_age_tasks():
         """List completed Mechanical Turk age tasks."""
         completed_tasks = list_mturk_age_tasks()
-        print("completion_id,response_count")
-        for task in completed_tasks:
-            print(task.completion_id, len(task.participant.responses), sep=",")
+        print_mturk_tasks(completed_tasks)
 
     @app.cli.command()
     def initdb():
@@ -131,6 +127,14 @@ def setup_cli(app):
     def help(ctx):
         """Show help message."""
         print(ctx.parent.get_help())
+
+
+def print_mturk_tasks(tasks):
+    """Print the Prolific ID and response count of each task as CSV."""
+    print("prolific_id,response_count")
+    for task in tasks:
+        response_count = len(task.participant.responses) if task.participant else 0
+        print(task.prolific_id, response_count, sep=",")
 
 
 def register_blueprints(app):
