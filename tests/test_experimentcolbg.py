@@ -63,7 +63,7 @@ def test_get_random_background(backgrounds):
     db.session.commit()
     assert controller.get_random_background() == (2, (20, 20, 20))
     # choosing a background does not count as a presentation
-    assert BackgroundColour.query.get(2).presentation_count == 0
+    assert db.session.get(BackgroundColour, 2).presentation_count == 0
 
 
 def test_response_count_percentage(colbg_targets):
@@ -123,8 +123,8 @@ def test_update_participant_counts_background(backgrounds):
     assert participant.age == 40
     assert participant.gender is None
     assert participant.colour_target_disappeared is False
-    assert BackgroundColour.query.get(2).presentation_count == 1
-    assert BackgroundColour.query.get(1).presentation_count == 0
+    assert db.session.get(BackgroundColour, 2).presentation_count == 1
+    assert db.session.get(BackgroundColour, 1).presentation_count == 0
 
 
 # --- views --------------------------------------------------------------------------------------
@@ -214,7 +214,7 @@ def test_full_experiment(client, colbg_targets, backgrounds):
     assert rv.headers["Location"].endswith("/experimentcolbg/thankyou.html")
     participant = ParticipantColBG.query.one()
     assert participant.colour_target_disappeared is False
-    assert BackgroundColour.query.get(background_id).presentation_count == 1
+    assert db.session.get(BackgroundColour, background_id).presentation_count == 1
 
     rv = client.get("/experimentcolbg/thankyou.html")
     assert b"33%" in rv.data

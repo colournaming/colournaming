@@ -22,15 +22,15 @@ def read_targets_from_file(targets_file):
 
 def get_random_target():
     """Get a random colour target."""
-    max_presentation_count = db.session.query(func.max(ColourTarget.presentation_count)).scalar()
+    max_presentation_count = db.session.scalar(db.select(func.max(ColourTarget.presentation_count)))
     if max_presentation_count is None:
         max_presentation_count = 0
-    targets = ColourTarget.query.filter(
-        ColourTarget.presentation_count < max_presentation_count
+    targets = db.session.scalars(
+        db.select(ColourTarget).where(ColourTarget.presentation_count < max_presentation_count)
     ).all()
     if len(targets) == 0:
         # will occur if all targets have been presented max times
-        targets = ColourTarget.query.all()
+        targets = db.session.scalars(db.select(ColourTarget)).all()
     target = random.choice(targets)
     target.presentation_count += 1
     db.session.commit()
@@ -39,7 +39,7 @@ def get_random_target():
 
 def response_count_percentage(this_count):
     """Get the percentage of participants with response counts less than a participant's."""
-    num_targets = db.session.query(ColourTarget.id).count()
+    num_targets = db.session.scalar(db.select(func.count(ColourTarget.id)))
     return (this_count / num_targets) * 100.0
 
 
@@ -66,7 +66,9 @@ def save_participant(experiment):
 def save_response(experiment, response):
     """Create a response record in the database."""
     print("saving response in experiment", experiment)
-    participant = Participant.query.filter(Participant.id == experiment["participant_id"]).one()
+    participant = db.session.scalars(
+        db.select(Participant).where(Participant.id == experiment["participant_id"])
+    ).one()
     colour_response = ColourResponse(
         participant=participant,
         target_id=response["target_id"],
@@ -79,7 +81,9 @@ def save_response(experiment, response):
 
 def update_participant(experiment):
     print("trying to update", experiment)
-    participant = Participant.query.filter(Participant.id == experiment["participant_id"]).one()
+    participant = db.session.scalars(
+        db.select(Participant).where(Participant.id == experiment["participant_id"])
+    ).one()
     for k in experiment["observer"]:
         if experiment["observer"][k] == "":
             experiment["observer"][k] = None
