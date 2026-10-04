@@ -201,6 +201,15 @@ def test_get_target_without_targets(client):
     assert client.get("/experimentcol/get_target.json").status_code == 500
 
 
+@pytest.mark.parametrize("answer, expected", [("yes", True), ("no", False), ("-", None)])
+def test_colour_vision_answers(client, answer, expected):
+    client.get("/experimentcol/")
+    rv = client.post("/experimentcol/colour_vision.html", data={"square_disappeared": answer})
+    assert rv.headers["Location"].endswith("/experimentcol/name_colour.html")
+    with client.session_transaction() as sess:
+        assert sess["experiment"]["vision"]["square_disappeared"] is expected
+
+
 def test_invalid_forms_rerender(client):
     client.get("/experimentcol/")
     rv = client.post("/experimentcol/display_properties.html", data={"levels": "99"})
@@ -220,7 +229,7 @@ def test_full_experiment(client, col_targets):
     participant = Participant.query.one()
     assert participant.screen_resolution_w == 1920
 
-    rv = client.post("/experimentcol/colour_vision.html", data={"square_disappeared": "y"})
+    rv = client.post("/experimentcol/colour_vision.html", data={"square_disappeared": "yes"})
     assert rv.headers["Location"].endswith("/experimentcol/name_colour.html")
 
     for target_id, name in [(1, "red"), (2, "green")]:
