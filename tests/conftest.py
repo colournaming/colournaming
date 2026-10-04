@@ -1,8 +1,9 @@
 """Shared fixtures for the colournaming test suite.
 
 The tests need a PostgreSQL database configured through the ``COLOURNAMING_CFG`` environment
-variable. All tables in that database are dropped and recreated, so never point it at a database
-containing real data.
+variable. If it is not set, ``github.cfg`` is used, which expects the ``docker compose`` postgres
+service on localhost:5432. All tables in that database are dropped and recreated, so never point
+it at a database containing real data.
 """
 
 import os
@@ -16,8 +17,12 @@ from colournaming.experimentcol.model import ColourTarget
 from colournaming.experimentcolbg.model import BackgroundColour, ColourTargetColBG
 from colournaming.namer.controller import read_centroids_from_file
 
-DOCS_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "docs")
+PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DOCS_DIR = os.path.join(PROJECT_DIR, "docs")
 EN_CENTROIDS = os.path.join(DOCS_DIR, "dataset_en.csv")
+
+
+os.environ.setdefault("COLOURNAMING_CFG", os.path.join(PROJECT_DIR, "github.cfg"))
 
 
 @pytest.fixture(scope="session")
@@ -26,6 +31,11 @@ def app():
     app = create_app()
     app.config.update(
         TESTING=True,
+        LANGUAGES=[
+            {"code": "en", "name": "English"},
+            {"code": "fr", "name": "Français"},
+            {"code": "fa", "name": "فارسی"},
+        ],
         WTF_CSRF_ENABLED=False,
         CONTACT_EMAIL="contact@example.com",
         MTURK_RESPONSE_COUNT=3,
