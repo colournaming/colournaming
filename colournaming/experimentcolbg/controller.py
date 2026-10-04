@@ -42,7 +42,8 @@ def get_random_target():
     max_presentation_count = db.session.query(
         func.max(ColourTargetColBG.presentation_count)
     ).scalar()
-    print("max_presentation_count =", max_presentation_count)
+    if max_presentation_count is None:
+        max_presentation_count = 0
     targets = ColourTargetColBG.query.filter(
         ColourTargetColBG.presentation_count < max_presentation_count
     ).all()
@@ -52,7 +53,7 @@ def get_random_target():
     target = random.choice(targets)
     target.presentation_count += 1
     db.session.commit()
-    return random.choice(targets)
+    return target
 
 
 def get_random_background():
@@ -60,7 +61,8 @@ def get_random_background():
     max_presentation_count = db.session.query(
         func.max(BackgroundColour.presentation_count)
     ).scalar()
-    print("max_presentation_count =", max_presentation_count)
+    if max_presentation_count is None:
+        max_presentation_count = 0
     targets = BackgroundColour.query.filter(
         BackgroundColour.presentation_count < max_presentation_count
     ).all()

@@ -23,10 +23,16 @@ from ..utils import rgb2lab
 bp = Blueprint("mturk", __name__)
 
 
-def check_in_experiment():
+def experiment_required(view):
     """Redirect to the start of the experiment if the session is not initialized."""
-    if "experiment" not in session:
-        return redirect(url_for("mturk.start"))
+
+    @wraps(view)
+    def func(*args, **kwargs):
+        if "experiment" not in session:
+            return redirect(url_for("mturk.start"))
+        return view(*args, **kwargs)
+
+    return func
 
 
 def rgb_tuple_to_css_rgb(background):
@@ -83,9 +89,9 @@ def start():
 
 
 @bp.route("/display_properties.html", methods=["GET", "POST"])
+@experiment_required
 def display_properties():
     """Show the display properties form and handle responses."""
-    check_in_experiment()
     form = forms.DisplayForm()
     if form.validate_on_submit():
         session["experiment"]["display"] = {
@@ -110,9 +116,9 @@ def display_properties():
 
 
 @bp.route("/colour_vision.html", methods=["GET", "POST"])
+@experiment_required
 def colour_vision():
     """Show the colour vision test and handle responses."""
-    check_in_experiment()
     form = forms.ColourVisionForm()
     if form.validate_on_submit():
         print("colour vision form validated")
@@ -139,9 +145,9 @@ def colour_vision():
 
 
 @bp.route("/name_colour.html", methods=["GET", "POST"])
+@experiment_required
 def name_colour():
     """Show the name colour form and handle responses."""
-    check_in_experiment()
     response_goal = int(current_app.config.get("MTURK_RESPONSE_COUNT", "226"))
     form = forms.ColourNameForm()
     if form.validate_on_submit():
@@ -191,9 +197,9 @@ def get_target():
 
 
 @bp.route("/observer_information.html", methods=["GET", "POST"])
+@experiment_required
 def observer_information():
     """Show the observer information form and handle responses."""
-    check_in_experiment()
     form = forms.ObserverInformationForm()
     if form.validate_on_submit():
         print("observer information form validated")
@@ -229,6 +235,7 @@ def observer_information():
 
 
 @bp.route("/thankyou.html")
+@experiment_required
 def thankyou():
     """Show the thankyou for participation page."""
     try:

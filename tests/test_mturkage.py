@@ -6,6 +6,7 @@ import pytest
 
 from colournaming.database import db
 from colournaming.experimentcol.model import ColourTarget
+from colournaming.mturk.exceptions import MTurkIDNotFound
 from colournaming.mturkage import controller
 from colournaming.mturkage.model import MturkAgeColourResponse, MturkAgeParticipant, MturkAgeTask
 from helpers import DISPLAY_FORM, OBSERVER_FORM
@@ -17,6 +18,16 @@ def test_create_and_list_tasks():
     task = controller.create_mturk_task("pid", "study", "sess")
     assert controller.list_mturk_tasks() == [task]
     assert controller.get_mturk_task_by_id(task.id) == task
+
+
+def test_get_mturk_task_by_id_not_found():
+    with pytest.raises(MTurkIDNotFound):
+        controller.get_mturk_task_by_id(999)
+
+
+def test_get_random_target_returns_counted_target(col_targets):
+    target = controller.get_random_target()
+    assert target.presentation_count == 1
 
 
 def test_read_targets_from_file(col_targets):
@@ -77,6 +88,22 @@ def test_save_participant_response_and_update(col_targets):
 def test_start_requires_prolific_ids(client):
     assert client.get("/mturkage/start").status_code == 500
     assert MturkAgeTask.query.count() == 0
+
+
+@pytest.mark.parametrize(
+    "page",
+    [
+        "display_properties.html",
+        "colour_vision.html",
+        "name_colour.html",
+        "observer_information.html",
+        "thankyou.html",
+    ],
+)
+def test_pages_redirect_without_experiment(client, page):
+    rv = client.get("/mturkage/{}".format(page))
+    assert rv.status_code == 302
+    assert rv.headers["Location"].endswith("/mturkage/start")
 
 
 def test_start_uses_grey_background(client):

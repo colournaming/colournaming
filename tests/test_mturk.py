@@ -32,6 +32,11 @@ def test_get_random_colour_no_increment(backgrounds):
     assert [b.presentation_count for b in BackgroundColour.query.all()] == [0, 0]
 
 
+def test_get_random_target_returns_counted_target(colbg_targets):
+    target = controller.get_random_target()
+    assert target.presentation_count == 1
+
+
 def test_get_random_target_and_background(colbg_targets, backgrounds):
     assert controller.get_random_target().id in (1, 2, 3)
     bg_id, colour = controller.get_random_background()
@@ -45,7 +50,6 @@ def test_create_and_list_tasks():
     assert controller.get_mturk_task_by_id(task.id) == task
 
 
-@pytest.mark.xfail(strict=True, reason="get_mturk_task_by_id returns the exception class")
 def test_get_mturk_task_by_id_not_found():
     with pytest.raises(MTurkIDNotFound):
         controller.get_mturk_task_by_id(999)
@@ -124,6 +128,22 @@ def test_start_requires_prolific_ids(client, backgrounds, args):
 
 def test_start_without_backgrounds(client):
     assert client.get(f"/mturk/{PROLIFIC_ARGS}").status_code == 500
+
+
+@pytest.mark.parametrize(
+    "page",
+    [
+        "display_properties.html",
+        "colour_vision.html",
+        "name_colour.html",
+        "observer_information.html",
+        "thankyou.html",
+    ],
+)
+def test_pages_redirect_without_experiment(client, page):
+    rv = client.get("/mturk/{}".format(page))
+    assert rv.status_code == 302
+    assert rv.headers["Location"].endswith("/mturk/")
 
 
 def test_start_creates_task(client, backgrounds):
