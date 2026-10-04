@@ -70,11 +70,6 @@ FLOWS = {
     ),
 }
 
-# Experiments where a "no" answer to the colour vision question is stored as True because
-# ColourVisionForm.square_disappeared is a BooleanField, which only treats "false" and "" as False.
-COLOUR_VISION_NO_BROKEN = {"experimentcol", "experimentcolbg"}
-
-
 @dataclass
 class Session:
     """What the browser saw and entered during an experiment."""
@@ -211,20 +206,7 @@ def test_prolific_experiment_links_back_to_prolific(page, stimuli, name):
     expect(link).to_have_attribute("href", PROLIFIC_COMPLETION_URL)
 
 
-@pytest.mark.parametrize(
-    "name",
-    [
-        pytest.param(
-            name,
-            marks=pytest.mark.xfail(
-                name in COLOUR_VISION_NO_BROKEN,
-                reason="BooleanField treats the posted 'no' as True",
-                strict=True,
-            ),
-        )
-        for name in FLOWS
-    ],
-)
+@pytest.mark.parametrize("name", FLOWS)
 def test_square_not_disappearing_is_stored(page, stimuli, name):
     flow = FLOWS[name]
     run_experiment(page, flow, square_disappeared="no")
