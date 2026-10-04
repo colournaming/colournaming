@@ -33,7 +33,9 @@ class MturkParticipantColBG(db.Model):
     __tablename__ = "mturk_participants_colbg"
 
     id = db.Column(db.Integer, primary_key=True)
-    created_on = db.Column(db.DateTime(timezone=True), default=datetime.datetime.utcnow)
+    created_on = db.Column(
+        db.DateTime(timezone=True), default=lambda: datetime.datetime.now(datetime.UTC)
+    )
     greyscale_steps = db.Column(db.Integer)
     browser_language = db.Column(db.String)
     interface_language = db.Column(db.String)
@@ -77,4 +79,6 @@ class MturkColourResponseColBG(db.Model):
     name = db.Column(db.String)
     response_time = db.Column(db.Float)
     experiment_version = db.Column(db.String)
-    created_on = db.Column(db.DateTime(timezone=True), default=datetime.datetime.utcnow)
+    created_on = db.Column(
+        db.DateTime(timezone=True), default=lambda: datetime.datetime.now(datetime.UTC)
+    )
