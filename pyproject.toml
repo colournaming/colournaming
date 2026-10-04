@@ -55,4 +55,5 @@ dev = [
     "black",
     "pyright",
     "ruff>=0.11.6",
+    "pytest-cov>=7.1.0",
 ]
