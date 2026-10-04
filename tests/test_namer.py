@@ -128,13 +128,11 @@ def test_colour_list(english):
     assert colours["light_blue"]["name"] == "Light blue"
 
 
-@pytest.mark.xfail(strict=True, reason="hex components are not zero padded")
 def test_hex_code_for_colour_zero_pads():
     colour = ColourCentroid(m_R=5, m_G=0, m_B=255)
     assert controller._hex_code_for_colour(colour) == "0500ff"
 
 
-@pytest.mark.xfail(strict=True, reason="ColourNamer.load_data pads hex codes with spaces")
 def test_namer_hex_zero_pads():
     lang = Language(name="Test", code="tt")
     db.session.add(lang)
@@ -291,11 +289,7 @@ def test_audio_list_view(client, app, tmp_path, monkeypatch):
 @pytest.mark.parametrize(
     "user_agent, template_marker",
     [
-        pytest.param(
-            "Mozilla/5.0 (X11; Linux x86_64) Firefox/120.0",
-            "namer.html",
-            marks=pytest.mark.xfail(strict=True, reason="namer.html includes missing navbar.html"),
-        ),
+        ("Mozilla/5.0 (X11; Linux x86_64) Firefox/120.0", "namer.html"),
         (
             "Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15 "
             "(KHTML, like Gecko) Version/17.0 Mobile/15E148 Safari/604.1",

@@ -33,7 +33,7 @@ class ColourNamer:
                     [c.sigma_7, c.sigma_8, c.sigma_9],
                 ]
             )
-            hex_code = "{0:2x}{1:2x}{2:2x}".format(int(c.m_R), int(c.m_G), int(c.m_B))
+            hex_code = "{0:02x}{1:02x}{2:02x}".format(int(c.m_R), int(c.m_G), int(c.m_B))
             data.append(
                 {
                     "colour_name": c.color_name,
@@ -176,10 +176,7 @@ def colour_list(language):
 
 def _hex_code_for_colour(colour):
     """Return the hex code for a given colour centroid."""
-    h = hex(int(colour.m_R))[2:]
-    h += hex(int(colour.m_G))[2:]
-    h += hex(int(colour.m_B))[2:]
-    return h
+    return "{0:02x}{1:02x}{2:02x}".format(int(colour.m_R), int(colour.m_G), int(colour.m_B))
 
 
 def audio_list(lang):

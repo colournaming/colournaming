@@ -45,7 +45,7 @@ def get_random_colour(colour_class, increment_presentation=True):
         if increment_presentation:
             target.presentation_count += 1
         db.session.commit()
-    return random.choice(targets)
+    return target
 
 
 def create_mturk_task(prolific_id, study_id, session_id):
@@ -68,7 +68,7 @@ def get_mturk_task_by_id(mturk_id):
     try:
         task = MturkAgeTask.query.filter(MturkAgeTask.id == mturk_id).one()
     except NoResultFound:
-        return MTurkIDNotFound
+        raise MTurkIDNotFound(mturk_id)
     return task
 
 

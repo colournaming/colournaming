@@ -50,10 +50,9 @@ def test_import_colbg_backgrounds(runner, tmp_path):
 def test_list_tasks_empty(runner, command):
     result = runner.invoke(args=[command])
     assert result.exit_code == 0, result.output
-    assert result.output.splitlines() == ["completion_id,response_count"]
+    assert result.output.splitlines() == ["prolific_id,response_count"]
 
 
-@pytest.mark.xfail(strict=True, reason="task models have no completion_id attribute")
 @pytest.mark.parametrize(
     "command, controller",
     [("mturk-tasks", mturk_controller), ("mturk-age-tasks", mturkage_controller)],
@@ -61,10 +60,18 @@ def test_list_tasks_empty(runner, command):
 def test_list_tasks(runner, command, controller):
     task = controller.create_mturk_task("pid", "study", "sess")
     participant_model = type(task).participant.property.mapper.class_
-    db.session.add(participant_model(task=task))
+    response_model = participant_model.responses.property.mapper.class_
+    participant = participant_model(task=task)
+    db.session.add_all([participant, response_model(participant=participant, name="red")])
+    controller.create_mturk_task("unstarted", "study", "sess2")
     db.session.commit()
     result = runner.invoke(args=[command])
     assert result.exit_code == 0, result.output
+    assert result.output.splitlines() == [
+        "prolific_id,response_count",
+        "pid,1",
+        "unstarted,0",
+    ]
 
 
 def test_dropdb_and_initdb(runner):

@@ -53,6 +53,11 @@ def test_get_random_target_balances_presentations(colbg_targets):
     assert sorted(t.presentation_count for t in ColourTargetColBG.query.all()) == [2, 2, 2]
 
 
+def test_get_random_target_returns_counted_target(colbg_targets):
+    target = controller.get_random_target()
+    assert target.presentation_count == 1
+
+
 def test_get_random_background(backgrounds):
     backgrounds[0].presentation_count = 3
     db.session.commit()
@@ -125,7 +130,6 @@ def test_update_participant_counts_background(backgrounds):
 # --- views --------------------------------------------------------------------------------------
 
 
-@pytest.mark.xfail(strict=True, reason="max() of an empty table is None, giving ArgumentError")
 def test_start_without_backgrounds(client):
     assert client.get("/experimentcolbg/").status_code == 500
 
@@ -141,6 +145,26 @@ def test_start_picks_font_colour(client, backgrounds, monkeypatch, bg_id, dark_f
     with client.session_transaction() as sess:
         assert sess["experiment"]["background_id"] == bg_id
         assert sess["experiment"]["dark_font"] is dark_font
+
+
+@pytest.mark.parametrize(
+    "page",
+    [
+        "display_properties.html",
+        "colour_vision.html",
+        "name_colour.html",
+        "observer_information.html",
+        "thankyou.html",
+    ],
+)
+def test_pages_redirect_without_experiment(client, page):
+    rv = client.get("/experimentcolbg/{}".format(page))
+    assert rv.status_code == 302
+    assert rv.headers["Location"].endswith("/experimentcolbg/")
+
+
+def test_get_target_without_targets(client):
+    assert client.get("/experimentcolbg/get_target.json").status_code == 500
 
 
 def test_get_target(client, colbg_targets):

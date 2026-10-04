@@ -51,7 +51,6 @@ def test_read_targets_from_file():
     assert all(t.presentation_count == 0 for t in targets)
 
 
-@pytest.mark.xfail(strict=True, reason="max() of an empty table is None, giving ArgumentError")
 def test_get_random_target_no_targets():
     with pytest.raises(IndexError):
         controller.get_random_target()
@@ -70,7 +69,6 @@ def test_get_random_target_prefers_least_presented(col_targets):
     assert controller.get_random_target().id == 3
 
 
-@pytest.mark.xfail(strict=True, reason="returns a different random target to the one counted")
 def test_get_random_target_returns_counted_target(col_targets, monkeypatch):
     choices = iter([col_targets[0], col_targets[1]])
     monkeypatch.setattr(controller.random, "choice", lambda seq: next(choices))
@@ -174,10 +172,19 @@ def test_pages_render(client, page):
     assert rv.status_code == 200
 
 
-@pytest.mark.xfail(strict=True, reason="check_in_experiment's redirect is discarded")
-def test_pages_redirect_without_experiment(client):
-    rv = client.get("/experimentcol/display_properties.html")
+@pytest.mark.parametrize(
+    "page",
+    [
+        "display_properties.html",
+        "colour_vision.html",
+        "name_colour.html",
+        "observer_information.html",
+    ],
+)
+def test_pages_redirect_without_experiment(client, page):
+    rv = client.get("/experimentcol/{}".format(page))
     assert rv.status_code == 302
+    assert rv.headers["Location"].endswith("/experimentcol/")
 
 
 def test_get_target(client, col_targets):
@@ -190,7 +197,6 @@ def test_get_target(client, col_targets):
     assert data["id"] in (1, 2, 3)
 
 
-@pytest.mark.xfail(strict=True, reason="max() of an empty table is None, giving ArgumentError")
 def test_get_target_without_targets(client):
     assert client.get("/experimentcol/get_target.json").status_code == 500
 

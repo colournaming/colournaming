@@ -23,7 +23,8 @@ def read_targets_from_file(targets_file):
 def get_random_target():
     """Get a random colour target."""
     max_presentation_count = db.session.query(func.max(ColourTarget.presentation_count)).scalar()
-    print("max_presentation_count =", max_presentation_count)
+    if max_presentation_count is None:
+        max_presentation_count = 0
     targets = ColourTarget.query.filter(
         ColourTarget.presentation_count < max_presentation_count
     ).all()
@@ -33,7 +34,7 @@ def get_random_target():
     target = random.choice(targets)
     target.presentation_count += 1
     db.session.commit()
-    return random.choice(targets)
+    return target
 
 
 def response_count_percentage(this_count):
